@@ -5,6 +5,48 @@ extends Node
 const ROOT := "res://assets/"
 var _cache: Dictionary = {}
 
+## 폰트: UI 고운돋움 · 본문/굵게 고운바탕 · 한자 대체 Noto Serif KR (모두 SIL OFL, assets/fonts/OFL_*.txt)
+const FONT_UI := "res://assets/fonts/GowunDodum-Regular.ttf"
+const FONT_TEXT := "res://assets/fonts/GowunBatang-Regular.ttf"
+const FONT_BOLD := "res://assets/fonts/GowunBatang-Bold.ttf"
+const FONT_HANJA := "res://assets/fonts/NotoSerifKR-Regular.otf"
+var font_ui: Font
+var font_text: Font
+var font_bold: Font
+
+
+func _ready() -> void:
+	_apply_fonts()
+
+
+func _load_font(path: String, fallback: Font) -> Font:
+	if not ResourceLoader.exists(path):
+		return null
+	var f := load(path) as FontFile
+	if f == null:
+		return null
+	if fallback != null:
+		f.fallbacks = [fallback]  # 고운 계열에 없는 한자(不可殺伊·鶴翼陣 등)는 Noto Serif KR 로
+	return f
+
+
+## 창 전체에 기본 테마 적용 — 모든 Control 이 상속. 폰트 파일이 없으면 엔진 기본 폰트 유지
+func _apply_fonts() -> void:
+	var hanja := _load_font(FONT_HANJA, null)
+	font_ui = _load_font(FONT_UI, hanja)
+	font_text = _load_font(FONT_TEXT, hanja)
+	font_bold = _load_font(FONT_BOLD, hanja)
+	if font_ui == null:
+		return
+	var th := Theme.new()
+	th.default_font = font_ui
+	th.default_font_size = 16
+	if font_text:
+		th.set_font("normal_font", "RichTextLabel", font_text)
+	if font_bold:
+		th.set_font("bold_font", "RichTextLabel", font_bold)
+	get_tree().root.theme = th
+
 
 func tex(path: String) -> Texture2D:
 	if _cache.has(path):

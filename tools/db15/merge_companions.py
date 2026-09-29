@@ -68,6 +68,16 @@ def main():
                       "promotion[]=승급 퀘스트(서사 맞춤 자동 설계: 트리거 = 신분 Rank≥t·동행·대표 지식≥t·시작 장소 방문, 동선 route_rules 준수). "
                       "현재 등급은 GameState.companions[id].tier. 승급 시 knowledge_per_promotion 가산(지식 합 = 현재 등급), 스킬 숙련 +8%/등급. "
                       "동료 기여 = 스킬·지식·짐 무게(스탯 합산 없음). hp/atk/def/speed 는 시작 등급 표시용. 일급 = wage_per_day(현재 등급), 막사 대기 시 0.")
+    # 폰트에 없는 이체자 정규화(㝵 → 碍: 無㝵 = 無碍) — assets/fonts 의 고운·Noto Serif KR 모두 미수록
+    for c in out:
+        for k in ("name", "desc"):
+            if isinstance(c.get(k), str):
+                c[k] = c[k].replace("㝵", "碍")
+        for q in c.get("promotion", []):
+            for k in ("name", "lore"):
+                q[k] = q[k].replace("㝵", "碍")
+    for sk in skills.values():
+        sk["name"] = sk["name"].replace("㝵", "碍")
     save("13_companions.json", doc)
     sk_doc["skills"] = list(skills.values())
     save("14_skills.json", sk_doc)
