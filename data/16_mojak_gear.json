@@ -1,0 +1,823 @@
+{
+ "_schema": "16_고유제작_전투장착[모작] 24종. 유·불·선 × 4부위 × 4·5등급. 원본 스탯의 70~80%. Rank(min_rank)+원자재만 충족하면 전국 어디서나 야외 단조. 레시피 해금: 원본 장비 상점 매각 시 또는 전용 서사 퀘스트 실패 시 패자부활 지급.",
+ "mojak": [
+  {
+   "id": "mj_yu_weapon_4",
+   "name": "[모작] 사인참사검",
+   "family": "yu",
+   "slot": "weapon",
+   "tier": 4,
+   "original": "eq_yu_weapon_4",
+   "ratio": 0.75,
+   "stats": {
+    "atk": 24
+   },
+   "element": "metal",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_iron",
+     "qty": 10
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 8
+    },
+    {
+     "id": "mat_cowhide",
+     "qty": 3
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_yu_weapon_5",
+   "name": "[모작] 용천 어검",
+   "family": "yu",
+   "slot": "weapon",
+   "tier": 5,
+   "original": "eq_yu_weapon_5",
+   "ratio": 0.75,
+   "stats": {
+    "atk": 34
+   },
+   "element": "metal",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_meteor_iron",
+     "qty": 2
+    },
+    {
+     "id": "mat_iron",
+     "qty": 12
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 10
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_yu_armor_4",
+   "name": "[모작] 두석린갑",
+   "family": "yu",
+   "slot": "armor",
+   "tier": 4,
+   "original": "eq_yu_armor_4",
+   "ratio": 0.75,
+   "stats": {
+    "def": 24,
+    "hp": 26
+   },
+   "element": "none",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_iron",
+     "qty": 10
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 8
+    },
+    {
+     "id": "mat_cowhide",
+     "qty": 3
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_yu_armor_5",
+   "name": "[모작] 용린 어갑",
+   "family": "yu",
+   "slot": "armor",
+   "tier": 5,
+   "original": "eq_yu_armor_5",
+   "ratio": 0.75,
+   "stats": {
+    "def": 34,
+    "hp": 45
+   },
+   "element": "none",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_meteor_iron",
+     "qty": 2
+    },
+    {
+     "id": "mat_iron",
+     "qty": 12
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 10
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_yu_shoes_4",
+   "name": "[모작] 흑피 목화",
+   "family": "yu",
+   "slot": "shoes",
+   "tier": 4,
+   "original": "eq_yu_shoes_4",
+   "ratio": 0.75,
+   "stats": {
+    "spd": 19,
+    "def": 4
+   },
+   "element": "none",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_iron",
+     "qty": 10
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 8
+    },
+    {
+     "id": "mat_cowhide",
+     "qty": 3
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_yu_shoes_5",
+   "name": "[모작] 청룡 목화",
+   "family": "yu",
+   "slot": "shoes",
+   "tier": 5,
+   "original": "eq_yu_shoes_5",
+   "ratio": 0.75,
+   "stats": {
+    "spd": 22,
+    "def": 6
+   },
+   "element": "none",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_meteor_iron",
+     "qty": 2
+    },
+    {
+     "id": "mat_iron",
+     "qty": 12
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 10
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_yu_accessory_4",
+   "name": "[모작] 수군 청동인장",
+   "family": "yu",
+   "slot": "accessory",
+   "tier": 4,
+   "original": "eq_yu_accessory_4",
+   "ratio": 0.75,
+   "stats": {
+    "res": 0.105,
+    "atk": 4
+   },
+   "element": "none",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_iron",
+     "qty": 10
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 8
+    },
+    {
+     "id": "mat_cowhide",
+     "qty": 3
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_yu_accessory_5",
+   "name": "[모작] 어보 옥인",
+   "family": "yu",
+   "slot": "accessory",
+   "tier": 5,
+   "original": "eq_yu_accessory_5",
+   "ratio": 0.75,
+   "stats": {
+    "res": 0.135,
+    "atk": 7
+   },
+   "element": "none",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_meteor_iron",
+     "qty": 2
+    },
+    {
+     "id": "mat_iron",
+     "qty": 12
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 10
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_bul_weapon_4",
+   "name": "[모작] 금강저",
+   "family": "bul",
+   "slot": "weapon",
+   "tier": 4,
+   "original": "eq_bul_weapon_4",
+   "ratio": 0.75,
+   "stats": {
+    "atk": 22,
+    "res": 0.015
+   },
+   "element": "holy",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_copper",
+     "qty": 8
+    },
+    {
+     "id": "mat_sarira_crystal",
+     "qty": 1
+    },
+    {
+     "id": "mat_hemp",
+     "qty": 4
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_bul_weapon_5",
+   "name": "[모작] 항마 금강저",
+   "family": "bul",
+   "slot": "weapon",
+   "tier": 5,
+   "original": "eq_bul_weapon_5",
+   "ratio": 0.75,
+   "stats": {
+    "atk": 30,
+    "res": 0.015
+   },
+   "element": "holy",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_sarira_crystal",
+     "qty": 3
+    },
+    {
+     "id": "mat_copper",
+     "qty": 10
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 4
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_bul_armor_4",
+   "name": "[모작] 승군 철가사",
+   "family": "bul",
+   "slot": "armor",
+   "tier": 4,
+   "original": "eq_bul_armor_4",
+   "ratio": 0.75,
+   "stats": {
+    "def": 28,
+    "hp": 30,
+    "res": 0.015
+   },
+   "element": "none",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_copper",
+     "qty": 8
+    },
+    {
+     "id": "mat_sarira_crystal",
+     "qty": 1
+    },
+    {
+     "id": "mat_hemp",
+     "qty": 4
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_bul_armor_5",
+   "name": "[모작] 사명 금란가사",
+   "family": "bul",
+   "slot": "armor",
+   "tier": 5,
+   "original": "eq_bul_armor_5",
+   "ratio": 0.75,
+   "stats": {
+    "def": 39,
+    "hp": 52,
+    "res": 0.015
+   },
+   "element": "none",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_sarira_crystal",
+     "qty": 3
+    },
+    {
+     "id": "mat_copper",
+     "qty": 10
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 4
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_bul_shoes_4",
+   "name": "[모작] 행각 철혜",
+   "family": "bul",
+   "slot": "shoes",
+   "tier": 4,
+   "original": "eq_bul_shoes_4",
+   "ratio": 0.75,
+   "stats": {
+    "spd": 19,
+    "def": 4
+   },
+   "element": "none",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_copper",
+     "qty": 8
+    },
+    {
+     "id": "mat_sarira_crystal",
+     "qty": 1
+    },
+    {
+     "id": "mat_hemp",
+     "qty": 4
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_bul_shoes_5",
+   "name": "[모작] 달마 초혜",
+   "family": "bul",
+   "slot": "shoes",
+   "tier": 5,
+   "original": "eq_bul_shoes_5",
+   "ratio": 0.75,
+   "stats": {
+    "spd": 22,
+    "def": 7
+   },
+   "element": "none",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_sarira_crystal",
+     "qty": 3
+    },
+    {
+     "id": "mat_copper",
+     "qty": 10
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 4
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_bul_accessory_4",
+   "name": "[모작] 사리함 패",
+   "family": "bul",
+   "slot": "accessory",
+   "tier": 4,
+   "original": "eq_bul_accessory_4",
+   "ratio": 0.75,
+   "stats": {
+    "res": 0.12,
+    "atk": 4
+   },
+   "element": "none",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_copper",
+     "qty": 8
+    },
+    {
+     "id": "mat_sarira_crystal",
+     "qty": 1
+    },
+    {
+     "id": "mat_hemp",
+     "qty": 4
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_bul_accessory_5",
+   "name": "[모작] 진신사리 패",
+   "family": "bul",
+   "slot": "accessory",
+   "tier": 5,
+   "original": "eq_bul_accessory_5",
+   "ratio": 0.75,
+   "stats": {
+    "res": 0.15,
+    "atk": 6
+   },
+   "element": "none",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_sarira_crystal",
+     "qty": 3
+    },
+    {
+     "id": "mat_copper",
+     "qty": 10
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 4
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_seon_weapon_4",
+   "name": "[모작] 칠성검",
+   "family": "seon",
+   "slot": "weapon",
+   "tier": 4,
+   "original": "eq_seon_weapon_4",
+   "ratio": 0.75,
+   "stats": {
+    "atk": 26,
+    "res": 0.03
+   },
+   "element": "fire",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_cinnabar",
+     "qty": 1
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 6
+    },
+    {
+     "id": "mat_mulberry",
+     "qty": 6
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_seon_weapon_5",
+   "name": "[모작] 태을 뇌검",
+   "family": "seon",
+   "slot": "weapon",
+   "tier": 5,
+   "original": "eq_seon_weapon_5",
+   "ratio": 0.75,
+   "stats": {
+    "atk": 38,
+    "res": 0.03
+   },
+   "element": "fire",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_cinnabar",
+     "qty": 3
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 8
+    },
+    {
+     "id": "mat_meteor_iron",
+     "qty": 1
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_seon_armor_4",
+   "name": "[모작] 학창의",
+   "family": "seon",
+   "slot": "armor",
+   "tier": 4,
+   "original": "eq_seon_armor_4",
+   "ratio": 0.75,
+   "stats": {
+    "def": 22,
+    "hp": 24,
+    "res": 0.03
+   },
+   "element": "none",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_cinnabar",
+     "qty": 1
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 6
+    },
+    {
+     "id": "mat_mulberry",
+     "qty": 6
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_seon_armor_5",
+   "name": "[모작] 우의 선포",
+   "family": "seon",
+   "slot": "armor",
+   "tier": 5,
+   "original": "eq_seon_armor_5",
+   "ratio": 0.75,
+   "stats": {
+    "def": 30,
+    "hp": 40,
+    "res": 0.03
+   },
+   "element": "none",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_cinnabar",
+     "qty": 3
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 8
+    },
+    {
+     "id": "mat_meteor_iron",
+     "qty": 1
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_seon_shoes_4",
+   "name": "[모작] 운혜",
+   "family": "seon",
+   "slot": "shoes",
+   "tier": 4,
+   "original": "eq_seon_shoes_4",
+   "ratio": 0.75,
+   "stats": {
+    "spd": 19,
+    "def": 3
+   },
+   "element": "none",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_cinnabar",
+     "qty": 1
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 6
+    },
+    {
+     "id": "mat_mulberry",
+     "qty": 6
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_seon_shoes_5",
+   "name": "[모작] 축지 운리",
+   "family": "seon",
+   "slot": "shoes",
+   "tier": 5,
+   "original": "eq_seon_shoes_5",
+   "ratio": 0.75,
+   "stats": {
+    "spd": 22,
+    "def": 5
+   },
+   "element": "none",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_cinnabar",
+     "qty": 3
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 8
+    },
+    {
+     "id": "mat_meteor_iron",
+     "qty": 1
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_seon_accessory_4",
+   "name": "[모작] 호로병 패",
+   "family": "seon",
+   "slot": "accessory",
+   "tier": 4,
+   "original": "eq_seon_accessory_4",
+   "ratio": 0.75,
+   "stats": {
+    "res": 0.135,
+    "atk": 5
+   },
+   "element": "none",
+   "min_rank": 4,
+   "materials": [
+    {
+     "id": "mat_cinnabar",
+     "qty": 1
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 6
+    },
+    {
+     "id": "mat_mulberry",
+     "qty": 6
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  },
+  {
+   "id": "mj_seon_accessory_5",
+   "name": "[모작] 선도 복숭아 옥패",
+   "family": "seon",
+   "slot": "accessory",
+   "tier": 5,
+   "original": "eq_seon_accessory_5",
+   "ratio": 0.75,
+   "stats": {
+    "res": 0.165,
+    "atk": 8
+   },
+   "element": "none",
+   "min_rank": 5,
+   "materials": [
+    {
+     "id": "mat_cinnabar",
+     "qty": 3
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 8
+    },
+    {
+     "id": "mat_meteor_iron",
+     "qty": 1
+    }
+   ],
+   "craft_anywhere": true,
+   "recipe_sources": [
+    "sell_original",
+    "quest_fail_consolation"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1517 @@
+{
+ "_schema": "02_장착아이템. slot=weapon|armor|shoes|accessory|book (서책은 장신구 슬롯 3칸에 장착). mount 는 07 시트. stats: atk,def,hp,spd(V_mount px/s),res,crit,def_ignore,flat_red. affinity=유불선 공격 상성. class_restriction/req_knowledge=장착 조건. acquire.type=shop|forge|heritage|quest. price=economy.price 공식(base×3^(t−1)). generated=systematic(gen_systematic.py 4·5등급 세트) / heritage(build_world.py 유산 보상).",
+ "items": [
+  {
+   "id": "eq_w1_mokgeom",
+   "name": "박달 목검",
+   "slot": "weapon",
+   "tier": 1,
+   "family": "none",
+   "element": "none",
+   "affinity": "none",
+   "stats": {
+    "atk": 4
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "market5",
+    "price": 60
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_w2_hwando",
+   "name": "환도",
+   "slot": "weapon",
+   "tier": 2,
+   "family": "yu",
+   "element": "metal",
+   "affinity": "yu",
+   "stats": {
+    "atk": 10
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "forge",
+    "price": 180
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_w2_suljang",
+   "name": "도사 철선장",
+   "slot": "weapon",
+   "tier": 2,
+   "family": "seon",
+   "element": "fire",
+   "affinity": "seon",
+   "class_restriction": [
+    "cls_dosa"
+   ],
+   "stats": {
+    "atk": 11,
+    "res": 0.04
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "forge",
+    "price": 180
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_w2_jeoul",
+   "name": "상인 저울추 철퇴",
+   "slot": "weapon",
+   "tier": 2,
+   "family": "none",
+   "element": "metal",
+   "affinity": "none",
+   "class_restriction": [
+    "cls_merchant"
+   ],
+   "stats": {
+    "atk": 10,
+    "crit": 0.05
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "forge",
+    "price": 180
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_w3_byeolungeom",
+   "name": "별운검",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "yu",
+   "element": "metal",
+   "affinity": "yu",
+   "stats": {
+    "atk": 20
+   },
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_hwando",
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 6
+     },
+     {
+      "id": "mat_charcoal",
+      "qty": 4
+     },
+     {
+      "id": "mat_fish_glue",
+      "qty": 1
+     }
+    ],
+    "min_rank": 3
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_w3_hwaseon",
+   "name": "화전(火箭) 각궁",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "fire",
+   "affinity": "none",
+   "stats": {
+    "atk": 19,
+    "crit": 0.08
+   },
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_bow",
+    "materials": [
+     {
+      "id": "mat_bamboo",
+      "qty": 4
+     },
+     {
+      "id": "mat_ox_horn",
+      "qty": 2
+     },
+     {
+      "id": "mat_fish_glue",
+      "qty": 2
+     }
+    ],
+    "min_rank": 3
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_a1_cheollik",
+   "name": "무명 철릭",
+   "slot": "armor",
+   "tier": 1,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "def": 4,
+    "hp": 0
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "market5",
+    "price": 80
+   },
+   "weight": 6.0,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_a2_dujeonggap",
+   "name": "두정갑",
+   "slot": "armor",
+   "tier": 2,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "def": 10,
+    "hp": 10
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "forge",
+    "price": 240
+   },
+   "weight": 6.0,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_a3_gyeongbeon",
+   "name": "경번갑",
+   "slot": "armor",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {
+    "def": 20,
+    "hp": 20,
+    "flat_red": 2
+   },
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_armor",
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 8
+     },
+     {
+      "id": "mat_cowhide",
+      "qty": 3
+     },
+     {
+      "id": "mat_cotton",
+      "qty": 2
+     }
+    ],
+    "min_rank": 3
+   },
+   "weight": 6.0,
+   "affinity": "yu"
+  },
+  {
+   "id": "eq_s1_jipsin",
+   "name": "짚신",
+   "slot": "shoes",
+   "tier": 1,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "spd": 10
+   },
+   "fatigue_mult": 1.0,
+   "acquire": {
+    "type": "shop",
+    "facility": "market5",
+    "price": 20
+   },
+   "weight": 0.8,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_s2_bidan_jipsin",
+   "name": "비단 삼첩 짚신",
+   "slot": "shoes",
+   "tier": 2,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "spd": 15,
+    "def": 1
+   },
+   "fatigue_mult": 0.9,
+   "acquire": {
+    "type": "shop",
+    "facility": "market",
+    "price": 60
+   },
+   "weight": 0.8,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_s3_mokhwa",
+   "name": "수혜자 목화",
+   "slot": "shoes",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "spd": 20,
+    "def": 3
+   },
+   "fatigue_mult": 0.85,
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_boots",
+    "materials": [
+     {
+      "id": "mat_cowhide",
+      "qty": 3
+     },
+     {
+      "id": "mat_silk_thread",
+      "qty": 2
+     }
+    ],
+    "min_rank": 3
+   },
+   "weight": 0.8,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_c1_hopae",
+   "name": "호패",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "res": 0.03,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "gwana",
+    "price": 45
+   },
+   "weight": 0.2,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_c2_yeongdeung",
+   "name": "영등 영패",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "none",
+   "element": "water",
+   "stats": {
+    "res": 0.06,
+    "atk": 2,
+    "hp": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_009"
+   },
+   "weight": 0.2,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_c2_ssitgim",
+   "name": "씻김굿 방울",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_010"
+   },
+   "weight": 0.2,
+   "affinity": "bul"
+  },
+  {
+   "id": "eq_c3_byeoksa",
+   "name": "벽사 삼작노리개",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_charm",
+    "materials": [
+     {
+      "id": "mat_silk_thread",
+      "qty": 3
+     },
+     {
+      "id": "mat_copper",
+      "qty": 2
+     }
+    ],
+    "min_rank": 3
+   },
+   "weight": 0.2,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_c3_gaya_crown",
+   "name": "가야 금동관",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "stats": {
+    "res": 0.1,
+    "atk": 4,
+    "def": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_012"
+   },
+   "weight": 0.2,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_b3_gyeonggukjeon",
+   "name": "조선경국전",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_gyeonggukjeon",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_014"
+   },
+   "weight": 0.5,
+   "affinity": "yu"
+  },
+  {
+   "id": "eq_b3_muyedobo",
+   "name": "무예도보통지",
+   "slot": "book",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_muyedobo",
+   "acquire": {
+    "type": "shop",
+    "facility": "bookstore",
+    "price": 2250,
+    "min_rank": 3
+   },
+   "weight": 0.5,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_b5_hunminjeongeum",
+   "name": "훈민정음 해례본",
+   "slot": "book",
+   "tier": 5,
+   "family": "yu",
+   "element": "holy",
+   "stats": {},
+   "passive_skill": "sk_pas_hunmin",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_013"
+   },
+   "weight": 0.5,
+   "affinity": "yu"
+  },
+  {
+   "id": "eq_saingeom_5",
+   "name": "순조 인월 인일 사인검(四寅劍)",
+   "slot": "weapon",
+   "tier": 5,
+   "family": "seon",
+   "element": "holy",
+   "affinity": "seon",
+   "weight": 3.8,
+   "class_restriction": [
+    "cls_eosa",
+    "cls_dosa"
+   ],
+   "req_knowledge": {
+    "seon": 4,
+    "yu": 3
+   },
+   "stats": {
+    "atk": 45,
+    "def_ignore": 0.25,
+    "crit": 0.15
+   },
+   "affinity_bonus": {
+    "seon": 0.3,
+    "yu": 0.15
+   },
+   "granted_skills": {
+    "active": "sk_act_tiger_banish",
+    "passive": "sk_pas_evil_repel"
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "사인검 벼리는 인년·인월·인일",
+    "min_rank": 4,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_SHRINE_GYERYONGSANSINDOAN",
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI"
+    ]
+   }
+  },
+  {
+   "id": "eq_her_108",
+   "name": "강화 벽사 패물",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_108"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_109",
+   "name": "강화 금동관",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "res": 0.054,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_109"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_110",
+   "name": "금강산 사리장엄구",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "none",
+   "stats": {
+    "res": 0.144,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_110"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_111",
+   "name": "화천 벽사 패물",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.03,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_111"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_113",
+   "name": "《강릉 문집》",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_113",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_113"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_114",
+   "name": "영월 환두대도",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "stats": {
+    "atk": 18
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_114"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_116",
+   "name": "충주 사리장엄구",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "bul",
+   "element": "none",
+   "stats": {
+    "res": 0.108,
+    "atk": 3
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_116"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_117",
+   "name": "계룡산 벽사 패물",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_117"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_119",
+   "name": "부여 사리장엄구",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "none",
+   "stats": {
+    "res": 0.144,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_119"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_120",
+   "name": "공주 찰갑",
+   "slot": "armor",
+   "tier": 4,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "def": 29,
+    "hp": 32
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_120"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_122",
+   "name": "익산 사리장엄구",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "bul",
+   "element": "none",
+   "stats": {
+    "res": 0.18,
+    "atk": 7
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_122"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_124",
+   "name": "《전주 문집》",
+   "slot": "book",
+   "tier": 4,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_124",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_124"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_127",
+   "name": "경주 금동관",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "res": 0.162,
+    "atk": 8
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_127"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_129",
+   "name": "김해 환두대도",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "stats": {
+    "atk": 18
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_129"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_130",
+   "name": "봉산 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.06,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_130"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_132",
+   "name": "《해주 문집》",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_132",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_132"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_134",
+   "name": "묘향산 벽사 패물",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.14,
+    "atk": 6
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_134"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_135",
+   "name": "평양 찰갑",
+   "slot": "armor",
+   "tier": 4,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "def": 29,
+    "hp": 32
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_135"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_136",
+   "name": "강서 금동관",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "res": 0.126,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_136"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_139",
+   "name": "북청 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.06,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_139"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_143",
+   "name": "삼성혈 벽사 패물",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_143"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_144",
+   "name": "《추사 문집》",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_144",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_144"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_yu_weapon_4",
+   "name": "사인참사검",
+   "slot": "weapon",
+   "tier": 4,
+   "family": "yu",
+   "element": "metal",
+   "affinity": "yu",
+   "weight": 3.0,
+   "stats": {
+    "atk": 32
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "사인참사검 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_weapon_4"
+   },
+   "mojak_recipe": "mj_yu_weapon_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_weapon_5",
+   "name": "용천 어검",
+   "slot": "weapon",
+   "tier": 5,
+   "family": "yu",
+   "element": "metal",
+   "affinity": "yu",
+   "weight": 3.0,
+   "stats": {
+    "atk": 45
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "용천 어검 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_CITY_PYEONGYANGBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_weapon_5"
+   },
+   "mojak_recipe": "mj_yu_weapon_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_armor_4",
+   "name": "두석린갑",
+   "slot": "armor",
+   "tier": 4,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 6.0,
+   "stats": {
+    "def": 32,
+    "hp": 35
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "두석린갑 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_armor_4"
+   },
+   "mojak_recipe": "mj_yu_armor_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_armor_5",
+   "name": "용린 어갑",
+   "slot": "armor",
+   "tier": 5,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 6.0,
+   "stats": {
+    "def": 45,
+    "hp": 60
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "용린 어갑 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_CITY_PYEONGYANGBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_armor_5"
+   },
+   "mojak_recipe": "mj_yu_armor_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_shoes_4",
+   "name": "흑피 목화",
+   "slot": "shoes",
+   "tier": 4,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 0.8,
+   "stats": {
+    "spd": 25,
+    "def": 5
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "흑피 목화 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_shoes_4"
+   },
+   "mojak_recipe": "mj_yu_shoes_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_shoes_5",
+   "name": "청룡 목화",
+   "slot": "shoes",
+   "tier": 5,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 0.8,
+   "stats": {
+    "spd": 30,
+    "def": 8
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "청룡 목화 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_CITY_PYEONGYANGBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_shoes_5"
+   },
+   "mojak_recipe": "mj_yu_shoes_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_accessory_4",
+   "name": "수군 청동인장",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.14,
+    "atk": 6
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "수군 청동인장 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_accessory_4"
+   },
+   "mojak_recipe": "mj_yu_accessory_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_accessory_5",
+   "name": "어보 옥인",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.18,
+    "atk": 9
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "어보 옥인 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_CITY_PYEONGYANGBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_accessory_5"
+   },
+   "mojak_recipe": "mj_yu_accessory_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_weapon_4",
+   "name": "금강저",
+   "slot": "weapon",
+   "tier": 4,
+   "family": "bul",
+   "element": "holy",
+   "affinity": "bul",
+   "weight": 3.0,
+   "stats": {
+    "atk": 29,
+    "res": 0.02
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "금강저 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_10_TOWN_MILYANG"
+    ],
+    "fail_consolation": "mj_bul_weapon_4"
+   },
+   "mojak_recipe": "mj_bul_weapon_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_weapon_5",
+   "name": "항마 금강저",
+   "slot": "weapon",
+   "tier": 5,
+   "family": "bul",
+   "element": "holy",
+   "affinity": "bul",
+   "weight": 3.0,
+   "stats": {
+    "atk": 40,
+    "res": 0.02
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "항마 금강저 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_TEMPLE_HAEINSA",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI"
+    ],
+    "fail_consolation": "mj_bul_weapon_5"
+   },
+   "mojak_recipe": "mj_bul_weapon_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_armor_4",
+   "name": "승군 철가사",
+   "slot": "armor",
+   "tier": 4,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 6.0,
+   "stats": {
+    "def": 37,
+    "hp": 40,
+    "res": 0.02
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "승군 철가사 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_10_TOWN_MILYANG"
+    ],
+    "fail_consolation": "mj_bul_armor_4"
+   },
+   "mojak_recipe": "mj_bul_armor_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_armor_5",
+   "name": "사명 금란가사",
+   "slot": "armor",
+   "tier": 5,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 6.0,
+   "stats": {
+    "def": 52,
+    "hp": 69,
+    "res": 0.02
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "사명 금란가사 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_TEMPLE_HAEINSA",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI"
+    ],
+    "fail_consolation": "mj_bul_armor_5"
+   },
+   "mojak_recipe": "mj_bul_armor_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_shoes_4",
+   "name": "행각 철혜",
+   "slot": "shoes",
+   "tier": 4,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 0.8,
+   "stats": {
+    "spd": 25,
+    "def": 6
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "행각 철혜 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_10_TOWN_MILYANG"
+    ],
+    "fail_consolation": "mj_bul_shoes_4"
+   },
+   "mojak_recipe": "mj_bul_shoes_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_shoes_5",
+   "name": "달마 초혜",
+   "slot": "shoes",
+   "tier": 5,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 0.8,
+   "stats": {
+    "spd": 30,
+    "def": 9
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "달마 초혜 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_TEMPLE_HAEINSA",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI"
+    ],
+    "fail_consolation": "mj_bul_shoes_5"
+   },
+   "mojak_recipe": "mj_bul_shoes_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_accessory_4",
+   "name": "사리함 패",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.16,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "사리함 패 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_10_TOWN_MILYANG"
+    ],
+    "fail_consolation": "mj_bul_accessory_4"
+   },
+   "mojak_recipe": "mj_bul_accessory_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_accessory_5",
+   "name": "진신사리 패",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.2,
+    "atk": 8
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "진신사리 패 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_TEMPLE_HAEINSA",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI"
+    ],
+    "fail_consolation": "mj_bul_accessory_5"
+   },
+   "mojak_recipe": "mj_bul_accessory_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_weapon_4",
+   "name": "칠성검",
+   "slot": "weapon",
+   "tier": 4,
+   "family": "seon",
+   "element": "fire",
+   "affinity": "seon",
+   "weight": 3.0,
+   "stats": {
+    "atk": 35,
+    "res": 0.04
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "칠성검 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_04_CITY_GANGREUNGDAEDOHOBU",
+     "ND_04_CITY_WONJUGANGWONGAMYEONG",
+     "ND_05_CITY_CHUNGJUMOK"
+    ],
+    "fail_consolation": "mj_seon_weapon_4"
+   },
+   "mojak_recipe": "mj_seon_weapon_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_weapon_5",
+   "name": "태을 뇌검",
+   "slot": "weapon",
+   "tier": 5,
+   "family": "seon",
+   "element": "fire",
+   "affinity": "seon",
+   "weight": 3.0,
+   "stats": {
+    "atk": 50,
+    "res": 0.04
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "태을 뇌검 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_06_SHRINE_GYERYONGSANSINDOAN",
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI",
+     "ND_17_CITY_JEJUMOKJEJUEUPSEONG"
+    ],
+    "fail_consolation": "mj_seon_weapon_5"
+   },
+   "mojak_recipe": "mj_seon_weapon_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_armor_4",
+   "name": "학창의",
+   "slot": "armor",
+   "tier": 4,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 6.0,
+   "stats": {
+    "def": 29,
+    "hp": 32,
+    "res": 0.04
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "학창의 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_04_CITY_GANGREUNGDAEDOHOBU",
+     "ND_04_CITY_WONJUGANGWONGAMYEONG",
+     "ND_05_CITY_CHUNGJUMOK"
+    ],
+    "fail_consolation": "mj_seon_armor_4"
+   },
+   "mojak_recipe": "mj_seon_armor_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_armor_5",
+   "name": "우의 선포",
+   "slot": "armor",
+   "tier": 5,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 6.0,
+   "stats": {
+    "def": 40,
+    "hp": 54,
+    "res": 0.04
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "우의 선포 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_06_SHRINE_GYERYONGSANSINDOAN",
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI",
+     "ND_17_CITY_JEJUMOKJEJUEUPSEONG"
+    ],
+    "fail_consolation": "mj_seon_armor_5"
+   },
+   "mojak_recipe": "mj_seon_armor_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_shoes_4",
+   "name": "운혜",
+   "slot": "shoes",
+   "tier": 4,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 0.8,
+   "stats": {
+    "spd": 25,
+    "def": 4
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "운혜 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_04_CITY_GANGREUNGDAEDOHOBU",
+     "ND_04_CITY_WONJUGANGWONGAMYEONG",
+     "ND_05_CITY_CHUNGJUMOK"
+    ],
+    "fail_consolation": "mj_seon_shoes_4"
+   },
+   "mojak_recipe": "mj_seon_shoes_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_shoes_5",
+   "name": "축지 운리",
+   "slot": "shoes",
+   "tier": 5,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 0.8,
+   "stats": {
+    "spd": 30,
+    "def": 7
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "축지 운리 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_06_SHRINE_GYERYONGSANSINDOAN",
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI",
+     "ND_17_CITY_JEJUMOKJEJUEUPSEONG"
+    ],
+    "fail_consolation": "mj_seon_shoes_5"
+   },
+   "mojak_recipe": "mj_seon_shoes_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_accessory_4",
+   "name": "호로병 패",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.18,
+    "atk": 7
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "호로병 패 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_04_CITY_GANGREUNGDAEDOHOBU",
+     "ND_04_CITY_WONJUGANGWONGAMYEONG",
+     "ND_05_CITY_CHUNGJUMOK"
+    ],
+    "fail_consolation": "mj_seon_accessory_4"
+   },
+   "mojak_recipe": "mj_seon_accessory_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_accessory_5",
+   "name": "선도 복숭아 옥패",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.22,
+    "atk": 10
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "선도 복숭아 옥패 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_06_SHRINE_GYERYONGSANSINDOAN",
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI",
+     "ND_17_CITY_JEJUMOKJEJUEUPSEONG"
+    ],
+    "fail_consolation": "mj_seon_accessory_5"
+   },
+   "mojak_recipe": "mj_seon_accessory_5",
+   "generated": "systematic"
+  }
+ ]
+}

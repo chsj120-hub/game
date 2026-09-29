@@ -1,0 +1,30 @@
+; Engine configuration file.
+; 대동여지도 어드벤처: 삼한팔도 유람기 (가제) — Godot 4.3+
+
+config_version=5
+
+[application]
+
+config/name="대동여지도 어드벤처: 삼한팔도 유람기"
+config/description="조선 팔도 오픈월드 탐험 & 지리 전략 CTB RPG"
+run/main_scene="res://scenes/Main.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+
+[autoload]
+
+DataDB="*res://scripts/autoload/DataDB.gd"
+Balance="*res://scripts/autoload/Balance.gd"
+Assets="*res://scripts/autoload/Assets.gd"
+GameState="*res://scripts/autoload/GameState.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

@@ -1,0 +1,9820 @@
+{
+ "_schema": "build_world.py 생성물(직접 수정 금지 → data_src 수정 후 재빌드). 17권역(MAP_01~17) · nodes(7상시+7은닉+확장 hazard) · edges(권역 내 도로/오솔길) · border_links(인접 권역 국경) · sea_routes(나루터 뱃길). pos=권역 지도 px(3840×2160, 10리=200px, 임시 자동배치).",
+ "map_size": [
+  3840,
+  2160
+ ],
+ "px_per_li": 20.0,
+ "regions": [
+  {
+   "id": "MAP_01",
+   "name": "경기 북부",
+   "overworld_pos": [
+    0.44,
+    0.52
+   ],
+   "rice_price": 52,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_02",
+    "MAP_03",
+    "MAP_11",
+    "MAP_12"
+   ],
+   "daedong_sheets": [
+    10,
+    11
+   ],
+   "hub": "ND_01_CITY_GAESEONGBU",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_01.png",
+   "mask_texture": "res://assets/maps/masks/map_01_mask.png",
+   "parallax_dir": "res://assets/parallax/map_01/"
+  },
+  {
+   "id": "MAP_02",
+   "name": "경기 남부",
+   "overworld_pos": [
+    0.46,
+    0.59
+   ],
+   "rice_price": 50,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_01",
+    "MAP_03",
+    "MAP_04",
+    "MAP_05",
+    "MAP_06"
+   ],
+   "daedong_sheets": [
+    11,
+    12
+   ],
+   "hub": "ND_02_CITY_HANYANGGYEONGJO",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_02.png",
+   "mask_texture": "res://assets/maps/masks/map_02_mask.png",
+   "parallax_dir": "res://assets/parallax/map_02/"
+  },
+  {
+   "id": "MAP_03",
+   "name": "강원 북부",
+   "overworld_pos": [
+    0.58,
+    0.46
+   ],
+   "rice_price": 58,
+   "climate": "cold",
+   "adjacent": [
+    "MAP_01",
+    "MAP_02",
+    "MAP_04",
+    "MAP_11",
+    "MAP_15"
+   ],
+   "daedong_sheets": [
+    9,
+    10
+   ],
+   "hub": "ND_03_CITY_CHEOLWONDOHOBU",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_03.png",
+   "mask_texture": "res://assets/maps/masks/map_03_mask.png",
+   "parallax_dir": "res://assets/parallax/map_03/"
+  },
+  {
+   "id": "MAP_04",
+   "name": "강원 남부",
+   "overworld_pos": [
+    0.64,
+    0.57
+   ],
+   "rice_price": 55,
+   "climate": "cold",
+   "adjacent": [
+    "MAP_02",
+    "MAP_03",
+    "MAP_05",
+    "MAP_09"
+   ],
+   "daedong_sheets": [
+    12,
+    13
+   ],
+   "hub": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_04.png",
+   "mask_texture": "res://assets/maps/masks/map_04_mask.png",
+   "parallax_dir": "res://assets/parallax/map_04/"
+  },
+  {
+   "id": "MAP_05",
+   "name": "충청 북부",
+   "overworld_pos": [
+    0.53,
+    0.65
+   ],
+   "rice_price": 45,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_02",
+    "MAP_04",
+    "MAP_06",
+    "MAP_07",
+    "MAP_09"
+   ],
+   "daedong_sheets": [
+    14,
+    15
+   ],
+   "hub": "ND_05_CITY_CHUNGJUMOK",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_05.png",
+   "mask_texture": "res://assets/maps/masks/map_05_mask.png",
+   "parallax_dir": "res://assets/parallax/map_05/"
+  },
+  {
+   "id": "MAP_06",
+   "name": "충청 남부",
+   "overworld_pos": [
+    0.4,
+    0.67
+   ],
+   "rice_price": 42,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_02",
+    "MAP_05",
+    "MAP_07"
+   ],
+   "daedong_sheets": [
+    13,
+    14
+   ],
+   "hub": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_06.png",
+   "mask_texture": "res://assets/maps/masks/map_06_mask.png",
+   "parallax_dir": "res://assets/parallax/map_06/"
+  },
+  {
+   "id": "MAP_07",
+   "name": "전라 북부",
+   "overworld_pos": [
+    0.43,
+    0.76
+   ],
+   "rice_price": 36,
+   "climate": "warm",
+   "adjacent": [
+    "MAP_05",
+    "MAP_06",
+    "MAP_08",
+    "MAP_09",
+    "MAP_10"
+   ],
+   "daedong_sheets": [
+    17,
+    18
+   ],
+   "hub": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_07.png",
+   "mask_texture": "res://assets/maps/masks/map_07_mask.png",
+   "parallax_dir": "res://assets/parallax/map_07/"
+  },
+  {
+   "id": "MAP_08",
+   "name": "전라 남부",
+   "overworld_pos": [
+    0.41,
+    0.86
+   ],
+   "rice_price": 35,
+   "climate": "warm",
+   "adjacent": [
+    "MAP_07",
+    "MAP_10"
+   ],
+   "daedong_sheets": [
+    19,
+    20,
+    21
+   ],
+   "hub": "ND_08_CITY_NAJUMOK",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_08.png",
+   "mask_texture": "res://assets/maps/masks/map_08_mask.png",
+   "parallax_dir": "res://assets/parallax/map_08/"
+  },
+  {
+   "id": "MAP_09",
+   "name": "경상 북부",
+   "overworld_pos": [
+    0.64,
+    0.7
+   ],
+   "rice_price": 40,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_04",
+    "MAP_05",
+    "MAP_07",
+    "MAP_10"
+   ],
+   "daedong_sheets": [
+    15,
+    16,
+    17
+   ],
+   "hub": "ND_09_CITY_SANGJUMOK",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_09.png",
+   "mask_texture": "res://assets/maps/masks/map_09_mask.png",
+   "parallax_dir": "res://assets/parallax/map_09/"
+  },
+  {
+   "id": "MAP_10",
+   "name": "경상 남부",
+   "overworld_pos": [
+    0.62,
+    0.81
+   ],
+   "rice_price": 38,
+   "climate": "warm",
+   "adjacent": [
+    "MAP_07",
+    "MAP_08",
+    "MAP_09"
+   ],
+   "daedong_sheets": [
+    18,
+    19,
+    20
+   ],
+   "hub": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_10.png",
+   "mask_texture": "res://assets/maps/masks/map_10_mask.png",
+   "parallax_dir": "res://assets/parallax/map_10/"
+  },
+  {
+   "id": "MAP_11",
+   "name": "황해 북부",
+   "overworld_pos": [
+    0.38,
+    0.45
+   ],
+   "rice_price": 50,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_01",
+    "MAP_03",
+    "MAP_12",
+    "MAP_13"
+   ],
+   "daedong_sheets": [
+    8
+   ],
+   "hub": "ND_11_CITY_HWANGJUMOK",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_11.png",
+   "mask_texture": "res://assets/maps/masks/map_11_mask.png",
+   "parallax_dir": "res://assets/parallax/map_11/"
+  },
+  {
+   "id": "MAP_12",
+   "name": "황해 남부",
+   "overworld_pos": [
+    0.28,
+    0.5
+   ],
+   "rice_price": 46,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_01",
+    "MAP_11"
+   ],
+   "daedong_sheets": [
+    8,
+    9
+   ],
+   "hub": "ND_12_CITY_HAEJUMOK",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_12.png",
+   "mask_texture": "res://assets/maps/masks/map_12_mask.png",
+   "parallax_dir": "res://assets/parallax/map_12/"
+  },
+  {
+   "id": "MAP_13",
+   "name": "평안 남부",
+   "overworld_pos": [
+    0.33,
+    0.36
+   ],
+   "rice_price": 55,
+   "climate": "cold",
+   "adjacent": [
+    "MAP_11",
+    "MAP_14",
+    "MAP_15"
+   ],
+   "daedong_sheets": [
+    6,
+    7
+   ],
+   "hub": "ND_13_CITY_PYEONGYANGBU",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_13.png",
+   "mask_texture": "res://assets/maps/masks/map_13_mask.png",
+   "parallax_dir": "res://assets/parallax/map_13/"
+  },
+  {
+   "id": "MAP_14",
+   "name": "평안 북부",
+   "overworld_pos": [
+    0.3,
+    0.24
+   ],
+   "rice_price": 62,
+   "climate": "cold",
+   "adjacent": [
+    "MAP_13",
+    "MAP_15"
+   ],
+   "daedong_sheets": [
+    3,
+    4
+   ],
+   "hub": "ND_14_CITY_UIJUMOK",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_14.png",
+   "mask_texture": "res://assets/maps/masks/map_14_mask.png",
+   "parallax_dir": "res://assets/parallax/map_14/"
+  },
+  {
+   "id": "MAP_15",
+   "name": "함경 남부",
+   "overworld_pos": [
+    0.58,
+    0.26
+   ],
+   "rice_price": 68,
+   "climate": "cold",
+   "adjacent": [
+    "MAP_03",
+    "MAP_13",
+    "MAP_14",
+    "MAP_16"
+   ],
+   "daedong_sheets": [
+    4,
+    5,
+    6
+   ],
+   "hub": "ND_15_CITY_HAMHEUNGBU",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_15.png",
+   "mask_texture": "res://assets/maps/masks/map_15_mask.png",
+   "parallax_dir": "res://assets/parallax/map_15/"
+  },
+  {
+   "id": "MAP_16",
+   "name": "함경 북부",
+   "overworld_pos": [
+    0.72,
+    0.12
+   ],
+   "rice_price": 80,
+   "climate": "frigid",
+   "adjacent": [
+    "MAP_15"
+   ],
+   "daedong_sheets": [
+    1,
+    2,
+    3
+   ],
+   "hub": "ND_16_CITY_GYEONGSEONGDOHOBU",
+   "sea_only": false,
+   "map_texture": "res://assets/maps/regions/map_16.png",
+   "mask_texture": "res://assets/maps/masks/map_16_mask.png",
+   "parallax_dir": "res://assets/parallax/map_16/"
+  },
+  {
+   "id": "MAP_17",
+   "name": "제주도",
+   "overworld_pos": [
+    0.38,
+    0.98
+   ],
+   "rice_price": 60,
+   "climate": "warm",
+   "adjacent": [],
+   "daedong_sheets": [
+    22
+   ],
+   "hub": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "sea_only": true,
+   "map_texture": "res://assets/maps/regions/map_17.png",
+   "mask_texture": "res://assets/maps/masks/map_17_mask.png",
+   "parallax_dir": "res://assets/parallax/map_17/"
+  }
+ ],
+ "nodes": [
+  {
+   "id": "ND_01_CITY_GAESEONGBU",
+   "name": "개성부",
+   "region": "MAP_01",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2382,
+    1867
+   ],
+   "facilities": [
+    "antique",
+    "black_market",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "restaurant",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_02"
+   ],
+   "heritage": "her_023"
+  },
+  {
+   "id": "ND_01_CITY_GANGHWAYUSUBU",
+   "name": "강화유수부",
+   "region": "MAP_01",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    3228,
+    1002
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "ferry",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_024"
+  },
+  {
+   "id": "ND_01_TOWN_PAJUMOK",
+   "name": "파주목",
+   "region": "MAP_01",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1997,
+    1527
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_01_TOWN_JANGDAN",
+   "name": "장단",
+   "region": "MAP_01",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2421,
+    681
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_01_TOWN_YEONCHEON",
+   "name": "연천",
+   "region": "MAP_01",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2697,
+    1098
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_01_TOWN_GYODONG",
+   "name": "교동",
+   "region": "MAP_01",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1325,
+    267
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_11"
+   ]
+  },
+  {
+   "id": "ND_01_STATION_CHEONGGYOYEOK",
+   "name": "청교역",
+   "region": "MAP_01",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    3377,
+    319
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_03"
+   ]
+  },
+  {
+   "id": "ND_01_STATION_MAJEONYEOK",
+   "name": "마전역",
+   "region": "MAP_01",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2107,
+    1141
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_01_STATION_IMJINCHAM",
+   "name": "임진참",
+   "region": "MAP_01",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    671,
+    1519
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_12"
+   ]
+  },
+  {
+   "id": "ND_01_TEMPLE_JEONDEUNGSA",
+   "name": "전등사",
+   "region": "MAP_01",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1613,
+    542
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_025"
+  },
+  {
+   "id": "ND_01_TEMPLE_BOGWANGSA",
+   "name": "보광사",
+   "region": "MAP_01",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1122,
+    1674
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_026"
+  },
+  {
+   "id": "ND_01_TOWN_MUNSANPOGU",
+   "name": "문산포구",
+   "region": "MAP_01",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3046,
+    1411
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "특수→촌락(포구). 나루터 시설 부여"
+  },
+  {
+   "id": "ND_01_FORT_DEOKJINJIN",
+   "name": "덕진진",
+   "region": "MAP_01",
+   "type": "fort",
+   "type_label": "군사관문",
+   "hidden": false,
+   "pos": [
+    3015,
+    415
+   ],
+   "facilities": [
+    "bounty",
+    "checkpoint",
+    "drill"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_027"
+  },
+  {
+   "id": "ND_01_BEACON_GAESEONGSONGAKBONGSU",
+   "name": "개성 송악 봉수",
+   "region": "MAP_01",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    3391,
+    1551
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_02_CITY_HANYANGGYEONGJO",
+   "name": "한양 경조",
+   "region": "MAP_02",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    757,
+    1848
+   ],
+   "facilities": [
+    "antique",
+    "black_market",
+    "bookstore",
+    "carpenter",
+    "forge",
+    "gaekju",
+    "gongbang",
+    "gwana",
+    "hyanggyo",
+    "hyeminseo",
+    "jumak",
+    "market",
+    "restaurant",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_06"
+   ],
+   "heritage": "her_003"
+  },
+  {
+   "id": "ND_02_CITY_GWANGJUYUSUBU",
+   "name": "광주유수부",
+   "region": "MAP_02",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2395,
+    1187
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_028"
+  },
+  {
+   "id": "ND_02_CITY_SUWONHWASEONG",
+   "name": "수원화성",
+   "region": "MAP_02",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    852,
+    765
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_004"
+  },
+  {
+   "id": "ND_02_TOWN_ANSEONG",
+   "name": "안성",
+   "region": "MAP_02",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2177,
+    375
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_02_TOWN_NAMYANG",
+   "name": "남양",
+   "region": "MAP_02",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2986,
+    566
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_03",
+    "MAP_04"
+   ]
+  },
+  {
+   "id": "ND_02_TOWN_YEOJU",
+   "name": "여주",
+   "region": "MAP_02",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1560,
+    1621
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_02_TOWN_ICHEON",
+   "name": "이천",
+   "region": "MAP_02",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2810,
+    1086
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_02_TOWN_YANGPYEONG",
+   "name": "양평",
+   "region": "MAP_02",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3404,
+    1790
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_05"
+   ]
+  },
+  {
+   "id": "ND_02_STATION_YANGJAEYEOK",
+   "name": "양재역",
+   "region": "MAP_02",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1761,
+    910
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_02_STATION_PANGYOYEOK",
+   "name": "판교역",
+   "region": "MAP_02",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1211,
+    1920
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_02_STATION_YEONGHWAYEOK",
+   "name": "영화역",
+   "region": "MAP_02",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1225,
+    1187
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_02_TEMPLE_JOGYESA",
+   "name": "조계사",
+   "region": "MAP_02",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    2506,
+    1691
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "anachronism": "현 조계사는 1910년 각황사 창건 이후 명칭(1861년 배경과 불일치)",
+   "period_candidates": [
+    "봉은사",
+    "화계사"
+   ],
+   "heritage": "her_029"
+  },
+  {
+   "id": "ND_02_TEMPLE_YONGJUSA",
+   "name": "용주사",
+   "region": "MAP_02",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    328,
+    1740
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_030"
+  },
+  {
+   "id": "ND_02_TEMPLE_SINREUKSA",
+   "name": "신륵사",
+   "region": "MAP_02",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    3351,
+    1115
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_031"
+  },
+  {
+   "id": "ND_02_SPRING_ICHEONONCHEON",
+   "name": "이천온천",
+   "region": "MAP_02",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    975,
+    1541
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_02_FORT_NAMHANSANSEONG",
+   "name": "남한산성",
+   "region": "MAP_02",
+   "type": "fort",
+   "type_label": "군사관문",
+   "hidden": false,
+   "pos": [
+    1475,
+    294
+   ],
+   "facilities": [
+    "bounty",
+    "checkpoint",
+    "drill"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "원문 '온천' 목록에 있으나 산성 → 군사관문으로 보정",
+   "border_to": [
+    "MAP_01"
+   ],
+   "heritage": "her_032"
+  },
+  {
+   "id": "ND_02_BEACON_MOKMYEOKSANBONGSU",
+   "name": "목멱산 봉수",
+   "region": "MAP_02",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    575,
+    470
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_03_CITY_CHEOLWONDOHOBU",
+   "name": "철원도호부",
+   "region": "MAP_03",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    1785,
+    441
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_15"
+   ],
+   "heritage": "her_033"
+  },
+  {
+   "id": "ND_03_CITY_CHUNCHEONBU",
+   "name": "춘천부",
+   "region": "MAP_03",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2549,
+    1682
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_04"
+   ],
+   "heritage": "her_034"
+  },
+  {
+   "id": "ND_03_TOWN_YANGGU",
+   "name": "양구",
+   "region": "MAP_03",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3315,
+    350
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_03_TOWN_HWACHEON",
+   "name": "화천",
+   "region": "MAP_03",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    957,
+    1372
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_01"
+   ]
+  },
+  {
+   "id": "ND_03_TOWN_INJE",
+   "name": "인제",
+   "region": "MAP_03",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    622,
+    727
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_11"
+   ]
+  },
+  {
+   "id": "ND_03_TOWN_HOEYANG",
+   "name": "회양",
+   "region": "MAP_03",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3258,
+    1246
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_03_TOWN_TONGCHEON",
+   "name": "통천",
+   "region": "MAP_03",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1441,
+    1258
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_03_STATION_YEONCHEONYEOK",
+   "name": "연천역",
+   "region": "MAP_03",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    879,
+    1816
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "anachronism": "경기 북부 '연천' 촌락과 이름 중복(권역도 다름)",
+   "period_candidates": [
+    "(역명 고증 필요)"
+   ],
+   "border_to": [
+    "MAP_02"
+   ]
+  },
+  {
+   "id": "ND_03_STATION_BOANYEOK",
+   "name": "보안역",
+   "region": "MAP_03",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    495,
+    356
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_03_STATION_CHANGDOYEOK",
+   "name": "창도역",
+   "region": "MAP_03",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2428,
+    836
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_03_TEMPLE_GEONBONGSA",
+   "name": "건봉사",
+   "region": "MAP_03",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    3436,
+    797
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_035"
+  },
+  {
+   "id": "ND_03_TEMPLE_BAEKDAMSA",
+   "name": "백담사",
+   "region": "MAP_03",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1940,
+    1272
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_036"
+  },
+  {
+   "id": "ND_03_SCENIC_GEUMGANGSANGURYONGPOK",
+   "name": "금강산 구룡폭",
+   "region": "MAP_03",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": false,
+   "pos": [
+    2037,
+    919
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_037"
+  },
+  {
+   "id": "ND_03_SCENIC_CHEOLWONSAMBUYEON",
+   "name": "철원 삼부연",
+   "region": "MAP_03",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": false,
+   "pos": [
+    1112,
+    989
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_038"
+  },
+  {
+   "id": "ND_03_BEACON_CHUNCHEONBONGSU",
+   "name": "춘천 봉수",
+   "region": "MAP_03",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    2585,
+    288
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "name": "원주 강원감영",
+   "region": "MAP_04",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2848,
+    1677
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang",
+    "yakryeongsi"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_039"
+  },
+  {
+   "id": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "name": "강릉대도호부",
+   "region": "MAP_04",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    1897,
+    1499
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "carpenter",
+    "ferry",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_09"
+   ],
+   "heritage": "her_040"
+  },
+  {
+   "id": "ND_04_TOWN_SAMCHEOK",
+   "name": "삼척",
+   "region": "MAP_04",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1375,
+    1630
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_020"
+  },
+  {
+   "id": "ND_04_TOWN_ULJIN",
+   "name": "울진",
+   "region": "MAP_04",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1433,
+    828
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_04_TOWN_PYEONGCHANG",
+   "name": "평창",
+   "region": "MAP_04",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2555,
+    1867
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_04_TOWN_YEONGWOL",
+   "name": "영월",
+   "region": "MAP_04",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2299,
+    1248
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_04_TOWN_JEONGSEON",
+   "name": "정선",
+   "region": "MAP_04",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    524,
+    708
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_02"
+   ]
+  },
+  {
+   "id": "ND_04_STATION_ANHEUNGYEOK",
+   "name": "안흥역",
+   "region": "MAP_04",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2004,
+    848
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_04_STATION_DAEGWANRYEONGCHAM",
+   "name": "대관령참",
+   "region": "MAP_04",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1586,
+    509
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_03"
+   ]
+  },
+  {
+   "id": "ND_04_STATION_PYEONGHAEYEOK",
+   "name": "평해역",
+   "region": "MAP_04",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    579,
+    1773
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_05"
+   ]
+  },
+  {
+   "id": "ND_04_TEMPLE_WOLJEONGSA",
+   "name": "월정사",
+   "region": "MAP_04",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    2012,
+    362
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_041"
+  },
+  {
+   "id": "ND_04_TEMPLE_SAMCHEOKSINHEUNGSA",
+   "name": "삼척 신흥사",
+   "region": "MAP_04",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    2582,
+    1459
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_042"
+  },
+  {
+   "id": "ND_04_SPRING_ULJINBAEKAMONCHEON",
+   "name": "울진 백암온천",
+   "region": "MAP_04",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    2728,
+    244
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_04_SPRING_DEOKGUONCHEON",
+   "name": "덕구온천",
+   "region": "MAP_04",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    3008,
+    1144
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_04_BEACON_GANGREUNGBONGSU",
+   "name": "강릉 봉수",
+   "region": "MAP_04",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    2697,
+    689
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_05_CITY_CHUNGJUMOK",
+   "name": "충주목",
+   "region": "MAP_05",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2186,
+    1755
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_043"
+  },
+  {
+   "id": "ND_05_CITY_CHEONGJUMOK",
+   "name": "청주목",
+   "region": "MAP_05",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    1355,
+    1331
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_044"
+  },
+  {
+   "id": "ND_05_TOWN_DANYANG",
+   "name": "단양",
+   "region": "MAP_05",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    726,
+    1186
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_05_TOWN_JECHEON",
+   "name": "제천",
+   "region": "MAP_05",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3373,
+    1496
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_04",
+    "MAP_09"
+   ]
+  },
+  {
+   "id": "ND_05_TOWN_YEONGDONG",
+   "name": "영동",
+   "region": "MAP_05",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    930,
+    1920
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_07"
+   ]
+  },
+  {
+   "id": "ND_05_TOWN_BOEUN",
+   "name": "보은",
+   "region": "MAP_05",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2569,
+    1815
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_05_TOWN_OKCHEON",
+   "name": "옥천",
+   "region": "MAP_05",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1409,
+    992
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_05_STATION_GAHEUNGYEOK",
+   "name": "가흥역",
+   "region": "MAP_05",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2199,
+    1240
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_05_STATION_YULBONGYEOK",
+   "name": "율봉역",
+   "region": "MAP_05",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2147,
+    629
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_05_STATION_JEUNGYAKYEOK",
+   "name": "증약역",
+   "region": "MAP_05",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    385,
+    1610
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_06"
+   ]
+  },
+  {
+   "id": "ND_05_TEMPLE_SOKRISANBEOPJUSA",
+   "name": "속리산 법주사",
+   "region": "MAP_05",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    395,
+    383
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_045"
+  },
+  {
+   "id": "ND_05_TEMPLE_GUINSA",
+   "name": "구인사",
+   "region": "MAP_05",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    3313,
+    543
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "anachronism": "1945년 창건",
+   "period_candidates": [
+    "영동 영국사",
+    "단양 도담삼봉"
+   ],
+   "heritage": "her_046"
+  },
+  {
+   "id": "ND_05_SPRING_SUANBOONCHEON",
+   "name": "수안보온천",
+   "region": "MAP_05",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    2565,
+    301
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_05_FORT_MUNGYEONGSAEJAEJORYEONGGWAN",
+   "name": "문경새재 조령관",
+   "region": "MAP_05",
+   "type": "fort",
+   "type_label": "군사관문",
+   "hidden": false,
+   "pos": [
+    705,
+    742
+   ],
+   "facilities": [
+    "bounty",
+    "checkpoint",
+    "drill"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "원문 '온천' 목록 → 군사관문. 실제 조령관은 경상도 문경 쪽(MAP_09 경계)",
+   "border_to": [
+    "MAP_02"
+   ],
+   "heritage": "her_019"
+  },
+  {
+   "id": "ND_05_BEACON_CHUNGJUBONGSU",
+   "name": "충주 봉수",
+   "region": "MAP_05",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    2825,
+    965
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "name": "공주 충청감영",
+   "region": "MAP_06",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    3102,
+    538
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "hyeminseo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_02",
+    "MAP_05"
+   ],
+   "heritage": "her_047"
+  },
+  {
+   "id": "ND_06_CITY_HONGJUMOK",
+   "name": "홍주목",
+   "region": "MAP_06",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    1078,
+    727
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_048"
+  },
+  {
+   "id": "ND_06_TOWN_BUYEO",
+   "name": "부여",
+   "region": "MAP_06",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2591,
+    723
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_06_TOWN_HAEMI",
+   "name": "해미",
+   "region": "MAP_06",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3066,
+    1297
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_06_TOWN_TAEAN",
+   "name": "태안",
+   "region": "MAP_06",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    761,
+    1684
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_06_TOWN_ASAN",
+   "name": "아산",
+   "region": "MAP_06",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2671,
+    1393
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_07"
+   ]
+  },
+  {
+   "id": "ND_06_TOWN_CHEONAN",
+   "name": "천안",
+   "region": "MAP_06",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2135,
+    445
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_06_STATION_IINYEOK",
+   "name": "이인역",
+   "region": "MAP_06",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1586,
+    839
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_06_STATION_GEUMJEONGYEOK",
+   "name": "금정역",
+   "region": "MAP_06",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1192,
+    1922
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_06_STATION_GWANGJEONGYEOK",
+   "name": "광정역",
+   "region": "MAP_06",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1260,
+    1069
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_06_TEMPLE_MAGOKSA",
+   "name": "마곡사",
+   "region": "MAP_06",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1242,
+    274
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_049"
+  },
+  {
+   "id": "ND_06_TEMPLE_GAPSA",
+   "name": "갑사",
+   "region": "MAP_06",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1941,
+    1045
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_050"
+  },
+  {
+   "id": "ND_06_TEMPLE_SUDEOKSA",
+   "name": "수덕사",
+   "region": "MAP_06",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    421,
+    1353
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_051"
+  },
+  {
+   "id": "ND_06_SPRING_ONYANGONCHEON",
+   "name": "온양온천",
+   "region": "MAP_06",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    592,
+    479
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_06_SPRING_DOGOONCHEON",
+   "name": "도고온천",
+   "region": "MAP_06",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    2555,
+    1935
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_06_SPRING_YUSEONGONCHEON",
+   "name": "유성온천",
+   "region": "MAP_06",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    2616,
+    252
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_06_BEACON_GONGJUWOLSEONGSANBONGSU",
+   "name": "공주 월성산 봉수",
+   "region": "MAP_06",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    3446,
+    983
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "name": "전주 전라감영",
+   "region": "MAP_07",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    330,
+    1692
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gongbang",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "restaurant",
+    "yakbang",
+    "yakryeongsi"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_052"
+  },
+  {
+   "id": "ND_07_CITY_NAMWONDOHOBU",
+   "name": "남원도호부",
+   "region": "MAP_07",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    1409,
+    480
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_06"
+   ],
+   "heritage": "her_053"
+  },
+  {
+   "id": "ND_07_TOWN_GOCHANG",
+   "name": "고창",
+   "region": "MAP_07",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2869,
+    1281
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_07_TOWN_IKSAN",
+   "name": "익산",
+   "region": "MAP_07",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1590,
+    1103
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_08"
+   ]
+  },
+  {
+   "id": "ND_07_TOWN_JEONGEUP",
+   "name": "정읍",
+   "region": "MAP_07",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3424,
+    1631
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_10"
+   ]
+  },
+  {
+   "id": "ND_07_TOWN_MUJU",
+   "name": "무주",
+   "region": "MAP_07",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    624,
+    1900
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_07_TOWN_JINAN",
+   "name": "진안",
+   "region": "MAP_07",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3308,
+    366
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_05"
+   ]
+  },
+  {
+   "id": "ND_07_STATION_SAMRYEYEOK",
+   "name": "삼례역",
+   "region": "MAP_07",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2837,
+    730
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_07_STATION_OSUYEOK",
+   "name": "오수역",
+   "region": "MAP_07",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1143,
+    820
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_07_STATION_EUNSEONYEOK",
+   "name": "은선역",
+   "region": "MAP_07",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2494,
+    1231
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_07_TEMPLE_GEUMSANSA",
+   "name": "금산사",
+   "region": "MAP_07",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    890,
+    1428
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_054"
+  },
+  {
+   "id": "ND_07_TEMPLE_NAESOSA",
+   "name": "내소사",
+   "region": "MAP_07",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    2757,
+    222
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_055"
+  },
+  {
+   "id": "ND_07_TEMPLE_SILSANGSA",
+   "name": "실상사",
+   "region": "MAP_07",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    602,
+    453
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_056"
+  },
+  {
+   "id": "ND_07_HAZARD_GALJAEHWAJEOKPAEGOGAE",
+   "name": "갈재 화적패 고개",
+   "region": "MAP_07",
+   "type": "hazard",
+   "type_label": "위험 고개(확장 유형)",
+   "hidden": false,
+   "pos": [
+    364,
+    842
+   ],
+   "facilities": [
+    "hazard"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "7+7 유형에 없음 → 확장 유형 hazard(인카운트 거점)"
+  },
+  {
+   "id": "ND_07_FORT_JEOKSANGSANSEONG",
+   "name": "적상산성",
+   "region": "MAP_07",
+   "type": "fort",
+   "type_label": "군사관문",
+   "hidden": false,
+   "pos": [
+    3355,
+    798
+   ],
+   "facilities": [
+    "bounty",
+    "checkpoint",
+    "drill"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_09"
+   ],
+   "heritage": "her_057"
+  },
+  {
+   "id": "ND_07_BEACON_JEONJUBONGSU",
+   "name": "전주 봉수",
+   "region": "MAP_07",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    2861,
+    1729
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_08_CITY_NAJUMOK",
+   "name": "나주목",
+   "region": "MAP_08",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2640,
+    1264
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "carpenter",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_058"
+  },
+  {
+   "id": "ND_08_CITY_SUNCHEONDOHOBU",
+   "name": "순천도호부",
+   "region": "MAP_08",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    3326,
+    1111
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_10"
+   ],
+   "heritage": "her_059"
+  },
+  {
+   "id": "ND_08_CITY_GWANGJUMOK",
+   "name": "광주목",
+   "region": "MAP_08",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    1888,
+    1855
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_060"
+  },
+  {
+   "id": "ND_08_FORT_YEOSUJWASUYEONG",
+   "name": "여수 좌수영",
+   "region": "MAP_08",
+   "type": "fort",
+   "type_label": "군사관문",
+   "hidden": false,
+   "pos": [
+    1443,
+    1495
+   ],
+   "facilities": [
+    "bounty",
+    "checkpoint",
+    "drill",
+    "ferry"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "촌락 → 수군 진영(군사관문)",
+   "heritage": "her_061"
+  },
+  {
+   "id": "ND_08_TOWN_YEONGAM",
+   "name": "영암",
+   "region": "MAP_08",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3206,
+    1754
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_08_TOWN_HAENAM",
+   "name": "해남",
+   "region": "MAP_08",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    399,
+    1134
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_08_TOWN_DAMYANG",
+   "name": "담양",
+   "region": "MAP_08",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2854,
+    945
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_08_TOWN_JINDO",
+   "name": "진도",
+   "region": "MAP_08",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2501,
+    651
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_07"
+   ]
+  },
+  {
+   "id": "ND_08_STATION_CHEONGAMYEOK",
+   "name": "청암역",
+   "region": "MAP_08",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2025,
+    1554
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_08_STATION_BYEOLJEONYEOK",
+   "name": "별전역",
+   "region": "MAP_08",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    353,
+    1712
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_08_STATION_NOKDOYEOK",
+   "name": "녹도역",
+   "region": "MAP_08",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1716,
+    606
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_08_TEMPLE_HWAEOMSA",
+   "name": "화엄사",
+   "region": "MAP_08",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    2024,
+    824
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_062"
+  },
+  {
+   "id": "ND_08_TEMPLE_SONGGWANGSA",
+   "name": "송광사",
+   "region": "MAP_08",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    630,
+    452
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_063"
+  },
+  {
+   "id": "ND_08_TEMPLE_DAEHEUNGSA",
+   "name": "대흥사",
+   "region": "MAP_08",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    2831,
+    1841
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_064"
+  },
+  {
+   "id": "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
+   "name": "장성 백양사",
+   "region": "MAP_08",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1003,
+    1317
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "백양사는 내륙(장성) 사찰로 포구가 아님 → 명찰로 보정",
+   "heritage": "her_065"
+  },
+  {
+   "id": "ND_08_WRECK_MYEONGRYANGULDOLMOK",
+   "name": "명량 울돌목",
+   "region": "MAP_08",
+   "type": "wreck",
+   "type_label": "침몰선·수로 유적",
+   "hidden": false,
+   "pos": [
+    2297,
+    1215
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "특수 → 침몰선·수로 유적(가시 노드)",
+   "heritage": "her_066"
+  },
+  {
+   "id": "ND_08_BEACON_YEOSUDOLSANBONGSU",
+   "name": "여수 돌산 봉수",
+   "region": "MAP_08",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    3074,
+    301
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_09_CITY_SANGJUMOK",
+   "name": "상주목",
+   "region": "MAP_09",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2773,
+    762
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_067"
+  },
+  {
+   "id": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "name": "안동대도호부",
+   "region": "MAP_09",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    995,
+    1365
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_068"
+  },
+  {
+   "id": "ND_09_CITY_GYEONGJUBU",
+   "name": "경주부",
+   "region": "MAP_09",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    1353,
+    1025
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_069"
+  },
+  {
+   "id": "ND_09_TOWN_MUNGYEONG",
+   "name": "문경",
+   "region": "MAP_09",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1864,
+    1452
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_10"
+   ]
+  },
+  {
+   "id": "ND_09_TOWN_YEONGJU",
+   "name": "영주",
+   "region": "MAP_09",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3172,
+    1834
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_09_TOWN_YEONGCHEON",
+   "name": "영천",
+   "region": "MAP_09",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1541,
+    324
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_04"
+   ]
+  },
+  {
+   "id": "ND_09_TOWN_UISEONG",
+   "name": "의성",
+   "region": "MAP_09",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1601,
+    792
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_09_TOWN_CHEONGSONG",
+   "name": "청송",
+   "region": "MAP_09",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3112,
+    693
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_09_STATION_YUGOKYEOK",
+   "name": "유곡역",
+   "region": "MAP_09",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    3103,
+    1320
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_09_STATION_ANGIYEOK",
+   "name": "안기역",
+   "region": "MAP_09",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    322,
+    1066
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_05",
+    "MAP_07"
+   ]
+  },
+  {
+   "id": "ND_09_STATION_JANGSUYEOK",
+   "name": "장수역",
+   "region": "MAP_09",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    3557,
+    855
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_09_TEMPLE_BULGUKSA",
+   "name": "불국사",
+   "region": "MAP_09",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1670,
+    1139
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_001"
+  },
+  {
+   "id": "ND_09_TEMPLE_BUSEOKSA",
+   "name": "부석사",
+   "region": "MAP_09",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    2188,
+    1097
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_070"
+  },
+  {
+   "id": "ND_09_TEMPLE_GOUNSA",
+   "name": "고운사",
+   "region": "MAP_09",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    758,
+    474
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_071"
+  },
+  {
+   "id": "ND_09_SPRING_MUNGYEONGONCHEON",
+   "name": "문경온천",
+   "region": "MAP_09",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    863,
+    1707
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "anachronism": "현대 개발 온천",
+   "period_candidates": [
+    "문경 새재 온정(溫井)",
+    "문경 주흘관",
+    "문경 봉암사"
+   ]
+  },
+  {
+   "id": "ND_09_SPRING_YEONGJUPUNGGIONCHEON",
+   "name": "영주 풍기온천",
+   "region": "MAP_09",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    2327,
+    379
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "anachronism": "현대 개발 온천",
+   "period_candidates": [
+    "풍기 소수서원",
+    "소백산 희방사"
+   ]
+  },
+  {
+   "id": "ND_09_BEACON_GYEONGJUBONGSU",
+   "name": "경주 봉수",
+   "region": "MAP_09",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    501,
+    727
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "name": "대구 경상감영",
+   "region": "MAP_10",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    3481,
+    1008
+   ],
+   "facilities": [
+    "antique",
+    "black_market",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "restaurant",
+    "yakbang",
+    "yakryeongsi"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_072"
+  },
+  {
+   "id": "ND_10_CITY_JINJUMOK",
+   "name": "진주목",
+   "region": "MAP_10",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    1586,
+    568
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "restaurant",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_073"
+  },
+  {
+   "id": "ND_10_CITY_DONGRAEHYEON",
+   "name": "동래현",
+   "region": "MAP_10",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2370,
+    729
+   ],
+   "facilities": [
+    "antique",
+    "black_market",
+    "bookstore",
+    "ferry",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "anachronism": "조선 후기 동래도호부(동래부)",
+   "period_candidates": [
+    "동래부"
+   ],
+   "heritage": "her_074"
+  },
+  {
+   "id": "ND_10_FORT_TONGYEONGTONGJEYEONG",
+   "name": "통영 통제영",
+   "region": "MAP_10",
+   "type": "fort",
+   "type_label": "군사관문",
+   "hidden": false,
+   "pos": [
+    2168,
+    294
+   ],
+   "facilities": [
+    "bounty",
+    "checkpoint",
+    "drill",
+    "ferry",
+    "gongbang",
+    "jumak",
+    "market"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "촌락 → 삼도수군통제영(군사관문)+공방·장터",
+   "border_to": [
+    "MAP_09"
+   ],
+   "heritage": "her_075"
+  },
+  {
+   "id": "ND_10_TOWN_GIMHAE",
+   "name": "김해",
+   "region": "MAP_10",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3509,
+    1666
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_10_TOWN_MILYANG",
+   "name": "밀양",
+   "region": "MAP_10",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2465,
+    1111
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_10_TOWN_HAPCHEON",
+   "name": "합천",
+   "region": "MAP_10",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1043,
+    1388
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_07",
+    "MAP_08"
+   ]
+  },
+  {
+   "id": "ND_10_TOWN_NAMHAE",
+   "name": "남해",
+   "region": "MAP_10",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1871,
+    876
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_10_STATION_BEOMEOYEOK",
+   "name": "범어역",
+   "region": "MAP_10",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1222,
+    239
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_10_STATION_HWANGSANYEOK",
+   "name": "황산역",
+   "region": "MAP_10",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    3111,
+    834
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_10_STATION_YOWONYEOK",
+   "name": "요원역",
+   "region": "MAP_10",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2757,
+    1659
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_10_TEMPLE_HAEINSA",
+   "name": "해인사",
+   "region": "MAP_10",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    2988,
+    1221
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_005"
+  },
+  {
+   "id": "ND_10_TEMPLE_TONGDOSA",
+   "name": "통도사",
+   "region": "MAP_10",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    889,
+    942
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_076"
+  },
+  {
+   "id": "ND_10_TEMPLE_SSANGGYESA",
+   "name": "쌍계사",
+   "region": "MAP_10",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    427,
+    1148
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_077"
+  },
+  {
+   "id": "ND_10_SPRING_DONGRAEONCHEON",
+   "name": "동래온천",
+   "region": "MAP_10",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    1496,
+    1840
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_10_SPRING_CHANGNYEONGBUGOKONCHEON",
+   "name": "창녕 부곡온천",
+   "region": "MAP_10",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    2125,
+    1088
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "anachronism": "1970년대 개발 온천",
+   "period_candidates": [
+    "창녕 화왕산성",
+    "창녕 관룡사"
+   ]
+  },
+  {
+   "id": "ND_10_BEACON_DONGRAEHWANGRYEONGSANBONGSU",
+   "name": "동래 황령산 봉수",
+   "region": "MAP_10",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    2769,
+    573
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_11_CITY_HWANGJUMOK",
+   "name": "황주목",
+   "region": "MAP_11",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2812,
+    880
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_078"
+  },
+  {
+   "id": "ND_11_CITY_BONGSANGUN",
+   "name": "봉산군",
+   "region": "MAP_11",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    970,
+    1280
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_079"
+  },
+  {
+   "id": "ND_11_TOWN_SEOHEUNG",
+   "name": "서흥",
+   "region": "MAP_11",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1057,
+    1752
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_11_TOWN_PYEONGSAN",
+   "name": "평산",
+   "region": "MAP_11",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    451,
+    1165
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_12"
+   ]
+  },
+  {
+   "id": "ND_11_TOWN_SUAN",
+   "name": "수안",
+   "region": "MAP_11",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1663,
+    1136
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_11_TOWN_GOKSAN",
+   "name": "곡산",
+   "region": "MAP_11",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1397,
+    1508
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_11_STATION_GEUMGYOYEOK",
+   "name": "금교역",
+   "region": "MAP_11",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2244,
+    810
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_11_STATION_DONGSEONYEOK",
+   "name": "동선역",
+   "region": "MAP_11",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1972,
+    1530
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_11_STATION_SAENGEUMYEOK",
+   "name": "생음역",
+   "region": "MAP_11",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    3485,
+    1861
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_01",
+    "MAP_03"
+   ]
+  },
+  {
+   "id": "ND_11_TEMPLE_SEONGBULSA",
+   "name": "성불사",
+   "region": "MAP_11",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    3367,
+    1049
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_080"
+  },
+  {
+   "id": "ND_11_SPRING_PYEONGSANONCHEON",
+   "name": "평산온천",
+   "region": "MAP_11",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    1211,
+    888
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_11_FORT_JEONGBANGSANSEONG",
+   "name": "정방산성",
+   "region": "MAP_11",
+   "type": "fort",
+   "type_label": "군사관문",
+   "hidden": false,
+   "pos": [
+    400,
+    298
+   ],
+   "facilities": [
+    "bounty",
+    "checkpoint",
+    "drill"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_13"
+   ],
+   "heritage": "her_081"
+  },
+  {
+   "id": "ND_11_BEACON_HWANGJUBONGSU",
+   "name": "황주 봉수",
+   "region": "MAP_11",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    2613,
+    1847
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_12_CITY_HAEJUMOK",
+   "name": "해주목",
+   "region": "MAP_12",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2909,
+    338
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_082"
+  },
+  {
+   "id": "ND_12_CITY_YEONANDOHOBU",
+   "name": "연안도호부",
+   "region": "MAP_12",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2301,
+    695
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "ferry",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_083"
+  },
+  {
+   "id": "ND_12_TOWN_ONGJIN",
+   "name": "옹진",
+   "region": "MAP_12",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1455,
+    922
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_12_TOWN_JANGYEON",
+   "name": "장연",
+   "region": "MAP_12",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2848,
+    1305
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_12_TOWN_SONGHWA",
+   "name": "송화",
+   "region": "MAP_12",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2364,
+    304
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_12_TOWN_BAECHEON",
+   "name": "배천",
+   "region": "MAP_12",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2472,
+    1066
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_12_STATION_ANGOKYEOK",
+   "name": "안곡역",
+   "region": "MAP_12",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    727,
+    352
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_12_STATION_CHODOYEOK",
+   "name": "초도역",
+   "region": "MAP_12",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1901,
+    1168
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_12_STATION_YEONGCHEONYEOK",
+   "name": "영천역",
+   "region": "MAP_12",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    3344,
+    739
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_01",
+    "MAP_11"
+   ]
+  },
+  {
+   "id": "ND_12_TEMPLE_SINCHEONPAEYEOPSA",
+   "name": "신천 패엽사",
+   "region": "MAP_12",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1301,
+    579
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_084"
+  },
+  {
+   "id": "ND_12_SPRING_SINCHEONONCHEON",
+   "name": "신천온천",
+   "region": "MAP_12",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    2141,
+    1463
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_12_SPRING_BAECHEONONCHEON",
+   "name": "배천온천",
+   "region": "MAP_12",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    1730,
+    229
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_12_FORT_JANGSANGOTJINBO",
+   "name": "장산곶 진보",
+   "region": "MAP_12",
+   "type": "fort",
+   "type_label": "군사관문",
+   "hidden": false,
+   "pos": [
+    3006,
+    1641
+   ],
+   "facilities": [
+    "bounty",
+    "checkpoint",
+    "drill"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_085"
+  },
+  {
+   "id": "ND_12_BEACON_HAEJUBONGSU",
+   "name": "해주 봉수",
+   "region": "MAP_12",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    1562,
+    1369
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_13_CITY_PYEONGYANGBU",
+   "name": "평양부",
+   "region": "MAP_13",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2480,
+    1592
+   ],
+   "facilities": [
+    "antique",
+    "black_market",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "hyeminseo",
+    "jumak",
+    "market",
+    "restaurant",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_11"
+   ],
+   "heritage": "her_021"
+  },
+  {
+   "id": "ND_13_CITY_ANJUMOK",
+   "name": "안주목",
+   "region": "MAP_13",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    419,
+    1330
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_086"
+  },
+  {
+   "id": "ND_13_TOWN_JINNAMPO",
+   "name": "진남포",
+   "region": "MAP_13",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1014,
+    1868
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "anachronism": "1890년대 개항 이후 명칭(당시 삼화현)",
+   "period_candidates": [
+    "삼화현"
+   ]
+  },
+  {
+   "id": "ND_13_TOWN_SUKCHEON",
+   "name": "숙천",
+   "region": "MAP_13",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    666,
+    754
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_13_TOWN_SUNCHEON",
+   "name": "순천",
+   "region": "MAP_13",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1536,
+    1682
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_13_TOWN_GANGSEO",
+   "name": "강서",
+   "region": "MAP_13",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3239,
+    592
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_15"
+   ]
+  },
+  {
+   "id": "ND_13_TOWN_SEONGCHEON",
+   "name": "성천",
+   "region": "MAP_13",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2881,
+    440
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_13_STATION_DAEDONGYEOK",
+   "name": "대동역",
+   "region": "MAP_13",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    897,
+    493
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_14"
+   ]
+  },
+  {
+   "id": "ND_13_STATION_JOYANGYEOK",
+   "name": "조양역",
+   "region": "MAP_13",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    580,
+    1871
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_13_STATION_SUKCHEONCHAM",
+   "name": "숙천참",
+   "region": "MAP_13",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    917,
+    1447
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+   "name": "묘향산 보현사",
+   "region": "MAP_13",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    282,
+    777
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_016"
+  },
+  {
+   "id": "ND_13_TEMPLE_YEONGMYEONGSA",
+   "name": "영명사",
+   "region": "MAP_13",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1745,
+    602
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_087"
+  },
+  {
+   "id": "ND_13_SPRING_GANGSEOONCHEON",
+   "name": "강서온천",
+   "region": "MAP_13",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    2630,
+    1061
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_13_SPRING_YANGDEOKONCHEON",
+   "name": "양덕온천",
+   "region": "MAP_13",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    372,
+    330
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_13_SCENIC_EULMILDAE",
+   "name": "을밀대",
+   "region": "MAP_13",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": false,
+   "pos": [
+    2269,
+    487
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "원문 '온천' 목록 → 절경(누정)",
+   "heritage": "her_088"
+  },
+  {
+   "id": "ND_13_BEACON_PYEONGYANGBONGSU",
+   "name": "평양 봉수",
+   "region": "MAP_13",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    2162,
+    1923
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_14_CITY_UIJUMOK",
+   "name": "의주목",
+   "region": "MAP_14",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2926,
+    544
+   ],
+   "facilities": [
+    "antique",
+    "black_market",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_089"
+  },
+  {
+   "id": "ND_14_CITY_YEONGBYEONDAEDOHOBU",
+   "name": "영변대도호부",
+   "region": "MAP_14",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2169,
+    843
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_090"
+  },
+  {
+   "id": "ND_14_TOWN_SEONCHEON",
+   "name": "선천",
+   "region": "MAP_14",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2380,
+    341
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_14_TOWN_JEONGJU",
+   "name": "정주",
+   "region": "MAP_14",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    934,
+    771
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_14_TOWN_SAKJU",
+   "name": "삭주",
+   "region": "MAP_14",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1354,
+    1207
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_14_TOWN_GANGGYE",
+   "name": "강계",
+   "region": "MAP_14",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2845,
+    1779
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_13"
+   ]
+  },
+  {
+   "id": "ND_14_TOWN_NYEONGWON",
+   "name": "녕원",
+   "region": "MAP_14",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    617,
+    1070
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_14_STATION_APROKCHAM",
+   "name": "압록참",
+   "region": "MAP_14",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    3428,
+    1359
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_15"
+   ]
+  },
+  {
+   "id": "ND_14_STATION_CHEONGCHEONYEOK",
+   "name": "청천역",
+   "region": "MAP_14",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1161,
+    1526
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_14_STATION_UISUNGWAN",
+   "name": "의순관",
+   "region": "MAP_14",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    346,
+    880
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_14_TEMPLE_BAEKMASANSA",
+   "name": "백마산사",
+   "region": "MAP_14",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1626,
+    1586
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_091"
+  },
+  {
+   "id": "ND_14_SCENIC_UIJUTONGGUNJEONG",
+   "name": "의주 통군정",
+   "region": "MAP_14",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": false,
+   "pos": [
+    2591,
+    1208
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_092"
+  },
+  {
+   "id": "ND_14_TOWN_SINMIDONARU",
+   "name": "신미도 나루",
+   "region": "MAP_14",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2586,
+    861
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_14_BEACON_UIJUBONGSU",
+   "name": "의주 봉수",
+   "region": "MAP_14",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    1350,
+    613
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_15_CITY_HAMHEUNGBU",
+   "name": "함흥부",
+   "region": "MAP_15",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    883,
+    274
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "carpenter",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_093"
+  },
+  {
+   "id": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "name": "북청도호부",
+   "region": "MAP_15",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    3223,
+    390
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "ferry",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_16"
+   ],
+   "heritage": "her_094"
+  },
+  {
+   "id": "ND_15_TOWN_JEONGPYEONG",
+   "name": "정평",
+   "region": "MAP_15",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    292,
+    743
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_14"
+   ]
+  },
+  {
+   "id": "ND_15_TOWN_YEONGHEUNG",
+   "name": "영흥",
+   "region": "MAP_15",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1549,
+    746
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_15_TOWN_GOWON",
+   "name": "고원",
+   "region": "MAP_15",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    268,
+    1738
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_13"
+   ]
+  },
+  {
+   "id": "ND_15_TOWN_DEOKWON",
+   "name": "덕원",
+   "region": "MAP_15",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    3203,
+    1682
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_15_TOWN_MUNCHEON",
+   "name": "문천",
+   "region": "MAP_15",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    687,
+    1285
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_15_STATION_MANRYEONGYEOK",
+   "name": "만령역",
+   "region": "MAP_15",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2541,
+    1335
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_03"
+   ]
+  },
+  {
+   "id": "ND_15_STATION_GOSANYEOK",
+   "name": "고산역",
+   "region": "MAP_15",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2739,
+    444
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_15_STATION_SINEUNCHAM",
+   "name": "신은참",
+   "region": "MAP_15",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    2656,
+    793
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_15_TEMPLE_GWIJUSA",
+   "name": "귀주사",
+   "region": "MAP_15",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    2027,
+    498
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_095"
+  },
+  {
+   "id": "ND_15_TEMPLE_SEOKWANGSA",
+   "name": "석왕사",
+   "region": "MAP_15",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1755,
+    1835
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_096"
+  },
+  {
+   "id": "ND_15_SPRING_DALCHEONONCHEON",
+   "name": "달천온천",
+   "region": "MAP_15",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    3572,
+    1671
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_15_RUIN_MAUNRYEONGJINHEUNGWANGSUNSUBI",
+   "name": "마운령 진흥왕 순수비",
+   "region": "MAP_15",
+   "type": "ruin",
+   "type_label": "옛터·가마터",
+   "hidden": false,
+   "pos": [
+    3521,
+    941
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "원문 '온천' 목록 → 옛터(사적, 비석)",
+   "heritage": "her_097"
+  },
+  {
+   "id": "ND_15_BEACON_HAMHEUNGBONGSU",
+   "name": "함흥 봉수",
+   "region": "MAP_15",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    2316,
+    314
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_16_CITY_GYEONGSEONGDOHOBU",
+   "name": "경성도호부",
+   "region": "MAP_16",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    3101,
+    1073
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "ferry",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_098"
+  },
+  {
+   "id": "ND_16_CITY_GILJUMOK",
+   "name": "길주목",
+   "region": "MAP_16",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2341,
+    1494
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_099"
+  },
+  {
+   "id": "ND_16_TOWN_HOERYEONG",
+   "name": "회령",
+   "region": "MAP_16",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2852,
+    1814
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_16_TOWN_ONSEONG",
+   "name": "온성",
+   "region": "MAP_16",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1399,
+    466
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_16_TOWN_JONGSEONG",
+   "name": "종성",
+   "region": "MAP_16",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2648,
+    284
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_16_TOWN_GYEONGWON",
+   "name": "경원",
+   "region": "MAP_16",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2052,
+    1172
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_16_TOWN_BURYEONG",
+   "name": "부령",
+   "region": "MAP_16",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1586,
+    1896
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_16_STATION_PUNGSANCHAM",
+   "name": "풍산참",
+   "region": "MAP_16",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1939,
+    1886
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_16_STATION_MUSANCHAM",
+   "name": "무산참",
+   "region": "MAP_16",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    709,
+    1545
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "border_to": [
+    "MAP_15"
+   ]
+  },
+  {
+   "id": "ND_16_STATION_HOERYEONGCHAM",
+   "name": "회령참",
+   "region": "MAP_16",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    1030,
+    1434
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_16_TEMPLE_GAESIMSA",
+   "name": "개심사",
+   "region": "MAP_16",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    2702,
+    1004
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_100"
+  },
+  {
+   "id": "ND_16_SPRING_GYEONGSEONGJUEULONCHEON",
+   "name": "경성 주을온천",
+   "region": "MAP_16",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    1822,
+    347
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+   "name": "백두산 천지",
+   "region": "MAP_16",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": false,
+   "pos": [
+    876,
+    881
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "원문 '온천' 목록 → 절경",
+   "heritage": "her_101"
+  },
+  {
+   "id": "ND_16_BEACON_GYEONGSEONGBONGSU",
+   "name": "경성 봉수",
+   "region": "MAP_16",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    1594,
+    1034
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "name": "제주목 제주읍성",
+   "region": "MAP_17",
+   "type": "city",
+   "type_label": "대도시",
+   "hidden": false,
+   "pos": [
+    2452,
+    342
+   ],
+   "facilities": [
+    "antique",
+    "bookstore",
+    "ferry",
+    "forge",
+    "gaekju",
+    "gwana",
+    "hyanggyo",
+    "jumak",
+    "market",
+    "yakbang"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_102"
+  },
+  {
+   "id": "ND_17_TOWN_DAEJEONGHYEON",
+   "name": "대정현",
+   "region": "MAP_17",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2512,
+    1765
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_17_TOWN_JEONGUIHYEON",
+   "name": "정의현",
+   "region": "MAP_17",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1793,
+    543
+   ],
+   "facilities": [
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_17_TOWN_AEWOL",
+   "name": "애월",
+   "region": "MAP_17",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1101,
+    276
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_17_TOWN_JOCHEON",
+   "name": "조천",
+   "region": "MAP_17",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    1910,
+    1587
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_17_TOWN_SEOGWIPO",
+   "name": "서귀포",
+   "region": "MAP_17",
+   "type": "town",
+   "type_label": "소도시/촌락",
+   "hidden": false,
+   "pos": [
+    2603,
+    1190
+   ],
+   "facilities": [
+    "ferry",
+    "forge_basic",
+    "jumak",
+    "market5"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_17_STATION_SAMYANGCHAM",
+   "name": "삼양참",
+   "region": "MAP_17",
+   "type": "station",
+   "type_label": "역참",
+   "hidden": false,
+   "pos": [
+    934,
+    1248
+   ],
+   "facilities": [
+    "jumak",
+    "yeokcham"
+   ],
+   "source": "doc",
+   "lore": "역사"
+  },
+  {
+   "id": "ND_17_FORT_HWABUKJIN",
+   "name": "화북진",
+   "region": "MAP_17",
+   "type": "fort",
+   "type_label": "군사관문",
+   "hidden": false,
+   "pos": [
+    3218,
+    1148
+   ],
+   "facilities": [
+    "bounty",
+    "checkpoint",
+    "drill",
+    "ferry"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "역참 목록 → 진(鎭). 제주 관문 포구",
+   "heritage": "her_103"
+  },
+  {
+   "id": "ND_17_FORT_CHAGWIJIN",
+   "name": "차귀진",
+   "region": "MAP_17",
+   "type": "fort",
+   "type_label": "군사관문",
+   "hidden": false,
+   "pos": [
+    1490,
+    1678
+   ],
+   "facilities": [
+    "bounty",
+    "checkpoint",
+    "drill"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_104"
+  },
+  {
+   "id": "ND_17_TEMPLE_GWANEUMSA",
+   "name": "관음사",
+   "region": "MAP_17",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    977,
+    869
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_105"
+  },
+  {
+   "id": "ND_17_TEMPLE_JONJAAM",
+   "name": "존자암",
+   "region": "MAP_17",
+   "type": "temple",
+   "type_label": "명찰",
+   "hidden": false,
+   "pos": [
+    1900,
+    1042
+   ],
+   "facilities": [
+    "temple"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "heritage": "her_106"
+  },
+  {
+   "id": "ND_17_SPRING_SANBANGSANTANSANONCHEON",
+   "name": "산방산 탄산온천",
+   "region": "MAP_17",
+   "type": "spring",
+   "type_label": "온천",
+   "hidden": false,
+   "pos": [
+    2116,
+    246
+   ],
+   "facilities": [
+    "bath",
+    "jumak"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "anachronism": "현대 개발 온천(제주에는 조선시대 온천 기록이 드묾)",
+   "period_candidates": [
+    "산방굴사"
+   ]
+  },
+  {
+   "id": "ND_17_SCENIC_SEONGSANILCHULBONG",
+   "name": "성산일출봉",
+   "region": "MAP_17",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": false,
+   "pos": [
+    2484,
+    770
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "doc",
+   "lore": "역사",
+   "note": "원문 '온천' 목록 → 절경",
+   "heritage": "her_107"
+  },
+  {
+   "id": "ND_17_BEACON_JEJUSARABONGBONGSU",
+   "name": "제주 사라봉 봉수",
+   "region": "MAP_17",
+   "type": "beacon",
+   "type_label": "봉수",
+   "hidden": false,
+   "pos": [
+    391,
+    1893
+   ],
+   "facilities": [
+    "beacon"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "note": "원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)"
+  },
+  {
+   "id": "ND_01_RUIN_GAESEONGMANWOLDAEYETTEO",
+   "name": "개성 만월대 옛터",
+   "region": "MAP_01",
+   "type": "ruin",
+   "type_label": "옛터·가마터",
+   "hidden": true,
+   "pos": [
+    2142,
+    1899
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_015"
+  },
+  {
+   "id": "ND_01_SHRINE_GANGHWACHAMSEONGDAN",
+   "name": "강화 참성단",
+   "region": "MAP_01",
+   "type": "shrine",
+   "type_label": "성황당·도관 터",
+   "hidden": true,
+   "pos": [
+    3260,
+    798
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_108"
+  },
+  {
+   "id": "ND_01_TOMB_GANGHWABUGEUNRIGOINDOL",
+   "name": "강화 부근리 고인돌",
+   "region": "MAP_01",
+   "type": "tomb",
+   "type_label": "왕릉·고분 유적",
+   "hidden": true,
+   "pos": [
+    3398,
+    813
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_109"
+  },
+  {
+   "id": "ND_02_RUIN_GWANGJUBUNWONBAEKJAGAMATEO",
+   "name": "광주 분원 백자 가마터",
+   "region": "MAP_02",
+   "type": "ruin",
+   "type_label": "옛터·가마터",
+   "hidden": true,
+   "pos": [
+    2619,
+    1264
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_007"
+  },
+  {
+   "id": "ND_02_SEOWON_SEONGGYUNGWANMYEONGRYUNDANG",
+   "name": "성균관 명륜당",
+   "region": "MAP_02",
+   "type": "seowon",
+   "type_label": "서원·향교 유적",
+   "hidden": true,
+   "pos": [
+    995,
+    1870
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_014"
+  },
+  {
+   "id": "ND_02_TOMB_HEONREUNG",
+   "name": "헌릉",
+   "region": "MAP_02",
+   "type": "tomb",
+   "type_label": "왕릉·고분 유적",
+   "hidden": true,
+   "pos": [
+    646,
+    1688
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_011"
+  },
+  {
+   "id": "ND_03_STUPA_GEUMGANGSANYUJEOMSAYETTEO",
+   "name": "금강산 유점사 옛터",
+   "region": "MAP_03",
+   "type": "stupa",
+   "type_label": "사찰·석탑 유적",
+   "hidden": true,
+   "pos": [
+    3394,
+    1402
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_110"
+  },
+  {
+   "id": "ND_03_SHRINE_HWACHEONSEONGHWANGDANG",
+   "name": "화천 성황당",
+   "region": "MAP_03",
+   "type": "shrine",
+   "type_label": "성황당·도관 터",
+   "hidden": true,
+   "pos": [
+    824,
+    1535
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_111"
+  },
+  {
+   "id": "ND_04_WRECK_SAMCHEOKANTAEKSEONCHIMMOLJI",
+   "name": "삼척 안택선 침몰지",
+   "region": "MAP_04",
+   "type": "wreck",
+   "type_label": "침몰선·수로 유적",
+   "hidden": true,
+   "pos": [
+    1209,
+    1741
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_112"
+  },
+  {
+   "id": "ND_04_SEOWON_GANGREUNGOJUKHEON",
+   "name": "강릉 오죽헌",
+   "region": "MAP_04",
+   "type": "seowon",
+   "type_label": "서원·향교 유적",
+   "hidden": true,
+   "pos": [
+    1676,
+    1335
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_113"
+  },
+  {
+   "id": "ND_04_TOMB_YEONGWOLJANGREUNG",
+   "name": "영월 장릉",
+   "region": "MAP_04",
+   "type": "tomb",
+   "type_label": "왕릉·고분 유적",
+   "hidden": true,
+   "pos": [
+    2498,
+    1306
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_114"
+  },
+  {
+   "id": "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO",
+   "name": "단양 수벌 고려가마터",
+   "region": "MAP_05",
+   "type": "ruin",
+   "type_label": "옛터·가마터",
+   "hidden": true,
+   "pos": [
+    915,
+    1226
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_115"
+  },
+  {
+   "id": "ND_05_STUPA_CHUNGJUTAPPYEONGRICHILCHEUNGSEOKTAP",
+   "name": "충주 탑평리 칠층석탑",
+   "region": "MAP_05",
+   "type": "stupa",
+   "type_label": "사찰·석탑 유적",
+   "hidden": true,
+   "pos": [
+    1900,
+    1860
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_116"
+  },
+  {
+   "id": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+   "name": "계룡산 신도안",
+   "region": "MAP_06",
+   "type": "shrine",
+   "type_label": "성황당·도관 터",
+   "hidden": true,
+   "pos": [
+    3187,
+    250
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_117"
+  },
+  {
+   "id": "ND_06_SCENIC_GYERYONGSANCHEONHWANGBONG",
+   "name": "계룡산 천황봉",
+   "region": "MAP_06",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": true,
+   "pos": [
+    3448,
+    120
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_118"
+  },
+  {
+   "id": "ND_06_STUPA_BUYEOJEONGRIMSAJIOCHEUNGSEOKTAP",
+   "name": "부여 정림사지 오층석탑",
+   "region": "MAP_06",
+   "type": "stupa",
+   "type_label": "사찰·석탑 유적",
+   "hidden": true,
+   "pos": [
+    2853,
+    569
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_119"
+  },
+  {
+   "id": "ND_06_TOMB_GONGJUSONGSANRIGOBUNGUN",
+   "name": "공주 송산리 고분군",
+   "region": "MAP_06",
+   "type": "tomb",
+   "type_label": "왕릉·고분 유적",
+   "hidden": true,
+   "pos": [
+    2836,
+    546
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_120"
+  },
+  {
+   "id": "ND_06_WRECK_TAEANMADOCHIMMOLSEON",
+   "name": "태안 마도 침몰선",
+   "region": "MAP_06",
+   "type": "wreck",
+   "type_label": "침몰선·수로 유적",
+   "hidden": true,
+   "pos": [
+    1005,
+    1741
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_121"
+  },
+  {
+   "id": "ND_07_STUPA_IKSANMIREUKSAJISEOKTAP",
+   "name": "익산 미륵사지 석탑",
+   "region": "MAP_07",
+   "type": "stupa",
+   "type_label": "사찰·석탑 유적",
+   "hidden": true,
+   "pos": [
+    1421,
+    1248
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_122"
+  },
+  {
+   "id": "ND_07_RUIN_BUANYUCHEONRICHEONGJAGAMATEO",
+   "name": "부안 유천리 청자 가마터",
+   "region": "MAP_07",
+   "type": "ruin",
+   "type_label": "옛터·가마터",
+   "hidden": true,
+   "pos": [
+    3670,
+    1567
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_123"
+  },
+  {
+   "id": "ND_07_SEOWON_JEONJUGYEONGGIJEON",
+   "name": "전주 경기전",
+   "region": "MAP_07",
+   "type": "seowon",
+   "type_label": "서원·향교 유적",
+   "hidden": true,
+   "pos": [
+    537,
+    1681
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_124"
+  },
+  {
+   "id": "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
+   "name": "강진 사당리 청자 가마터",
+   "region": "MAP_08",
+   "type": "ruin",
+   "type_label": "옛터·가마터",
+   "hidden": true,
+   "pos": [
+    708,
+    1054
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_006"
+  },
+  {
+   "id": "ND_08_SHRINE_JINDOSSITGIMGUTDANGGOLPAN",
+   "name": "진도 씻김굿 당골판",
+   "region": "MAP_08",
+   "type": "shrine",
+   "type_label": "성황당·도관 터",
+   "hidden": true,
+   "pos": [
+    2766,
+    801
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_010"
+  },
+  {
+   "id": "ND_08_WRECK_SINANHAEJEOMUYEOKSEON",
+   "name": "신안 해저 무역선",
+   "region": "MAP_08",
+   "type": "wreck",
+   "type_label": "침몰선·수로 유적",
+   "hidden": true,
+   "pos": [
+    3406,
+    1674
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_125"
+  },
+  {
+   "id": "ND_08_SCENIC_DAMYANGSOSWAEWON",
+   "name": "담양 소쇄원",
+   "region": "MAP_08",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": true,
+   "pos": [
+    2848,
+    1252
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_126"
+  },
+  {
+   "id": "ND_09_STUPA_GYEONGJUSEOKGULAM",
+   "name": "경주 석굴암",
+   "region": "MAP_09",
+   "type": "stupa",
+   "type_label": "사찰·석탑 유적",
+   "hidden": true,
+   "pos": [
+    1520,
+    908
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_002"
+  },
+  {
+   "id": "ND_09_TOMB_GYEONGJUDAEREUNGWON",
+   "name": "경주 대릉원",
+   "region": "MAP_09",
+   "type": "tomb",
+   "type_label": "왕릉·고분 유적",
+   "hidden": true,
+   "pos": [
+    1644,
+    1079
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_127"
+  },
+  {
+   "id": "ND_09_SEOWON_ANDONGDOSANSEOWON",
+   "name": "안동 도산서원",
+   "region": "MAP_09",
+   "type": "seowon",
+   "type_label": "서원·향교 유적",
+   "hidden": true,
+   "pos": [
+    745,
+    1276
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_013"
+  },
+  {
+   "id": "ND_10_SCENIC_JIRISANCHEONWANGBONG",
+   "name": "지리산 천왕봉",
+   "region": "MAP_10",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": true,
+   "pos": [
+    1542,
+    363
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_128"
+  },
+  {
+   "id": "ND_10_TOMB_GORYEONGJISANDONGGOBUNGUN",
+   "name": "고령 지산동 고분군",
+   "region": "MAP_10",
+   "type": "tomb",
+   "type_label": "왕릉·고분 유적",
+   "hidden": true,
+   "pos": [
+    3294,
+    920
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_012"
+  },
+  {
+   "id": "ND_10_SCENIC_MILYANGYEONGNAMRU",
+   "name": "밀양 영남루",
+   "region": "MAP_10",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": true,
+   "pos": [
+    2404,
+    923
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_018"
+  },
+  {
+   "id": "ND_10_TOMB_GIMHAESUROWANGREUNG",
+   "name": "김해 수로왕릉",
+   "region": "MAP_10",
+   "type": "tomb",
+   "type_label": "왕릉·고분 유적",
+   "hidden": true,
+   "pos": [
+    3431,
+    1916
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_129"
+  },
+  {
+   "id": "ND_10_RUIN_TONGYEONG12GONGBANGYETTEO",
+   "name": "통영 12공방 옛터",
+   "region": "MAP_10",
+   "type": "ruin",
+   "type_label": "옛터·가마터",
+   "hidden": true,
+   "pos": [
+    2410,
+    224
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_008"
+  },
+  {
+   "id": "ND_11_SHRINE_BONGSANTALCHUMSEONGHWANGDANG",
+   "name": "봉산 탈춤 성황당",
+   "region": "MAP_11",
+   "type": "shrine",
+   "type_label": "성황당·도관 터",
+   "hidden": true,
+   "pos": [
+    1023,
+    1051
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_130"
+  },
+  {
+   "id": "ND_11_SCENIC_HWANGJUWOLPARU",
+   "name": "황주 월파루",
+   "region": "MAP_11",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": true,
+   "pos": [
+    2971,
+    1119
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_131"
+  },
+  {
+   "id": "ND_12_SEOWON_HAEJUSOHYEONSEOWON",
+   "name": "해주 소현서원",
+   "region": "MAP_12",
+   "type": "seowon",
+   "type_label": "서원·향교 유적",
+   "hidden": true,
+   "pos": [
+    2816,
+    512
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_132"
+  },
+  {
+   "id": "ND_12_SCENIC_JANGYEONMONGGEUMPO",
+   "name": "장연 몽금포",
+   "region": "MAP_12",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": true,
+   "pos": [
+    2632,
+    1116
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_133"
+  },
+  {
+   "id": "ND_13_SHRINE_MYOHYANGSANDANGUNGUL",
+   "name": "묘향산 단군굴",
+   "region": "MAP_13",
+   "type": "shrine",
+   "type_label": "성황당·도관 터",
+   "hidden": true,
+   "pos": [
+    537,
+    953
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_134"
+  },
+  {
+   "id": "ND_13_TOMB_PYEONGYANGDONGMYEONGWANGREUNG",
+   "name": "평양 동명왕릉",
+   "region": "MAP_13",
+   "type": "tomb",
+   "type_label": "왕릉·고분 유적",
+   "hidden": true,
+   "pos": [
+    2640,
+    1854
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_135"
+  },
+  {
+   "id": "ND_13_TOMB_GANGSEODAEMYO",
+   "name": "강서 대묘",
+   "region": "MAP_13",
+   "type": "tomb",
+   "type_label": "왕릉·고분 유적",
+   "hidden": true,
+   "pos": [
+    3055,
+    761
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_136"
+  },
+  {
+   "id": "ND_14_SCENIC_YEONGBYEONYAKSANDONGDAE",
+   "name": "영변 약산 동대",
+   "region": "MAP_14",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": true,
+   "pos": [
+    2021,
+    1078
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_137"
+  },
+  {
+   "id": "ND_14_WRECK_APROKGANGHAGUCHIMMOLSEON",
+   "name": "압록강 하구 침몰선",
+   "region": "MAP_14",
+   "type": "wreck",
+   "type_label": "침몰선·수로 유적",
+   "hidden": true,
+   "pos": [
+    3133,
+    598
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "창작",
+   "heritage": "her_138"
+  },
+  {
+   "id": "ND_15_SHRINE_HAMHEUNGBONGUNG",
+   "name": "함흥 본궁",
+   "region": "MAP_15",
+   "type": "shrine",
+   "type_label": "성황당·도관 터",
+   "hidden": true,
+   "pos": [
+    633,
+    348
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_022"
+  },
+  {
+   "id": "ND_15_SHRINE_BUKCHEONGSAJANOLEUMMADANG",
+   "name": "북청 사자놀음 마당",
+   "region": "MAP_15",
+   "type": "shrine",
+   "type_label": "성황당·도관 터",
+   "hidden": true,
+   "pos": [
+    2962,
+    441
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_139"
+  },
+  {
+   "id": "ND_15_SCENIC_GAEMAGOWONSAMSUGAPSAN",
+   "name": "개마고원 삼수갑산",
+   "region": "MAP_15",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": true,
+   "pos": [
+    3364,
+    135
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_140"
+  },
+  {
+   "id": "ND_16_RUIN_BAEKDUSANJEONGGYEBITEO",
+   "name": "백두산 정계비 터",
+   "region": "MAP_16",
+   "type": "ruin",
+   "type_label": "옛터·가마터",
+   "hidden": true,
+   "pos": [
+    660,
+    1835
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_017"
+  },
+  {
+   "id": "ND_16_SCENIC_CHILBOSAN",
+   "name": "칠보산",
+   "region": "MAP_16",
+   "type": "scenic",
+   "type_label": "팔도 절경",
+   "hidden": true,
+   "pos": [
+    2538,
+    1432
+   ],
+   "facilities": [
+    "scenic"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_141"
+  },
+  {
+   "id": "ND_16_RUIN_HOERYEONGOJIGAMATEO",
+   "name": "회령 오지 가마터",
+   "region": "MAP_16",
+   "type": "ruin",
+   "type_label": "옛터·가마터",
+   "hidden": true,
+   "pos": [
+    2774,
+    2040
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_142"
+  },
+  {
+   "id": "ND_17_SHRINE_JEJUCHILMEORIDANG",
+   "name": "제주 칠머리당",
+   "region": "MAP_17",
+   "type": "shrine",
+   "type_label": "성황당·도관 터",
+   "hidden": true,
+   "pos": [
+    2701,
+    462
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_009"
+  },
+  {
+   "id": "ND_17_SHRINE_SAMSEONGHYEOL",
+   "name": "삼성혈",
+   "region": "MAP_17",
+   "type": "shrine",
+   "type_label": "성황당·도관 터",
+   "hidden": true,
+   "pos": [
+    2501,
+    587
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_143"
+  },
+  {
+   "id": "ND_17_SEOWON_CHUSAYUBAEJI",
+   "name": "추사 유배지",
+   "region": "MAP_17",
+   "type": "seowon",
+   "type_label": "서원·향교 유적",
+   "hidden": true,
+   "pos": [
+    2318,
+    1839
+   ],
+   "facilities": [
+    "investigate"
+   ],
+   "source": "added",
+   "lore": "역사",
+   "heritage": "her_144"
+  }
+ ],
+ "edges": [
+  {
+   "a": "ND_01_CITY_GAESEONGBU",
+   "b": "ND_01_TOWN_PAJUMOK",
+   "li": 25.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_TOWN_PAJUMOK",
+   "b": "ND_01_STATION_MAJEONYEOK",
+   "li": 20.1,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_STATION_MAJEONYEOK",
+   "b": "ND_01_TOWN_JANGDAN",
+   "li": 27.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_TOWN_JANGDAN",
+   "b": "ND_01_TOWN_YEONCHEON",
+   "li": 25.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_TOWN_YEONCHEON",
+   "b": "ND_01_TOWN_MUNSANPOGU",
+   "li": 23.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_TOWN_MUNSANPOGU",
+   "b": "ND_01_BEACON_GAESEONGSONGAKBONGSU",
+   "li": 18.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_TOWN_MUNSANPOGU",
+   "b": "ND_01_CITY_GANGHWAYUSUBU",
+   "li": 22.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_CITY_GANGHWAYUSUBU",
+   "b": "ND_01_FORT_DEOKJINJIN",
+   "li": 31.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_FORT_DEOKJINJIN",
+   "b": "ND_01_STATION_CHEONGGYOYEOK",
+   "li": 18.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_STATION_MAJEONYEOK",
+   "b": "ND_01_TEMPLE_JEONDEUNGSA",
+   "li": 38.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_TEMPLE_JEONDEUNGSA",
+   "b": "ND_01_TOWN_GYODONG",
+   "li": 19.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_TOWN_PAJUMOK",
+   "b": "ND_01_TEMPLE_BOGWANGSA",
+   "li": 44.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_TEMPLE_BOGWANGSA",
+   "b": "ND_01_STATION_IMJINCHAM",
+   "li": 23.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_CITY_GAESEONGBU",
+   "b": "ND_01_STATION_MAJEONYEOK",
+   "li": 38.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_CITY_GANGHWAYUSUBU",
+   "b": "ND_01_TOWN_YEONCHEON",
+   "li": 27.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_TOWN_GYODONG",
+   "b": "ND_01_TOWN_JANGDAN",
+   "li": 58.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_STATION_CHEONGGYOYEOK",
+   "b": "ND_01_CITY_GANGHWAYUSUBU",
+   "li": 35.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_STATION_IMJINCHAM",
+   "b": "ND_01_TOWN_PAJUMOK",
+   "li": 66.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_BEACON_GAESEONGSONGAKBONGSU",
+   "b": "ND_01_CITY_GANGHWAYUSUBU",
+   "li": 28.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_CITY_HANYANGGYEONGJO",
+   "b": "ND_02_SPRING_ICHEONONCHEON",
+   "li": 18.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_SPRING_ICHEONONCHEON",
+   "b": "ND_02_STATION_YEONGHWAYEOK",
+   "li": 21.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_CITY_HANYANGGYEONGJO",
+   "b": "ND_02_TEMPLE_YONGJUSA",
+   "li": 22.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_SPRING_ICHEONONCHEON",
+   "b": "ND_02_STATION_PANGYOYEOK",
+   "li": 22.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_STATION_PANGYOYEOK",
+   "b": "ND_02_TOWN_YEOJU",
+   "li": 23.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_STATION_YEONGHWAYEOK",
+   "b": "ND_02_CITY_SUWONHWASEONG",
+   "li": 28.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_CITY_SUWONHWASEONG",
+   "b": "ND_02_BEACON_MOKMYEOKSANBONGSU",
+   "li": 20.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_STATION_YEONGHWAYEOK",
+   "b": "ND_02_STATION_YANGJAEYEOK",
+   "li": 30.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_STATION_YANGJAEYEOK",
+   "b": "ND_02_TOWN_ANSEONG",
+   "li": 33.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_STATION_YANGJAEYEOK",
+   "b": "ND_02_FORT_NAMHANSANSEONG",
+   "li": 34.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_STATION_YANGJAEYEOK",
+   "b": "ND_02_CITY_GWANGJUYUSUBU",
+   "li": 34.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_CITY_GWANGJUYUSUBU",
+   "b": "ND_02_TOWN_ICHEON",
+   "li": 21.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_CITY_GWANGJUYUSUBU",
+   "b": "ND_02_TEMPLE_JOGYESA",
+   "li": 25.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_TOWN_ICHEON",
+   "b": "ND_02_TEMPLE_SINREUKSA",
+   "li": 27.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_TOWN_ICHEON",
+   "b": "ND_02_TOWN_NAMYANG",
+   "li": 27.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_TEMPLE_SINREUKSA",
+   "b": "ND_02_TOWN_YANGPYEONG",
+   "li": 33.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_TOWN_ANSEONG",
+   "b": "ND_02_FORT_NAMHANSANSEONG",
+   "li": 35.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_TOWN_NAMYANG",
+   "b": "ND_02_TEMPLE_SINREUKSA",
+   "li": 33.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_TOWN_YEOJU",
+   "b": "ND_02_STATION_YEONGHWAYEOK",
+   "li": 27.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_TOWN_YANGPYEONG",
+   "b": "ND_02_TEMPLE_JOGYESA",
+   "li": 45.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_TEMPLE_JOGYESA",
+   "b": "ND_02_TOWN_ICHEON",
+   "li": 33.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_TEMPLE_YONGJUSA",
+   "b": "ND_02_SPRING_ICHEONONCHEON",
+   "li": 33.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_02_BEACON_MOKMYEOKSANBONGSU",
+   "b": "ND_02_FORT_NAMHANSANSEONG",
+   "li": 45.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_CITY_CHEOLWONDOHOBU",
+   "b": "ND_03_SCENIC_GEUMGANGSANGURYONGPOK",
+   "li": 27.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_SCENIC_GEUMGANGSANGURYONGPOK",
+   "b": "ND_03_TEMPLE_BAEKDAMSA",
+   "li": 18.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_SCENIC_GEUMGANGSANGURYONGPOK",
+   "b": "ND_03_STATION_CHANGDOYEOK",
+   "li": 20.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_TEMPLE_BAEKDAMSA",
+   "b": "ND_03_TOWN_TONGCHEON",
+   "li": 25.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_TOWN_TONGCHEON",
+   "b": "ND_03_SCENIC_CHEOLWONSAMBUYEON",
+   "li": 21.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_SCENIC_CHEOLWONSAMBUYEON",
+   "b": "ND_03_TOWN_HWACHEON",
+   "li": 20.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_TOWN_HWACHEON",
+   "b": "ND_03_STATION_YEONCHEONYEOK",
+   "li": 22.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_SCENIC_CHEOLWONSAMBUYEON",
+   "b": "ND_03_TOWN_INJE",
+   "li": 27.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_TOWN_INJE",
+   "b": "ND_03_STATION_BOANYEOK",
+   "li": 19.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_STATION_CHANGDOYEOK",
+   "b": "ND_03_BEACON_CHUNCHEONBONGSU",
+   "li": 28.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_BEACON_CHUNCHEONBONGSU",
+   "b": "ND_03_TOWN_YANGGU",
+   "li": 36.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_TOWN_YANGGU",
+   "b": "ND_03_TEMPLE_GEONBONGSA",
+   "li": 23.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_TEMPLE_GEONBONGSA",
+   "b": "ND_03_TOWN_HOEYANG",
+   "li": 24.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_TEMPLE_BAEKDAMSA",
+   "b": "ND_03_CITY_CHUNCHEONBU",
+   "li": 36.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_CITY_CHEOLWONDOHOBU",
+   "b": "ND_03_STATION_CHANGDOYEOK",
+   "li": 37.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_CITY_CHUNCHEONBU",
+   "b": "ND_03_TOWN_HOEYANG",
+   "li": 41.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_TOWN_TONGCHEON",
+   "b": "ND_03_TOWN_HWACHEON",
+   "li": 24.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_STATION_YEONCHEONYEOK",
+   "b": "ND_03_TOWN_TONGCHEON",
+   "li": 39.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_03_STATION_BOANYEOK",
+   "b": "ND_03_SCENIC_CHEOLWONSAMBUYEON",
+   "li": 44.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "b": "ND_04_TEMPLE_SAMCHEOKSINHEUNGSA",
+   "li": 17.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "b": "ND_04_TOWN_PYEONGCHANG",
+   "li": 17.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_TEMPLE_SAMCHEOKSINHEUNGSA",
+   "b": "ND_04_TOWN_YEONGWOL",
+   "li": 17.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_TOWN_YEONGWOL",
+   "b": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "li": 23.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_TOWN_YEONGWOL",
+   "b": "ND_04_STATION_ANHEUNGYEOK",
+   "li": 24.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_STATION_ANHEUNGYEOK",
+   "b": "ND_04_TEMPLE_WOLJEONGSA",
+   "li": 24.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_TEMPLE_WOLJEONGSA",
+   "b": "ND_04_STATION_DAEGWANRYEONGCHAM",
+   "li": 22.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_STATION_DAEGWANRYEONGCHAM",
+   "b": "ND_04_TOWN_ULJIN",
+   "li": 17.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_TEMPLE_SAMCHEOKSINHEUNGSA",
+   "b": "ND_04_SPRING_DEOKGUONCHEON",
+   "li": 26.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "b": "ND_04_TOWN_SAMCHEOK",
+   "li": 26.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_SPRING_DEOKGUONCHEON",
+   "b": "ND_04_BEACON_GANGREUNGBONGSU",
+   "li": 27.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_BEACON_GANGREUNGBONGSU",
+   "b": "ND_04_SPRING_ULJINBAEKAMONCHEON",
+   "li": 22.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_TOWN_SAMCHEOK",
+   "b": "ND_04_STATION_PYEONGHAEYEOK",
+   "li": 40.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_TOWN_ULJIN",
+   "b": "ND_04_TOWN_JEONGSEON",
+   "li": 45.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_TOWN_SAMCHEOK",
+   "b": "ND_04_TOWN_ULJIN",
+   "li": 40.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_TOWN_ULJIN",
+   "b": "ND_04_STATION_ANHEUNGYEOK",
+   "li": 28.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_TOWN_PYEONGCHANG",
+   "b": "ND_04_TEMPLE_SAMCHEOKSINHEUNGSA",
+   "li": 20.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_TOWN_JEONGSEON",
+   "b": "ND_04_STATION_PYEONGHAEYEOK",
+   "li": 53.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_04_SPRING_ULJINBAEKAMONCHEON",
+   "b": "ND_04_TEMPLE_WOLJEONGSA",
+   "li": 36.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_CITY_CHUNGJUMOK",
+   "b": "ND_05_TOWN_BOEUN",
+   "li": 19.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_CITY_CHUNGJUMOK",
+   "b": "ND_05_STATION_GAHEUNGYEOK",
+   "li": 25.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_STATION_GAHEUNGYEOK",
+   "b": "ND_05_STATION_YULBONGYEOK",
+   "li": 30.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_STATION_YULBONGYEOK",
+   "b": "ND_05_SPRING_SUANBOONCHEON",
+   "li": 26.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_STATION_GAHEUNGYEOK",
+   "b": "ND_05_BEACON_CHUNGJUBONGSU",
+   "li": 34.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_BEACON_CHUNGJUBONGSU",
+   "b": "ND_05_TEMPLE_GUINSA",
+   "li": 32.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_BEACON_CHUNGJUBONGSU",
+   "b": "ND_05_TOWN_JECHEON",
+   "li": 38.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_STATION_YULBONGYEOK",
+   "b": "ND_05_TOWN_OKCHEON",
+   "li": 41.1,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_TOWN_OKCHEON",
+   "b": "ND_05_CITY_CHEONGJUMOK",
+   "li": 17.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_CITY_CHEONGJUMOK",
+   "b": "ND_05_TOWN_DANYANG",
+   "li": 32.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_TOWN_DANYANG",
+   "b": "ND_05_FORT_MUNGYEONGSAEJAEJORYEONGGWAN",
+   "li": 22.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_FORT_MUNGYEONGSAEJAEJORYEONGGWAN",
+   "b": "ND_05_TEMPLE_SOKRISANBEOPJUSA",
+   "li": 23.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_TOWN_DANYANG",
+   "b": "ND_05_STATION_JEUNGYAKYEOK",
+   "li": 27.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_STATION_JEUNGYAKYEOK",
+   "b": "ND_05_TOWN_YEONGDONG",
+   "li": 31.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_TOWN_JECHEON",
+   "b": "ND_05_TOWN_BOEUN",
+   "li": 43.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_TOWN_YEONGDONG",
+   "b": "ND_05_CITY_CHEONGJUMOK",
+   "li": 36.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_TOWN_BOEUN",
+   "b": "ND_05_STATION_GAHEUNGYEOK",
+   "li": 34.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_TOWN_OKCHEON",
+   "b": "ND_05_TOWN_DANYANG",
+   "li": 35.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_TEMPLE_SOKRISANBEOPJUSA",
+   "b": "ND_05_TOWN_DANYANG",
+   "li": 43.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_TEMPLE_GUINSA",
+   "b": "ND_05_SPRING_SUANBOONCHEON",
+   "li": 39.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_05_SPRING_SUANBOONCHEON",
+   "b": "ND_05_BEACON_CHUNGJUBONGSU",
+   "li": 35.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "b": "ND_06_TOWN_BUYEO",
+   "li": 27.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_TOWN_BUYEO",
+   "b": "ND_06_SPRING_YUSEONGONCHEON",
+   "li": 23.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_SPRING_YUSEONGONCHEON",
+   "b": "ND_06_TOWN_CHEONAN",
+   "li": 25.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "b": "ND_06_BEACON_GONGJUWOLSEONGSANBONGSU",
+   "li": 28.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_BEACON_GONGJUWOLSEONGSANBONGSU",
+   "b": "ND_06_TOWN_HAEMI",
+   "li": 24.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_TOWN_HAEMI",
+   "b": "ND_06_TOWN_ASAN",
+   "li": 20.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_TOWN_ASAN",
+   "b": "ND_06_SPRING_DOGOONCHEON",
+   "li": 27.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_TOWN_CHEONAN",
+   "b": "ND_06_TEMPLE_GAPSA",
+   "li": 31.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_TEMPLE_GAPSA",
+   "b": "ND_06_STATION_IINYEOK",
+   "li": 20.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_STATION_IINYEOK",
+   "b": "ND_06_STATION_GWANGJEONGYEOK",
+   "li": 19.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_STATION_GWANGJEONGYEOK",
+   "b": "ND_06_CITY_HONGJUMOK",
+   "li": 19.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_CITY_HONGJUMOK",
+   "b": "ND_06_TEMPLE_MAGOKSA",
+   "li": 24.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_CITY_HONGJUMOK",
+   "b": "ND_06_SPRING_ONYANGONCHEON",
+   "li": 27.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_STATION_GWANGJEONGYEOK",
+   "b": "ND_06_TOWN_TAEAN",
+   "li": 39.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_TOWN_TAEAN",
+   "b": "ND_06_TEMPLE_SUDEOKSA",
+   "li": 23.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_TOWN_TAEAN",
+   "b": "ND_06_STATION_GEUMJEONGYEOK",
+   "li": 24.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_TOWN_BUYEO",
+   "b": "ND_06_TOWN_CHEONAN",
+   "li": 26.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_STATION_GEUMJEONGYEOK",
+   "b": "ND_06_STATION_GWANGJEONGYEOK",
+   "li": 42.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_TEMPLE_MAGOKSA",
+   "b": "ND_06_STATION_IINYEOK",
+   "li": 33.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_TEMPLE_SUDEOKSA",
+   "b": "ND_06_STATION_GWANGJEONGYEOK",
+   "li": 44.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_SPRING_ONYANGONCHEON",
+   "b": "ND_06_TEMPLE_MAGOKSA",
+   "li": 34.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_06_SPRING_DOGOONCHEON",
+   "b": "ND_06_TOWN_HAEMI",
+   "li": 40.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "b": "ND_07_TOWN_MUJU",
+   "li": 18.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_TOWN_MUJU",
+   "b": "ND_07_TEMPLE_GEUMSANSA",
+   "li": 27.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_TEMPLE_GEUMSANSA",
+   "b": "ND_07_STATION_OSUYEOK",
+   "li": 32.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_STATION_OSUYEOK",
+   "b": "ND_07_CITY_NAMWONDOHOBU",
+   "li": 21.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_STATION_OSUYEOK",
+   "b": "ND_07_TOWN_IKSAN",
+   "li": 26.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_STATION_OSUYEOK",
+   "b": "ND_07_TEMPLE_SILSANGSA",
+   "li": 32.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_TEMPLE_SILSANGSA",
+   "b": "ND_07_HAZARD_GALJAEHWAJEOKPAEGOGAE",
+   "li": 22.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_TOWN_IKSAN",
+   "b": "ND_07_STATION_EUNSEONYEOK",
+   "li": 45.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_STATION_EUNSEONYEOK",
+   "b": "ND_07_TOWN_GOCHANG",
+   "li": 18.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_TOWN_GOCHANG",
+   "b": "ND_07_BEACON_JEONJUBONGSU",
+   "li": 22.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_TOWN_GOCHANG",
+   "b": "ND_07_STATION_SAMRYEYEOK",
+   "li": 27.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_STATION_SAMRYEYEOK",
+   "b": "ND_07_TEMPLE_NAESOSA",
+   "li": 25.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_STATION_SAMRYEYEOK",
+   "b": "ND_07_FORT_JEOKSANGSANSEONG",
+   "li": 26.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_FORT_JEOKSANGSANSEONG",
+   "b": "ND_07_TOWN_JINAN",
+   "li": 21.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_BEACON_JEONJUBONGSU",
+   "b": "ND_07_TOWN_JEONGEUP",
+   "li": 28.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "b": "ND_07_TEMPLE_GEUMSANSA",
+   "li": 31.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_CITY_NAMWONDOHOBU",
+   "b": "ND_07_TOWN_IKSAN",
+   "li": 32.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_TOWN_JEONGEUP",
+   "b": "ND_07_TOWN_GOCHANG",
+   "li": 32.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_TOWN_JINAN",
+   "b": "ND_07_TEMPLE_NAESOSA",
+   "li": 28.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_STATION_EUNSEONYEOK",
+   "b": "ND_07_STATION_SAMRYEYEOK",
+   "li": 30.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_07_HAZARD_GALJAEHWAJEOKPAEGOGAE",
+   "b": "ND_07_STATION_OSUYEOK",
+   "li": 39.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_CITY_NAJUMOK",
+   "b": "ND_08_WRECK_MYEONGRYANGULDOLMOK",
+   "li": 17.3,
+   "terrain": "water",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_CITY_NAJUMOK",
+   "b": "ND_08_TOWN_DAMYANG",
+   "li": 19.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_WRECK_MYEONGRYANGULDOLMOK",
+   "b": "ND_08_STATION_CHEONGAMYEOK",
+   "li": 21.7,
+   "terrain": "water",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_STATION_CHEONGAMYEOK",
+   "b": "ND_08_CITY_GWANGJUMOK",
+   "li": 16.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_TOWN_DAMYANG",
+   "b": "ND_08_TOWN_JINDO",
+   "li": 23.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_WRECK_MYEONGRYANGULDOLMOK",
+   "b": "ND_08_TEMPLE_HWAEOMSA",
+   "li": 23.8,
+   "terrain": "water",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_TEMPLE_HWAEOMSA",
+   "b": "ND_08_STATION_NOKDOYEOK",
+   "li": 18.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_TOWN_DAMYANG",
+   "b": "ND_08_CITY_SUNCHEONDOHOBU",
+   "li": 25.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_CITY_GWANGJUMOK",
+   "b": "ND_08_FORT_YEOSUJWASUYEONG",
+   "li": 28.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_FORT_YEOSUJWASUYEONG",
+   "b": "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
+   "li": 23.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_CITY_NAJUMOK",
+   "b": "ND_08_TEMPLE_DAEHEUNGSA",
+   "li": 30.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_TEMPLE_DAEHEUNGSA",
+   "b": "ND_08_TOWN_YEONGAM",
+   "li": 19.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
+   "b": "ND_08_TOWN_HAENAM",
+   "li": 31.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_TOWN_HAENAM",
+   "b": "ND_08_STATION_BYEOLJEONYEOK",
+   "li": 29.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_TOWN_JINDO",
+   "b": "ND_08_BEACON_YEOSUDOLSANBONGSU",
+   "li": 33.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_TOWN_HAENAM",
+   "b": "ND_08_TEMPLE_SONGGWANGSA",
+   "li": 36.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_CITY_SUNCHEONDOHOBU",
+   "b": "ND_08_TOWN_YEONGAM",
+   "li": 32.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_TOWN_JINDO",
+   "b": "ND_08_TEMPLE_HWAEOMSA",
+   "li": 25.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_STATION_BYEOLJEONYEOK",
+   "b": "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
+   "li": 38.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_STATION_NOKDOYEOK",
+   "b": "ND_08_TOWN_JINDO",
+   "li": 39.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_TEMPLE_SONGGWANGSA",
+   "b": "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
+   "li": 47.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_08_BEACON_YEOSUDOLSANBONGSU",
+   "b": "ND_08_TOWN_DAMYANG",
+   "li": 34.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_CITY_SANGJUMOK",
+   "b": "ND_09_TOWN_CHEONGSONG",
+   "li": 17.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_TOWN_CHEONGSONG",
+   "b": "ND_09_STATION_JANGSUYEOK",
+   "li": 23.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_CITY_SANGJUMOK",
+   "b": "ND_09_SPRING_YEONGJUPUNGGIONCHEON",
+   "li": 29.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_TOWN_CHEONGSONG",
+   "b": "ND_09_STATION_YUGOKYEOK",
+   "li": 31.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_STATION_YUGOKYEOK",
+   "b": "ND_09_TOWN_YEONGJU",
+   "li": 25.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_CITY_SANGJUMOK",
+   "b": "ND_09_TEMPLE_BUSEOKSA",
+   "li": 33.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_TEMPLE_BUSEOKSA",
+   "b": "ND_09_TOWN_MUNGYEONG",
+   "li": 24.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_TOWN_MUNGYEONG",
+   "b": "ND_09_TEMPLE_BULGUKSA",
+   "li": 18.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_TEMPLE_BULGUKSA",
+   "b": "ND_09_CITY_GYEONGJUBU",
+   "li": 16.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_CITY_GYEONGJUBU",
+   "b": "ND_09_TOWN_UISEONG",
+   "li": 17.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_TOWN_UISEONG",
+   "b": "ND_09_TOWN_YEONGCHEON",
+   "li": 23.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_CITY_GYEONGJUBU",
+   "b": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "li": 24.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "b": "ND_09_SPRING_MUNGYEONGONCHEON",
+   "li": 18.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "b": "ND_09_STATION_ANGIYEOK",
+   "li": 36.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_STATION_ANGIYEOK",
+   "b": "ND_09_BEACON_GYEONGJUBONGSU",
+   "li": 19.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_BEACON_GYEONGJUBONGSU",
+   "b": "ND_09_TEMPLE_GOUNSA",
+   "li": 18.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_TOWN_YEONGJU",
+   "b": "ND_09_STATION_JANGSUYEOK",
+   "li": 52.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_TOWN_YEONGCHEON",
+   "b": "ND_09_CITY_GYEONGJUBU",
+   "li": 36.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_TOWN_UISEONG",
+   "b": "ND_09_TEMPLE_BULGUKSA",
+   "li": 17.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_STATION_ANGIYEOK",
+   "b": "ND_09_TEMPLE_GOUNSA",
+   "li": 36.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_STATION_JANGSUYEOK",
+   "b": "ND_09_STATION_YUGOKYEOK",
+   "li": 32.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_TEMPLE_BUSEOKSA",
+   "b": "ND_09_TEMPLE_BULGUKSA",
+   "li": 26.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_SPRING_MUNGYEONGONCHEON",
+   "b": "ND_09_STATION_ANGIYEOK",
+   "li": 41.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_09_SPRING_YEONGJUPUNGGIONCHEON",
+   "b": "ND_09_TEMPLE_BUSEOKSA",
+   "li": 36.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "b": "ND_10_STATION_HWANGSANYEOK",
+   "li": 20.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_STATION_HWANGSANYEOK",
+   "b": "ND_10_TEMPLE_HAEINSA",
+   "li": 20.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_STATION_HWANGSANYEOK",
+   "b": "ND_10_BEACON_DONGRAEHWANGRYEONGSANBONGSU",
+   "li": 21.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_BEACON_DONGRAEHWANGRYEONGSANBONGSU",
+   "b": "ND_10_CITY_DONGRAEHYEON",
+   "li": 21.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_CITY_DONGRAEHYEON",
+   "b": "ND_10_TOWN_MILYANG",
+   "li": 19.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_TOWN_MILYANG",
+   "b": "ND_10_SPRING_CHANGNYEONGBUGOKONCHEON",
+   "li": 17.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_SPRING_CHANGNYEONGBUGOKONCHEON",
+   "b": "ND_10_TOWN_NAMHAE",
+   "li": 16.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_TOWN_NAMHAE",
+   "b": "ND_10_CITY_JINJUMOK",
+   "li": 21.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_CITY_DONGRAEHYEON",
+   "b": "ND_10_FORT_TONGYEONGTONGJEYEONG",
+   "li": 24.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_CITY_JINJUMOK",
+   "b": "ND_10_STATION_BEOMEOYEOK",
+   "li": 24.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_TEMPLE_HAEINSA",
+   "b": "ND_10_STATION_YOWONYEOK",
+   "li": 24.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "b": "ND_10_TOWN_GIMHAE",
+   "li": 32.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_STATION_BEOMEOYEOK",
+   "b": "ND_10_TEMPLE_TONGDOSA",
+   "li": 38.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_TEMPLE_TONGDOSA",
+   "b": "ND_10_TOWN_HAPCHEON",
+   "li": 23.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_TEMPLE_TONGDOSA",
+   "b": "ND_10_TEMPLE_SSANGGYESA",
+   "li": 25.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_TOWN_HAPCHEON",
+   "b": "ND_10_SPRING_DONGRAEONCHEON",
+   "li": 32.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "b": "ND_10_TEMPLE_HAEINSA",
+   "li": 26.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_FORT_TONGYEONGTONGJEYEONG",
+   "b": "ND_10_CITY_JINJUMOK",
+   "li": 32.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_TOWN_GIMHAE",
+   "b": "ND_10_TEMPLE_HAEINSA",
+   "li": 34.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_STATION_YOWONYEOK",
+   "b": "ND_10_TOWN_MILYANG",
+   "li": 31.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_TEMPLE_SSANGGYESA",
+   "b": "ND_10_TOWN_HAPCHEON",
+   "li": 33.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_10_SPRING_DONGRAEONCHEON",
+   "b": "ND_10_SPRING_CHANGNYEONGBUGOKONCHEON",
+   "li": 49.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_CITY_HWANGJUMOK",
+   "b": "ND_11_STATION_GEUMGYOYEOK",
+   "li": 28.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_CITY_HWANGJUMOK",
+   "b": "ND_11_TEMPLE_SEONGBULSA",
+   "li": 29.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_STATION_GEUMGYOYEOK",
+   "b": "ND_11_TOWN_SUAN",
+   "li": 33.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_TOWN_SUAN",
+   "b": "ND_11_TOWN_GOKSAN",
+   "li": 22.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_TOWN_GOKSAN",
+   "b": "ND_11_TOWN_SEOHEUNG",
+   "li": 20.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_TOWN_SEOHEUNG",
+   "b": "ND_11_CITY_BONGSANGUN",
+   "li": 24.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_CITY_BONGSANGUN",
+   "b": "ND_11_SPRING_PYEONGSANONCHEON",
+   "li": 23.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_TOWN_SUAN",
+   "b": "ND_11_STATION_DONGSEONYEOK",
+   "li": 25.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_CITY_BONGSANGUN",
+   "b": "ND_11_TOWN_PYEONGSAN",
+   "li": 26.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_STATION_DONGSEONYEOK",
+   "b": "ND_11_BEACON_HWANGJUBONGSU",
+   "li": 35.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_TEMPLE_SEONGBULSA",
+   "b": "ND_11_STATION_SAENGEUMYEOK",
+   "li": 41.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_TOWN_PYEONGSAN",
+   "b": "ND_11_FORT_JEONGBANGSANSEONG",
+   "li": 43.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_TOWN_PYEONGSAN",
+   "b": "ND_11_SPRING_PYEONGSANONCHEON",
+   "li": 40.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_STATION_DONGSEONYEOK",
+   "b": "ND_11_TOWN_GOKSAN",
+   "li": 28.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_STATION_SAENGEUMYEOK",
+   "b": "ND_11_BEACON_HWANGJUBONGSU",
+   "li": 43.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_SPRING_PYEONGSANONCHEON",
+   "b": "ND_11_TOWN_SUAN",
+   "li": 25.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_11_FORT_JEONGBANGSANSEONG",
+   "b": "ND_11_SPRING_PYEONGSANONCHEON",
+   "li": 50.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_CITY_HAEJUMOK",
+   "b": "ND_12_TOWN_SONGHWA",
+   "li": 27.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_TOWN_SONGHWA",
+   "b": "ND_12_CITY_YEONANDOHOBU",
+   "li": 19.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_CITY_YEONANDOHOBU",
+   "b": "ND_12_TOWN_BAECHEON",
+   "li": 20.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_TOWN_BAECHEON",
+   "b": "ND_12_TOWN_JANGYEON",
+   "li": 22.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_TOWN_JANGYEON",
+   "b": "ND_12_FORT_JANGSANGOTJINBO",
+   "li": 18.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_TOWN_BAECHEON",
+   "b": "ND_12_SPRING_SINCHEONONCHEON",
+   "li": 25.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_SPRING_SINCHEONONCHEON",
+   "b": "ND_12_STATION_CHODOYEOK",
+   "li": 19.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_STATION_CHODOYEOK",
+   "b": "ND_12_BEACON_HAEJUBONGSU",
+   "li": 19.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_BEACON_HAEJUBONGSU",
+   "b": "ND_12_TOWN_ONGJIN",
+   "li": 23.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_TOWN_ONGJIN",
+   "b": "ND_12_TEMPLE_SINCHEONPAEYEOPSA",
+   "li": 18.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_TEMPLE_SINCHEONPAEYEOPSA",
+   "b": "ND_12_SPRING_BAECHEONONCHEON",
+   "li": 27.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_CITY_HAEJUMOK",
+   "b": "ND_12_STATION_YEONGCHEONYEOK",
+   "li": 29.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_TEMPLE_SINCHEONPAEYEOPSA",
+   "b": "ND_12_STATION_ANGOKYEOK",
+   "li": 30.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_STATION_ANGOKYEOK",
+   "b": "ND_12_TOWN_ONGJIN",
+   "li": 46.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_STATION_YEONGCHEONYEOK",
+   "b": "ND_12_TOWN_JANGYEON",
+   "li": 37.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_SPRING_BAECHEONONCHEON",
+   "b": "ND_12_TOWN_SONGHWA",
+   "li": 31.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_12_FORT_JANGSANGOTJINBO",
+   "b": "ND_12_TOWN_BAECHEON",
+   "li": 39.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_CITY_PYEONGYANGBU",
+   "b": "ND_13_BEACON_PYEONGYANGBONGSU",
+   "li": 23.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_CITY_PYEONGYANGBU",
+   "b": "ND_13_SPRING_GANGSEOONCHEON",
+   "li": 27.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_SPRING_GANGSEOONCHEON",
+   "b": "ND_13_TOWN_SEONGCHEON",
+   "li": 33.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_TOWN_SEONGCHEON",
+   "b": "ND_13_TOWN_GANGSEO",
+   "li": 19.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_TOWN_SEONGCHEON",
+   "b": "ND_13_SCENIC_EULMILDAE",
+   "li": 30.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_SCENIC_EULMILDAE",
+   "b": "ND_13_TEMPLE_YEONGMYEONGSA",
+   "li": 26.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_BEACON_PYEONGYANGBONGSU",
+   "b": "ND_13_TOWN_SUNCHEON",
+   "li": 33.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_TOWN_SUNCHEON",
+   "b": "ND_13_TOWN_JINNAMPO",
+   "li": 27.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_TOWN_JINNAMPO",
+   "b": "ND_13_STATION_SUKCHEONCHAM",
+   "li": 21.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_TOWN_JINNAMPO",
+   "b": "ND_13_STATION_JOYANGYEOK",
+   "li": 21.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_STATION_SUKCHEONCHAM",
+   "b": "ND_13_CITY_ANJUMOK",
+   "li": 25.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_CITY_ANJUMOK",
+   "b": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+   "li": 28.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+   "b": "ND_13_TOWN_SUKCHEON",
+   "li": 19.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_TOWN_SUKCHEON",
+   "b": "ND_13_STATION_DAEDONGYEOK",
+   "li": 17.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+   "b": "ND_13_SPRING_YANGDEOKONCHEON",
+   "li": 22.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_CITY_ANJUMOK",
+   "b": "ND_13_STATION_JOYANGYEOK",
+   "li": 28.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_TOWN_SUNCHEON",
+   "b": "ND_13_STATION_SUKCHEONCHAM",
+   "li": 33.1,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_TOWN_GANGSEO",
+   "b": "ND_13_SPRING_GANGSEOONCHEON",
+   "li": 38.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_STATION_DAEDONGYEOK",
+   "b": "ND_13_SPRING_YANGDEOKONCHEON",
+   "li": 27.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_STATION_JOYANGYEOK",
+   "b": "ND_13_STATION_SUKCHEONCHAM",
+   "li": 27.1,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_TEMPLE_YEONGMYEONGSA",
+   "b": "ND_13_STATION_DAEDONGYEOK",
+   "li": 42.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_13_SPRING_YANGDEOKONCHEON",
+   "b": "ND_13_TOWN_SUKCHEON",
+   "li": 25.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_CITY_UIJUMOK",
+   "b": "ND_14_TOWN_SINMIDONARU",
+   "li": 23.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_TOWN_SINMIDONARU",
+   "b": "ND_14_SCENIC_UIJUTONGGUNJEONG",
+   "li": 17.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_TOWN_SINMIDONARU",
+   "b": "ND_14_CITY_YEONGBYEONDAEDOHOBU",
+   "li": 20.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_CITY_YEONGBYEONDAEDOHOBU",
+   "b": "ND_14_TOWN_SEONCHEON",
+   "li": 27.2,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_SCENIC_UIJUTONGGUNJEONG",
+   "b": "ND_14_TOWN_GANGGYE",
+   "li": 31.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_TOWN_GANGGYE",
+   "b": "ND_14_STATION_APROKCHAM",
+   "li": 35.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_CITY_YEONGBYEONDAEDOHOBU",
+   "b": "ND_14_BEACON_UIJUBONGSU",
+   "li": 42.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_BEACON_UIJUBONGSU",
+   "b": "ND_14_TOWN_JEONGJU",
+   "li": 22.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_TOWN_JEONGJU",
+   "b": "ND_14_TOWN_NYEONGWON",
+   "li": 21.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_TOWN_NYEONGWON",
+   "b": "ND_14_STATION_UISUNGWAN",
+   "li": 16.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_BEACON_UIJUBONGSU",
+   "b": "ND_14_TOWN_SAKJU",
+   "li": 29.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_TOWN_SAKJU",
+   "b": "ND_14_STATION_CHEONGCHEONYEOK",
+   "li": 18.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_TOWN_SAKJU",
+   "b": "ND_14_TEMPLE_BAEKMASANSA",
+   "li": 23.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_CITY_UIJUMOK",
+   "b": "ND_14_TOWN_SEONCHEON",
+   "li": 29.1,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_TOWN_SEONCHEON",
+   "b": "ND_14_TOWN_SINMIDONARU",
+   "li": 28.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_STATION_APROKCHAM",
+   "b": "ND_14_SCENIC_UIJUTONGGUNJEONG",
+   "li": 42.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_STATION_CHEONGCHEONYEOK",
+   "b": "ND_14_TEMPLE_BAEKMASANSA",
+   "li": 23.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_STATION_UISUNGWAN",
+   "b": "ND_14_TOWN_JEONGJU",
+   "li": 29.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_14_SCENIC_UIJUTONGGUNJEONG",
+   "b": "ND_14_CITY_YEONGBYEONDAEDOHOBU",
+   "li": 27.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_CITY_HAMHEUNGBU",
+   "b": "ND_15_TOWN_JEONGPYEONG",
+   "li": 37.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_TOWN_JEONGPYEONG",
+   "b": "ND_15_TOWN_MUNCHEON",
+   "li": 33.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_TOWN_MUNCHEON",
+   "b": "ND_15_TOWN_GOWON",
+   "li": 30.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_CITY_HAMHEUNGBU",
+   "b": "ND_15_TOWN_YEONGHEUNG",
+   "li": 40.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_TOWN_YEONGHEUNG",
+   "b": "ND_15_TEMPLE_GWIJUSA",
+   "li": 26.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_TEMPLE_GWIJUSA",
+   "b": "ND_15_BEACON_HAMHEUNGBONGSU",
+   "li": 17.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_BEACON_HAMHEUNGBONGSU",
+   "b": "ND_15_STATION_GOSANYEOK",
+   "li": 22.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_STATION_GOSANYEOK",
+   "b": "ND_15_STATION_SINEUNCHAM",
+   "li": 17.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_STATION_GOSANYEOK",
+   "b": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "li": 24.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_STATION_SINEUNCHAM",
+   "b": "ND_15_STATION_MANRYEONGYEOK",
+   "li": 27.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "b": "ND_15_RUIN_MAUNRYEONGJINHEUNGWANGSUNSUBI",
+   "li": 31.3,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_RUIN_MAUNRYEONGJINHEUNGWANGSUNSUBI",
+   "b": "ND_15_SPRING_DALCHEONONCHEON",
+   "li": 36.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_SPRING_DALCHEONONCHEON",
+   "b": "ND_15_TOWN_DEOKWON",
+   "li": 18.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_STATION_MANRYEONGYEOK",
+   "b": "ND_15_TEMPLE_SEOKWANGSA",
+   "li": 46.6,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_TOWN_GOWON",
+   "b": "ND_15_TOWN_JEONGPYEONG",
+   "li": 49.8,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_TOWN_DEOKWON",
+   "b": "ND_15_STATION_MANRYEONGYEOK",
+   "li": 37.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_15_TEMPLE_SEOKWANGSA",
+   "b": "ND_15_TOWN_YEONGHEUNG",
+   "li": 55.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_CITY_GYEONGSEONGDOHOBU",
+   "b": "ND_16_TEMPLE_GAESIMSA",
+   "li": 20.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_TEMPLE_GAESIMSA",
+   "b": "ND_16_CITY_GILJUMOK",
+   "li": 30.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_CITY_GILJUMOK",
+   "b": "ND_16_TOWN_GYEONGWON",
+   "li": 21.6,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_TOWN_GYEONGWON",
+   "b": "ND_16_BEACON_GYEONGSEONGBONGSU",
+   "li": 23.9,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_CITY_GILJUMOK",
+   "b": "ND_16_STATION_PUNGSANCHAM",
+   "li": 28.1,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_STATION_PUNGSANCHAM",
+   "b": "ND_16_TOWN_BURYEONG",
+   "li": 17.7,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_BEACON_GYEONGSEONGBONGSU",
+   "b": "ND_16_TOWN_ONSEONG",
+   "li": 30.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_TOWN_ONSEONG",
+   "b": "ND_16_SPRING_GYEONGSEONGJUEULONCHEON",
+   "li": 22.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_CITY_GILJUMOK",
+   "b": "ND_16_TOWN_HOERYEONG",
+   "li": 30.1,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_TOWN_ONSEONG",
+   "b": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+   "li": 33.4,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+   "b": "ND_16_STATION_HOERYEONGCHAM",
+   "li": 28.7,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_STATION_HOERYEONGCHAM",
+   "b": "ND_16_STATION_MUSANCHAM",
+   "li": 17.0,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_TEMPLE_GAESIMSA",
+   "b": "ND_16_TOWN_JONGSEONG",
+   "li": 36.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_CITY_GYEONGSEONGDOHOBU",
+   "b": "ND_16_TOWN_HOERYEONG",
+   "li": 39.1,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_TOWN_JONGSEONG",
+   "b": "ND_16_SPRING_GYEONGSEONGJUEULONCHEON",
+   "li": 41.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_TOWN_BURYEONG",
+   "b": "ND_16_STATION_HOERYEONGCHAM",
+   "li": 36.1,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_STATION_MUSANCHAM",
+   "b": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+   "li": 34.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_16_SPRING_GYEONGSEONGJUEULONCHEON",
+   "b": "ND_16_BEACON_GYEONGSEONGBONGSU",
+   "li": 36.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "b": "ND_17_SPRING_SANBANGSANTANSANONCHEON",
+   "li": 17.5,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "b": "ND_17_SCENIC_SEONGSANILCHULBONG",
+   "li": 21.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_SCENIC_SEONGSANILCHULBONG",
+   "b": "ND_17_TOWN_SEOGWIPO",
+   "li": 21.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_SPRING_SANBANGSANTANSANONCHEON",
+   "b": "ND_17_TOWN_JEONGUIHYEON",
+   "li": 21.9,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_TOWN_JEONGUIHYEON",
+   "b": "ND_17_TEMPLE_JONJAAM",
+   "li": 25.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_TEMPLE_JONJAAM",
+   "b": "ND_17_TOWN_JOCHEON",
+   "li": 27.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_TOWN_JOCHEON",
+   "b": "ND_17_FORT_CHAGWIJIN",
+   "li": 21.5,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_TOWN_SEOGWIPO",
+   "b": "ND_17_TOWN_DAEJEONGHYEON",
+   "li": 29.1,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_TOWN_SEOGWIPO",
+   "b": "ND_17_FORT_HWABUKJIN",
+   "li": 30.8,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_FORT_CHAGWIJIN",
+   "b": "ND_17_STATION_SAMYANGCHAM",
+   "li": 35.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_STATION_SAMYANGCHAM",
+   "b": "ND_17_TEMPLE_GWANEUMSA",
+   "li": 19.1,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_TEMPLE_GWANEUMSA",
+   "b": "ND_17_TOWN_AEWOL",
+   "li": 30.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_STATION_SAMYANGCHAM",
+   "b": "ND_17_BEACON_JEJUSARABONGBONGSU",
+   "li": 42.2,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_TOWN_DAEJEONGHYEON",
+   "b": "ND_17_TOWN_JOCHEON",
+   "li": 31.4,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_TOWN_AEWOL",
+   "b": "ND_17_TOWN_JEONGUIHYEON",
+   "li": 37.1,
+   "terrain": "road",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_FORT_HWABUKJIN",
+   "b": "ND_17_SCENIC_SEONGSANILCHULBONG",
+   "li": 41.3,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_17_BEACON_JEJUSARABONGBONGSU",
+   "b": "ND_17_FORT_CHAGWIJIN",
+   "li": 56.0,
+   "terrain": "mountain",
+   "kind": "road"
+  },
+  {
+   "a": "ND_01_RUIN_GAESEONGMANWOLDAEYETTEO",
+   "b": "ND_01_CITY_GAESEONGBU",
+   "li": 12.1,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_01_SHRINE_GANGHWACHAMSEONGDAN",
+   "b": "ND_01_CITY_GANGHWAYUSUBU",
+   "li": 10.3,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_01_TOMB_GANGHWABUGEUNRIGOINDOL",
+   "b": "ND_01_CITY_GANGHWAYUSUBU",
+   "li": 12.7,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_02_RUIN_GWANGJUBUNWONBAEKJAGAMATEO",
+   "b": "ND_02_CITY_GWANGJUYUSUBU",
+   "li": 11.8,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_02_SEOWON_SEONGGYUNGWANMYEONGRYUNDANG",
+   "b": "ND_02_CITY_HANYANGGYEONGJO",
+   "li": 12.0,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_02_TOMB_HEONREUNG",
+   "b": "ND_02_CITY_HANYANGGYEONGJO",
+   "li": 9.7,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_03_STUPA_GEUMGANGSANYUJEOMSAYETTEO",
+   "b": "ND_03_TOWN_HOEYANG",
+   "li": 10.3,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_03_SHRINE_HWACHEONSEONGHWANGDANG",
+   "b": "ND_03_TOWN_HWACHEON",
+   "li": 10.5,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_04_WRECK_SAMCHEOKANTAEKSEONCHIMMOLJI",
+   "b": "ND_04_TOWN_SAMCHEOK",
+   "li": 10.0,
+   "terrain": "water",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_04_SEOWON_GANGREUNGOJUKHEON",
+   "b": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "li": 13.8,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_04_TOMB_YEONGWOLJANGREUNG",
+   "b": "ND_04_TOWN_YEONGWOL",
+   "li": 10.4,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO",
+   "b": "ND_05_TOWN_DANYANG",
+   "li": 9.7,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_05_STUPA_CHUNGJUTAPPYEONGRICHILCHEUNGSEOKTAP",
+   "b": "ND_05_CITY_CHUNGJUMOK",
+   "li": 15.2,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+   "b": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "li": 15.0,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_06_SCENIC_GYERYONGSANCHEONHWANGBONG",
+   "b": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+   "li": 14.6,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_06_STUPA_BUYEOJEONGRIMSAJIOCHEUNGSEOKTAP",
+   "b": "ND_06_TOWN_BUYEO",
+   "li": 15.2,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_06_TOMB_GONGJUSONGSANRIGOBUNGUN",
+   "b": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "li": 13.3,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_06_WRECK_TAEANMADOCHIMMOLSEON",
+   "b": "ND_06_TOWN_TAEAN",
+   "li": 12.5,
+   "terrain": "water",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_07_STUPA_IKSANMIREUKSAJISEOKTAP",
+   "b": "ND_07_TOWN_IKSAN",
+   "li": 11.1,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_07_RUIN_BUANYUCHEONRICHEONGJAGAMATEO",
+   "b": "ND_07_TOWN_JEONGEUP",
+   "li": 12.7,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_07_SEOWON_JEONJUGYEONGGIJEON",
+   "b": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "li": 10.4,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
+   "b": "ND_08_TOWN_HAENAM",
+   "li": 16.0,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_08_SHRINE_JINDOSSITGIMGUTDANGGOLPAN",
+   "b": "ND_08_TOWN_JINDO",
+   "li": 15.2,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_08_WRECK_SINANHAEJEOMUYEOKSEON",
+   "b": "ND_08_TOWN_YEONGAM",
+   "li": 10.8,
+   "terrain": "water",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_08_SCENIC_DAMYANGSOSWAEWON",
+   "b": "ND_08_TOWN_DAMYANG",
+   "li": 15.4,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_09_STUPA_GYEONGJUSEOKGULAM",
+   "b": "ND_09_TEMPLE_BULGUKSA",
+   "li": 13.8,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_09_TOMB_GYEONGJUDAEREUNGWON",
+   "b": "ND_09_CITY_GYEONGJUBU",
+   "li": 14.8,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_09_SEOWON_ANDONGDOSANSEOWON",
+   "b": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "li": 13.3,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_10_SCENIC_JIRISANCHEONWANGBONG",
+   "b": "ND_10_CITY_JINJUMOK",
+   "li": 10.5,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_10_TOMB_GORYEONGJISANDONGGOBUNGUN",
+   "b": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "li": 10.3,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_10_SCENIC_MILYANGYEONGNAMRU",
+   "b": "ND_10_TOWN_MILYANG",
+   "li": 9.9,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_10_TOMB_GIMHAESUROWANGREUNG",
+   "b": "ND_10_TOWN_GIMHAE",
+   "li": 13.1,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_10_RUIN_TONGYEONG12GONGBANGYETTEO",
+   "b": "ND_10_FORT_TONGYEONGTONGJEYEONG",
+   "li": 12.6,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_11_SHRINE_BONGSANTALCHUMSEONGHWANGDANG",
+   "b": "ND_11_CITY_BONGSANGUN",
+   "li": 11.8,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_11_SCENIC_HWANGJUWOLPARU",
+   "b": "ND_11_CITY_HWANGJUMOK",
+   "li": 14.4,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_12_SEOWON_HAEJUSOHYEONSEOWON",
+   "b": "ND_12_CITY_HAEJUMOK",
+   "li": 9.9,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_12_SCENIC_JANGYEONMONGGEUMPO",
+   "b": "ND_12_TOWN_JANGYEON",
+   "li": 14.4,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_13_SHRINE_MYOHYANGSANDANGUNGUL",
+   "b": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+   "li": 15.5,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_13_TOMB_PYEONGYANGDONGMYEONGWANGREUNG",
+   "b": "ND_13_CITY_PYEONGYANGBU",
+   "li": 15.3,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_13_TOMB_GANGSEODAEMYO",
+   "b": "ND_13_TOWN_GANGSEO",
+   "li": 12.5,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_14_SCENIC_YEONGBYEONYAKSANDONGDAE",
+   "b": "ND_14_CITY_YEONGBYEONDAEDOHOBU",
+   "li": 13.9,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_14_WRECK_APROKGANGHAGUCHIMMOLSEON",
+   "b": "ND_14_CITY_UIJUMOK",
+   "li": 10.7,
+   "terrain": "water",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_15_SHRINE_HAMHEUNGBONGUNG",
+   "b": "ND_15_CITY_HAMHEUNGBU",
+   "li": 13.0,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_15_SHRINE_BUKCHEONGSAJANOLEUMMADANG",
+   "b": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "li": 13.3,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_15_SCENIC_GAEMAGOWONSAMSUGAPSAN",
+   "b": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "li": 14.6,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_16_RUIN_BAEKDUSANJEONGGYEBITEO",
+   "b": "ND_16_STATION_MUSANCHAM",
+   "li": 14.7,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_16_SCENIC_CHILBOSAN",
+   "b": "ND_16_CITY_GILJUMOK",
+   "li": 10.3,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_16_RUIN_HOERYEONGOJIGAMATEO",
+   "b": "ND_16_TOWN_HOERYEONG",
+   "li": 12.0,
+   "terrain": "road",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_17_SHRINE_JEJUCHILMEORIDANG",
+   "b": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "li": 13.8,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_17_SHRINE_SAMSEONGHYEOL",
+   "b": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "li": 12.5,
+   "terrain": "mountain",
+   "kind": "trail"
+  },
+  {
+   "a": "ND_17_SEOWON_CHUSAYUBAEJI",
+   "b": "ND_17_TOWN_DAEJEONGHYEON",
+   "li": 10.4,
+   "terrain": "road",
+   "kind": "trail"
+  }
+ ],
+ "border_links": [
+  {
+   "a": "ND_01_CITY_GAESEONGBU",
+   "b": "ND_02_FORT_NAMHANSANSEONG",
+   "li": 80,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_01",
+    "MAP_02"
+   ]
+  },
+  {
+   "a": "ND_01_STATION_CHEONGGYOYEOK",
+   "b": "ND_03_TOWN_HWACHEON",
+   "li": 168,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_01",
+    "MAP_03"
+   ]
+  },
+  {
+   "a": "ND_01_TOWN_GYODONG",
+   "b": "ND_11_STATION_SAENGEUMYEOK",
+   "li": 101,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_01",
+    "MAP_11"
+   ]
+  },
+  {
+   "a": "ND_01_STATION_IMJINCHAM",
+   "b": "ND_12_STATION_YEONGCHEONYEOK",
+   "li": 177,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_01",
+    "MAP_12"
+   ]
+  },
+  {
+   "a": "ND_02_TOWN_NAMYANG",
+   "b": "ND_03_STATION_YEONCHEONYEOK",
+   "li": 195,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_02",
+    "MAP_03"
+   ]
+  },
+  {
+   "a": "ND_02_TOWN_NAMYANG",
+   "b": "ND_04_TOWN_JEONGSEON",
+   "li": 199,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_02",
+    "MAP_04"
+   ]
+  },
+  {
+   "a": "ND_02_TOWN_YANGPYEONG",
+   "b": "ND_05_FORT_MUNGYEONGSAEJAEJORYEONGGWAN",
+   "li": 101,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_02",
+    "MAP_05"
+   ]
+  },
+  {
+   "a": "ND_02_CITY_HANYANGGYEONGJO",
+   "b": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "li": 110,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_02",
+    "MAP_06"
+   ]
+  },
+  {
+   "a": "ND_03_CITY_CHUNCHEONBU",
+   "b": "ND_04_STATION_DAEGWANRYEONGCHAM",
+   "li": 138,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_03",
+    "MAP_04"
+   ]
+  },
+  {
+   "a": "ND_03_TOWN_INJE",
+   "b": "ND_11_STATION_SAENGEUMYEOK",
+   "li": 220,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_03",
+    "MAP_11"
+   ]
+  },
+  {
+   "a": "ND_03_CITY_CHEOLWONDOHOBU",
+   "b": "ND_15_STATION_MANRYEONGYEOK",
+   "li": 220,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_03",
+    "MAP_15"
+   ]
+  },
+  {
+   "a": "ND_04_STATION_PYEONGHAEYEOK",
+   "b": "ND_05_TOWN_JECHEON",
+   "li": 150,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_04",
+    "MAP_05"
+   ]
+  },
+  {
+   "a": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "b": "ND_09_TOWN_YEONGCHEON",
+   "li": 143,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_04",
+    "MAP_09"
+   ]
+  },
+  {
+   "a": "ND_05_STATION_JEUNGYAKYEOK",
+   "b": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "li": 145,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_05",
+    "MAP_06"
+   ]
+  },
+  {
+   "a": "ND_05_TOWN_YEONGDONG",
+   "b": "ND_07_TOWN_JINAN",
+   "li": 164,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_05",
+    "MAP_07"
+   ]
+  },
+  {
+   "a": "ND_05_TOWN_JECHEON",
+   "b": "ND_09_STATION_ANGIYEOK",
+   "li": 133,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_05",
+    "MAP_09"
+   ]
+  },
+  {
+   "a": "ND_06_TOWN_ASAN",
+   "b": "ND_07_CITY_NAMWONDOHOBU",
+   "li": 104,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_06",
+    "MAP_07"
+   ]
+  },
+  {
+   "a": "ND_07_TOWN_IKSAN",
+   "b": "ND_08_TOWN_JINDO",
+   "li": 112,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_07",
+    "MAP_08"
+   ]
+  },
+  {
+   "a": "ND_07_FORT_JEOKSANGSANSEONG",
+   "b": "ND_09_STATION_ANGIYEOK",
+   "li": 240,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_07",
+    "MAP_09"
+   ]
+  },
+  {
+   "a": "ND_07_TOWN_JEONGEUP",
+   "b": "ND_10_TOWN_HAPCHEON",
+   "li": 216,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_07",
+    "MAP_10"
+   ]
+  },
+  {
+   "a": "ND_08_CITY_SUNCHEONDOHOBU",
+   "b": "ND_10_TOWN_HAPCHEON",
+   "li": 237,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_08",
+    "MAP_10"
+   ]
+  },
+  {
+   "a": "ND_09_TOWN_MUNGYEONG",
+   "b": "ND_10_FORT_TONGYEONGTONGJEYEONG",
+   "li": 123,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_09",
+    "MAP_10"
+   ]
+  },
+  {
+   "a": "ND_11_TOWN_PYEONGSAN",
+   "b": "ND_12_STATION_YEONGCHEONYEOK",
+   "li": 123,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_11",
+    "MAP_12"
+   ]
+  },
+  {
+   "a": "ND_11_FORT_JEONGBANGSANSEONG",
+   "b": "ND_13_CITY_PYEONGYANGBU",
+   "li": 113,
+   "terrain": "road",
+   "kind": "border",
+   "regions": [
+    "MAP_11",
+    "MAP_13"
+   ]
+  },
+  {
+   "a": "ND_13_STATION_DAEDONGYEOK",
+   "b": "ND_14_TOWN_GANGGYE",
+   "li": 136,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_13",
+    "MAP_14"
+   ]
+  },
+  {
+   "a": "ND_13_TOWN_GANGSEO",
+   "b": "ND_15_TOWN_GOWON",
+   "li": 296,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_13",
+    "MAP_15"
+   ]
+  },
+  {
+   "a": "ND_14_STATION_APROKCHAM",
+   "b": "ND_15_TOWN_JEONGPYEONG",
+   "li": 309,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_14",
+    "MAP_15"
+   ]
+  },
+  {
+   "a": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "b": "ND_16_STATION_MUSANCHAM",
+   "li": 218,
+   "terrain": "mountain",
+   "kind": "border",
+   "regions": [
+    "MAP_15",
+    "MAP_16"
+   ]
+  }
+ ],
+ "sea_routes": [
+  {
+   "a": "ND_01_CITY_GANGHWAYUSUBU",
+   "b": "ND_12_CITY_YEONANDOHOBU",
+   "fare": 30,
+   "days": 1,
+   "wind_sensitive": false,
+   "kind": "ferry"
+  },
+  {
+   "a": "ND_01_TOWN_GYODONG",
+   "b": "ND_12_TOWN_ONGJIN",
+   "fare": 30,
+   "days": 1,
+   "wind_sensitive": false,
+   "kind": "ferry"
+  },
+  {
+   "a": "ND_02_TOWN_NAMYANG",
+   "b": "ND_06_TOWN_TAEAN",
+   "fare": 40,
+   "days": 1,
+   "wind_sensitive": false,
+   "kind": "ferry"
+  },
+  {
+   "a": "ND_08_TOWN_HAENAM",
+   "b": "ND_17_FORT_HWABUKJIN",
+   "fare": 150,
+   "days": 2,
+   "wind_sensitive": true,
+   "kind": "ferry"
+  },
+  {
+   "a": "ND_08_TOWN_JINDO",
+   "b": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "fare": 160,
+   "days": 2,
+   "wind_sensitive": true,
+   "kind": "ferry"
+  },
+  {
+   "a": "ND_08_FORT_YEOSUJWASUYEONG",
+   "b": "ND_10_FORT_TONGYEONGTONGJEYEONG",
+   "fare": 60,
+   "days": 1,
+   "wind_sensitive": false,
+   "kind": "ferry"
+  },
+  {
+   "a": "ND_10_CITY_DONGRAEHYEON",
+   "b": "ND_04_TOWN_ULJIN",
+   "fare": 90,
+   "days": 2,
+   "wind_sensitive": true,
+   "kind": "ferry"
+  },
+  {
+   "a": "ND_03_TOWN_TONGCHEON",
+   "b": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "fare": 90,
+   "days": 2,
+   "wind_sensitive": true,
+   "kind": "ferry"
+  },
+  {
+   "a": "ND_13_TOWN_JINNAMPO",
+   "b": "ND_12_TOWN_JANGYEON",
+   "fare": 50,
+   "days": 1,
+   "wind_sensitive": false,
+   "kind": "ferry"
+  },
+  {
+   "a": "ND_14_TOWN_SINMIDONARU",
+   "b": "ND_13_TOWN_JINNAMPO",
+   "fare": 60,
+   "days": 1,
+   "wind_sensitive": false,
+   "kind": "ferry"
+  },
+  {
+   "a": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "b": "ND_16_CITY_GYEONGSEONGDOHOBU",
+   "fare": 80,
+   "days": 2,
+   "wind_sensitive": true,
+   "kind": "ferry"
+  }
+ ]
+}

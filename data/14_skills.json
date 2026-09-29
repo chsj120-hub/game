@@ -1,0 +1,1052 @@
+{
+ "_schema": "14_전체스킬. owner=hero|companion|enemy|common|passive|life_gear|capture|mount. target=enemy|enemies|ally|allies|self|field. ap_cost=AP 소모(게이지 재시작: 00.battle.restart_gauge_by_ap). element=원소(weapon=무기 원소), affinity=유불선 상성(weapon=시전자). effects: heal_pct, cleanse, stun_turns(+stun_kinds), status{id,turns,chance}(18 시트), buff/debuff{atk_pct,def_pct,res_all,speed_pct}, buff_turns, taunt_turns, party_heal_pct, gauge_push(대상 게이지 −), gauge_boost(아군 +), def_ignore, money_cost, passive{...,knowledge,damage_vs}, field_*=필드 효과.",
+ "skills": [
+  {
+   "id": "sk_basic_strike",
+   "name": "일반 공격",
+   "owner": "common",
+   "target": "enemy",
+   "ap_cost": 1,
+   "power": 1.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_eosa_strike",
+   "name": "일격",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 1,
+   "power": 1.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_eosa_double",
+   "name": "쌍수 베기",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.6,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_eosa_focus",
+   "name": "정신일도",
+   "owner": "hero",
+   "target": "self",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "buff": {
+     "atk_pct": 0.25
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_eosa_mapae",
+   "name": "암행어사 출두",
+   "owner": "hero",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.8,
+   "element": "holy",
+   "affinity": "yu",
+   "cooldown": 3,
+   "effects": {
+    "debuff": {
+     "atk_pct": -0.15
+    },
+    "buff_turns": 2,
+    "stun_turns": 1,
+    "stun_kinds": [
+     "human"
+    ]
+   }
+  },
+  {
+   "id": "sk_mer_strike",
+   "name": "주판 치기",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 1,
+   "power": 1.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_mer_coin",
+   "name": "엽전 꾸러미 던지기",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.5,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "money_cost": 10
+   }
+  },
+  {
+   "id": "sk_mer_bargain",
+   "name": "흥정의 달인",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.6,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "debuff": {
+     "def_pct": -0.3
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_mer_supply",
+   "name": "보따리 보급",
+   "owner": "hero",
+   "target": "ally",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "heal_pct": 0.3
+   }
+  },
+  {
+   "id": "sk_dosa_strike",
+   "name": "철선 타격",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 1,
+   "power": 1.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_dosa_fire",
+   "name": "화룡 부적",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.5,
+   "element": "fire",
+   "affinity": "seon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_dosa_ward",
+   "name": "벽사 결계",
+   "owner": "hero",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "res_all": 0.15,
+     "def_pct": 0.15
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_dosa_thunder",
+   "name": "오뢰정법",
+   "owner": "hero",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "holy",
+   "affinity": "seon",
+   "cooldown": 2
+  },
+  {
+   "id": "sk_act_tiger_banish",
+   "name": "인검 벽사참",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 2.0,
+   "element": "holy",
+   "affinity": "seon",
+   "cooldown": 3,
+   "effects": {
+    "def_ignore": 0.25
+   }
+  },
+  {
+   "id": "sk_heojun_heal",
+   "name": "침구 요혈",
+   "owner": "companion",
+   "target": "ally",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 1,
+   "effects": {
+    "heal_pct": 0.35,
+    "cleanse": true
+   }
+  },
+  {
+   "id": "sk_heojun_group",
+   "name": "동의보감 처방",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "heal_pct": 0.2
+   }
+  },
+  {
+   "id": "sk_jyy_plan",
+   "name": "거중기 책략",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "def_pct": 0.15
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_yss_volley",
+   "name": "천자총통 일제사격",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 1.1,
+   "element": "fire",
+   "affinity": "yu",
+   "cooldown": 2
+  },
+  {
+   "id": "sk_samyeong_guard",
+   "name": "사명당 호법",
+   "owner": "companion",
+   "target": "self",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "taunt_turns": 2,
+    "buff": {
+     "def_pct": 0.3
+    },
+    "buff_turns": 2
+   }
+  },
+  {
+   "id": "sk_seosan_banner",
+   "name": "승병 호령",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "atk_pct": 0.12
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_juc_firetalisman",
+   "name": "화룡 부적",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.6,
+   "element": "fire",
+   "affinity": "seon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_juc_hex",
+   "name": "둔갑 천문",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "debuff": {
+     "def_pct": -0.2
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_nsg_fengshui",
+   "name": "풍수 명당",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "res_all": 0.15
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_chakho_shot",
+   "name": "착호 조총",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 1.9,
+   "element": "metal",
+   "affinity": "none",
+   "cooldown": 1
+  },
+  {
+   "id": "sk_bari_purify",
+   "name": "바리데기 진혼",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.3,
+   "element": "holy",
+   "affinity": "bul",
+   "cooldown": 2,
+   "effects": {
+    "party_heal_pct": 0.08
+   }
+  },
+  {
+   "id": "sk_bari_heal",
+   "name": "생명수",
+   "owner": "companion",
+   "target": "ally",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {
+    "heal_pct": 0.25
+   }
+  },
+  {
+   "id": "sk_bbs_supply",
+   "name": "등짐 보급",
+   "owner": "companion",
+   "target": "ally",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {
+    "heal_pct": 0.18
+   }
+  },
+  {
+   "id": "sk_khd_genre",
+   "name": "풍속화 씨름판",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "buff": {
+     "atk_pct": 0.1
+    },
+    "buff_turns": 3,
+    "gauge_boost": 150
+   }
+  },
+  {
+   "id": "sk_syb_danoh",
+   "name": "단오풍정",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "status": {
+     "id": "charm",
+     "turns": 1,
+     "chance": 0.35
+    }
+   }
+  },
+  {
+   "id": "sk_hjy_song",
+   "name": "청산리 벽계수",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "buff": {
+     "speed_pct": 0.15
+    },
+    "buff_turns": 2
+   }
+  },
+  {
+   "id": "sk_hgd_clone",
+   "name": "분신술",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.8,
+   "element": "none",
+   "affinity": "seon",
+   "cooldown": 2
+  },
+  {
+   "id": "sk_en_bandit_rush",
+   "name": "떼몰이",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.15,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_en_bite",
+   "name": "물어뜯기",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.25,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0,
+   "effects": {
+    "status": {
+     "id": "bleed",
+     "turns": 2,
+     "chance": 0.25
+    }
+   }
+  },
+  {
+   "id": "sk_en_bleed_slash",
+   "name": "난도질",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0,
+   "effects": {
+    "status": {
+     "id": "bleed",
+     "turns": 3,
+     "chance": 0.6
+    }
+   }
+  },
+  {
+   "id": "sk_en_wail",
+   "name": "곡성",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.6,
+   "element": "yin",
+   "affinity": "bul",
+   "cooldown": 0,
+   "effects": {
+    "status": {
+     "id": "fear",
+     "turns": 2,
+     "chance": 0.3
+    }
+   }
+  },
+  {
+   "id": "sk_en_cult_curse",
+   "name": "사교 저주",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.8,
+   "element": "yin",
+   "affinity": "seon",
+   "cooldown": 0,
+   "effects": {
+    "status": {
+     "id": "curse",
+     "turns": 3,
+     "chance": 0.7
+    }
+   }
+  },
+  {
+   "id": "sk_en_fox_charm",
+   "name": "여우 홀림",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "seon",
+   "cooldown": 3,
+   "effects": {
+    "status": {
+     "id": "charm",
+     "turns": 2,
+     "chance": 0.8
+    }
+   }
+  },
+  {
+   "id": "sk_en_steal_shoes",
+   "name": "신발 훔치기",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.6,
+   "element": "none",
+   "affinity": "seon",
+   "cooldown": 3,
+   "effects": {
+    "gauge_push": 500,
+    "status": {
+     "id": "shoeless",
+     "turns": 3,
+     "chance": 1.0
+    }
+   }
+  },
+  {
+   "id": "sk_en_burn_breath",
+   "name": "화염 숨결",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.7,
+   "element": "fire",
+   "affinity": "seon",
+   "cooldown": 0,
+   "effects": {
+    "status": {
+     "id": "burn",
+     "turns": 2,
+     "chance": 0.5
+    }
+   }
+  },
+  {
+   "id": "sk_en_bulgasari_stomp",
+   "name": "철기 짓밟기",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.75,
+   "element": "metal",
+   "affinity": "seon",
+   "cooldown": 1
+  },
+  {
+   "id": "sk_en_bulgasari_devour",
+   "name": "쇠 삼키기",
+   "owner": "enemy",
+   "target": "self",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "def_pct": 0.3
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_en_imugi_tidal",
+   "name": "해일",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.75,
+   "element": "water",
+   "affinity": "seon",
+   "cooldown": 1,
+   "effects": {
+    "status": {
+     "id": "frost",
+     "turns": 2,
+     "chance": 0.3
+    }
+   }
+  },
+  {
+   "id": "sk_en_sanshin_wrath",
+   "name": "산군 노호",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.75,
+   "element": "yin",
+   "affinity": "bul",
+   "cooldown": 1,
+   "effects": {
+    "status": {
+     "id": "fear",
+     "turns": 2,
+     "chance": 0.4
+    }
+   }
+  },
+  {
+   "id": "sk_en_arang_wail",
+   "name": "원한의 곡성",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.8,
+   "element": "yin",
+   "affinity": "bul",
+   "cooldown": 1,
+   "effects": {
+    "status": {
+     "id": "curse",
+     "turns": 2,
+     "chance": 0.5
+    }
+   }
+  },
+  {
+   "id": "sk_en_heukryong_eruption",
+   "name": "천지 분화",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.72,
+   "element": "fire",
+   "affinity": "seon",
+   "cooldown": 1,
+   "effects": {
+    "status": {
+     "id": "burn",
+     "turns": 2,
+     "chance": 0.35
+    }
+   }
+  },
+  {
+   "id": "sk_en_yeokcheon_chaos",
+   "name": "역천 혼돈",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.85,
+   "element": "yin",
+   "affinity": "seon",
+   "cooldown": 1,
+   "effects": {
+    "debuff": {
+     "def_pct": -0.15
+    },
+    "buff_turns": 2
+   }
+  },
+  {
+   "id": "sk_pas_gyeonggukjeon",
+   "name": "경국대의",
+   "owner": "passive",
+   "target": "self",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.05,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   }
+  },
+  {
+   "id": "sk_pas_muyedobo",
+   "name": "무예 24기",
+   "owner": "passive",
+   "target": "self",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "atk_pct": 0.08
+    }
+   }
+  },
+  {
+   "id": "sk_pas_hunmin",
+   "name": "바른 소리",
+   "owner": "passive",
+   "target": "self",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "res_all": 0.05,
+     "knowledge": {
+      "yu": 2
+     }
+    },
+    "field_reputation_gain": 0.1
+   }
+  },
+  {
+   "id": "sk_pas_evil_repel",
+   "name": "벽사(辟邪)",
+   "owner": "passive",
+   "target": "self",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "res_all": 0.05,
+     "damage_vs": {
+      "yokai": 0.15,
+      "ghost": 0.15
+     }
+    }
+   }
+  },
+  {
+   "id": "sk_lg_yundo",
+   "name": "방위 판독",
+   "owner": "life_gear",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_search_radius_li": 3
+   }
+  },
+  {
+   "id": "sk_lg_daedong",
+   "name": "십리 방안",
+   "owner": "life_gear",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_search_radius_li": 8,
+    "field_route_preview": true
+   }
+  },
+  {
+   "id": "sk_cap_yu",
+   "name": "오랏줄 결박(고용)",
+   "owner": "capture",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "capture_family": "yu"
+   }
+  },
+  {
+   "id": "sk_cap_bul",
+   "name": "염주 해원(빙의)",
+   "owner": "capture",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "capture_family": "bul"
+   }
+  },
+  {
+   "id": "sk_cap_seon",
+   "name": "부적 봉인",
+   "owner": "capture",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "capture_family": "seon"
+   }
+  },
+  {
+   "id": "sk_cap_mu",
+   "name": "덫 길들이기",
+   "owner": "capture",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "capture_family": "mu"
+   }
+  },
+  {
+   "id": "sk_mt_donkey",
+   "name": "짐 나르기",
+   "owner": "mount",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_mt_pony",
+   "name": "산길 질주",
+   "owner": "mount",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_terrain_mountain": 0.75
+   }
+  },
+  {
+   "id": "sk_mt_boat",
+   "name": "뱃길 교역",
+   "owner": "mount",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_trade_price": 0.03
+   }
+  },
+  {
+   "id": "sk_mt_junma",
+   "name": "천리 준족",
+   "owner": "mount",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_stamina_cost": -0.3
+   }
+  },
+  {
+   "id": "sk_mt_warhorse",
+   "name": "기마 돌격",
+   "owner": "mount",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 1.3,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3
+  },
+  {
+   "id": "sk_mt_haetae",
+   "name": "시비 판별",
+   "owner": "mount",
+   "target": "enemies",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "holy",
+   "affinity": "yu",
+   "cooldown": 4,
+   "effects": {
+    "debuff": {
+     "atk_pct": -0.1
+    },
+    "buff_turns": 2
+   }
+  },
+  {
+   "id": "sk_mt_cheonma",
+   "name": "비천",
+   "owner": "mount",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_fast_travel": true
+   }
+  },
+  {
+   "id": "sk_mt_white_tiger",
+   "name": "산군 포효",
+   "owner": "mount",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 4,
+   "effects": {
+    "stun_turns": 1
+   }
+  },
+  {
+   "id": "sk_pas_her_113",
+   "name": "강릉 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2,
+      "sa": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_124",
+   "name": "전주 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_132",
+   "name": "해주 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_144",
+   "name": "추사 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  }
+ ]
+}

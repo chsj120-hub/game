@@ -1,0 +1,1292 @@
+{
+ "_schema": "06_생활행장. 4대 행장 슬롯: nav(지남·지도)|carry(운반)|camp(야영·조리)|record(두루마기 족자 답사록). buffs 키: atk_pct,def_pct,spd_bonus,res_all,reputation_gain,money_gain,travel_cost,food_decay,carry_capacity,capture_rate,trade_price. wear=권역 이동 1회당 내구 소모.",
+ "slots": [
+  "nav",
+  "carry",
+  "camp",
+  "record"
+ ],
+ "life_gear": [
+  {
+   "id": "lg_yundo",
+   "name": "윤도(지남침)",
+   "slot": "nav",
+   "tier": 1,
+   "price": 40,
+   "durability": 100,
+   "buffs": {
+    "travel_cost": -0.05
+   },
+   "skill": "sk_lg_yundo"
+  },
+  {
+   "id": "lg_daedong_cheop",
+   "name": "대동여지도 분첩",
+   "slot": "nav",
+   "tier": 3,
+   "price": 1800,
+   "durability": 200,
+   "buffs": {
+    "travel_cost": -0.2,
+    "spd_bonus": 0.05
+   },
+   "min_rank": 3,
+   "skill": "sk_lg_daedong"
+  },
+  {
+   "id": "lg_botjim",
+   "name": "봇짐",
+   "slot": "carry",
+   "tier": 1,
+   "price": 10,
+   "durability": 60,
+   "buffs": {
+    "carry_capacity": 10
+   }
+  },
+  {
+   "id": "lg_jige",
+   "name": "지게",
+   "slot": "carry",
+   "tier": 3,
+   "price": 900,
+   "durability": 150,
+   "buffs": {
+    "carry_capacity": 40
+   },
+   "min_rank": 3,
+   "craft": {
+    "book": "bk_tool_carpenter",
+    "materials": [
+     {
+      "id": "mat_wood",
+      "qty": 5
+     },
+     {
+      "id": "mat_hemp",
+      "qty": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "lg_chanhap",
+   "name": "옻칠 찬합",
+   "slot": "camp",
+   "tier": 3,
+   "price": 700,
+   "durability": 150,
+   "buffs": {
+    "food_decay": -0.5
+   },
+   "min_rank": 3,
+   "craft": {
+    "book": "bk_tool_gongbang",
+    "materials": [
+     {
+      "id": "mat_wood",
+      "qty": 3
+     },
+     {
+      "id": "mat_lacquer",
+      "qty": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "lg_musoe_sot",
+   "name": "무쇠 노구솥",
+   "slot": "camp",
+   "tier": 2,
+   "price": 300,
+   "durability": 120,
+   "buffs": {
+    "food_decay": -0.2
+   },
+   "unlock_cooking": "campfire",
+   "craft": {
+    "book": "bk_tool_forge",
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 4
+     },
+     {
+      "id": "mat_charcoal",
+      "qty": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "rec_bulguksa",
+   "name": "《불국사 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.1,
+    "res_all": 0.03
+   }
+  },
+  {
+   "id": "rec_seokguram",
+   "name": "《석굴암 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.08
+   }
+  },
+  {
+   "id": "rec_janggyeong",
+   "name": "《장경판전 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.08,
+    "def_pct": 0.05
+   }
+  },
+  {
+   "id": "rec_sungnyemun",
+   "name": "《숭례문 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.06
+   }
+  },
+  {
+   "id": "rec_hwaseong",
+   "name": "《수원 화성 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.08
+   }
+  },
+  {
+   "id": "rec_jeonggyebi",
+   "name": "《백두산 정계비 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "travel_cost": -0.1,
+    "spd_bonus": 0.04
+   }
+  },
+  {
+   "id": "rec_manwoldae",
+   "name": "《만월대 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "money_gain": 0.05
+   }
+  },
+  {
+   "id": "rec_bohyeonsa",
+   "name": "《보현사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   }
+  },
+  {
+   "id": "rec_bongung",
+   "name": "《함흥 본궁 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "atk_pct": 0.04
+   }
+  },
+  {
+   "id": "rec_yeongnamru",
+   "name": "《영남루 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "capture_rate": 0.05
+   }
+  },
+  {
+   "id": "rec_jukseoru",
+   "name": "《죽서루 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "food_decay": -0.1
+   }
+  },
+  {
+   "id": "rec_daedongmun",
+   "name": "《대동문 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.03
+   }
+  },
+  {
+   "id": "rec_joryeong",
+   "name": "《조령관문 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "travel_cost": -0.03
+   }
+  },
+  {
+   "id": "rec_her_023",
+   "name": "《개성부 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_024",
+   "name": "《강화유수부 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_025",
+   "name": "《전등사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_026",
+   "name": "《보광사 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_027",
+   "name": "《덕진진 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.045
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_028",
+   "name": "《광주유수부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_029",
+   "name": "《조계사 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_030",
+   "name": "《용주사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_031",
+   "name": "《신륵사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_032",
+   "name": "《남한산성 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_033",
+   "name": "《철원도호부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_034",
+   "name": "《춘천부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_035",
+   "name": "《건봉사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_036",
+   "name": "《백담사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_037",
+   "name": "《금강산 구룡폭 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_038",
+   "name": "《철원 삼부연 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_039",
+   "name": "《원주 강원감영 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_040",
+   "name": "《강릉대도호부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_041",
+   "name": "《월정사 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_042",
+   "name": "《삼척 신흥사 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_043",
+   "name": "《충주목 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_044",
+   "name": "《청주목 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_045",
+   "name": "《속리산 법주사 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_046",
+   "name": "《구인사 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_047",
+   "name": "《공주 충청감영 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_048",
+   "name": "《홍주목 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_049",
+   "name": "《마곡사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_050",
+   "name": "《갑사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_051",
+   "name": "《수덕사 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_052",
+   "name": "《전주 전라감영 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_053",
+   "name": "《남원도호부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_054",
+   "name": "《금산사 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_055",
+   "name": "《내소사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_056",
+   "name": "《실상사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_057",
+   "name": "《적상산성 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_058",
+   "name": "《나주목 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_059",
+   "name": "《순천도호부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_060",
+   "name": "《광주목 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_061",
+   "name": "《여수 좌수영 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_062",
+   "name": "《화엄사 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_063",
+   "name": "《송광사 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.05
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_064",
+   "name": "《대흥사 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_065",
+   "name": "《장성 백양사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_067",
+   "name": "《상주목 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_068",
+   "name": "《안동대도호부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_069",
+   "name": "《경주부 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_070",
+   "name": "《부석사 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.05
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_071",
+   "name": "《고운사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_072",
+   "name": "《대구 경상감영 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_073",
+   "name": "《진주목 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_074",
+   "name": "《동래현 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_075",
+   "name": "《통영 통제영 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_076",
+   "name": "《통도사 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.05
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_077",
+   "name": "《쌍계사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_078",
+   "name": "《황주목 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_079",
+   "name": "《봉산군 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_080",
+   "name": "《성불사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_081",
+   "name": "《정방산성 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_082",
+   "name": "《해주목 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_083",
+   "name": "《연안도호부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_084",
+   "name": "《신천 패엽사 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_085",
+   "name": "《장산곶 진보 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_086",
+   "name": "《안주목 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_087",
+   "name": "《영명사 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_088",
+   "name": "《을밀대 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_089",
+   "name": "《의주목 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_090",
+   "name": "《영변대도호부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_091",
+   "name": "《백마산사 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_092",
+   "name": "《의주 통군정 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_093",
+   "name": "《함흥부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_094",
+   "name": "《북청도호부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_095",
+   "name": "《귀주사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_096",
+   "name": "《석왕사 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_097",
+   "name": "《마운령 진흥왕 순수비 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_098",
+   "name": "《경성도호부 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_099",
+   "name": "《길주목 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_100",
+   "name": "《개심사 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_101",
+   "name": "《백두산 천지 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_102",
+   "name": "《제주목 제주읍성 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_103",
+   "name": "《화북진 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_104",
+   "name": "《차귀진 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_105",
+   "name": "《관음사 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_106",
+   "name": "《존자암 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_107",
+   "name": "《성산일출봉 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_118",
+   "name": "《계룡산 천황봉 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_126",
+   "name": "《담양 소쇄원 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_128",
+   "name": "《지리산 천왕봉 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_131",
+   "name": "《황주 월파루 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_133",
+   "name": "《장연 몽금포 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_137",
+   "name": "《영변 약산 동대 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_140",
+   "name": "《개마고원 삼수갑산 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_141",
+   "name": "《칠보산 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  }
+ ],
+ "repair": {
+  "book": "bk_tool_repair",
+  "materials": [
+   {
+    "id": "mat_cotton",
+    "qty": 1
+   }
+  ],
+  "money": 20
+ }
+}

@@ -1,0 +1,274 @@
+{
+ "_schema": "19_클래스·지식·사농공상. 레벨 없는 성장: 신분(Rank)·장비·지식·영구 HP(절경)로만 성장. HP=hp_base+rank_growth.hp×(Rank−1)+갑주+절경 영구치, 상한 hp_cap. 지식 1~10 랭크(학식 유·불·선 / 생활 사·농·공·상).",
+ "classes": [
+  {
+   "id": "cls_eosa",
+   "name": "어사",
+   "affinity": "yu",
+   "icon": "class_eosa",
+   "desc": "유학을 익힌 선비. 탐관오리를 적발하고 인간형 적을 설득·제압하는 데 능하다.",
+   "base": {
+    "hp": 100,
+    "atk": 13,
+    "def": 6,
+    "speed": 80
+   },
+   "knowledge": {
+    "yu": 2,
+    "sa": 2
+   },
+   "skills": [
+    "sk_eosa_strike",
+    "sk_eosa_double",
+    "sk_eosa_focus",
+    "sk_eosa_mapae"
+   ],
+   "passive": {
+    "id": "pas_eosa_mapae",
+    "name": "마패",
+    "effects": {
+     "persuade_any_rank": true,
+     "gwana_rep_mult": 1.1
+    }
+   },
+   "start": {
+    "money": 300,
+    "items": {
+     "eq_w1_mokgeom": 1,
+     "eq_a1_cheollik": 1,
+     "eq_s1_jipsin": 1,
+     "eq_c1_hopae": 1,
+     "lg_yundo": 1,
+     "lg_botjim": 1,
+     "food_geonryang": 4,
+     "cap_yu_1": 2,
+     "item_torch": 2
+    }
+   },
+   "scenario": "ev_main_eosa"
+  },
+  {
+   "id": "cls_merchant",
+   "name": "상인",
+   "affinity": "none",
+   "icon": "class_merchant",
+   "desc": "팔도 장시를 누비는 보부상. 시세 차익·흥정·뇌물에 강하다.",
+   "base": {
+    "hp": 105,
+    "atk": 13,
+    "def": 7,
+    "speed": 82
+   },
+   "knowledge": {
+    "sang": 3,
+    "nong": 1
+   },
+   "skills": [
+    "sk_mer_strike",
+    "sk_mer_coin",
+    "sk_mer_bargain",
+    "sk_mer_supply"
+   ],
+   "passive": {
+    "id": "pas_merchant_heunjeong",
+    "name": "흥정",
+    "effects": {
+     "sell_mult": 1.1,
+     "bribe_mult": 0.7
+    }
+   },
+   "start": {
+    "money": 600,
+    "items": {
+     "eq_w1_mokgeom": 1,
+     "eq_a1_cheollik": 1,
+     "eq_s1_jipsin": 1,
+     "eq_c1_hopae": 1,
+     "lg_yundo": 1,
+     "lg_botjim": 1,
+     "food_geonryang": 4,
+     "cap_mu_1": 2,
+     "item_torch": 2
+    }
+   },
+   "scenario": "ev_main_merchant"
+  },
+  {
+   "id": "cls_dosa",
+   "name": "도사",
+   "affinity": "seon",
+   "icon": "class_dosa",
+   "desc": "선도를 닦는 방사. 부적으로 요괴를 봉인하고 도술로 싸운다.",
+   "base": {
+    "hp": 95,
+    "atk": 14,
+    "def": 5,
+    "speed": 80
+   },
+   "knowledge": {
+    "seon": 2,
+    "gong": 1,
+    "sa": 1
+   },
+   "skills": [
+    "sk_dosa_strike",
+    "sk_dosa_fire",
+    "sk_dosa_ward",
+    "sk_dosa_thunder"
+   ],
+   "passive": {
+    "id": "pas_dosa_bujeok",
+    "name": "부적술",
+    "effects": {
+     "seal_capture_bonus": 0.2,
+     "damage_vs": {
+      "yokai": 0.08
+     },
+     "talisman_capacity": 2
+    }
+   },
+   "start": {
+    "money": 350,
+    "items": {
+     "eq_w1_mokgeom": 1,
+     "eq_a1_cheollik": 1,
+     "eq_s1_jipsin": 1,
+     "eq_c1_hopae": 1,
+     "lg_yundo": 1,
+     "lg_botjim": 1,
+     "food_geonryang": 4,
+     "cap_seon_1": 3,
+     "item_torch": 2
+    }
+   },
+   "scenario": "ev_main_dosa"
+  }
+ ],
+ "rank_growth": {
+  "hp": 15,
+  "atk": 3,
+  "def": 2
+ },
+ "hp_base": 100,
+ "hp_cap": 250,
+ "permanent_hp_per_scenic": 1,
+ "knowledge": {
+  "academic": [
+   "yu",
+   "bul",
+   "seon"
+  ],
+  "life": [
+   "sa",
+   "nong",
+   "gong",
+   "sang"
+  ],
+  "names": {
+   "yu": "유교",
+   "bul": "불교",
+   "seon": "선도",
+   "sa": "사(관찰)",
+   "nong": "농(의학·농업)",
+   "gong": "공(제작·장비·예술)",
+   "sang": "상(상업)"
+  },
+  "max": 10,
+  "xp_to_next": {
+   "base": 100,
+   "growth": 1.35,
+   "note": "랭크 r→r+1 필요 XP = base·growth^(r−1)"
+  },
+  "xp_sources": {
+   "heritage_visit_affinity": 40,
+   "investigate_success": 60,
+   "bookstore_read": 150,
+   "seodang_dispatch_per_day": 6,
+   "trade_complete_sang": 30,
+   "craft_gong": 15,
+   "gather_nong": 8,
+   "search_sa": 5
+  },
+  "damage_per_rank": 0.08,
+  "affinity_mult": 1.5,
+  "beats": {
+   "yu": "bul",
+   "bul": "seon",
+   "seon": "yu"
+  },
+  "party_sum": {
+   "cap": 10,
+   "applies_to": [
+    "field_checks",
+    "hero_damage"
+   ]
+  }
+ },
+ "life_effects": {
+  "sa": {
+   "search_radius_li": 3,
+   "detect_chance": 0.05,
+   "puzzle_time": 0.03
+  },
+  "nong": {
+   "gather_yield": 0.08,
+   "herbal_heal": 0.04,
+   "freshness_decay": -0.04
+  },
+  "gong": {
+   "craft_material": -0.03,
+   "repair_cost": -0.05,
+   "forge_window": 0.05,
+   "camp_fatigue": 2
+  },
+  "sang": {
+   "buy_price": -0.02,
+   "sell_price": 0.03,
+   "trade_money": 0.03
+  }
+ },
+ "four_passives": [
+  {
+   "id": "pas_sa",
+   "name": "선비의 안목",
+   "req": {
+    "sa": 5
+   },
+   "effects": {
+    "auto_hint_hidden": true
+   }
+  },
+  {
+   "id": "pas_nong",
+   "name": "농자천하지대본",
+   "req": {
+    "nong": 5
+   },
+   "effects": {
+    "camp_no_food": true,
+    "gather_double_chance": 0.2
+   }
+  },
+  {
+   "id": "pas_gong",
+   "name": "장인정신",
+   "req": {
+    "gong": 5
+   },
+   "effects": {
+    "craft_double_chance": 0.15
+   }
+  },
+  {
+   "id": "pas_sang",
+   "name": "보부상 통문",
+   "req": {
+    "sang": 5
+   },
+   "effects": {
+    "market_view_nationwide": true,
+    "sell_price": 0.1
+   }
+  }
+ ]
+}

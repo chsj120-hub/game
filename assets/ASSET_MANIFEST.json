@@ -1,0 +1,7825 @@
+{
+ "_about": "tools/gen_asset_manifest.py 생성. 게임은 파일이 없으면 절차적 그리기로 대체하므로 어떤 순서로 넣어도 된다. 규격은 spec, 경로는 path 그대로.",
+ "summary": {
+  "total": 644,
+  "present": 0,
+  "by_kind": {
+   "region_map": 17,
+   "region_mask": 17,
+   "parallax": 51,
+   "battle_bg": 17,
+   "overworld": 1,
+   "marker": 29,
+   "portrait": 38,
+   "icon": 428,
+   "sprite": 20,
+   "ui_9patch": 2,
+   "minigame": 24
+  }
+ },
+ "specs": {
+  "region_map": {
+   "size": "3840x2160",
+   "format": "PNG 8-bit(팔레트) 무손실",
+   "import": "Lossless, Filter Linear, Mipmaps off"
+  },
+  "region_mask": {
+   "size": "3840x2160 (지도와 1:1)",
+   "format": "PNG 24-bit RGB",
+   "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+   "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+  },
+  "overworld": {
+   "size": "1400x2000 권장(세로형 한반도)",
+   "format": "PNG",
+   "import": "Lossless"
+  },
+  "parallax": {
+   "size": "1920x720 가로 심리스(좌우 끝 연결)",
+   "format": "PNG 32-bit(투명 상단)",
+   "import": "Lossless, Repeat Enabled"
+  },
+  "sprite": {
+   "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+   "format": "PNG 32-bit 투명",
+   "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+  },
+  "portrait": {
+   "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+   "format": "PNG 32-bit",
+   "import": "Lossless"
+  },
+  "icon": {
+   "size": "256x256 정사각, 단색 한지 배경",
+   "format": "PNG 32-bit",
+   "import": "Lossless, Mipmaps on"
+  },
+  "marker": {
+   "size": "64x64",
+   "format": "PNG 32-bit 투명",
+   "import": "Lossless"
+  },
+  "ui_9patch": {
+   "size": "64x64 ~ 512x512 9-패치(여백 24px)",
+   "format": "PNG 32-bit",
+   "import": "Lossless"
+  },
+  "battle_bg": {
+   "size": "1920x720",
+   "format": "PNG/WebP",
+   "import": "Lossless"
+  },
+  "minigame": {
+   "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+   "format": "PNG",
+   "import": "Lossless"
+  }
+ },
+ "assets": [
+  {
+   "path": "res://assets/maps/regions/map_01.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "경기 북부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_01",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_01_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "경기 북부 지형 판정 마스크",
+   "ref": "MAP_01",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_01/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경기 북부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_01",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_01/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경기 북부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_01",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_01/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경기 북부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_01",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_01.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "경기 북부 전투 배경",
+   "ref": "MAP_01",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_02.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "경기 남부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_02",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_02_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "경기 남부 지형 판정 마스크",
+   "ref": "MAP_02",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_02/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경기 남부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_02",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_02/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경기 남부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_02",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_02/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경기 남부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_02",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_02.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "경기 남부 전투 배경",
+   "ref": "MAP_02",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_03.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "강원 북부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_03",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_03_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "강원 북부 지형 판정 마스크",
+   "ref": "MAP_03",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_03/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "강원 북부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_03",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_03/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "강원 북부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_03",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_03/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "강원 북부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_03",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_03.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "강원 북부 전투 배경",
+   "ref": "MAP_03",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_04.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "강원 남부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_04",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_04_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "강원 남부 지형 판정 마스크",
+   "ref": "MAP_04",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_04/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "강원 남부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_04",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_04/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "강원 남부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_04",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_04/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "강원 남부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_04",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_04.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "강원 남부 전투 배경",
+   "ref": "MAP_04",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_05.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "충청 북부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_05",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_05_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "충청 북부 지형 판정 마스크",
+   "ref": "MAP_05",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_05/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "충청 북부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_05",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_05/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "충청 북부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_05",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_05/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "충청 북부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_05",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_05.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "충청 북부 전투 배경",
+   "ref": "MAP_05",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_06.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "충청 남부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_06",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_06_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "충청 남부 지형 판정 마스크",
+   "ref": "MAP_06",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_06/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "충청 남부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_06",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_06/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "충청 남부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_06",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_06/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "충청 남부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_06",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_06.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "충청 남부 전투 배경",
+   "ref": "MAP_06",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_07.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "전라 북부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_07",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_07_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "전라 북부 지형 판정 마스크",
+   "ref": "MAP_07",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_07/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "전라 북부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_07",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_07/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "전라 북부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_07",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_07/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "전라 북부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_07",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_07.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "전라 북부 전투 배경",
+   "ref": "MAP_07",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_08.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "전라 남부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_08",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_08_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "전라 남부 지형 판정 마스크",
+   "ref": "MAP_08",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_08/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "전라 남부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_08",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_08/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "전라 남부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_08",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_08/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "전라 남부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_08",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_08.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "전라 남부 전투 배경",
+   "ref": "MAP_08",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_09.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "경상 북부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_09",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_09_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "경상 북부 지형 판정 마스크",
+   "ref": "MAP_09",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_09/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경상 북부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_09",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_09/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경상 북부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_09",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_09/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경상 북부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_09",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_09.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "경상 북부 전투 배경",
+   "ref": "MAP_09",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_10.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "경상 남부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_10",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_10_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "경상 남부 지형 판정 마스크",
+   "ref": "MAP_10",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_10/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경상 남부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_10",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_10/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경상 남부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_10",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_10/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "경상 남부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_10",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_10.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "경상 남부 전투 배경",
+   "ref": "MAP_10",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_11.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "황해 북부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_11",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_11_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "황해 북부 지형 판정 마스크",
+   "ref": "MAP_11",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_11/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "황해 북부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_11",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_11/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "황해 북부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_11",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_11/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "황해 북부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_11",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_11.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "황해 북부 전투 배경",
+   "ref": "MAP_11",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_12.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "황해 남부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_12",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_12_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "황해 남부 지형 판정 마스크",
+   "ref": "MAP_12",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_12/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "황해 남부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_12",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_12/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "황해 남부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_12",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_12/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "황해 남부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_12",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_12.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "황해 남부 전투 배경",
+   "ref": "MAP_12",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_13.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "평안 남부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_13",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_13_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "평안 남부 지형 판정 마스크",
+   "ref": "MAP_13",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_13/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "평안 남부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_13",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_13/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "평안 남부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_13",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_13/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "평안 남부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_13",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_13.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "평안 남부 전투 배경",
+   "ref": "MAP_13",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_14.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "평안 북부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_14",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_14_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "평안 북부 지형 판정 마스크",
+   "ref": "MAP_14",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_14/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "평안 북부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_14",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_14/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "평안 북부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_14",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_14/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "평안 북부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_14",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_14.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "평안 북부 전투 배경",
+   "ref": "MAP_14",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_15.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "함경 남부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_15",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_15_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "함경 남부 지형 판정 마스크",
+   "ref": "MAP_15",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_15/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "함경 남부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_15",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_15/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "함경 남부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_15",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_15/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "함경 남부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_15",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_15.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "함경 남부 전투 배경",
+   "ref": "MAP_15",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_16.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "함경 북부 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_16",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_16_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "함경 북부 지형 판정 마스크",
+   "ref": "MAP_16",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_16/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "함경 북부 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_16",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_16/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "함경 북부 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_16",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_16/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "함경 북부 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_16",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_16.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "함경 북부 전투 배경",
+   "ref": "MAP_16",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/regions/map_17.png",
+   "kind": "region_map",
+   "spec": {
+    "size": "3840x2160",
+    "format": "PNG 8-bit(팔레트) 무손실",
+    "import": "Lossless, Filter Linear, Mipmaps off"
+   },
+   "use": "제주도 대동여지도 목판 텍스처(노드 좌표는 임시 — 제작 후 data_src 좌표 갱신)",
+   "ref": "MAP_17",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/masks/map_17_mask.png",
+   "kind": "region_mask",
+   "spec": {
+    "size": "3840x2160 (지도와 1:1)",
+    "format": "PNG 24-bit RGB",
+    "import": "Lossless, Filter Nearest, Mipmaps off, sRGB off",
+    "channels": "R: 0–31 통행불가 · 32–95 수계 · 96–191 산악/고개 · 192–255 관로/평지 | G: 위험도 0–255 | B: ≥128 나루·도하 지점"
+   },
+   "use": "제주도 지형 판정 마스크",
+   "ref": "MAP_17",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_17/far.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "제주도 패럴랙스 원경 산맥(수묵 담채)",
+   "ref": "MAP_17",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_17/mid.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "제주도 패럴랙스 중경 숲·구릉(수묵 담채)",
+   "ref": "MAP_17",
+   "exists": false
+  },
+  {
+   "path": "res://assets/parallax/map_17/near.png",
+   "kind": "parallax",
+   "spec": {
+    "size": "1920x720 가로 심리스(좌우 끝 연결)",
+    "format": "PNG 32-bit(투명 상단)",
+    "import": "Lossless, Repeat Enabled"
+   },
+   "use": "제주도 패럴랙스 근경 길·돌담(수묵 담채)",
+   "ref": "MAP_17",
+   "exists": false
+  },
+  {
+   "path": "res://assets/battle/bg_map_17.png",
+   "kind": "battle_bg",
+   "spec": {
+    "size": "1920x720",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "제주도 전투 배경",
+   "ref": "MAP_17",
+   "exists": false
+  },
+  {
+   "path": "res://assets/maps/overworld.png",
+   "kind": "overworld",
+   "spec": {
+    "size": "1400x2000 권장(세로형 한반도)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "전국 17권역 조망 지도",
+   "ref": "",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/city.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(city)",
+   "ref": "city",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/town.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(town)",
+   "ref": "town",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/station.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(station)",
+   "ref": "station",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/temple.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(temple)",
+   "ref": "temple",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/spring.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(spring)",
+   "ref": "spring",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/fort.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(fort)",
+   "ref": "fort",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/beacon.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(beacon)",
+   "ref": "beacon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/stupa.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(stupa)",
+   "ref": "stupa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/tomb.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(tomb)",
+   "ref": "tomb",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/scenic.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(scenic)",
+   "ref": "scenic",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/wreck.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(wreck)",
+   "ref": "wreck",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/ruin.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(ruin)",
+   "ref": "ruin",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/seowon.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(seowon)",
+   "ref": "seowon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/shrine.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(shrine)",
+   "ref": "shrine",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/markers/hazard.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "노드 마커(hazard)",
+   "ref": "hazard",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/hero_cls_eosa.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "주인공 어사 수묵 초상",
+   "ref": "cls_eosa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/class/cls_eosa.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "어사 직업 아이콘(48px 표시)",
+   "ref": "cls_eosa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/hero_cls_eosa/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "주인공 어사 walk",
+   "ref": "cls_eosa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/hero_cls_eosa/idle.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "주인공 어사 idle",
+   "ref": "cls_eosa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/hero_cls_merchant.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "주인공 상인 수묵 초상",
+   "ref": "cls_merchant",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/class/cls_merchant.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "상인 직업 아이콘(48px 표시)",
+   "ref": "cls_merchant",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/hero_cls_merchant/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "주인공 상인 walk",
+   "ref": "cls_merchant",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/hero_cls_merchant/idle.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "주인공 상인 idle",
+   "ref": "cls_merchant",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/hero_cls_dosa.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "주인공 도사 수묵 초상",
+   "ref": "cls_dosa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/class/cls_dosa.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "도사 직업 아이콘(48px 표시)",
+   "ref": "cls_dosa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/hero_cls_dosa/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "주인공 도사 walk",
+   "ref": "cls_dosa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/hero_cls_dosa/idle.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "주인공 도사 idle",
+   "ref": "cls_dosa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_heojun.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 허준",
+   "ref": "cp_heojun",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_heojun/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 허준 보행",
+   "ref": "cp_heojun",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_jeongyakyong.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 정약용",
+   "ref": "cp_jeongyakyong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_jeongyakyong/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 정약용 보행",
+   "ref": "cp_jeongyakyong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_yisunsin.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 이순신",
+   "ref": "cp_yisunsin",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_yisunsin/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 이순신 보행",
+   "ref": "cp_yisunsin",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_samyeong.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 사명대사 유정",
+   "ref": "cp_samyeong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_samyeong/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 사명대사 유정 보행",
+   "ref": "cp_samyeong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_seosan.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 서산대사 휴정",
+   "ref": "cp_seosan",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_seosan/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 서산대사 휴정 보행",
+   "ref": "cp_seosan",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_jeonuchi.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 전우치",
+   "ref": "cp_jeonuchi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_jeonuchi/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 전우치 보행",
+   "ref": "cp_jeonuchi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_namsago.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 남사고",
+   "ref": "cp_namsago",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_namsago/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 남사고 보행",
+   "ref": "cp_namsago",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_chakho.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 착호갑사 박포수",
+   "ref": "cp_chakho",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_chakho/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 착호갑사 박포수 보행",
+   "ref": "cp_chakho",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_bari.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 무녀 바리",
+   "ref": "cp_bari",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_bari/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 무녀 바리 보행",
+   "ref": "cp_bari",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_bobusang.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 보부상 황행수",
+   "ref": "cp_bobusang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_bobusang/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 보부상 황행수 보행",
+   "ref": "cp_bobusang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_kimhongdo.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 단원 김홍도",
+   "ref": "cp_kimhongdo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_kimhongdo/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 단원 김홍도 보행",
+   "ref": "cp_kimhongdo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_sinyunbok.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 혜원 신윤복",
+   "ref": "cp_sinyunbok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_sinyunbok/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 혜원 신윤복 보행",
+   "ref": "cp_sinyunbok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_hwangjini.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 황진이",
+   "ref": "cp_hwangjini",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_hwangjini/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 황진이 보행",
+   "ref": "cp_hwangjini",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_honggildong.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 홍길동",
+   "ref": "cp_honggildong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_honggildong/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 홍길동 보행",
+   "ref": "cp_honggildong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_bandit.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 화적패 졸개 (전투 슬롯)",
+   "ref": "en_bandit",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_wolf.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 늑대 무리 (전투 슬롯)",
+   "ref": "en_wolf",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_dokkaebi_small.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 꼬마 도깨비 (전투 슬롯)",
+   "ref": "en_dokkaebi_small",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_yagwanggwi.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 야광귀(夜光鬼) (전투 슬롯)",
+   "ref": "en_yagwanggwi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_galjae_bandit.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 갈재 화적패 두목 (전투 슬롯)",
+   "ref": "en_galjae_bandit",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_pirate.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 해적 무리 (전투 슬롯)",
+   "ref": "en_pirate",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_tiger.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 산군 호랑이 (전투 슬롯)",
+   "ref": "en_tiger",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_dokkaebi.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 도깨비 (전투 슬롯)",
+   "ref": "en_dokkaebi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_ghost.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 처녀귀신 (전투 슬롯)",
+   "ref": "en_ghost",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_cultist.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 단군굴 사교도 (전투 슬롯)",
+   "ref": "en_cultist",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_gumiho.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 구미호 (전투 슬롯)",
+   "ref": "en_gumiho",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_spirit_minion.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 원령 권속 (전투 슬롯)",
+   "ref": "en_spirit_minion",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_cheolgwi.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 철귀(鐵鬼) (전투 슬롯)",
+   "ref": "en_cheolgwi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_lava_serpent.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 화산 이무기 새끼 (전투 슬롯)",
+   "ref": "en_lava_serpent",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_yeokcheon_disciple.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 역천 사도 (전투 슬롯)",
+   "ref": "en_yeokcheon_disciple",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_bulgasari.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 불가사리 (전투 슬롯)",
+   "ref": "en_bulgasari",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_imugi.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 이무기 (전투 슬롯)",
+   "ref": "en_imugi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_jirisan_sanshin.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 지리산 타락 산신 (전투 슬롯)",
+   "ref": "en_jirisan_sanshin",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_arang.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 아랑사령 (전투 슬롯)",
+   "ref": "en_arang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_heukryong.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 천지 흑룡 (전투 슬롯)",
+   "ref": "en_heukryong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_yeokcheon.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 역천지마 (전투 슬롯)",
+   "ref": "en_yeokcheon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/status/stun.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "상태이상 기절",
+   "ref": "stun",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/status/poison.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "상태이상 중독",
+   "ref": "poison",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/status/bleed.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "상태이상 출혈",
+   "ref": "bleed",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/status/burn.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "상태이상 화상",
+   "ref": "burn",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/status/fear.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "상태이상 공포",
+   "ref": "fear",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/status/curse.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "상태이상 저주",
+   "ref": "curse",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/status/charm.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "상태이상 홀림",
+   "ref": "charm",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/status/frost.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "상태이상 동상",
+   "ref": "frost",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/status/shoeless.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "상태이상 신발 도둑맞음",
+   "ref": "shoeless",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/seals/rank_1.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "신분 1등급 인장",
+   "ref": "1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/seals/rank_2.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "신분 2등급 인장",
+   "ref": "2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/seals/rank_3.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "신분 3등급 인장",
+   "ref": "3",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/seals/rank_4.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "신분 4등급 인장",
+   "ref": "4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/seals/rank_5.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "신분 5등급 인장",
+   "ref": "5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/panels/modal.png",
+   "kind": "ui_9patch",
+   "spec": {
+    "size": "64x64 ~ 512x512 9-패치(여백 24px)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "모달 패널(한지+놋쇠)",
+   "ref": "modal",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/panels/dashboard_frame.png",
+   "kind": "ui_9patch",
+   "spec": {
+    "size": "64x64 ~ 512x512 9-패치(여백 24px)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "하단 대시보드 프레임 1920x360",
+   "ref": "dashboard_frame",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/common/icon_scroll_jokja.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "두루마기 족자 답사록 공통 아이콘",
+   "ref": "record",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/sliding/sumuk_01.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "한지 수묵 슬라이딩 퍼즐 원본 그림",
+   "ref": "mg_hanji_sliding",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/sliding/celadon_01.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "도자기 파편 맞추기 원본 그림",
+   "ref": "mg_pottery_shard",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_01.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제1첩 판목(탁본)",
+   "ref": "1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_02.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제2첩 판목(탁본)",
+   "ref": "2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_03.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제3첩 판목(탁본)",
+   "ref": "3",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_04.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제4첩 판목(탁본)",
+   "ref": "4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_05.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제5첩 판목(탁본)",
+   "ref": "5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_06.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제6첩 판목(탁본)",
+   "ref": "6",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_07.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제7첩 판목(탁본)",
+   "ref": "7",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_08.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제8첩 판목(탁본)",
+   "ref": "8",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_09.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제9첩 판목(탁본)",
+   "ref": "9",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_10.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제10첩 판목(탁본)",
+   "ref": "10",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_11.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제11첩 판목(탁본)",
+   "ref": "11",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_12.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제12첩 판목(탁본)",
+   "ref": "12",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_13.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제13첩 판목(탁본)",
+   "ref": "13",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_14.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제14첩 판목(탁본)",
+   "ref": "14",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_15.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제15첩 판목(탁본)",
+   "ref": "15",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_16.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제16첩 판목(탁본)",
+   "ref": "16",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_17.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제17첩 판목(탁본)",
+   "ref": "17",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_18.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제18첩 판목(탁본)",
+   "ref": "18",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_19.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제19첩 판목(탁본)",
+   "ref": "19",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_20.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제20첩 판목(탁본)",
+   "ref": "20",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_21.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제21첩 판목(탁본)",
+   "ref": "21",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/takbon/sheet_22.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "대동여지도 제22첩 판목(탁본)",
+   "ref": "22",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_001.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경주 불국사 아이콘",
+   "ref": "her_001",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_002.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경주 석굴암 석굴 아이콘",
+   "ref": "her_002",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_003.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "서울 숭례문 아이콘",
+   "ref": "her_003",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_004.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "수원 화성 아이콘",
+   "ref": "her_004",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_005.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "합천 해인사 장경판전 아이콘",
+   "ref": "her_005",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_006.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강진 청자 요지 아이콘",
+   "ref": "her_006",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_007.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "광주 분원 백자 가마터 아이콘",
+   "ref": "her_007",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_008.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "통영 나전칠기 공방 아이콘",
+   "ref": "her_008",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_009.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "제주 칠머리당 영등굿 아이콘",
+   "ref": "her_009",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_010.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "진도 씻김굿 아이콘",
+   "ref": "her_010",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_011.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "사인참사검 아이콘",
+   "ref": "her_011",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_012.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "고령 지산동 가야 금동관 아이콘",
+   "ref": "her_012",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_013.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "훈민정음 해례본 아이콘",
+   "ref": "her_013",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_014.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "조선경국전 아이콘",
+   "ref": "her_014",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_015.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "개성 만월대 아이콘",
+   "ref": "her_015",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_016.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "묘향산 보현사 아이콘",
+   "ref": "her_016",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_017.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백두산 정계비 터 아이콘",
+   "ref": "her_017",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_018.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "밀양 영남루 아이콘",
+   "ref": "her_018",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_019.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "문경 조령관문 아이콘",
+   "ref": "her_019",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_020.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "삼척 죽서루 아이콘",
+   "ref": "her_020",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_021.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "평양 대동문 아이콘",
+   "ref": "her_021",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_022.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "함흥 본궁 아이콘",
+   "ref": "her_022",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_023.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "개성부 아이콘",
+   "ref": "her_023",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_024.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강화유수부 아이콘",
+   "ref": "her_024",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_025.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "전등사 아이콘",
+   "ref": "her_025",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_026.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "보광사 아이콘",
+   "ref": "her_026",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_027.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "덕진진 아이콘",
+   "ref": "her_027",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_028.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "광주유수부 아이콘",
+   "ref": "her_028",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_029.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "조계사 아이콘",
+   "ref": "her_029",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_030.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "용주사 아이콘",
+   "ref": "her_030",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_031.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "신륵사 아이콘",
+   "ref": "her_031",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_032.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "남한산성 아이콘",
+   "ref": "her_032",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_033.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "철원도호부 아이콘",
+   "ref": "her_033",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_034.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "춘천부 아이콘",
+   "ref": "her_034",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_035.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "건봉사 아이콘",
+   "ref": "her_035",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_036.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백담사 아이콘",
+   "ref": "her_036",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_037.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "금강산 구룡폭 아이콘",
+   "ref": "her_037",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_038.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "철원 삼부연 아이콘",
+   "ref": "her_038",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_039.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "원주 강원감영 아이콘",
+   "ref": "her_039",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_040.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강릉대도호부 아이콘",
+   "ref": "her_040",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_041.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "월정사 아이콘",
+   "ref": "her_041",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_042.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "삼척 신흥사 아이콘",
+   "ref": "her_042",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_043.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "충주목 아이콘",
+   "ref": "her_043",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_044.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "청주목 아이콘",
+   "ref": "her_044",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_045.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "속리산 법주사 아이콘",
+   "ref": "her_045",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_046.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "구인사 아이콘",
+   "ref": "her_046",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_047.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "공주 충청감영 아이콘",
+   "ref": "her_047",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_048.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "홍주목 아이콘",
+   "ref": "her_048",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_049.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "마곡사 아이콘",
+   "ref": "her_049",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_050.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "갑사 아이콘",
+   "ref": "her_050",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_051.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "수덕사 아이콘",
+   "ref": "her_051",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_052.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "전주 전라감영 아이콘",
+   "ref": "her_052",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_053.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "남원도호부 아이콘",
+   "ref": "her_053",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_054.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "금산사 아이콘",
+   "ref": "her_054",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_055.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "내소사 아이콘",
+   "ref": "her_055",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_056.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "실상사 아이콘",
+   "ref": "her_056",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_057.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "적상산성 아이콘",
+   "ref": "her_057",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_058.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "나주목 아이콘",
+   "ref": "her_058",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_059.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "순천도호부 아이콘",
+   "ref": "her_059",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_060.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "광주목 아이콘",
+   "ref": "her_060",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_061.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "여수 좌수영 아이콘",
+   "ref": "her_061",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_062.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "화엄사 아이콘",
+   "ref": "her_062",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_063.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "송광사 아이콘",
+   "ref": "her_063",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_064.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "대흥사 아이콘",
+   "ref": "her_064",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_065.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "장성 백양사 아이콘",
+   "ref": "her_065",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_066.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "명량 울돌목 아이콘",
+   "ref": "her_066",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_067.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "상주목 아이콘",
+   "ref": "her_067",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_068.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "안동대도호부 아이콘",
+   "ref": "her_068",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_069.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경주부 아이콘",
+   "ref": "her_069",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_070.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "부석사 아이콘",
+   "ref": "her_070",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_071.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "고운사 아이콘",
+   "ref": "her_071",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_072.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "대구 경상감영 아이콘",
+   "ref": "her_072",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_073.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "진주목 아이콘",
+   "ref": "her_073",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_074.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "동래현 아이콘",
+   "ref": "her_074",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_075.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "통영 통제영 아이콘",
+   "ref": "her_075",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_076.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "통도사 아이콘",
+   "ref": "her_076",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_077.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "쌍계사 아이콘",
+   "ref": "her_077",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_078.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "황주목 아이콘",
+   "ref": "her_078",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_079.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "봉산군 아이콘",
+   "ref": "her_079",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_080.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "성불사 아이콘",
+   "ref": "her_080",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_081.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "정방산성 아이콘",
+   "ref": "her_081",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_082.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "해주목 아이콘",
+   "ref": "her_082",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_083.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "연안도호부 아이콘",
+   "ref": "her_083",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_084.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "신천 패엽사 아이콘",
+   "ref": "her_084",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_085.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "장산곶 진보 아이콘",
+   "ref": "her_085",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_086.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "안주목 아이콘",
+   "ref": "her_086",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_087.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영명사 아이콘",
+   "ref": "her_087",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_088.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "을밀대 아이콘",
+   "ref": "her_088",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_089.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "의주목 아이콘",
+   "ref": "her_089",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_090.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영변대도호부 아이콘",
+   "ref": "her_090",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_091.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백마산사 아이콘",
+   "ref": "her_091",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_092.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "의주 통군정 아이콘",
+   "ref": "her_092",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_093.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "함흥부 아이콘",
+   "ref": "her_093",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_094.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "북청도호부 아이콘",
+   "ref": "her_094",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_095.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "귀주사 아이콘",
+   "ref": "her_095",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_096.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "석왕사 아이콘",
+   "ref": "her_096",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_097.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "마운령 진흥왕 순수비 아이콘",
+   "ref": "her_097",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_098.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경성도호부 아이콘",
+   "ref": "her_098",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_099.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "길주목 아이콘",
+   "ref": "her_099",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_100.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "개심사 아이콘",
+   "ref": "her_100",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_101.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백두산 천지 아이콘",
+   "ref": "her_101",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_102.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "제주목 제주읍성 아이콘",
+   "ref": "her_102",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_103.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "화북진 아이콘",
+   "ref": "her_103",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_104.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "차귀진 아이콘",
+   "ref": "her_104",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_105.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "관음사 아이콘",
+   "ref": "her_105",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_106.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "존자암 아이콘",
+   "ref": "her_106",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_107.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "성산일출봉 아이콘",
+   "ref": "her_107",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_108.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강화 참성단 아이콘",
+   "ref": "her_108",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_109.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강화 부근리 고인돌 아이콘",
+   "ref": "her_109",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_110.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "금강산 유점사 옛터 아이콘",
+   "ref": "her_110",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_111.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "화천 성황당 아이콘",
+   "ref": "her_111",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_112.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "삼척 안택선 침몰지 아이콘",
+   "ref": "her_112",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_113.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강릉 오죽헌 아이콘",
+   "ref": "her_113",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_114.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영월 장릉 아이콘",
+   "ref": "her_114",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_115.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "단양 수벌 고려가마터 아이콘",
+   "ref": "her_115",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_116.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "충주 탑평리 칠층석탑 아이콘",
+   "ref": "her_116",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_117.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "계룡산 신도안 아이콘",
+   "ref": "her_117",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_118.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "계룡산 천황봉 아이콘",
+   "ref": "her_118",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_119.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "부여 정림사지 오층석탑 아이콘",
+   "ref": "her_119",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_120.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "공주 송산리 고분군 아이콘",
+   "ref": "her_120",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_121.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "태안 마도 침몰선 아이콘",
+   "ref": "her_121",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_122.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "익산 미륵사지 석탑 아이콘",
+   "ref": "her_122",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_123.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "부안 유천리 청자 가마터 아이콘",
+   "ref": "her_123",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_124.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "전주 경기전 아이콘",
+   "ref": "her_124",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_125.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "신안 해저 무역선 아이콘",
+   "ref": "her_125",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_126.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "담양 소쇄원 아이콘",
+   "ref": "her_126",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_127.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경주 대릉원 아이콘",
+   "ref": "her_127",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_128.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "지리산 천왕봉 아이콘",
+   "ref": "her_128",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_129.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "김해 수로왕릉 아이콘",
+   "ref": "her_129",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_130.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "봉산 탈춤 성황당 아이콘",
+   "ref": "her_130",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_131.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "황주 월파루 아이콘",
+   "ref": "her_131",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_132.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "해주 소현서원 아이콘",
+   "ref": "her_132",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_133.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "장연 몽금포 아이콘",
+   "ref": "her_133",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_134.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "묘향산 단군굴 아이콘",
+   "ref": "her_134",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_135.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "평양 동명왕릉 아이콘",
+   "ref": "her_135",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_136.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강서 대묘 아이콘",
+   "ref": "her_136",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_137.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영변 약산 동대 아이콘",
+   "ref": "her_137",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_138.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "압록강 하구 침몰선 아이콘",
+   "ref": "her_138",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_139.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "북청 사자놀음 마당 아이콘",
+   "ref": "her_139",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_140.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "개마고원 삼수갑산 아이콘",
+   "ref": "her_140",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_141.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "칠보산 아이콘",
+   "ref": "her_141",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_142.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "회령 오지 가마터 아이콘",
+   "ref": "her_142",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_143.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "삼성혈 아이콘",
+   "ref": "her_143",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_144.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "추사 유배지 아이콘",
+   "ref": "her_144",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_w1_mokgeom.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "박달 목검 아이콘",
+   "ref": "eq_w1_mokgeom",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_w2_hwando.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "환도 아이콘",
+   "ref": "eq_w2_hwando",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_w2_suljang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "도사 철선장 아이콘",
+   "ref": "eq_w2_suljang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_w2_jeoul.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "상인 저울추 철퇴 아이콘",
+   "ref": "eq_w2_jeoul",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_w3_byeolungeom.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "별운검 아이콘",
+   "ref": "eq_w3_byeolungeom",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_w3_hwaseon.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "화전(火箭) 각궁 아이콘",
+   "ref": "eq_w3_hwaseon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_a1_cheollik.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "무명 철릭 아이콘",
+   "ref": "eq_a1_cheollik",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_a2_dujeonggap.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "두정갑 아이콘",
+   "ref": "eq_a2_dujeonggap",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_a3_gyeongbeon.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경번갑 아이콘",
+   "ref": "eq_a3_gyeongbeon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_s1_jipsin.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "짚신 아이콘",
+   "ref": "eq_s1_jipsin",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_s2_bidan_jipsin.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "비단 삼첩 짚신 아이콘",
+   "ref": "eq_s2_bidan_jipsin",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_s3_mokhwa.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "수혜자 목화 아이콘",
+   "ref": "eq_s3_mokhwa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_c1_hopae.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "호패 아이콘",
+   "ref": "eq_c1_hopae",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_c2_yeongdeung.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영등 영패 아이콘",
+   "ref": "eq_c2_yeongdeung",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_c2_ssitgim.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "씻김굿 방울 아이콘",
+   "ref": "eq_c2_ssitgim",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_c3_byeoksa.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "벽사 삼작노리개 아이콘",
+   "ref": "eq_c3_byeoksa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_c3_gaya_crown.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "가야 금동관 아이콘",
+   "ref": "eq_c3_gaya_crown",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_b3_gyeonggukjeon.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "조선경국전 아이콘",
+   "ref": "eq_b3_gyeonggukjeon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_b3_muyedobo.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "무예도보통지 아이콘",
+   "ref": "eq_b3_muyedobo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_b5_hunminjeongeum.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "훈민정음 해례본 아이콘",
+   "ref": "eq_b5_hunminjeongeum",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_saingeom_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "순조 인월 인일 사인검(四寅劍) 아이콘",
+   "ref": "eq_saingeom_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_108.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강화 벽사 패물 아이콘",
+   "ref": "eq_her_108",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_109.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강화 금동관 아이콘",
+   "ref": "eq_her_109",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_110.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "금강산 사리장엄구 아이콘",
+   "ref": "eq_her_110",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_111.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "화천 벽사 패물 아이콘",
+   "ref": "eq_her_111",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_113.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "《강릉 문집》 아이콘",
+   "ref": "eq_her_113",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_114.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영월 환두대도 아이콘",
+   "ref": "eq_her_114",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_116.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "충주 사리장엄구 아이콘",
+   "ref": "eq_her_116",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_117.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "계룡산 벽사 패물 아이콘",
+   "ref": "eq_her_117",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_119.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "부여 사리장엄구 아이콘",
+   "ref": "eq_her_119",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_120.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "공주 찰갑 아이콘",
+   "ref": "eq_her_120",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_122.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "익산 사리장엄구 아이콘",
+   "ref": "eq_her_122",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_124.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "《전주 문집》 아이콘",
+   "ref": "eq_her_124",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_127.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경주 금동관 아이콘",
+   "ref": "eq_her_127",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_129.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "김해 환두대도 아이콘",
+   "ref": "eq_her_129",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_130.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "봉산 벽사 패물 아이콘",
+   "ref": "eq_her_130",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_132.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "《해주 문집》 아이콘",
+   "ref": "eq_her_132",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_134.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "묘향산 벽사 패물 아이콘",
+   "ref": "eq_her_134",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_135.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "평양 찰갑 아이콘",
+   "ref": "eq_her_135",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_136.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강서 금동관 아이콘",
+   "ref": "eq_her_136",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_139.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "북청 벽사 패물 아이콘",
+   "ref": "eq_her_139",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_143.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "삼성혈 벽사 패물 아이콘",
+   "ref": "eq_her_143",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_her_144.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "《추사 문집》 아이콘",
+   "ref": "eq_her_144",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_yu_weapon_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "사인참사검 아이콘",
+   "ref": "eq_yu_weapon_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_yu_weapon_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "용천 어검 아이콘",
+   "ref": "eq_yu_weapon_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_yu_armor_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "두석린갑 아이콘",
+   "ref": "eq_yu_armor_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_yu_armor_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "용린 어갑 아이콘",
+   "ref": "eq_yu_armor_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_yu_shoes_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "흑피 목화 아이콘",
+   "ref": "eq_yu_shoes_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_yu_shoes_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "청룡 목화 아이콘",
+   "ref": "eq_yu_shoes_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_yu_accessory_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "수군 청동인장 아이콘",
+   "ref": "eq_yu_accessory_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_yu_accessory_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "어보 옥인 아이콘",
+   "ref": "eq_yu_accessory_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_bul_weapon_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "금강저 아이콘",
+   "ref": "eq_bul_weapon_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_bul_weapon_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "항마 금강저 아이콘",
+   "ref": "eq_bul_weapon_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_bul_armor_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "승군 철가사 아이콘",
+   "ref": "eq_bul_armor_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_bul_armor_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "사명 금란가사 아이콘",
+   "ref": "eq_bul_armor_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_bul_shoes_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "행각 철혜 아이콘",
+   "ref": "eq_bul_shoes_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_bul_shoes_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "달마 초혜 아이콘",
+   "ref": "eq_bul_shoes_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_bul_accessory_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "사리함 패 아이콘",
+   "ref": "eq_bul_accessory_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_bul_accessory_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "진신사리 패 아이콘",
+   "ref": "eq_bul_accessory_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_seon_weapon_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "칠성검 아이콘",
+   "ref": "eq_seon_weapon_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_seon_weapon_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "태을 뇌검 아이콘",
+   "ref": "eq_seon_weapon_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_seon_armor_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "학창의 아이콘",
+   "ref": "eq_seon_armor_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_seon_armor_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "우의 선포 아이콘",
+   "ref": "eq_seon_armor_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_seon_shoes_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "운혜 아이콘",
+   "ref": "eq_seon_shoes_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_seon_shoes_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "축지 운리 아이콘",
+   "ref": "eq_seon_shoes_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_seon_accessory_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "호로병 패 아이콘",
+   "ref": "eq_seon_accessory_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_seon_accessory_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "선도 복숭아 옥패 아이콘",
+   "ref": "eq_seon_accessory_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/lg_yundo.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "윤도(지남침) 아이콘",
+   "ref": "lg_yundo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/lg_daedong_cheop.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "대동여지도 분첩 아이콘",
+   "ref": "lg_daedong_cheop",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/lg_botjim.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "봇짐 아이콘",
+   "ref": "lg_botjim",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/lg_jige.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "지게 아이콘",
+   "ref": "lg_jige",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/lg_chanhap.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "옻칠 찬합 아이콘",
+   "ref": "lg_chanhap",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/lg_musoe_sot.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "무쇠 노구솥 아이콘",
+   "ref": "lg_musoe_sot",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mt_donkey.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "당나귀 아이콘",
+   "ref": "mt_donkey",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mt_jeju_pony.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "제주 조랑말 아이콘",
+   "ref": "mt_jeju_pony",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mt_hwangpo_boat.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "황포돛배 아이콘",
+   "ref": "mt_hwangpo_boat",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mt_junma.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "준마 아이콘",
+   "ref": "mt_junma",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mt_warhorse.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "징발 군마 아이콘",
+   "ref": "mt_warhorse",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mt_haetae.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "해태 아이콘",
+   "ref": "mt_haetae",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mt_cheonma.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "천마(天馬) 아이콘",
+   "ref": "mt_cheonma",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mt_white_tiger.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백두 백호 아이콘",
+   "ref": "mt_white_tiger",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_yu_1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "삼끈 포승 아이콘",
+   "ref": "cap_yu_1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_yu_2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "홍사 포승 아이콘",
+   "ref": "cap_yu_2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_yu_3.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "포도청 오랏줄 아이콘",
+   "ref": "cap_yu_3",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_yu_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "의금부 홍사오랏 아이콘",
+   "ref": "cap_yu_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_yu_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "어명 금포승 아이콘",
+   "ref": "cap_yu_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_bul_1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "율무 염주 아이콘",
+   "ref": "cap_bul_1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_bul_2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "보리수 염주 아이콘",
+   "ref": "cap_bul_2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_bul_3.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백팔 염주 아이콘",
+   "ref": "cap_bul_3",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_bul_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "사리 염주 아이콘",
+   "ref": "cap_bul_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_bul_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "불사리 금강염주 아이콘",
+   "ref": "cap_bul_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_seon_1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "황지 부적 아이콘",
+   "ref": "cap_seon_1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_seon_2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "주사 부적 아이콘",
+   "ref": "cap_seon_2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_seon_3.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "칠성 부적 아이콘",
+   "ref": "cap_seon_3",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_seon_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "태을 부적 아이콘",
+   "ref": "cap_seon_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_seon_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "옥추 신부 아이콘",
+   "ref": "cap_seon_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_mu_1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "올가미 아이콘",
+   "ref": "cap_mu_1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_mu_2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "창애 덫 아이콘",
+   "ref": "cap_mu_2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_mu_3.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "함정 덫 아이콘",
+   "ref": "cap_mu_3",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_mu_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "착호 틀덫 아이콘",
+   "ref": "cap_mu_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/cap_mu_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "신궁 그물 아이콘",
+   "ref": "cap_mu_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/hr_ssanghwa.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "쌍화탕 아이콘",
+   "ref": "hr_ssanghwa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/hr_haedok.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "해독산 아이콘",
+   "ref": "hr_haedok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/hr_geumchang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "금창고 아이콘",
+   "ref": "hr_geumchang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/hr_cheongsim.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "청심환 아이콘",
+   "ref": "hr_cheongsim",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/hr_sohap.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "소합환 아이콘",
+   "ref": "hr_sohap",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/hr_sipjeon.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "십전대보탕 아이콘",
+   "ref": "hr_sipjeon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/hr_gyeongok.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경옥고 아이콘",
+   "ref": "hr_gyeongok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/hr_gongjin.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "공진단 아이콘",
+   "ref": "hr_gongjin",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/hr_uhwang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "우황청심원 아이콘",
+   "ref": "hr_uhwang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/hr_seondan.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "환골탈태 선단 아이콘",
+   "ref": "hr_seondan",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_gamcho.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "감초 아이콘",
+   "ref": "herb_gamcho",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_danggwi.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "당귀 아이콘",
+   "ref": "herb_danggwi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_cheongung.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "천궁 아이콘",
+   "ref": "herb_cheongung",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_jakyak.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "작약 아이콘",
+   "ref": "herb_jakyak",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_hwanggi.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "황기 아이콘",
+   "ref": "herb_hwanggi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_baekchul.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백출 아이콘",
+   "ref": "herb_baekchul",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_daechu.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "대추 아이콘",
+   "ref": "herb_daechu",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_saenggang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "생강 아이콘",
+   "ref": "herb_saenggang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_ssuk.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강화 약쑥 아이콘",
+   "ref": "herb_ssuk",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_sukjihwang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "숙지황 아이콘",
+   "ref": "herb_sukjihwang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_bokryeong.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "복령 아이콘",
+   "ref": "herb_bokryeong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_yukgye.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "육계 아이콘",
+   "ref": "herb_yukgye",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_geumeunhwa.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "금은화 아이콘",
+   "ref": "herb_geumeunhwa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_insam.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "인삼 아이콘",
+   "ref": "herb_insam",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_yeongji.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영지 아이콘",
+   "ref": "herb_yeongji",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_nokyong.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "녹용 아이콘",
+   "ref": "herb_nokyong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_uhwang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "우황 아이콘",
+   "ref": "herb_uhwang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_sahyang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "사향 아이콘",
+   "ref": "herb_sahyang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/herb_sansam.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백두 산삼 아이콘",
+   "ref": "herb_sansam",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_gukbap.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "장터 국밥 아이콘",
+   "ref": "fr_gukbap",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_kongnamul.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "콩나물국밥 아이콘",
+   "ref": "fr_kongnamul",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_jumeokbap.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "주먹밥 아이콘",
+   "ref": "fr_jumeokbap",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_sujebi.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "수제비 아이콘",
+   "ref": "fr_sujebi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_bindaetteok.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "빈대떡 아이콘",
+   "ref": "fr_bindaetteok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_seolleongtang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "설렁탕 아이콘",
+   "ref": "fr_seolleongtang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_tteokguk.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "떡국 아이콘",
+   "ref": "fr_tteokguk",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_jeonju_bibimbap.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "전주 비빔밥 아이콘",
+   "ref": "fr_jeonju_bibimbap",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_pyeongyang_naengmyeon.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "평양 냉면 아이콘",
+   "ref": "fr_pyeongyang_naengmyeon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_galbijjim.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "갈비찜 아이콘",
+   "ref": "fr_galbijjim",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_gujeolpan.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "구절판 아이콘",
+   "ref": "fr_gujeolpan",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_jeonbokcho.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "전복초 아이콘",
+   "ref": "fr_jeonbokcho",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_eomandu.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "어만두 아이콘",
+   "ref": "fr_eomandu",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_tarakjuk.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "타락죽 아이콘",
+   "ref": "fr_tarakjuk",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_yaksik.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "약식 아이콘",
+   "ref": "fr_yaksik",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_gungjung_tteokbokki.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "궁중 떡볶이 아이콘",
+   "ref": "fr_gungjung_tteokbokki",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_daehajjim.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "대하찜 아이콘",
+   "ref": "fr_daehajjim",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_sinseollo.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "신선로 아이콘",
+   "ref": "fr_sinseollo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_food_jumak.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "주막 국밥 조리서 아이콘",
+   "ref": "bk_food_jumak",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_food_campfire.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "야영 모닥불 조리서 아이콘",
+   "ref": "bk_food_campfire",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_food_gaekju.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "객주 상차림 조리서 아이콘",
+   "ref": "bk_food_gaekju",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_food_bukgwan.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "북관·관서 음식서 아이콘",
+   "ref": "bk_food_bukgwan",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_food_namdo.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "남도 한상 조리서 아이콘",
+   "ref": "bk_food_namdo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_food_sura.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "궁중 수라 조리서 아이콘",
+   "ref": "bk_food_sura",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_med_dongui.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "동의보감 초록 아이콘",
+   "ref": "bk_med_dongui",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_med_hyemin.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "혜민서 방약합편 아이콘",
+   "ref": "bk_med_hyemin",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_med_daegu.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "대구 약령시 환약서 아이콘",
+   "ref": "bk_med_daegu",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_med_jeonju.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "전주 약령시 고제서 아이콘",
+   "ref": "bk_med_jeonju",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_med_temple.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "사찰 선단비록 아이콘",
+   "ref": "bk_med_temple",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_tool_forge.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "야장 도구서 아이콘",
+   "ref": "bk_tool_forge",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_tool_carpenter.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "목수 지게서 아이콘",
+   "ref": "bk_tool_carpenter",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_tool_gongbang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "12공방 칠기서 아이콘",
+   "ref": "bk_tool_gongbang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_tool_capture.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "포획구 제작서 아이콘",
+   "ref": "bk_tool_capture",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_tool_repair.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "행장 수선서 아이콘",
+   "ref": "bk_tool_repair",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_mar_hwando.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "환도 단조서 아이콘",
+   "ref": "bk_mar_hwando",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_mar_armor.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경번갑 단조서 아이콘",
+   "ref": "bk_mar_armor",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_mar_bow.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "각궁·화전 단조서 아이콘",
+   "ref": "bk_mar_bow",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_mar_boots.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "목화 비각 단조서 아이콘",
+   "ref": "bk_mar_boots",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_mar_charm.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "벽사 패물 단조서 아이콘",
+   "ref": "bk_mar_charm",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_mar_spear.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "당파창 단조서 아이콘",
+   "ref": "bk_mar_spear",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_mar_shield.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "등패 단조서 아이콘",
+   "ref": "bk_mar_shield",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/bk_mar_flail.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "편곤 단조서 아이콘",
+   "ref": "bk_mar_flail",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_yu_weapon_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 사인참사검 아이콘",
+   "ref": "mj_yu_weapon_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_yu_weapon_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 용천 어검 아이콘",
+   "ref": "mj_yu_weapon_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_yu_armor_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 두석린갑 아이콘",
+   "ref": "mj_yu_armor_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_yu_armor_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 용린 어갑 아이콘",
+   "ref": "mj_yu_armor_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_yu_shoes_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 흑피 목화 아이콘",
+   "ref": "mj_yu_shoes_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_yu_shoes_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 청룡 목화 아이콘",
+   "ref": "mj_yu_shoes_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_yu_accessory_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 수군 청동인장 아이콘",
+   "ref": "mj_yu_accessory_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_yu_accessory_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 어보 옥인 아이콘",
+   "ref": "mj_yu_accessory_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_bul_weapon_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 금강저 아이콘",
+   "ref": "mj_bul_weapon_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_bul_weapon_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 항마 금강저 아이콘",
+   "ref": "mj_bul_weapon_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_bul_armor_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 승군 철가사 아이콘",
+   "ref": "mj_bul_armor_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_bul_armor_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 사명 금란가사 아이콘",
+   "ref": "mj_bul_armor_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_bul_shoes_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 행각 철혜 아이콘",
+   "ref": "mj_bul_shoes_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_bul_shoes_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 달마 초혜 아이콘",
+   "ref": "mj_bul_shoes_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_bul_accessory_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 사리함 패 아이콘",
+   "ref": "mj_bul_accessory_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_bul_accessory_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 진신사리 패 아이콘",
+   "ref": "mj_bul_accessory_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_seon_weapon_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 칠성검 아이콘",
+   "ref": "mj_seon_weapon_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_seon_weapon_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 태을 뇌검 아이콘",
+   "ref": "mj_seon_weapon_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_seon_armor_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 학창의 아이콘",
+   "ref": "mj_seon_armor_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_seon_armor_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 우의 선포 아이콘",
+   "ref": "mj_seon_armor_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_seon_shoes_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 운혜 아이콘",
+   "ref": "mj_seon_shoes_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_seon_shoes_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 축지 운리 아이콘",
+   "ref": "mj_seon_shoes_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_seon_accessory_4.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 호로병 패 아이콘",
+   "ref": "mj_seon_accessory_4",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mj_seon_accessory_5.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "[모작] 선도 복숭아 옥패 아이콘",
+   "ref": "mj_seon_accessory_5",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_iron.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "무쇠 아이콘",
+   "ref": "mat_iron",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_charcoal.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "참숯 아이콘",
+   "ref": "mat_charcoal",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_cowhide.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "소가죽 아이콘",
+   "ref": "mat_cowhide",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_fish_glue.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "어교(민어부레풀) 아이콘",
+   "ref": "mat_fish_glue",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_lacquer.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "옻칠 아이콘",
+   "ref": "mat_lacquer",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_mulberry.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "닥나무 껍질 아이콘",
+   "ref": "mat_mulberry",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_salt.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "천일 소금 아이콘",
+   "ref": "mat_salt",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_cotton.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "무명 아이콘",
+   "ref": "mat_cotton",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_hemp.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "삼베 아이콘",
+   "ref": "mat_hemp",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_bamboo.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "대나무 아이콘",
+   "ref": "mat_bamboo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_ox_horn.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "물소뿔 아이콘",
+   "ref": "mat_ox_horn",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_copper.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "구리 아이콘",
+   "ref": "mat_copper",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_tin.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "주석 아이콘",
+   "ref": "mat_tin",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_white_clay.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백토 아이콘",
+   "ref": "mat_white_clay",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_celadon_clay.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "청자토 아이콘",
+   "ref": "mat_celadon_clay",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_mother_of_pearl.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "자개 아이콘",
+   "ref": "mat_mother_of_pearl",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_silk_thread.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "명주실 아이콘",
+   "ref": "mat_silk_thread",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_wood.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "느티나무 판재 아이콘",
+   "ref": "mat_wood",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_meteor_iron.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "운철(별쇠) 아이콘",
+   "ref": "mat_meteor_iron",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_sarira_crystal.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "사리 수정 아이콘",
+   "ref": "mat_sarira_crystal",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mat_cinnabar.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경면주사 아이콘",
+   "ref": "mat_cinnabar",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/item_torch.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "관솔 횃불 아이콘",
+   "ref": "item_torch",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/item_tonghaengjeung.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "관문 통행증 아이콘",
+   "ref": "item_tonghaengjeung",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/item_bait.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "짐승 먹이 미끼 아이콘",
+   "ref": "item_bait",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/item_tent.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "노숙 텐트(초막) 아이콘",
+   "ref": "item_tent",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/item_chebak.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "대문에 거는 체 아이콘",
+   "ref": "item_chebak",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_rice.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백미 한 섬 아이콘",
+   "ref": "food_rice",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_barley.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "보리 한 섬 아이콘",
+   "ref": "food_barley",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_millet.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "조 한 섬 아이콘",
+   "ref": "food_millet",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_acorn.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "도토리 아이콘",
+   "ref": "food_acorn",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_kudzu.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "칡뿌리 아이콘",
+   "ref": "food_kudzu",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_songgi.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "송기(소나무 속껍질) 아이콘",
+   "ref": "food_songgi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_buckwheat.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "메밀 아이콘",
+   "ref": "food_buckwheat",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_hare.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "산토끼 고기 아이콘",
+   "ref": "food_hare",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_pheasant.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "꿩고기 아이콘",
+   "ref": "food_pheasant",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_boar.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "멧돼지 고기 아이콘",
+   "ref": "food_boar",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_bear.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "반달곰 고기 아이콘",
+   "ref": "food_bear",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_white_deer.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백두 백록 고기 아이콘",
+   "ref": "food_white_deer",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_geonryang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "건량(미숫가루) 한 봉 아이콘",
+   "ref": "food_geonryang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_nurungji.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "누룽지 한 덩이 아이콘",
+   "ref": "food_nurungji",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_yukpo.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "육포 아이콘",
+   "ref": "food_yukpo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_jeonju_hanji.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "전주 한지 아이콘",
+   "ref": "sp_jeonju_hanji",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hansan_mosi.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "한산 모시 아이콘",
+   "ref": "sp_hansan_mosi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_andong_po.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "안동포 아이콘",
+   "ref": "sp_andong_po",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_damyang_bamboo.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "담양 죽물 아이콘",
+   "ref": "sp_damyang_bamboo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_yeonggwang_gulbi.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영광 굴비 아이콘",
+   "ref": "sp_yeonggwang_gulbi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_gaeseong_insam.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "개성 인삼(開城人蔘) 아이콘",
+   "ref": "sp_gaeseong_insam",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_gaeseong_hongsam.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "개성 홍삼 아이콘",
+   "ref": "sp_gaeseong_hongsam",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_jeju_gamgyul.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "제주 진상 감귤 아이콘",
+   "ref": "sp_jeju_gamgyul",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hamgyeong_myeongtae.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "북관 명태 아이콘",
+   "ref": "sp_hamgyeong_myeongtae",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_ganghwa_hwamunseok.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강화 화문석 아이콘",
+   "ref": "sp_ganghwa_hwamunseok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_anseong_yugi.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "안성 유기 아이콘",
+   "ref": "sp_anseong_yugi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_inje_hwangtae.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "인제 황태 아이콘",
+   "ref": "sp_inje_hwangtae",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_uljin_daege.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "울진 대게 아이콘",
+   "ref": "sp_uljin_daege",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_boeun_daechu.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "보은 대추 아이콘",
+   "ref": "sp_boeun_daechu",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_gochang_bokbunja.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "고창 복분자주 아이콘",
+   "ref": "sp_gochang_bokbunja",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_sangju_gotgam.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "상주 곶감 아이콘",
+   "ref": "sp_sangju_gotgam",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_haeju_meok.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "해주 먹 아이콘",
+   "ref": "sp_haeju_meok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_bongsan_bae.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "봉산 참배 아이콘",
+   "ref": "sp_bongsan_bae",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_pyeongyang_chilgi.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "평양 칠기 아이콘",
+   "ref": "sp_pyeongyang_chilgi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_uiju_dambi.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "의주 담비 가죽 아이콘",
+   "ref": "sp_uiju_dambi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hoeryeong_oji.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "회령 오지그릇 아이콘",
+   "ref": "sp_hoeryeong_oji",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_gangjin_celadon.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강진 상감청자 아이콘",
+   "ref": "sp_gangjin_celadon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_bunwon_porcelain.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "분원 백자 달항아리 아이콘",
+   "ref": "sp_bunwon_porcelain",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_tongyeong_najeon.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "통영 나전칠기함 아이콘",
+   "ref": "sp_tongyeong_najeon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_her_066.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "명량 해저 인양 청자 아이콘",
+   "ref": "sp_her_066",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_her_112.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "삼척 해저 인양 청자 아이콘",
+   "ref": "sp_her_112",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_her_115.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "단양 복원 도자 아이콘",
+   "ref": "sp_her_115",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_her_121.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "태안 해저 인양 청자 아이콘",
+   "ref": "sp_her_121",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_her_123.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "부안 복원 도자 아이콘",
+   "ref": "sp_her_123",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_her_125.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "신안 해저 인양 청자 아이콘",
+   "ref": "sp_her_125",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_her_138.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "압록강 해저 인양 청자 아이콘",
+   "ref": "sp_her_138",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_her_142.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "회령 복원 도자 아이콘",
+   "ref": "sp_her_142",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_gangjin_celadon.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【강진 청자 비전서】 아이콘",
+   "ref": "spr_gangjin_celadon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_bunwon_porcelain.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【분원 백자 비전서】 아이콘",
+   "ref": "spr_bunwon_porcelain",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_tongyeong_najeon.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【통영 나전칠기 비전서】 아이콘",
+   "ref": "spr_tongyeong_najeon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_her_066.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【명량 복원 비전서】 아이콘",
+   "ref": "spr_her_066",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_her_112.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【삼척 복원 비전서】 아이콘",
+   "ref": "spr_her_112",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_her_115.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【단양 복원 비전서】 아이콘",
+   "ref": "spr_her_115",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_her_121.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【태안 복원 비전서】 아이콘",
+   "ref": "spr_her_121",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_her_123.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【부안 복원 비전서】 아이콘",
+   "ref": "spr_her_123",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_her_125.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【신안 복원 비전서】 아이콘",
+   "ref": "spr_her_125",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_her_138.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【압록강 복원 비전서】 아이콘",
+   "ref": "spr_her_138",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_her_142.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【회령 복원 비전서】 아이콘",
+   "ref": "spr_her_142",
+   "exists": false
+  }
+ ]
+}

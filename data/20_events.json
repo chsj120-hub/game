@@ -1,0 +1,574 @@
+{
+ "_schema": "20_역사·설화 이벤트 + 클래스 메인 시나리오. stages[].node 순서가 동선 큐(등급 규칙 적용). action=talk|choice|minigame|deliver|battle|instance. deadline_days 경과 시 fail_safe(time_decay: 자동 정상화, 명성 감점 없음·기회비용만, 포고문으로 [역사] 도감 등록 보장). blockade=이벤트 진행 중 봉쇄 노드 + 무료 우회로(detour). 보상=economy quest 공식(type=event/main, tier).",
+ "events": [
+  {
+   "id": "ev_jinju_1862",
+   "name": "진주 농민 항쟁(임술민란)",
+   "lore": "역사",
+   "type": "event",
+   "tier": 2,
+   "trigger": {
+    "region": "MAP_10",
+    "rank_min": 1
+   },
+   "stages": [
+    {
+     "node": "ND_10_CITY_JINJUMOK",
+     "action": "choice",
+     "text": "경상우병사 백낙신의 수탈에 분노한 농민들이 초군(樵軍)을 모은다.",
+     "choices": [
+      {
+       "id": "farmers",
+       "text": "농민 편에서 장부를 고발한다",
+       "effects": {
+        "knowledge_xp": {
+         "yu": 40
+        }
+       }
+      },
+      {
+       "id": "gwana",
+       "text": "관아에 알려 폭동을 막는다",
+       "effects": {
+        "money_mult": 1.3
+       }
+      }
+     ]
+    },
+    {
+     "node": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "action": "minigame",
+     "text": "안핵사에게 수탈 증거를 제출한다(증거 제시·위증 지목).",
+     "minigame": "mg_amhaeng_trial"
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "조정이 안핵사 박규수를 급파하여 사태를 수습했다."
+   },
+   "codex": "1862년 진주에서 시작된 농민 항쟁. 삼남 전역으로 번졌다."
+  },
+  {
+   "id": "ev_ganghwa_1866",
+   "name": "병인양요 강화 방어",
+   "lore": "역사",
+   "type": "event",
+   "tier": 3,
+   "trigger": {
+    "region": "MAP_01",
+    "rank_min": 2
+   },
+   "stages": [
+    {
+     "node": "ND_02_CITY_HANYANGGYEONGJO",
+     "action": "talk",
+     "text": "프랑스 함대가 강화 앞바다에 나타났다는 파발이 도착했다."
+    },
+    {
+     "node": "ND_01_TOWN_MUNSANPOGU",
+     "action": "deliver",
+     "text": "순무영 군량을 포구까지 운반한다.",
+     "item": "food_rice",
+     "qty": 2
+    },
+    {
+     "node": "ND_01_CITY_GANGHWAYUSUBU",
+     "action": "battle",
+     "text": "정족산성으로 향하는 길목의 약탈대를 막는다.",
+     "waves": [
+      [
+       "en_pirate",
+       "en_pirate"
+      ],
+      [
+       "en_pirate",
+       "en_pirate",
+       "en_galjae_bandit"
+      ]
+     ]
+    }
+   ],
+   "blockade": {
+    "node": "ND_01_FORT_DEOKJINJIN",
+    "detour": {
+     "a": "ND_01_TOWN_GYODONG",
+     "b": "ND_01_CITY_GANGHWAYUSUBU",
+     "fare": 0,
+     "days": 1,
+     "text": "교동 어민이 몰래 뱃길을 열어 주었다(무료 우회로)."
+    }
+   },
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "양헌수 부대가 정족산성에서 승리했다는 포고문이 내걸렸다."
+   },
+   "codex": "1866년 프랑스 함대의 강화도 침공과 정족산성 전투."
+  },
+  {
+   "id": "ev_arang_prelude",
+   "name": "밀양 아랑의 원혼",
+   "lore": "설화",
+   "type": "event",
+   "tier": 2,
+   "trigger": {
+    "region": "MAP_10",
+    "rank_min": 1,
+    "time": "NIGHT_ONLY"
+   },
+   "stages": [
+    {
+     "node": "ND_10_TOWN_MILYANG",
+     "action": "talk",
+     "text": "새로 부임하는 부사마다 첫날 밤 죽어 나간다는 소문이 돈다."
+    },
+    {
+     "node": "ND_10_SCENIC_MILYANGYEONGNAMRU",
+     "action": "minigame",
+     "text": "영남루 대숲의 원혼에게 말을 건다(도깨비·원혼 수수께끼).",
+     "minigame": "mg_dokkaebi_riddle"
+    }
+   ],
+   "unlocks": [
+    "q_WAVE_006"
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "무당이 씻김굿을 올려 원혼이 잠시 잠잠해졌다(아랑사령 결전은 계속 도전 가능)."
+   },
+   "codex": "밀양 부사의 딸 아랑이 억울하게 죽어 원혼이 되었다는 전설."
+  },
+  {
+   "id": "ev_yagwanggwi",
+   "name": "설날 밤의 야광귀",
+   "lore": "설화",
+   "type": "event",
+   "tier": 1,
+   "trigger": {
+    "region": "MAP_02",
+    "solar_terms": [
+     "대한",
+     "입춘"
+    ],
+    "time": "NIGHT_ONLY"
+   },
+   "stages": [
+    {
+     "node": "ND_02_CITY_HANYANGGYEONGJO",
+     "action": "deliver",
+     "text": "아이들 신발이 사라진다. 대문에 걸 체를 구해 온다.",
+     "item": "item_chebak",
+     "qty": 1
+    },
+    {
+     "node": "ND_02_CITY_GWANGJUYUSUBU",
+     "action": "battle",
+     "text": "체의 구멍을 세던 야광귀가 정체를 드러낸다.",
+     "waves": [
+      [
+       "en_yagwanggwi"
+      ]
+     ]
+    }
+   ],
+   "deadline_days": 15,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "입춘이 지나자 야광귀가 자취를 감추었다(다음 해 대한에 재등장)."
+   },
+   "codex": "설날 밤 신발을 훔쳐 가는 야광귀. 체를 걸어 두면 구멍을 세다 날이 샌다."
+  }
+ ],
+ "main_scenarios": [
+  {
+   "id": "ev_main_eosa",
+   "name": "어사 — 암행 봉서",
+   "class": "cls_eosa",
+   "lore": "창작",
+   "type": "main",
+   "chapters": [
+    {
+     "chapter": 1,
+     "tier": 1,
+     "stages": [
+      {
+       "node": "ND_02_CITY_HANYANGGYEONGJO",
+       "action": "talk",
+       "text": "봉서를 받고 남행길에 오른다 (1/2)"
+      },
+      {
+       "node": "ND_02_STATION_YANGJAEYEOK",
+       "action": "talk",
+       "text": "봉서를 받고 남행길에 오른다 (2/2)"
+      }
+     ]
+    },
+    {
+     "chapter": 2,
+     "tier": 2,
+     "stages": [
+      {
+       "node": "ND_05_CITY_CHUNGJUMOK",
+       "action": "talk",
+       "text": "고을 장부를 산학으로 대조한다 (1/2)"
+      },
+      {
+       "node": "ND_05_CITY_CHEONGJUMOK",
+       "action": "minigame",
+       "text": "고을 장부를 산학으로 대조한다 (2/2)",
+       "minigame": "mg_abacus"
+      }
+     ]
+    },
+    {
+     "chapter": 3,
+     "tier": 3,
+     "stages": [
+      {
+       "node": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+       "action": "talk",
+       "text": "남원 부사의 학정을 심판한다 (1/3)"
+      },
+      {
+       "node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+       "action": "talk",
+       "text": "남원 부사의 학정을 심판한다 (2/3)"
+      },
+      {
+       "node": "ND_07_CITY_NAMWONDOHOBU",
+       "action": "minigame",
+       "text": "남원 부사의 학정을 심판한다 (3/3)",
+       "minigame": "mg_amhaeng_trial"
+      }
+     ]
+    },
+    {
+     "chapter": 4,
+     "tier": 4,
+     "stages": [
+      {
+       "node": "ND_10_CITY_JINJUMOK",
+       "action": "talk",
+       "text": "민란을 틈탄 화적 두목을 제압한다 (1/3)"
+      },
+      {
+       "node": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+       "action": "talk",
+       "text": "민란을 틈탄 화적 두목을 제압한다 (2/3)"
+      },
+      {
+       "node": "ND_09_CITY_SANGJUMOK",
+       "action": "battle",
+       "text": "민란을 틈탄 화적 두목을 제압한다 (3/3)",
+       "waves": [
+        [
+         "en_galjae_bandit",
+         "en_bandit",
+         "en_bandit"
+        ],
+        [
+         "en_yeokcheon_disciple",
+         "en_galjae_bandit"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "chapter": 5,
+     "tier": 5,
+     "stages": [
+      {
+       "node": "ND_02_CITY_HANYANGGYEONGJO",
+       "action": "talk",
+       "text": "변방 탐관오리 일망타진 — 어사 출두 (1/4)"
+      },
+      {
+       "node": "ND_13_CITY_PYEONGYANGBU",
+       "action": "talk",
+       "text": "변방 탐관오리 일망타진 — 어사 출두 (2/4)"
+      },
+      {
+       "node": "ND_15_CITY_HAMHEUNGBU",
+       "action": "talk",
+       "text": "변방 탐관오리 일망타진 — 어사 출두 (3/4)"
+      },
+      {
+       "node": "ND_14_CITY_UIJUMOK",
+       "action": "minigame",
+       "text": "변방 탐관오리 일망타진 — 어사 출두 (4/4)",
+       "minigame": "mg_amhaeng_trial"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ev_main_merchant",
+   "name": "상인 — 팔도 대행수의 길",
+   "class": "cls_merchant",
+   "lore": "창작",
+   "type": "main",
+   "chapters": [
+    {
+     "chapter": 1,
+     "tier": 1,
+     "stages": [
+      {
+       "node": "ND_01_CITY_GAESEONGBU",
+       "action": "talk",
+       "text": "송상 객주의 첫 심부름 (1/2)"
+      },
+      {
+       "node": "ND_01_TOWN_PAJUMOK",
+       "action": "deliver",
+       "text": "송상 객주의 첫 심부름 (2/2)",
+       "item": "sp_gaeseong_insam",
+       "qty": 2
+      }
+     ]
+    },
+    {
+     "chapter": 2,
+     "tier": 2,
+     "stages": [
+      {
+       "node": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+       "action": "talk",
+       "text": "왜관 교역 셈을 맞춘다 (1/2)"
+      },
+      {
+       "node": "ND_10_CITY_DONGRAEHYEON",
+       "action": "minigame",
+       "text": "왜관 교역 셈을 맞춘다 (2/2)",
+       "minigame": "mg_abacus"
+      }
+     ]
+    },
+    {
+     "chapter": 3,
+     "tier": 3,
+     "stages": [
+      {
+       "node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+       "action": "talk",
+       "text": "남도 곡물 선단을 꾸린다 (1/3)"
+      },
+      {
+       "node": "ND_08_CITY_NAJUMOK",
+       "action": "talk",
+       "text": "남도 곡물 선단을 꾸린다 (2/3)"
+      },
+      {
+       "node": "ND_08_TOWN_HAENAM",
+       "action": "deliver",
+       "text": "남도 곡물 선단을 꾸린다 (3/3)",
+       "item": "food_rice",
+       "qty": 5
+      }
+     ]
+    },
+    {
+     "chapter": 4,
+     "tier": 4,
+     "stages": [
+      {
+       "node": "ND_01_CITY_GAESEONGBU",
+       "action": "talk",
+       "text": "관서 상로의 해적을 소탕한다 (1/3)"
+      },
+      {
+       "node": "ND_12_CITY_HAEJUMOK",
+       "action": "talk",
+       "text": "관서 상로의 해적을 소탕한다 (2/3)"
+      },
+      {
+       "node": "ND_11_CITY_HWANGJUMOK",
+       "action": "battle",
+       "text": "관서 상로의 해적을 소탕한다 (3/3)",
+       "waves": [
+        [
+         "en_pirate",
+         "en_pirate",
+         "en_pirate"
+        ],
+        [
+         "en_galjae_bandit",
+         "en_pirate"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "chapter": 5,
+     "tier": 5,
+     "stages": [
+      {
+       "node": "ND_14_CITY_UIJUMOK",
+       "action": "talk",
+       "text": "팔도 통문을 완성한다 (1/5)"
+      },
+      {
+       "node": "ND_13_CITY_PYEONGYANGBU",
+       "action": "talk",
+       "text": "팔도 통문을 완성한다 (2/5)"
+      },
+      {
+       "node": "ND_02_CITY_HANYANGGYEONGJO",
+       "action": "talk",
+       "text": "팔도 통문을 완성한다 (3/5)"
+      },
+      {
+       "node": "ND_10_CITY_DONGRAEHYEON",
+       "action": "talk",
+       "text": "팔도 통문을 완성한다 (4/5)"
+      },
+      {
+       "node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+       "action": "deliver",
+       "text": "팔도 통문을 완성한다 (5/5)",
+       "item": "sp_uiju_dambi",
+       "qty": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ev_main_dosa",
+   "name": "도사 — 십승지 봉인",
+   "class": "cls_dosa",
+   "lore": "창작",
+   "type": "main",
+   "chapters": [
+    {
+     "chapter": 1,
+     "tier": 1,
+     "stages": [
+      {
+       "node": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+       "action": "talk",
+       "text": "스승의 부적을 획순대로 그린다 (1/2)"
+      },
+      {
+       "node": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+       "action": "minigame",
+       "text": "스승의 부적을 획순대로 그린다 (2/2)",
+       "minigame": "mg_talisman_stroke"
+      }
+     ]
+    },
+    {
+     "chapter": 2,
+     "tier": 2,
+     "stages": [
+      {
+       "node": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+       "action": "talk",
+       "text": "영월 고개의 도깨비불을 봉인한다 (1/2)"
+      },
+      {
+       "node": "ND_04_TOWN_YEONGWOL",
+       "action": "battle",
+       "text": "영월 고개의 도깨비불을 봉인한다 (2/2)",
+       "waves": [
+        [
+         "en_dokkaebi",
+         "en_dokkaebi_small",
+         "en_dokkaebi_small"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "chapter": 3,
+     "tier": 3,
+     "stages": [
+      {
+       "node": "ND_05_TEMPLE_SOKRISANBEOPJUSA",
+       "action": "talk",
+       "text": "칠성진을 잇는다 (1/3)"
+      },
+      {
+       "node": "ND_05_TOWN_DANYANG",
+       "action": "talk",
+       "text": "칠성진을 잇는다 (2/3)"
+      },
+      {
+       "node": "ND_04_TOWN_YEONGWOL",
+       "action": "minigame",
+       "text": "칠성진을 잇는다 (3/3)",
+       "minigame": "mg_chilseong"
+      }
+     ]
+    },
+    {
+     "chapter": 4,
+     "tier": 4,
+     "stages": [
+      {
+       "node": "ND_13_CITY_PYEONGYANGBU",
+       "action": "talk",
+       "text": "단군굴 사교의 뿌리를 찾는다 (1/3)"
+      },
+      {
+       "node": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+       "action": "talk",
+       "text": "단군굴 사교의 뿌리를 찾는다 (2/3)"
+      },
+      {
+       "node": "ND_11_CITY_HWANGJUMOK",
+       "action": "battle",
+       "text": "단군굴 사교의 뿌리를 찾는다 (3/3)",
+       "waves": [
+        [
+         "en_cultist",
+         "en_cultist"
+        ],
+        [
+         "en_gumiho"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "chapter": 5,
+     "tier": 5,
+     "stages": [
+      {
+       "node": "ND_02_CITY_HANYANGGYEONGJO",
+       "action": "talk",
+       "text": "역천지마를 봉인한다 (1/5)"
+      },
+      {
+       "node": "ND_13_CITY_PYEONGYANGBU",
+       "action": "talk",
+       "text": "역천지마를 봉인한다 (2/5)"
+      },
+      {
+       "node": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+       "action": "talk",
+       "text": "역천지마를 봉인한다 (3/5)"
+      },
+      {
+       "node": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+       "action": "talk",
+       "text": "역천지마를 봉인한다 (4/5)"
+      },
+      {
+       "node": "ND_06_SCENIC_GYERYONGSANCHEONHWANGBONG",
+       "action": "instance",
+       "text": "역천지마를 봉인한다 (5/5)",
+       "instance": "WAVE_008"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

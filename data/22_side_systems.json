@@ -1,0 +1,68 @@
+{
+ "_schema": "22_보조 시스템 4선. hwacheop=풍속도 화첩 스냅샷(조건 충족 노드에서 [화첩 기록]), bounty=관아·군사관문 현상수배지(자동 생성), seasonal=24절기 세시풍속 활동, takbon=대동여지도 22첩 목판 탁본 수집.",
+ "hwacheop": {
+  "reward": {"knowledge_xp": {"gong": 20, "sa": 10}, "reputation": 30},
+  "complete_bonus": {"reputation": 1500, "title": "화원(畫員)의 벗"},
+  "scenes": [
+   {"id": "hc_ssireum",   "title": "씨름",       "painter": "김홍도", "trigger": {"solar_terms": ["망종", "하지"], "facility": "market5"}},
+   {"id": "hc_seodang",   "title": "서당",       "painter": "김홍도", "trigger": {"facility": "hyanggyo"}},
+   {"id": "hc_mudong",    "title": "무동",       "painter": "김홍도", "trigger": {"facility": "market"}},
+   {"id": "hc_daejang",   "title": "대장간",     "painter": "김홍도", "trigger": {"facility": "forge"}},
+   {"id": "hc_jumak",     "title": "주막",       "painter": "김홍도", "trigger": {"facility": "jumak"}},
+   {"id": "hc_ppallae",   "title": "빨래터",     "painter": "김홍도", "trigger": {"node_type": "town", "time": "DAY"}},
+   {"id": "hc_nongeori",  "title": "논갈이",     "painter": "김홍도", "trigger": {"solar_terms": ["청명", "곡우"], "node_type": "town"}},
+   {"id": "hc_tajak",     "title": "타작",       "painter": "김홍도", "trigger": {"solar_terms": ["추분", "한로"], "node_type": "town"}},
+   {"id": "hc_narutbae",  "title": "나룻배",     "painter": "김홍도", "trigger": {"facility": "ferry"}},
+   {"id": "hc_danohpungjeong", "title": "단오풍정", "painter": "신윤복", "trigger": {"solar_terms": ["망종"], "node_type": "scenic"}},
+   {"id": "hc_wolhajeongin",   "title": "월하정인", "painter": "신윤복", "trigger": {"time": "NIGHT", "node_type": "city"}},
+   {"id": "hc_juyucheonggang", "title": "주유청강", "painter": "신윤복", "trigger": {"facility": "ferry", "time": "DAY"}},
+   {"id": "hc_ssanggeomdaemu", "title": "쌍검대무", "painter": "신윤복", "trigger": {"facility": "gwana"}},
+   {"id": "hc_scenic",         "title": "팔도 절경 진경",  "painter": "정선(진경산수)", "trigger": {"node_type": "scenic"}, "repeatable_per_node": true}
+  ]
+ },
+ "bounty": {
+  "facilities": ["bounty", "gwana"],
+  "board_size": 3,
+  "refresh_days": 5,
+  "expire_days": 15,
+  "tier_window": [-1, 1],
+  "kill_count": [1, 3],
+  "reward_type": "bounty",
+  "note": "현상금 명성/엽전 = economy.quest 공식(type=bounty, tier=대상 적 등급) × 처치 수^0.5"
+ },
+ "seasonal": [
+  {"term": "입춘", "activity": "입춘첩 붙이기", "effect": {"reputation_gain": 0.05}},
+  {"term": "우수", "activity": "대보름 부럼 깨기", "effect": {"cure": ["cold"]}},
+  {"term": "경칩", "activity": "개구리알 먹기(보양)", "effect": {"hp": 5}},
+  {"term": "춘분", "activity": "머슴날 송편", "effect": {"satiety": 30}},
+  {"term": "청명", "activity": "성묘·한식", "effect": {"knowledge_xp": {"yu": 20}}},
+  {"term": "곡우", "activity": "곡우물 마시기", "effect": {"fatigue": -20}},
+  {"term": "입하", "activity": "초파일 연등", "effect": {"res_all": 0.03}, "facility": "temple"},
+  {"term": "소만", "activity": "보리 베기 품앗이", "effect": {"money": 40}},
+  {"term": "망종", "activity": "단오 씨름·그네", "effect": {"atk_pct": 0.05}, "minigame": "ssireum"},
+  {"term": "하지", "activity": "기우제", "effect": {"weather_force": "rain"}},
+  {"term": "소서", "activity": "유두 물맞이", "effect": {"fatigue": -30}},
+  {"term": "대서", "activity": "복날 삼계탕", "effect": {"hp": 5}},
+  {"term": "입추", "activity": "칠석 걸교", "effect": {"knowledge_xp": {"gong": 20}}},
+  {"term": "처서", "activity": "백중 호미씻이", "effect": {"fatigue": -20}},
+  {"term": "백로", "activity": "벌초", "effect": {"knowledge_xp": {"yu": 15}}},
+  {"term": "추분", "activity": "추석 강강술래", "effect": {"reputation": 50}},
+  {"term": "한로", "activity": "중양절 국화전", "effect": {"hp": 5}},
+  {"term": "상강", "activity": "단풍 상춘(상추) 유람", "effect": {"fatigue_gain_mult": 0.9}},
+  {"term": "입동", "activity": "김장", "effect": {"satiety_drain_mult": 0.9}},
+  {"term": "소설", "activity": "시향(시제)", "effect": {"knowledge_xp": {"yu": 20}}},
+  {"term": "대설", "activity": "설경 화첩", "effect": {"hwacheop_bonus": true}},
+  {"term": "동지", "activity": "동지 팥죽", "effect": {"cure": ["plague"], "res_all": 0.03}},
+  {"term": "소한", "activity": "얼음 채빙", "effect": {"money": 60}},
+  {"term": "대한", "activity": "설날 세배·야광귀 막기", "effect": {"reputation": 60}, "event": "ev_yagwanggwi"}
+ ],
+ "seasonal_rule": {"once_per_term": true, "requires_facility_any": ["jumak", "market5", "market", "temple", "gwana"], "buff_days": 15},
+ "takbon": {
+  "sheets": 22,
+  "minigame": "mg_takbon",
+  "facilities": ["beacon", "gwana", "bookstore"],
+  "materials": [{"id": "mat_mulberry", "qty": 2}, {"id": "mat_charcoal", "qty": 1}],
+  "per_sheet": {"reveal_region_nodes": true, "region_fatigue_gain_mult": 0.95, "reputation": 80},
+  "complete_bonus": {"reputation": 3000, "item": "lg_daedong_cheop", "title": "고산자의 후계"}
+ }
+}

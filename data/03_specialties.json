@@ -1,0 +1,665 @@
+{
+ "_schema": "03_조선특산물. node=원산지 노드. kind=basic|premium(도시 발전도 dev_level 해금)|crafted(특산물 레시피북 전용). base_price=economy.price 공식. 5일장 매수 0.72×(원산지) → 매도 hop 거리별 0.60/0.95/1.15/1.35×. perishable=노드 이동당 신선도 −5%. trade_quests: 대금=base×qty×1.8, 명성=quest 공식(trade).",
+ "specialties": [
+  {
+   "id": "sp_jeonju_hanji",
+   "name": "전주 한지",
+   "region": "MAP_07",
+   "node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 0.5
+  },
+  {
+   "id": "sp_hansan_mosi",
+   "name": "한산 모시",
+   "region": "MAP_06",
+   "node": "ND_06_TOWN_BUYEO",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.0
+  },
+  {
+   "id": "sp_andong_po",
+   "name": "안동포",
+   "region": "MAP_09",
+   "node": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.0
+  },
+  {
+   "id": "sp_damyang_bamboo",
+   "name": "담양 죽물",
+   "region": "MAP_08",
+   "node": "ND_08_TOWN_DAMYANG",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.5
+  },
+  {
+   "id": "sp_yeonggwang_gulbi",
+   "name": "영광 굴비",
+   "region": "MAP_08",
+   "node": "ND_08_CITY_NAJUMOK",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.0,
+   "perishable": true
+  },
+  {
+   "id": "sp_gaeseong_insam",
+   "name": "개성 인삼(開城人蔘)",
+   "region": "MAP_01",
+   "node": "ND_01_CITY_GAESEONGBU",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 0.5,
+   "perishable": true
+  },
+  {
+   "id": "sp_gaeseong_hongsam",
+   "name": "개성 홍삼",
+   "region": "MAP_01",
+   "node": "ND_01_CITY_GAESEONGBU",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 0.5
+  },
+  {
+   "id": "sp_jeju_gamgyul",
+   "name": "제주 진상 감귤",
+   "region": "MAP_17",
+   "node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 1.0,
+   "perishable": true
+  },
+  {
+   "id": "sp_hamgyeong_myeongtae",
+   "name": "북관 명태",
+   "region": "MAP_15",
+   "node": "ND_15_CITY_HAMHEUNGBU",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.0
+  },
+  {
+   "id": "sp_ganghwa_hwamunseok",
+   "name": "강화 화문석",
+   "region": "MAP_01",
+   "node": "ND_01_CITY_GANGHWAYUSUBU",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 3.0
+  },
+  {
+   "id": "sp_anseong_yugi",
+   "name": "안성 유기",
+   "region": "MAP_02",
+   "node": "ND_02_TOWN_ANSEONG",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 2.0
+  },
+  {
+   "id": "sp_inje_hwangtae",
+   "name": "인제 황태",
+   "region": "MAP_03",
+   "node": "ND_03_TOWN_INJE",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 0.5
+  },
+  {
+   "id": "sp_uljin_daege",
+   "name": "울진 대게",
+   "region": "MAP_04",
+   "node": "ND_04_TOWN_ULJIN",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.0,
+   "perishable": true
+  },
+  {
+   "id": "sp_boeun_daechu",
+   "name": "보은 대추",
+   "region": "MAP_05",
+   "node": "ND_05_TOWN_BOEUN",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 0.5
+  },
+  {
+   "id": "sp_gochang_bokbunja",
+   "name": "고창 복분자주",
+   "region": "MAP_07",
+   "node": "ND_07_TOWN_GOCHANG",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.5
+  },
+  {
+   "id": "sp_sangju_gotgam",
+   "name": "상주 곶감",
+   "region": "MAP_09",
+   "node": "ND_09_CITY_SANGJUMOK",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 0.5
+  },
+  {
+   "id": "sp_haeju_meok",
+   "name": "해주 먹",
+   "region": "MAP_12",
+   "node": "ND_12_CITY_HAEJUMOK",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 0.3
+  },
+  {
+   "id": "sp_bongsan_bae",
+   "name": "봉산 참배",
+   "region": "MAP_11",
+   "node": "ND_11_CITY_BONGSANGUN",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.5,
+   "perishable": true
+  },
+  {
+   "id": "sp_pyeongyang_chilgi",
+   "name": "평양 칠기",
+   "region": "MAP_13",
+   "node": "ND_13_CITY_PYEONGYANGBU",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 1.5
+  },
+  {
+   "id": "sp_uiju_dambi",
+   "name": "의주 담비 가죽",
+   "region": "MAP_14",
+   "node": "ND_14_CITY_UIJUMOK",
+   "kind": "premium",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 3,
+   "weight": 0.5
+  },
+  {
+   "id": "sp_hoeryeong_oji",
+   "name": "회령 오지그릇",
+   "region": "MAP_16",
+   "node": "ND_16_TOWN_HOERYEONG",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 2.5
+  },
+  {
+   "id": "sp_gangjin_celadon",
+   "name": "강진 상감청자",
+   "region": "MAP_08",
+   "node": "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "weight": 2.0
+  },
+  {
+   "id": "sp_bunwon_porcelain",
+   "name": "분원 백자 달항아리",
+   "region": "MAP_02",
+   "node": "ND_02_RUIN_GWANGJUBUNWONBAEKJAGAMATEO",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "weight": 3.0
+  },
+  {
+   "id": "sp_tongyeong_najeon",
+   "name": "통영 나전칠기함",
+   "region": "MAP_10",
+   "node": "ND_10_RUIN_TONGYEONG12GONGBANGYETTEO",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "weight": 1.5
+  },
+  {
+   "id": "sp_her_066",
+   "name": "명량 해저 인양 청자",
+   "region": "MAP_08",
+   "node": "ND_08_WRECK_MYEONGRYANGULDOLMOK",
+   "kind": "crafted",
+   "tier": 5,
+   "base_price": 4860,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_112",
+   "name": "삼척 해저 인양 청자",
+   "region": "MAP_04",
+   "node": "ND_04_WRECK_SAMCHEOKANTAEKSEONCHIMMOLJI",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_115",
+   "name": "단양 복원 도자",
+   "region": "MAP_05",
+   "node": "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_121",
+   "name": "태안 해저 인양 청자",
+   "region": "MAP_06",
+   "node": "ND_06_WRECK_TAEANMADOCHIMMOLSEON",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_123",
+   "name": "부안 복원 도자",
+   "region": "MAP_07",
+   "node": "ND_07_RUIN_BUANYUCHEONRICHEONGJAGAMATEO",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_125",
+   "name": "신안 해저 인양 청자",
+   "region": "MAP_08",
+   "node": "ND_08_WRECK_SINANHAEJEOMUYEOKSEON",
+   "kind": "crafted",
+   "tier": 5,
+   "base_price": 4860,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_138",
+   "name": "압록강 해저 인양 청자",
+   "region": "MAP_14",
+   "node": "ND_14_WRECK_APROKGANGHAGUCHIMMOLSEON",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_142",
+   "name": "회령 복원 도자",
+   "region": "MAP_16",
+   "node": "ND_16_RUIN_HOERYEONGOJIGAMATEO",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage"
+  }
+ ],
+ "specialty_recipes": [
+  {
+   "id": "spr_gangjin_celadon",
+   "name": "【강진 청자 비전서】",
+   "tier": 4,
+   "produces": "sp_gangjin_celadon",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 4
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 6
+    }
+   ]
+  },
+  {
+   "id": "spr_bunwon_porcelain",
+   "name": "【분원 백자 비전서】",
+   "tier": 3,
+   "produces": "sp_bunwon_porcelain",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 4
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    }
+   ]
+  },
+  {
+   "id": "spr_tongyeong_najeon",
+   "name": "【통영 나전칠기 비전서】",
+   "tier": 3,
+   "produces": "sp_tongyeong_najeon",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_lacquer",
+     "qty": 3
+    },
+    {
+     "id": "mat_mother_of_pearl",
+     "qty": 3
+    },
+    {
+     "id": "mat_wood",
+     "qty": 2
+    }
+   ]
+  },
+  {
+   "id": "spr_her_066",
+   "name": "【명량 복원 비전서】",
+   "tier": 5,
+   "produces": "sp_her_066",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_112",
+   "name": "【삼척 복원 비전서】",
+   "tier": 4,
+   "produces": "sp_her_112",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_115",
+   "name": "【단양 복원 비전서】",
+   "tier": 3,
+   "produces": "sp_her_115",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_121",
+   "name": "【태안 복원 비전서】",
+   "tier": 4,
+   "produces": "sp_her_121",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_123",
+   "name": "【부안 복원 비전서】",
+   "tier": 4,
+   "produces": "sp_her_123",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_125",
+   "name": "【신안 복원 비전서】",
+   "tier": 5,
+   "produces": "sp_her_125",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_138",
+   "name": "【압록강 복원 비전서】",
+   "tier": 3,
+   "produces": "sp_her_138",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_142",
+   "name": "【회령 복원 비전서】",
+   "tier": 2,
+   "produces": "sp_her_142",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  }
+ ],
+ "trade_quests": [
+  {
+   "id": "tq_001",
+   "name": "한지 진상 운송",
+   "item": "sp_jeonju_hanji",
+   "qty": 20,
+   "from": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 1
+  },
+  {
+   "id": "tq_002",
+   "name": "북관 명태 남도 교역",
+   "item": "sp_hamgyeong_myeongtae",
+   "qty": 30,
+   "from": "ND_15_CITY_HAMHEUNGBU",
+   "to": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "margin": 1.8,
+   "tier": 2
+  },
+  {
+   "id": "tq_003",
+   "name": "개성 인삼 의주 연행",
+   "item": "sp_gaeseong_insam",
+   "qty": 10,
+   "from": "ND_01_CITY_GAESEONGBU",
+   "to": "ND_14_CITY_UIJUMOK",
+   "margin": 1.8,
+   "tier": 3
+  },
+  {
+   "id": "tq_004",
+   "name": "제주 감귤 진상",
+   "item": "sp_jeju_gamgyul",
+   "qty": 10,
+   "from": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 3
+  },
+  {
+   "id": "tq_005",
+   "name": "담양 죽물 관서 행상",
+   "item": "sp_damyang_bamboo",
+   "qty": 15,
+   "from": "ND_08_TOWN_DAMYANG",
+   "to": "ND_13_CITY_PYEONGYANGBU",
+   "margin": 1.8,
+   "tier": 2
+  },
+  {
+   "id": "tq_006",
+   "name": "상주 곶감 북관 행상",
+   "item": "sp_sangju_gotgam",
+   "qty": 20,
+   "from": "ND_09_CITY_SANGJUMOK",
+   "to": "ND_15_CITY_HAMHEUNGBU",
+   "margin": 1.8,
+   "tier": 2
+  },
+  {
+   "id": "tq_007",
+   "name": "안성 유기 영남 납품",
+   "item": "sp_anseong_yugi",
+   "qty": 8,
+   "from": "ND_02_TOWN_ANSEONG",
+   "to": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "margin": 1.8,
+   "tier": 2
+  },
+  {
+   "id": "tq_008",
+   "name": "의주 담비 가죽 한양 진상",
+   "item": "sp_uiju_dambi",
+   "qty": 4,
+   "from": "ND_14_CITY_UIJUMOK",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 4
+  }
+ ]
+}

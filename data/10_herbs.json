@@ -1,0 +1,199 @@
+{
+ "_schema": "10_약초재료. source=yakbang(1~2등급 약방 판매)|gather(심산유곡 채집)|hunt(수렵 부산물). regions=채집 가능 권역.",
+ "herbs": [
+  {
+   "id": "herb_gamcho",
+   "name": "감초",
+   "tier": 1,
+   "source": "yakbang",
+   "price": 8,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_danggwi",
+   "name": "당귀",
+   "tier": 1,
+   "source": "yakbang",
+   "price": 10,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_cheongung",
+   "name": "천궁",
+   "tier": 1,
+   "source": "yakbang",
+   "price": 10,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_jakyak",
+   "name": "작약",
+   "tier": 1,
+   "source": "yakbang",
+   "price": 9,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_hwanggi",
+   "name": "황기",
+   "tier": 1,
+   "source": "yakbang",
+   "price": 12,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_baekchul",
+   "name": "백출",
+   "tier": 1,
+   "source": "yakbang",
+   "price": 10,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_daechu",
+   "name": "대추",
+   "tier": 1,
+   "source": "yakbang",
+   "price": 4,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_saenggang",
+   "name": "생강",
+   "tier": 1,
+   "source": "yakbang",
+   "price": 4,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_ssuk",
+   "name": "강화 약쑥",
+   "tier": 1,
+   "source": "yakbang",
+   "price": 5,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_sukjihwang",
+   "name": "숙지황",
+   "tier": 2,
+   "source": "yakbang",
+   "price": 25,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_bokryeong",
+   "name": "복령",
+   "tier": 2,
+   "source": "yakbang",
+   "price": 22,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_yukgye",
+   "name": "육계",
+   "tier": 2,
+   "source": "yakbang",
+   "price": 30,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_geumeunhwa",
+   "name": "금은화",
+   "tier": 2,
+   "source": "yakbang",
+   "price": 20,
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_insam",
+   "name": "인삼",
+   "tier": 3,
+   "source": "gather",
+   "price": 120,
+   "regions": [
+    "MAP_01",
+    "MAP_04",
+    "MAP_14"
+   ],
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_yeongji",
+   "name": "영지",
+   "tier": 3,
+   "source": "gather",
+   "price": 140,
+   "regions": [
+    "MAP_04",
+    "MAP_10"
+   ],
+   "weight": 0.2,
+   "perishable": true
+  },
+  {
+   "id": "herb_nokyong",
+   "name": "녹용",
+   "tier": 4,
+   "source": "hunt",
+   "price": 450,
+   "regions": [
+    "MAP_15",
+    "MAP_16"
+   ],
+   "weight": 0.2,
+   "perishable": false
+  },
+  {
+   "id": "herb_uhwang",
+   "name": "우황",
+   "tier": 4,
+   "source": "hunt",
+   "price": 520,
+   "regions": [
+    "*"
+   ],
+   "weight": 0.2,
+   "perishable": false
+  },
+  {
+   "id": "herb_sahyang",
+   "name": "사향",
+   "tier": 4,
+   "source": "hunt",
+   "price": 600,
+   "regions": [
+    "MAP_15",
+    "MAP_16"
+   ],
+   "weight": 0.2,
+   "perishable": false
+  },
+  {
+   "id": "herb_sansam",
+   "name": "백두 산삼",
+   "tier": 5,
+   "source": "gather",
+   "price": 3000,
+   "regions": [
+    "MAP_16"
+   ],
+   "weight": 0.2,
+   "perishable": false
+  }
+ ]
+}

@@ -1,0 +1,369 @@
+{
+ "_schema": "17_탐색_미니게임_연속전투(던전 대체). route=동선 큐 노드. waves=웨이브별 적 id. minigame=현장 전투 미니게임. 보상 명성/엽전 = economy quest 공식(type=instance) + 적 처치 공식. rewards.items=확정/확률 전리품.",
+ "minigames": {
+  "archery": {
+   "name": "착호 쇠뇌 / 활쏘기",
+   "time_limit": 12,
+   "effects": {
+    "leader_def_break": 0.5,
+    "leader_hp_cut": 0.3
+   },
+   "boss_scale": 0.33
+  },
+  "bagua": {
+   "name": "팔괘 진법 해제",
+   "time_limit": 15,
+   "effects": {
+    "dispel_enemy_buffs": true,
+    "ally_magic_immune_turns": 2
+   },
+   "boss_scale": 1.0
+  },
+  "ssireum": {
+   "name": "백병전 맞잡이(일기토)",
+   "time_limit": 10,
+   "effects": {
+    "front_stun_turns": 2,
+    "formation_break_def": 0.2
+   },
+   "boss_scale": 0.5
+  },
+  "rhythm": {
+   "name": "벽사 진언 타격",
+   "time_limit": 20,
+   "effects": {
+    "purify_non_boss_ghosts": true,
+    "enemy_atk_mult": 0.5,
+    "atk_mult_turns": 3
+   },
+   "boss_scale": 1.0
+  }
+ },
+ "instances": [
+  {
+   "id": "WAVE_001",
+   "name": "문경새재 조령 관문 화적패 소탕",
+   "tier": 2,
+   "region": "MAP_05",
+   "route": [
+    "ND_05_CITY_CHUNGJUMOK",
+    "ND_05_FORT_MUNGYEONGSAEJAEJORYEONGGWAN"
+   ],
+   "minigame": "ssireum",
+   "minigame_variant": "일기토 QTE",
+   "minigame_applies_to": "final_wave",
+   "waves": [
+    [
+     "en_bandit",
+     "en_bandit",
+     "en_bandit"
+    ],
+    [
+     "en_bandit",
+     "en_bandit",
+     "en_pirate"
+    ],
+    [
+     "en_galjae_bandit",
+     "en_bandit",
+     "en_bandit"
+    ]
+   ],
+   "rewards": {
+    "items": [
+     {
+      "id": "bk_mar_hwando",
+      "rate": 0.25
+     }
+    ]
+   },
+   "reward_type": "instance"
+  },
+  {
+   "id": "WAVE_002",
+   "name": "동해 삼척 침몰선 안택선 인양 호위",
+   "tier": 2,
+   "region": "MAP_04",
+   "route": [
+    "ND_04_TOWN_SAMCHEOK",
+    "ND_04_WRECK_SAMCHEOKANTAEKSEONCHIMMOLJI"
+   ],
+   "minigame": "archery",
+   "minigame_variant": "궁술 사격",
+   "minigame_applies_to": "final_wave",
+   "waves": [
+    [
+     "en_pirate",
+     "en_pirate"
+    ],
+    [
+     "en_pirate",
+     "en_pirate",
+     "en_pirate"
+    ],
+    [
+     "en_pirate",
+     "en_pirate",
+     "en_galjae_bandit"
+    ]
+   ],
+   "rewards": {
+    "items": [
+     {
+      "id": "bk_mar_boots",
+      "rate": 0.25
+     }
+    ]
+   },
+   "reward_type": "instance"
+  },
+  {
+   "id": "WAVE_003",
+   "name": "묘향산 단군굴 사교도 소탕전",
+   "tier": 3,
+   "region": "MAP_13",
+   "route": [
+    "ND_14_CITY_UIJUMOK",
+    "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+    "ND_13_SHRINE_MYOHYANGSANDANGUNGUL"
+   ],
+   "minigame": "bagua",
+   "minigame_variant": "팔괘 진법 해제",
+   "minigame_applies_to": "all_waves",
+   "waves": [
+    [
+     "en_cultist",
+     "en_cultist"
+    ],
+    [
+     "en_cultist",
+     "en_cultist",
+     "en_spirit_minion"
+    ],
+    [
+     "en_cultist",
+     "en_cultist",
+     "en_cultist"
+    ]
+   ],
+   "rewards": {
+    "items": [
+     {
+      "id": "bk_mar_armor",
+      "rate": 0.3
+     }
+    ]
+   },
+   "reward_type": "instance"
+  },
+  {
+   "id": "WAVE_004",
+   "name": "지리산 천왕봉 옛 산신령 진혼 참배",
+   "tier": 4,
+   "region": "MAP_10",
+   "route": [
+    "ND_07_CITY_NAMWONDOHOBU",
+    "ND_10_CITY_JINJUMOK",
+    "ND_10_SCENIC_JIRISANCHEONWANGBONG"
+   ],
+   "minigame": "rhythm",
+   "minigame_variant": "제령 리듬 액션",
+   "minigame_applies_to": "final_wave",
+   "boss": "en_jirisan_sanshin",
+   "waves": [
+    [
+     "en_spirit_minion",
+     "en_spirit_minion"
+    ],
+    [
+     "en_spirit_minion",
+     "en_spirit_minion",
+     "en_spirit_minion"
+    ],
+    [
+     "en_jirisan_sanshin"
+    ]
+   ],
+   "rewards": {
+    "items": [
+     {
+      "id": "bk_mar_spear",
+      "rate": 0.5
+     }
+    ]
+   },
+   "reward_type": "instance"
+  },
+  {
+   "id": "WAVE_005",
+   "name": "송도 개성 옛터 불가사리 철기 봉인",
+   "tier": 4,
+   "region": "MAP_01",
+   "route": [
+    "ND_02_CITY_HANYANGGYEONGJO",
+    "ND_01_CITY_GAESEONGBU",
+    "ND_01_RUIN_GAESEONGMANWOLDAEYETTEO"
+   ],
+   "minigame": "archery",
+   "minigame_variant": "화염 화살 조준",
+   "minigame_applies_to": "final_wave",
+   "boss": "en_bulgasari",
+   "waves": [
+    [
+     "en_cheolgwi",
+     "en_cheolgwi"
+    ],
+    [
+     "en_cheolgwi",
+     "en_cheolgwi",
+     "en_cheolgwi"
+    ],
+    [
+     "en_bulgasari"
+    ]
+   ],
+   "rewards": {
+    "items": [
+     {
+      "id": "bk_mar_shield",
+      "rate": 0.5
+     }
+    ]
+   },
+   "reward_type": "instance"
+  },
+  {
+   "id": "WAVE_006",
+   "name": "밀양 영남루 아랑사령 원혼 성불 결전",
+   "tier": 5,
+   "region": "MAP_10",
+   "route": [
+    "ND_02_CITY_HANYANGGYEONGJO",
+    "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "ND_08_SHRINE_JINDOSSITGIMGUTDANGGOLPAN",
+    "ND_10_TOWN_MILYANG",
+    "ND_10_SCENIC_MILYANGYEONGNAMRU"
+   ],
+   "minigame": "rhythm",
+   "minigame_variant": "진혼 리듬 액션",
+   "minigame_applies_to": "final_wave",
+   "boss": "en_arang",
+   "waves": [
+    [
+     "en_ghost",
+     "en_ghost",
+     "en_ghost"
+    ],
+    [
+     "en_spirit_minion",
+     "en_spirit_minion"
+    ],
+    [
+     "en_spirit_minion",
+     "en_spirit_minion",
+     "en_spirit_minion"
+    ],
+    [
+     "en_arang"
+    ]
+   ],
+   "rewards": {
+    "items": [
+     {
+      "id": "mat_sarira_crystal",
+      "rate": 1.0
+     }
+    ]
+   },
+   "reward_type": "instance"
+  },
+  {
+   "id": "WAVE_007",
+   "name": "백두산 천지 화산 흑룡 토벌",
+   "tier": 5,
+   "region": "MAP_16",
+   "route": [
+    "ND_13_CITY_PYEONGYANGBU",
+    "ND_15_CITY_HAMHEUNGBU",
+    "ND_16_STATION_MUSANCHAM",
+    "ND_16_SCENIC_BAEKDUSANCHEONJI"
+   ],
+   "minigame": "bagua",
+   "minigame_variant": "천지개벽 진법",
+   "minigame_applies_to": "final_wave",
+   "boss": "en_heukryong",
+   "waves": [
+    [
+     "en_lava_serpent",
+     "en_lava_serpent"
+    ],
+    [
+     "en_lava_serpent",
+     "en_gumiho"
+    ],
+    [
+     "en_lava_serpent",
+     "en_lava_serpent",
+     "en_lava_serpent"
+    ],
+    [
+     "en_heukryong"
+    ]
+   ],
+   "rewards": {
+    "items": [
+     {
+      "id": "mat_meteor_iron",
+      "rate": 1.0
+     }
+    ]
+   },
+   "reward_type": "instance"
+  },
+  {
+   "id": "WAVE_008",
+   "name": "계룡산 신도안 천황봉 역천지마 토벌",
+   "tier": 5,
+   "region": "MAP_06",
+   "route": [
+    "ND_02_CITY_HANYANGGYEONGJO",
+    "ND_13_CITY_PYEONGYANGBU",
+    "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+    "ND_06_SHRINE_GYERYONGSANSINDOAN",
+    "ND_06_SCENIC_GYERYONGSANCHEONHWANGBONG"
+   ],
+   "minigame": "ssireum",
+   "minigame_variant": "어사 호통 QTE",
+   "minigame_applies_to": "final_wave",
+   "boss": "en_yeokcheon",
+   "waves": [
+    [
+     "en_yeokcheon_disciple",
+     "en_yeokcheon_disciple"
+    ],
+    [
+     "en_yeokcheon_disciple",
+     "en_yeokcheon_disciple",
+     "en_yeokcheon_disciple"
+    ],
+    [
+     "en_cultist",
+     "en_cultist",
+     "en_yeokcheon_disciple"
+    ],
+    [
+     "en_yeokcheon"
+    ]
+   ],
+   "rewards": {
+    "items": [
+     {
+      "id": "mat_cinnabar",
+      "rate": 1.0
+     }
+    ]
+   },
+   "reward_type": "instance"
+  }
+ ]
+}

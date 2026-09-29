@@ -1,0 +1,1355 @@
+{
+ "_schema": "00_총괄개요 — 전역 밸런스 상수. 코드에 수치 하드코딩 금지. rank.table.threshold 는 tools/economy_sim.py --write 가 명성 공급량으로부터 산출해 기록한다.",
+ "rank": {
+  "formula": {
+   "type": "power",
+   "a": 2647.8,
+   "k": 2.245,
+   "note": "Threshold(L) = 2,648·(L−1)^2.245. R5 = 균형형이 콘텐츠 1/3 을 찾았을 때(중앙값) 도달하도록 진행 시뮬로 보정"
+  },
+  "table": [
+   {
+    "rank": 1,
+    "threshold": 0,
+    "titles": {
+     "cls_eosa": "무명 선비",
+     "cls_merchant": "등짐 장수",
+     "cls_dosa": "떠돌이 수련생"
+    },
+    "unlocks": [
+     "tier1_gear"
+    ]
+   },
+   {
+    "rank": 2,
+    "threshold": 2700,
+    "titles": {
+     "cls_eosa": "향촌 유생",
+     "cls_merchant": "보부상",
+     "cls_dosa": "입문 도생"
+    },
+    "unlocks": [
+     "tier2_gear",
+     "tier2_mount",
+     "donate_tier3"
+    ]
+   },
+   {
+    "rank": 3,
+    "threshold": 12500,
+    "titles": {
+     "cls_eosa": "진사",
+     "cls_merchant": "객주 대행수",
+     "cls_dosa": "방사"
+    },
+    "unlocks": [
+     "tier3_trade",
+     "jige_chanhap",
+     "hyanggyo_books",
+     "checkpoint_pass",
+     "donate_tier4"
+    ]
+   },
+   {
+    "rank": 4,
+    "threshold": 31500,
+    "titles": {
+     "cls_eosa": "종사관·어사",
+     "cls_merchant": "대방",
+     "cls_dosa": "진인"
+    },
+    "unlocks": [
+     "tier4_treasure_quest",
+     "warhorse_levy",
+     "donate_tier5"
+    ]
+   },
+   {
+    "rank": 5,
+    "threshold": 59500,
+    "titles": {
+     "cls_eosa": "판서",
+     "cls_merchant": "팔도 도대행수",
+     "cls_dosa": "천사(天師)"
+    },
+    "unlocks": [
+     "tier5_mythic_mount",
+     "mythic_quest"
+    ]
+   }
+  ],
+  "promotion": {
+   "requires_facility": "gwana",
+   "note": "완전판 5장: 명성이 임계값에 도달하면 관아에서 '승급 심사'를 받아야 신분이 오른다"
+  },
+  "donate_min_rank": {
+   "1": 1,
+   "2": 1,
+   "3": 2,
+   "4": 3,
+   "5": 4
+  },
+  "rank_gift": {
+   "money": {
+    "base": 150,
+    "growth": 2.6
+   },
+   "note": "승급 하사품(엽전) = base·growth^(L−2)"
+  },
+  "ending": {
+   "main_chapter_min_rank": "chapter_tier",
+   "final_chapter": 5,
+   "note": "메인 시나리오 N장은 신분 Rank N 이상에서 진행. 5장 완료 = 엔딩"
+  },
+  "reputation_budget": {
+   "max": 357397,
+   "reference": 272821,
+   "min": 230534,
+   "by_source": {
+    "유산(답사+기증)": [
+     195174,
+     110599,
+     68311
+    ],
+    "장비 서사 퀘스트": [
+     28643,
+     28643,
+     28643
+    ],
+    "탈것 퀘스트": [
+     20149,
+     20149,
+     20149
+    ],
+    "동료 영입": [
+     27049,
+     27049,
+     27049
+    ],
+    "탐색 연속전투": [
+     10840,
+     10840,
+     10840
+    ],
+    "역사·설화 이벤트": [
+     15909,
+     15909,
+     15909
+    ],
+    "무역 퀘스트": [
+     6530,
+     6530,
+     6530
+    ],
+    "권역·신화 보스": [
+     19699,
+     19699,
+     19699
+    ],
+    "메인 시나리오": [
+     6336,
+     6336,
+     6336
+    ],
+    "화첩": [
+     1290,
+     1290,
+     1290
+    ],
+    "탁본": [
+     1760,
+     1760,
+     1760
+    ],
+    "권역 전수 수집 보너스": [
+     19517,
+     19517,
+     19517
+    ],
+    "화첩·탁본 완성": [
+     4500,
+     4500,
+     4500
+    ]
+   },
+   "columns": [
+    "최대(전부 기증)",
+    "기준(3택 균등)",
+    "최소(기증 0)"
+   ],
+   "excludes": [
+    "bounty",
+    "gwana_doc",
+    "seasonal",
+    "normal_kill",
+    "town_invest"
+   ],
+   "r5_share_of_max": 0.166,
+   "r5_share_of_reference": 0.218
+  }
+ },
+ "economy": {
+  "heritage_rep": {
+   "base": 100,
+   "growth": 2.15,
+   "jitter": 0.08
+  },
+  "heritage_money": {
+   "base": 200,
+   "growth": 2.3,
+   "jitter": 0.08
+  },
+  "category_mult": {
+   "architecture": {
+    "rep": 0.9,
+    "money": 0.8
+   },
+   "scenic": {
+    "rep": 0.8,
+    "money": 0.6
+   },
+   "ceramic_specialty": {
+    "rep": 1.0,
+    "money": 1.25
+   },
+   "folk_craft": {
+    "rep": 0.9,
+    "money": 0.9
+   },
+   "metal": {
+    "rep": 1.0,
+    "money": 1.15
+   },
+   "document": {
+    "rep": 1.2,
+    "money": 0.9
+   }
+  },
+  "hidden_mult": 1.25,
+  "rank_gap": {
+   "above_bonus_per_tier": 0.1,
+   "below_penalty_per_tier": 0.15,
+   "floor": 0.4
+  },
+  "venue": {
+   "gwana": {
+    "rep": 1.0
+   },
+   "hyanggyo": {
+    "rep": 1.1,
+    "categories": [
+     "document",
+     "architecture"
+    ]
+   },
+   "antique": {
+    "money": 1.0
+   },
+   "black_market": {
+    "money": 1.25,
+    "bust_chance": 0.1,
+    "bust_rep_loss": 0.3
+   }
+  },
+  "knowledge_bonus": {
+   "sang_money_per_rank": 0.03,
+   "sa_rep_per_rank": 0.01
+  },
+  "region_collection_bonus": 0.1,
+  "quest_rep": {
+   "base": 120,
+   "growth": 1.9
+  },
+  "quest_money": {
+   "base": 100,
+   "growth": 2.1
+  },
+  "quest_type_mult": {
+   "gear": {
+    "rep": 1.0,
+    "money": 0.6
+   },
+   "mount": {
+    "rep": 1.2,
+    "money": 0.5
+   },
+   "companion": {
+    "rep": 0.8,
+    "money": 0.4
+   },
+   "instance": {
+    "rep": 1.5,
+    "money": 1.2
+   },
+   "event": {
+    "rep": 1.3,
+    "money": 1.0
+   },
+   "main": {
+    "rep": 2.0,
+    "money": 1.5
+   },
+   "bounty": {
+    "rep": 0.4,
+    "money": 0.6
+   },
+   "trade": {
+    "rep": 0.5,
+    "money": 0.0
+   },
+   "gwana_doc": {
+    "rep": 0.5,
+    "money": 0.5
+   }
+  },
+  "enemy_rep": {
+   "base": 5,
+   "growth": 2.2
+  },
+  "enemy_money": {
+   "base": 8,
+   "growth": 2.2
+  },
+  "boss_mult": {
+   "rep": 25,
+   "money": 15
+  },
+  "price": {
+   "growth": 3.0,
+   "base": {
+    "weapon": 60,
+    "armor": 80,
+    "shoes": 20,
+    "accessory": 45,
+    "book": 250,
+    "mount_ground": 150,
+    "mount_water": 200,
+    "specialty": 20,
+    "specialty_crafted": 60
+   }
+  },
+  "wage_per_day": {
+   "base": 3,
+   "growth": 2.0,
+   "note": "동행 동료 일급 = base·growth^(tier−1). 막사 대기 시 0"
+  },
+  "upkeep_per_day": {
+   "base": 10,
+   "growth": 1.8,
+   "note": "식량·탕약·수리·통행·숙박 평균 일일 지출 추정(시뮬레이터 전용)"
+  },
+  "heritage_discovery_share": 0.35,
+  "_discovery_note": "유산 명성 = 답사 명성(선택과 무관, 기본값×35%) + 기증 명성(기본값×65%). 3택에 따른 명성 변동 폭을 0~100% → 35~100% 로 축소",
+  "repeatable_sources": [
+   "bounty",
+   "gwana_doc",
+   "seasonal",
+   "normal_kill",
+   "town_invest"
+  ],
+  "_repeatable_note": "반복 원천은 전국 명성(신분)에는 들어가지만 최대치 산정과 도(道) 명성에는 포함하지 않는다(파밍으로 도시 발전을 우회하지 못하게)"
+ },
+ "trade": {
+  "buy_at_origin": 0.72,
+  "buy_elsewhere": 1.1,
+  "sell_by_hops": [
+   0.6,
+   0.95,
+   1.15,
+   1.35
+  ],
+  "specialty_quest_margin": 1.8,
+  "rice_sell_spread": 0.9,
+  "rice_price_range": [
+   35,
+   80
+  ],
+  "restock_days": 5,
+  "sell_spread_general": 0.5
+ },
+ "town_dev": {
+  "max": 5,
+  "cost_base": 800,
+  "cost_growth": 1.6,
+  "rep_ratio": 0.08,
+  "barracks_slots_per_level": 2,
+  "standing_required": true,
+  "_standing_note": "도시 발전 L단계 = 엽전 + 해당 도(道) 명성 ≥ provinces[].standing_req[L-1] (economy_sim.py --write 산출)",
+  "capital_primary": true,
+  "benefits": {
+   "_note": "엽전 여유 추천안: 감영(도 수부) 발전 = 주 지출처(도 전역 혜택), 기타 대도시 = 선택 과제(해당 도시 국지 혜택). 도시 발전은 엽전 + 도 명성 둘 다 필요.",
+   "capital_per_level": {
+    "province_buy_discount": 0.02,
+    "province_inn_discount": 0.1,
+    "province_fast_travel_discount": 0.08,
+    "barracks_slots": 2
+   },
+   "capital_level5": {
+    "title": "감영 중흥",
+    "province_rep_bonus": 0.1,
+    "note": "5단계 달성 시 그 도에서 얻는 1회성 명성 +10%"
+   },
+   "city_per_level": {
+    "local_buy_discount": 0.03,
+    "local_sell_bonus": 0.02
+   },
+   "premium_unlock": "03 시트 specialties.dev_level (원산지 도시 발전도)"
+  }
+ },
+ "route_rules": {
+  "1": {
+   "nodes": [
+    2,
+    2
+   ],
+   "scope": "same_region"
+  },
+  "2": {
+   "nodes": [
+    2,
+    2
+   ],
+   "scope": "same_region"
+  },
+  "3": {
+   "nodes": [
+    3,
+    3
+   ],
+   "scope": "adjacent",
+   "regions": [
+    2,
+    3
+   ]
+  },
+  "4": {
+   "nodes": [
+    3,
+    3
+   ],
+   "scope": "adjacent",
+   "regions": [
+    2,
+    3
+   ]
+  },
+  "5": {
+   "nodes": [
+    4,
+    5
+   ],
+   "scope": "nationwide",
+   "regions": [
+    3,
+    5
+   ]
+  }
+ },
+ "battle": {
+  "gauge_max": 1000,
+  "gauge_rate_divisor": 10,
+  "_gauge_note": "rate = combat_speed×(1+보정)/10 → G 0→1000 소요 T = 10000/(Speed×(1+보정)) (초기 기획 공식과 동일)",
+  "ap": {
+   "start": 3,
+   "per_turn": 2,
+   "max": 5,
+   "speed_bonus_step": 20,
+   "speed_bonus_base": 80
+  },
+  "restart_gauge_by_ap": {
+   "0": 300,
+   "1": 200,
+   "2": 0,
+   "3": -150,
+   "4": -300,
+   "5": -300,
+   "6": -380,
+   "7": -460,
+   "8": -540
+  },
+  "min_damage": 1,
+  "def_cap": 200,
+  "resist_cap": 0.9,
+  "crit": {
+   "base_rate": 0.05,
+   "mult": 1.5
+  },
+  "knowledge_damage_per_rank": 0.08,
+  "affinity_mult": 1.5,
+  "affinity_beats": {
+   "yu": "bul",
+   "bul": "seon",
+   "seon": "yu"
+  },
+  "dying_hp_ratio": 0.3,
+  "flee_normal": [
+   0.75,
+   0.95
+  ],
+  "flee_boss": 0.0,
+  "wave_intermission_free_actions": 1,
+  "clutch_target_turns": [
+   15,
+   16
+  ],
+  "hero_combat_scale": 1.25,
+  "companion_combat_scale": 1.2,
+  "combat_env": "weather_time_sqrt",
+  "_env_note": "전투 속도 = (V_base+V_mount)×sqrt(M_weather×M_time)×피로 보정×combat_scale. 지형·과적은 전투 제외(완전판 7.3 해석)",
+  "neutral_affinity_mult": 1.2,
+  "neutral_knowledge": "max_life",
+  "_neutral_note": "무(none) 상성 공격: 상성 1.5배를 못 받는 대신 ×1.2 고정 + 지식 보정에 생활 지식(사·농·공·상) 최고 랭크 사용 (완전판에 무 속성 규칙이 없어 추가)",
+  "party_merge": {
+   "_note": "동료 통합 전투: 전장에는 주인공 1명만 선다. 동행 동료의 스킬이 주인공 스킬 목록에 합쳐지고, 동료 수만큼 AP 상한·턴당 충전이 늘어난다. 한 턴에 AP가 남는 동안 여러 스킬을 연속 사용하며, 턴 동안 쓴 AP 총합으로 다음 게이지 재시작값이 정해진다.",
+   "ap_max_per_companion": 1,
+   "ap_regen_per_companion": 1,
+   "ap_start_per_companion": 0,
+   "companion_skill_once_per_turn": true,
+   "companion_skill_mult": {
+    "base": 1.0,
+    "per_tier_from_3": 0.06,
+    "per_star": 0.04
+   },
+   "exclude_companion_skills": [
+    "sk_basic_strike"
+   ],
+   "gauge_boost_to_self": true,
+   "basic_skill_once_per_turn": true,
+   "_basic_note": "1AP 기본기(일격·주판 치기 등)는 턴당 1회 — 연속 행동에서 1AP 난타가 스킬보다 효율적이 되는 것을 막음"
+  },
+  "enemy_damage_mult": 1.0,
+  "affinity_mult_enemy": 1.15,
+  "_affinity_enemy_note": "적→주인공 상성 배율. 동료 통합으로 주인공 혼자 모든 피격을 받으므로 1.5 대신 1.15 (아군→적은 1.5 유지)",
+  "normal_enemy_mult": {
+   "atk": 0.6,
+   "hp": 0.8
+  },
+  "_normal_enemy_note": "보스가 아닌 적의 전투 배율. 동료 통합으로 모든 적이 주인공 1명만 노리므로 다수 조우 난도를 보정"
+ },
+ "movement": {
+  "v_base": 80.0,
+  "v_min": 15.0,
+  "terrain": {
+   "road": 1.0,
+   "water": 0.85,
+   "mountain": 0.65,
+   "trail": 0.8
+  },
+  "weather": {
+   "clear": 1.0,
+   "rain": 0.8,
+   "storm": 0.7,
+   "snow": 0.6,
+   "fog": 0.9
+  },
+  "time": {
+   "day": 1.0,
+   "night": 0.75,
+   "night_torch": 0.9
+  },
+  "weight": [
+   {
+    "max": 0.3,
+    "mult": 1.15
+   },
+   {
+    "max": 0.7,
+    "mult": 1.0
+   },
+   {
+    "max": 1.0,
+    "mult": 0.8
+   }
+  ],
+  "weight_over_formula": "1.0 - 0.5*(ratio-0.7)",
+  "carry_base": 30.0,
+  "game_minutes_per_walk_second": 24,
+  "encounter": {
+   "base_per_10li": 0.04,
+   "mountain_add": 0.15,
+   "night_add": 0.05,
+   "mask_danger_max_add": 0.1,
+   "hazard_node_add": 0.25
+  },
+  "arrive_distance_px": 5.0,
+  "snap_radius_ratio": 0.038,
+  "zoom": [
+   1.0,
+   3.0
+  ],
+  "station_fast_travel": {
+   "money_per_li": 0.4,
+   "time_ratio": 0.3,
+   "min_rank": 1
+  },
+  "mount_stamina_per_10li": 3.0,
+  "field_pace_mult": 0.75,
+  "known_road_pace_mult": 2.0,
+  "fast_forward": 3.0,
+  "_pace_note": "필드 행군 배율은 화면상 이동(px/s)에만 적용 — 전투 속도·AP·게임 시간(거리 기준)은 V_base 그대로. 처음 걷는 길 ×0.75(풍경·조우 체감), 한 번 지난 간선 ×2.0(익숙한 길), 빨리 감기 ×3"
+ },
+ "survival": {
+  "tick_li": 10,
+  "fatigue_per_tick": 2.0,
+  "fatigue_mult": {
+   "terrain": {
+    "road": 1.0,
+    "water": 0.8,
+    "mountain": 1.6,
+    "trail": 1.2
+   },
+   "weather": {
+    "clear": 1.0,
+    "rain": 1.3,
+    "storm": 1.6,
+    "snow": 1.5,
+    "fog": 1.1
+   },
+   "no_shoes": 1.3,
+   "weight": [
+    {
+     "max": 0.3,
+     "mult": 0.9
+    },
+    {
+     "max": 0.7,
+     "mult": 1.0
+    },
+    {
+     "max": 1.0,
+     "mult": 1.25
+    },
+    {
+     "max": 99,
+     "mult": 1.6
+    }
+   ],
+   "mounted": 0.5
+  },
+  "fatigue_stages": [
+   {
+    "min": 41,
+    "max": 70,
+    "name": "주의",
+    "speed": 0.9
+   },
+   {
+    "min": 71,
+    "max": 89,
+    "name": "경고",
+    "def_pct": -0.2,
+    "start_ap": -1,
+    "gauge_rate": -0.2
+   },
+   {
+    "min": 90,
+    "max": 99,
+    "name": "위험",
+    "speed": 0.5,
+    "disease_chance_bad_weather": 0.1
+   },
+   {
+    "min": 100,
+    "max": 100,
+    "name": "탈진",
+    "immobile": true
+   }
+  ],
+  "satiety_per_tick": 2.5,
+  "satiety_winter_mult": 1.5,
+  "hunger_threshold": 30,
+  "hunger_fatigue_mult": 1.3,
+  "starve_hp_loss_per_5li": 0.05,
+  "starve_atk_mult": 0.5,
+  "hp_regen_per_tick": 1,
+  "freshness_loss_per_node": 5.0,
+  "auto_eat_below": 30,
+  "camp": {
+   "fatigue_recover": [
+    30,
+    50
+   ],
+   "hours": 8,
+   "meals": 1
+  },
+  "inn": {
+   "fatigue_recover": 100,
+   "cost_city": 20,
+   "cost_town": 10
+  },
+  "temple_rest": {
+   "fatigue_recover": [
+    60,
+    80
+   ],
+   "donation": 10
+  },
+  "spring": {
+   "fatigue_recover": 100,
+   "cost": 15,
+   "buff": "BUFF_WARM_SPRING_VITALITY",
+   "buff_days": 3
+  },
+  "hp_base": 100,
+  "hp_cap": 250
+ },
+ "time": {
+  "start_day": 1,
+  "start_hour": 7,
+  "day_hours": [
+   5,
+   19
+  ],
+  "days_per_term": 15,
+  "terms_per_year": 24
+ },
+ "weather_table": {
+  "_note": "권역 기후 × 계절(0봄 1여름 2가을 3겨울) 확률. 일 단위로 갱신",
+  "warm": [
+   {
+    "clear": 0.6,
+    "rain": 0.25,
+    "fog": 0.15
+   },
+   {
+    "clear": 0.45,
+    "rain": 0.4,
+    "storm": 0.15
+   },
+   {
+    "clear": 0.7,
+    "rain": 0.2,
+    "fog": 0.1
+   },
+   {
+    "clear": 0.7,
+    "rain": 0.15,
+    "snow": 0.15
+   }
+  ],
+  "temperate": [
+   {
+    "clear": 0.6,
+    "rain": 0.2,
+    "fog": 0.2
+   },
+   {
+    "clear": 0.45,
+    "rain": 0.4,
+    "storm": 0.15
+   },
+   {
+    "clear": 0.7,
+    "rain": 0.2,
+    "fog": 0.1
+   },
+   {
+    "clear": 0.55,
+    "snow": 0.4,
+    "fog": 0.05
+   }
+  ],
+  "cold": [
+   {
+    "clear": 0.55,
+    "rain": 0.2,
+    "snow": 0.1,
+    "fog": 0.15
+   },
+   {
+    "clear": 0.5,
+    "rain": 0.35,
+    "storm": 0.15
+   },
+   {
+    "clear": 0.6,
+    "rain": 0.2,
+    "snow": 0.2
+   },
+   {
+    "clear": 0.4,
+    "snow": 0.55,
+    "storm": 0.05
+   }
+  ],
+  "frigid": [
+   {
+    "clear": 0.5,
+    "snow": 0.35,
+    "fog": 0.15
+   },
+   {
+    "clear": 0.55,
+    "rain": 0.35,
+    "fog": 0.1
+   },
+   {
+    "clear": 0.5,
+    "snow": 0.45,
+    "fog": 0.05
+   },
+   {
+    "clear": 0.3,
+    "snow": 0.6,
+    "storm": 0.1
+   }
+  ]
+ },
+ "facilities": {
+  "checkpoint": {
+   "min_rank": 3,
+   "pass_item": "item_tonghaengjeung",
+   "pass_price": 300
+  },
+  "ferry": {
+   "wind_cancel_weather": [
+    "storm"
+   ],
+   "fare_mult_rain": 1.5
+  },
+  "beacon": {
+   "light_cost_money": 30,
+   "reveal": "region_hidden_nodes"
+  },
+  "search": {
+   "radius_li": 13,
+   "radius_li_per_sa": 2,
+   "detect_chance": 0.5,
+   "detect_per_sa": 0.05,
+   "hours": 1
+  },
+  "gather": {
+   "hours": 2,
+   "yield": [
+    1,
+    3
+   ],
+   "yield_per_nong": 0.08
+  },
+  "hunt": {
+   "hours": 3,
+   "encounter_beast_chance": 0.6
+  },
+  "bookstore": {
+   "knowledge_book_price": {
+    "base": 120,
+    "growth": 2.2
+   }
+  },
+  "drill": {
+   "cost": {
+    "base": 100,
+    "growth": 2.5
+   }
+  },
+  "temple_blessing": {
+   "donation": 100,
+   "buff": "BUFF_TEMPLE_GAHO",
+   "days": 7
+  },
+  "rumor": {
+   "radius_li": 8,
+   "radius_li_per_sa": 1,
+   "chance_per_tick": 0.12,
+   "chance_per_sa": 0.02,
+   "note": "행군 10리 틱마다 주변 은닉지 소문 — 발견 시 지도에 '?' 표시(탐색 없이도 가끔 발견)"
+  }
+ },
+ "barracks": {
+  "base_slots": 10,
+  "rank_bonus": {
+   "1": 0,
+   "2": 2,
+   "3": 5,
+   "4": 7,
+   "5": 10
+  },
+  "max_slots": 30,
+  "dispatch": {
+   "seodang": {
+    "name": "서당 훈도",
+    "facility": "hyanggyo",
+    "per_day": {
+     "knowledge_xp": {
+      "yu": 6
+     },
+     "clue_chance": 0.1
+    }
+   },
+   "dunjeon": {
+    "name": "둔전 경작",
+    "facility": "market5",
+    "per_day": {
+     "items": [
+      {
+       "id": "herb_gamcho",
+       "qty": 1
+      },
+      {
+       "id": "food_barley",
+       "qty": 1
+      }
+     ]
+    }
+   },
+   "forge": {
+    "name": "대장간 보조",
+    "facility": "forge",
+    "per_day": {
+     "items": [
+      {
+       "id": "mat_iron",
+       "qty": 1
+      }
+     ],
+     "repair_discount": 0.2
+    }
+   },
+   "bobusang": {
+    "name": "5일장 보부상",
+    "facility": "market",
+    "per_day": {
+     "money_per_tier": 12
+    }
+   }
+  },
+  "star_stat_per_level": 0.08,
+  "star_bonus_per_level": 0.25,
+  "max_star": 5
+ },
+ "capture": {
+  "methods": {
+   "yu": {
+    "name": "고용",
+    "target_kind": "human",
+    "tool_kind": "포승",
+    "hire_fee_per_tier": 40
+   },
+   "bul": {
+    "name": "빙의(해원)",
+    "target_kind": "ghost",
+    "tool_kind": "염주"
+   },
+   "seon": {
+    "name": "봉인",
+    "target_kind": "yokai",
+    "tool_kind": "부적"
+   },
+   "mu": {
+    "name": "길들이기",
+    "target_kind": "beast",
+    "tool_kind": "덫",
+    "bait_bonus": 0.2
+   }
+  },
+  "family_match_mult": 1.5,
+  "underleveled_tool_mult": 0.4,
+  "dying_bonus_per_missing_ratio": 2.0,
+  "max_chance": 0.95,
+  "knowledge_bonus_per_rank": 0.03,
+  "captured_stat_ratio": 0.8
+ },
+ "save": {
+  "city_inn_only": true,
+  "checkpoint_on_inn_rest": true
+ },
+ "failsafe": {
+  "deadline_days": 30,
+  "time_decay_text": "조정에서 중앙 관군을 급파하여 사태가 수습되었다.",
+  "reputation_penalty": 0,
+  "codex_via_proclamation": true
+ },
+ "sheets": [
+  {
+   "no": "00",
+   "file": "00_overview.json",
+   "name": "총괄개요",
+   "target_count": 18
+  },
+  {
+   "no": "01",
+   "file": "01_heritage.json",
+   "name": "국가유산",
+   "target_count": 450
+  },
+  {
+   "no": "02",
+   "file": "02_equipment.json",
+   "name": "장착아이템",
+   "target_count": 205
+  },
+  {
+   "no": "03",
+   "file": "03_specialties.json",
+   "name": "조선특산물",
+   "target_count": 136
+  },
+  {
+   "no": "04",
+   "file": "04_food_staples.json",
+   "name": "식량_구황_수렵",
+   "target_count": 105
+  },
+  {
+   "no": "05",
+   "file": "05_materials.json",
+   "name": "기초생필품_제작",
+   "target_count": 44
+  },
+  {
+   "no": "06",
+   "file": "06_life_gear.json",
+   "name": "생활행장",
+   "target_count": 30
+  },
+  {
+   "no": "07",
+   "file": "07_mounts.json",
+   "name": "탈것_퀘스트",
+   "target_count": 35
+  },
+  {
+   "no": "08",
+   "file": "08_capture_tools.json",
+   "name": "포획구",
+   "target_count": 20
+  },
+  {
+   "no": "09",
+   "file": "09_herbal_recipes.json",
+   "name": "한방약_레시피",
+   "target_count": 15
+  },
+  {
+   "no": "10",
+   "file": "10_herbs.json",
+   "name": "약초재료",
+   "target_count": 26
+  },
+  {
+   "no": "11",
+   "file": "11_food_recipes.json",
+   "name": "음식_레시피",
+   "target_count": 18
+  },
+  {
+   "no": "12",
+   "file": "12_enemies.json",
+   "name": "조선설화_적목록",
+   "target_count": 42
+  },
+  {
+   "no": "13",
+   "file": "13_companions.json",
+   "name": "동료_캐릭터",
+   "target_count": 65
+  },
+  {
+   "no": "14",
+   "file": "14_skills.json",
+   "name": "전체스킬_통합",
+   "target_count": 346
+  },
+  {
+   "no": "15",
+   "file": "15_recipe_books.json",
+   "name": "제작비전서",
+   "target_count": 24
+  },
+  {
+   "no": "16",
+   "file": "16_mojak_gear.json",
+   "name": "고유제작_전투장착(모작)",
+   "target_count": 24
+  },
+  {
+   "no": "17",
+   "file": "17_instances.json",
+   "name": "탐색_미니게임_연속전투",
+   "target_count": 8
+  },
+  {
+   "no": "18",
+   "file": "18_status_effects.json",
+   "name": "상태이상_버프",
+   "target_count": 8
+  },
+  {
+   "no": "19",
+   "file": "19_classes_knowledge.json",
+   "name": "클래스_지식_사농공상",
+   "target_count": 3
+  },
+  {
+   "no": "20",
+   "file": "20_events.json",
+   "name": "역사설화_이벤트_시나리오",
+   "target_count": 7
+  },
+  {
+   "no": "21",
+   "file": "21_minigames.json",
+   "name": "미니게임_카탈로그",
+   "target_count": 21
+  },
+  {
+   "no": "22",
+   "file": "22_side_systems.json",
+   "name": "보조시스템(화첩·수배·세시·탁본)",
+   "target_count": 4
+  }
+ ],
+ "content_plan": {
+  "_note": "완성판 목표 콘텐츠 수량(등급 1~5). economy_sim.py 가 이 수량으로 명성·엽전 총공급을 계산해 신분 임계값을 산출한다. 현재 데이터 수량과 별개.",
+  "heritage": [
+   150,
+   130,
+   95,
+   50,
+   25
+  ],
+  "heritage_hidden_share": 0.35,
+  "gear_quest": [
+   0,
+   0,
+   0,
+   12,
+   12
+  ],
+  "mount_quest": [
+   0,
+   0,
+   0,
+   9,
+   6
+  ],
+  "companion": [
+   8,
+   18,
+   20,
+   13,
+   6
+  ],
+  "instance": [
+   0,
+   2,
+   1,
+   2,
+   3
+  ],
+  "event": [
+   6,
+   6,
+   5,
+   4,
+   3
+  ],
+  "main": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "trade": [
+   8,
+   8,
+   7,
+   5,
+   2
+  ],
+  "bounty": [
+   6,
+   6,
+   5,
+   4,
+   2
+  ],
+  "kills": [
+   60,
+   60,
+   50,
+   40,
+   20
+  ],
+  "boss": [
+   0,
+   0,
+   0,
+   6,
+   4
+  ],
+  "town_dev_levels": 25,
+  "heritage_use_share": 0.2,
+  "_use_share": "보상 유산 중 직접 사용 비율. 매각 비율 = 1 − donation_share − use_share",
+  "hwacheop": {
+   "scenes": 13,
+   "scenic_snapshots": 30
+  },
+  "takbon_sheets": 22,
+  "_order_model": "진행 시뮬: 신분+1 등급까지 자유 탐방(가중 1.0), 그 위 등급 유산은 가중 0.2(위험 지역 선행 탐험). 퀘스트는 등급−1 신분부터"
+ },
+ "provinces": [
+  {
+   "id": "P_GYEONGGI",
+   "name": "경기도",
+   "regions": [
+    "MAP_01",
+    "MAP_02"
+   ],
+   "capital": "ND_02_CITY_HANYANGGYEONGJO",
+   "standing_req": [
+    2300,
+    5600,
+    9500,
+    13800,
+    18450
+   ],
+   "standing_max": 47059,
+   "standing_ref": 36009
+  },
+  {
+   "id": "P_GANGWON",
+   "name": "강원도",
+   "regions": [
+    "MAP_03",
+    "MAP_04"
+   ],
+   "capital": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "standing_req": [
+    1500,
+    3700,
+    6250,
+    9100,
+    12200
+   ],
+   "standing_max": 34082,
+   "standing_ref": 25397
+  },
+  {
+   "id": "P_CHUNGCHEONG",
+   "name": "충청도",
+   "regions": [
+    "MAP_05",
+    "MAP_06"
+   ],
+   "capital": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "standing_req": [
+    2800,
+    6950,
+    11750,
+    17100,
+    22850
+   ],
+   "standing_max": 52554,
+   "standing_ref": 42520
+  },
+  {
+   "id": "P_JEOLLA",
+   "name": "전라도",
+   "regions": [
+    "MAP_07",
+    "MAP_08"
+   ],
+   "capital": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "standing_req": [
+    3150,
+    7700,
+    13050,
+    19000,
+    25350
+   ],
+   "standing_max": 60876,
+   "standing_ref": 48696
+  },
+  {
+   "id": "P_GYEONGSANG",
+   "name": "경상도",
+   "regions": [
+    "MAP_09",
+    "MAP_10"
+   ],
+   "capital": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "standing_req": [
+    3500,
+    8650,
+    14600,
+    21250,
+    28400
+   ],
+   "standing_max": 66547,
+   "standing_ref": 53614
+  },
+  {
+   "id": "P_HWANGHAE",
+   "name": "황해도",
+   "regions": [
+    "MAP_11",
+    "MAP_12"
+   ],
+   "capital": "ND_12_CITY_HAEJUMOK",
+   "standing_req": [
+    650,
+    1650,
+    2750,
+    4050,
+    5400
+   ],
+   "standing_max": 19976,
+   "standing_ref": 12634
+  },
+  {
+   "id": "P_PYEONGAN",
+   "name": "평안도",
+   "regions": [
+    "MAP_13",
+    "MAP_14"
+   ],
+   "capital": "ND_13_CITY_PYEONGYANGBU",
+   "standing_req": [
+    1150,
+    2800,
+    4700,
+    6850,
+    9150
+   ],
+   "standing_max": 27136,
+   "standing_ref": 19095
+  },
+  {
+   "id": "P_HAMGYEONG",
+   "name": "함경도",
+   "regions": [
+    "MAP_15",
+    "MAP_16"
+   ],
+   "capital": "ND_15_CITY_HAMHEUNGBU",
+   "standing_req": [
+    1100,
+    2750,
+    4700,
+    6800,
+    9100
+   ],
+   "standing_max": 26994,
+   "standing_ref": 18735
+  },
+  {
+   "id": "P_JEJU",
+   "name": "제주",
+   "regions": [
+    "MAP_17"
+   ],
+   "capital": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "standing_req": [
+    600,
+    1500,
+    2550,
+    3700,
+    4900
+   ],
+   "standing_max": 17672,
+   "standing_ref": 11622
+  }
+ ]
+}

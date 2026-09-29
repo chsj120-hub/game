@@ -1,0 +1,497 @@
+{
+ "_schema": "13_동료. family=yu(28)|bul(9)|seon(13)|none(무속성 15) 목표. speed=이동속도 척도(전투속도=speed×companion_combat_scale). 동료 기여 = ①자기 스킬로 전투 참여 ②knowledge_add 파티 지식 합산 ③carry_bonus 짐 무게 가산. 스탯은 주인공에 합산하지 않는다. 일급=economy.wage_per_day(tier), 막사 대기 시 0. recruit.route=영입 동선 큐. 주인공 정의는 19_classes_knowledge.json.",
+ "companions": [
+  {
+   "id": "cp_heojun",
+   "name": "허준",
+   "family": "yu",
+   "role": "healer",
+   "tier": 3,
+   "yu_bul_seon_type": "yu",
+   "element": "wood",
+   "hp": 150,
+   "atk": 20,
+   "def": 16,
+   "speed": 88,
+   "res": 0.05,
+   "skills": [
+    "sk_heojun_heal",
+    "sk_heojun_group"
+   ],
+   "knowledge": {
+    "yu": 3,
+    "nong": 5
+   },
+   "knowledge_add": {
+    "yu": 1,
+    "nong": 2
+   },
+   "recruit": {
+    "min_rank": 3,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ]
+   },
+   "lore_tag": "역사",
+   "carry_bonus": 12
+  },
+  {
+   "id": "cp_jeongyakyong",
+   "name": "정약용",
+   "family": "yu",
+   "role": "support",
+   "tier": 3,
+   "yu_bul_seon_type": "yu",
+   "element": "none",
+   "hp": 150,
+   "atk": 23,
+   "def": 16,
+   "speed": 88,
+   "res": 0.05,
+   "skills": [
+    "sk_jyy_plan",
+    "sk_basic_strike"
+   ],
+   "knowledge": {
+    "yu": 5,
+    "gong": 4,
+    "sa": 3
+   },
+   "knowledge_add": {
+    "yu": 2,
+    "gong": 2,
+    "sa": 1
+   },
+   "recruit": {
+    "min_rank": 3,
+    "route": [
+     "ND_02_CITY_SUWONHWASEONG",
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG"
+    ]
+   },
+   "lore_tag": "역사",
+   "carry_bonus": 12
+  },
+  {
+   "id": "cp_yisunsin",
+   "name": "이순신",
+   "family": "yu",
+   "role": "attacker",
+   "tier": 4,
+   "yu_bul_seon_type": "yu",
+   "element": "fire",
+   "hp": 171,
+   "atk": 43,
+   "def": 21,
+   "speed": 90,
+   "res": 0.05,
+   "skills": [
+    "sk_yss_volley",
+    "sk_basic_strike"
+   ],
+   "knowledge": {
+    "yu": 4,
+    "sa": 3
+   },
+   "knowledge_add": {
+    "yu": 2,
+    "sa": 1
+   },
+   "recruit": {
+    "min_rank": 4,
+    "route": [
+     "ND_10_FORT_TONGYEONGTONGJEYEONG",
+     "ND_10_CITY_JINJUMOK",
+     "ND_08_FORT_YEOSUJWASUYEONG"
+    ]
+   },
+   "lore_tag": "역사",
+   "carry_bonus": 16
+  },
+  {
+   "id": "cp_samyeong",
+   "name": "사명대사 유정",
+   "family": "bul",
+   "role": "tank",
+   "tier": 4,
+   "yu_bul_seon_type": "bul",
+   "element": "holy",
+   "hp": 247,
+   "atk": 28,
+   "def": 33,
+   "speed": 90,
+   "res": 0.05,
+   "skills": [
+    "sk_samyeong_guard",
+    "sk_basic_strike"
+   ],
+   "knowledge": {
+    "bul": 5
+   },
+   "knowledge_add": {
+    "bul": 2
+   },
+   "recruit": {
+    "min_rank": 4,
+    "route": [
+     "ND_10_TOWN_MILYANG",
+     "ND_10_TEMPLE_HAEINSA",
+     "ND_09_CITY_GYEONGJUBU"
+    ]
+   },
+   "lore_tag": "역사",
+   "carry_bonus": 18
+  },
+  {
+   "id": "cp_seosan",
+   "name": "서산대사 휴정",
+   "family": "bul",
+   "role": "support",
+   "tier": 4,
+   "yu_bul_seon_type": "bul",
+   "element": "holy",
+   "hp": 190,
+   "atk": 32,
+   "def": 24,
+   "speed": 90,
+   "res": 0.05,
+   "skills": [
+    "sk_seosan_banner",
+    "sk_basic_strike"
+   ],
+   "knowledge": {
+    "bul": 6,
+    "sa": 2
+   },
+   "knowledge_add": {
+    "bul": 3,
+    "sa": 1
+   },
+   "recruit": {
+    "min_rank": 4,
+    "route": [
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_13_CITY_PYEONGYANGBU",
+     "ND_11_CITY_HWANGJUMOK"
+    ]
+   },
+   "lore_tag": "역사",
+   "carry_bonus": 14
+  },
+  {
+   "id": "cp_jeonuchi",
+   "name": "전우치",
+   "family": "seon",
+   "role": "mage",
+   "tier": 3,
+   "yu_bul_seon_type": "seon",
+   "element": "fire",
+   "hp": 127,
+   "atk": 33,
+   "def": 11,
+   "speed": 98,
+   "res": 0.05,
+   "skills": [
+    "sk_juc_firetalisman",
+    "sk_juc_hex"
+   ],
+   "knowledge": {
+    "seon": 5
+   },
+   "knowledge_add": {
+    "seon": 2
+   },
+   "recruit": {
+    "min_rank": 3,
+    "route": [
+     "ND_01_CITY_GAESEONGBU",
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG"
+    ]
+   },
+   "lore_tag": "설화",
+   "carry_bonus": 10
+  },
+  {
+   "id": "cp_namsago",
+   "name": "남사고",
+   "family": "seon",
+   "role": "support",
+   "tier": 3,
+   "yu_bul_seon_type": "seon",
+   "element": "earth",
+   "hp": 150,
+   "atk": 23,
+   "def": 16,
+   "speed": 88,
+   "res": 0.05,
+   "skills": [
+    "sk_nsg_fengshui",
+    "sk_basic_strike"
+   ],
+   "knowledge": {
+    "seon": 4,
+    "sa": 4
+   },
+   "knowledge_add": {
+    "seon": 2,
+    "sa": 2
+   },
+   "recruit": {
+    "min_rank": 3,
+    "route": [
+     "ND_04_CITY_GANGREUNGDAEDOHOBU",
+     "ND_04_CITY_WONJUGANGWONGAMYEONG",
+     "ND_09_CITY_GYEONGJUBU"
+    ]
+   },
+   "lore_tag": "역사",
+   "carry_bonus": 12
+  },
+  {
+   "id": "cp_chakho",
+   "name": "착호갑사 박포수",
+   "family": "none",
+   "role": "attacker",
+   "tier": 2,
+   "yu_bul_seon_type": "none",
+   "element": "metal",
+   "hp": 99,
+   "atk": 21,
+   "def": 9,
+   "speed": 100,
+   "res": 0.0,
+   "skills": [
+    "sk_chakho_shot",
+    "sk_basic_strike"
+   ],
+   "knowledge": {
+    "sa": 2
+   },
+   "knowledge_add": {
+    "sa": 1
+   },
+   "recruit": {
+    "min_rank": 2,
+    "route": [
+     "ND_14_TOWN_GANGGYE",
+     "ND_14_CITY_UIJUMOK"
+    ]
+   },
+   "lore_tag": "창작",
+   "carry_bonus": 18
+  },
+  {
+   "id": "cp_bari",
+   "name": "무녀 바리",
+   "family": "none",
+   "role": "healer",
+   "tier": 3,
+   "yu_bul_seon_type": "bul",
+   "element": "holy",
+   "hp": 150,
+   "atk": 20,
+   "def": 16,
+   "speed": 88,
+   "res": 0.05,
+   "skills": [
+    "sk_bari_purify",
+    "sk_bari_heal"
+   ],
+   "knowledge": {
+    "bul": 3,
+    "nong": 2
+   },
+   "knowledge_add": {
+    "bul": 1,
+    "nong": 1
+   },
+   "recruit": {
+    "min_rank": 3,
+    "route": [
+     "ND_08_TOWN_JINDO",
+     "ND_08_CITY_NAJUMOK",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ]
+   },
+   "lore_tag": "설화",
+   "carry_bonus": 12
+  },
+  {
+   "id": "cp_bobusang",
+   "name": "보부상 황행수",
+   "family": "none",
+   "role": "support",
+   "tier": 2,
+   "yu_bul_seon_type": "none",
+   "element": "none",
+   "hp": 110,
+   "atk": 16,
+   "def": 10,
+   "speed": 85,
+   "res": 0.0,
+   "skills": [
+    "sk_bbs_supply",
+    "sk_basic_strike"
+   ],
+   "knowledge": {
+    "sang": 4
+   },
+   "knowledge_add": {
+    "sang": 2
+   },
+   "recruit": {
+    "min_rank": 2,
+    "route": [
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_10_CITY_DONGRAEHYEON"
+    ]
+   },
+   "lore_tag": "창작",
+   "carry_bonus": 25
+  },
+  {
+   "id": "cp_kimhongdo",
+   "name": "단원 김홍도",
+   "family": "none",
+   "role": "support",
+   "tier": 3,
+   "yu_bul_seon_type": "none",
+   "element": "none",
+   "hp": 150,
+   "atk": 23,
+   "def": 16,
+   "speed": 88,
+   "res": 0.05,
+   "skills": [
+    "sk_khd_genre",
+    "sk_basic_strike"
+   ],
+   "knowledge": {
+    "gong": 6,
+    "sa": 3
+   },
+   "knowledge_add": {
+    "gong": 3,
+    "sa": 1
+   },
+   "recruit": {
+    "min_rank": 3,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_05_CITY_CHUNGJUMOK",
+     "ND_05_TOWN_DANYANG"
+    ]
+   },
+   "lore_tag": "역사",
+   "carry_bonus": 12
+  },
+  {
+   "id": "cp_sinyunbok",
+   "name": "혜원 신윤복",
+   "family": "none",
+   "role": "support",
+   "tier": 2,
+   "yu_bul_seon_type": "none",
+   "element": "none",
+   "hp": 110,
+   "atk": 16,
+   "def": 10,
+   "speed": 85,
+   "res": 0.0,
+   "skills": [
+    "sk_syb_danoh",
+    "sk_basic_strike"
+   ],
+   "knowledge": {
+    "gong": 5
+   },
+   "knowledge_add": {
+    "gong": 2
+   },
+   "recruit": {
+    "min_rank": 2,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_02_CITY_GWANGJUYUSUBU"
+    ]
+   },
+   "lore_tag": "역사",
+   "carry_bonus": 10
+  },
+  {
+   "id": "cp_hwangjini",
+   "name": "황진이",
+   "family": "none",
+   "role": "support",
+   "tier": 2,
+   "yu_bul_seon_type": "none",
+   "element": "none",
+   "hp": 110,
+   "atk": 16,
+   "def": 10,
+   "speed": 85,
+   "res": 0.0,
+   "skills": [
+    "sk_hjy_song",
+    "sk_basic_strike"
+   ],
+   "knowledge": {
+    "gong": 4,
+    "yu": 2
+   },
+   "knowledge_add": {
+    "gong": 2,
+    "yu": 1
+   },
+   "recruit": {
+    "min_rank": 2,
+    "route": [
+     "ND_01_CITY_GAESEONGBU",
+     "ND_01_CITY_GANGHWAYUSUBU"
+    ]
+   },
+   "lore_tag": "역사",
+   "carry_bonus": 10
+  },
+  {
+   "id": "cp_honggildong",
+   "name": "홍길동",
+   "family": "seon",
+   "role": "attacker",
+   "tier": 3,
+   "yu_bul_seon_type": "seon",
+   "element": "none",
+   "hp": 135,
+   "atk": 31,
+   "def": 14,
+   "speed": 108,
+   "res": 0.05,
+   "skills": [
+    "sk_hgd_clone",
+    "sk_basic_strike"
+   ],
+   "knowledge": {
+    "seon": 3,
+    "sang": 2
+   },
+   "knowledge_add": {
+    "seon": 1,
+    "sang": 1
+   },
+   "recruit": {
+    "min_rank": 3,
+    "route": [
+     "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
+     "ND_08_CITY_GWANGJUMOK",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ]
+   },
+   "lore_tag": "설화",
+   "carry_bonus": 14
+  }
+ ]
+}

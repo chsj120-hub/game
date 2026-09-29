@@ -1,0 +1,48 @@
+{
+ "_about": "수작업 유산(보상 아이템을 직접 지정). node=노드 이름(world_table). 나머지 유산은 build_world.py 가 노드 유형으로 자동 생성한다. tier_overrides 는 자동 생성 유산의 등급 지정.",
+ "curated": [
+  {"id": "her_001", "node": "불국사",                 "name": "경주 불국사",          "category": "architecture",      "tier": 5, "reward": "rec_bulguksa",         "lore": "역사"},
+  {"id": "her_002", "node": "경주 석굴암",             "name": "경주 석굴암 석굴",      "category": "architecture",      "tier": 5, "reward": "rec_seokguram",        "lore": "역사"},
+  {"id": "her_003", "node": "한양 경조",               "name": "서울 숭례문",          "category": "architecture",      "tier": 4, "reward": "rec_sungnyemun",       "lore": "역사"},
+  {"id": "her_004", "node": "수원화성",                "name": "수원 화성",            "category": "architecture",      "tier": 4, "reward": "rec_hwaseong",         "lore": "역사"},
+  {"id": "her_005", "node": "해인사",                  "name": "합천 해인사 장경판전",  "category": "architecture",      "tier": 5, "reward": "rec_janggyeong",       "lore": "역사", "minigame": "mg_janggyeong_vent"},
+  {"id": "her_006", "node": "강진 사당리 청자 가마터",  "name": "강진 청자 요지",        "category": "ceramic_specialty", "tier": 4, "reward": "spr_gangjin_celadon",  "lore": "역사"},
+  {"id": "her_007", "node": "광주 분원 백자 가마터",    "name": "광주 분원 백자 가마터", "category": "ceramic_specialty", "tier": 3, "reward": "spr_bunwon_porcelain", "lore": "역사"},
+  {"id": "her_008", "node": "통영 12공방 옛터",         "name": "통영 나전칠기 공방",    "category": "ceramic_specialty", "tier": 3, "reward": "spr_tongyeong_najeon", "lore": "역사"},
+  {"id": "her_009", "node": "제주 칠머리당",           "name": "제주 칠머리당 영등굿",  "category": "folk_craft",        "tier": 2, "reward": "eq_c2_yeongdeung",     "lore": "역사"},
+  {"id": "her_010", "node": "진도 씻김굿 당골판",       "name": "진도 씻김굿",          "category": "folk_craft",        "tier": 2, "reward": "eq_c2_ssitgim",        "lore": "역사"},
+  {"id": "her_011", "node": "헌릉",                    "name": "사인참사검",           "category": "metal",             "tier": 4, "reward": "eq_yu_weapon_4",       "lore": "역사"},
+  {"id": "her_012", "node": "고령 지산동 고분군",       "name": "고령 지산동 가야 금동관", "category": "metal",           "tier": 3, "reward": "eq_c3_gaya_crown",     "lore": "역사"},
+  {"id": "her_013", "node": "안동 도산서원",           "name": "훈민정음 해례본",       "category": "document",          "tier": 5, "reward": "eq_b5_hunminjeongeum", "lore": "역사", "minigame": "mg_hangul_jamo"},
+  {"id": "her_014", "node": "성균관 명륜당",           "name": "조선경국전",           "category": "document",          "tier": 3, "reward": "eq_b3_gyeonggukjeon",  "lore": "역사"},
+  {"id": "her_015", "node": "개성 만월대 옛터",         "name": "개성 만월대",          "category": "architecture",      "tier": 3, "reward": "rec_manwoldae",        "lore": "역사"},
+  {"id": "her_016", "node": "묘향산 보현사",           "name": "묘향산 보현사",        "category": "architecture",      "tier": 3, "reward": "rec_bohyeonsa",        "lore": "역사"},
+  {"id": "her_017", "node": "백두산 정계비 터",         "name": "백두산 정계비 터",      "category": "architecture",      "tier": 4, "reward": "rec_jeonggyebi",       "lore": "역사"},
+  {"id": "her_018", "node": "밀양 영남루",             "name": "밀양 영남루",          "category": "architecture",      "tier": 2, "reward": "rec_yeongnamru",       "lore": "역사"},
+  {"id": "her_019", "node": "문경새재 조령관",         "name": "문경 조령관문",        "category": "architecture",      "tier": 1, "reward": "rec_joryeong",         "lore": "역사"},
+  {"id": "her_020", "node": "삼척",                    "name": "삼척 죽서루",          "category": "architecture",      "tier": 2, "reward": "rec_jukseoru",         "lore": "역사"},
+  {"id": "her_021", "node": "평양부",                  "name": "평양 대동문",          "category": "architecture",      "tier": 2, "reward": "rec_daedongmun",       "lore": "역사"},
+  {"id": "her_022", "node": "함흥 본궁",               "name": "함흥 본궁",            "category": "architecture",      "tier": 3, "reward": "rec_bongung",          "lore": "역사"}
+ ],
+ "type_category": {
+  "city": "architecture", "fort": "architecture", "temple": "architecture", "scenic": "scenic",
+  "stupa": "metal", "tomb": "metal", "wreck": "ceramic_specialty", "ruin": "architecture", "seowon": "document", "shrine": "folk_craft"
+ },
+ "ruin_kiln_keyword": "가마",
+ "type_tier": {"city": 2, "fort": 2, "temple": 3, "scenic": 2, "stupa": 3, "tomb": 3, "wreck": 4, "ruin": 3, "seowon": 3, "shrine": 2},
+ "tier_overrides": {
+  "개성부": 3, "강화유수부": 3, "광주유수부": 2, "전등사": 3, "보광사": 2, "조계사": 2, "용주사": 3, "신륵사": 3,
+  "건봉사": 3, "백담사": 3, "금강산 구룡폭": 4, "철원 삼부연": 2, "월정사": 4, "삼척 신흥사": 2,
+  "속리산 법주사": 4, "구인사": 1, "마곡사": 3, "갑사": 3, "수덕사": 4, "금산사": 4, "내소사": 3, "실상사": 3,
+  "화엄사": 4, "송광사": 5, "대흥사": 4, "장성 백양사": 3, "명량 울돌목": 5, "부석사": 5, "고운사": 3,
+  "통도사": 5, "쌍계사": 3, "성불사": 3, "신천 패엽사": 2, "영명사": 2, "을밀대": 3, "백마산사": 2, "의주 통군정": 3,
+  "귀주사": 3, "석왕사": 4, "개심사": 2, "백두산 천지": 5, "관음사": 2, "존자암": 2, "성산일출봉": 4,
+  "한양 경조": 4, "남한산성": 4, "덕진진": 3, "진주목": 3, "경주부": 4,
+  "강화 부근리 고인돌": 2, "강화 참성단": 3, "금강산 유점사 옛터": 4, "익산 미륵사지 석탑": 5, "부여 정림사지 오층석탑": 4,
+  "공주 송산리 고분군": 4, "경주 대릉원": 5, "평양 동명왕릉": 4, "강서 대묘": 4, "김해 수로왕릉": 3, "영월 장릉": 3,
+  "신안 해저 무역선": 5, "태안 마도 침몰선": 4, "압록강 하구 침몰선": 3, "마운령 진흥왕 순수비": 4,
+  "지리산 천왕봉": 4, "칠보산": 3, "개마고원 삼수갑산": 3, "담양 소쇄원": 2, "계룡산 천황봉": 4, "계룡산 신도안": 3,
+  "전주 경기전": 4, "강릉 오죽헌": 3, "해주 소현서원": 3, "추사 유배지": 3, "삼성혈": 3, "묘향산 단군굴": 4,
+  "북청 사자놀음 마당": 2, "봉산 탈춤 성황당": 2, "화천 성황당": 1, "회령 오지 가마터": 2, "부안 유천리 청자 가마터": 4, "단양 수벌 고려가마터": 3
+ }
+}

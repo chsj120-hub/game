@@ -1,0 +1,172 @@
+{
+ "_schema": "04_식량. kind=staple(섬 단위 교역/조리 재료, 권역 시세=regions.rice_price)|ration(휴대 식량)|forage(채집 구황)|game(수렵육). satiety=섭취 시 포만감 회복(0~100). weight=배낭 무게. perishable=노드 이동당 신선도 −5%.",
+ "foods": [
+  {
+   "id": "food_rice",
+   "name": "백미 한 섬",
+   "kind": "staple",
+   "tier": 1,
+   "ration": 10,
+   "price": "regional",
+   "satiety": 0,
+   "weight": 20.0,
+   "note": "섬 단위 교역·조리 재료(직접 섭취 불가). 1섬=20 무게"
+  },
+  {
+   "id": "food_barley",
+   "name": "보리 한 섬",
+   "kind": "staple",
+   "tier": 1,
+   "ration": 8,
+   "price": 22,
+   "satiety": 0,
+   "weight": 20.0,
+   "note": "섬 단위 교역·조리 재료(직접 섭취 불가). 1섬=20 무게"
+  },
+  {
+   "id": "food_millet",
+   "name": "조 한 섬",
+   "kind": "staple",
+   "tier": 1,
+   "ration": 7,
+   "price": 18,
+   "satiety": 0,
+   "weight": 20.0,
+   "note": "섬 단위 교역·조리 재료(직접 섭취 불가). 1섬=20 무게"
+  },
+  {
+   "id": "food_acorn",
+   "name": "도토리",
+   "kind": "forage",
+   "tier": 1,
+   "price": 3,
+   "regions": [
+    "*"
+   ],
+   "satiety": 10,
+   "weight": 0.5,
+   "perishable": true
+  },
+  {
+   "id": "food_kudzu",
+   "name": "칡뿌리",
+   "kind": "forage",
+   "tier": 1,
+   "price": 3,
+   "regions": [
+    "*"
+   ],
+   "satiety": 10,
+   "weight": 0.5,
+   "perishable": true
+  },
+  {
+   "id": "food_songgi",
+   "name": "송기(소나무 속껍질)",
+   "kind": "forage",
+   "tier": 1,
+   "price": 1,
+   "regions": [
+    "*"
+   ],
+   "satiety": 5,
+   "weight": 0.5,
+   "perishable": true
+  },
+  {
+   "id": "food_buckwheat",
+   "name": "메밀",
+   "kind": "forage",
+   "tier": 2,
+   "price": 6,
+   "regions": [
+    "MAP_04",
+    "MAP_04",
+    "MAP_15"
+   ],
+   "satiety": 15,
+   "weight": 0.5,
+   "perishable": true
+  },
+  {
+   "id": "food_hare",
+   "name": "산토끼 고기",
+   "kind": "game",
+   "tier": 1,
+   "price": 12,
+   "satiety": 15,
+   "weight": 2.0,
+   "perishable": true
+  },
+  {
+   "id": "food_pheasant",
+   "name": "꿩고기",
+   "kind": "game",
+   "tier": 2,
+   "price": 30,
+   "satiety": 20,
+   "weight": 2.0,
+   "perishable": true
+  },
+  {
+   "id": "food_boar",
+   "name": "멧돼지 고기",
+   "kind": "game",
+   "tier": 3,
+   "price": 90,
+   "satiety": 40,
+   "weight": 2.0,
+   "perishable": true
+  },
+  {
+   "id": "food_bear",
+   "name": "반달곰 고기",
+   "kind": "game",
+   "tier": 4,
+   "price": 260,
+   "satiety": 60,
+   "weight": 2.0,
+   "perishable": true
+  },
+  {
+   "id": "food_white_deer",
+   "name": "백두 백록 고기",
+   "kind": "game",
+   "tier": 5,
+   "price": 800,
+   "regions": [
+    "MAP_16"
+   ],
+   "satiety": 100,
+   "weight": 2.0,
+   "perishable": true
+  },
+  {
+   "id": "food_geonryang",
+   "name": "건량(미숫가루) 한 봉",
+   "kind": "ration",
+   "tier": 1,
+   "satiety": 30,
+   "weight": 0.5,
+   "price": 6
+  },
+  {
+   "id": "food_nurungji",
+   "name": "누룽지 한 덩이",
+   "kind": "ration",
+   "tier": 1,
+   "satiety": 20,
+   "weight": 0.3,
+   "price": 3
+  },
+  {
+   "id": "food_yukpo",
+   "name": "육포",
+   "kind": "ration",
+   "tier": 2,
+   "satiety": 40,
+   "weight": 0.4,
+   "price": 18
+  }
+ ]
+}

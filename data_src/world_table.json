@@ -1,0 +1,1529 @@
+{
+ "_about": "완전판 3.3 전국 17개 권역 노드 마스터 테이블 원천 + 분류 보정(overrides) + 추가 은닉 노드. tools/build_world.py 가 data/regions.json · 01_heritage.json 등을 생성한다. 좌표는 에셋 전 임시값(자동 배치).",
+ "type_labels": {
+  "city": "대도시",
+  "town": "소도시/촌락",
+  "station": "역참",
+  "temple": "명찰",
+  "spring": "온천",
+  "fort": "군사관문",
+  "beacon": "봉수",
+  "stupa": "사찰·석탑 유적",
+  "tomb": "왕릉·고분 유적",
+  "scenic": "팔도 절경",
+  "wreck": "침몰선·수로 유적",
+  "ruin": "옛터·가마터",
+  "seowon": "서원·향교 유적",
+  "shrine": "성황당·도관 터",
+  "hazard": "위험 고개(확장 유형)"
+ },
+ "type_facilities": {
+  "city": [
+   "gwana",
+   "jumak",
+   "gaekju",
+   "market",
+   "forge",
+   "bookstore",
+   "yakbang",
+   "antique",
+   "hyanggyo"
+  ],
+  "town": [
+   "jumak",
+   "market5",
+   "forge_basic"
+  ],
+  "station": [
+   "yeokcham",
+   "jumak"
+  ],
+  "temple": [
+   "temple"
+  ],
+  "spring": [
+   "bath",
+   "jumak"
+  ],
+  "fort": [
+   "checkpoint",
+   "drill",
+   "bounty"
+  ],
+  "beacon": [
+   "beacon"
+  ],
+  "scenic": [
+   "scenic"
+  ],
+  "stupa": [
+   "investigate"
+  ],
+  "tomb": [
+   "investigate"
+  ],
+  "wreck": [
+   "investigate"
+  ],
+  "ruin": [
+   "investigate"
+  ],
+  "seowon": [
+   "investigate"
+  ],
+  "shrine": [
+   "investigate"
+  ],
+  "hazard": [
+   "hazard"
+  ]
+ },
+ "extra_facilities": {
+  "한양 경조": [
+   "black_market",
+   "hyeminseo",
+   "restaurant",
+   "gongbang",
+   "carpenter"
+  ],
+  "개성부": [
+   "black_market",
+   "restaurant"
+  ],
+  "평양부": [
+   "black_market",
+   "hyeminseo",
+   "restaurant"
+  ],
+  "의주목": [
+   "black_market"
+  ],
+  "동래현": [
+   "black_market"
+  ],
+  "대구 경상감영": [
+   "yakryeongsi",
+   "black_market",
+   "restaurant"
+  ],
+  "전주 전라감영": [
+   "yakryeongsi",
+   "restaurant",
+   "gongbang"
+  ],
+  "원주 강원감영": [
+   "yakryeongsi"
+  ],
+  "공주 충청감영": [
+   "hyeminseo"
+  ],
+  "진주목": [
+   "restaurant"
+  ],
+  "통영 통제영": [
+   "gongbang",
+   "market",
+   "jumak"
+  ],
+  "나주목": [
+   "carpenter"
+  ],
+  "강릉대도호부": [
+   "carpenter"
+  ],
+  "함흥부": [
+   "carpenter"
+  ]
+ },
+ "coastal": [
+  "강화유수부",
+  "교동",
+  "문산포구",
+  "남양",
+  "통천",
+  "강릉대도호부",
+  "삼척",
+  "울진",
+  "태안",
+  "여수 좌수영",
+  "해남",
+  "진도",
+  "동래현",
+  "통영 통제영",
+  "김해",
+  "남해",
+  "옹진",
+  "장연",
+  "연안도호부",
+  "진남포",
+  "선천",
+  "신미도 나루",
+  "북청도호부",
+  "경성도호부",
+  "제주목 제주읍성",
+  "화북진",
+  "애월",
+  "조천",
+  "서귀포"
+ ],
+ "sea_routes": [
+  {
+   "a": "강화유수부",
+   "b": "연안도호부",
+   "fare": 30,
+   "days": 1
+  },
+  {
+   "a": "교동",
+   "b": "옹진",
+   "fare": 30,
+   "days": 1
+  },
+  {
+   "a": "남양",
+   "b": "태안",
+   "fare": 40,
+   "days": 1
+  },
+  {
+   "a": "해남",
+   "b": "화북진",
+   "fare": 150,
+   "days": 2,
+   "wind_sensitive": true
+  },
+  {
+   "a": "진도",
+   "b": "제주목 제주읍성",
+   "fare": 160,
+   "days": 2,
+   "wind_sensitive": true
+  },
+  {
+   "a": "여수 좌수영",
+   "b": "통영 통제영",
+   "fare": 60,
+   "days": 1
+  },
+  {
+   "a": "동래현",
+   "b": "울진",
+   "fare": 90,
+   "days": 2,
+   "wind_sensitive": true
+  },
+  {
+   "a": "통천",
+   "b": "북청도호부",
+   "fare": 90,
+   "days": 2,
+   "wind_sensitive": true
+  },
+  {
+   "a": "진남포",
+   "b": "장연",
+   "fare": 50,
+   "days": 1
+  },
+  {
+   "a": "신미도 나루",
+   "b": "진남포",
+   "fare": 60,
+   "days": 1
+  },
+  {
+   "a": "북청도호부",
+   "b": "경성도호부",
+   "fare": 80,
+   "days": 2,
+   "wind_sensitive": true
+  }
+ ],
+ "regions": [
+  {
+   "id": "MAP_01",
+   "name": "경기 북부",
+   "ow": [
+    0.44,
+    0.52
+   ],
+   "rice": 52,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_02",
+    "MAP_03",
+    "MAP_11",
+    "MAP_12"
+   ],
+   "sheets": [
+    10,
+    11
+   ],
+   "city": [
+    "개성부",
+    "강화유수부"
+   ],
+   "town": [
+    "파주목",
+    "장단",
+    "연천",
+    "교동"
+   ],
+   "station": [
+    "청교역",
+    "마전역",
+    "임진참"
+   ],
+   "temple": [
+    "전등사",
+    "보광사"
+   ],
+   "misc": [
+    "문산포구",
+    "덕진진"
+   ]
+  },
+  {
+   "id": "MAP_02",
+   "name": "경기 남부",
+   "ow": [
+    0.46,
+    0.59
+   ],
+   "rice": 50,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_01",
+    "MAP_03",
+    "MAP_04",
+    "MAP_05",
+    "MAP_06"
+   ],
+   "sheets": [
+    11,
+    12
+   ],
+   "city": [
+    "한양 경조",
+    "광주유수부",
+    "수원화성"
+   ],
+   "town": [
+    "안성",
+    "남양",
+    "여주",
+    "이천",
+    "양평"
+   ],
+   "station": [
+    "양재역",
+    "판교역",
+    "영화역"
+   ],
+   "temple": [
+    "조계사",
+    "용주사",
+    "신륵사"
+   ],
+   "misc": [
+    "이천온천",
+    "남한산성"
+   ]
+  },
+  {
+   "id": "MAP_03",
+   "name": "강원 북부",
+   "ow": [
+    0.58,
+    0.46
+   ],
+   "rice": 58,
+   "climate": "cold",
+   "adjacent": [
+    "MAP_01",
+    "MAP_02",
+    "MAP_04",
+    "MAP_11",
+    "MAP_15"
+   ],
+   "sheets": [
+    9,
+    10
+   ],
+   "city": [
+    "철원도호부",
+    "춘천부"
+   ],
+   "town": [
+    "양구",
+    "화천",
+    "인제",
+    "회양",
+    "통천"
+   ],
+   "station": [
+    "연천역",
+    "보안역",
+    "창도역"
+   ],
+   "temple": [
+    "건봉사",
+    "백담사"
+   ],
+   "misc": [
+    "금강산 구룡폭",
+    "철원 삼부연"
+   ]
+  },
+  {
+   "id": "MAP_04",
+   "name": "강원 남부",
+   "ow": [
+    0.64,
+    0.57
+   ],
+   "rice": 55,
+   "climate": "cold",
+   "adjacent": [
+    "MAP_02",
+    "MAP_03",
+    "MAP_05",
+    "MAP_09"
+   ],
+   "sheets": [
+    12,
+    13
+   ],
+   "city": [
+    "원주 강원감영",
+    "강릉대도호부"
+   ],
+   "town": [
+    "삼척",
+    "울진",
+    "평창",
+    "영월",
+    "정선"
+   ],
+   "station": [
+    "안흥역",
+    "대관령참",
+    "평해역"
+   ],
+   "temple": [
+    "월정사",
+    "삼척 신흥사"
+   ],
+   "misc": [
+    "울진 백암온천",
+    "덕구온천"
+   ]
+  },
+  {
+   "id": "MAP_05",
+   "name": "충청 북부",
+   "ow": [
+    0.53,
+    0.65
+   ],
+   "rice": 45,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_02",
+    "MAP_04",
+    "MAP_06",
+    "MAP_07",
+    "MAP_09"
+   ],
+   "sheets": [
+    14,
+    15
+   ],
+   "city": [
+    "충주목",
+    "청주목"
+   ],
+   "town": [
+    "단양",
+    "제천",
+    "영동",
+    "보은",
+    "옥천"
+   ],
+   "station": [
+    "가흥역",
+    "율봉역",
+    "증약역"
+   ],
+   "temple": [
+    "속리산 법주사",
+    "구인사"
+   ],
+   "misc": [
+    "수안보온천",
+    "문경새재 조령관"
+   ]
+  },
+  {
+   "id": "MAP_06",
+   "name": "충청 남부",
+   "ow": [
+    0.4,
+    0.67
+   ],
+   "rice": 42,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_02",
+    "MAP_05",
+    "MAP_07"
+   ],
+   "sheets": [
+    13,
+    14
+   ],
+   "city": [
+    "공주 충청감영",
+    "홍주목"
+   ],
+   "town": [
+    "부여",
+    "해미",
+    "태안",
+    "아산",
+    "천안"
+   ],
+   "station": [
+    "이인역",
+    "금정역",
+    "광정역"
+   ],
+   "temple": [
+    "마곡사",
+    "갑사",
+    "수덕사"
+   ],
+   "misc": [
+    "온양온천",
+    "도고온천",
+    "유성온천"
+   ]
+  },
+  {
+   "id": "MAP_07",
+   "name": "전라 북부",
+   "ow": [
+    0.43,
+    0.76
+   ],
+   "rice": 36,
+   "climate": "warm",
+   "adjacent": [
+    "MAP_05",
+    "MAP_06",
+    "MAP_08",
+    "MAP_09",
+    "MAP_10"
+   ],
+   "sheets": [
+    17,
+    18
+   ],
+   "city": [
+    "전주 전라감영",
+    "남원도호부"
+   ],
+   "town": [
+    "고창",
+    "익산",
+    "정읍",
+    "무주",
+    "진안"
+   ],
+   "station": [
+    "삼례역",
+    "오수역",
+    "은선역"
+   ],
+   "temple": [
+    "금산사",
+    "내소사",
+    "실상사"
+   ],
+   "misc": [
+    "갈재 화적패 고개",
+    "적상산성"
+   ]
+  },
+  {
+   "id": "MAP_08",
+   "name": "전라 남부",
+   "ow": [
+    0.41,
+    0.86
+   ],
+   "rice": 35,
+   "climate": "warm",
+   "adjacent": [
+    "MAP_07",
+    "MAP_10"
+   ],
+   "sheets": [
+    19,
+    20,
+    21
+   ],
+   "city": [
+    "나주목",
+    "순천도호부",
+    "광주목"
+   ],
+   "town": [
+    "여수 좌수영",
+    "영암",
+    "해남",
+    "담양",
+    "진도"
+   ],
+   "station": [
+    "청암역",
+    "별전역",
+    "녹도역"
+   ],
+   "temple": [
+    "화엄사",
+    "송광사",
+    "대흥사"
+   ],
+   "misc": [
+    "백양사 포구",
+    "명량 울돌목"
+   ]
+  },
+  {
+   "id": "MAP_09",
+   "name": "경상 북부",
+   "ow": [
+    0.64,
+    0.7
+   ],
+   "rice": 40,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_04",
+    "MAP_05",
+    "MAP_07",
+    "MAP_10"
+   ],
+   "sheets": [
+    15,
+    16,
+    17
+   ],
+   "city": [
+    "상주목",
+    "안동대도호부",
+    "경주부"
+   ],
+   "town": [
+    "문경",
+    "영주",
+    "영천",
+    "의성",
+    "청송"
+   ],
+   "station": [
+    "유곡역",
+    "안기역",
+    "장수역"
+   ],
+   "temple": [
+    "불국사",
+    "부석사",
+    "고운사"
+   ],
+   "misc": [
+    "문경온천",
+    "영주 풍기온천"
+   ]
+  },
+  {
+   "id": "MAP_10",
+   "name": "경상 남부",
+   "ow": [
+    0.62,
+    0.81
+   ],
+   "rice": 38,
+   "climate": "warm",
+   "adjacent": [
+    "MAP_07",
+    "MAP_08",
+    "MAP_09"
+   ],
+   "sheets": [
+    18,
+    19,
+    20
+   ],
+   "city": [
+    "대구 경상감영",
+    "진주목",
+    "동래현"
+   ],
+   "town": [
+    "통영 통제영",
+    "김해",
+    "밀양",
+    "합천",
+    "남해"
+   ],
+   "station": [
+    "범어역",
+    "황산역",
+    "요원역"
+   ],
+   "temple": [
+    "해인사",
+    "통도사",
+    "쌍계사"
+   ],
+   "misc": [
+    "동래온천",
+    "창녕 부곡온천"
+   ]
+  },
+  {
+   "id": "MAP_11",
+   "name": "황해 북부",
+   "ow": [
+    0.38,
+    0.45
+   ],
+   "rice": 50,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_01",
+    "MAP_03",
+    "MAP_12",
+    "MAP_13"
+   ],
+   "sheets": [
+    8
+   ],
+   "city": [
+    "황주목",
+    "봉산군"
+   ],
+   "town": [
+    "서흥",
+    "평산",
+    "수안",
+    "곡산"
+   ],
+   "station": [
+    "금교역",
+    "동선역",
+    "생음역"
+   ],
+   "temple": [
+    "성불사"
+   ],
+   "misc": [
+    "평산온천",
+    "정방산성"
+   ]
+  },
+  {
+   "id": "MAP_12",
+   "name": "황해 남부",
+   "ow": [
+    0.28,
+    0.5
+   ],
+   "rice": 46,
+   "climate": "temperate",
+   "adjacent": [
+    "MAP_01",
+    "MAP_11"
+   ],
+   "sheets": [
+    8,
+    9
+   ],
+   "city": [
+    "해주목",
+    "연안도호부"
+   ],
+   "town": [
+    "옹진",
+    "장연",
+    "송화",
+    "배천"
+   ],
+   "station": [
+    "안곡역",
+    "초도역",
+    "영천역"
+   ],
+   "temple": [
+    "신천 패엽사"
+   ],
+   "misc": [
+    "신천온천",
+    "배천온천",
+    "장산곶 진보"
+   ]
+  },
+  {
+   "id": "MAP_13",
+   "name": "평안 남부",
+   "ow": [
+    0.33,
+    0.36
+   ],
+   "rice": 55,
+   "climate": "cold",
+   "adjacent": [
+    "MAP_11",
+    "MAP_14",
+    "MAP_15"
+   ],
+   "sheets": [
+    6,
+    7
+   ],
+   "city": [
+    "평양부",
+    "안주목"
+   ],
+   "town": [
+    "진남포",
+    "숙천",
+    "순천",
+    "강서",
+    "성천"
+   ],
+   "station": [
+    "대동역",
+    "조양역",
+    "숙천참"
+   ],
+   "temple": [
+    "묘향산 보현사",
+    "영명사"
+   ],
+   "misc": [
+    "강서온천",
+    "양덕온천",
+    "을밀대"
+   ]
+  },
+  {
+   "id": "MAP_14",
+   "name": "평안 북부",
+   "ow": [
+    0.3,
+    0.24
+   ],
+   "rice": 62,
+   "climate": "cold",
+   "adjacent": [
+    "MAP_13",
+    "MAP_15"
+   ],
+   "sheets": [
+    3,
+    4
+   ],
+   "city": [
+    "의주목",
+    "영변대도호부"
+   ],
+   "town": [
+    "선천",
+    "정주",
+    "삭주",
+    "강계",
+    "녕원"
+   ],
+   "station": [
+    "압록참",
+    "청천역",
+    "의순관"
+   ],
+   "temple": [
+    "백마산사"
+   ],
+   "misc": [
+    "의주 통군정",
+    "신미도 나루"
+   ]
+  },
+  {
+   "id": "MAP_15",
+   "name": "함경 남부",
+   "ow": [
+    0.58,
+    0.26
+   ],
+   "rice": 68,
+   "climate": "cold",
+   "adjacent": [
+    "MAP_03",
+    "MAP_13",
+    "MAP_14",
+    "MAP_16"
+   ],
+   "sheets": [
+    4,
+    5,
+    6
+   ],
+   "city": [
+    "함흥부",
+    "북청도호부"
+   ],
+   "town": [
+    "정평",
+    "영흥",
+    "고원",
+    "덕원",
+    "문천"
+   ],
+   "station": [
+    "만령역",
+    "고산역",
+    "신은참"
+   ],
+   "temple": [
+    "귀주사",
+    "석왕사"
+   ],
+   "misc": [
+    "달천온천",
+    "마운령 진흥왕 순수비"
+   ]
+  },
+  {
+   "id": "MAP_16",
+   "name": "함경 북부",
+   "ow": [
+    0.72,
+    0.12
+   ],
+   "rice": 80,
+   "climate": "frigid",
+   "adjacent": [
+    "MAP_15"
+   ],
+   "sheets": [
+    1,
+    2,
+    3
+   ],
+   "city": [
+    "경성도호부",
+    "길주목"
+   ],
+   "town": [
+    "회령",
+    "온성",
+    "종성",
+    "경원",
+    "부령"
+   ],
+   "station": [
+    "풍산참",
+    "무산참",
+    "회령참"
+   ],
+   "temple": [
+    "개심사"
+   ],
+   "misc": [
+    "경성 주을온천",
+    "백두산 천지"
+   ]
+  },
+  {
+   "id": "MAP_17",
+   "name": "제주도",
+   "ow": [
+    0.38,
+    0.98
+   ],
+   "rice": 60,
+   "climate": "warm",
+   "adjacent": [],
+   "sheets": [
+    22
+   ],
+   "city": [
+    "제주목 제주읍성"
+   ],
+   "town": [
+    "대정현",
+    "정의현",
+    "애월",
+    "조천",
+    "서귀포"
+   ],
+   "station": [
+    "삼양참",
+    "화북진",
+    "차귀진"
+   ],
+   "temple": [
+    "관음사",
+    "존자암"
+   ],
+   "misc": [
+    "산방산 탄산온천",
+    "성산일출봉"
+   ]
+  }
+ ],
+ "misc_default_type": "spring",
+ "overrides": {
+  "문산포구": {
+   "type": "town",
+   "note": "특수→촌락(포구). 나루터 시설 부여"
+  },
+  "덕진진": {
+   "type": "fort"
+  },
+  "남한산성": {
+   "type": "fort",
+   "note": "원문 '온천' 목록에 있으나 산성 → 군사관문으로 보정"
+  },
+  "금강산 구룡폭": {
+   "type": "scenic"
+  },
+  "철원 삼부연": {
+   "type": "scenic"
+  },
+  "문경새재 조령관": {
+   "type": "fort",
+   "note": "원문 '온천' 목록 → 군사관문. 실제 조령관은 경상도 문경 쪽(MAP_09 경계)"
+  },
+  "갈재 화적패 고개": {
+   "type": "hazard",
+   "note": "7+7 유형에 없음 → 확장 유형 hazard(인카운트 거점)"
+  },
+  "적상산성": {
+   "type": "fort"
+  },
+  "백양사 포구": {
+   "type": "temple",
+   "rename": "장성 백양사",
+   "note": "백양사는 내륙(장성) 사찰로 포구가 아님 → 명찰로 보정"
+  },
+  "명량 울돌목": {
+   "type": "wreck",
+   "note": "특수 → 침몰선·수로 유적(가시 노드)"
+  },
+  "정방산성": {
+   "type": "fort"
+  },
+  "장산곶 진보": {
+   "type": "fort"
+  },
+  "을밀대": {
+   "type": "scenic",
+   "note": "원문 '온천' 목록 → 절경(누정)"
+  },
+  "의주 통군정": {
+   "type": "scenic"
+  },
+  "신미도 나루": {
+   "type": "town"
+  },
+  "마운령 진흥왕 순수비": {
+   "type": "ruin",
+   "note": "원문 '온천' 목록 → 옛터(사적, 비석)"
+  },
+  "백두산 천지": {
+   "type": "scenic",
+   "note": "원문 '온천' 목록 → 절경"
+  },
+  "성산일출봉": {
+   "type": "scenic",
+   "note": "원문 '온천' 목록 → 절경"
+  },
+  "여수 좌수영": {
+   "type": "fort",
+   "note": "촌락 → 수군 진영(군사관문)"
+  },
+  "통영 통제영": {
+   "type": "fort",
+   "note": "촌락 → 삼도수군통제영(군사관문)+공방·장터"
+  },
+  "화북진": {
+   "type": "fort",
+   "note": "역참 목록 → 진(鎭). 제주 관문 포구"
+  },
+  "차귀진": {
+   "type": "fort"
+  }
+ },
+ "anachronism": {
+  "조계사": {
+   "issue": "현 조계사는 1910년 각황사 창건 이후 명칭(1861년 배경과 불일치)",
+   "candidates": [
+    {
+     "name": "봉은사",
+     "type": "temple",
+     "basis": "신라 창건 전승, 조선 명종대 선종 수사찰 — 한강 남쪽(당시 광주 땅)"
+    },
+    {
+     "name": "화계사",
+     "type": "temple",
+     "basis": "1522년 창건, 한양 북동 삼각산 자락"
+    }
+   ]
+  },
+  "구인사": {
+   "issue": "1945년 창건",
+   "candidates": [
+    {
+     "name": "영동 영국사",
+     "type": "temple",
+     "basis": "천태산 영국사(고려 창건 전승) — 같은 충북 권역, 명찰 유형 유지"
+    },
+    {
+     "name": "단양 도담삼봉",
+     "type": "scenic",
+     "basis": "단양팔경, 정도전 설화 — 유형이 절경으로 바뀜(명찰 수 감소)"
+    }
+   ]
+  },
+  "진남포": {
+   "issue": "1890년대 개항 이후 명칭(당시 삼화현)",
+   "candidates": [
+    {
+     "name": "삼화현",
+     "type": "town",
+     "basis": "같은 위치의 당대 행정 명칭 — 촌락·나루터 유지(완전 대체)"
+    }
+   ]
+  },
+  "창녕 부곡온천": {
+   "issue": "1970년대 개발 온천",
+   "candidates": [
+    {
+     "name": "창녕 화왕산성",
+     "type": "fort",
+     "basis": "사적, 임진왜란 곽재우 의병 거점 — 군사관문 유형으로 변경"
+    },
+    {
+     "name": "창녕 관룡사",
+     "type": "temple",
+     "basis": "화왕산 관룡사(신라 창건 전승)"
+    }
+   ]
+  },
+  "산방산 탄산온천": {
+   "issue": "현대 개발 온천(제주에는 조선시대 온천 기록이 드묾)",
+   "candidates": [
+    {
+     "name": "산방굴사",
+     "type": "temple",
+     "basis": "영주십경 '산방굴사' — 같은 산방산 위치, 명찰 유형 · 산방덕 샘물 전설로 약수 목욕(bath) 시설 유지 — 제주 유일 휴식 거점",
+     "add_facilities": [
+      "bath"
+     ]
+    }
+   ]
+  },
+  "문경온천": {
+   "issue": "현대 개발 온천",
+   "candidates": [
+    {
+     "name": "문경 새재 온정(溫井)",
+     "type": "spring",
+     "basis": "창작 명칭으로 온천 기능 유지(경북 온천 2곳이 모두 현대 개발이라 둘 다 빼면 권역 온천 0곳)",
+     "lore": "창작"
+    },
+    {
+     "name": "문경 주흘관",
+     "type": "fort",
+     "basis": "조령 제1관문(숙종대 축성) — 문경 쪽 관문, 군사관문 유형"
+    },
+    {
+     "name": "문경 봉암사",
+     "type": "temple",
+     "basis": "희양산 봉암사(신라 창건)"
+    }
+   ]
+  },
+  "영주 풍기온천": {
+   "issue": "현대 개발 온천",
+   "candidates": [
+    {
+     "name": "풍기 소수서원",
+     "type": "seowon",
+     "basis": "1543년 백운동서원 → 1550년 최초의 사액서원 · 서원 앞 죽계천 목욕(bath) 시설을 붙여 휴식 기능 유지",
+     "add_facilities": [
+      "bath"
+     ]
+    },
+    {
+     "name": "소백산 희방사",
+     "type": "temple",
+     "basis": "소백산 희방사(신라 창건 전승)"
+    }
+   ]
+  },
+  "연천역": {
+   "issue": "경기 북부 '연천' 촌락과 이름 중복(권역도 다름)",
+   "candidates": [
+    {
+     "name": "(역명 고증 필요)",
+     "type": "station",
+     "basis": "강원 북부 역도(驛道) 역명으로 교체 권장 — 원문 기획자 확인 필요"
+    }
+   ]
+  },
+  "동래현": {
+   "issue": "조선 후기 동래도호부(동래부)",
+   "candidates": [
+    {
+     "name": "동래부",
+     "type": "city",
+     "basis": "같은 위치의 당대 명칭(완전 대체)"
+    }
+   ]
+  }
+ },
+ "beacons": {
+  "MAP_01": "개성 송악 봉수",
+  "MAP_02": "목멱산 봉수",
+  "MAP_03": "춘천 봉수",
+  "MAP_04": "강릉 봉수",
+  "MAP_05": "충주 봉수",
+  "MAP_06": "공주 월성산 봉수",
+  "MAP_07": "전주 봉수",
+  "MAP_08": "여수 돌산 봉수",
+  "MAP_09": "경주 봉수",
+  "MAP_10": "동래 황령산 봉수",
+  "MAP_11": "황주 봉수",
+  "MAP_12": "해주 봉수",
+  "MAP_13": "평양 봉수",
+  "MAP_14": "의주 봉수",
+  "MAP_15": "함흥 봉수",
+  "MAP_16": "경성 봉수",
+  "MAP_17": "제주 사라봉 봉수"
+ },
+ "hidden": [
+  {
+   "region": "MAP_01",
+   "name": "개성 만월대 옛터",
+   "type": "ruin",
+   "parent": "개성부"
+  },
+  {
+   "region": "MAP_01",
+   "name": "강화 참성단",
+   "type": "shrine",
+   "parent": "강화유수부"
+  },
+  {
+   "region": "MAP_01",
+   "name": "강화 부근리 고인돌",
+   "type": "tomb",
+   "parent": "강화유수부"
+  },
+  {
+   "region": "MAP_02",
+   "name": "광주 분원 백자 가마터",
+   "type": "ruin",
+   "parent": "광주유수부"
+  },
+  {
+   "region": "MAP_02",
+   "name": "성균관 명륜당",
+   "type": "seowon",
+   "parent": "한양 경조"
+  },
+  {
+   "region": "MAP_02",
+   "name": "헌릉",
+   "type": "tomb",
+   "parent": "한양 경조"
+  },
+  {
+   "region": "MAP_03",
+   "name": "금강산 유점사 옛터",
+   "type": "stupa",
+   "parent": "회양"
+  },
+  {
+   "region": "MAP_03",
+   "name": "화천 성황당",
+   "type": "shrine",
+   "parent": "화천"
+  },
+  {
+   "region": "MAP_04",
+   "name": "삼척 안택선 침몰지",
+   "type": "wreck",
+   "parent": "삼척"
+  },
+  {
+   "region": "MAP_04",
+   "name": "강릉 오죽헌",
+   "type": "seowon",
+   "parent": "강릉대도호부"
+  },
+  {
+   "region": "MAP_04",
+   "name": "영월 장릉",
+   "type": "tomb",
+   "parent": "영월"
+  },
+  {
+   "region": "MAP_05",
+   "name": "단양 수벌 고려가마터",
+   "type": "ruin",
+   "parent": "단양"
+  },
+  {
+   "region": "MAP_05",
+   "name": "충주 탑평리 칠층석탑",
+   "type": "stupa",
+   "parent": "충주목"
+  },
+  {
+   "region": "MAP_06",
+   "name": "계룡산 신도안",
+   "type": "shrine",
+   "parent": "공주 충청감영"
+  },
+  {
+   "region": "MAP_06",
+   "name": "계룡산 천황봉",
+   "type": "scenic",
+   "parent": "계룡산 신도안"
+  },
+  {
+   "region": "MAP_06",
+   "name": "부여 정림사지 오층석탑",
+   "type": "stupa",
+   "parent": "부여"
+  },
+  {
+   "region": "MAP_06",
+   "name": "공주 송산리 고분군",
+   "type": "tomb",
+   "parent": "공주 충청감영"
+  },
+  {
+   "region": "MAP_06",
+   "name": "태안 마도 침몰선",
+   "type": "wreck",
+   "parent": "태안"
+  },
+  {
+   "region": "MAP_07",
+   "name": "익산 미륵사지 석탑",
+   "type": "stupa",
+   "parent": "익산"
+  },
+  {
+   "region": "MAP_07",
+   "name": "부안 유천리 청자 가마터",
+   "type": "ruin",
+   "parent": "정읍"
+  },
+  {
+   "region": "MAP_07",
+   "name": "전주 경기전",
+   "type": "seowon",
+   "parent": "전주 전라감영"
+  },
+  {
+   "region": "MAP_08",
+   "name": "강진 사당리 청자 가마터",
+   "type": "ruin",
+   "parent": "해남"
+  },
+  {
+   "region": "MAP_08",
+   "name": "진도 씻김굿 당골판",
+   "type": "shrine",
+   "parent": "진도"
+  },
+  {
+   "region": "MAP_08",
+   "name": "신안 해저 무역선",
+   "type": "wreck",
+   "parent": "영암"
+  },
+  {
+   "region": "MAP_08",
+   "name": "담양 소쇄원",
+   "type": "scenic",
+   "parent": "담양"
+  },
+  {
+   "region": "MAP_09",
+   "name": "경주 석굴암",
+   "type": "stupa",
+   "parent": "불국사"
+  },
+  {
+   "region": "MAP_09",
+   "name": "경주 대릉원",
+   "type": "tomb",
+   "parent": "경주부"
+  },
+  {
+   "region": "MAP_09",
+   "name": "안동 도산서원",
+   "type": "seowon",
+   "parent": "안동대도호부"
+  },
+  {
+   "region": "MAP_10",
+   "name": "지리산 천왕봉",
+   "type": "scenic",
+   "parent": "진주목"
+  },
+  {
+   "region": "MAP_10",
+   "name": "고령 지산동 고분군",
+   "type": "tomb",
+   "parent": "대구 경상감영"
+  },
+  {
+   "region": "MAP_10",
+   "name": "밀양 영남루",
+   "type": "scenic",
+   "parent": "밀양"
+  },
+  {
+   "region": "MAP_10",
+   "name": "김해 수로왕릉",
+   "type": "tomb",
+   "parent": "김해"
+  },
+  {
+   "region": "MAP_10",
+   "name": "통영 12공방 옛터",
+   "type": "ruin",
+   "parent": "통영 통제영"
+  },
+  {
+   "region": "MAP_11",
+   "name": "봉산 탈춤 성황당",
+   "type": "shrine",
+   "parent": "봉산군"
+  },
+  {
+   "region": "MAP_11",
+   "name": "황주 월파루",
+   "type": "scenic",
+   "parent": "황주목"
+  },
+  {
+   "region": "MAP_12",
+   "name": "해주 소현서원",
+   "type": "seowon",
+   "parent": "해주목"
+  },
+  {
+   "region": "MAP_12",
+   "name": "장연 몽금포",
+   "type": "scenic",
+   "parent": "장연"
+  },
+  {
+   "region": "MAP_13",
+   "name": "묘향산 단군굴",
+   "type": "shrine",
+   "parent": "묘향산 보현사"
+  },
+  {
+   "region": "MAP_13",
+   "name": "평양 동명왕릉",
+   "type": "tomb",
+   "parent": "평양부"
+  },
+  {
+   "region": "MAP_13",
+   "name": "강서 대묘",
+   "type": "tomb",
+   "parent": "강서"
+  },
+  {
+   "region": "MAP_14",
+   "name": "영변 약산 동대",
+   "type": "scenic",
+   "parent": "영변대도호부"
+  },
+  {
+   "region": "MAP_14",
+   "name": "압록강 하구 침몰선",
+   "type": "wreck",
+   "parent": "의주목",
+   "lore": "창작"
+  },
+  {
+   "region": "MAP_15",
+   "name": "함흥 본궁",
+   "type": "shrine",
+   "parent": "함흥부"
+  },
+  {
+   "region": "MAP_15",
+   "name": "북청 사자놀음 마당",
+   "type": "shrine",
+   "parent": "북청도호부"
+  },
+  {
+   "region": "MAP_15",
+   "name": "개마고원 삼수갑산",
+   "type": "scenic",
+   "parent": "북청도호부"
+  },
+  {
+   "region": "MAP_16",
+   "name": "백두산 정계비 터",
+   "type": "ruin",
+   "parent": "무산참"
+  },
+  {
+   "region": "MAP_16",
+   "name": "칠보산",
+   "type": "scenic",
+   "parent": "길주목"
+  },
+  {
+   "region": "MAP_16",
+   "name": "회령 오지 가마터",
+   "type": "ruin",
+   "parent": "회령"
+  },
+  {
+   "region": "MAP_17",
+   "name": "제주 칠머리당",
+   "type": "shrine",
+   "parent": "제주목 제주읍성"
+  },
+  {
+   "region": "MAP_17",
+   "name": "삼성혈",
+   "type": "shrine",
+   "parent": "제주목 제주읍성"
+  },
+  {
+   "region": "MAP_17",
+   "name": "추사 유배지",
+   "type": "seowon",
+   "parent": "대정현"
+  }
+ ],
+ "anachronism_policy": "keep",
+ "_anachronism_note": "keep=원문 명칭 유지(고증 메모만 표시) / replace=candidates[0] 로 교체. 교체해도 노드 id·좌표는 그대로 두어 배치 간격·지역 쏠림 설계를 보존한다(slot 유지). 유형이 바뀌면 시설 구성도 바뀌므로 impact 를 확인할 것."
+}
