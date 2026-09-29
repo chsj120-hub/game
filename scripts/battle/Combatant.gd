@@ -190,8 +190,27 @@ func clear_positive_buffs() -> void:
 	buffs = buffs.filter(func(b): return float(b["val"]) < 0.0)
 
 
+## 해로운 상태만 해제(불사 death_ward 같은 이로운 상태는 유지)
 func cleanse() -> void:
-	statuses.clear()
+	var kept := {}
+	for sid in statuses.keys():
+		if String(DataDB.status_battle.get(sid, {}).get("type", "debuff")) == "buff":
+			kept[sid] = statuses[sid]
+	statuses = kept
+
+
+## 피해 적용 — 선단 불사환(death_ward) 중이면 HP 가 1 아래로 내려가지 않음(치명타를 맞아도 1 로 버팀)
+func take_damage(d: float) -> float:
+	var before := hp
+	if statuses.has("death_ward"):
+		hp = maxf(minf(hp, 1.0), hp - d)
+	else:
+		hp = maxf(0.0, hp - d)
+	return before - hp
+
+
+func has_death_ward() -> bool:
+	return statuses.has("death_ward")
 
 
 func skill_ready(sid: String) -> bool:

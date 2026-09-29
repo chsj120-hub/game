@@ -141,6 +141,10 @@ class C:
     def heal(self, pct):
         self.hp = min(self.max_hp, self.hp + self.max_hp * pct * self.heal_mult())
 
+    def take(self, d):
+        """Combatant.take_damage 미러 — 불사(death_ward) 중이면 HP 1 아래로 내려가지 않음."""
+        self.hp = max(min(self.hp, 1.0), self.hp - d) if "death_ward" in self.statuses else max(0.0, self.hp - d)
+
     def add_status(self, sid, turns):
         if sid == "stun" and self.boss_tier:
             return
@@ -187,7 +191,7 @@ class Engine:
         for sid in list(c.statuses):
             dot = STATUS[sid].get("dot", 0.0)
             if dot:
-                c.hp = max(0.0, c.hp - c.max_hp * dot)
+                c.take(c.max_hp * dot)
                 c.min_ratio = min(c.min_ratio, c.ratio)
         if not c.alive:
             self.check()
@@ -276,14 +280,14 @@ class Engine:
             if t is None:
                 continue
             if power > 0 and t.side != actor.side:
-                t.hp = max(0.0, t.hp - self.hit(actor, t, sk, power))
+                t.take(self.hit(actor, t, sk, power))
                 t.min_ratio = min(t.min_ratio, t.ratio)
                 if t.alive and t.boss_tier and not t.enraged and t.enrage and t.ratio <= t.enrage.get("hp_ratio", 0.3):
                     t.enraged = True
             if "heal_pct" in eff and t.side == actor.side:
                 t.heal(eff["heal_pct"] * mult)
             if eff.get("cleanse") and t.side == actor.side:
-                t.statuses = {}
+                t.statuses = {k: v for k, v in t.statuses.items() if STATUS.get(k, {}).get("type") == "buff"}
             if t.side != actor.side and t.alive:
                 if "stun_turns" in eff and (not eff.get("stun_kinds") or t.kind in eff["stun_kinds"]):
                     t.add_status("stun", eff["stun_turns"])
@@ -317,7 +321,9 @@ class Engine:
         if "heal_pct" in eff and t.alive:
             t.heal(eff["heal_pct"])
         if "cure" in eff:
-            t.statuses = {}
+            t.statuses = {k: v for k, v in t.statuses.items() if STATUS.get(k, {}).get("type") == "buff"}
+        if "death_ward" in eff and t.alive:  # 선단 불사환: 자기 턴 N회 동안 HP 1 아래로 내려가지 않음
+            t.add_status("death_ward", eff["death_ward"].get("turns", 3))
         self.items[iid] -= 1
 
     def defend(self, actor):
@@ -454,7 +460,7 @@ def party_knowledge(lo):
             for kk, v in IDX[IDX[iid]["passive_skill"]].get("effects", {}).get("passive", {}).get("knowledge", {}).items():
                 k[kk] = k.get(kk, 0) + v
     for cid in lo["party"]:
-        for kk, v in IDX[cid].get("knowledge_add", {}).items():
+        for kk, v in companion_knowledge(cid, lo).items():
             k[kk] = k.get(kk, 0) + v
     cap = CK["knowledge"]["party_sum"]["cap"]
     return {kk: min(cap, v) for kk, v in k.items()}
@@ -508,9 +514,30 @@ def hero_stats(lo):
     return s
 
 
-def companion_skill_mult(cid, star=1):
+def companion_tier(cid, lo=None):
+    """CompanionSystem.tier_of 미러. 시나리오 기본값: 신분 Rank 까지 승급 완료(승급 t 는 Rank ≥ t) — lo['comp_tiers'] 로 개별 지정 가능."""
+    c = IDX[cid]
+    start = c.get("start_tier", c.get("tier", 3))
+    if lo is None:
+        return start
+    if cid in lo.get("comp_tiers", {}):
+        return lo["comp_tiers"][cid]
+    return max(start, min(lo.get("rank", start), c.get("max_tier", 5)))
+
+
+def companion_knowledge(cid, lo=None):
+    """CompanionSystem.knowledge_of 미러: 시작 지식 + 승급당 대표 지식 +1."""
+    c = IDX[cid]
+    out = dict(c.get("knowledge_add", {}))
+    ups = companion_tier(cid, lo) - c.get("start_tier", c.get("tier", 3))
+    for kk, v in c.get("knowledge_per_promotion", {}).items():
+        out[kk] = out.get(kk, 0) + v * max(0, ups)
+    return out
+
+
+def companion_skill_mult(cid, star=1, lo=None):
     m = PM["companion_skill_mult"]
-    return m["base"] + m["per_tier_from_3"] * (IDX[cid].get("tier", 3) - 3) + m["per_star"] * (star - 1)
+    return m["base"] + m["per_tier_from_3"] * (companion_tier(cid, lo) - 3) + m["per_star"] * (star - 1)
 
 
 def merge_companions(s, lo):
@@ -522,7 +549,7 @@ def merge_companions(s, lo):
             if sid in PM["exclude_companion_skills"] or sid in s["skills"]:
                 continue
             s["skills"].append(sid)
-            s["comp_skills"][sid] = {"cid": cid, "mult": companion_skill_mult(cid)}
+            s["comp_skills"][sid] = {"cid": cid, "mult": companion_skill_mult(cid, 1, lo)}
     s["n_companions"] = len(lo["party"])
 
 

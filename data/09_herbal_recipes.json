@@ -1,15 +1,296 @@
 {
-  "_schema": "09_한방약_레시피. form=탕약|산제|환약|고제|선단. book=15_제작비전서 의약 비전서 id (미보유 시 제작 불가). effect={heal_pct, revive_pct, cure[], buff{}}. battle_usable=전투/웨이브 정비 중 복용 가능.",
-  "recipes": [
-    {"id": "hr_ssanghwa",  "name": "쌍화탕",       "form": "탕약", "tier": 1, "book": "bk_med_dongui", "ingredients": [{"id": "herb_jakyak", "qty": 2}, {"id": "herb_sukjihwang", "qty": 1}, {"id": "herb_daechu", "qty": 2}], "effect": {"heal_pct": 0.25}, "battle_usable": true},
-    {"id": "hr_haedok",    "name": "해독산",       "form": "산제", "tier": 1, "book": "bk_med_dongui", "ingredients": [{"id": "herb_gamcho", "qty": 2}, {"id": "herb_geumeunhwa", "qty": 1}], "effect": {"cure": ["poison"]}, "battle_usable": true},
-    {"id": "hr_geumchang", "name": "금창고",       "form": "고제", "tier": 2, "book": "bk_med_jeonju", "ingredients": [{"id": "herb_danggwi", "qty": 2}, {"id": "herb_ssuk", "qty": 2}], "effect": {"heal_pct": 0.15, "cure": ["bleed"]}, "battle_usable": true},
-    {"id": "hr_cheongsim", "name": "청심환",       "form": "환약", "tier": 2, "book": "bk_med_daegu",  "ingredients": [{"id": "herb_gamcho", "qty": 1}, {"id": "herb_bokryeong", "qty": 1}], "effect": {"cure": ["stun", "fear"]}, "battle_usable": true},
-    {"id": "hr_sohap",     "name": "소합환",       "form": "환약", "tier": 2, "book": "bk_med_temple", "ingredients": [{"id": "herb_yukgye", "qty": 1}, {"id": "herb_saenggang", "qty": 2}], "effect": {"cure": ["curse"]}, "battle_usable": true},
-    {"id": "hr_sipjeon",   "name": "십전대보탕",   "form": "탕약", "tier": 3, "book": "bk_med_hyemin", "ingredients": [{"id": "herb_insam", "qty": 1}, {"id": "herb_baekchul", "qty": 1}, {"id": "herb_bokryeong", "qty": 1}, {"id": "herb_gamcho", "qty": 1}, {"id": "herb_sukjihwang", "qty": 1}, {"id": "herb_jakyak", "qty": 1}, {"id": "herb_cheongung", "qty": 1}, {"id": "herb_danggwi", "qty": 1}, {"id": "herb_hwanggi", "qty": 1}, {"id": "herb_yukgye", "qty": 1}], "effect": {"heal_pct": 0.60, "cure": ["poison", "bleed"]}, "battle_usable": true},
-    {"id": "hr_gyeongok",  "name": "경옥고",       "form": "고제", "tier": 3, "book": "bk_med_jeonju", "ingredients": [{"id": "herb_insam", "qty": 1}, {"id": "herb_bokryeong", "qty": 2}, {"id": "herb_sukjihwang", "qty": 2}], "effect": {"buff": {"hp_pct": 0.15}}, "battle_usable": false},
-    {"id": "hr_gongjin",   "name": "공진단",       "form": "환약", "tier": 4, "book": "bk_med_daegu",  "ingredients": [{"id": "herb_nokyong", "qty": 1}, {"id": "herb_sahyang", "qty": 1}, {"id": "herb_danggwi", "qty": 2}], "effect": {"buff": {"atk_pct": 0.10, "def_pct": 0.10}}, "battle_usable": true},
-    {"id": "hr_uhwang",    "name": "우황청심원",   "form": "환약", "tier": 4, "book": "bk_med_daegu",  "ingredients": [{"id": "herb_uhwang", "qty": 1}, {"id": "herb_insam", "qty": 1}, {"id": "herb_gamcho", "qty": 2}], "effect": {"heal_pct": 0.30, "cure": ["stun", "fear", "curse", "poison", "bleed"]}, "battle_usable": true},
-    {"id": "hr_seondan",   "name": "환골탈태 선단", "form": "선단", "tier": 5, "book": "bk_med_temple", "ingredients": [{"id": "herb_sansam", "qty": 1}, {"id": "herb_yeongji", "qty": 2}, {"id": "herb_uhwang", "qty": 1}], "effect": {"revive_pct": 1.0}, "battle_usable": true}
-  ]
+ "_schema": "09_한방약_레시피. form=탕약|산제|환약|고제|선단. book=15_제작비전서 의약 비전서 id (미보유 시 제작 불가). effect={heal_pct, cure[], buff{}, death_ward{turns,hp_floor}}. battle_usable=전투/웨이브 정비 중 복용 가능.",
+ "recipes": [
+  {
+   "id": "hr_ssanghwa",
+   "name": "쌍화탕",
+   "form": "탕약",
+   "tier": 1,
+   "book": "bk_med_dongui",
+   "ingredients": [
+    {
+     "id": "herb_jakyak",
+     "qty": 2
+    },
+    {
+     "id": "herb_sukjihwang",
+     "qty": 1
+    },
+    {
+     "id": "herb_daechu",
+     "qty": 2
+    }
+   ],
+   "effect": {
+    "heal_pct": 0.25
+   },
+   "battle_usable": true
+  },
+  {
+   "id": "hr_haedok",
+   "name": "해독산",
+   "form": "산제",
+   "tier": 1,
+   "book": "bk_med_dongui",
+   "ingredients": [
+    {
+     "id": "herb_gamcho",
+     "qty": 2
+    },
+    {
+     "id": "herb_geumeunhwa",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "cure": [
+     "poison"
+    ]
+   },
+   "battle_usable": true
+  },
+  {
+   "id": "hr_geumchang",
+   "name": "금창고",
+   "form": "고제",
+   "tier": 2,
+   "book": "bk_med_jeonju",
+   "ingredients": [
+    {
+     "id": "herb_danggwi",
+     "qty": 2
+    },
+    {
+     "id": "herb_ssuk",
+     "qty": 2
+    }
+   ],
+   "effect": {
+    "heal_pct": 0.15,
+    "cure": [
+     "bleed"
+    ]
+   },
+   "battle_usable": true
+  },
+  {
+   "id": "hr_cheongsim",
+   "name": "청심환",
+   "form": "환약",
+   "tier": 2,
+   "book": "bk_med_daegu",
+   "ingredients": [
+    {
+     "id": "herb_gamcho",
+     "qty": 1
+    },
+    {
+     "id": "herb_bokryeong",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "cure": [
+     "stun",
+     "fear"
+    ]
+   },
+   "battle_usable": true
+  },
+  {
+   "id": "hr_sohap",
+   "name": "소합환",
+   "form": "환약",
+   "tier": 2,
+   "book": "bk_med_temple",
+   "ingredients": [
+    {
+     "id": "herb_yukgye",
+     "qty": 1
+    },
+    {
+     "id": "herb_saenggang",
+     "qty": 2
+    }
+   ],
+   "effect": {
+    "cure": [
+     "curse"
+    ]
+   },
+   "battle_usable": true
+  },
+  {
+   "id": "hr_sipjeon",
+   "name": "십전대보탕",
+   "form": "탕약",
+   "tier": 3,
+   "book": "bk_med_hyemin",
+   "ingredients": [
+    {
+     "id": "herb_insam",
+     "qty": 1
+    },
+    {
+     "id": "herb_baekchul",
+     "qty": 1
+    },
+    {
+     "id": "herb_bokryeong",
+     "qty": 1
+    },
+    {
+     "id": "herb_gamcho",
+     "qty": 1
+    },
+    {
+     "id": "herb_sukjihwang",
+     "qty": 1
+    },
+    {
+     "id": "herb_jakyak",
+     "qty": 1
+    },
+    {
+     "id": "herb_cheongung",
+     "qty": 1
+    },
+    {
+     "id": "herb_danggwi",
+     "qty": 1
+    },
+    {
+     "id": "herb_hwanggi",
+     "qty": 1
+    },
+    {
+     "id": "herb_yukgye",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "heal_pct": 0.6,
+    "cure": [
+     "poison",
+     "bleed"
+    ]
+   },
+   "battle_usable": true
+  },
+  {
+   "id": "hr_gyeongok",
+   "name": "경옥고",
+   "form": "고제",
+   "tier": 3,
+   "book": "bk_med_jeonju",
+   "ingredients": [
+    {
+     "id": "herb_insam",
+     "qty": 1
+    },
+    {
+     "id": "herb_bokryeong",
+     "qty": 2
+    },
+    {
+     "id": "herb_sukjihwang",
+     "qty": 2
+    }
+   ],
+   "effect": {
+    "buff": {
+     "hp_pct": 0.15
+    }
+   },
+   "battle_usable": false
+  },
+  {
+   "id": "hr_gongjin",
+   "name": "공진단",
+   "form": "환약",
+   "tier": 4,
+   "book": "bk_med_daegu",
+   "ingredients": [
+    {
+     "id": "herb_nokyong",
+     "qty": 1
+    },
+    {
+     "id": "herb_sahyang",
+     "qty": 1
+    },
+    {
+     "id": "herb_danggwi",
+     "qty": 2
+    }
+   ],
+   "effect": {
+    "buff": {
+     "atk_pct": 0.1,
+     "def_pct": 0.1
+    }
+   },
+   "battle_usable": true
+  },
+  {
+   "id": "hr_uhwang",
+   "name": "우황청심원",
+   "form": "환약",
+   "tier": 4,
+   "book": "bk_med_daegu",
+   "ingredients": [
+    {
+     "id": "herb_uhwang",
+     "qty": 1
+    },
+    {
+     "id": "herb_insam",
+     "qty": 1
+    },
+    {
+     "id": "herb_gamcho",
+     "qty": 2
+    }
+   ],
+   "effect": {
+    "heal_pct": 0.3,
+    "cure": [
+     "stun",
+     "fear",
+     "curse",
+     "poison",
+     "bleed"
+    ]
+   },
+   "battle_usable": true
+  },
+  {
+   "id": "hr_seondan",
+   "name": "선단 불사환",
+   "form": "선단",
+   "tier": 5,
+   "book": "bk_med_temple",
+   "ingredients": [
+    {
+     "id": "herb_sansam",
+     "qty": 1
+    },
+    {
+     "id": "herb_yeongji",
+     "qty": 2
+    },
+    {
+     "id": "herb_uhwang",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "death_ward": {
+     "turns": 3,
+     "hp_floor": 1
+    }
+   },
+   "battle_usable": true
+  }
+ ]
 }

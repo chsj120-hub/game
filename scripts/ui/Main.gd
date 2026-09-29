@@ -631,7 +631,7 @@ func _open_quests() -> void:
 	for q2 in RouteQueue.available_quests():
 		if gs.active_quests.has(q2["id"]) or q2["id"] in gs.completed_quests:
 			continue
-		var lock := "" if gs.rank >= int(q2["min_rank"]) else "Rank %d 필요" % int(q2["min_rank"])
+		var lock := RouteQueue.lock_reason(q2)
 		e.append({"text": "[%d등급] %s" % [int(q2["tier"]), q2["name"]], "hint": lock if lock != "" else RouteQueue.describe(q2["route"]),
 			"disabled": lock != "", "cb": func(): RouteQueue.start_quest(q2)})
 	open_menu("퀘스트", e)
@@ -741,12 +741,17 @@ func _open_party() -> void:
 	for cid in gs.party:
 		var c := String(cid)
 		var cb_ := DataDB.get_row(c).get("carry_bonus", DataDB.get_row(c).get("capture_profile", {}).get("companion_bonuses", {}).get("carry", 0))
-		e.append({"text": "★%d %s — 동행 (일급 %d냥 · 짐 +%d)" % [int(gs.companions.get(c, {}).get("star", 1)), DataDB.display_name(c), Balance.wage_per_day(int(DataDB.get_row(c).get("tier", 1))), int(cb_)],
+		var ct := CompanionSystem.tier_of(c)
+		var nq := CompanionSystem.next_promotion(c)
+		var nxt := "최고 등급" if nq.is_empty() else "다음 승급: %s (%s)" % [String(nq["name"]), CompanionSystem.promotion_lock(c, nq) if CompanionSystem.promotion_lock(c, nq) != "" else "수락 가능 — 퀘스트 메뉴"]
+		e.append({"text": "%d등급 ★%d %s — 동행 (숙련 ×%.2f · 일급 %d냥 · 짐 +%d)" % [ct, int(gs.companions.get(c, {}).get("star", 1)), DataDB.display_name(c),
+			Balance.companion_skill_mult(ct, int(gs.companions.get(c, {}).get("star", 1))), Balance.wage_per_day(ct), int(cb_)],
 			"hint": "막사로", "disabled": not here, "cb": _party_cmd.bind("barracks", c, "")})
+		e.append({"text": "      └ 지식 %s · %s" % [str(CompanionSystem.knowledge_of(c)), nxt], "disabled": true})
 	for cid in gs.barracks:
 		var c2 := String(cid)
 		var dp: Dictionary = gs.dispatch.get(c2, {})
-		e.append({"text": "★%d %s — 막사 대기%s (비용 0)" % [int(gs.companions.get(c2, {}).get("star", 1)), DataDB.display_name(c2), " · 파견: " + String(DataDB.overview.get("barracks", {}).get("dispatch", {}).get(String(dp.get("type", "")), {}).get("name", "")) if not dp.is_empty() else ""],
+		e.append({"text": "%d등급 ★%d %s — 막사 대기%s (비용 0)" % [CompanionSystem.tier_of(c2), int(gs.companions.get(c2, {}).get("star", 1)), DataDB.display_name(c2), " · 파견: " + String(DataDB.overview.get("barracks", {}).get("dispatch", {}).get(String(dp.get("type", "")), {}).get("name", "")) if not dp.is_empty() else ""],
 			"hint": "동행", "disabled": not here, "cb": _party_cmd.bind("party", c2, "")})
 		for dt in DataDB.overview.get("barracks", {}).get("dispatch", {}).keys():
 			e.append({"text": "      └ %s 파견" % DataDB.overview["barracks"]["dispatch"][dt]["name"], "disabled": not here, "cb": _party_cmd.bind("dispatch", c2, String(dt))})

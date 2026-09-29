@@ -40,7 +40,7 @@ static func _connected(regions: Array) -> bool:
 	var queue := [regions[0]]
 	while queue.size() > 0:
 		var cur = queue.pop_front()
-		for nb in DataDB.adjacent(String(cur)):
+		for nb in DataDB.adjacent(String(cur)) + DataDB.sea_adjacent(String(cur)):
 			if nb in regions and not (nb in seen):
 				seen.append(nb)
 				queue.append(nb)
@@ -54,8 +54,21 @@ static func describe(route: Array) -> String:
 	return " → ".join(names)
 
 
+## 수락 잠금 사유(빈 문자열 = 수락 가능). 승급 퀘스트는 신분·동행·지식·시작 장소까지 검사
+static func lock_reason(q: Dictionary) -> String:
+	if q.has("companion"):
+		return CompanionSystem.promotion_lock(String(q["companion"]), q)
+	if GameState.rank < int(q.get("min_rank", 1)):
+		return "Rank %d 필요" % int(q.get("min_rank", 1))
+	return ""
+
+
 static func start_quest(q: Dictionary) -> bool:
 	var gs := GameState
+	var lock := lock_reason(q)
+	if lock != "":
+		gs.note("[수락 불가] %s: %s" % [q["name"], lock])
+		return false
 	var err := validate(q["route"], int(q["tier"]))
 	if err != "":
 		gs.note("[동선 큐 규칙 위반] %s: %s" % [q["name"], err])
@@ -143,6 +156,8 @@ static func grant(reward: Dictionary, tier: int, qtype: String, region: String =
 		gs.equip(String(reward["mount"]), "mount")
 	if reward.has("companion"):
 		gs.recruit(String(reward["companion"]))
+	if reward.has("companion_tier"):
+		CompanionSystem.promote(String(reward["companion_tier"]["id"]), int(reward["companion_tier"]["tier"]))
 	var rep := Balance.quest_reward(tier, qtype, "rep")
 	var mon := Balance.quest_reward(tier, qtype, "money")
 	if rep > 0:
@@ -171,6 +186,12 @@ static func available_quests() -> Array:
 		if r.has("route"):
 			out.append({"id": "q_" + c["id"], "name": "동료 영입: " + String(c["name"]), "tier": int(c["tier"]), "type": "companion",
 				"min_rank": int(r.get("min_rank", 1)), "route": r["route"], "reward": {"companion": c["id"]}})
+	for cid in GameState.companions.keys():  # 보유 동료의 다음 승급 퀘스트(서사 맞춤, 시작 장소 트리거)
+		var pq := CompanionSystem.next_promotion(String(cid))
+		if not pq.is_empty():
+			out.append({"id": String(pq["id"]), "name": String(pq["name"]), "tier": int(pq["tier"]), "type": String(DataDB.overview.get("companion_promotion", {}).get("quest_type", "companion_promo")),
+				"min_rank": int(pq["min_rank"]), "route": pq["route"], "companion": String(cid), "lore": String(pq.get("lore", "")),
+				"reward": {"companion_tier": {"id": String(cid), "tier": int(pq["tier"])}}})
 	for inst in DataDB.instances():
 		out.append({"id": "q_" + inst["id"], "name": "[탐색] " + String(inst["name"]), "tier": int(inst["tier"]), "type": "instance",
 			"min_rank": maxi(1, int(inst["tier"]) - 1), "route": inst["route"], "reward": {"instance": inst["id"]}})

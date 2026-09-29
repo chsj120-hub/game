@@ -324,8 +324,7 @@ func party_knowledge() -> Dictionary:
 		for k in DataDB.skill(ps).get("effects", {}).get("passive", {}).get("knowledge", {}).keys():
 			out[k] = int(out.get(k, 0)) + int(DataDB.skill(ps)["effects"]["passive"]["knowledge"][k])
 	for cid in party:
-		var row := DataDB.get_row(String(cid))
-		var add: Dictionary = row.get("knowledge_add", row.get("capture_profile", {}).get("companion_bonuses", {}).get("knowledge_add", {}))
+		var add := CompanionSystem.knowledge_of(String(cid))  # 승급할수록 대표 지식 +1
 		for k in add.keys():
 			out[k] = int(out.get(k, 0)) + int(add[k])
 	var cap := int(DataDB.classes_doc.get("knowledge", {}).get("party_sum", {}).get("cap", 10))
@@ -592,7 +591,7 @@ func party_combat_stats() -> Array:
 		var c := String(cid)
 		var row := DataDB.get_row(c)
 		var info: Dictionary = companions.get(c, {})
-		var mult := Balance.companion_skill_mult(int(row.get("tier", 3)), int(info.get("star", 1)))
+		var mult := Balance.companion_skill_mult(CompanionSystem.tier_of(c), int(info.get("star", 1)))  # 현재(승급) 등급
 		for sid in row.get("skills", []):
 			var sk := String(sid)
 			if sk in excl or sk in s["skills"]:

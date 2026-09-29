@@ -1013,7 +1013,7 @@
    "tier": 5,
    "enemy_tier": "NORMAL",
    "hp": 3600,
-   "atk": 145,
+   "atk": 155,
    "def": 80,
    "speed": 108,
    "combat_scale": 1.2,

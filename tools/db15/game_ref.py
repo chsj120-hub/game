@@ -37,6 +37,18 @@ CK = load("19_classes_knowledge.json")
 RANK_TABLE = OV["rank"]["table"]
 
 MAP_IDS = sorted(REGIONS)
+_NODE_REG = {n["id"]: n["region"] for n in NODES}
+SEA_ADJ = {}
+for _s in REG["sea_routes"]:
+    _a, _b = _NODE_REG[_s["a"]], _NODE_REG[_s["b"]]
+    if _a != _b:
+        SEA_ADJ.setdefault(_a, set()).add(_b)
+        SEA_ADJ.setdefault(_b, set()).add(_a)
+
+
+def adjacent(region):
+    """육로 인접 + 뱃길 인접(동선 큐 규칙 — RouteQueue._connected·validate_data.connected 와 동일)."""
+    return sorted(set(REGIONS[region]["adjacent"]) | SEA_ADJ.get(region, set()))
 REGION_NAME = {k: v["name"] for k, v in REGIONS.items()}
 
 
@@ -120,8 +132,6 @@ def tier_ref_boss():
 
 def companion_template(tier):
     """게임 동료의 등급별 평균 스탯(동료 통합 전투라 스탯은 주인공에 합산되지 않고, 스킬 위력 산식·표시에만 쓰인다)."""
-    cs = [c for c in COMPANIONS.values() if c["tier"] == tier]
-    if not cs:
-        lo = companion_template(tier - 1)
-        return {k: round(v * 1.2) if k != "speed" else v + 2 for k, v in lo.items()}
-    return {k: round(sum(c[k] for c in cs) / len(cs)) for k in ("hp", "atk", "def", "speed")}
+    # 게임 동료 2·3등급 평균(110/16/10/85 · 150/23/16/88)을 기준으로 등급당 약 ×1.35 — 표시·도감용(전투 합산 없음)
+    table = {1: (82, 12, 7, 84), 2: (110, 16, 10, 85), 3: (150, 23, 16, 88), 4: (200, 31, 22, 90), 5: (260, 40, 29, 92)}
+    return dict(zip(("hp", "atk", "def", "speed"), table[max(1, min(5, int(tier)))]))

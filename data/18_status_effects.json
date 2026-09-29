@@ -1,28 +1,184 @@
 {
  "_schema": "18_상태이상·버프. 완전판 7장 '8대 상태이상' 목록이 원문에 없어 설계로 확정. battle=CTB 전투(턴 단위), field=필드(분 단위 지속/치료 조건). dot=자기 턴 시작 시 최대 HP 비율 피해. cure_by=치료 수단(09 한방약 cure 키와 일치).",
  "battle": [
-  {"id": "stun",     "name": "기절", "icon": "st_stun",     "type": "debuff", "skip_turn": true, "boss_immune": true},
-  {"id": "poison",   "name": "중독", "icon": "st_poison",   "type": "debuff", "dot": 0.05},
-  {"id": "bleed",    "name": "출혈", "icon": "st_bleed",    "type": "debuff", "dot": 0.04, "heal_mult": 0.7},
-  {"id": "burn",     "name": "화상", "icon": "st_burn",     "type": "debuff", "dot": 0.04, "def_pct": -0.10},
-  {"id": "fear",     "name": "공포", "icon": "st_fear",     "type": "debuff", "atk_pct": -0.30},
-  {"id": "curse",    "name": "저주", "icon": "st_curse",    "type": "debuff", "res_all": -0.20, "heal_mult": 0.5},
-  {"id": "charm",    "name": "홀림", "icon": "st_charm",    "type": "debuff", "skip_chance": 0.5},
-  {"id": "frost",    "name": "동상", "icon": "st_frost",    "type": "debuff", "gauge_rate": -0.30},
-  {"id": "shoeless", "name": "신발 도둑맞음", "icon": "st_shoeless", "type": "debuff", "remove_shoe_speed": true, "note": "야광귀 전용(8대 외 특수)"}
+  {
+   "id": "stun",
+   "name": "기절",
+   "icon": "st_stun",
+   "type": "debuff",
+   "skip_turn": true,
+   "boss_immune": true
+  },
+  {
+   "id": "poison",
+   "name": "중독",
+   "icon": "st_poison",
+   "type": "debuff",
+   "dot": 0.05
+  },
+  {
+   "id": "bleed",
+   "name": "출혈",
+   "icon": "st_bleed",
+   "type": "debuff",
+   "dot": 0.04,
+   "heal_mult": 0.7
+  },
+  {
+   "id": "burn",
+   "name": "화상",
+   "icon": "st_burn",
+   "type": "debuff",
+   "dot": 0.04,
+   "def_pct": -0.1
+  },
+  {
+   "id": "fear",
+   "name": "공포",
+   "icon": "st_fear",
+   "type": "debuff",
+   "atk_pct": -0.3
+  },
+  {
+   "id": "curse",
+   "name": "저주",
+   "icon": "st_curse",
+   "type": "debuff",
+   "res_all": -0.2,
+   "heal_mult": 0.5
+  },
+  {
+   "id": "charm",
+   "name": "홀림",
+   "icon": "st_charm",
+   "type": "debuff",
+   "skip_chance": 0.5
+  },
+  {
+   "id": "frost",
+   "name": "동상",
+   "icon": "st_frost",
+   "type": "debuff",
+   "gauge_rate": -0.3
+  },
+  {
+   "id": "shoeless",
+   "name": "신발 도둑맞음",
+   "icon": "st_shoeless",
+   "type": "debuff",
+   "remove_shoe_speed": true,
+   "note": "야광귀 전용(8대 외 특수)"
+  },
+  {
+   "id": "death_ward",
+   "name": "불사(不死)",
+   "icon": "st_death_ward",
+   "type": "buff",
+   "skip_turn": false,
+   "boss_immune": false,
+   "desc": "치명타를 맞아도 HP 1 로 버티며 더 줄지 않음(자기 턴 3회 지속)"
+  }
  ],
  "field": [
-  {"id": "cold",     "name": "감기",  "fatigue_gain_mult": 1.3, "days": 3, "cure_by": ["hr_ssanghwa", "spring", "inn_rest_2"]},
-  {"id": "fever",    "name": "열병",  "hp_regen": false, "speed_mult": 0.8, "days": 4, "cure_by": ["hr_cheongsim", "spring"]},
-  {"id": "chill",    "name": "냉증",  "satiety_drain_mult": 1.3, "days": 5, "cure_by": ["spring", "hr_gyeongok"]},
-  {"id": "fracture", "name": "골절",  "speed_mult": 0.6, "atk_pct": -0.2, "days": 10, "cure_by": ["hr_geumchang", "spring"]},
-  {"id": "plague",   "name": "역병",  "hp_loss_per_tick": 0.02, "spread_to_party": 0.1, "days": 7, "cure_by": ["hr_uhwang", "spring", "hyeminseo"]}
+  {
+   "id": "cold",
+   "name": "감기",
+   "fatigue_gain_mult": 1.3,
+   "days": 3,
+   "cure_by": [
+    "hr_ssanghwa",
+    "spring",
+    "inn_rest_2"
+   ]
+  },
+  {
+   "id": "fever",
+   "name": "열병",
+   "hp_regen": false,
+   "speed_mult": 0.8,
+   "days": 4,
+   "cure_by": [
+    "hr_cheongsim",
+    "spring"
+   ]
+  },
+  {
+   "id": "chill",
+   "name": "냉증",
+   "satiety_drain_mult": 1.3,
+   "days": 5,
+   "cure_by": [
+    "spring",
+    "hr_gyeongok"
+   ]
+  },
+  {
+   "id": "fracture",
+   "name": "골절",
+   "speed_mult": 0.6,
+   "atk_pct": -0.2,
+   "days": 10,
+   "cure_by": [
+    "hr_geumchang",
+    "spring"
+   ]
+  },
+  {
+   "id": "plague",
+   "name": "역병",
+   "hp_loss_per_tick": 0.02,
+   "spread_to_party": 0.1,
+   "days": 7,
+   "cure_by": [
+    "hr_uhwang",
+    "spring",
+    "hyeminseo"
+   ]
+  }
  ],
  "field_buffs": [
-  {"id": "BUFF_WARM_SPRING_VITALITY", "name": "온천 기력",    "fatigue_gain_mult": 0.7, "days": 3},
-  {"id": "BUFF_TEMPLE_GAHO",          "name": "사찰 가호",    "res_all": 0.05, "days": 7},
-  {"id": "BUFF_CAMP_PERFORMANCE",     "name": "야영 공연 흥", "fatigue_gain_mult": 0.85, "days": 1, "requires_knowledge": {"gong": 3}},
-  {"id": "BUFF_SEASONAL",             "name": "세시풍속",    "note": "22 세시풍속별 효과로 대체", "days": 1}
+  {
+   "id": "BUFF_WARM_SPRING_VITALITY",
+   "name": "온천 기력",
+   "fatigue_gain_mult": 0.7,
+   "days": 3
+  },
+  {
+   "id": "BUFF_TEMPLE_GAHO",
+   "name": "사찰 가호",
+   "res_all": 0.05,
+   "days": 7
+  },
+  {
+   "id": "BUFF_CAMP_PERFORMANCE",
+   "name": "야영 공연 흥",
+   "fatigue_gain_mult": 0.85,
+   "days": 1,
+   "requires_knowledge": {
+    "gong": 3
+   }
+  },
+  {
+   "id": "BUFF_SEASONAL",
+   "name": "세시풍속",
+   "note": "22 세시풍속별 효과로 대체",
+   "days": 1
+  }
  ],
- "disease_triggers": {"fatigue_min": 90, "weathers": ["rain", "storm", "snow"], "chance_per_tick": 0.10, "table": {"rain": "cold", "storm": "fever", "snow": "chill"}, "fall_chance_mountain_exhausted": 0.02, "fall_result": "fracture"}
+ "disease_triggers": {
+  "fatigue_min": 90,
+  "weathers": [
+   "rain",
+   "storm",
+   "snow"
+  ],
+  "chance_per_tick": 0.1,
+  "table": {
+   "rain": "cold",
+   "storm": "fever",
+   "snow": "chill"
+  },
+  "fall_chance_mountain_exhausted": 0.02,
+  "fall_result": "fracture"
+ }
 }

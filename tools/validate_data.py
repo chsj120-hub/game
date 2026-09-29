@@ -6,7 +6,7 @@
       · 스킬 상태이상 · 미니게임 구현/문항 · 세시 24절기 · 신분 임계 단조성
 """
 import sys
-from collections import Counter, deque
+from collections import Counter, deque, defaultdict
 
 from common import load
 
@@ -132,12 +132,21 @@ def region_of(x):
     return r.get("region") if r else None
 
 
+SEA_ADJ = defaultdict(set)
+for _s in REG["sea_routes"]:
+    _ra, _rb = by[_s["a"]]["region"], by[_s["b"]]["region"]
+    if _ra != _rb:
+        SEA_ADJ[_ra].add(_rb)
+        SEA_ADJ[_rb].add(_ra)
+
+
 def connected(regs):
+    """동선 큐 인접 판정: 육로 인접 + 뱃길로 이어진 권역."""
     regs = list(regs)
     sn, qq = {regs[0]}, deque([regs[0]])
     while qq:
         c = qq.popleft()
-        for nb in adj.get(c, []):
+        for nb in set(adj.get(c, [])) | SEA_ADJ[c]:
             if nb in regs and nb not in sn:
                 sn.add(nb)
                 qq.append(nb)
@@ -338,6 +347,28 @@ for c in S["companions"]:
         if k not in KNOW:
             E(f"{w}: 지식 키 {k}")
     route(c["recruit"]["route"], c["tier"], w)
+    # 동료 승급: 시작 1~3등급, 승급 퀘스트는 시작+1 … max_tier 연속, 트리거 = 신분·동행·지식·시작 장소
+    cp_cfg = OV.get("companion_promotion", {})
+    if cp_cfg:
+        if c["tier"] not in cp_cfg["start_tiers"]:
+            E(f"{w}: 시작 등급 {c['tier']} (허용 {cp_cfg['start_tiers']})")
+        want = list(range(c["tier"] + 1, c.get("max_tier", cp_cfg["max_tier"]) + 1))
+        got = [q["tier"] for q in c.get("promotion", [])]
+        if got != want:
+            E(f"{w}: 승급 퀘스트 등급 {got} ≠ {want}")
+        if sum(c["knowledge_add"].values()) != c["tier"]:
+            E(f"{w}: 시작 지식 합 {sum(c['knowledge_add'].values())} ≠ 시작 등급 {c['tier']}")
+        for q in c.get("promotion", []):
+            wq = f"{w} {q['id']}"
+            route(q["route"], q["tier"], wq)
+            ref(q["trigger_node"], wq, {"nodes"})
+            if q["route"][0] != q["trigger_node"]:
+                E(f"{wq}: 동선 시작 ≠ 트리거 장소")
+            if q["min_rank"] != q["tier"]:
+                E(f"{wq}: min_rank {q['min_rank']} ≠ 등급 {q['tier']}")
+            for k in q["requires"].get("knowledge", {}):
+                if k not in KNOW:
+                    E(f"{wq}: 지식 키 {k}")
 for c in S["classes"]:
     w = f"19 {c['id']}"
     for s in c["skills"]:

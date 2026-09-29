@@ -18,6 +18,61 @@ static func barracks_slots() -> int:
 	return mini(slots, int(b.get("max_slots", 30)))
 
 
+# ================================================================ 등급 승급(1~3등급 시작 → 승급 퀘스트로 최대 5등급)
+## 현재 등급(저장값 우선, 구 세이브는 데이터 tier)
+static func tier_of(cid: String) -> int:
+	var row := DataDB.get_row(cid)
+	return int(GameState.companions.get(cid, {}).get("tier", row.get("start_tier", row.get("tier", 1))))
+
+
+## 지식 가산 = 시작 knowledge_add + knowledge_per_promotion × (현재 등급 − 시작 등급)  → 지식 합 = 현재 등급
+static func knowledge_of(cid: String) -> Dictionary:
+	var row := DataDB.get_row(cid)
+	var out: Dictionary = row.get("knowledge_add", row.get("capture_profile", {}).get("companion_bonuses", {}).get("knowledge_add", {})).duplicate()
+	var ups := tier_of(cid) - int(row.get("start_tier", row.get("tier", 1)))
+	var per: Dictionary = row.get("knowledge_per_promotion", {})
+	for k in per.keys():
+		out[k] = int(out.get(k, 0)) + int(per[k]) * maxi(0, ups)
+	return out
+
+
+## 다음 승급 퀘스트(없으면 {})
+static func next_promotion(cid: String) -> Dictionary:
+	var t := tier_of(cid) + 1
+	for q in DataDB.get_row(cid).get("promotion", []):
+		if int(q["tier"]) == t:
+			return q
+	return {}
+
+
+## 승급 퀘스트 수락 조건(빈 문자열 = 가능): 신분 Rank ≥ t · 동행 · 대표 지식 ≥ t · 시작 장소(트리거 노드)에 있음
+static func promotion_lock(cid: String, q: Dictionary) -> String:
+	var gs := GameState
+	if gs.rank < int(q.get("min_rank", q["tier"])):
+		return "Rank %d 필요" % int(q.get("min_rank", q["tier"]))
+	var req: Dictionary = q.get("requires", {})
+	if req.get("in_party", false) and not (cid in gs.party):
+		return "%s 동행 필요" % DataDB.display_name(cid)
+	var pk := gs.party_knowledge()
+	for k in req.get("knowledge", {}).keys():
+		if int(pk.get(k, 0)) < int(req["knowledge"][k]):
+			return "%s 지식 %d 필요" % [String(DataDB.classes_doc.get("knowledge", {}).get("names", {}).get(k, k)), int(req["knowledge"][k])]
+	if gs.current_node != String(q.get("trigger_node", "")):
+		return "시작 장소: %s" % DataDB.display_name(String(q.get("trigger_node", "")))
+	return ""
+
+
+static func promote(cid: String, tier: int) -> void:
+	var gs := GameState
+	if not gs.companions.has(cid):
+		return
+	var info: Dictionary = gs.companions[cid]
+	info["tier"] = clampi(tier, tier_of(cid), int(DataDB.get_row(cid).get("max_tier", 5)))
+	var m := Balance.companion_skill_mult(int(info["tier"]), int(info.get("star", 1)))
+	gs.note("%s %d등급 승급! 스킬 숙련 ×%.2f · 지식 %s" % [DataDB.display_name(cid), int(info["tier"]), m, str(knowledge_of(cid))])
+	gs.stats_changed.emit()
+
+
 static func add_companion(cid: String, captured: bool) -> void:
 	var gs := GameState
 	var row := DataDB.get_row(cid)
@@ -34,7 +89,7 @@ static func add_companion(cid: String, captured: bool) -> void:
 			gs.note("%s 중복 — 스택 %d/%d" % [row.get("name", cid), info["dupes"], need])
 		gs.stats_changed.emit()
 		return
-	gs.companions[cid] = {"star": 1, "dupes": 0, "captured": captured}
+	gs.companions[cid] = {"star": 1, "dupes": 0, "captured": captured, "tier": int(row.get("start_tier", row.get("tier", 1)))}
 	if gs.party.size() < GameState.MAX_PARTY:
 		gs.party.append(cid)
 		gs.note("동료 합류: %s" % row.get("name", cid))
@@ -104,7 +159,7 @@ static func daily(_d: int) -> void:
 			var up: Dictionary = DataDB.get_row(String(cid)).get("capture_profile", {}).get("companion_bonuses", {}).get("upkeep", {})
 			wage += int(up.get("cost", 0))
 		else:
-			wage += Balance.wage_per_day(int(DataDB.get_row(String(cid)).get("tier", 1)))
+			wage += Balance.wage_per_day(tier_of(String(cid)))
 	if wage > 0:
 		if gs.money >= wage:
 			gs.money -= wage
@@ -113,7 +168,7 @@ static func daily(_d: int) -> void:
 	for cid in gs.dispatch.keys():
 		var dp: Dictionary = gs.dispatch[cid]
 		var d: Dictionary = _bc().get("dispatch", {}).get(String(dp["type"]), {}).get("per_day", {})
-		var tier := int(DataDB.get_row(String(cid)).get("tier", 1))
+		var tier := tier_of(String(cid))
 		for it in d.get("items", []):
 			gs.add_item(String(it["id"]), int(it["qty"]))
 		if d.has("money_per_tier"):

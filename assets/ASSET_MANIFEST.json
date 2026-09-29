@@ -1,7 +1,7 @@
 {
  "_about": "tools/gen_asset_manifest.py 생성. 게임은 파일이 없으면 절차적 그리기로 대체하므로 어떤 순서로 넣어도 된다. 규격은 spec, 경로는 path 그대로.",
  "summary": {
-  "total": 644,
+  "total": 751,
   "present": 0,
   "by_kind": {
    "region_map": 17,
@@ -9,10 +9,10 @@
    "parallax": 51,
    "battle_bg": 17,
    "overworld": 1,
-   "marker": 29,
-   "portrait": 38,
+   "marker": 30,
+   "portrait": 91,
    "icon": 428,
-   "sprite": 20,
+   "sprite": 73,
    "ui_9patch": 2,
    "minigame": 24
   }
@@ -1654,27 +1654,27 @@
    "exists": false
   },
   {
-   "path": "res://assets/portraits/cp_heojun.png",
+   "path": "res://assets/portraits/cp_chakho.png",
    "kind": "portrait",
    "spec": {
     "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
     "format": "PNG 32-bit",
     "import": "Lossless"
    },
-   "use": "동료 허준",
-   "ref": "cp_heojun",
+   "use": "동료 착호갑사",
+   "ref": "cp_chakho",
    "exists": false
   },
   {
-   "path": "res://assets/characters/cp_heojun/walk.png",
+   "path": "res://assets/characters/cp_chakho/walk.png",
    "kind": "sprite",
    "spec": {
     "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
     "format": "PNG 32-bit 투명",
     "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
    },
-   "use": "동료 허준 보행",
-   "ref": "cp_heojun",
+   "use": "동료 착호갑사 보행",
+   "ref": "cp_chakho",
    "exists": false
   },
   {
@@ -1702,6 +1702,246 @@
    "exists": false
   },
   {
+   "path": "res://assets/portraits/cp_c03.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 문익점",
+   "ref": "cp_c03",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c03/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 문익점 보행",
+   "ref": "cp_c03",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c04.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 박지원",
+   "ref": "cp_c04",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c04/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 박지원 보행",
+   "ref": "cp_c04",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c05.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 심마니",
+   "ref": "cp_c05",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c05/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 심마니 보행",
+   "ref": "cp_c05",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c06.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 정도전",
+   "ref": "cp_c06",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c06/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 정도전 보행",
+   "ref": "cp_c06",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c07.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 채제공",
+   "ref": "cp_c07",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c07/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 채제공 보행",
+   "ref": "cp_c07",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c08.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 김정희",
+   "ref": "cp_c08",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c08/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 김정희 보행",
+   "ref": "cp_c08",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c09.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 신숙주",
+   "ref": "cp_c09",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c09/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 신숙주 보행",
+   "ref": "cp_c09",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c10.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 장영실",
+   "ref": "cp_c10",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c10/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 장영실 보행",
+   "ref": "cp_c10",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c11.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 이천",
+   "ref": "cp_c11",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c11/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 이천 보행",
+   "ref": "cp_c11",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c12.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 김정호",
+   "ref": "cp_c12",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c12/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 김정호 보행",
+   "ref": "cp_c12",
+   "exists": false
+  },
+  {
    "path": "res://assets/portraits/cp_yisunsin.png",
    "kind": "portrait",
    "spec": {
@@ -1726,219 +1966,51 @@
    "exists": false
   },
   {
-   "path": "res://assets/portraits/cp_samyeong.png",
+   "path": "res://assets/portraits/cp_c14.png",
    "kind": "portrait",
    "spec": {
     "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
     "format": "PNG 32-bit",
     "import": "Lossless"
    },
-   "use": "동료 사명대사 유정",
-   "ref": "cp_samyeong",
+   "use": "동료 남이",
+   "ref": "cp_c14",
    "exists": false
   },
   {
-   "path": "res://assets/characters/cp_samyeong/walk.png",
+   "path": "res://assets/characters/cp_c14/walk.png",
    "kind": "sprite",
    "spec": {
     "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
     "format": "PNG 32-bit 투명",
     "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
    },
-   "use": "동료 사명대사 유정 보행",
-   "ref": "cp_samyeong",
+   "use": "동료 남이 보행",
+   "ref": "cp_c14",
    "exists": false
   },
   {
-   "path": "res://assets/portraits/cp_seosan.png",
+   "path": "res://assets/portraits/cp_c15.png",
    "kind": "portrait",
    "spec": {
     "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
     "format": "PNG 32-bit",
     "import": "Lossless"
    },
-   "use": "동료 서산대사 휴정",
-   "ref": "cp_seosan",
+   "use": "동료 권율",
+   "ref": "cp_c15",
    "exists": false
   },
   {
-   "path": "res://assets/characters/cp_seosan/walk.png",
+   "path": "res://assets/characters/cp_c15/walk.png",
    "kind": "sprite",
    "spec": {
     "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
     "format": "PNG 32-bit 투명",
     "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
    },
-   "use": "동료 서산대사 휴정 보행",
-   "ref": "cp_seosan",
-   "exists": false
-  },
-  {
-   "path": "res://assets/portraits/cp_jeonuchi.png",
-   "kind": "portrait",
-   "spec": {
-    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
-    "format": "PNG 32-bit",
-    "import": "Lossless"
-   },
-   "use": "동료 전우치",
-   "ref": "cp_jeonuchi",
-   "exists": false
-  },
-  {
-   "path": "res://assets/characters/cp_jeonuchi/walk.png",
-   "kind": "sprite",
-   "spec": {
-    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
-    "format": "PNG 32-bit 투명",
-    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
-   },
-   "use": "동료 전우치 보행",
-   "ref": "cp_jeonuchi",
-   "exists": false
-  },
-  {
-   "path": "res://assets/portraits/cp_namsago.png",
-   "kind": "portrait",
-   "spec": {
-    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
-    "format": "PNG 32-bit",
-    "import": "Lossless"
-   },
-   "use": "동료 남사고",
-   "ref": "cp_namsago",
-   "exists": false
-  },
-  {
-   "path": "res://assets/characters/cp_namsago/walk.png",
-   "kind": "sprite",
-   "spec": {
-    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
-    "format": "PNG 32-bit 투명",
-    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
-   },
-   "use": "동료 남사고 보행",
-   "ref": "cp_namsago",
-   "exists": false
-  },
-  {
-   "path": "res://assets/portraits/cp_chakho.png",
-   "kind": "portrait",
-   "spec": {
-    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
-    "format": "PNG 32-bit",
-    "import": "Lossless"
-   },
-   "use": "동료 착호갑사 박포수",
-   "ref": "cp_chakho",
-   "exists": false
-  },
-  {
-   "path": "res://assets/characters/cp_chakho/walk.png",
-   "kind": "sprite",
-   "spec": {
-    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
-    "format": "PNG 32-bit 투명",
-    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
-   },
-   "use": "동료 착호갑사 박포수 보행",
-   "ref": "cp_chakho",
-   "exists": false
-  },
-  {
-   "path": "res://assets/portraits/cp_bari.png",
-   "kind": "portrait",
-   "spec": {
-    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
-    "format": "PNG 32-bit",
-    "import": "Lossless"
-   },
-   "use": "동료 무녀 바리",
-   "ref": "cp_bari",
-   "exists": false
-  },
-  {
-   "path": "res://assets/characters/cp_bari/walk.png",
-   "kind": "sprite",
-   "spec": {
-    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
-    "format": "PNG 32-bit 투명",
-    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
-   },
-   "use": "동료 무녀 바리 보행",
-   "ref": "cp_bari",
-   "exists": false
-  },
-  {
-   "path": "res://assets/portraits/cp_bobusang.png",
-   "kind": "portrait",
-   "spec": {
-    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
-    "format": "PNG 32-bit",
-    "import": "Lossless"
-   },
-   "use": "동료 보부상 황행수",
-   "ref": "cp_bobusang",
-   "exists": false
-  },
-  {
-   "path": "res://assets/characters/cp_bobusang/walk.png",
-   "kind": "sprite",
-   "spec": {
-    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
-    "format": "PNG 32-bit 투명",
-    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
-   },
-   "use": "동료 보부상 황행수 보행",
-   "ref": "cp_bobusang",
-   "exists": false
-  },
-  {
-   "path": "res://assets/portraits/cp_kimhongdo.png",
-   "kind": "portrait",
-   "spec": {
-    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
-    "format": "PNG 32-bit",
-    "import": "Lossless"
-   },
-   "use": "동료 단원 김홍도",
-   "ref": "cp_kimhongdo",
-   "exists": false
-  },
-  {
-   "path": "res://assets/characters/cp_kimhongdo/walk.png",
-   "kind": "sprite",
-   "spec": {
-    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
-    "format": "PNG 32-bit 투명",
-    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
-   },
-   "use": "동료 단원 김홍도 보행",
-   "ref": "cp_kimhongdo",
-   "exists": false
-  },
-  {
-   "path": "res://assets/portraits/cp_sinyunbok.png",
-   "kind": "portrait",
-   "spec": {
-    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
-    "format": "PNG 32-bit",
-    "import": "Lossless"
-   },
-   "use": "동료 혜원 신윤복",
-   "ref": "cp_sinyunbok",
-   "exists": false
-  },
-  {
-   "path": "res://assets/characters/cp_sinyunbok/walk.png",
-   "kind": "sprite",
-   "spec": {
-    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
-    "format": "PNG 32-bit 투명",
-    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
-   },
-   "use": "동료 혜원 신윤복 보행",
-   "ref": "cp_sinyunbok",
+   "use": "동료 권율 보행",
+   "ref": "cp_c15",
    "exists": false
   },
   {
@@ -1966,6 +2038,462 @@
    "exists": false
   },
   {
+   "path": "res://assets/portraits/cp_c17.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 안견",
+   "ref": "cp_c17",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c17/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 안견 보행",
+   "ref": "cp_c17",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_kimhongdo.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 김홍도",
+   "ref": "cp_kimhongdo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_kimhongdo/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 김홍도 보행",
+   "ref": "cp_kimhongdo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c19.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 신사임당",
+   "ref": "cp_c19",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c19/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 신사임당 보행",
+   "ref": "cp_c19",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_heojun.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 허준",
+   "ref": "cp_heojun",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_heojun/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 허준 보행",
+   "ref": "cp_heojun",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c21.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 이제마",
+   "ref": "cp_c21",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c21/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 이제마 보행",
+   "ref": "cp_c21",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c22.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 채규서",
+   "ref": "cp_c22",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c22/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 채규서 보행",
+   "ref": "cp_c22",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c23.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 정약종",
+   "ref": "cp_c23",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c23/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 정약종 보행",
+   "ref": "cp_c23",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c24.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 을지문덕",
+   "ref": "cp_c24",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c24/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 을지문덕 보행",
+   "ref": "cp_c24",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c25.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 연개소문",
+   "ref": "cp_c25",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c25/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 연개소문 보행",
+   "ref": "cp_c25",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c26.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 계백",
+   "ref": "cp_c26",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c26/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 계백 보행",
+   "ref": "cp_c26",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c27.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 강림도령",
+   "ref": "cp_c27",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c27/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 강림도령 보행",
+   "ref": "cp_c27",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c28.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 뱃사공",
+   "ref": "cp_c28",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c28/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 뱃사공 보행",
+   "ref": "cp_c28",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_samyeong.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 사명대사",
+   "ref": "cp_samyeong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_samyeong/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 사명대사 보행",
+   "ref": "cp_samyeong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c30.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 원효대사",
+   "ref": "cp_c30",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c30/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 원효대사 보행",
+   "ref": "cp_c30",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c31.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 의상대사",
+   "ref": "cp_c31",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c31/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 의상대사 보행",
+   "ref": "cp_c31",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_seosan.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 서산대사(휴정)",
+   "ref": "cp_seosan",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_seosan/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 서산대사(휴정) 보행",
+   "ref": "cp_seosan",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c33.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 보조국사 지눌",
+   "ref": "cp_c33",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c33/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 보조국사 지눌 보행",
+   "ref": "cp_c33",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_bari.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 바리공주",
+   "ref": "cp_bari",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_bari/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 바리공주 보행",
+   "ref": "cp_bari",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_jeonuchi.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 전우치",
+   "ref": "cp_jeonuchi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_jeonuchi/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 전우치 보행",
+   "ref": "cp_jeonuchi",
+   "exists": false
+  },
+  {
    "path": "res://assets/portraits/cp_honggildong.png",
    "kind": "portrait",
    "spec": {
@@ -1987,6 +2515,750 @@
    },
    "use": "동료 홍길동 보행",
    "ref": "cp_honggildong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c37.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 처용(處容)",
+   "ref": "cp_c37",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c37/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 처용(處容) 보행",
+   "ref": "cp_c37",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c38.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 대장장이",
+   "ref": "cp_c38",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c38/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 대장장이 보행",
+   "ref": "cp_c38",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c39.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 백정",
+   "ref": "cp_c39",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c39/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 백정 보행",
+   "ref": "cp_c39",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c40.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 약초꾼",
+   "ref": "cp_c40",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c40/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 약초꾼 보행",
+   "ref": "cp_c40",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c41.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 옹기장이",
+   "ref": "cp_c41",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c41/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 옹기장이 보행",
+   "ref": "cp_c41",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_bobusang.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 보부상(부상)",
+   "ref": "cp_bobusang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_bobusang/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 보부상(부상) 보행",
+   "ref": "cp_bobusang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c43.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 역졸(마부)",
+   "ref": "cp_c43",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c43/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 역졸(마부) 보행",
+   "ref": "cp_c43",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c44.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 산포수",
+   "ref": "cp_c44",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c44/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 산포수 보행",
+   "ref": "cp_c44",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c45.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 짚신장이",
+   "ref": "cp_c45",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c45/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 짚신장이 보행",
+   "ref": "cp_c45",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c46.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 주모",
+   "ref": "cp_c46",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c46/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 주모 보행",
+   "ref": "cp_c46",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c47.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 시골 훈장",
+   "ref": "cp_c47",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c47/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 시골 훈장 보행",
+   "ref": "cp_c47",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c48.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 뗏목사공",
+   "ref": "cp_c48",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c48/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 뗏목사공 보행",
+   "ref": "cp_c48",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c49.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 채석 광부",
+   "ref": "cp_c49",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c49/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 채석 광부 보행",
+   "ref": "cp_c49",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c50.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 옻칠장",
+   "ref": "cp_c50",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c50/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 옻칠장 보행",
+   "ref": "cp_c50",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c51.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 한지장이",
+   "ref": "cp_c51",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c51/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 한지장이 보행",
+   "ref": "cp_c51",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c52.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 석공(석수)",
+   "ref": "cp_c52",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c52/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 석공(석수) 보행",
+   "ref": "cp_c52",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c53.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 박씨부인",
+   "ref": "cp_c53",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c53/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 박씨부인 보행",
+   "ref": "cp_c53",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c54.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 심청",
+   "ref": "cp_c54",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c54/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 심청 보행",
+   "ref": "cp_c54",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c55.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 성춘향",
+   "ref": "cp_c55",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c55/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 성춘향 보행",
+   "ref": "cp_c55",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c56.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 이몽룡",
+   "ref": "cp_c56",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c56/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 이몽룡 보행",
+   "ref": "cp_c56",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c57.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 흥부",
+   "ref": "cp_c57",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c57/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 흥부 보행",
+   "ref": "cp_c57",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c58.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 배비장",
+   "ref": "cp_c58",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c58/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 배비장 보행",
+   "ref": "cp_c58",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c59.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 허생",
+   "ref": "cp_c59",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c59/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 허생 보행",
+   "ref": "cp_c59",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c60.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 조웅",
+   "ref": "cp_c60",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c60/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 조웅 보행",
+   "ref": "cp_c60",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c61.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 유충렬",
+   "ref": "cp_c61",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c61/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 유충렬 보행",
+   "ref": "cp_c61",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c62.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 양소유",
+   "ref": "cp_c62",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c62/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 양소유 보행",
+   "ref": "cp_c62",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c63.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 숙향",
+   "ref": "cp_c63",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c63/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 숙향 보행",
+   "ref": "cp_c63",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c64.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 장화",
+   "ref": "cp_c64",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c64/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 장화 보행",
+   "ref": "cp_c64",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_c65.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 홍계월",
+   "ref": "cp_c65",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_c65/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 홍계월 보행",
+   "ref": "cp_c65",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_namsago.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 남사고",
+   "ref": "cp_namsago",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_namsago/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 남사고 보행",
+   "ref": "cp_namsago",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/cp_sinyunbok.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "동료 혜원 신윤복",
+   "ref": "cp_sinyunbok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/characters/cp_sinyunbok/walk.png",
+   "kind": "sprite",
+   "spec": {
+    "size": "프레임 128x128, 가로 배열 8프레임(1024x128)",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless, Filter Nearest(도트) 또는 Linear(수묵)"
+   },
+   "use": "동료 혜원 신윤복 보행",
+   "ref": "cp_sinyunbok",
    "exists": false
   },
   {
@@ -2347,6 +3619,18 @@
    },
    "use": "상태이상 신발 도둑맞음",
    "ref": "shoeless",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/status/death_ward.png",
+   "kind": "marker",
+   "spec": {
+    "size": "64x64",
+    "format": "PNG 32-bit 투명",
+    "import": "Lossless"
+   },
+   "use": "상태이상 불사(不死)",
+   "ref": "death_ward",
    "exists": false
   },
   {
@@ -5789,7 +7073,7 @@
     "format": "PNG 32-bit",
     "import": "Lossless, Mipmaps on"
    },
-   "use": "환골탈태 선단 아이콘",
+   "use": "선단 불사환 아이콘",
    "ref": "hr_seondan",
    "exists": false
   },

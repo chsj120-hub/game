@@ -232,7 +232,7 @@ func begin_next_turn() -> Combatant:
 			var dot := float(DataDB.status_battle.get(sid, {}).get("dot", 0.0))
 			if dot > 0.0:
 				var d: float = c.max_hp * dot
-				c.hp = maxf(0.0, c.hp - d)
+				c.take_damage(d)
 				c.min_ratio = minf(c.min_ratio, c.hp_ratio())
 				_emit("%s %s 피해 −%d" % [c.name, DataDB.status_battle[sid].get("name", sid), int(d)])
 		if not c.is_alive():
@@ -353,9 +353,10 @@ func use_skill(actor: Combatant, sid: String, target: Combatant) -> void:
 				parts.append("%s 도술 면역" % t.name)
 			else:
 				var dmg := _hit(actor, t, sk, power)
-				t.hp = maxf(0.0, t.hp - dmg)
+				var warded := t.has_death_ward() and dmg >= t.hp
+				t.take_damage(dmg)
 				t.min_ratio = minf(t.min_ratio, t.hp_ratio())
-				parts.append("%s −%d" % [t.name, dmg])
+				parts.append("%s −%d%s" % [t.name, dmg, " (불사: HP 1 로 버팀)" if warded else ""])
 			if not t.is_alive():
 				parts.append("%s 쓰러짐" % t.name)
 				if t.side == "enemy":
@@ -404,9 +405,10 @@ func use_item(actor: Combatant, item_id: String, target: Combatant, free: bool =
 	var row := DataDB.get_row(item_id)
 	var effect: Dictionary = row.get("effect", {})
 	var t: Combatant = target if target else actor
-	if effect.has("revive_pct") and not t.is_alive():
-		t.hp = t.max_hp * float(effect["revive_pct"])
-		t.gauge = 0.0
+	if effect.has("death_ward") and t.is_alive():  # 선단 불사환: 3턴 즉사 방지
+		var dw: Dictionary = effect["death_ward"]
+		t.add_status("death_ward", int(dw.get("turns", 3)))
+		_emit("%s 불사(不死) — %d턴 동안 HP 가 1 아래로 내려가지 않음" % [t.name, int(dw.get("turns", 3))])
 	if effect.has("heal_pct") and t.is_alive():
 		t.heal(float(effect["heal_pct"]) * (1.0 + float(DataDB.classes_doc.get("life_effects", {}).get("nong", {}).get("herbal_heal", 0.0)) * int(GameState.party_knowledge().get("nong", 0))))
 	if effect.has("cure"):

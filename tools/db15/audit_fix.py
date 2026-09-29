@@ -18,12 +18,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import game_ref as G  # noqa: E402
 import skillconv as SC  # noqa: E402
 import xlsx_io  # noqa: E402
+import companions as CP  # noqa: E402
 
 DB = G.ROOT / "data_src" / "db15"
 SRC = DB / "DB15_원본.xlsx"
 RAW = xlsx_io.read(SRC)
 TUNING = json.loads((DB / "tuning.json").read_text(encoding="utf-8")) if (DB / "tuning.json").exists() else {}
 ISSUES = []
+PARENT = {}      # 게임에 없는 장소 → 상위 노드
+PROMO_ROWS = []  # 승급 퀘스트 전체
+EXTRA_COMP = {}  # 게임 전용 동료의 산정값
 FAC = {"유(儒)": "yu", "불(佛)": "bul", "선(仙)": "seon", "무(無)": "none"}
 FAC_KO = {v: k for k, v in FAC.items()}
 KIND_CAP = {"human": "유", "ghost": "불", "yokai": "선", "dragon": "선", "beast": "무"}
@@ -232,6 +236,8 @@ def resolve_node(tab, rid, text, map_hint=None):
             or next((n for tk in toks for n in pool if n["name"][:2] == tk[:2]), None) \
             or next((n for n in G.NODES if reg and n["id"] == G.REGIONS[reg]["hub"]), None)
         pos = suggest_pos(parent, rid) if parent else ""
+        if parent:
+            PARENT[rid] = parent
         NODE_REFS.append({"탭": tab, "ID": rid, "원문 위치": text, "원문 권역": hint or "", "게임 노드": "", "노드 이름": "",
                           "게임 권역": reg or "", "좌표(px)": str(pos), "판정": "미존재 → 은닉 노드 추가 권장",
                           "권장": f"{G.REGION_NAME.get(reg, '?')} · 상위 노드 {parent['name'] if parent else '?'}{parent['pos'] if parent else ''} 옆 {pos} 에 은닉 노드 추가"})
@@ -645,7 +651,8 @@ MED = {  # med_id: (게임 effect, battle_usable, game_id, 메모)
     "MED_0012": ({"heal_pct": 0.5, "buff": {"hp_pct": 0.1}}, True, "", "최대 체력 +150 → +10%(상한 250 대비 과대)"),
     "MED_0013": ({"buff": {"atk_pct": 0.12, "def_pct": 0.12}}, True, "hr_gongjin", "근력·민첩·지혜(게임에 없는 능력치) +25% → 공격·방어 +12%"),
     "MED_0014": ({"cure": ["poison"], "permanent_hp": 5, "once_per_save": True}, False, "", "반복 제작 가능한 영구 최대 HP +50 → 1회 한정 +5"),
-    "MED_0015": ({"revive_pct": 1.0, "auto_on_death": True}, True, "hr_seondan", "게임 선단(수동 사용)은 동료 통합 전투에서 무용 → 자동 발동으로"),
+    "MED_0015": ({"death_ward": {"turns": 3, "hp_floor": 1}}, True, "hr_seondan",
+                 "부활 → 즉사 방지 버프: 복용 후 3턴 동안 치명타를 맞아도 HP 1 로 버티며 더 줄지 않음(동료 통합 전투는 주인공이 쓰러지면 즉시 패배라 부활이 무의미)"),
 }
 FAC_WORDS = [("모닥불", "campfire"), ("약방", "yakbang"), ("약령시", "yakryeongsi"), ("혜민서", "hyeminseo"), ("내의원", "hyeminseo"),
              ("감영", "yakbang"), ("심산|은둔|제단|비로봉|천지", "special_node")]
@@ -959,51 +966,73 @@ ROLE_KW = [("healer", r"힐러|부활|구원|정화"), ("tank", r"탱커|수호|
 
 def fix_10(skill_ids):
     t = Tab("10_동료_캐릭터_65종")
+    ent, meta = [], {}
+    for r in t.rows:
+        name = t.g(r, "name_kr")
+        ent.append((t.g(r, "companion_id"), CP.score(name, t.g(r, "tier"), t.g(r, "category_type"))))
+    extra = [g for gid, g in G.COMPANIONS.items() if gid not in COMP_GAME.values() and not g.get("db15_id")]   # 게임에만 있는 동료(남사고·신윤복)
+    for g in extra:
+        ent.append((g["id"], CP.score(g["name"], g["tier"], "역사 인물")))
+    st_t = CP.start_tiers(ent)
+    PROMO_ROWS.clear()
     for r in t.rows:
         cid, name = t.g(r, "companion_id"), t.g(r, "name_kr")
         fam = FAC[t.g(r, "faction")]
         gid = COMP_GAME.get(name, "")
-        tier = int(t.g(r, "tier"))
-        if gid:
-            gt = G.COMPANIONS[gid]["tier"]
-            if gt != tier:
-                t.s(r, "tier", gt, "충돌", f"게임 {gid} T{gt} — balance_sim 의 Rank 3 클러치 파티(허준·사명대사·전우치)와 Rank 4~5 세팅이 이 등급·영입 신분을 전제로 검증됨. "
-                    f"T{tier} 로 올리면 영입이 Rank {tier} 로 밀려 3~4등급 보스 구간에 힐러·탱커가 없음")
-            tier = gt
-        tpl = G.companion_template(tier) if not gid else {k: G.COMPANIONS[gid][k] for k in ("hp", "atk", "def", "speed")}
+        orig = int(t.g(r, "tier"))
+        tier = st_t[cid]
+        t.s(r, "tier", tier, "충돌", f"시작 등급 1~3 재배치(능력 원래 {orig}등급 + 분류·유명도 점수 {dict(ent)[cid]:.1f} → 3등분). 승급 퀘스트로 최대 5등급")
+        t.fill(r, "orig_tier", orig)
+        t.fill(r, "start_tier", tier)
+        t.fill(r, "max_tier", 5)
+        tpl = G.companion_template(tier)
         text = f"{t.g(r, 'passive_exploration_buff')} {t.g(r, 'stat_bonus_json')}"
-        kn = {}
-        if fam != "none":
-            kn[fam] = 1
-        budget = {2: 2, 3: 3, 4: 3, 5: 4}[tier] - sum(kn.values())
-        hits = [k for k, p in LIFE_KW if re.search(p, text)] or ["sa"]
-        for i in range(budget):
-            k = hits[i % len(hits)]
-            kn[k] = kn.get(k, 0) + 1
-        if gid:
-            kn = G.COMPANIONS[gid]["knowledge_add"]
+        hits = [k for k, pt in LIFE_KW if re.search(pt, text)] or ["sa"]
+        kn, primary = CP.allocate_knowledge(tier, fam, hits)
         carry = 25 if "보부상" in name else (18 if re.search(r"적재|소지 무게|짐", text) else 8 + 2 * tier)
         if gid:
             carry = G.COMPANIONS[gid]["carry_bonus"]
-        role = next((k for k, p in ROLE_KW if re.search(p, str(t.g(r, "combat_role")))), "support")
-        for k, v in (("family", fam), ("role", role), ("hp", tpl["hp"]), ("atk", tpl["atk"]), ("def", tpl["def"]), ("speed", tpl["speed"]),
-                     ("knowledge_add_json", json.dumps(kn, ensure_ascii=False)), ("carry_bonus", carry),
-                     ("wage_per_day", int(G.WAGE["base"] * G.WAGE["growth"] ** (tier - 1))), ("recruit_min_rank", tier),
-                     ("skills", ",".join(skill_ids.get(cid, []))), ("game_id", gid)):
-            t.fill(r, k, v)
-        issue(t.name, cid, "passive_exploration_buff", "충돌", t.g(r, "passive_exploration_buff"), f"지식 {kn} · 짐 +{carry}",
-              "합의된 동료 규칙(스킬 참전 + 지식 합산 + 짐 무게 가산, 스탯 합산 없음)에 따라 탐험 패시브는 지식 랭크로 환산. "
-              "원문 그대로면 명성 2~3배·시설 비용 -30%·이동 +30% 등이 경제·명성 곡선을 우회")
+        role = next((k for k, pt in ROLE_KW if re.search(pt, str(t.g(r, "combat_role")))), "support")
+        node = resolve_node(t.name, cid, t.g(r, "spawn_node"), t.g(r, "spawn_map"))
+        if node and node["region"] != t.g(r, "spawn_map"):
+            t.s(r, "spawn_map", node["region"], "좌표", f"영입 장소 '{t.g(r, 'spawn_node')}' 는 게임 노드 {node['name']}({node['region']})")
+        home = node or PARENT.get(cid)
         rc, notes = str(t.g(r, "recruit_condition")), []
         if "민심" in rc:
             rc = re.sub(r"(\S+) 민심 최고치(?: 달성)?", r"\1 도(道) 명성 5단계", rc)
             notes.append("민심 시스템 없음 → 도 명성 단계")
         if notes:
             t.s(r, "recruit_condition", rc, "충돌", " / ".join(notes))
-        node = resolve_node(t.name, cid, t.g(r, "spawn_node"), t.g(r, "spawn_map"))
-        if node and node["region"] != t.g(r, "spawn_map"):
-            t.s(r, "spawn_map", node["region"], "좌표", f"영입 장소 '{t.g(r, 'spawn_node')}' 는 게임 노드 {node['name']}({node['region']})")
-        t.fill(r, "recruit_node", node["id"] if node else "")
+        m = re.match(r"\[(.+?)\]", str(t.g(r, "combat_active_skill")))
+        c = {"id": gid or f"cp_{cid.lower().replace('comp_', 'c')}", "db15": cid, "name": name, "start_tier": tier, "family": fam,
+             "category": t.g(r, "category_type"), "role_text": t.g(r, "combat_role"), "desc": str(t.g(r, "description")),
+             "item": t.g(r, "signature_item"), "skill": m.group(1) if m else "", "home": home, "primary": primary}
+        promos = CP.promotions(c)
+        PROMO_ROWS.extend(promos)
+        route = CP.recruit_route(c["id"], home, tier)
+        for k, v in (("family", fam), ("role", role), ("hp", tpl["hp"]), ("atk", tpl["atk"]), ("def", tpl["def"]), ("speed", tpl["speed"]),
+                     ("knowledge_add_json", json.dumps(kn, ensure_ascii=False)), ("primary_knowledge", primary),
+                     ("knowledge_per_promotion_json", json.dumps({primary: 1})), ("carry_bonus", carry),
+                     ("wage_per_day", int(G.WAGE["base"] * G.WAGE["growth"] ** (tier - 1))), ("recruit_min_rank", tier),
+                     ("recruit_node", home["id"]), ("recruit_route_json", json.dumps(route)), ("promotion_count", len(promos)),
+                     ("skills", ",".join(skill_ids.get(cid, []))), ("game_id", c["id"])):
+            t.fill(r, k, v)
+        issue(t.name, cid, "passive_exploration_buff", "충돌", t.g(r, "passive_exploration_buff"), f"지식 {kn} · 짐 +{carry}",
+              "합의된 동료 규칙(스킬 참전 + 지식 합산 + 짐 무게 가산, 스탯 합산 없음)에 따라 탐험 패시브는 지식 랭크로 환산(지식 합 = 현재 등급). "
+              "원문 그대로면 명성 2~3배·시설 비용 -30%·이동 +30% 등이 경제·명성 곡선을 우회")
+    for g in extra:  # 게임 전용 동료도 같은 규칙으로 승급 퀘스트 생성
+        tier = st_t[g["id"]]
+        home = next(n for n in G.NODES if n["id"] == g["recruit"]["route"][-1])
+        kn, primary = CP.allocate_knowledge(tier, g["family"], [k for k in g["knowledge_add"] if k not in ("yu", "bul", "seon")] or ["sa"])
+        c = {"id": g["id"], "db15": "", "name": g["name"], "start_tier": tier, "family": g["family"], "category": "역사 인물",
+             "role_text": g["role"], "desc": "", "item": "", "skill": G.SKILLS[g["skills"][0]]["name"], "home": home, "primary": primary}
+        PROMO_ROWS.extend(CP.promotions(c))
+        EXTRA_COMP[g["id"]] = {"start_tier": tier, "knowledge_add": kn, "primary": primary, "route": CP.recruit_route(g["id"], home, tier)}
+        issue(t.name, g["id"], "행 추가", "보충", "", f"{g['name']} 시작 {tier}등급",
+              "게임 13_companions 에만 있는 동료 — 같은 규칙으로 시작 등급·승급 퀘스트 생성(65+2=67명)")
+    dist = {k: sum(1 for v in st_t.values() if v == k) for k in (1, 2, 3)}
+    issue(t.name, "-", "tier", "충돌", "원본 2~5등급", f"시작 1등급 {dist[1]} · 2등급 {dist[2]} · 3등급 {dist[3]}명",
+          f"전원 1~3등급 시작 + 승급 퀘스트 {len(PROMO_ROWS)}건으로 최대 5등급")
     issue(t.name, "-", "stat_bonus_json", "충돌", "atk·def·crit 등 합산 스탯", "무시(지식·짐으로만 환산)", "동료 통합 전투: 동료 스탯은 주인공에 합산하지 않음")
     issue(t.name, "COMP_22", "name_kr", "고증", "채규서", "실존 확인 불가", "가상 인물이면 category_type 을 '가상 인물'로 표기 권장")
     issue(t.name, "COMP_01", "faction", "고증", "불(佛)", "무(無) 권장", "착호갑사는 군사 직업 — 게임 cp_chakho 도 무속성")
@@ -1035,8 +1064,8 @@ def fix_11(t09, t10):
             t.fill(r, "game_id", CLASS_GAME.get(sid, ""))
         elif sid.startswith("SKL_COMP") and sid.endswith("ACT"):
             cid = sid[4:11]
-            tier, fam = ctier[cid]
-            conv = SC.convert(eff, "companion", tier, fam)
+            _, fam = ctier[cid]
+            conv = SC.convert(eff, "companion", 3, fam)   # 3등급 기준 수치 — 실제 위력은 현재 등급 숙련 배율(1등급 0.84 ~ 5등급 1.16)로
             by_owner.setdefault(cid, []).append(sid)
         elif sid.startswith("SKL_ENM"):
             eid = sid[4:11]
@@ -1403,6 +1432,14 @@ def main():
     ISSUES.sort(key=lambda x: (x["탭"], cats.index(x["분류"]) if x["분류"] in cats else 99))
     ih = list(ISSUES[0].keys())
     sheets.append(("15_점검결과", [ih] + [[str(i[k]) for k in ih] for i in ISSUES]))
+    ph = ["id", "동료", "승급 등급", "퀘스트명", "서사", "트리거(시작 장소)", "필요 신분", "필요 조건", "동선", "단계", "보상 명성", "보상 엽전", "승급 효과"]
+    nm = lambda nid: next((n["name"] for n in G.NODES if n["id"] == nid), nid)
+    cname = {c["id"]: c["name"] for c in G.COMPANIONS.values()}
+    cname.update({q["companion"]: q["name"].split("]")[0][1:] for q in PROMO_ROWS})
+    prow = [[q["id"], cname[q["companion"]], q["tier"], q["name"], q["lore"], nm(q["trigger_node"]), f"Rank {q['min_rank']}",
+             "동행 + " + ", ".join(f"{CP.LIFE.get(k, k)} 지식 {v}" for k, v in q["requires"]["knowledge"].items()),
+             " → ".join(nm(x) for x in q["route"]), "\n".join(q["steps"]), q["reward_rep"], q["reward_money"], q["effect"]] for q in PROMO_ROWS]
+    sheets.append(("17_동료승급퀘스트", [ph] + prow))
     nh = list(NODE_REFS[0].keys())
     sheets.append(("16_노드참조_좌표", [nh] + [[x[k] for k in nh] for x in NODE_REFS]))
     summ = [["분류", "건수"]] + [[c, sum(1 for i in ISSUES if i["분류"] == c)] for c in cats]
@@ -1424,6 +1461,8 @@ def main():
             recs.append(d)
         export[n] = recs
     export["_node_refs"] = NODE_REFS
+    export["_promotions"] = PROMO_ROWS
+    export["_extra_companions"] = EXTRA_COMP
     (DB / "db15_game.json").write_text(json.dumps(export, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"점검 {len(ISSUES)}건 · 노드 참조 {len(NODE_REFS)}건")
     for row in summ[1:]:

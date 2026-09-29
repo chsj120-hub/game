@@ -224,8 +224,7 @@ func _open_items(free: bool) -> void:
 
 
 func _use_item(id: String, free: bool) -> void:
-	var revive := DataDB.get_row(id).get("effect", {}).has("revive_pct")
-	var t: Combatant = selected_target if selected_target and selected_target.side == "ally" else _most_wounded(revive)
+	var t: Combatant = selected_target if selected_target and selected_target.side == "ally" else _most_wounded(false)  # 선단(불사)도 살아 있는 아군 대상
 	var actor: Combatant = current if not free else engine.living(engine.allies)[0]
 	engine.use_item(actor, id, t, free)
 	if free:

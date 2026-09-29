@@ -62,12 +62,14 @@ def build_items(seed=1):
                 hidden = rng.random() < P["heritage_hidden_share"]
                 base = tier_curve(E["heritage_rep"], t) * E["category_mult"].get(cat, {}).get("rep", 1.0) * (E["hidden_mult"] if hidden else 1.0)
                 items.append({"g": "H", "t": t, "reg": reg, "prov": R2P[reg], "base": base})
-    qtypes = {"gear_quest": "gear", "mount_quest": "mount", "companion": "companion", "instance": "instance", "event": "event", "trade": "trade"}
+    qtypes = {"gear_quest": "gear", "mount_quest": "mount", "companion": "companion", "companion_promo": "companion_promo",
+              "instance": "instance", "event": "event", "trade": "trade"}
     for key, qt in qtypes.items():
+        g = "P" if key.startswith("companion") else "Q"   # 동료 영입·승급은 신분 Rank ≥ 등급에서만(일반 퀘스트는 등급−1)
         for t in TIERS:
             for reg, n in alloc(P[key][t - 1], dict(REGION_NODE)).items():
                 for _ in range(n):
-                    items.append({"g": "Q", "t": t, "reg": reg, "prov": R2P[reg], "base": quest_reward(OV, t, qt, "rep"), "src": key})
+                    items.append({"g": g, "t": t, "reg": reg, "prov": R2P[reg], "base": quest_reward(OV, t, qt, "rep"), "src": key})
     for t in TIERS:
         for reg, n in alloc(P["boss"][t - 1], dict(REGION_NODE)).items():
             for _ in range(n):
@@ -104,7 +106,8 @@ def budget():
             reg_base[it["reg"]] += it["base"]
         else:
             mx = ref = mn = it["base"]
-            key = {"gear_quest": "장비 서사 퀘스트", "mount_quest": "탈것 퀘스트", "companion": "동료 영입", "instance": "탐색 연속전투",
+            key = {"gear_quest": "장비 서사 퀘스트", "mount_quest": "탈것 퀘스트", "companion": "동료 영입", "companion_promo": "동료 승급 퀘스트",
+                   "instance": "탐색 연속전투",
                    "event": "역사·설화 이벤트", "trade": "무역 퀘스트", "boss": "권역·신화 보스", "main": "메인 시나리오",
                    "hwacheop": "화첩", "takbon": "탁본"}[it["src"]]
         for i, v in enumerate((mx, ref, mn)):
@@ -174,7 +177,7 @@ def play(style, th, rng, reg_base, d_share=D):
                 continue
             if g == "H":
                 w = 1.0 if t <= rank + 1 else 0.2
-            elif g == "M":
+            elif g in ("M", "P"):
                 w = 1.0 if rank >= t else 0.0
             elif g == "S":
                 w = 1.0
@@ -269,7 +272,7 @@ def money_supply_style(sell_share, qm_base=None, parts=None):
         tot += P["heritage"][i] * h * sell_share
         parts["유산 매각"] = parts.get("유산 매각", 0) + P["heritage"][i] * h * sell_share
         q0 = tot
-        for k in ("gear_quest", "mount_quest", "companion", "instance", "event", "main", "bounty"):
+        for k in ("gear_quest", "mount_quest", "companion", "companion_promo", "instance", "event", "main", "bounty"):
             qt = {"gear_quest": "gear", "mount_quest": "mount"}.get(k, k)
             tot += P[k][i] * qm["base"] * qm["growth"] ** i * E["quest_type_mult"][qt]["money"]
         parts["퀘스트·이벤트"] = parts.get("퀘스트·이벤트", 0) + tot - q0
@@ -294,7 +297,7 @@ def essential_spend():
             gear = sum(mats[x["id"]] * x["qty"] for m in fam for x in m["materials"])
         mount = price("mount_ground", L) if L <= 3 else 0
         books = 2 * 150 * 2.6 ** (L - 1)
-        wage = days * 3 * tier_curve(E["wage_per_day"], min(L + 1, 5)) * 0.5
+        wage = days * 3 * tier_curve(E["wage_per_day"], min(L, 5)) * 0.5   # 동행 3인, 현재 등급 ≤ 신분(승급 t 는 Rank ≥ t)
         upkeep = days * tier_curve(E["upkeep_per_day"], L)
         tot += gear + mount + books + wage + upkeep
     return tot

@@ -183,6 +183,19 @@ func adjacent(region_id: String) -> Array:
 	return get_row(region_id).get("adjacent", [])
 
 
+## 뱃길(sea_routes)로 이어진 다른 권역 — 동선 큐 인접 판정에 육로 인접과 함께 사용(제주 등 뱃길 전용 권역)
+func sea_adjacent(region_id: String) -> Array:
+	var out := []
+	for s in docs.get("regions.json", {}).get("sea_routes", []):
+		var ra := region_of_node(String(s["a"]))
+		var rb := region_of_node(String(s["b"]))
+		if ra == region_id and rb != region_id and not (rb in out):
+			out.append(rb)
+		elif rb == region_id and ra != region_id and not (ra in out):
+			out.append(ra)
+	return out
+
+
 func neighbors(node_id: String) -> Array:
 	return graph.get(node_id, [])
 
