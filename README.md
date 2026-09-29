@@ -139,11 +139,36 @@ scripts/ui         Main(SubViewport·CanvasLayer 분리, 시설 모달 상태 �
 | **G** | 0–255 | 위험도(조우율에 최대 +10% 가산) |
 | **B** | ≥128 | 나루·도하 지점 |
 
-### 지도를 넣은 뒤 할 일
-노드 좌표(`data/regions.json`의 `pos`)는 지금 **자동 배치된 임시값**입니다. 권역 지도를 넣었다면 `tools/build_world.py`의 `place()`에서 좌표를 수작업 좌표(예: `data_src/world_table.json`에 `pos` 추가)로 바꾼 뒤 다시 빌드하세요. 10리 = 200px 기준으로 이동 거리와 소요 시간이 자동으로 다시 계산됩니다.
+### 실제 지형 → 마스크·밑그림 (`tools/gen_terrain.py`)
+```
+bash tools/fetch_geo.sh                 # 원자료 → data_src/geo_raw/ (git 제외, 약 1GB)
+python3 tools/gen_terrain.py --jobs 8    # 17권역 약 3분 (--regions MAP_08, --scale 1 = 원해상도 계산)
+```
+권역마다 다음 파일을 만듭니다(모두 3840×2160).
+- `assets/maps/masks/map_nn_mask.png`: 위 채널 규칙을 따르는 마스크입니다. 고도·경사·수계(바다·하천·호수)·해안 거리로 계산합니다.
+- `assets/maps/guides/map_nn_relief.png`: 고도 음영 밑그림입니다. ControlNet lineart/canny나 img2img에 넣어 해안선과 산줄기 구도를 고정합니다.
+- `assets/maps/guides/map_nn_height.png`: 고도를 흑백으로 담은 그림입니다. depth 입력용입니다.
+- `assets/maps/guides/map_nn_layout.png` (1920×1080): 노드와 도로를 겹친 확인용 그림입니다.
+- `terrain_report.json`: 통계와 바다 위 노드 경고입니다.
+
+원자료는 모두 퍼블릭 도메인입니다.
+- 남한: NASA SRTM1(30 m)
+- 북한: USGS GTOPO30(약 0.9 km). 해상도가 낮아서 북부 권역은 밑그림이 부드럽게 나옵니다.
+- 하천·호수: Natural Earth 10m
+
+### 노드 좌표 (실제 위경도 투영)
+`data_src/node_geo.json`에는 노드 311개의 `[위도, 경도, 신뢰도]`가 들어 있습니다. 신뢰도 A는 위치가 확실한 곳, B는 근사, C는 역참·봉수처럼 추정한 곳입니다.
+
+`build_world.py`는 권역마다 등장방형 투영으로 노드 범위를 3840×2160(여백 260/220)에 맞춥니다. 노드 사이 간격은 최소 150px을 유지합니다. 은닉지는 부모 거점 기준 방향은 실제대로 두고 거리만 150–420px로 제한합니다.
+
+투영 정보는 `regions[].geo_projection`에, 보정으로 옮겨진 거리는 `nodes[].geo_shift_km`에 기록합니다. 좌표를 고친 뒤에는 `build_world.py`를 다시 실행하고 이어서 `gen_terrain.py`를 실행하세요.
 
 ### 이미지 생성 프롬프트
-`assets/PROMPTS.csv`에 유산·아이템 아이콘 424건의 프롬프트가 들어 있습니다. 완전판 11.2 템플릿의 `{name_kr}` `{category_sub}` `{material}` `{era}`를 자동으로 치환했고, `path` 열이 저장 위치입니다. 생성한 파일을 그 경로에 그대로 저장하면 됩니다.
+- `assets/prompts/<배치>.csv`: 22개 파일, 728건입니다. 아이콘은 분류별로, 초상은 주인공·동료·적으로 나누었고, 지도·패럴랙스·전투배경·스프라이트·마커·미니게임은 각각 한 파일입니다.
+  - `prompt` = 본문 + **복식 고증**(인물) + **공통 스타일** + 규격 꼬리
+  - `negative` = 공통 금지어(청·일본 복식, 사실사진, 애니 등) + 종류별 금지어
+- 문구 사전은 `tools/prompt_lib.py`에 있습니다. 배경 연도는 1861년입니다. 그보다 앞 시대 인물(고구려·신라·고려 등)은 그 시대 복식을 씁니다.
+- `assets/PROMPTS.csv`: 구 형식 아이콘 424건입니다(호환용). `path` 열에 적힌 경로에 그대로 저장하면 됩니다.
 
 ### 공공데이터
 유산마다 `public_data`(제공 국가유산청, 공공누리 제1유형, `ccbaKdcd` · `ccbaAsno` · `ccbaCtcd` · `source_url` · `description`)가 빈칸으로 준비되어 있습니다. 채워 넣으면 도감에 출처가 자동으로 표시됩니다.

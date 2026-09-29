@@ -2,7 +2,7 @@
  "_about": "tools/gen_asset_manifest.py 생성. 게임은 파일이 없으면 절차적 그리기로 대체하므로 어떤 순서로 넣어도 된다. 규격은 spec, 경로는 path 그대로.",
  "summary": {
   "total": 751,
-  "present": 0,
+  "present": 17,
   "by_kind": {
    "region_map": 17,
    "region_mask": 17,
@@ -99,7 +99,7 @@
    },
    "use": "경기 북부 지형 판정 마스크",
    "ref": "MAP_01",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_01/far.png",
@@ -172,7 +172,7 @@
    },
    "use": "경기 남부 지형 판정 마스크",
    "ref": "MAP_02",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_02/far.png",
@@ -245,7 +245,7 @@
    },
    "use": "강원 북부 지형 판정 마스크",
    "ref": "MAP_03",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_03/far.png",
@@ -318,7 +318,7 @@
    },
    "use": "강원 남부 지형 판정 마스크",
    "ref": "MAP_04",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_04/far.png",
@@ -391,7 +391,7 @@
    },
    "use": "충청 북부 지형 판정 마스크",
    "ref": "MAP_05",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_05/far.png",
@@ -464,7 +464,7 @@
    },
    "use": "충청 남부 지형 판정 마스크",
    "ref": "MAP_06",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_06/far.png",
@@ -537,7 +537,7 @@
    },
    "use": "전라 북부 지형 판정 마스크",
    "ref": "MAP_07",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_07/far.png",
@@ -610,7 +610,7 @@
    },
    "use": "전라 남부 지형 판정 마스크",
    "ref": "MAP_08",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_08/far.png",
@@ -683,7 +683,7 @@
    },
    "use": "경상 북부 지형 판정 마스크",
    "ref": "MAP_09",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_09/far.png",
@@ -756,7 +756,7 @@
    },
    "use": "경상 남부 지형 판정 마스크",
    "ref": "MAP_10",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_10/far.png",
@@ -829,7 +829,7 @@
    },
    "use": "황해 북부 지형 판정 마스크",
    "ref": "MAP_11",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_11/far.png",
@@ -902,7 +902,7 @@
    },
    "use": "황해 남부 지형 판정 마스크",
    "ref": "MAP_12",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_12/far.png",
@@ -975,7 +975,7 @@
    },
    "use": "평안 남부 지형 판정 마스크",
    "ref": "MAP_13",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_13/far.png",
@@ -1048,7 +1048,7 @@
    },
    "use": "평안 북부 지형 판정 마스크",
    "ref": "MAP_14",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_14/far.png",
@@ -1121,7 +1121,7 @@
    },
    "use": "함경 남부 지형 판정 마스크",
    "ref": "MAP_15",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_15/far.png",
@@ -1194,7 +1194,7 @@
    },
    "use": "함경 북부 지형 판정 마스크",
    "ref": "MAP_16",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_16/far.png",
@@ -1267,7 +1267,7 @@
    },
    "use": "제주도 지형 판정 마스크",
    "ref": "MAP_17",
-   "exists": false
+   "exists": true
   },
   {
    "path": "res://assets/parallax/map_17/far.png",

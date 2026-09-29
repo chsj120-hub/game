@@ -594,7 +594,7 @@
    "min_rank": 1
   },
   "mount_stamina_per_10li": 3.0,
-  "field_pace_mult": 0.75,
+  "field_pace_mult": 0.55,
   "known_road_pace_mult": 2.0,
   "fast_forward": 3.0,
   "_pace_note": "필드 행군 배율은 화면상 이동(px/s)에만 적용 — 전투 속도·AP·게임 시간(거리 기준)은 V_base 그대로. 처음 걷는 길 ×0.75(풍경·조우 체감), 한 번 지난 간선 ×2.0(익숙한 길), 빨리 감기 ×3"

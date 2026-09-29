@@ -3,7 +3,8 @@
 
 출력
   assets/ASSET_MANIFEST.json   필요한 모든 에셋 경로·규격·용도·존재 여부 (게임은 없으면 절차적 대체)
-  assets/PROMPTS.csv           유물·아이템 아이콘용 Imagen/AI Studio 프롬프트 (11.2 템플릿 자동 치환)
+  assets/PROMPTS.csv           유물·아이템 아이콘 프롬프트 (구 형식 호환, 11.2 템플릿)
+  assets/prompts/<batch>.csv   종류별 배치 프롬프트 (스타일 공통 문구 + 복식 고증 + negative) — tools/prompt_lib.py
   assets/**/                   폴더 구조(.gitkeep)
 사용: python3 tools/gen_asset_manifest.py
 """
@@ -12,6 +13,7 @@ import json
 from pathlib import Path
 
 from common import DATA, ROOT, load
+import prompt_lib as PL
 
 ASSETS = ROOT / "assets"
 
@@ -31,8 +33,17 @@ SPEC = {
 }
 
 PROMPT = ("A museum-quality historical artifact illustration of {name_kr} ({category_sub}), crafted from {material}, dating back to {era} "
-          "Joseon Dynasty. Traditional Korean ink-and-wash painting style, subtle watercolor shading on authentic Hanji paper texture "
-          "background, ambient occlusion, square 1:1 composition, game asset icon format, highly detailed, clean edges, centered --ar 1:1 --style raw")
+          "Joseon Dynasty. " + PL.STYLE_COMMON + ", " + PL.KIND_TAIL["icon"][0])
+BATCH = {}   # batch 이름 → 행 목록
+
+
+def bp(batch, kind, id_, path, name, body, costume_key=None, **extra):
+    """배치 프롬프트 1행: 본문 + 복식 고증 + 공통 스타일 + 규격 꼬리 / negative."""
+    tail, neg = PL.KIND_TAIL[kind]
+    cos = PL.COSTUME.get(costume_key, "") if costume_key else ""
+    prompt = ", ".join(x for x in (body, cos, PL.STYLE_COMMON, tail) if x)
+    BATCH.setdefault(batch, []).append({"id": id_, "path": path, "kind": kind, "name_kr": name, "costume": costume_key or "",
+                                        "prompt": prompt, "negative": PL.NEG_COMMON + ", " + neg, **extra})
 CAT_SUB = {"weapon": ("Ceremonial Sword", "Forged Steel with Gold Inlay"), "armor": ("Lamellar Armor", "Iron Scales and Leather"),
            "shoes": ("Traditional Boots", "Leather and Silk"), "accessory": ("Talisman Ornament", "Gilt Bronze and Silk Tassel"),
            "book": ("Ancient Historical Manuscript", "Mulberry Hanji Paper & Ink"), "record": ("Hanging Scroll Travelogue", "Hanji Scroll with Wooden Rollers"),
@@ -57,24 +68,48 @@ def main():
         for layer, desc in (("far", "원경 산맥"), ("mid", "중경 숲·구릉"), ("near", "근경 길·돌담")):
             out.append(entry(f"{r['parallax_dir']}{layer}.png", "parallax", f"{r['name']} 패럴랙스 {desc}(수묵 담채)", r["id"]))
         out.append(entry(f"res://assets/battle/bg_{rid}.png", "battle_bg", f"{r['name']} 전투 배경", r["id"]))
+        scene, air = PL.REGION_SCENE.get(r["id"], r["name"]), PL.CLIMATE.get(r.get("climate"), "")
+        bp("maps", "region_map", r["id"], r["map_texture"], r["name"], f"regional map of {scene}",
+           guide=f"assets/maps/guides/{rid}_relief.png (ControlNet lineart/canny) + {rid}_height.png (depth)")
+        for layer, what in (("far", "distant layered mountain ridges"), ("mid", "rolling hills with pine groves and thatched villages"),
+                            ("near", "roadside stone walls, jangseung totems and wild grass")):
+            bp("parallax", "parallax", f"{r['id']}_{layer}", f"{r['parallax_dir']}{layer}.png", f"{r['name']} {layer}", f"{what} of {scene}, {air}")
+        bp("battle_bg", "battle_bg", r["id"], f"res://assets/battle/bg_{rid}.png", r["name"], f"open field battleground in {scene}, {air}")
     out.append(entry("res://assets/maps/overworld.png", "overworld", "전국 17권역 조망 지도", ""))
+    bp("maps", "overworld", "overworld", "res://assets/maps/overworld.png", "전국 조망", "map of the Korean peninsula")
     for t in ["city", "town", "station", "temple", "spring", "fort", "beacon", "stupa", "tomb", "scenic", "wreck", "ruin", "seowon", "shrine", "hazard"]:
         out.append(entry(f"res://assets/ui/markers/{t}.png", "marker", f"노드 마커({t})", t))
+        bp("markers", "marker", f"marker_{t}", f"res://assets/ui/markers/{t}.png", t, f"map marker symbol for a {t} site on a Joseon map")
     for c in load("19_classes_knowledge.json")["classes"]:
         cid = c["id"]
         out.append(entry(f"res://assets/portraits/hero_{cid}.png", "portrait", f"주인공 {c['name']} 수묵 초상", cid))
         out.append(entry(f"res://assets/ui/class/{cid}.png", "icon", f"{c['name']} 직업 아이콘(48px 표시)", cid))
+        ck = PL.HERO_COSTUME.get(cid)
+        bp("portraits_hero", "portrait", f"hero_{cid}", f"res://assets/portraits/hero_{cid}.png", c["name"], f"protagonist, a young Joseon {c['name']} traveller of 1861", ck)
         for anim in ("walk", "idle"):
             out.append(entry(f"res://assets/characters/hero_{cid}/{anim}.png", "sprite", f"주인공 {c['name']} {anim}", cid))
+            bp("sprites", "sprite", f"hero_{cid}_{anim}", f"res://assets/characters/hero_{cid}/{anim}.png", f"{c['name']} {anim}",
+               f"young Joseon {c['name']} traveller, {'walking' if anim == 'walk' else 'idle breathing'} animation", ck)
     for c in load("13_companions.json")["companions"]:
         out.append(entry(f"res://assets/portraits/{c['id']}.png", "portrait", f"동료 {c['name']}", c["id"]))
         out.append(entry(f"res://assets/characters/{c['id']}/walk.png", "sprite", f"동료 {c['name']} 보행", c["id"]))
+        ck = PL.COMPANION_COSTUME.get(c["name"])
+        if ck is None:
+            raise SystemExit(f"복식 고증 누락: {c['name']} → tools/prompt_lib.py COMPANION_COSTUME 에 추가")
+        era = c.get("era", "")
+        who = f"{c['name']}, {c.get('category', '')} ({era})"
+        bp("portraits_companion", "portrait", c["id"], f"res://assets/portraits/{c['id']}.png", c["name"], f"portrait of {who}", ck, era=era)
+        bp("sprites", "sprite", f"{c['id']}_walk", f"res://assets/characters/{c['id']}/walk.png", f"{c['name']} walk", f"{who}, walking animation", ck, era=era)
     for e in load("12_enemies.json")["enemies"]:
         out.append(entry(f"res://assets/portraits/{e['id']}.png", "portrait", f"적 {e['name']} (전투 슬롯)", e["id"]))
+        bp("portraits_enemy", "portrait", e["id"], f"res://assets/portraits/{e['id']}.png", e["name"],
+           PL.ENEMY_DESC.get(e["id"], e["name"]) + ", menacing, battle portrait", None, enemy_kind=e["kind"])
     for s in load("18_status_effects.json")["battle"]:
         out.append(entry(f"res://assets/ui/status/{s['id']}.png", "marker", f"상태이상 {s['name']}", s["id"]))
+        bp("markers", "marker", f"status_{s['id']}", f"res://assets/ui/status/{s['id']}.png", s["name"], f"status effect symbol meaning '{s['name']}'")
     for r in range(1, 6):
         out.append(entry(f"res://assets/ui/seals/rank_{r}.png", "marker", f"신분 {r}등급 인장", str(r)))
+        bp("markers", "marker", f"rank_{r}", f"res://assets/ui/seals/rank_{r}.png", f"{r}등급 인장", f"red cinnabar square seal impression, rank {r} of 5, {r} ornamental borders")
     for name, use in (("modal", "모달 패널(한지+놋쇠)"), ("dashboard_frame", "하단 대시보드 프레임 1920x360")):
         out.append(entry(f"res://assets/ui/panels/{name}.png", "ui_9patch", use, name))
     out.append(entry("res://assets/icons/common/icon_scroll_jokja.png", "icon", "두루마기 족자 답사록 공통 아이콘", "record"))
@@ -82,8 +117,11 @@ def main():
         img = m.get("params", {}).get("image")
         if img:
             out.append(entry(img, "minigame", f"{m['name']} 원본 그림", m["id"]))
+            bp("minigames", "minigame", m["id"], img, m["name"], "Goryeo celadon maebyeong vase with inlaid cranes" if "celadon" in img else "ink landscape of Inwang mountain after rain")
     for n in range(1, 23):
         out.append(entry(f"res://assets/minigames/takbon/sheet_{n:02d}.png", "minigame", f"대동여지도 제{n}첩 판목(탁본)", str(n)))
+        bp("minigames", "minigame", f"takbon_{n:02d}", f"res://assets/minigames/takbon/sheet_{n:02d}.png", f"제{n}첩 판목",
+           f"carved pear-wood printing block of Daedongyeojido sheet {n}, relief carved mountains and rivers, ink residue, seen from above")
 
     prompts = []
     def icon(id_, name, cat, tier, path):
@@ -91,6 +129,8 @@ def main():
         sub, mat = CAT_SUB[cat]
         prompts.append({"id": id_, "path": path, "name_kr": name, "category_sub": sub, "material": mat, "era": ERA.get(tier, "Late"),
                         "prompt": PROMPT.format(name_kr=name, category_sub=sub, material=mat, era=ERA.get(tier, "Late"))})
+        bp(f"icons_{cat}", "icon", id_, path, name, f"museum-quality illustration of {name} ({sub}), made of {mat}, {ERA.get(tier, 'Late')} Joseon period",
+           category_sub=sub, material=mat)
     for h in load("01_heritage.json")["heritage"]:
         icon(h["id"], h["name"], {"architecture": "record", "scenic": "record", "ceramic_specialty": "specialty", "folk_craft": "accessory",
                                   "metal": "weapon", "document": "book"}[h["category"]], h["tier"], f"res://assets/icons/heritage/{h['id']}.png")
@@ -124,6 +164,21 @@ def main():
         w = csv.DictWriter(f, fieldnames=["id", "path", "name_kr", "category_sub", "material", "era", "prompt"])
         w.writeheader()
         w.writerows(prompts)
+    pd = ASSETS / "prompts"
+    pd.mkdir(exist_ok=True)
+    for old in pd.glob("*.csv"):
+        old.unlink()
+    for name, rows in sorted(BATCH.items()):
+        keys = list(dict.fromkeys(k for r in rows for k in r))
+        with open(pd / f"{name}.csv", "w", encoding="utf-8-sig", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=keys, restval="")
+            w.writeheader()
+            w.writerows(rows)
+    (pd / "README.md").write_text("# 배치 프롬프트 (자동 생성: tools/gen_asset_manifest.py · 문구 사전: tools/prompt_lib.py)\n\n"
+        "모든 prompt = 본문 + 복식 고증(인물) + 공통 스타일 + 규격 꼬리. negative 열은 생성기의 negative prompt 칸에 넣는다.\n\n"
+        f"공통 스타일: `{PL.STYLE_COMMON}`\n\n| 배치 | 건수 |\n|---|---|\n"
+        + "".join(f"| {n}.csv | {len(r)} |\n" for n, r in sorted(BATCH.items())), encoding="utf-8")
+    print(f"배치 프롬프트 {sum(len(r) for r in BATCH.values())}건 · {len(BATCH)}개 파일")
     print(f"매니페스트 {len(out)}건 (보유 {have}) · 프롬프트 {len(prompts)}건 · 종류 {kinds}")
 
 

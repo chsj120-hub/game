@@ -10,9 +10,11 @@ const FONT_UI := "res://assets/fonts/GowunDodum-Regular.ttf"
 const FONT_TEXT := "res://assets/fonts/GowunBatang-Regular.ttf"
 const FONT_BOLD := "res://assets/fonts/GowunBatang-Bold.ttf"
 const FONT_HANJA := "res://assets/fonts/NotoSerifKR-Regular.otf"
+const FONT_TITLE := "res://assets/fonts/NanumBrush.ttf"  ## 나눔손글씨 붓 — 제목·칭호·지명(나눔글꼴 라이선스)
 var font_ui: Font
 var font_text: Font
 var font_bold: Font
+var font_title: Font
 
 
 func _ready() -> void:
@@ -26,7 +28,8 @@ func _load_font(path: String, fallback: Font) -> Font:
 	if f == null:
 		return null
 	if fallback != null:
-		f.fallbacks = [fallback]  # 고운 계열에 없는 한자(不可殺伊·鶴翼陣 등)는 Noto Serif KR 로
+		var fb: Array[Font] = [fallback]
+		f.fallbacks = fb  # 고운 계열에 없는 한자(不可殺伊·鶴翼陣 등)는 Noto Serif KR 로
 	return f
 
 
@@ -36,6 +39,16 @@ func _apply_fonts() -> void:
 	font_ui = _load_font(FONT_UI, hanja)
 	font_text = _load_font(FONT_TEXT, hanja)
 	font_bold = _load_font(FONT_BOLD, hanja)
+	# 제목: 나눔손글씨 붓 → (없는 글자) 고운바탕 Bold → 한자 Noto Serif KR
+	if ResourceLoader.exists(FONT_TITLE):
+		var tf := load(FONT_TITLE) as FontFile
+		if tf:
+			var fb: Array[Font] = []
+			for x in [font_bold, hanja]:
+				if x != null:
+					fb.append(x)
+			tf.fallbacks = fb
+			font_title = tf
 	if font_ui == null:
 		return
 	var th := Theme.new()
@@ -45,7 +58,25 @@ func _apply_fonts() -> void:
 		th.set_font("normal_font", "RichTextLabel", font_text)
 	if font_bold:
 		th.set_font("bold_font", "RichTextLabel", font_bold)
+	if font_title:
+		th.set_type_variation("TitleLabel", "Label")
+		th.set_font("font", "TitleLabel", font_title)
+		th.set_font_size("font_size", "TitleLabel", 34)
 	get_tree().root.theme = th
+
+
+## 제목용 붓글씨 적용(Label·RichTextLabel). 붓글씨는 획이 가늘어 본문보다 1.4배 크게
+func title(c: Control, size: int) -> void:
+	if font_title == null:
+		return
+	if c is RichTextLabel:
+		c.add_theme_font_override("normal_font", font_title)
+		c.add_theme_font_override("bold_font", font_title)
+		c.add_theme_font_size_override("normal_font_size", size)
+		c.add_theme_font_size_override("bold_font_size", size)
+	else:
+		c.add_theme_font_override("font", font_title)
+		c.add_theme_font_size_override("font_size", size)
 
 
 func tex(path: String) -> Texture2D:

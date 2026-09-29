@@ -972,83 +972,6 @@
    }
   },
   {
-   "id": "sk_pas_her_113",
-   "name": "강릉 학통",
-   "owner": "passive",
-   "target": "self",
-   "element": "none",
-   "power": 0.0,
-   "ap_cost": 0,
-   "cooldown": 0,
-   "effects": {
-    "passive": {
-     "def_pct": 0.03,
-     "knowledge": {
-      "yu": 2,
-      "sa": 1
-     }
-    }
-   },
-   "generated": "heritage"
-  },
-  {
-   "id": "sk_pas_her_124",
-   "name": "전주 학통",
-   "owner": "passive",
-   "target": "self",
-   "element": "none",
-   "power": 0.0,
-   "ap_cost": 0,
-   "cooldown": 0,
-   "effects": {
-    "passive": {
-     "def_pct": 0.04,
-     "knowledge": {
-      "yu": 2
-     }
-    }
-   },
-   "generated": "heritage"
-  },
-  {
-   "id": "sk_pas_her_132",
-   "name": "해주 학통",
-   "owner": "passive",
-   "target": "self",
-   "element": "none",
-   "power": 0.0,
-   "ap_cost": 0,
-   "cooldown": 0,
-   "effects": {
-    "passive": {
-     "def_pct": 0.03,
-     "knowledge": {
-      "yu": 2
-     }
-    }
-   },
-   "generated": "heritage"
-  },
-  {
-   "id": "sk_pas_her_144",
-   "name": "추사 학통",
-   "owner": "passive",
-   "target": "self",
-   "element": "none",
-   "power": 0.0,
-   "ap_cost": 0,
-   "cooldown": 0,
-   "effects": {
-    "passive": {
-     "def_pct": 0.03,
-     "knowledge": {
-      "yu": 2
-     }
-    }
-   },
-   "generated": "heritage"
-  },
-  {
    "id": "sk_cp_03",
    "name": "목면 포용",
    "owner": "companion",
@@ -1898,6 +1821,83 @@
     "def_ignore": 0.3
    },
    "db15": "SKL_COMP_65_ACT"
+  },
+  {
+   "id": "sk_pas_her_113",
+   "name": "강릉 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2,
+      "sa": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_124",
+   "name": "전주 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_132",
+   "name": "해주 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_144",
+   "name": "추사 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
   }
  ]
 }

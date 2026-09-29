@@ -89,6 +89,7 @@ func _build_menu() -> void:
 	v.add_child(head)
 	menu_title = Label.new()
 	menu_title.add_theme_font_size_override("font_size", 24)
+	Assets.title(menu_title, 34)  # 메뉴 제목: 나눔손글씨 붓
 	menu_title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	head.add_child(menu_title)
 	var back := Button.new()

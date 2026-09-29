@@ -4,3 +4,4 @@ export_presets.cfg
 # Python
 __pycache__/
 *.pyc
+data_src/geo_raw/

@@ -47,6 +47,7 @@ func _ready() -> void:
 	title_label.size = Vector2(222, 80)
 	title_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_font(title_label, 16)
+	Assets.title(title_label, 22)  # 칭호·신분
 	add_child(title_label)
 	# ② 상태창
 	var y := 20.0
@@ -190,4 +191,4 @@ func _draw_portrait() -> void:
 		p.draw_texture_rect(seal, Rect2(Vector2(p.size.x - 62, 12), Vector2(50, 50)), false)
 	else:  # 소속 인장(붉은 낙관)
 		p.draw_rect(Rect2(Vector2(p.size.x - 60, 14), Vector2(46, 46)), Color(0.72, 0.1, 0.08))
-		p.draw_string(ThemeDB.fallback_font, Vector2(p.size.x - 52, 46), str(gs.rank), HORIZONTAL_ALIGNMENT_LEFT, -1, 26, Color(1, 0.9, 0.8))
+		p.draw_string((Assets.font_ui if Assets.font_ui else ThemeDB.fallback_font), Vector2(p.size.x - 52, 46), str(gs.rank), HORIZONTAL_ALIGNMENT_LEFT, -1, 26, Color(1, 0.9, 0.8))

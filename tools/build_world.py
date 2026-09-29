@@ -81,7 +81,117 @@ def build_nodes():
     return nodes, by_name
 
 
+GEO = json.loads((SRC / "node_geo.json").read_text(encoding="utf-8")) if (SRC / "node_geo.json").exists() else {}
+GEO_MARGIN = (260, 220)      # 지도 가장자리 여백(px) — 국경 통로·UI 공간
+GEO_MIN_GAP = 150            # 가시 노드 최소 간격(px) = 7.5리. 실제 위치가 더 가까우면 밀어냄(한양 도성 안 여러 노드 등)
+GEO_HIDDEN_RANGE = (150, 420)  # 은닉 노드 ↔ 부모 거리(px). 탐색 반경 13~33리 규칙이 성립하도록 방향은 유지·거리만 이 범위로
+KM_PER_DEG_LAT = 110.57
+
+
+def geo_projection(pts):
+    """권역 노드 위경도 → 등거리 원통 투영(권역 중심 위도의 cos 로 경도 보정) · 3840×2160 여백 안에 가득 차도록 축척."""
+    lats = [p[0] for p in pts]
+    lons = [p[1] for p in pts]
+    lat0 = (min(lats) + max(lats)) / 2
+    kx = 111.32 * math.cos(math.radians(lat0))
+    w_km = (max(lons) - min(lons)) * kx
+    h_km = (max(lats) - min(lats)) * KM_PER_DEG_LAT
+    mx, my = GEO_MARGIN
+    km_per_px = max(w_km / (MAP_W - 2 * mx), h_km / (MAP_H - 2 * my), 0.005)
+    # 지도 중앙 = 노드 범위의 중앙
+    lonc = (min(lons) + max(lons)) / 2
+    return {"lat0": round(lat0, 5), "lon_c": round(lonc, 5), "lat_c": round(lat0, 5), "km_per_px": round(km_per_px, 5),
+            "kx": round(kx, 4), "ky": KM_PER_DEG_LAT, "map_size": [MAP_W, MAP_H]}
+
+
+def geo_to_px(pr, lat, lon):
+    x = MAP_W / 2 + (lon - pr["lon_c"]) * pr["kx"] / pr["km_per_px"]
+    y = MAP_H / 2 - (lat - pr["lat_c"]) * pr["ky"] / pr["km_per_px"]
+    return [x, y]
+
+
+def place_geo(nodes, r):
+    """실제 좌표 배치. 반환: 투영 파라미터(regions.json 에 기록 → tools/gen_terrain.py 가 같은 투영으로 지형을 그림)."""
+    table = GEO[r["id"]]
+    mine = [n for n in nodes if n["region"] == r["id"]]
+    pr = geo_projection([table[n["name"]] for n in mine])
+    for n in mine:
+        lat, lon, conf = table[n["name"]]
+        n["geo"] = [lat, lon]
+        n["geo_conf"] = conf
+        n["_true"] = geo_to_px(pr, lat, lon)
+        n["pos"] = list(n["_true"])
+    vis = [n for n in mine if not n["hidden"]]
+    mx, my = GEO_MARGIN
+    for _ in range(300):  # 최소 간격 확보(겹친 쌍을 서로 반씩 밀어냄) + 원위치로 약하게 복원
+        moved = False
+        for i, a in enumerate(vis):
+            for b in vis[i + 1:]:
+                dx, dy = b["pos"][0] - a["pos"][0], b["pos"][1] - a["pos"][1]
+                d = math.hypot(dx, dy)
+                if d < GEO_MIN_GAP:
+                    if d < 1e-6:
+                        ang = (sum(map(ord, a["id"] + b["id"])) % 360) * math.pi / 180
+                        dx, dy, d = math.cos(ang), math.sin(ang), 1.0
+                    push = (GEO_MIN_GAP - d) / 2 + 0.5
+                    a["pos"][0] -= dx / d * push
+                    a["pos"][1] -= dy / d * push
+                    b["pos"][0] += dx / d * push
+                    b["pos"][1] += dy / d * push
+                    moved = True
+        for n in vis:
+            n["pos"][0] = min(MAP_W - mx / 2, max(mx / 2, n["pos"][0]))
+            n["pos"][1] = min(MAP_H - my / 2, max(my / 2, n["pos"][1]))
+        if not moved:
+            break
+    by = {n["name"]: n for n in mine}
+    for n in mine:
+        if not n["hidden"]:
+            continue
+        par = by[n["_parent"]]
+        if par["hidden"] and "_placed" not in par:
+            continue
+        dx, dy = n["_true"][0] - par["_true"][0], n["_true"][1] - par["_true"][1]
+        d = math.hypot(dx, dy)
+        lo, hi = GEO_HIDDEN_RANGE
+        if d < 1e-6:
+            dx, dy, d = 1.0, 0.0, 1.0
+        k = min(hi, max(lo, d)) / d
+        n["pos"] = [par["pos"][0] + dx * k, par["pos"][1] + dy * k]
+        n["_placed"] = True
+    for n in mine:  # 은닉의 부모가 은닉인 경우(천황봉→신도안) 두 번째 패스
+        if n["hidden"] and "_placed" not in n:
+            par = by[n["_parent"]]
+            dx, dy = n["_true"][0] - par["_true"][0], n["_true"][1] - par["_true"][1]
+            d = math.hypot(dx, dy) or 1.0
+            k = min(GEO_HIDDEN_RANGE[1], max(GEO_HIDDEN_RANGE[0], d)) / d
+            n["pos"] = [par["pos"][0] + dx * k, par["pos"][1] + dy * k]
+    for n in mine:
+        n["pos"] = [round(min(MAP_W - 60, max(60, n["pos"][0]))), round(min(MAP_H - 60, max(60, n["pos"][1])))]
+        n["geo_shift_km"] = round(math.dist(n["pos"], n["_true"]) * pr["km_per_px"], 2)
+        n.pop("_true", None)
+        n.pop("_placed", None)
+    return pr
+
+
 def place(nodes, regions):
+    """data_src/node_geo.json 에 좌표가 모두 있는 권역은 실제 위치로, 아니면 자동 배치(임시)."""
+    PROJ.clear()
+    for r in regions:
+        tab = GEO.get(r["id"], {})
+        if tab and all(n["name"] in tab for n in nodes if n["region"] == r["id"]):
+            PROJ[r["id"]] = place_geo(nodes, r)
+    auto = [r for r in regions if r["id"] not in PROJ]
+    if auto:
+        missing = [n["name"] for n in nodes if n["region"] in {r["id"] for r in auto} and n["name"] not in GEO.get(n["region"], {})]
+        print(f"[배치] 실제 좌표 없는 권역 {len(auto)}곳 자동 배치 — 누락 노드 {len(missing)}: {', '.join(missing[:12])}")
+    place_auto(nodes, auto)
+
+
+PROJ = {}
+
+
+def place_auto(nodes, regions):
     for r in regions:
         rng = random.Random(int(r["id"][-2:]) * 7919)
         vis = [n for n in nodes if n["region"] == r["id"] and not n["hidden"]]
@@ -99,8 +209,9 @@ def place(nodes, regions):
                     best = p
             placed.append(best)
             n["pos"] = [round(best[0]), round(best[1])]
+    auto_ids = {r["id"] for r in regions}
     by = {(n["region"], n["name"]): n for n in nodes}
-    pending = [n for n in nodes if n["hidden"]]
+    pending = [n for n in nodes if n["hidden"] and n["region"] in auto_ids]
     for _ in range(3):  # 은닉 노드의 부모가 은닉 노드인 경우(천황봉→신도안) 순서 해결
         for n in pending:
             par = by[(n["region"], n["_parent"])]
@@ -346,9 +457,10 @@ def main():
                             "sea_only": not r["adjacent"],
                             "map_texture": f"res://assets/maps/regions/{rid}.png",
                             "mask_texture": f"res://assets/maps/masks/{rid}_mask.png",
-                            "parallax_dir": f"res://assets/parallax/{rid}/"})
+                            "parallax_dir": f"res://assets/parallax/{rid}/",
+                            **({"geo_projection": PROJ[r["id"]]} if r["id"] in PROJ else {})})
     save("regions.json", {
-        "_schema": "build_world.py 생성물(직접 수정 금지 → data_src 수정 후 재빌드). 17권역(MAP_01~17) · nodes(7상시+7은닉+확장 hazard) · edges(권역 내 도로/오솔길) · border_links(인접 권역 국경) · sea_routes(나루터 뱃길). pos=권역 지도 px(3840×2160, 10리=200px, 임시 자동배치).",
+        "_schema": "build_world.py 생성물(직접 수정 금지 → data_src 수정 후 재빌드). 17권역(MAP_01~17) · nodes(7상시+7은닉+확장 hazard) · edges(권역 내 도로/오솔길) · border_links(인접 권역 국경) · sea_routes(나루터 뱃길). pos=권역 지도 px(3840×2160, 10리=200px). geo=[위도,경도](data_src/node_geo.json) → regions[].geo_projection 으로 투영(최소 간격 7.5리를 위해 밀린 거리 geo_shift_km).",
         "map_size": [MAP_W, MAP_H], "px_per_li": PX_PER_LI,
         "regions": out_regions, "nodes": nodes, "edges": edges, "border_links": borders, "sea_routes": sea})
     doc = load("01_heritage.json")

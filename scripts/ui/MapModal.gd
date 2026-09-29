@@ -27,7 +27,7 @@ var info: Label
 
 
 func _ready() -> void:
-	font = ThemeDB.fallback_font
+	font = (Assets.font_ui if Assets.font_ui else ThemeDB.fallback_font)
 	set_anchors_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	buttons = HBoxContainer.new()

@@ -16,7 +16,7 @@ const WEATHER_IDX := {"clear": 0, "rain": 1, "storm": 2, "snow": 3, "fog": 4}
 
 
 func _ready() -> void:
-	font = ThemeDB.fallback_font
+	font = (Assets.font_ui if Assets.font_ui else ThemeDB.fallback_font)
 	set_anchors_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	weather_rect = ColorRect.new()

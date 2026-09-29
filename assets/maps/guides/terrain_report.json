@@ -1,0 +1,257 @@
+{
+ "MAP_17": {
+  "id": "MAP_17",
+  "srtm_share": 0.997,
+  "land": 0.479,
+  "max_elev": 1919,
+  "rivers": 0,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.46184654706790124,
+   "water": 0.05917052469135802,
+   "mountain": 0.1370380015432099,
+   "plain_road": 0.34194492669753085
+  }
+ },
+ "MAP_01": {
+  "id": "MAP_01",
+  "srtm_share": 1.0,
+  "land": 0.851,
+  "max_elev": 910,
+  "rivers": 2,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.08394000771604938,
+   "water": 0.06565152391975308,
+   "mountain": 0.20224151234567903,
+   "plain_road": 0.6481669560185185
+  }
+ },
+ "MAP_02": {
+  "id": "MAP_02",
+  "srtm_share": 1.0,
+  "land": 0.873,
+  "max_elev": 1168,
+  "rivers": 2,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.05007908950617284,
+   "water": 0.07998890817901234,
+   "mountain": 0.23533034336419753,
+   "plain_road": 0.6346016589506173
+  }
+ },
+ "MAP_03": {
+  "id": "MAP_03",
+  "srtm_share": 0.872,
+  "land": 0.707,
+  "max_elev": 1687,
+  "rivers": 2,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.27286988811728397,
+   "water": 0.020908082561728394,
+   "mountain": 0.42776957947530864,
+   "plain_road": 0.278452449845679
+  }
+ },
+ "MAP_04": {
+  "id": "MAP_04",
+  "srtm_share": 0.936,
+  "land": 0.686,
+  "max_elev": 1554,
+  "rivers": 3,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.30232349537037034,
+   "water": 0.01525462962962963,
+   "mountain": 0.39971354166666667,
+   "plain_road": 0.28270833333333334
+  }
+ },
+ "MAP_05": {
+  "id": "MAP_05",
+  "srtm_share": 1.0,
+  "land": 0.99,
+  "max_elev": 1560,
+  "rivers": 2,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.0009997106481481482,
+   "water": 0.012337962962962964,
+   "mountain": 0.4153645833333333,
+   "plain_road": 0.5712977430555556
+  }
+ },
+ "MAP_06": {
+  "id": "MAP_06",
+  "srtm_share": 1.0,
+  "land": 0.732,
+  "max_elev": 820,
+  "rivers": 0,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.17564718364197532,
+   "water": 0.09234037422839506,
+   "mountain": 0.17868827160493828,
+   "plain_road": 0.5533241705246914
+  }
+ },
+ "MAP_07": {
+  "id": "MAP_07",
+  "srtm_share": 1.0,
+  "land": 0.816,
+  "max_elev": 1892,
+  "rivers": 0,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.12716917438271605,
+   "water": 0.0573876350308642,
+   "mountain": 0.41313705632716047,
+   "plain_road": 0.40230613425925926
+  }
+ },
+ "MAP_08": {
+  "id": "MAP_08",
+  "srtm_share": 1.0,
+  "land": 0.562,
+  "max_elev": 1880,
+  "rivers": 1,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.23703221450617284,
+   "water": 0.20118296682098766,
+   "mountain": 0.20844376929012345,
+   "plain_road": 0.35334104938271604
+  }
+ },
+ "MAP_09": {
+  "id": "MAP_09",
+  "srtm_share": 0.884,
+  "land": 0.716,
+  "max_elev": 1583,
+  "rivers": 2,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.2701982060185185,
+   "water": 0.01595871913580247,
+   "mountain": 0.3157426697530864,
+   "plain_road": 0.3981004050925926
+  }
+ },
+ "MAP_10": {
+  "id": "MAP_10",
+  "srtm_share": 1.0,
+  "land": 0.731,
+  "max_elev": 1887,
+  "rivers": 1,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.1927608989197531,
+   "water": 0.07742862654320988,
+   "mountain": 0.3469217785493827,
+   "plain_road": 0.38288869598765435
+  }
+ },
+ "MAP_11": {
+  "id": "MAP_11",
+  "srtm_share": 1.0,
+  "land": 0.994,
+  "max_elev": 1257,
+  "rivers": 0,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.001318479938271605,
+   "water": 0.00648389274691358,
+   "mountain": 0.37646460262345677,
+   "plain_road": 0.615733024691358
+  }
+ },
+ "MAP_12": {
+  "id": "MAP_12",
+  "srtm_share": 1.0,
+  "land": 0.712,
+  "max_elev": 919,
+  "rivers": 0,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.1873755787037037,
+   "water": 0.1005324074074074,
+   "mountain": 0.14084828317901235,
+   "plain_road": 0.5712437307098766
+  }
+ },
+ "MAP_13": {
+  "id": "MAP_13",
+  "srtm_share": 0.269,
+  "land": 0.744,
+  "max_elev": 1917,
+  "rivers": 1,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.20653404706790124,
+   "water": 0.04933979552469136,
+   "mountain": 0.2828486689814815,
+   "plain_road": 0.4612774884259259
+  }
+ },
+ "MAP_14": {
+  "id": "MAP_14",
+  "srtm_share": 0.0,
+  "land": 0.901,
+  "max_elev": 2203,
+  "rivers": 3,
+  "lakes": 1,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.07245081018518519,
+   "water": 0.02990113811728395,
+   "mountain": 0.4530396412037037,
+   "plain_road": 0.44460841049382716
+  }
+ },
+ "MAP_15": {
+  "id": "MAP_15",
+  "srtm_share": 0.084,
+  "land": 0.556,
+  "max_elev": 2424,
+  "rivers": 3,
+  "lakes": 1,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.4137355324074074,
+   "water": 0.03270351080246914,
+   "mountain": 0.3542915702160494,
+   "plain_road": 0.1992693865740741
+  }
+ },
+ "MAP_16": {
+  "id": "MAP_16",
+  "srtm_share": 0.0,
+  "land": 0.677,
+  "max_elev": 2554,
+  "rivers": 4,
+  "lakes": 0,
+  "nodes_at_sea": [],
+  "mask_hist": {
+   "impassable": 0.29563368055555556,
+   "water": 0.030905671296296296,
+   "mountain": 0.5424686535493827,
+   "plain_road": 0.13099199459876543
+  }
+ }
+}
