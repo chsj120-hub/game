@@ -17,6 +17,7 @@
 | `data_src/` | 기획자가 수정하는 원천 표 |
 | `tools/` | Python 생성·검증·시뮬레이터 |
 | `docs/DESIGN.md` | 전체 설계서(충돌 정리, 공식, 명성·엽전·전투 밸런스) |
+| `docs/DB15_점검보고서.md` · `data_src/db15/` | DB-15 데이터셋 점검 보고서 · 원본/수정본 xlsx · 게임 스키마 변환 JSON (`python3 tools/db15/audit_fix.py`, `tools/db15/balance_check.py`) |
 | `assets/ASSET_MANIFEST.json` · `assets/PROMPTS.csv` | 넣어야 할 에셋 목록과 이미지 생성 프롬프트 |
 
 적용 순서:
