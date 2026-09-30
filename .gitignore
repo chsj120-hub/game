@@ -5,3 +5,6 @@ export_presets.cfg
 __pycache__/
 *.pyc
 data_src/geo_raw/
+assets/_drafts/
+assets/prompts/_generated_log.csv
+tools/comfy_config.json

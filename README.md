@@ -168,6 +168,7 @@ python3 tools/gen_terrain.py --jobs 8    # 17권역 약 3분 (--regions MAP_08, 
   - `prompt` = 본문 + **복식 고증**(인물) + **공통 스타일** + 규격 꼬리
   - `negative` = 공통 금지어(청·일본 복식, 사실사진, 애니 등) + 종류별 금지어
 - 문구 사전은 `tools/prompt_lib.py`에 있습니다. 배경 연도는 1861년입니다. 그보다 앞 시대 인물(고구려·신라·고려 등)은 그 시대 복식을 씁니다.
+- 일괄 생성은 `tools/comfy_batch.py`(ComfyUI 로컬 API)로 합니다. 초심자용 따라 하기는 [`docs/AI_에셋_제작_가이드.txt`](docs/AI_에셋_제작_가이드.txt)를 보세요.
 - `assets/PROMPTS.csv`: 구 형식 아이콘 424건입니다(호환용). `path` 열에 적힌 경로에 그대로 저장하면 됩니다.
 
 ### 공공데이터
