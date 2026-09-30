@@ -95,10 +95,31 @@ static func hunt_waves() -> Array:
 			if "*" in regs or gs.current_region in regs:
 				beasts.append(e["id"])
 	if beasts.is_empty() or gs.rng.randf() > float(_fac().get("hunt", {}).get("encounter_beast_chance", 0.6)):
-		gs.add_item("food_hare")
-		gs.note("사냥: 산토끼 한 마리를 잡았다.")
+		var got := _hunt_game()
+		gs.add_item(got)
+		gs.note("사냥: %s을(를) 얻었다." % DataDB.display_name(got))
 		return []
 	return [[beasts[gs.rng.randi_range(0, beasts.size() - 1)]]]
+
+
+## 맹수와 마주치지 않은 사냥의 수렵육 — 신분 Rank 이하 등급, 낮은 등급일수록 흔함(가중치 2^(Rank−등급)), 권역 한정(regions) 반영
+static func _hunt_game() -> String:
+	var gs := GameState
+	var pool := []
+	var total := 0.0
+	for f in DataDB.table("04_food_staples.json", "foods"):
+		var regs: Array = f.get("regions", ["*"])
+		if String(f.get("kind", "")) != "game" or int(f["tier"]) > gs.rank or not ("*" in regs or gs.current_region in regs):
+			continue
+		var w := pow(2.0, gs.rank - int(f["tier"]))
+		pool.append([String(f["id"]), w])
+		total += w
+	var roll := gs.rng.randf() * total
+	for p in pool:
+		roll -= float(p[1])
+		if roll <= 0.0:
+			return String(p[0])
+	return "food_hare"
 
 
 ## [봉수] 점화 → 권역 은닉 노드 영구 해금 (완전판 3.1)

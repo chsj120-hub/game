@@ -1,7 +1,7 @@
 {
  "_about": "tools/gen_asset_manifest.py 생성. 게임은 파일이 없으면 절차적 그리기로 대체하므로 어떤 순서로 넣어도 된다. 규격은 spec, 경로는 path 그대로.",
  "summary": {
-  "total": 751,
+  "total": 804,
   "present": 17,
   "by_kind": {
    "region_map": 17,
@@ -11,7 +11,7 @@
    "overworld": 1,
    "marker": 30,
    "portrait": 91,
-   "icon": 428,
+   "icon": 481,
    "sprite": 73,
    "ui_9patch": 2,
    "minigame": 24
@@ -7078,6 +7078,18 @@
    "exists": false
   },
   {
+   "path": "res://assets/icons/items/hr_galgeun.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "갈근탕 아이콘",
+   "ref": "hr_galgeun",
+   "exists": false
+  },
+  {
    "path": "res://assets/icons/items/herb_gamcho.png",
    "kind": "icon",
    "spec": {
@@ -7157,7 +7169,7 @@
     "format": "PNG 32-bit",
     "import": "Lossless, Mipmaps on"
    },
-   "use": "대추 아이콘",
+   "use": "건대추(약재) 아이콘",
    "ref": "herb_daechu",
    "exists": false
   },
@@ -7241,7 +7253,7 @@
     "format": "PNG 32-bit",
     "import": "Lossless, Mipmaps on"
    },
-   "use": "인삼 아이콘",
+   "use": "산양삼(山養蔘) 아이콘",
    "ref": "herb_insam",
    "exists": false
   },
@@ -7519,6 +7531,66 @@
    },
    "use": "신선로 아이콘",
    "ref": "fr_sinseollo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_dotorimuk.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "도토리묵 아이콘",
+   "ref": "fr_dotorimuk",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_songgitteok.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "송기떡 아이콘",
+   "ref": "fr_songgitteok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_sanjeok.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "야영 산적 아이콘",
+   "ref": "fr_sanjeok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_ungjang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "웅장찜(熊掌) 아이콘",
+   "ref": "fr_ungjang",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_nokpo.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "녹포(鹿脯) 아이콘",
+   "ref": "fr_nokpo",
    "exists": false
   },
   {
@@ -8410,6 +8482,18 @@
    "exists": false
   },
   {
+   "path": "res://assets/icons/items/mat_jang.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "장(간장·된장) 아이콘",
+   "ref": "mat_jang",
+   "exists": false
+  },
+  {
    "path": "res://assets/icons/items/food_rice.png",
    "kind": "icon",
    "spec": {
@@ -8590,6 +8674,66 @@
    "exists": false
   },
   {
+   "path": "res://assets/icons/items/food_rice_mal.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "백미 한 말 아이콘",
+   "ref": "food_rice_mal",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_barley_mal.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "보리 한 말 아이콘",
+   "ref": "food_barley_mal",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_millet_mal.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "조 한 말 아이콘",
+   "ref": "food_millet_mal",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_beef.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "쇠고기 아이콘",
+   "ref": "food_beef",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/food_kongnamul.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "콩나물 아이콘",
+   "ref": "food_kongnamul",
+   "exists": false
+  },
+  {
    "path": "res://assets/icons/items/sp_jeonju_hanji.png",
    "kind": "icon",
    "spec": {
@@ -8669,7 +8813,7 @@
     "format": "PNG 32-bit",
     "import": "Lossless, Mipmaps on"
    },
-   "use": "개성 홍삼 아이콘",
+   "use": "개성 인삼 상품 아이콘",
    "ref": "sp_gaeseong_hongsam",
    "exists": false
   },
@@ -8719,18 +8863,6 @@
    },
    "use": "안성 유기 아이콘",
    "ref": "sp_anseong_yugi",
-   "exists": false
-  },
-  {
-   "path": "res://assets/icons/items/sp_inje_hwangtae.png",
-   "kind": "icon",
-   "spec": {
-    "size": "256x256 정사각, 단색 한지 배경",
-    "format": "PNG 32-bit",
-    "import": "Lossless, Mipmaps on"
-   },
-   "use": "인제 황태 아이콘",
-   "ref": "sp_inje_hwangtae",
    "exists": false
   },
   {
@@ -8971,6 +9103,510 @@
    },
    "use": "회령 복원 도자 아이콘",
    "ref": "sp_her_142",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_chuncheon_jat.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "춘천 잣 아이콘",
+   "ref": "sp_chuncheon_jat",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_pyeongyang_nokdu.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "평양 녹두 아이콘",
+   "ref": "sp_pyeongyang_nokdu",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_ongjin_daeha.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "옹진 대하 아이콘",
+   "ref": "sp_ongjin_daeha",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_uiju_jinmal.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "의주 진말 아이콘",
+   "ref": "sp_uiju_jinmal",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_gadeok_daegu.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "가덕 대구 아이콘",
+   "ref": "sp_gadeok_daegu",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_jeju_malchong.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "제주 말총 아이콘",
+   "ref": "sp_jeju_malchong",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_jeju_jeonbok.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "제주 전복 아이콘",
+   "ref": "sp_jeju_jeonbok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hanyang_tarak.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "타락 아이콘",
+   "ref": "sp_hanyang_tarak",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_jeonju_hanji_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "전주 한지 상품 아이콘",
+   "ref": "sp_jeonju_hanji_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_jeonju_hanji_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "전주 한지 진상품 아이콘",
+   "ref": "sp_jeonju_hanji_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hansan_mosi_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "한산 모시 상품 아이콘",
+   "ref": "sp_hansan_mosi_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hansan_mosi_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "한산 모시 진상품 아이콘",
+   "ref": "sp_hansan_mosi_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_andong_po_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "안동포 상품 아이콘",
+   "ref": "sp_andong_po_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_andong_po_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "안동포 진상품 아이콘",
+   "ref": "sp_andong_po_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_damyang_bamboo_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "담양 죽물 상품 아이콘",
+   "ref": "sp_damyang_bamboo_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_damyang_bamboo_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "담양 죽물 진상품 아이콘",
+   "ref": "sp_damyang_bamboo_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_yeonggwang_gulbi_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영광 굴비 상품 아이콘",
+   "ref": "sp_yeonggwang_gulbi_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_yeonggwang_gulbi_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영광 굴비 진상품 아이콘",
+   "ref": "sp_yeonggwang_gulbi_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_gaeseong_insam_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "개성 인삼 진상품 아이콘",
+   "ref": "sp_gaeseong_insam_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_jeju_gamgyul_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "제주 감귤 상품 아이콘",
+   "ref": "sp_jeju_gamgyul_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hamgyeong_myeongtae_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "북관 명태 상품 아이콘",
+   "ref": "sp_hamgyeong_myeongtae_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hamgyeong_myeongtae_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "북관 명태 진상품 아이콘",
+   "ref": "sp_hamgyeong_myeongtae_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_ganghwa_hwamunseok_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강화 화문석 상품 아이콘",
+   "ref": "sp_ganghwa_hwamunseok_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_anseong_yugi_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "안성 유기 상품 아이콘",
+   "ref": "sp_anseong_yugi_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_anseong_yugi_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "안성 유기 진상품 아이콘",
+   "ref": "sp_anseong_yugi_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_chuncheon_jat_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "춘천 잣 상품 아이콘",
+   "ref": "sp_chuncheon_jat_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_chuncheon_jat_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "춘천 잣 진상품 아이콘",
+   "ref": "sp_chuncheon_jat_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_uljin_daege_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "울진 대게 상품 아이콘",
+   "ref": "sp_uljin_daege_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_uljin_daege_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "울진 대게 진상품 아이콘",
+   "ref": "sp_uljin_daege_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_boeun_daechu_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "보은 대추 상품 아이콘",
+   "ref": "sp_boeun_daechu_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_boeun_daechu_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "보은 대추 진상품 아이콘",
+   "ref": "sp_boeun_daechu_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_gochang_bokbunja_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "고창 복분자주 상품 아이콘",
+   "ref": "sp_gochang_bokbunja_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_gochang_bokbunja_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "고창 복분자주 진상품 아이콘",
+   "ref": "sp_gochang_bokbunja_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_sangju_gotgam_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "상주 곶감 상품 아이콘",
+   "ref": "sp_sangju_gotgam_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_sangju_gotgam_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "상주 곶감 진상품 아이콘",
+   "ref": "sp_sangju_gotgam_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_haeju_meok_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "해주 먹 상품 아이콘",
+   "ref": "sp_haeju_meok_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_bongsan_bae_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "봉산 참배 상품 아이콘",
+   "ref": "sp_bongsan_bae_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_bongsan_bae_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "봉산 참배 진상품 아이콘",
+   "ref": "sp_bongsan_bae_g2",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_pyeongyang_chilgi_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "평양 칠기 상품 아이콘",
+   "ref": "sp_pyeongyang_chilgi_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_uiju_dambi_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "의주 담비 가죽 상품 아이콘",
+   "ref": "sp_uiju_dambi_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hoeryeong_oji_g1.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "회령 오지그릇 상품 아이콘",
+   "ref": "sp_hoeryeong_oji_g1",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hoeryeong_oji_g2.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "회령 오지그릇 진상품 아이콘",
+   "ref": "sp_hoeryeong_oji_g2",
    "exists": false
   },
   {

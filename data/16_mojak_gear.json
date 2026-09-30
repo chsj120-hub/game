@@ -288,7 +288,11 @@
    "materials": [
     {
      "id": "mat_copper",
-     "qty": 8
+     "qty": 6
+    },
+    {
+     "id": "mat_tin",
+     "qty": 2
     },
     {
      "id": "mat_sarira_crystal",
@@ -326,7 +330,11 @@
     },
     {
      "id": "mat_copper",
-     "qty": 10
+     "qty": 8
+    },
+    {
+     "id": "mat_tin",
+     "qty": 2
     },
     {
      "id": "mat_silk_thread",
@@ -357,7 +365,11 @@
    "materials": [
     {
      "id": "mat_copper",
-     "qty": 8
+     "qty": 6
+    },
+    {
+     "id": "mat_tin",
+     "qty": 2
     },
     {
      "id": "mat_sarira_crystal",
@@ -396,7 +408,11 @@
     },
     {
      "id": "mat_copper",
-     "qty": 10
+     "qty": 8
+    },
+    {
+     "id": "mat_tin",
+     "qty": 2
     },
     {
      "id": "mat_silk_thread",
@@ -426,7 +442,11 @@
    "materials": [
     {
      "id": "mat_copper",
-     "qty": 8
+     "qty": 6
+    },
+    {
+     "id": "mat_tin",
+     "qty": 2
     },
     {
      "id": "mat_sarira_crystal",
@@ -464,7 +484,11 @@
     },
     {
      "id": "mat_copper",
-     "qty": 10
+     "qty": 8
+    },
+    {
+     "id": "mat_tin",
+     "qty": 2
     },
     {
      "id": "mat_silk_thread",
@@ -494,7 +518,11 @@
    "materials": [
     {
      "id": "mat_copper",
-     "qty": 8
+     "qty": 6
+    },
+    {
+     "id": "mat_tin",
+     "qty": 2
     },
     {
      "id": "mat_sarira_crystal",
@@ -532,7 +560,11 @@
     },
     {
      "id": "mat_copper",
-     "qty": 10
+     "qty": 8
+    },
+    {
+     "id": "mat_tin",
+     "qty": 2
     },
     {
      "id": "mat_silk_thread",

@@ -375,7 +375,13 @@
    80
   ],
   "restock_days": 5,
-  "sell_spread_general": 0.5
+  "sell_spread_general": 0.5,
+  "stock_by_grade": [
+   20,
+   8,
+   3
+  ],
+  "grade_rank_gate": true
  },
  "town_dev": {
   "max": 5,
@@ -1382,5 +1388,218 @@
   "knowledge_req": "tier",
   "knowledge_per_promotion": 1,
   "quest_type": "companion_promo"
+ },
+ "crafting": {
+  "_note": "재료 {id}: 같은 line 에서 등급 ≥ 요구 등급인 품목이 1:1 대체(정확한 품목 → 낮은 등급 → 신선도 낮은 것 순). {group}: line 전체(최저 등급 기준). no_substitute 는 직접 요구할 때만 소모. substitute_default: off|confirm|auto, confirm = 요구보다 confirm_tier_gap 등급 이상 높은 재료가 쓰일 때만 확인창.",
+  "substitute_default": "confirm",
+  "confirm_tier_gap": 2,
+  "lines": {
+   "grain": {
+    "name": "곡물(한 말)",
+    "items": [
+     "food_rice_mal",
+     "food_barley_mal",
+     "food_millet_mal"
+    ]
+   },
+   "flour": {
+    "name": "가루(진말·메밀)",
+    "items": [
+     "sp_uiju_jinmal",
+     "food_buckwheat"
+    ]
+   },
+   "meat_game": {
+    "name": "수렵육",
+    "items": [
+     "food_hare",
+     "food_pheasant",
+     "food_boar",
+     "food_bear",
+     "food_white_deer"
+    ]
+   },
+   "gu": {
+    "name": "구황 산물",
+    "items": [
+     "food_songgi",
+     "food_acorn",
+     "food_kudzu"
+    ]
+   },
+   "fiber": {
+    "name": "섬유",
+    "items": [
+     "mat_hemp",
+     "mat_cotton",
+     "mat_silk_thread"
+    ]
+   },
+   "jujube": {
+    "name": "대추",
+    "items": [
+     "herb_daechu",
+     "sp_boeun_daechu",
+     "sp_boeun_daechu_g1",
+     "sp_boeun_daechu_g2"
+    ]
+   },
+   "ginseng": {
+    "name": "인삼",
+    "items": [
+     "sp_gaeseong_insam",
+     "sp_gaeseong_hongsam",
+     "herb_insam",
+     "sp_gaeseong_insam_g2",
+     "herb_sansam"
+    ]
+   },
+   "jat": {
+    "name": "잣",
+    "items": [
+     "sp_chuncheon_jat",
+     "sp_chuncheon_jat_g1",
+     "sp_chuncheon_jat_g2"
+    ]
+   },
+   "trade_jeonju_hanji": {
+    "name": "전주 한지",
+    "items": [
+     "sp_jeonju_hanji",
+     "sp_jeonju_hanji_g1",
+     "sp_jeonju_hanji_g2"
+    ]
+   },
+   "trade_hansan_mosi": {
+    "name": "한산 모시",
+    "items": [
+     "sp_hansan_mosi",
+     "sp_hansan_mosi_g1",
+     "sp_hansan_mosi_g2"
+    ]
+   },
+   "trade_andong_po": {
+    "name": "안동포",
+    "items": [
+     "sp_andong_po",
+     "sp_andong_po_g1",
+     "sp_andong_po_g2"
+    ]
+   },
+   "trade_damyang_bamboo": {
+    "name": "담양 죽물",
+    "items": [
+     "sp_damyang_bamboo",
+     "sp_damyang_bamboo_g1",
+     "sp_damyang_bamboo_g2"
+    ]
+   },
+   "trade_yeonggwang_gulbi": {
+    "name": "영광 굴비",
+    "items": [
+     "sp_yeonggwang_gulbi",
+     "sp_yeonggwang_gulbi_g1",
+     "sp_yeonggwang_gulbi_g2"
+    ]
+   },
+   "trade_jeju_gamgyul": {
+    "name": "제주 감귤",
+    "items": [
+     "sp_jeju_gamgyul",
+     "sp_jeju_gamgyul_g1"
+    ]
+   },
+   "trade_hamgyeong_myeongtae": {
+    "name": "북관 명태",
+    "items": [
+     "sp_hamgyeong_myeongtae",
+     "sp_hamgyeong_myeongtae_g1",
+     "sp_hamgyeong_myeongtae_g2"
+    ]
+   },
+   "trade_ganghwa_hwamunseok": {
+    "name": "강화 화문석",
+    "items": [
+     "sp_ganghwa_hwamunseok",
+     "sp_ganghwa_hwamunseok_g1"
+    ]
+   },
+   "trade_anseong_yugi": {
+    "name": "안성 유기",
+    "items": [
+     "sp_anseong_yugi",
+     "sp_anseong_yugi_g1",
+     "sp_anseong_yugi_g2"
+    ]
+   },
+   "trade_uljin_daege": {
+    "name": "울진 대게",
+    "items": [
+     "sp_uljin_daege",
+     "sp_uljin_daege_g1",
+     "sp_uljin_daege_g2"
+    ]
+   },
+   "trade_gochang_bokbunja": {
+    "name": "고창 복분자주",
+    "items": [
+     "sp_gochang_bokbunja",
+     "sp_gochang_bokbunja_g1",
+     "sp_gochang_bokbunja_g2"
+    ]
+   },
+   "trade_sangju_gotgam": {
+    "name": "상주 곶감",
+    "items": [
+     "sp_sangju_gotgam",
+     "sp_sangju_gotgam_g1",
+     "sp_sangju_gotgam_g2"
+    ]
+   },
+   "trade_haeju_meok": {
+    "name": "해주 먹",
+    "items": [
+     "sp_haeju_meok",
+     "sp_haeju_meok_g1"
+    ]
+   },
+   "trade_bongsan_bae": {
+    "name": "봉산 참배",
+    "items": [
+     "sp_bongsan_bae",
+     "sp_bongsan_bae_g1",
+     "sp_bongsan_bae_g2"
+    ]
+   },
+   "trade_pyeongyang_chilgi": {
+    "name": "평양 칠기",
+    "items": [
+     "sp_pyeongyang_chilgi",
+     "sp_pyeongyang_chilgi_g1"
+    ]
+   },
+   "trade_uiju_dambi": {
+    "name": "의주 담비 가죽",
+    "items": [
+     "sp_uiju_dambi",
+     "sp_uiju_dambi_g1"
+    ]
+   },
+   "trade_hoeryeong_oji": {
+    "name": "회령 오지그릇",
+    "items": [
+     "sp_hoeryeong_oji",
+     "sp_hoeryeong_oji_g1",
+     "sp_hoeryeong_oji_g2"
+    ]
+   }
+  },
+  "no_substitute": [
+   "food_white_deer",
+   "herb_sansam",
+   "mat_meteor_iron",
+   "mat_sarira_crystal",
+   "mat_cinnabar"
+  ]
  }
 }

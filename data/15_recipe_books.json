@@ -36,7 +36,10 @@
    },
    "unlocks": [
     "fr_jumeokbap",
-    "fr_sujebi"
+    "fr_sujebi",
+    "fr_dotorimuk",
+    "fr_songgitteok",
+    "fr_sanjeok"
    ]
   },
   {
@@ -70,7 +73,9 @@
    },
    "unlocks": [
     "fr_bindaetteok",
-    "fr_pyeongyang_naengmyeon"
+    "fr_pyeongyang_naengmyeon",
+    "fr_ungjang",
+    "fr_nokpo"
    ]
   },
   {
@@ -126,7 +131,8 @@
    },
    "unlocks": [
     "hr_ssanghwa",
-    "hr_haedok"
+    "hr_haedok",
+    "hr_galgeun"
    ]
   },
   {

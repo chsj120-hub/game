@@ -1,11 +1,11 @@
 {
- "_schema": "11_음식_레시피. class=seomin(서민 9)|sura(수라상 9). cook_at=jumak_gamasot(주막 가마솥)|campfire(야영 모닥불; 무쇠 노구솥 행장 필요). book=15 음식 조리서 id. effect: satiety(식량 환산), battle_buff(다음 전투 N회 지속 도핑).",
+ "_schema": "11_음식_레시피. class=seomin(서민 9)|sura(수라상 9). cook_at=jumak_gamasot(주막 가마솥)|campfire(야영 모닥불; 무쇠 노구솥 행장 필요). book=15 음식 조리서 id. effect: satiety(식량 환산), battle_buff(다음 전투 N회 지속 도핑). | 재료: {id,qty} 또는 {group,qty}(공용 재료군 = 00_overview.crafting.lines). 곡물은 '한 말' 단위. 1등급 요리 없음(2~5등급).",
  "recipes": [
   {
    "id": "fr_gukbap",
    "name": "장터 국밥",
    "class": "seomin",
-   "tier": 1,
+   "tier": 2,
    "book": "bk_food_jumak",
    "cook_at": [
     "jumak_gamasot",
@@ -13,17 +13,21 @@
    ],
    "ingredients": [
     {
-     "id": "food_rice",
+     "group": "grain",
      "qty": 1
     },
     {
-     "id": "mat_salt",
+     "id": "food_beef",
+     "qty": 1
+    },
+    {
+     "id": "mat_jang",
      "qty": 1
     }
    ],
    "effect": {
-    "satiety": 48,
-    "heal_pct": 0.1
+    "satiety": 56,
+    "heal_pct": 0.12
    },
    "weight": 0.6,
    "perishable": true
@@ -32,19 +36,27 @@
    "id": "fr_kongnamul",
    "name": "콩나물국밥",
    "class": "seomin",
-   "tier": 1,
+   "tier": 2,
    "book": "bk_food_jumak",
    "cook_at": [
     "jumak_gamasot"
    ],
    "ingredients": [
     {
-     "id": "food_rice",
+     "group": "grain",
+     "qty": 1
+    },
+    {
+     "id": "food_kongnamul",
+     "qty": 1
+    },
+    {
+     "id": "mat_jang",
      "qty": 1
     }
    ],
    "effect": {
-    "satiety": 40,
+    "satiety": 48,
     "cure": [
      "fear"
     ]
@@ -56,14 +68,14 @@
    "id": "fr_jumeokbap",
    "name": "주먹밥",
    "class": "seomin",
-   "tier": 1,
+   "tier": 2,
    "book": "bk_food_campfire",
    "cook_at": [
     "campfire"
    ],
    "ingredients": [
     {
-     "id": "food_rice",
+     "group": "grain",
      "qty": 1
     },
     {
@@ -72,7 +84,7 @@
     }
    ],
    "effect": {
-    "satiety": 32
+    "satiety": 40
    },
    "weight": 0.6,
    "perishable": true
@@ -81,7 +93,7 @@
    "id": "fr_sujebi",
    "name": "수제비",
    "class": "seomin",
-   "tier": 1,
+   "tier": 2,
    "book": "bk_food_campfire",
    "cook_at": [
     "campfire",
@@ -89,12 +101,16 @@
    ],
    "ingredients": [
     {
-     "id": "food_buckwheat",
+     "group": "flour",
      "qty": 2
+    },
+    {
+     "id": "mat_jang",
+     "qty": 1
     }
    ],
    "effect": {
-    "satiety": 32
+    "satiety": 44
    },
    "weight": 0.6,
    "perishable": true
@@ -110,11 +126,11 @@
    ],
    "ingredients": [
     {
-     "id": "food_millet",
-     "qty": 1
+     "id": "sp_pyeongyang_nokdu",
+     "qty": 2
     },
     {
-     "id": "food_pheasant",
+     "group": "meat_game",
      "qty": 1
     }
    ],
@@ -139,11 +155,15 @@
    ],
    "ingredients": [
     {
-     "id": "food_rice",
+     "id": "food_beef",
+     "qty": 2
+    },
+    {
+     "group": "grain",
      "qty": 1
     },
     {
-     "id": "food_boar",
+     "id": "mat_salt",
      "qty": 1
     }
    ],
@@ -168,11 +188,15 @@
    ],
    "ingredients": [
     {
-     "id": "food_rice",
+     "id": "food_rice_mal",
      "qty": 2
     },
     {
      "id": "food_pheasant",
+     "qty": 1
+    },
+    {
+     "id": "mat_jang",
      "qty": 1
     }
    ],
@@ -197,15 +221,19 @@
    ],
    "ingredients": [
     {
-     "id": "food_rice",
-     "qty": 2
-    },
-    {
-     "id": "food_boar",
+     "id": "food_rice_mal",
      "qty": 1
     },
     {
-     "id": "herb_danggwi",
+     "id": "food_beef",
+     "qty": 1
+    },
+    {
+     "id": "food_kongnamul",
+     "qty": 1
+    },
+    {
+     "id": "mat_jang",
      "qty": 1
     }
    ],
@@ -262,12 +290,16 @@
    ],
    "ingredients": [
     {
-     "id": "food_boar",
+     "id": "food_beef",
      "qty": 2
     },
     {
      "id": "herb_daechu",
      "qty": 2
+    },
+    {
+     "id": "mat_jang",
+     "qty": 1
     }
    ],
    "effect": {
@@ -292,11 +324,15 @@
    ],
    "ingredients": [
     {
-     "id": "food_millet",
+     "id": "sp_uiju_jinmal",
      "qty": 1
     },
     {
-     "id": "food_pheasant",
+     "id": "food_beef",
+     "qty": 1
+    },
+    {
+     "id": "food_kongnamul",
      "qty": 1
     }
    ],
@@ -321,11 +357,15 @@
    ],
    "ingredients": [
     {
-     "id": "sp_yeonggwang_gulbi",
+     "id": "sp_jeju_jeonbok",
+     "qty": 2
+    },
+    {
+     "id": "mat_jang",
      "qty": 1
     },
     {
-     "id": "mat_salt",
+     "id": "sp_chuncheon_jat",
      "qty": 1
     }
    ],
@@ -350,11 +390,11 @@
    ],
    "ingredients": [
     {
-     "id": "sp_hamgyeong_myeongtae",
+     "id": "sp_gadeok_daegu",
      "qty": 2
     },
     {
-     "id": "food_barley",
+     "id": "sp_pyeongyang_nokdu",
      "qty": 1
     }
    ],
@@ -379,7 +419,11 @@
    ],
    "ingredients": [
     {
-     "id": "food_rice",
+     "id": "food_rice_mal",
+     "qty": 1
+    },
+    {
+     "id": "sp_hanyang_tarak",
      "qty": 1
     }
    ],
@@ -402,12 +446,16 @@
    ],
    "ingredients": [
     {
-     "id": "food_rice",
+     "id": "food_rice_mal",
      "qty": 1
     },
     {
      "id": "herb_daechu",
      "qty": 2
+    },
+    {
+     "id": "sp_chuncheon_jat",
+     "qty": 1
     }
    ],
    "effect": {
@@ -428,11 +476,15 @@
    ],
    "ingredients": [
     {
-     "id": "food_rice",
+     "id": "food_rice_mal",
      "qty": 2
     },
     {
-     "id": "food_boar",
+     "id": "food_beef",
+     "qty": 1
+    },
+    {
+     "id": "mat_jang",
      "qty": 1
     }
    ],
@@ -458,11 +510,15 @@
    ],
    "ingredients": [
     {
-     "id": "sp_yeonggwang_gulbi",
+     "id": "sp_ongjin_daeha",
      "qty": 2
     },
     {
      "id": "herb_saenggang",
+     "qty": 1
+    },
+    {
+     "id": "sp_chuncheon_jat",
      "qty": 1
     }
    ],
@@ -488,7 +544,7 @@
    ],
    "ingredients": [
     {
-     "id": "food_boar",
+     "id": "food_beef",
      "qty": 1
     },
     {
@@ -496,11 +552,11 @@
      "qty": 1
     },
     {
-     "id": "sp_hamgyeong_myeongtae",
+     "id": "sp_gadeok_daegu",
      "qty": 1
     },
     {
-     "id": "herb_insam",
+     "id": "sp_chuncheon_jat",
      "qty": 1
     }
    ],
@@ -515,6 +571,162 @@
    },
    "weight": 0.6,
    "perishable": true
+  },
+  {
+   "id": "fr_dotorimuk",
+   "name": "도토리묵",
+   "class": "seomin",
+   "tier": 2,
+   "book": "bk_food_campfire",
+   "cook_at": [
+    "campfire",
+    "jumak_gamasot"
+   ],
+   "ingredients": [
+    {
+     "id": "food_acorn",
+     "qty": 4
+    },
+    {
+     "id": "mat_jang",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "satiety": 36,
+    "heal_pct": 0.05
+   },
+   "weight": 0.6,
+   "perishable": true,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "fr_songgitteok",
+   "name": "송기떡",
+   "class": "seomin",
+   "tier": 2,
+   "book": "bk_food_campfire",
+   "cook_at": [
+    "campfire",
+    "jumak_gamasot"
+   ],
+   "ingredients": [
+    {
+     "id": "food_songgi",
+     "qty": 3
+    },
+    {
+     "group": "grain",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "satiety": 44
+   },
+   "weight": 0.5,
+   "perishable": false,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "fr_sanjeok",
+   "name": "야영 산적",
+   "class": "seomin",
+   "tier": 2,
+   "book": "bk_food_campfire",
+   "cook_at": [
+    "campfire"
+   ],
+   "ingredients": [
+    {
+     "group": "meat_game",
+     "qty": 1
+    },
+    {
+     "id": "mat_salt",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "satiety": 40,
+    "battle_buff": {
+     "atk_pct": 0.04,
+     "duration_battles": 1
+    }
+   },
+   "weight": 0.5,
+   "perishable": true,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "fr_ungjang",
+   "name": "웅장찜(熊掌)",
+   "class": "sura",
+   "tier": 4,
+   "book": "bk_food_bukgwan",
+   "cook_at": [
+    "jumak_gamasot"
+   ],
+   "ingredients": [
+    {
+     "id": "food_bear",
+     "qty": 1
+    },
+    {
+     "id": "mat_jang",
+     "qty": 1
+    },
+    {
+     "id": "herb_saenggang",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "satiety": 70,
+    "battle_buff": {
+     "def_pct": 0.15,
+     "hp_pct": 0.1,
+     "duration_battles": 3
+    }
+   },
+   "weight": 0.8,
+   "perishable": true,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "fr_nokpo",
+   "name": "녹포(鹿脯)",
+   "class": "sura",
+   "tier": 5,
+   "book": "bk_food_bukgwan",
+   "cook_at": [
+    "jumak_gamasot",
+    "campfire"
+   ],
+   "ingredients": [
+    {
+     "id": "food_white_deer",
+     "qty": 1
+    },
+    {
+     "id": "mat_salt",
+     "qty": 2
+    },
+    {
+     "id": "mat_jang",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "satiety": 100,
+    "battle_buff": {
+     "atk_pct": 0.15,
+     "def_pct": 0.15,
+     "duration_battles": 3
+    }
+   },
+   "weight": 0.3,
+   "perishable": false,
+   "generated": "craft_trade"
   }
  ]
 }

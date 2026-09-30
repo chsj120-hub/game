@@ -192,6 +192,14 @@
    "weight": 0.5,
    "use": "gimmick",
    "note": "야광귀 퇴치 설화 소품"
+  },
+  {
+   "id": "mat_jang",
+   "name": "장(간장·된장)",
+   "tier": 1,
+   "price": 6,
+   "weight": 1.0,
+   "generated": "craft_trade"
   }
  ]
 }

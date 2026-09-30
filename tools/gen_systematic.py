@@ -36,8 +36,8 @@ ROUTES = {  # 4등급=인접 2~3권역 3노드, 5등급=전국 3~5권역 4~5노�
 MOJAK_MATS = {
     ("yu", 4): [("mat_iron", 10), ("mat_charcoal", 8), ("mat_cowhide", 3)],
     ("yu", 5): [("mat_meteor_iron", 2), ("mat_iron", 12), ("mat_charcoal", 10)],
-    ("bul", 4): [("mat_copper", 8), ("mat_sarira_crystal", 1), ("mat_hemp", 4)],
-    ("bul", 5): [("mat_sarira_crystal", 3), ("mat_copper", 10), ("mat_silk_thread", 4)],
+    ("bul", 4): [("mat_copper", 6), ("mat_tin", 2), ("mat_sarira_crystal", 1), ("mat_hemp", 4)],
+    ("bul", 5): [("mat_sarira_crystal", 3), ("mat_copper", 8), ("mat_tin", 2), ("mat_silk_thread", 4)],
     ("seon", 4): [("mat_cinnabar", 1), ("mat_silk_thread", 6), ("mat_mulberry", 6)],
     ("seon", 5): [("mat_cinnabar", 3), ("mat_silk_thread", 8), ("mat_meteor_iron", 1)],
 }

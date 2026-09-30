@@ -8,6 +8,12 @@ extends RefCounted
 static func known_recipes() -> Array:
 	var out := []
 	var gs := GameState
+	for f in DataDB.table("04_food_staples.json", "foods"):  # 섬 풀기(1섬 → 10말) — 비전서 불필요, 보유 시 표시
+		if f.has("unpack") and gs.has_item(String(f["id"])):
+			var to := String(f["unpack"]["to"])
+			out.append({"id": "@unpack_" + String(f["id"]), "name": "섬 풀기: %s → %s ×%d" % [f["name"], DataDB.display_name(to), int(f["unpack"]["qty"])],
+				"kind": "unpack", "output": to, "out_qty": int(f["unpack"]["qty"]), "materials": [{"id": f["id"], "qty": 1}],
+				"book": "", "facility": "", "min_rank": 1})
 	for bid in gs.owned_books():
 		var book := DataDB.get_row(bid)
 		if book.has("produces"):
@@ -109,7 +115,13 @@ static func craft(card: Dictionary, quality: float = 1.0) -> String:
 	if err != "":
 		gs.note("제작 불가 (%s): %s" % [card["name"], err])
 		return err
-	gs.consume_materials(card.get("materials", []), material_mult())
+	var mult := 1.0 if card["kind"] == "unpack" else material_mult()
+	gs.consume_materials(card.get("materials", []), mult)
+	if card["kind"] == "unpack":
+		gs.add_item(String(card["output"]), int(card["out_qty"]))
+		gs.note("%s 완료" % card["name"])
+		gs.advance_minutes(10)
+		return ""
 	if card["kind"] == "repair":
 		var cost := int(float(DataDB.life_gear_repair.get("money", 20)) * (1.0 + gs.life_effect("gong", "repair_cost")))
 		if not gs.spend_money(cost):
@@ -129,12 +141,24 @@ static func craft(card: Dictionary, quality: float = 1.0) -> String:
 	return ""
 
 
+## "무쇠 10/10, 곡물(한 말) 1/1 · 대체: 정련 사철괴 ×4→무쇠" — 공용 재료군은 군 이름, 보유량은 대체 가능 품목 합계
 static func materials_text(materials: Array) -> String:
+	var gs := GameState
 	var parts := PackedStringArray()
 	var mm := material_mult()
 	for m in materials:
-		parts.append("%s %d/%d" % [DataDB.display_name(String(m["id"])), GameState.count(String(m["id"])), maxi(1, int(ceil(int(m["qty"]) * mm)))])
-	return ", ".join(parts)
+		var have := 0
+		for x in gs.material_candidates(m)["items"]:
+			have += gs.count(String(x))
+		parts.append("%s %d/%d" % [gs.material_label(m), have, maxi(1, int(ceil(int(m["qty"]) * mm)))])
+	var txt := ", ".join(parts)
+	var plan := gs.material_plan(materials, mm)
+	if plan["ok"] and not plan["subs"].is_empty():
+		var sp := PackedStringArray()
+		for su in plan["subs"]:
+			sp.append("%s ×%d→%s" % [DataDB.display_name(String(su["used"])), int(su["qty"]), su["need"]])
+		txt += " · 대체: " + ", ".join(sp)
+	return txt
 
 
 static func use_consumable(id: String) -> String:

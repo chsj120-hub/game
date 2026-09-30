@@ -585,11 +585,14 @@ func _do_equip(id: String, slot: String) -> void:
 func _open_codex() -> void:
 	var gs := GameState
 	var e := []
-	for cat in ["역사", "설화", "창작"]:
+	for cat in ["역사", "설화", "창작", "물산"]:
 		var ids := gs.codex.keys().filter(func(k): return gs.codex[k]["cat"] == cat)
 		e.append({"text": "▣ [%s] %d건" % [cat, ids.size()]})
 		for id in ids:
 			var r := DataDB.get_row(String(id))
+			if cat == "물산":  # 상품/진상품 등 — 실제 명칭과 설명
+				e.append({"text": "   %s (%d등급) — %s: %s" % [r.get("name", id), int(r.get("tier", 1)), r.get("real_name", ""), r.get("desc", "")]})
+				continue
 			var pd: Dictionary = r.get("public_data", {})
 			var src := ""
 			if not pd.is_empty():
@@ -698,8 +701,12 @@ func _open_bounties() -> void:
 	open_menu("포도청 현상수배", e)
 
 
+const SUB_MODE_KO := {"off": "끔(정확한 재료만)", "confirm": "확인(2등급 이상 높은 재료는 묻기)", "auto": "자동"}
+
+
 func _open_craft() -> void:
-	var e := [{"text": "비전서 %d권 등록 — 비전서 없이는 제작 불가. [모작]은 전국 어디서나 야외 단조. 공 지식 재료 −%d%%" % [GameState.owned_books().size(), int(-GameState.life_effect("gong", "craft_material") * 100)]}]
+	var e := [{"text": "비전서 %d권 등록 — 비전서 없이는 제작 불가. [모작]은 전국 어디서나 야외 단조. 공 지식 재료 −%d%%" % [GameState.owned_books().size(), int(-GameState.life_effect("gong", "craft_material") * 100)]},
+		{"text": "상위 재료 대체: " + String(SUB_MODE_KO.get(GameState.substitute_mode, GameState.substitute_mode)), "hint": "눌러서 전환", "cb": _cycle_sub_mode, "keep": true}]
 	for card in CraftingSystem.known_recipes():
 		var err := CraftingSystem.check(card)
 		e.append({"text": "[%s] %s" % [card["kind"], card["name"]], "hint": err if err != "" else CraftingSystem.materials_text(card.get("materials", [])),
@@ -707,7 +714,28 @@ func _open_craft() -> void:
 	open_menu("제작", e)
 
 
+func _cycle_sub_mode() -> void:
+	var order := ["confirm", "auto", "off"]
+	GameState.substitute_mode = order[(order.find(GameState.substitute_mode) + 1) % order.size()]
+	_open_craft()
+
+
+## 상위 재료 대체 확인(설정 '확인' + 요구보다 2등급 이상 높은 재료 사용 시)
 func _craft(card: Dictionary) -> void:
+	var plan := GameState.material_plan(card.get("materials", []), 1.0 if card["kind"] == "unpack" else CraftingSystem.material_mult())
+	if CraftingSystem.check(card) == "" and GameState.needs_substitute_confirm(plan):
+		var e := [{"text": "%s — 상위 등급 재료가 대신 쓰입니다." % card["name"]}]
+		for su in plan["subs"]:
+			e.append({"text": "   %s ×%d → %s 대신 (+%d등급)" % [DataDB.display_name(String(su["used"])), int(su["qty"]), su["need"], int(su["gap"])]})
+		e.append({"text": "그대로 제작", "cb": _craft_go.bind(card)})
+		e.append({"text": "취소", "cb": _open_craft, "keep": true})
+		open_menu("상위 재료 대체 확인", e)
+		menu.show()
+		return
+	_craft_go(card)
+
+
+func _craft_go(card: Dictionary) -> void:
 	if card.has("minigame"):
 		var mg := MinigameBase.create_from_catalog(String(card["minigame"]))
 		if mg:

@@ -44,6 +44,8 @@ static func buy_price(id: String) -> int:
 	var reg := GameState.current_region
 	if id == "food_rice":
 		return int(round(Balance.regional_rice_price(reg) * _sang_buy()))
+	if r.has("unit_of"):  # 조리용 '한 말' = 섬 시세 × 0.1 × 1.1(소매)
+		return maxi(1, int(round(buy_price(String(r["unit_of"])) * float(r.get("unit_ratio", 0.1)) * 1.1)))
 	if DataDB.sheet_of(id) == "03_specialties.json:specialties":
 		var m := float(_t().get("buy_at_origin", 0.72)) if String(r.get("region", "")) == reg else float(_t().get("buy_elsewhere", 1.1))
 		return maxi(1, int(round(float(r["base_price"]) * m * _sang_buy())))
@@ -69,6 +71,8 @@ static func sell_price(id: String) -> int:
 	var reg := GameState.current_region
 	if id == "food_rice":
 		return int(round(Balance.regional_rice_price(reg) * float(_t().get("rice_sell_spread", 0.9)) * _sang_sell()))
+	if r.has("unit_of"):
+		return maxi(1, int(round(sell_price(String(r["unit_of"])) * float(r.get("unit_ratio", 0.1)))))
 	if DataDB.sheet_of(id) == "03_specialties.json:specialties":
 		var hops := region_hops(String(r.get("region", reg)), reg)
 		var fresh := float(GameState.freshness.get(id, 100.0)) / 100.0 if r.get("perishable", false) else 1.0
@@ -92,7 +96,10 @@ static func stock_left(id: String) -> int:
 	var key := "%s:%d:%s" % [GameState.current_node, market_cycle_id(), id]
 	var r := DataDB.get_row(id)
 	var base := 20 if DataDB.sheet_of(id) == "03_specialties.json:specialties" else 99
-	if String(r.get("kind", "")) == "premium":
+	if r.has("grade") and DataDB.sheet_of(id) == "03_specialties.json:specialties":  # 기본 20 / 상품 8 / 진상품 3
+		var sb: Array = _t().get("stock_by_grade", [20, 8, 3])
+		base = int(sb[clampi(int(r["grade"]), 0, sb.size() - 1)])
+	elif String(r.get("kind", "")) == "premium":
 		base = 6
 	return base - int(GameState.market_cycle.get(key, 0))
 
@@ -111,7 +118,8 @@ static func shop_list() -> Array:
 	var market := "market" in fac or "market5" in fac
 	if market:
 		for f in DataDB.table("04_food_staples.json", "foods"):
-			if String(f["kind"]) in ["staple", "ration"]:
+			var fk := String(f["kind"])
+			if fk in ["staple", "ration", "grain", "ingredient"] or (fk == "meat" and "market" in fac):  # 쇠고기는 도회 장터만
 				_push(out, f["id"], "market", "")
 		for m in DataDB.table("05_materials.json", "materials"):
 			if int(m["tier"]) <= 2:
@@ -120,7 +128,10 @@ static func shop_list() -> Array:
 			if String(s["region"]) != reg or String(s["kind"]) == "crafted":
 				continue
 			var lv := int(gs.town_dev.get(String(s.get("node", "")), 0))
-			_push(out, s["id"], "market", "" if lv >= int(s["dev_level"]) else "도시 발전도 %d 필요" % int(s["dev_level"]))
+			var lock := "" if lv >= int(s["dev_level"]) else "도시 발전도 %d 필요" % int(s["dev_level"])
+			if lock == "" and int(s.get("grade", 0)) > 0 and _t().get("grade_rank_gate", true) and gs.rank < int(s["tier"]):
+				lock = "Rank %d 필요" % int(s["tier"])
+			_push(out, s["id"], "market", lock)
 		for t in DataDB.table("08_capture_tools.json", "tools"):
 			_push(out, t["id"], "market", "" if gs.rank >= int(t["tier"]) else "Rank %d 필요" % int(t["tier"]))
 		for g in DataDB.table("06_life_gear.json", "life_gear"):

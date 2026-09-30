@@ -6062,7 +6062,7 @@
   },
   {
    "herb_id": "HERB_028",
-   "name_kr": "인삼",
+   "name_kr": "산양삼(山養蔘)",
    "tier": 3,
    "habitat": "게임 10_herbs 기존 품목",
    "buy_price": 120,
@@ -8588,7 +8588,8 @@
    },
    "drops_json": [
     {
-     "new": "타락한 산신 부적"
+     "id": "sp_hanyang_tarak",
+     "rate": 1.0
     },
     {
      "new": "신령한 옥지팡이"
@@ -8597,7 +8598,7 @@
      "new": "지리산 천년 영지"
     }
    ],
-   "drops_unresolved": "타락한 산신 부적, 신령한 옥지팡이, 지리산 천년 영지",
+   "drops_unresolved": "신령한 옥지팡이, 지리산 천년 영지",
    "spawn_regions_ids": "MAP_08,MAP_10",
    "spawn_terrains": "road",
    "allowed_time": "NIGHT",

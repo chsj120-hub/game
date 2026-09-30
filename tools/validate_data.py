@@ -71,9 +71,16 @@ def ref(rid, where, allowed=None):
 MATS = {"materials", "herbs", "foods", "specialties"}
 
 
+LINES = OV.get("crafting", {}).get("lines", {})
+
+
 def mats(lst, where):
     for m in lst:
-        ref(m["id"], where, MATS)
+        if "group" in m:
+            if m["group"] not in LINES:
+                E(f"{where}: 재료군 '{m['group']}' 없음 (00_overview.crafting.lines)")
+        else:
+            ref(m["id"], where, MATS)
 
 
 # ================================================================ 권역·노드·그래프
@@ -258,8 +265,37 @@ for rs, lab in ((S["herbal"], "09"), (S["food_recipes"], "11")):
         mats(r["ingredients"], f"{lab} {r['id']}")
         if r["id"] not in by.get(r["book"], {}).get("unlocks", []):
             E(f"{lab} {r['id']}: 비전서에서 해금되지 않음(철칙)")
-if Counter(r["class"] for r in S["food_recipes"]) != Counter({"seomin": 9, "sura": 9}):
-    E("11 서민9/수라9 불일치")
+fc = Counter(r["class"] for r in S["food_recipes"])
+if fc["seomin"] < 9 or fc["sura"] < 9 or set(fc) != {"seomin", "sura"}:
+    E(f"11 서민·수라 각 9종 이상 필요 ({dict(fc)})")
+if any(r["tier"] < 2 for r in S["food_recipes"]):
+    E("11 요리는 2등급 이상(1등급 요리 폐지)")
+# 재료군·대체 사슬: 참조 · 등급 오름차순
+for ln, v in LINES.items():
+    ts = []
+    for x in v["items"]:
+        if ref(x, f"00 crafting.lines.{ln}", MATS):
+            ts.append(by[x].get("tier", 1))
+    if ts != sorted(ts):
+        E(f"00 crafting.lines.{ln}: 등급이 오름차순이 아님 {ts}")
+for x in OV.get("crafting", {}).get("no_substitute", []):
+    ref(x, "00 crafting.no_substitute", MATS)
+# 무역품 등급 사슬: 등급 = 기본 + grade, 가격 공식, 도감 명칭
+for sp in S["specialties"]:
+    gr = sp.get("grade", 0)
+    if sp["kind"] != "crafted" and sp["base_price"] != 20 * 3 ** (sp["tier"] - 1):
+        E(f"03 {sp['id']}: 가격 {sp['base_price']} ≠ 공식")
+    if gr > 0:
+        if not sp.get("real_name") or not sp.get("desc"):
+            E(f"03 {sp['id']}: 등급품은 도감용 real_name·desc 필요")
+        base = [b for b in S["specialties"] if b.get("line") == sp.get("line") and b.get("grade", 0) == 0]
+        if len(base) != 1 or base[0]["tier"] + gr != sp["tier"]:
+            E(f"03 {sp['id']}: 사슬 기본품/등급 불일치")
+for f in S["foods"]:
+    if "unpack" in f:
+        ref(f["unpack"]["to"], f"04 {f['id']}.unpack", {"foods"})
+    if "unit_of" in f:
+        ref(f["unit_of"], f"04 {f['id']}.unit_of", {"foods"})
 for sr in S["specialty_recipes"]:
     ref(sr["produces"], f"03 {sr['id']}", {"specialties"})
     mats(sr["materials"], f"03 {sr['id']}")

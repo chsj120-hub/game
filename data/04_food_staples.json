@@ -1,5 +1,5 @@
 {
- "_schema": "04_식량. kind=staple(섬 단위 교역/조리 재료, 권역 시세=regions.rice_price)|ration(휴대 식량)|forage(채집 구황)|game(수렵육). satiety=섭취 시 포만감 회복(0~100). weight=배낭 무게. perishable=노드 이동당 신선도 −5%.",
+ "_schema": "04_식량. kind=staple(섬 단위 교역/조리 재료, 권역 시세=regions.rice_price)|ration(휴대 식량)|forage(채집 구황)|game(수렵육). satiety=섭취 시 포만감 회복(0~100). weight=배낭 무게. perishable=노드 이동당 신선도 −5%. | 말 단위: kind=grain(조리용 한 말, unit_of 섬 시세 연동)|meat(도회 장터)|ingredient(식재료). 섬의 unpack = 섬 풀기(1섬→10말).",
  "foods": [
   {
    "id": "food_rice",
@@ -10,7 +10,11 @@
    "price": "regional",
    "satiety": 0,
    "weight": 20.0,
-   "note": "섬 단위 교역·조리 재료(직접 섭취 불가). 1섬=20 무게"
+   "note": "섬 단위 교역품(무게 20). 제작 탭 '섬 풀기'로 1섬 → 10말. 조리는 말 단위",
+   "unpack": {
+    "to": "food_rice_mal",
+    "qty": 10
+   }
   },
   {
    "id": "food_barley",
@@ -21,7 +25,11 @@
    "price": 22,
    "satiety": 0,
    "weight": 20.0,
-   "note": "섬 단위 교역·조리 재료(직접 섭취 불가). 1섬=20 무게"
+   "note": "섬 단위 교역품(무게 20). 제작 탭 '섬 풀기'로 1섬 → 10말. 조리는 말 단위",
+   "unpack": {
+    "to": "food_barley_mal",
+    "qty": 10
+   }
   },
   {
    "id": "food_millet",
@@ -32,7 +40,11 @@
    "price": 18,
    "satiety": 0,
    "weight": 20.0,
-   "note": "섬 단위 교역·조리 재료(직접 섭취 불가). 1섬=20 무게"
+   "note": "섬 단위 교역품(무게 20). 제작 탭 '섬 풀기'로 1섬 → 10말. 조리는 말 단위",
+   "unpack": {
+    "to": "food_millet_mal",
+    "qty": 10
+   }
   },
   {
    "id": "food_acorn",
@@ -167,6 +179,63 @@
    "satiety": 40,
    "weight": 0.4,
    "price": 18
+  },
+  {
+   "id": "food_rice_mal",
+   "name": "백미 한 말",
+   "kind": "grain",
+   "tier": 1,
+   "unit_of": "food_rice",
+   "unit_ratio": 0.1,
+   "weight": 2.0,
+   "note": "조리용 곡물 1말 = 1/10섬. 값 = 섬 시세 × 0.1 × 1.1(소매)",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "food_barley_mal",
+   "name": "보리 한 말",
+   "kind": "grain",
+   "tier": 1,
+   "unit_of": "food_barley",
+   "unit_ratio": 0.1,
+   "weight": 2.0,
+   "note": "조리용 곡물 1말 = 1/10섬. 값 = 섬 시세 × 0.1 × 1.1(소매)",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "food_millet_mal",
+   "name": "조 한 말",
+   "kind": "grain",
+   "tier": 1,
+   "unit_of": "food_millet",
+   "unit_ratio": 0.1,
+   "weight": 2.0,
+   "note": "조리용 곡물 1말 = 1/10섬. 값 = 섬 시세 × 0.1 × 1.1(소매)",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "food_beef",
+   "name": "쇠고기",
+   "kind": "meat",
+   "tier": 2,
+   "price": 30,
+   "weight": 1.0,
+   "perishable": true,
+   "note": "도회 현방(懸房)에서 파는 쇠고기. 대도시 장터(market)에서만 판매",
+   "real_name": "현방 쇠고기",
+   "desc": "한양 현방(푸줏간)에서 팔던 쇠고기. 설렁탕·갈비찜·신선로에 쓴다.",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "food_kongnamul",
+   "name": "콩나물",
+   "kind": "ingredient",
+   "tier": 1,
+   "price": 3,
+   "weight": 0.5,
+   "perishable": true,
+   "note": "콩나물국밥·비빔밥 재료",
+   "generated": "craft_trade"
   }
  ]
 }

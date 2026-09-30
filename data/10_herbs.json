@@ -57,12 +57,13 @@
   },
   {
    "id": "herb_daechu",
-   "name": "대추",
+   "name": "건대추(약재)",
    "tier": 1,
    "source": "yakbang",
    "price": 4,
    "weight": 0.2,
-   "perishable": true
+   "perishable": true,
+   "note": "약방에서 파는 약재용 마른 대추. 보은 대추(특산)로 대신 쓸 수 있다"
   },
   {
    "id": "herb_saenggang",
@@ -120,7 +121,7 @@
   },
   {
    "id": "herb_insam",
-   "name": "인삼",
+   "name": "산양삼(山養蔘)",
    "tier": 3,
    "source": "gather",
    "price": 120,
@@ -130,7 +131,8 @@
     "MAP_14"
    ],
    "weight": 0.2,
-   "perishable": true
+   "perishable": true,
+   "note": "심산에서 반쯤 자연으로 자란 삼. 재배 인삼(개성 인삼 2등급)보다 상등, 백두 산삼(5등급)보다 하등"
   },
   {
    "id": "herb_yeongji",

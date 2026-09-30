@@ -128,7 +128,7 @@
    "book": "bk_med_hyemin",
    "ingredients": [
     {
-     "id": "herb_insam",
+     "id": "sp_gaeseong_insam",
      "qty": 1
     },
     {
@@ -185,7 +185,7 @@
    "book": "bk_med_jeonju",
    "ingredients": [
     {
-     "id": "herb_insam",
+     "id": "sp_gaeseong_insam",
      "qty": 1
     },
     {
@@ -291,6 +291,32 @@
     }
    },
    "battle_usable": true
+  },
+  {
+   "id": "hr_galgeun",
+   "name": "갈근탕",
+   "form": "탕약",
+   "tier": 1,
+   "book": "bk_med_dongui",
+   "ingredients": [
+    {
+     "id": "food_kudzu",
+     "qty": 2
+    },
+    {
+     "id": "herb_saenggang",
+     "qty": 1
+    },
+    {
+     "id": "herb_daechu",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "heal_pct": 0.1
+   },
+   "battle_usable": false,
+   "generated": "craft_trade"
   }
  ]
 }

@@ -67,6 +67,7 @@ var walked_edges: Dictionary = {}  ## 지나 본 간선("a|b") — 익숙한 길
 var province_rep: Dictionary = {}  ## 도(道) id -> 도 명성(반복 원천 제외, 도시 발전 요건)
 var ending_seen: bool = false
 var auto_eat: bool = true
+var substitute_mode: String = "confirm"  ## 상위 재료 대체: off | confirm | auto (00_overview.crafting.substitute_default)
 var last_checkpoint: String = ""
 var rng := RandomNumberGenerator.new()
 
@@ -130,6 +131,7 @@ func new_game(cls: String) -> void:
 	takbon = {}
 	seasonal_done = {}
 	codex = {}
+	substitute_mode = String(DataDB.overview.get("crafting", {}).get("substitute_default", "confirm"))
 	market_cycle = {}
 	food_buff = {}
 	province_rep = {}
@@ -169,6 +171,8 @@ func add_item(id: String, qty: int = 1) -> void:
 	inventory[id] = had + qty
 	if _perishable(id):  # 가중 평균 신선도
 		freshness[id] = (float(freshness.get(id, 100.0)) * had + 100.0 * qty) / float(had + qty)
+	if DataDB.get_row(id).has("real_name"):
+		codex_add(id, "물산")
 	stats_changed.emit()
 
 
@@ -183,18 +187,104 @@ func remove_item(id: String, qty: int = 1) -> bool:
 	return true
 
 
-func has_materials(mats: Array, mult: float = 1.0) -> bool:
+# ---------------------------------------------------------------- 재료 계획(공용 재료군 · 상위 재료 대체)
+func _craft_cfg() -> Dictionary:
+	return DataDB.overview.get("crafting", {})
+
+
+func _tier(id: String) -> int:
+	return int(DataDB.get_row(id).get("tier", 1))
+
+
+func material_label(m: Dictionary) -> String:
+	if m.has("group"):
+		return String(_craft_cfg().get("lines", {}).get(String(m["group"]), {}).get("name", m["group"]))
+	return DataDB.display_name(String(m["id"]))
+
+
+## 재료 1줄의 소모 후보 [id…] (우선순위 순) 과 기준 등급
+func material_candidates(m: Dictionary) -> Dictionary:
+	var cfg := _craft_cfg()
+	var lines: Dictionary = cfg.get("lines", {})
+	var nosub: Array = cfg.get("no_substitute", [])
+	var exact := ""
+	var pool := []
+	var base_tier := 99
+	if m.has("group"):
+		for x in lines.get(String(m["group"]), {}).get("items", []):
+			if not (x in nosub):
+				pool.append(String(x))
+				base_tier = mini(base_tier, _tier(String(x)))
+	else:
+		exact = String(m["id"])
+		base_tier = _tier(exact)
+		if substitute_mode != "off":
+			for ln in lines.values():
+				if exact in ln.get("items", []):
+					for x in ln["items"]:
+						var sx := String(x)
+						if sx != exact and not (sx in nosub) and not (sx in pool) and _tier(sx) >= base_tier:
+							pool.append(sx)
+	pool.sort_custom(_candidate_before)
+	if exact != "":
+		pool.push_front(exact)
+	return {"items": pool, "exact": exact, "base_tier": base_tier if base_tier < 99 else 1}
+
+
+## 낮은 등급 먼저, 같은 등급이면 곧 상할 것(신선도 낮음) 먼저
+func _candidate_before(a: String, b: String) -> bool:
+	if _tier(a) != _tier(b):
+		return _tier(a) < _tier(b)
+	return float(freshness.get(a, 100.0)) < float(freshness.get(b, 100.0))
+
+
+## mats [{id|group, qty}] → {ok, take{id:qty}, subs[{need, used, qty, gap}], missing[{label, have, need}]}
+func material_plan(mats: Array, mult: float = 1.0) -> Dictionary:
+	var take := {}
+	var subs := []
+	var missing := []
 	for m in mats:
-		if not has_item(String(m["id"]), maxi(1, int(ceil(int(m["qty"]) * mult)))):
-			return false
-	return true
+		var need := maxi(1, int(ceil(int(m["qty"]) * mult)))
+		var c := material_candidates(m)
+		var left := need
+		for xv in c["items"]:
+			var x := String(xv)
+			if left <= 0:
+				break
+			var use := mini(count(x) - int(take.get(x, 0)), left)
+			if use <= 0:
+				continue
+			take[x] = int(take.get(x, 0)) + use
+			left -= use
+			var gap := _tier(x) - int(c["base_tier"])
+			if (c["exact"] != "" and x != c["exact"]) or (c["exact"] == "" and gap > 0):
+				subs.append({"need": material_label(m), "used": x, "qty": use, "gap": gap})
+		if left > 0:
+			missing.append({"label": material_label(m), "have": need - left, "need": need})
+	return {"ok": missing.is_empty(), "take": take, "subs": subs, "missing": missing}
+
+
+## '확인' 모드에서 요구보다 confirm_tier_gap 등급 이상 높은 재료가 쓰이면 true
+func needs_substitute_confirm(plan: Dictionary) -> bool:
+	if substitute_mode != "confirm":
+		return false
+	var gap_min := int(_craft_cfg().get("confirm_tier_gap", 2))
+	for s in plan.get("subs", []):
+		if int(s["gap"]) >= gap_min:
+			return true
+	return false
+
+
+func has_materials(mats: Array, mult: float = 1.0) -> bool:
+	return material_plan(mats, mult)["ok"]
 
 
 func consume_materials(mats: Array, mult: float = 1.0) -> bool:
-	if not has_materials(mats, mult):
+	var plan := material_plan(mats, mult)
+	if not plan["ok"]:
 		return false
-	for m in mats:
-		remove_item(String(m["id"]), maxi(1, int(ceil(int(m["qty"]) * mult))))
+	for id in plan["take"].keys():
+		remove_item(String(id), int(plan["take"][id]))
 	return true
 
 
@@ -740,7 +830,9 @@ func codex_add(entry_id: String, lore: String) -> void:
 	if codex.has(entry_id):
 		return
 	var cat := "역사"
-	if "설화" in lore:
+	if lore == "물산":
+		cat = "물산"
+	elif "설화" in lore:
 		cat = "설화"
 	elif "창작" in lore:
 		cat = "창작"
@@ -768,7 +860,7 @@ const SAVE_FIELDS := ["class_id", "reputation", "money", "rank", "hp", "fatigue"
 	"mount_stamina", "knowledge", "knowledge_xp", "companions", "party", "barracks", "dispatch", "field_statuses", "discovered",
 	"visited_nodes", "lit_beacons", "heritage_state", "investigate_retry", "town_dev", "active_quests", "completed_quests",
 	"mojak_unlocked", "trade_cargo", "events_state", "bounties", "bounty_refresh_day", "hwacheop", "takbon", "seasonal_done",
-	"codex", "market_cycle", "food_buff", "auto_eat", "last_checkpoint", "province_rep", "ending_seen", "walked_edges"]
+	"codex", "market_cycle", "food_buff", "auto_eat", "substitute_mode", "last_checkpoint", "province_rep", "ending_seen", "walked_edges"]
 const INT_FIELDS := ["reputation", "money", "rank", "permanent_hp", "minutes", "bounty_refresh_day"]
 
 
