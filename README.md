@@ -34,15 +34,18 @@ data_src/world_table.json, heritage_curated.json   ← 기획자가 수정하는
         │  python3 tools/build_world.py       17권역·311노드·도로/국경/뱃길 + 유산 144종 + 보상 아이템 자동 생성
         │        [--report] 배치 간격·고증 노드 슬롯 리포트  [--period] 고증 대체 후보로 교체(좌표·id 고정)
         │  python3 tools/craft_trade_update.py  무역품 등급 사슬(상품·진상품)·곡물 말 단위·요리 고증·공용 재료군/상위 대체 적용
+        │  python3 tools/content_expand.py    이벤트·권역 적·무예 장비·탈것·김만덕 시나리오·튜토리얼·도움말(23 시트)
         │  python3 tools/gen_systematic.py    4·5등급 유불선 세트 24 · 모작 24 · 포획구 20
         ▼
 data/00~22 *.json, regions.json                    ← 런타임 데이터 (DataDB 가 로드)
         │  python3 tools/economy_sim.py --write   명성 총량·진행 몬테카를로 → 신분 임계·도 명성 요건 기록, 엽전 여유 점검
+        │        (기본 = 실제 데이터 개수로 보정, --plan = 계획 수량 content_plan 기준 비교)
         │  python3 tools/travel_sim.py            이동 시간·피로·탐색 반경 측정
         │  python3 tools/trade_sim.py             자유 무역(시장 매매) 수익 상한 — 콘텐츠 수입 대비
         │  python3 tools/balance_sim.py           CTB v2 보스 클러치 몬테카를로(3클래스) — 실패 시 exit 1
         │  python3 tools/validate_data.py         교차 참조·동선 큐·규칙 검증 — 실패 시 exit 1
         │  python3 tools/gen_asset_manifest.py    assets/ASSET_MANIFEST.json · PROMPTS.csv · 폴더 생성
+        │  python3 tools/export_xlsx.py           docs/데이터셋_전체.xlsx (전 시트 + 목차·재검증)
 ```
 Python 3.9 이상이면 되고 외부 패키지는 필요 없습니다. 수치는 `data/00_overview.json` 한 곳에만 있습니다.
 

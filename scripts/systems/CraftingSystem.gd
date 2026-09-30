@@ -121,6 +121,7 @@ static func craft(card: Dictionary, quality: float = 1.0) -> String:
 		gs.add_item(String(card["output"]), int(card["out_qty"]))
 		gs.note("%s 완료" % card["name"])
 		gs.advance_minutes(10)
+		gs.bump("unpack")
 		return ""
 	if card["kind"] == "repair":
 		var cost := int(float(DataDB.life_gear_repair.get("money", 20)) * (1.0 + gs.life_effect("gong", "repair_cost")))
@@ -138,6 +139,7 @@ static func craft(card: Dictionary, quality: float = 1.0) -> String:
 	gs.add_knowledge_xp("gong", int(DataDB.classes_doc.get("knowledge", {}).get("xp_sources", {}).get("craft_gong", 15)))
 	gs.note("%s 완료: %s%s" % ["야외 단조" if card["kind"] == "mojak" else "제작", DataDB.display_name(String(card["output"])), " ×2 (장인정신)" if qty == 2 else ""])
 	gs.advance_minutes(60)
+	gs.bump("craft")
 	return ""
 
 

@@ -1277,6 +1277,897 @@
    },
    "generated": "heritage",
    "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_145",
+   "name": "《파주목 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_146",
+   "name": "《장단 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_147",
+   "name": "《연천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_148",
+   "name": "《교동 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_149",
+   "name": "《문산포구 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_150",
+   "name": "《안성 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_151",
+   "name": "《남양 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_152",
+   "name": "《여주 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_153",
+   "name": "《이천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_154",
+   "name": "《양평 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_155",
+   "name": "《양구 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_156",
+   "name": "《화천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_157",
+   "name": "《인제 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_158",
+   "name": "《회양 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_159",
+   "name": "《통천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_160",
+   "name": "《울진 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_161",
+   "name": "《평창 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_162",
+   "name": "《영월 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_163",
+   "name": "《정선 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_164",
+   "name": "《단양 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_165",
+   "name": "《제천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_166",
+   "name": "《영동 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_167",
+   "name": "《보은 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_168",
+   "name": "《옥천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_169",
+   "name": "《부여 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_170",
+   "name": "《해미 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_171",
+   "name": "《태안 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_172",
+   "name": "《아산 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_173",
+   "name": "《천안 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_174",
+   "name": "《고창 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_175",
+   "name": "《익산 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_176",
+   "name": "《정읍 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_177",
+   "name": "《무주 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_178",
+   "name": "《진안 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_179",
+   "name": "《영암 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_180",
+   "name": "《해남 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_181",
+   "name": "《담양 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_182",
+   "name": "《진도 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_183",
+   "name": "《문경 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_184",
+   "name": "《영주 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_185",
+   "name": "《영천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_186",
+   "name": "《의성 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_187",
+   "name": "《청송 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_188",
+   "name": "《김해 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_189",
+   "name": "《밀양 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_190",
+   "name": "《합천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_191",
+   "name": "《남해 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_192",
+   "name": "《서흥 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_193",
+   "name": "《평산 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_194",
+   "name": "《수안 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_195",
+   "name": "《곡산 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_196",
+   "name": "《옹진 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_197",
+   "name": "《장연 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_198",
+   "name": "《송화 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_199",
+   "name": "《배천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_200",
+   "name": "《진남포 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_201",
+   "name": "《숙천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_202",
+   "name": "《순천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_203",
+   "name": "《강서 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_204",
+   "name": "《성천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_205",
+   "name": "《선천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_206",
+   "name": "《정주 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_207",
+   "name": "《삭주 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_208",
+   "name": "《강계 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_209",
+   "name": "《녕원 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_210",
+   "name": "《신미도 나루 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_211",
+   "name": "《정평 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_212",
+   "name": "《영흥 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_213",
+   "name": "《고원 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_214",
+   "name": "《덕원 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_215",
+   "name": "《문천 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_216",
+   "name": "《회령 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_217",
+   "name": "《온성 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_218",
+   "name": "《종성 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_219",
+   "name": "《경원 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_220",
+   "name": "《부령 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_221",
+   "name": "《대정현 방사탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_222",
+   "name": "《정의현 방사탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_223",
+   "name": "《애월 방사탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_224",
+   "name": "《조천 방사탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_225",
+   "name": "《서귀포 방사탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
   }
  ],
  "repair": {

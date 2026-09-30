@@ -58,6 +58,7 @@ COSTUME = {
     "outlaw":         "Joseon hero outlaw in dark blue dopo robe, black gat hat, bamboo staff, confident pose",
     "yangban_poor":   "impoverished Joseon scholar in patched worn dopo robe, battered gat hat",
     "celestial":      "Joseon novel protagonist of celestial origin, white robe with cloud patterns, jade hairpin, faint aura",
+    "jeju_merchant_woman": "late 18th-century Jeju island merchant woman in her fifties, white cotton jeogori and dark chima with a Jeju galot (persimmon-dyed) apron, hair in a low jjok bun with a plain wooden binyeo, calm resolute face, holding an abacus and a ledger",
     "eosa":           "Joseon royal secret inspector (amhaeng eosa) in shabby dopo robe hiding a horse tablet (mapae), torn gat hat",
 }
 
@@ -95,6 +96,12 @@ ENEMY_DESC = {
     "en_cheolgwi": "iron-eating demon made of rusted iron plates", "en_bulgasari": "Bulgasari, iron-eating chimera with bear body, elephant nose, rhinoceros eyes",
     "en_yeokcheon": "the heaven-defying demon lord, colossal shadow in ink with inverted taeguk",
     "en_lava_serpent": "young imugi serpent of volcanic rock and lava", "en_imugi": "imugi, a great serpent that has not yet become a dragon, holding no pearl",
+    "en_jeju_dochaebi": "Jeju island dochaebi goblin, small fiery sprite from Jeju folklore, black basalt stones around, playful and mischievous, not Japanese oni",
+    "en_jeju_yeonggam": "Yeonggam, the Jeju dokkaebi deity of fishermen from the Yeonggam-nori shaman play, wearing a paper mask and ragged robe, torch-lit night beach",
+    "en_hwangdangseon": "crew of a foreign 'hwangdangseon' strange ship raiding a Joseon coast in the 19th century, rough sailors with cutlasses, a dark sailing ship behind",
+    "en_majeok": "mounted northern horse bandits (majeok) beyond the Tumen river, fur hats and padded coats, horses in snowy steppe",
+    "en_boar_herd": "herd of wild boars charging through a Korean pine forest",
+    "en_bear": "Asian black bear (bandal-gom) with a white crescent on its chest, standing in a Korean mountain forest",
     "en_heukryong": "black dragon of Cheonji lake on Baekdu mountain, holding a yeouiju pearl, Korean dragon with four claws",
 }
 REGION_SCENE = {

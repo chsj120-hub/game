@@ -67,6 +67,11 @@ var walked_edges: Dictionary = {}  ## 지나 본 간선("a|b") — 익숙한 길
 var province_rep: Dictionary = {}  ## 도(道) id -> 도 명성(반복 원천 제외, 도시 발전 요건)
 var ending_seen: bool = false
 var auto_eat: bool = true
+var scenario_id: String = ""            ## 23 시나리오(예: sc_jeju_mandeok). "" = 클래스 기본 시작(한양)
+var hero_name: String = ""              ## 시나리오 주인공 이름(대시보드 표시)
+var tutorial_id: String = ""            ## 23 튜토리얼 묶음
+var tutorial_step: int = 0
+var counters: Dictionary = {}           ## 행동 횟수(튜토리얼 조건·플레이 기록): buy·craft·battle_win·save …
 var substitute_mode: String = "confirm"  ## 상위 재료 대체: off | confirm | auto (00_overview.crafting.substitute_default)
 var last_checkpoint: String = ""
 var rng := RandomNumberGenerator.new()
@@ -77,14 +82,29 @@ func _ready() -> void:
 	new_game("cls_eosa")
 
 
+## 행동 횟수 +1 (튜토리얼 조건·플레이 기록) → stats_changed 로 튜토리얼 재확인
+func bump(key: String, n := 1) -> void:
+	counters[key] = int(counters.get(key, 0)) + n
+	stats_changed.emit()
+
+
 func note(text: String) -> void:
 	log_message.emit(text)
 
 
 # ================================================================ 새 게임
-func new_game(cls: String) -> void:
+func new_game(cls: String, scenario := "") -> void:
 	var c := DataDB.class_row(cls)
+	var sc: Dictionary = DataDB.get_row(scenario) if scenario != "" else {}
+	if not sc.is_empty():
+		cls = String(sc["class"])
+		c = DataDB.class_row(cls)
 	class_id = cls
+	scenario_id = scenario if not sc.is_empty() else ""
+	hero_name = String(sc.get("hero_name", ""))
+	tutorial_id = String(sc.get("tutorial", ""))
+	tutorial_step = 0
+	counters = {}
 	var t: Dictionary = DataDB.overview.get("time", {})
 	minutes = (int(t.get("start_day", 1)) - 1) * 1440 + int(t.get("start_hour", 7)) * 60
 	reputation = 0
@@ -131,7 +151,8 @@ func new_game(cls: String) -> void:
 	takbon = {}
 	seasonal_done = {}
 	codex = {}
-	substitute_mode = String(DataDB.overview.get("crafting", {}).get("substitute_default", "confirm"))
+	substitute_mode = String(Settings.get_value("confirm_substitute"))
+	auto_eat = bool(Settings.get_value("auto_eat"))
 	market_cycle = {}
 	food_buff = {}
 	province_rep = {}
@@ -139,6 +160,13 @@ func new_game(cls: String) -> void:
 	ending_seen = false
 	current_region = "MAP_02"
 	current_node = String(DataDB.get_row("MAP_02").get("hub", ""))
+	if not sc.is_empty():  # 시나리오 시작 노드·엽전·추가 아이템
+		current_node = String(sc["start_node"])
+		current_region = DataDB.region_of_node(current_node)
+		money = int(sc.get("money", money))
+		for it in sc.get("items", {}).keys():
+			add_item(String(it), int(sc["items"][it]))
+		visited_nodes[current_node] = true
 	inside_node = true
 	visited_nodes[current_node] = true
 	last_checkpoint = current_node
@@ -863,8 +891,11 @@ const SAVE_FIELDS := ["class_id", "reputation", "money", "rank", "hp", "fatigue"
 	"mount_stamina", "knowledge", "knowledge_xp", "companions", "party", "barracks", "dispatch", "field_statuses", "discovered",
 	"visited_nodes", "lit_beacons", "heritage_state", "investigate_retry", "town_dev", "active_quests", "completed_quests",
 	"mojak_unlocked", "trade_cargo", "events_state", "bounties", "bounty_refresh_day", "hwacheop", "takbon", "seasonal_done",
-	"codex", "market_cycle", "food_buff", "auto_eat", "substitute_mode", "last_checkpoint", "province_rep", "ending_seen", "walked_edges"]
-const INT_FIELDS := ["reputation", "money", "rank", "permanent_hp", "minutes", "bounty_refresh_day"]
+	"codex", "market_cycle", "food_buff", "auto_eat", "substitute_mode", "scenario_id", "hero_name", "tutorial_id", "tutorial_step", "counters", "last_checkpoint", "province_rep", "ending_seen", "walked_edges"]
+const INT_FIELDS := ["reputation", "money", "rank", "permanent_hp", "minutes", "bounty_refresh_day", "tutorial_step"]
+const SAVE_VERSION := 2
+## 세이브 호환: 데이터 개편으로 바뀐 id (옛 세이브 → 새 id)
+const ID_MIGRATION := {"sp_inje_hwangtae": "sp_chuncheon_jat"}
 
 
 func save_game(checkpoint := false) -> bool:
@@ -876,6 +907,9 @@ func save_game(checkpoint := false) -> bool:
 	var d := {}
 	for k in SAVE_FIELDS:
 		d[k] = get(k)
+	d["save_version"] = SAVE_VERSION
+	counters["save"] = int(counters.get("save", 0)) + 1
+	d["counters"] = counters
 	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	f.store_string(JSON.stringify(d, "\t"))
 	note("여정 기록 완료%s" % (" (자동 체크포인트)" if checkpoint else ""))
@@ -897,9 +931,19 @@ func load_game() -> bool:
 			set(k, int(d[k]))
 		elif k in SAVE_FIELDS:
 			set(k, d[k])
-	# JSON 은 정수를 float 로 복원하므로 수량 정규화
+	# JSON 은 정수를 float 로 복원하므로 수량 정규화 + 옛 세이브 id 이전
+	var inv := {}
 	for id in inventory.keys():
-		inventory[id] = int(inventory[id])
+		var nid := String(ID_MIGRATION.get(id, id))
+		if DataDB.has(nid):
+			inv[nid] = int(inv.get(nid, 0)) + int(inventory[id])
+		else:
+			note("세이브 호환: 사라진 아이템 %s ×%d 을(를) 정리했습니다." % [id, int(inventory[id])])
+	inventory = inv
+	for k in counters.keys():
+		counters[k] = int(counters[k])
+	if int(d.get("save_version", 1)) < SAVE_VERSION:
+		note("이전 버전 세이브를 불러왔습니다(v%d → v%d)." % [int(d.get("save_version", 1)), SAVE_VERSION])
 	current_node = last_checkpoint if last_checkpoint != "" else current_node
 	current_region = DataDB.region_of_node(current_node)
 	inside_node = true

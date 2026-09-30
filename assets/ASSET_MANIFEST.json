@@ -1,7 +1,7 @@
 {
  "_about": "tools/gen_asset_manifest.py 생성. 게임은 파일이 없으면 절차적 그리기로 대체하므로 어떤 순서로 넣어도 된다. 규격은 spec, 경로는 path 그대로.",
  "summary": {
-  "total": 822,
+  "total": 916,
   "present": 17,
   "by_kind": {
    "region_map": 17,
@@ -10,8 +10,8 @@
    "battle_bg": 17,
    "overworld": 1,
    "marker": 30,
-   "portrait": 91,
-   "icon": 499,
+   "portrait": 98,
+   "icon": 586,
    "sprite": 73,
    "ui_9patch": 2,
    "minigame": 24
@@ -1651,6 +1651,18 @@
    },
    "use": "주인공 도사 idle",
    "ref": "cls_dosa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/hero_mandeok.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "시나리오 주인공 김만덕 수묵 초상",
+   "ref": "sc_jeju_mandeok",
    "exists": false
   },
   {
@@ -3511,6 +3523,78 @@
    },
    "use": "적 역천지마 (전투 슬롯)",
    "ref": "en_yeokcheon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_jeju_dochaebi.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 제주 도채비 (전투 슬롯)",
+   "ref": "en_jeju_dochaebi",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_jeju_yeonggam.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 영감(도깨비신) (전투 슬롯)",
+   "ref": "en_jeju_yeonggam",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_hwangdangseon.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 황당선 선원 (전투 슬롯)",
+   "ref": "en_hwangdangseon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_majeok.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 북방 마적 (전투 슬롯)",
+   "ref": "en_majeok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_boar_herd.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 멧돼지 떼 (전투 슬롯)",
+   "ref": "en_boar_herd",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/en_bear.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "적 반달곰 (전투 슬롯)",
+   "ref": "en_bear",
    "exists": false
   },
   {
@@ -5746,6 +5830,978 @@
    "exists": false
   },
   {
+   "path": "res://assets/icons/heritage/her_145.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "파주목 장승·서낭당 아이콘",
+   "ref": "her_145",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_146.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "장단 장승·서낭당 아이콘",
+   "ref": "her_146",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_147.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "연천 장승·서낭당 아이콘",
+   "ref": "her_147",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_148.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "교동 장승·서낭당 아이콘",
+   "ref": "her_148",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_149.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "문산포구 장승·서낭당 아이콘",
+   "ref": "her_149",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_150.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "안성 장승·서낭당 아이콘",
+   "ref": "her_150",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_151.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "남양 장승·서낭당 아이콘",
+   "ref": "her_151",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_152.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "여주 장승·서낭당 아이콘",
+   "ref": "her_152",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_153.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "이천 장승·서낭당 아이콘",
+   "ref": "her_153",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_154.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "양평 장승·서낭당 아이콘",
+   "ref": "her_154",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_155.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "양구 장승·서낭당 아이콘",
+   "ref": "her_155",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_156.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "화천 장승·서낭당 아이콘",
+   "ref": "her_156",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_157.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "인제 장승·서낭당 아이콘",
+   "ref": "her_157",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_158.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "회양 장승·서낭당 아이콘",
+   "ref": "her_158",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_159.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "통천 장승·서낭당 아이콘",
+   "ref": "her_159",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_160.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "울진 장승·서낭당 아이콘",
+   "ref": "her_160",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_161.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "평창 장승·서낭당 아이콘",
+   "ref": "her_161",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_162.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영월 장승·서낭당 아이콘",
+   "ref": "her_162",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_163.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "정선 장승·서낭당 아이콘",
+   "ref": "her_163",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_164.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "단양 장승·서낭당 아이콘",
+   "ref": "her_164",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_165.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "제천 장승·서낭당 아이콘",
+   "ref": "her_165",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_166.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영동 장승·서낭당 아이콘",
+   "ref": "her_166",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_167.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "보은 장승·서낭당 아이콘",
+   "ref": "her_167",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_168.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "옥천 장승·서낭당 아이콘",
+   "ref": "her_168",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_169.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "부여 장승·서낭당 아이콘",
+   "ref": "her_169",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_170.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "해미 장승·서낭당 아이콘",
+   "ref": "her_170",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_171.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "태안 장승·서낭당 아이콘",
+   "ref": "her_171",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_172.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "아산 장승·서낭당 아이콘",
+   "ref": "her_172",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_173.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "천안 장승·서낭당 아이콘",
+   "ref": "her_173",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_174.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "고창 장승·서낭당 아이콘",
+   "ref": "her_174",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_175.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "익산 장승·서낭당 아이콘",
+   "ref": "her_175",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_176.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "정읍 장승·서낭당 아이콘",
+   "ref": "her_176",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_177.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "무주 장승·서낭당 아이콘",
+   "ref": "her_177",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_178.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "진안 장승·서낭당 아이콘",
+   "ref": "her_178",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_179.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영암 장승·서낭당 아이콘",
+   "ref": "her_179",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_180.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "해남 장승·서낭당 아이콘",
+   "ref": "her_180",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_181.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "담양 장승·서낭당 아이콘",
+   "ref": "her_181",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_182.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "진도 장승·서낭당 아이콘",
+   "ref": "her_182",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_183.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "문경 장승·서낭당 아이콘",
+   "ref": "her_183",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_184.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영주 장승·서낭당 아이콘",
+   "ref": "her_184",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_185.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영천 장승·서낭당 아이콘",
+   "ref": "her_185",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_186.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "의성 장승·서낭당 아이콘",
+   "ref": "her_186",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_187.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "청송 장승·서낭당 아이콘",
+   "ref": "her_187",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_188.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "김해 장승·서낭당 아이콘",
+   "ref": "her_188",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_189.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "밀양 장승·서낭당 아이콘",
+   "ref": "her_189",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_190.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "합천 장승·서낭당 아이콘",
+   "ref": "her_190",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_191.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "남해 장승·서낭당 아이콘",
+   "ref": "her_191",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_192.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "서흥 장승·서낭당 아이콘",
+   "ref": "her_192",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_193.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "평산 장승·서낭당 아이콘",
+   "ref": "her_193",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_194.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "수안 장승·서낭당 아이콘",
+   "ref": "her_194",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_195.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "곡산 장승·서낭당 아이콘",
+   "ref": "her_195",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_196.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "옹진 장승·서낭당 아이콘",
+   "ref": "her_196",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_197.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "장연 장승·서낭당 아이콘",
+   "ref": "her_197",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_198.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "송화 장승·서낭당 아이콘",
+   "ref": "her_198",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_199.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "배천 장승·서낭당 아이콘",
+   "ref": "her_199",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_200.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "진남포 장승·서낭당 아이콘",
+   "ref": "her_200",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_201.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "숙천 장승·서낭당 아이콘",
+   "ref": "her_201",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_202.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "순천 장승·서낭당 아이콘",
+   "ref": "her_202",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_203.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강서 장승·서낭당 아이콘",
+   "ref": "her_203",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_204.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "성천 장승·서낭당 아이콘",
+   "ref": "her_204",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_205.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "선천 장승·서낭당 아이콘",
+   "ref": "her_205",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_206.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "정주 장승·서낭당 아이콘",
+   "ref": "her_206",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_207.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "삭주 장승·서낭당 아이콘",
+   "ref": "her_207",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_208.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강계 장승·서낭당 아이콘",
+   "ref": "her_208",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_209.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "녕원 장승·서낭당 아이콘",
+   "ref": "her_209",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_210.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "신미도 나루 장승·서낭당 아이콘",
+   "ref": "her_210",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_211.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "정평 장승·서낭당 아이콘",
+   "ref": "her_211",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_212.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "영흥 장승·서낭당 아이콘",
+   "ref": "her_212",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_213.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "고원 장승·서낭당 아이콘",
+   "ref": "her_213",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_214.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "덕원 장승·서낭당 아이콘",
+   "ref": "her_214",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_215.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "문천 장승·서낭당 아이콘",
+   "ref": "her_215",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_216.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "회령 장승·서낭당 아이콘",
+   "ref": "her_216",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_217.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "온성 장승·서낭당 아이콘",
+   "ref": "her_217",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_218.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "종성 장승·서낭당 아이콘",
+   "ref": "her_218",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_219.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경원 장승·서낭당 아이콘",
+   "ref": "her_219",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_220.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "부령 장승·서낭당 아이콘",
+   "ref": "her_220",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_221.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "대정현 방사탑 아이콘",
+   "ref": "her_221",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_222.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "정의현 방사탑 아이콘",
+   "ref": "her_222",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_223.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "애월 방사탑 아이콘",
+   "ref": "her_223",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_224.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "조천 방사탑 아이콘",
+   "ref": "her_224",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/heritage/her_225.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "서귀포 방사탑 아이콘",
+   "ref": "her_225",
+   "exists": false
+  },
+  {
    "path": "res://assets/icons/items/eq_w1_mokgeom.png",
    "kind": "icon",
    "spec": {
@@ -6262,6 +7318,42 @@
    "exists": false
   },
   {
+   "path": "res://assets/icons/items/eq_w3_dangpa.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "당파창(鏜鈀槍) 아이콘",
+   "ref": "eq_w3_dangpa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_c3_deungpae.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "등패(藤牌) 아이콘",
+   "ref": "eq_c3_deungpae",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/eq_w3_pyeongon.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "편곤(鞭棍) 아이콘",
+   "ref": "eq_w3_pyeongon",
+   "exists": false
+  },
+  {
    "path": "res://assets/icons/items/eq_yu_weapon_4.png",
    "kind": "icon",
    "spec": {
@@ -6718,6 +7810,30 @@
    "exists": false
   },
   {
+   "path": "res://assets/icons/items/mt_jeju_heonma.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "제주 헌마(獻馬) 아이콘",
+   "ref": "mt_jeju_heonma",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/mt_joun_ship.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "경강 조운선 아이콘",
+   "ref": "mt_joun_ship",
+   "exists": false
+  },
+  {
    "path": "res://assets/icons/items/cap_yu_1.png",
    "kind": "icon",
    "spec": {
@@ -7099,6 +8215,18 @@
    },
    "use": "유자차 아이콘",
    "ref": "hr_yujacha",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/hr_jakseol.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "작설차 아이콘",
+   "ref": "hr_jakseol",
    "exists": false
   },
   {

@@ -848,6 +848,111 @@
    "generated": "heritage"
   },
   {
+   "id": "eq_w3_dangpa",
+   "name": "당파창(鏜鈀槍)",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "affinity": "none",
+   "stats": {
+    "atk": 19,
+    "def": 3
+   },
+   "weight": 3.5,
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_spear",
+    "min_rank": 3,
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 6
+     },
+     {
+      "id": "mat_charcoal",
+      "qty": 4
+     },
+     {
+      "id": "mat_wood",
+      "qty": 2
+     }
+    ]
+   },
+   "desc": "끝이 세 갈래인 창. 『무예도보통지』 24기의 하나로, 적의 창칼을 걸어 막고 찌른다.",
+   "generated": "content2"
+  },
+  {
+   "id": "eq_c3_deungpae",
+   "name": "등패(藤牌)",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "affinity": "none",
+   "stats": {
+    "def": 8,
+    "res": 0.05
+   },
+   "weight": 2.0,
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_shield",
+    "min_rank": 3,
+    "materials": [
+     {
+      "id": "mat_bamboo",
+      "qty": 6
+     },
+     {
+      "id": "mat_cowhide",
+      "qty": 2
+     },
+     {
+      "id": "mat_lacquer",
+      "qty": 1
+     }
+    ]
+   },
+   "desc": "등나무를 엮어 옻칠한 방패. 등패수는 요도와 표창을 함께 썼다.",
+   "generated": "content2"
+  },
+  {
+   "id": "eq_w3_pyeongon",
+   "name": "편곤(鞭棍)",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "affinity": "none",
+   "stats": {
+    "atk": 21,
+    "crit": 0.05
+   },
+   "weight": 3.0,
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_flail",
+    "min_rank": 3,
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 5
+     },
+     {
+      "id": "mat_charcoal",
+      "qty": 3
+     },
+     {
+      "id": "mat_cowhide",
+      "qty": 2
+     }
+    ]
+   },
+   "desc": "긴 자루 끝에 짧은 도리깨를 쇠사슬로 단 무기. 기병의 마상편곤으로 이름났다.",
+   "generated": "content2"
+  },
+  {
    "id": "eq_yu_weapon_4",
    "name": "사인참사검",
    "slot": "weapon",

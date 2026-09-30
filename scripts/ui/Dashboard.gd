@@ -8,7 +8,7 @@ signal command(cmd: String)
 
 const LIFE := [["camp", "야 영"], ["search", "탐 색"], ["gather", "채 집"], ["hunt", "사 냥"]]
 const DOCK := [["map", "지도 (대동여지도)"], ["bag", "배낭 (인벤토리)"], ["equip", "장착 (5슬롯+동료)"], ["codex", "도감 (3중 분류)"]]
-const SYS := [["here", "거점 시설"], ["event", "이벤트"], ["quest", "퀘스트"], ["craft", "제작"], ["party", "동료·막사"], ["knowledge", "지식"], ["stop", "정지(Space)"], ["ff", "빨리 ×3"]]
+const SYS := [["here", "거점 시설"], ["event", "이벤트"], ["quest", "퀘스트"], ["craft", "제작"], ["party", "동료·막사"], ["knowledge", "지식"], ["stop", "정지(Space)"], ["ff", "빨리 ×N"], ["help", "도움말"], ["settings", "설정"]]
 
 var status_box: RichTextLabel
 var title_label: RichTextLabel
@@ -100,12 +100,12 @@ func _ready() -> void:
 		dock.add_child(_btn("[%s]" % c[1], c[0], Vector2(250, 70), 18))
 	var sys := GridContainer.new()
 	sys.columns = 4
-	sys.position = Vector2(855, 180)
+	sys.position = Vector2(855, 170)
 	sys.add_theme_constant_override("h_separation", 6)
 	sys.add_theme_constant_override("v_separation", 6)
 	add_child(sys)
 	for c in SYS:
-		sys.add_child(_btn(c[1], c[0], Vector2(123, 50), 15))
+		sys.add_child(_btn(c[1], c[0], Vector2(123, 44), 15))
 	log_box = RichTextLabel.new()
 	log_box.position = Vector2(1380, 16)
 	log_box.size = Vector2(525, 328)
@@ -113,8 +113,16 @@ func _ready() -> void:
 	_font(log_box, 15)
 	add_child(log_box)
 	GameState.stats_changed.connect(refresh)
-	GameState.log_message.connect(func(t): log_box.append_text("· " + t + "\n"))
+	GameState.log_message.connect(_on_log)
 	refresh()
+
+
+## 기록창: 설정의 보관 줄 수를 넘으면 오래된 줄부터 지운다
+func _on_log(t: String) -> void:
+	log_box.append_text("· " + t + "\n")
+	var cap := int(Settings.get_value("log_lines"))
+	while log_box.get_paragraph_count() > cap + 1:
+		log_box.remove_paragraph(0)
 
 
 func _font(r: RichTextLabel, s: int) -> void:
@@ -165,7 +173,8 @@ func refresh() -> void:
 		"상태: " + ", ".join(ill) if ill.size() > 0 else "", "도핑: 전투 %d회" % int(gs.food_buff.get("battles", 0)) if not gs.food_buff.is_empty() else ""]
 	var c := DataDB.class_row(gs.class_id)
 	var pv := Balance.province_of_region(gs.current_region)
-	title_label.text = "[b]%s[/b] · Rank %d\n%s · %s 명성 %d" % [Balance.rank_title(gs.rank, gs.class_id), gs.rank, c.get("name", ""), pv.get("name", ""), int(gs.province_rep.get(pv.get("id", ""), 0))]
+	var who := (gs.hero_name + " · ") if gs.hero_name != "" else ""
+	title_label.text = "[b]%s[/b] · Rank %d\n%s%s · %s 명성 %d" % [Balance.rank_title(gs.rank, gs.class_id), gs.rank, who, c.get("name", ""), pv.get("name", ""), int(gs.province_rep.get(pv.get("id", ""), 0))]
 	portrait.queue_redraw()
 
 
@@ -174,7 +183,10 @@ func _draw_portrait() -> void:
 	var gs := GameState
 	p.draw_rect(Rect2(Vector2.ZERO, p.size), Color(0.3, 0.2, 0.12))
 	p.draw_rect(Rect2(Vector2(6, 6), p.size - Vector2(12, 12)), Color(0.88, 0.82, 0.68))
-	var tex := Assets.portrait("hero_" + gs.class_id)
+	var sc: Dictionary = DataDB.get_row(gs.scenario_id) if gs.scenario_id != "" else {}
+	var tex: Texture2D = Assets.tex(String(sc["portrait"])) if sc.has("portrait") else null
+	if tex == null:
+		tex = Assets.portrait("hero_" + gs.class_id)
 	if tex:
 		p.draw_texture_rect(tex, Rect2(Vector2(10, 10), Vector2(210, 240)), false)
 	else:

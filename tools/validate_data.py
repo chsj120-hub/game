@@ -488,6 +488,41 @@ for mn in S["mains"]:
     ref(mn["class"], f"20 {mn['id']}", {"classes"})
     for ch in mn["chapters"]:
         check_stages(ch["stages"], ch["tier"], f"20 {mn['id']} ch{ch['chapter']}")
+# ================================================================ 23 튜토리얼·시나리오·도움말
+TUT = load("23_tutorial.json")
+tut_ids = {st["tutorial"] for st in TUT["steps"]}
+main_ids = {m["id"] for m in S["mains"]}
+COUNTERS = {"open_facilities", "open_map", "buy", "sell", "craft", "unpack", "heritage", "battle_win", "trade_accept", "trade_done",
+            "save", "event_stage", "gather", "camp"}
+for sc in TUT["scenarios"]:
+    w = f"23 {sc['id']}"
+    ref(sc["class"], w, {"classes"})
+    ref(sc["start_node"], w, {"nodes"})
+    for it in sc.get("items", {}):
+        ref(it, w)
+    if sc.get("main") and sc["main"] not in main_ids:
+        E(f"{w}: 메인 시나리오 {sc['main']} 없음")
+    if sc.get("tutorial") and sc["tutorial"] not in tut_ids:
+        E(f"{w}: 튜토리얼 {sc['tutorial']} 단계 없음")
+for mn in S["mains"]:
+    if mn.get("scenario") and mn["scenario"] not in {sc["id"] for sc in TUT["scenarios"]}:
+        E(f"20 {mn['id']}: 시나리오 {mn['scenario']} 없음")
+for st in TUT["steps"]:
+    w, c = f"23 {st['id']}", st["cond"]
+    t = c["type"]
+    if t == "counter" and c["key"] not in COUNTERS:
+        E(f"{w}: 카운터 키 {c['key']}")
+    elif t == "at_node":
+        ref(c["node"], w, {"nodes"})
+    elif t == "has_item":
+        ref(c["item"], w)
+    elif t == "event_progress" and c["event"] not in main_ids | {e["id"] for e in S["events"]}:
+        E(f"{w}: 이벤트 {c['event']} 없음")
+    elif t not in ("ack", "counter", "visited", "at_node", "has_item", "event_progress"):
+        E(f"{w}: 조건 종류 {t}")
+if len({h["id"] for h in TUT["help"]}) != len(TUT["help"]):
+    E("23 도움말 id 중복")
+
 terms = [s["term"] for s in SIDE["seasonal"]]
 if len(terms) != 24 or len(set(terms)) != 24:
     E("22 세시풍속 24절기 불일치")

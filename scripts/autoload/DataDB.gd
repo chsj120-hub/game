@@ -26,6 +26,7 @@ const SHEETS := {
 	"19_classes_knowledge.json": ["classes"],
 	"20_events.json": ["events", "main_scenarios"],
 	"21_minigames.json": ["minigames"],
+	"23_tutorial.json": ["scenarios", "steps", "help"],
 }
 
 var overview: Dictionary = {}

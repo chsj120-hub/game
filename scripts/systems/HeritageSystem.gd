@@ -77,6 +77,7 @@ static func visit(her_id: String, ok: bool) -> String:
 	gs.note("답사 완료: %s → %s %s 획득" % [her["name"], reward_type_label(reward_type(her)), DataDB.display_name(String(her["reward"]))])
 	RouteQueue.on_node_visited(her_id)
 	_check_region_collection(String(her["region"]))
+	gs.bump("heritage")
 	gs.stats_changed.emit()
 	return ""
 

@@ -29,7 +29,7 @@ var _minute_acc: float = 0.0
 ## 필드 행군 배율 (전투와 분리): 처음 길 ×field_pace_mult, 지나 본 간선 ×known_road_pace_mult
 func pace_mult(leg: Dictionary) -> float:
 	var mv: Dictionary = DataDB.overview.get("movement", {})
-	var m := float(mv.get("field_pace_mult", 1.0))
+	var m := float(mv.get("field_pace_mult", 1.0)) * float(Settings.get_value("march_speed"))
 	if GameState.walked_edges.has(_edge_key(leg)):
 		m *= float(mv.get("known_road_pace_mult", 1.0))
 	return m

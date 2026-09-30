@@ -342,6 +342,32 @@
    },
    "battle_usable": true,
    "generated": "craft_trade"
+  },
+  {
+   "id": "hr_jakseol",
+   "name": "작설차",
+   "form": "탕약",
+   "tier": 2,
+   "book": "bk_med_daegu",
+   "ingredients": [
+    {
+     "id": "sp_hadong_jakseol",
+     "qty": 1
+    },
+    {
+     "id": "herb_gamcho",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "heal_pct": 0.05,
+    "cure": [
+     "stun",
+     "fear"
+    ]
+   },
+   "battle_usable": true,
+   "generated": "content2"
   }
  ]
 }

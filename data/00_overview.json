@@ -3,9 +3,9 @@
  "rank": {
   "formula": {
    "type": "power",
-   "a": 3248.6,
+   "a": 2291.8,
    "k": 2.245,
-   "note": "Threshold(L) = 3,249·(L−1)^2.245. R5 = 균형형이 콘텐츠 1/3 을 찾았을 때(중앙값) 도달하도록 진행 시뮬로 보정"
+   "note": "Threshold(L) = 2,292·(L−1)^2.245. R5 = 균형형이 콘텐츠 1/3 을 찾았을 때(중앙값) 도달하도록 진행 시뮬로 보정"
   },
   "table": [
    {
@@ -22,7 +22,7 @@
    },
    {
     "rank": 2,
-    "threshold": 3200,
+    "threshold": 2300,
     "titles": {
      "cls_eosa": "향촌 유생",
      "cls_merchant": "보부상",
@@ -36,7 +36,7 @@
    },
    {
     "rank": 3,
-    "threshold": 15500,
+    "threshold": 11000,
     "titles": {
      "cls_eosa": "진사",
      "cls_merchant": "객주 대행수",
@@ -52,7 +52,7 @@
    },
    {
     "rank": 4,
-    "threshold": 38000,
+    "threshold": 27000,
     "titles": {
      "cls_eosa": "종사관·어사",
      "cls_merchant": "대방",
@@ -66,7 +66,7 @@
    },
    {
     "rank": 5,
-    "threshold": 73000,
+    "threshold": 51500,
     "titles": {
      "cls_eosa": "판서",
      "cls_merchant": "팔도 도대행수",
@@ -102,24 +102,24 @@
    "note": "메인 시나리오 N장은 신분 Rank N 이상에서 진행. 5장 완료 = 엔딩"
   },
   "reputation_budget": {
-   "max": 436497,
-   "reference": 351921,
-   "min": 309634,
+   "max": 302213,
+   "reference": 261434,
+   "min": 241044,
    "by_source": {
     "유산(답사+기증)": [
-     195174,
-     110599,
-     68311
+     94106,
+     53327,
+     32937
     ],
     "장비 서사 퀘스트": [
-     28643,
-     28643,
-     28643
+     30207,
+     30207,
+     30207
     ],
     "탈것 퀘스트": [
-     20149,
-     20149,
-     20149
+     7704,
+     7704,
+     7704
     ],
     "동료 영입": [
      13932,
@@ -137,14 +137,14 @@
      10840
     ],
     "역사·설화 이벤트": [
-     15909,
-     15909,
-     15909
+     8220,
+     8220,
+     8220
     ],
     "무역 퀘스트": [
-     6530,
-     6530,
-     6530
+     1991,
+     1991,
+     1991
     ],
     "권역·신화 보스": [
      19699,
@@ -167,9 +167,9 @@
      1760
     ],
     "권역 전수 수집 보너스": [
-     19517,
-     19517,
-     19517
+     9411,
+     9411,
+     9411
     ],
     "화첩·탁본 완성": [
      4500,
@@ -189,8 +189,69 @@
     "normal_kill",
     "town_invest"
    ],
-   "r5_share_of_max": 0.167,
-   "r5_share_of_reference": 0.207
+   "r5_share_of_max": 0.17,
+   "r5_share_of_reference": 0.197
+  },
+  "calibration_basis": {
+   "basis": "actual",
+   "content": {
+    "heritage": [
+     84,
+     60,
+     40,
+     29,
+     12
+    ],
+    "gear_quest": [
+     0,
+     0,
+     0,
+     12,
+     13
+    ],
+    "mount_quest": [
+     0,
+     0,
+     0,
+     4,
+     2
+    ],
+    "companion": [
+     22,
+     23,
+     22,
+     0,
+     0
+    ],
+    "instance": [
+     0,
+     2,
+     1,
+     2,
+     3
+    ],
+    "event": [
+     2,
+     5,
+     4,
+     2,
+     1
+    ],
+    "trade": [
+     6,
+     5,
+     3,
+     1,
+     0
+    ],
+    "companion_promo": [
+     0,
+     22,
+     45,
+     67,
+     67
+    ]
+   }
   }
  },
  "economy": {
@@ -1243,14 +1304,14 @@
    ],
    "capital": "ND_02_CITY_HANYANGGYEONGJO",
    "standing_req": [
-    2950,
-    7300,
-    12350,
-    17950,
-    24000
+    2200,
+    5400,
+    9150,
+    13300,
+    17800
    ],
-   "standing_max": 56402,
-   "standing_ref": 45351
+   "standing_max": 39798,
+   "standing_ref": 33818
   },
   {
    "id": "P_GANGWON",
@@ -1261,14 +1322,14 @@
    ],
    "capital": "ND_04_CITY_WONJUGANGWONGAMYEONG",
    "standing_req": [
-    2200,
-    5450,
-    9250,
-    13450,
-    18000
+    1800,
+    4450,
+    7550,
+    10950,
+    14650
    ],
-   "standing_max": 43937,
-   "standing_ref": 35251
+   "standing_max": 34062,
+   "standing_ref": 28809
   },
   {
    "id": "P_CHUNGCHEONG",
@@ -1279,14 +1340,14 @@
    ],
    "capital": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
    "standing_req": [
-    3550,
-    8700,
-    14700,
-    21400,
-    28600
+    2950,
+    7200,
+    12250,
+    17750,
+    23750
    ],
-   "standing_max": 62344,
-   "standing_ref": 52310
+   "standing_max": 47041,
+   "standing_ref": 42727
   },
   {
    "id": "P_JEOLLA",
@@ -1297,14 +1358,14 @@
    ],
    "capital": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
    "standing_req": [
-    3700,
-    9100,
-    15400,
-    22350,
-    29900
+    2550,
+    6300,
+    10650,
+    15500,
+    20700
    ],
-   "standing_max": 68707,
-   "standing_ref": 56527
+   "standing_max": 43831,
+   "standing_ref": 37829
   },
   {
    "id": "P_GYEONGSANG",
@@ -1315,14 +1376,14 @@
    ],
    "capital": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
    "standing_req": [
-    4250,
-    10500,
-    17750,
-    25850,
-    34500
+    3100,
+    7700,
+    13000,
+    18900,
+    25300
    ],
-   "standing_max": 76128,
-   "standing_ref": 63195
+   "standing_max": 51567,
+   "standing_ref": 45379
   },
   {
    "id": "P_HWANGHAE",
@@ -1333,14 +1394,14 @@
    ],
    "capital": "ND_12_CITY_HAEJUMOK",
    "standing_req": [
-    1250,
-    3050,
+    850,
+    2100,
+    3600,
     5200,
-    7550,
-    10050
+    6950
    ],
-   "standing_max": 28423,
-   "standing_ref": 21081
+   "standing_max": 15816,
+   "standing_ref": 13440
   },
   {
    "id": "P_PYEONGAN",
@@ -1351,14 +1412,14 @@
    ],
    "capital": "ND_13_CITY_PYEONGYANGBU",
    "standing_req": [
-    1800,
-    4400,
-    7450,
-    10800,
-    14450
+    1400,
+    3400,
+    5800,
+    8400,
+    11250
    ],
-   "standing_max": 36239,
-   "standing_ref": 28198
+   "standing_max": 24800,
+   "standing_ref": 20722
   },
   {
    "id": "P_HAMGYEONG",
@@ -1369,14 +1430,14 @@
    ],
    "capital": "ND_15_CITY_HAMHEUNGBU",
    "standing_req": [
-    1800,
-    4450,
-    7550,
-    10950,
-    14650
+    1450,
+    3600,
+    6050,
+    8850,
+    11800
    ],
-   "standing_max": 36728,
-   "standing_ref": 28469
+   "standing_max": 26318,
+   "standing_ref": 22387
   },
   {
    "id": "P_JEJU",
@@ -1386,14 +1447,14 @@
    ],
    "capital": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
    "standing_req": [
-    1050,
-    2600,
-    4400,
-    6350,
-    8500
+    750,
+    1850,
+    3150,
+    4600,
+    6150
    ],
-   "standing_max": 23089,
-   "standing_ref": 17039
+   "standing_max": 14480,
+   "standing_ref": 11822
   }
  ],
  "companion_promotion": {

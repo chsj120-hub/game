@@ -1,5 +1,5 @@
 {
- "_schema": "20_역사·설화 이벤트 + 클래스 메인 시나리오. stages[].node 순서가 동선 큐(등급 규칙 적용). action=talk|choice|minigame|deliver|battle|instance. deadline_days 경과 시 fail_safe(time_decay: 자동 정상화, 명성 감점 없음·기회비용만, 포고문으로 [역사] 도감 등록 보장). blockade=이벤트 진행 중 봉쇄 노드 + 무료 우회로(detour). 보상=economy quest 공식(type=event/main, tier).",
+ "_schema": "20_역사·설화 이벤트 + 클래스 메인 시나리오. stages[].node 순서가 동선 큐(등급 규칙 적용). action=talk|choice|minigame|deliver|battle|instance. deadline_days 경과 시 fail_safe(time_decay: 자동 정상화, 명성 감점 없음·기회비용만, 포고문으로 [역사] 도감 등록 보장). blockade=이벤트 진행 중 봉쇄 노드 + 무료 우회로(detour). 보상=economy quest 공식(type=event/main, tier). | 시나리오: main_scenarios[].scenario 가 있으면 그 시작 설정(23_tutorial.scenarios)으로 새 게임을 시작했을 때만 진행(클래스 기본 메인 대신).",
  "events": [
   {
    "id": "ev_jinju_1862",
@@ -179,6 +179,523 @@
     "text": "입춘이 지나자 야광귀가 자취를 감추었다(다음 해 대한에 재등장)."
    },
    "codex": "설날 밤 신발을 훔쳐 가는 야광귀. 체를 걸어 두면 구멍을 세다 날이 샌다."
+  },
+  {
+   "id": "ev_jeju_seolmundae",
+   "name": "설문대할망의 치마폭",
+   "lore": "설화",
+   "type": "event",
+   "tier": 1,
+   "trigger": {
+    "region": "MAP_17",
+    "rank_min": 1
+   },
+   "stages": [
+    {
+     "node": "ND_17_SCENIC_SEONGSANILCHULBONG",
+     "action": "talk",
+     "text": "해녀 할망이 들려준다. '옛날 설문대할망이 치마폭에 흙을 담아 날라 한라산을 쌓았지. 치마 터진 구멍으로 흘린 흙이 오름이 되었고.'"
+    },
+    {
+     "node": "ND_17_TOWN_SEOGWIPO",
+     "action": "choice",
+     "text": "포구 아이들이 할망이 명주 속옷 한 벌만 지어 주면 육지까지 다리를 놓아 주겠다 했다는 대목을 묻는다. 어떻게 답할까?",
+     "choices": [
+      {
+       "id": "island",
+       "text": "'명주가 모자라 다리가 끊겼으니, 섬사람은 배와 바람을 믿어야지.'",
+       "effects": {
+        "knowledge_xp": {
+         "sang": 30
+        }
+       }
+      },
+      {
+       "id": "legend",
+       "text": "'오름 하나하나가 할망의 발자국이란다.' 전설을 끝까지 들려준다",
+       "effects": {
+        "knowledge_xp": {
+         "seon": 30
+        }
+       }
+      }
+     ]
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "마을 심방이 굿판에서 설문대할망 본풀이를 불러 이야기가 이어졌다."
+   },
+   "codex": "제주 창조 여신 설문대할망 설화. 한라산과 360여 오름의 기원을 말한다.",
+   "generated": "content2"
+  },
+  {
+   "id": "ev_jeju_yeongdeung",
+   "name": "영등할망 맞이",
+   "lore": "설화",
+   "type": "event",
+   "tier": 2,
+   "trigger": {
+    "region": "MAP_17",
+    "rank_min": 1,
+    "solar_terms": [
+     "경칩",
+     "춘분",
+     "청명"
+    ]
+   },
+   "stages": [
+    {
+     "node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+     "action": "talk",
+     "text": "음력 2월, 바람의 신 영등할망이 섬에 드는 달이다. 건입포 칠머리당에서 해녀와 선주들이 굿 채비를 한다."
+    },
+    {
+     "node": "ND_17_FORT_HWABUKJIN",
+     "action": "minigame",
+     "text": "영등 송별제 — 짚배를 띄워 보내며 장단을 맞춘다(정간보 박자).",
+     "minigame": "mg_jeonggan"
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "심방들이 영등굿을 무사히 마치고 영등할망을 떠나보냈다."
+   },
+   "codex": "제주 칠머리당 영등굿(국가무형유산). 바람의 신에게 해녀·어부의 무사와 풍어를 빈다.",
+   "generated": "content2"
+  },
+  {
+   "id": "ev_jeju_hwangdang",
+   "name": "차귀 앞바다의 황당선",
+   "lore": "역사",
+   "type": "event",
+   "tier": 2,
+   "trigger": {
+    "region": "MAP_17",
+    "rank_min": 2
+   },
+   "stages": [
+    {
+     "node": "ND_17_FORT_CHAGWIJIN",
+     "action": "battle",
+     "text": "정체 모를 이양선(황당선)이 차귀도에 닻을 내리고 포구 물자를 약탈한다. 진졸과 함께 막아선다.",
+     "waves": [
+      [
+       "en_hwangdangseon",
+       "en_hwangdangseon"
+      ],
+      [
+       "en_hwangdangseon",
+       "en_pirate"
+      ]
+     ]
+    },
+    {
+     "node": "ND_17_TOWN_DAEJEONGHYEON",
+     "action": "choice",
+     "text": "붙잡은 선원들은 말이 통하지 않는다. 대정현감이 처리를 묻는다.",
+     "choices": [
+      {
+       "id": "report",
+       "text": "문정(問情)하여 장계를 올린다",
+       "effects": {
+        "knowledge_xp": {
+         "yu": 40
+        }
+       }
+      },
+      {
+       "id": "trade",
+       "text": "싣고 온 물건을 몰래 사들인다",
+       "effects": {
+        "money_mult": 1.3
+       }
+      }
+     ]
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "제주목 군관이 출동해 황당선을 쫓아냈다."
+   },
+   "codex": "19세기 조선 연해에 출몰한 이양선(異樣船)·황당선(荒唐船). 해안 방어의 골칫거리였다.",
+   "generated": "content2"
+  },
+  {
+   "id": "ev_geumgang_seonnyeo",
+   "name": "상팔담의 선녀",
+   "lore": "설화",
+   "type": "event",
+   "tier": 2,
+   "trigger": {
+    "region": "MAP_03",
+    "rank_min": 1
+   },
+   "stages": [
+    {
+     "node": "ND_03_TOWN_HOEYANG",
+     "action": "talk",
+     "text": "회양 나무꾼이 속삭인다. '금강산 상팔담에 보름마다 선녀가 멱을 감으러 내려온다오. 날개옷을 숨긴 사내 이야기, 들어 보셨소?'"
+    },
+    {
+     "node": "ND_03_SCENIC_GEUMGANGSANGURYONGPOK",
+     "action": "minigame",
+     "text": "구룡폭 위 여덟 못에 비친 달빛을 따라 선녀의 길을 잇는다.",
+     "minigame": "mg_chilseong"
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "유람객들 사이에 상팔담 전설이 널리 퍼졌다."
+   },
+   "codex": "금강산 상팔담에 얽힌 '나무꾼과 선녀' 설화.",
+   "generated": "content2"
+  },
+  {
+   "id": "ev_donghak_1860",
+   "name": "용담정의 새 가르침",
+   "lore": "역사",
+   "type": "event",
+   "tier": 3,
+   "trigger": {
+    "region": "MAP_09",
+    "rank_min": 2
+   },
+   "stages": [
+    {
+     "node": "ND_09_CITY_GYEONGJUBU",
+     "action": "talk",
+     "text": "경주 구미산 용담정에서 몰락 양반 최제우가 '사람이 곧 하늘'이라는 가르침을 편다(1860, 동학 창도)."
+    },
+    {
+     "node": "ND_09_TOWN_YEONGCHEON",
+     "action": "choice",
+     "text": "영천 장터에 주문을 외는 사람들이 모인다. 관아는 '서학 무리'라며 잡아들일 채비를 한다.",
+     "choices": [
+      {
+       "id": "listen",
+       "text": "가르침을 끝까지 들어 본다",
+       "effects": {
+        "knowledge_xp": {
+         "seon": 50
+        }
+       }
+      },
+      {
+       "id": "report",
+       "text": "관아에 알린다",
+       "effects": {
+        "money_mult": 1.3
+       }
+      }
+     ]
+    },
+    {
+     "node": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "action": "minigame",
+     "text": "경상감영에서 유·불·선과 새 가르침의 차이를 묻는다.",
+     "minigame": "mg_three_teachings"
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "감영이 용담 일대를 단속하며 소문이 잦아들었다."
+   },
+   "codex": "1860년 최제우가 경주에서 창도한 동학. 1864년 대구에서 처형되었다.",
+   "generated": "content2"
+  },
+  {
+   "id": "ev_daedong_1861",
+   "name": "대동여지도 판각",
+   "lore": "역사",
+   "type": "event",
+   "tier": 3,
+   "trigger": {
+    "region": "MAP_02",
+    "rank_min": 2
+   },
+   "stages": [
+    {
+     "node": "ND_02_CITY_HANYANGGYEONGJO",
+     "action": "talk",
+     "text": "만리재 아래 초가에서 김정호가 스물두 첩 판목을 새기고 있다. '산줄기는 끊기지 않고, 물길은 서로 만나오. 그것만은 틀릴 수 없소.'"
+    },
+    {
+     "node": "ND_02_STATION_YANGJAEYEOK",
+     "action": "deliver",
+     "text": "판목에 쓸 단단한 나무를 역참 수레로 받아 온다(느티나무 판재 4).",
+     "item": "mat_wood",
+     "qty": 4
+    },
+    {
+     "node": "ND_01_CITY_GAESEONGBU",
+     "action": "minigame",
+     "text": "개성의 지물포에서 첫 인출본을 찍어 본다(목판 탁본).",
+     "minigame": "mg_takbon"
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "김정호가 끝내 판각을 마쳐 신유년(1861)에 대동여지도를 간행했다."
+   },
+   "codex": "1861년 김정호가 간행한 22첩 목판 전국 지도 「대동여지도」.",
+   "generated": "content2"
+  },
+  {
+   "id": "ev_baekdu_jangsu",
+   "name": "백두산 아기장수",
+   "lore": "설화",
+   "type": "event",
+   "tier": 3,
+   "trigger": {
+    "region": "MAP_16",
+    "rank_min": 3
+   },
+   "stages": [
+    {
+     "node": "ND_16_STATION_MUSANCHAM",
+     "action": "talk",
+     "text": "무산 노인이 말한다. '겨드랑이에 날개 돋은 아기장수가 태어나면, 용마가 백두산에서 내려온다 했지.'"
+    },
+    {
+     "node": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+     "action": "battle",
+     "text": "천지 기슭에서 용마를 지키던 반달곰이 길을 막는다.",
+     "waves": [
+      [
+       "en_bear"
+      ],
+      [
+       "en_bear",
+       "en_bear"
+      ]
+     ]
+    },
+    {
+     "node": "ND_15_CITY_HAMHEUNGBU",
+     "action": "choice",
+     "text": "함흥 장터에 '용마 발자국'을 보았다는 소문이 돈다. 어떻게 전할까?",
+     "choices": [
+      {
+       "id": "hope",
+       "text": "아기장수는 언젠가 온다고 전한다",
+       "effects": {
+        "knowledge_xp": {
+         "seon": 50
+        }
+       }
+      },
+      {
+       "id": "record",
+       "text": "본 대로만 적어 답사록에 남긴다",
+       "effects": {
+        "knowledge_xp": {
+         "sa": 50
+        }
+       }
+      }
+     ]
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "장터 이야기꾼이 아기장수 설화를 북관 곳곳에 퍼뜨렸다."
+   },
+   "codex": "전국에 전하는 아기장수 설화 가운데 백두산 용마 이야기.",
+   "generated": "content2"
+  },
+  {
+   "id": "ev_sherman_1866",
+   "name": "대동강의 제너럴셔먼호",
+   "lore": "역사",
+   "type": "event",
+   "tier": 4,
+   "trigger": {
+    "region": "MAP_13",
+    "rank_min": 3
+   },
+   "stages": [
+    {
+     "node": "ND_13_TOWN_JINNAMPO",
+     "action": "talk",
+     "text": "검은 연기를 뿜는 이양선이 대동강을 거슬러 오른다. 통상을 요구하며 물러가지 않는다(1866)."
+    },
+    {
+     "node": "ND_13_CITY_PYEONGYANGBU",
+     "action": "battle",
+     "text": "배가 양각도에 걸리자 선원들이 총을 쏘며 뭍에 오른다. 평양 군민과 함께 막아선다.",
+     "waves": [
+      [
+       "en_hwangdangseon",
+       "en_hwangdangseon"
+      ],
+      [
+       "en_hwangdangseon",
+       "en_hwangdangseon",
+       "en_pirate"
+      ]
+     ]
+    },
+    {
+     "node": "ND_11_CITY_HWANGJUMOK",
+     "action": "choice",
+     "text": "황해감영으로 가는 길, 장계에 무엇을 적을까?",
+     "choices": [
+      {
+       "id": "defense",
+       "text": "해안 방비를 서둘러야 한다고 적는다",
+       "effects": {
+        "knowledge_xp": {
+         "yu": 60
+        }
+       }
+      },
+      {
+       "id": "trade",
+       "text": "저들이 가져온 물건과 시세를 자세히 적는다",
+       "effects": {
+        "knowledge_xp": {
+         "sang": 60
+        }
+       }
+      }
+     ]
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "평안감사 박규수가 화공으로 이양선을 불태웠다."
+   },
+   "codex": "1866년 미국 상선 제너럴셔먼호 사건. 신미양요(1871)의 빌미가 되었다.",
+   "generated": "content2"
+  },
+  {
+   "id": "ev_oppert_1868",
+   "name": "가야산 남연군묘 도굴",
+   "lore": "역사",
+   "type": "event",
+   "tier": 4,
+   "trigger": {
+    "region": "MAP_06",
+    "rank_min": 3
+   },
+   "stages": [
+    {
+     "node": "ND_06_TOWN_HAEMI",
+     "action": "talk",
+     "text": "덕산 가야산 기슭에 밤마다 낯선 무리가 곡괭이를 들고 오간다. 흥선대원군 부친 남연군의 묘다(1868)."
+    },
+    {
+     "node": "ND_06_CITY_HONGJUMOK",
+     "action": "battle",
+     "text": "도굴꾼 무리가 관군을 피해 포구로 달아난다.",
+     "waves": [
+      [
+       "en_hwangdangseon",
+       "en_bandit",
+       "en_bandit"
+      ],
+      [
+       "en_hwangdangseon",
+       "en_hwangdangseon"
+      ]
+     ]
+    },
+    {
+     "node": "ND_02_CITY_HANYANGGYEONGJO",
+     "action": "minigame",
+     "text": "한양 포도청에서 도굴 경위를 심문한다.",
+     "minigame": "mg_amhaeng_trial"
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "도굴은 실패로 끝났고, 조정은 쇄국의 뜻을 더 굳혔다."
+   },
+   "codex": "1868년 독일 상인 오페르트의 남연군묘 도굴 미수 사건.",
+   "generated": "content2"
+  },
+  {
+   "id": "ev_sinmi_1871",
+   "name": "광성보의 신미양요",
+   "lore": "역사",
+   "type": "event",
+   "tier": 5,
+   "trigger": {
+    "region": "MAP_01",
+    "rank_min": 4
+   },
+   "stages": [
+    {
+     "node": "ND_12_CITY_YEONANDOHOBU",
+     "action": "talk",
+     "text": "연안 앞바다에 미국 함대가 나타났다는 봉수가 오른다(1871)."
+    },
+    {
+     "node": "ND_01_FORT_DEOKJINJIN",
+     "action": "battle",
+     "text": "덕진진 포대가 함포에 무너진다. 어재연 장군의 수자기(帥字旗) 아래로 모인다.",
+     "waves": [
+      [
+       "en_hwangdangseon",
+       "en_hwangdangseon",
+       "en_hwangdangseon"
+      ],
+      [
+       "en_majeok",
+       "en_hwangdangseon",
+       "en_hwangdangseon"
+      ]
+     ]
+    },
+    {
+     "node": "ND_01_CITY_GANGHWAYUSUBU",
+     "action": "choice",
+     "text": "광성보 싸움이 끝났다. 강화유수부에 무엇을 남길까?",
+     "choices": [
+      {
+       "id": "memorial",
+       "text": "전사한 군사들의 이름을 적어 남긴다",
+       "effects": {
+        "knowledge_xp": {
+         "yu": 80
+        }
+       }
+      },
+      {
+       "id": "map",
+       "text": "해안 포대의 지형을 그려 남긴다",
+       "effects": {
+        "knowledge_xp": {
+         "sa": 80
+        }
+       }
+      }
+     ]
+    },
+    {
+     "node": "ND_02_CITY_HANYANGGYEONGJO",
+     "action": "minigame",
+     "text": "척화비의 글귀를 새긴다.",
+     "minigame": "mg_talisman_stroke"
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "미 함대가 물러가고, 조정은 전국에 척화비를 세웠다."
+   },
+   "codex": "1871년 미국 함대의 강화도 침공(신미양요)과 광성보 전투.",
+   "generated": "content2"
   }
  ],
  "main_scenarios": [
@@ -569,6 +1086,203 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ev_main_mandeok",
+   "name": "김만덕 — 제주 객주에서 금강산까지",
+   "class": "cls_merchant",
+   "scenario": "sc_jeju_mandeok",
+   "lore": "역사",
+   "type": "main",
+   "era_note": "김만덕(1739~1812)의 실제 생애(1790년대)를 따르는 시나리오. 본편 배경(1861)과 시대가 다르며, 이 시나리오에서만 정조 대 인물이 등장한다.",
+   "chapters": [
+    {
+     "chapter": 1,
+     "tier": 1,
+     "title": "객주를 열다",
+     "stages": [
+      {
+       "node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+       "action": "talk",
+       "text": "제주목 관아. 만덕은 관기 명부에서 이름을 지워 달라는 소지를 올린다. 목사가 묻는다. '양인으로 돌아가 무엇을 하려느냐?' — '포구에 객주를 열어 뭍과 섬을 잇겠습니다. 섬에서 나는 것은 제값에, 뭍에서 오는 것은 제때에.'"
+      },
+      {
+       "node": "ND_17_TOWN_JOCHEON",
+       "action": "choice",
+       "text": "조천포 첫 거래. 육지 장사꾼이 말총을 헐값에 넘기라며 웃돈 대신 '다음 배'를 약속한다.",
+       "choices": [
+        {
+         "id": "fair",
+         "text": "저울을 바로 달고 제값만 받는다 — '신용이 밑천입니다'",
+         "effects": {
+          "knowledge_xp": {
+           "sang": 40
+          }
+         }
+        },
+        {
+         "id": "bargain",
+         "text": "뭍 시세를 짚어 웃돈을 받아 낸다",
+         "effects": {
+          "money_mult": 1.3
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "chapter": 2,
+     "tier": 2,
+     "title": "뭍으로 가는 배",
+     "stages": [
+      {
+       "node": "ND_17_FORT_HWABUKJIN",
+       "action": "deliver",
+       "text": "화북포에 뭍으로 가는 상선이 닿았다. 객주의 첫 짐으로 제주 말총을 싣는다(말총 10).",
+       "item": "sp_jeju_malchong",
+       "qty": 10
+      },
+      {
+       "node": "ND_17_TOWN_SEOGWIPO",
+       "action": "choice",
+       "text": "서귀포 잠녀들이 딴 전복을 객주에 맡기려 한다. 관아의 진상 몫을 떼고 나면 남는 것이 없다는 하소연이다.",
+       "choices": [
+        {
+         "id": "share",
+         "text": "잠녀 몫을 먼저 셈해 주고 남은 것으로 이문을 본다",
+         "effects": {
+          "knowledge_xp": {
+           "sang": 40,
+           "nong": 20
+          }
+         }
+        },
+        {
+         "id": "stock",
+         "text": "전복을 모두 사들여 뭍에 비싸게 판다",
+         "effects": {
+          "money_mult": 1.3
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "chapter": 3,
+     "tier": 3,
+     "title": "을묘년 흉년",
+     "stages": [
+      {
+       "node": "ND_08_CITY_NAJUMOK",
+       "action": "choice",
+       "text": "을묘년(1795), 태풍과 가뭄으로 제주에 굶주림이 번진다. 만덕은 평생 모은 재산을 들고 나주 영산창으로 건너왔다. 쌀을 얼마나 살까?",
+       "choices": [
+        {
+         "id": "all",
+         "text": "객주 재산을 모두 털어 쌀을 산다",
+         "effects": {
+          "knowledge_xp": {
+           "sang": 60
+          }
+         }
+        },
+        {
+         "id": "part",
+         "text": "객주를 이어 갈 밑천은 남긴다",
+         "effects": {
+          "money_mult": 1.2
+         }
+        }
+       ]
+      },
+      {
+       "node": "ND_08_TOWN_HAENAM",
+       "action": "talk",
+       "text": "해남 포구. 사공들이 풍랑을 걱정한다. '섬이 굶는데 바람을 기다릴 수 있소.' 만덕은 쌀배를 띄운다."
+      },
+      {
+       "node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+       "action": "deliver",
+       "text": "제주목 관덕정 앞에 구휼미를 푼다(백미 3섬). 사람들이 줄지어 만덕의 이름을 부른다.",
+       "item": "food_rice",
+       "qty": 3
+      }
+     ]
+    },
+    {
+     "chapter": 4,
+     "tier": 4,
+     "title": "바다를 건너는 부름",
+     "stages": [
+      {
+       "node": "ND_08_TOWN_HAENAM",
+       "action": "talk",
+       "text": "목사가 전한다. '임금께서 소원을 물으셨다.' 만덕이 답한다. '한양 대궐을 우러르고 금강산 일만이천 봉을 보는 것입니다.' 제주 여인은 뭍에 나갈 수 없다는 출륙금지령이 있었으나, 임금이 특별히 허락했다."
+      },
+      {
+       "node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+       "action": "talk",
+       "text": "전라감영이 역마와 숙식을 내어 준다. 감사가 웃는다. '섬 객주가 감영 손님이 되었구려.'"
+      },
+      {
+       "node": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+       "action": "minigame",
+       "text": "충청감영에서 구휼 장부를 셈해 올린다(주판 산학).",
+       "minigame": "mg_abacus"
+      }
+     ]
+    },
+    {
+     "chapter": 5,
+     "tier": 5,
+     "title": "일만이천 봉",
+     "stages": [
+      {
+       "node": "ND_02_CITY_HANYANGGYEONGJO",
+       "action": "talk",
+       "text": "평민은 임금을 뵐 수 없는 법. 조정은 만덕에게 내의원 의녀반수(醫女班首) 벼슬을 내려 대궐에 들게 한다. 정조가 말한다. '네가 한 일은 사내도 못 할 일이다.'"
+      },
+      {
+       "node": "ND_01_CITY_GAESEONGBU",
+       "action": "choice",
+       "text": "금강산 가는 길에 들른 개성. 송상(개성상인)들이 섬 객주가 쓰는 장부법을 묻는다.",
+       "choices": [
+        {
+         "id": "teach",
+         "text": "섬과 뭍의 시세를 한 장에 맞춰 적는 법을 가르쳐 준다",
+         "effects": {
+          "knowledge_xp": {
+           "sang": 80
+          }
+         }
+        },
+        {
+         "id": "learn",
+         "text": "송상의 사개치부법(四介治簿法)을 배운다",
+         "effects": {
+          "knowledge_xp": {
+           "sa": 80
+          }
+         }
+        }
+       ]
+      },
+      {
+       "node": "ND_03_CITY_CHEOLWONDOHOBU",
+       "action": "talk",
+       "text": "철원을 지나 단발령에 오르자 구름 사이로 금강산 봉우리가 펼쳐진다. 재상 채제공은 훗날 이 여정을 「만덕전」에 적었다."
+      },
+      {
+       "node": "ND_03_SCENIC_GEUMGANGSANGURYONGPOK",
+       "action": "talk",
+       "text": "구룡폭 앞. '섬 여인이 금강산을 본 것은 만덕이 처음'이라 했다. 만덕은 바다 쪽을 돌아본다. 객주의 문은 여전히 열려 있다."
+      }
+     ]
+    }
+   ],
+   "generated": "content2"
   }
  ]
 }

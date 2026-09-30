@@ -723,7 +723,8 @@
    "geo_shift_km": 1.58,
    "border_to": [
     "MAP_02"
-   ]
+   ],
+   "heritage": "her_145"
   },
   {
    "id": "ND_01_TOWN_JANGDAN",
@@ -748,7 +749,8 @@
     126.665
    ],
    "geo_conf": "B",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_146"
   },
   {
    "id": "ND_01_TOWN_YEONCHEON",
@@ -776,7 +778,8 @@
    "geo_shift_km": 0.02,
    "border_to": [
     "MAP_03"
-   ]
+   ],
+   "heritage": "her_147"
   },
   {
    "id": "ND_01_TOWN_GYODONG",
@@ -805,7 +808,8 @@
    "geo_shift_km": 0.02,
    "border_to": [
     "MAP_12"
-   ]
+   ],
+   "heritage": "her_148"
   },
   {
    "id": "ND_01_STATION_CHEONGGYOYEOK",
@@ -952,7 +956,8 @@
     126.785
    ],
    "geo_conf": "B",
-   "geo_shift_km": 1.37
+   "geo_shift_km": 1.37,
+   "heritage": "her_149"
   },
   {
    "id": "ND_01_FORT_DEOKJINJIN",
@@ -1131,7 +1136,8 @@
     127.279
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_150"
   },
   {
    "id": "ND_02_TOWN_NAMYANG",
@@ -1160,7 +1166,8 @@
    "geo_shift_km": 0.01,
    "border_to": [
     "MAP_06"
-   ]
+   ],
+   "heritage": "her_151"
   },
   {
    "id": "ND_02_TOWN_YEOJU",
@@ -1189,7 +1196,8 @@
    "border_to": [
     "MAP_04",
     "MAP_05"
-   ]
+   ],
+   "heritage": "her_152"
   },
   {
    "id": "ND_02_TOWN_ICHEON",
@@ -1214,7 +1222,8 @@
     127.435
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.45
+   "geo_shift_km": 0.45,
+   "heritage": "her_153"
   },
   {
    "id": "ND_02_TOWN_YANGPYEONG",
@@ -1242,7 +1251,8 @@
    "geo_shift_km": 0.02,
    "border_to": [
     "MAP_03"
-   ]
+   ],
+   "heritage": "her_154"
   },
   {
    "id": "ND_02_STATION_YANGJAEYEOK",
@@ -1555,7 +1565,8 @@
     127.99
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.04
+   "geo_shift_km": 0.04,
+   "heritage": "her_155"
   },
   {
    "id": "ND_03_TOWN_HWACHEON",
@@ -1580,7 +1591,8 @@
     127.708
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.04
+   "geo_shift_km": 0.04,
+   "heritage": "her_156"
   },
   {
    "id": "ND_03_TOWN_INJE",
@@ -1608,7 +1620,8 @@
    "geo_shift_km": 0.02,
    "border_to": [
     "MAP_04"
-   ]
+   ],
+   "heritage": "her_157"
   },
   {
    "id": "ND_03_TOWN_HOEYANG",
@@ -1633,7 +1646,8 @@
     127.61
    ],
    "geo_conf": "B",
-   "geo_shift_km": 0.02
+   "geo_shift_km": 0.02,
+   "heritage": "her_158"
   },
   {
    "id": "ND_03_TOWN_TONGCHEON",
@@ -1662,7 +1676,8 @@
    "geo_shift_km": 0.01,
    "border_to": [
     "MAP_15"
-   ]
+   ],
+   "heritage": "her_159"
   },
   {
    "id": "ND_03_STATION_YEONCHEONYEOK",
@@ -1987,7 +2002,8 @@
     129.4
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.03
+   "geo_shift_km": 0.03,
+   "heritage": "her_160"
   },
   {
    "id": "ND_04_TOWN_PYEONGCHANG",
@@ -2012,7 +2028,8 @@
     128.39
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.04
+   "geo_shift_km": 0.04,
+   "heritage": "her_161"
   },
   {
    "id": "ND_04_TOWN_YEONGWOL",
@@ -2040,7 +2057,8 @@
    "geo_shift_km": 0.02,
    "border_to": [
     "MAP_09"
-   ]
+   ],
+   "heritage": "her_162"
   },
   {
    "id": "ND_04_TOWN_JEONGSEON",
@@ -2065,7 +2083,8 @@
     128.661
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.03
+   "geo_shift_km": 0.03,
+   "heritage": "her_163"
   },
   {
    "id": "ND_04_STATION_ANHEUNGYEOK",
@@ -2357,7 +2376,8 @@
    "border_to": [
     "MAP_04",
     "MAP_09"
-   ]
+   ],
+   "heritage": "her_164"
   },
   {
    "id": "ND_05_TOWN_JECHEON",
@@ -2382,7 +2402,8 @@
     128.191
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.0
+   "geo_shift_km": 0.0,
+   "heritage": "her_165"
   },
   {
    "id": "ND_05_TOWN_YEONGDONG",
@@ -2407,7 +2428,8 @@
     127.783
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_166"
   },
   {
    "id": "ND_05_TOWN_BOEUN",
@@ -2432,7 +2454,8 @@
     127.729
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.03
+   "geo_shift_km": 0.03,
+   "heritage": "her_167"
   },
   {
    "id": "ND_05_TOWN_OKCHEON",
@@ -2457,7 +2480,8 @@
     127.571
    ],
    "geo_conf": "A",
-   "geo_shift_km": 2.0
+   "geo_shift_km": 2.0,
+   "heritage": "her_168"
   },
   {
    "id": "ND_05_STATION_GAHEUNGYEOK",
@@ -2753,7 +2777,8 @@
    "geo_shift_km": 0.02,
    "border_to": [
     "MAP_07"
-   ]
+   ],
+   "heritage": "her_169"
   },
   {
    "id": "ND_06_TOWN_HAEMI",
@@ -2778,7 +2803,8 @@
     126.548
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_170"
   },
   {
    "id": "ND_06_TOWN_TAEAN",
@@ -2804,7 +2830,8 @@
     126.298
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.02
+   "geo_shift_km": 0.02,
+   "heritage": "her_171"
   },
   {
    "id": "ND_06_TOWN_ASAN",
@@ -2829,7 +2856,8 @@
     127.0
    ],
    "geo_conf": "B",
-   "geo_shift_km": 2.05
+   "geo_shift_km": 2.05,
+   "heritage": "her_172"
   },
   {
    "id": "ND_06_TOWN_CHEONAN",
@@ -2857,7 +2885,8 @@
    "geo_shift_km": 0.0,
    "border_to": [
     "MAP_02"
-   ]
+   ],
+   "heritage": "her_173"
   },
   {
    "id": "ND_06_STATION_IINYEOK",
@@ -3195,7 +3224,8 @@
    "geo_shift_km": 0.02,
    "border_to": [
     "MAP_08"
-   ]
+   ],
+   "heritage": "her_174"
   },
   {
    "id": "ND_07_TOWN_IKSAN",
@@ -3223,7 +3253,8 @@
    "geo_shift_km": 0.02,
    "border_to": [
     "MAP_06"
-   ]
+   ],
+   "heritage": "her_175"
   },
   {
    "id": "ND_07_TOWN_JEONGEUP",
@@ -3248,7 +3279,8 @@
     126.856
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_176"
   },
   {
    "id": "ND_07_TOWN_MUJU",
@@ -3273,7 +3305,8 @@
     127.661
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.02
+   "geo_shift_km": 0.02,
+   "heritage": "her_177"
   },
   {
    "id": "ND_07_TOWN_JINAN",
@@ -3298,7 +3331,8 @@
     127.425
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_178"
   },
   {
    "id": "ND_07_STATION_SAMRYEYEOK",
@@ -3674,7 +3708,8 @@
     126.7
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.03
+   "geo_shift_km": 0.03,
+   "heritage": "her_179"
   },
   {
    "id": "ND_08_TOWN_HAENAM",
@@ -3700,7 +3735,8 @@
     126.599
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.04
+   "geo_shift_km": 0.04,
+   "heritage": "her_180"
   },
   {
    "id": "ND_08_TOWN_DAMYANG",
@@ -3728,7 +3764,8 @@
    "geo_shift_km": 0.02,
    "border_to": [
     "MAP_07"
-   ]
+   ],
+   "heritage": "her_181"
   },
   {
    "id": "ND_08_TOWN_JINDO",
@@ -3754,7 +3791,8 @@
     126.264
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_182"
   },
   {
    "id": "ND_08_STATION_CHEONGAMYEOK",
@@ -4099,7 +4137,8 @@
    "geo_shift_km": 4.91,
    "border_to": [
     "MAP_05"
-   ]
+   ],
+   "heritage": "her_183"
   },
   {
    "id": "ND_09_TOWN_YEONGJU",
@@ -4127,7 +4166,8 @@
    "geo_shift_km": 0.31,
    "border_to": [
     "MAP_04"
-   ]
+   ],
+   "heritage": "her_184"
   },
   {
    "id": "ND_09_TOWN_YEONGCHEON",
@@ -4152,7 +4192,8 @@
     128.938
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.08
+   "geo_shift_km": 0.08,
+   "heritage": "her_185"
   },
   {
    "id": "ND_09_TOWN_UISEONG",
@@ -4177,7 +4218,8 @@
     128.697
    ],
    "geo_conf": "A",
-   "geo_shift_km": 1.29
+   "geo_shift_km": 1.29,
+   "heritage": "her_186"
   },
   {
    "id": "ND_09_TOWN_CHEONGSONG",
@@ -4202,7 +4244,8 @@
     129.057
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.04
+   "geo_shift_km": 0.04,
+   "heritage": "her_187"
   },
   {
    "id": "ND_09_STATION_YUGOKYEOK",
@@ -4601,7 +4644,8 @@
     128.88
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.03
+   "geo_shift_km": 0.03,
+   "heritage": "her_188"
   },
   {
    "id": "ND_10_TOWN_MILYANG",
@@ -4626,7 +4670,8 @@
     128.75
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.03
+   "geo_shift_km": 0.03,
+   "heritage": "her_189"
   },
   {
    "id": "ND_10_TOWN_HAPCHEON",
@@ -4651,7 +4696,8 @@
     128.166
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.03
+   "geo_shift_km": 0.03,
+   "heritage": "her_190"
   },
   {
    "id": "ND_10_TOWN_NAMHAE",
@@ -4680,7 +4726,8 @@
    "geo_shift_km": 0.02,
    "border_to": [
     "MAP_08"
-   ]
+   ],
+   "heritage": "her_191"
   },
   {
    "id": "ND_10_STATION_BEOMEOYEOK",
@@ -4993,7 +5040,8 @@
     126.2
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.02
+   "geo_shift_km": 0.02,
+   "heritage": "her_192"
   },
   {
    "id": "ND_11_TOWN_PYEONGSAN",
@@ -5018,7 +5066,8 @@
     126.4
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.94
+   "geo_shift_km": 0.94,
+   "heritage": "her_193"
   },
   {
    "id": "ND_11_TOWN_SUAN",
@@ -5043,7 +5092,8 @@
     126.38
    ],
    "geo_conf": "B",
-   "geo_shift_km": 0.02
+   "geo_shift_km": 0.02,
+   "heritage": "her_194"
   },
   {
    "id": "ND_11_TOWN_GOKSAN",
@@ -5071,7 +5121,8 @@
    "geo_shift_km": 0.01,
    "border_to": [
     "MAP_03"
-   ]
+   ],
+   "heritage": "her_195"
   },
   {
    "id": "ND_11_STATION_GEUMGYOYEOK",
@@ -5338,7 +5389,8 @@
     125.36
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.02
+   "geo_shift_km": 0.02,
+   "heritage": "her_196"
   },
   {
    "id": "ND_12_TOWN_JANGYEON",
@@ -5364,7 +5416,8 @@
     125.1
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.02
+   "geo_shift_km": 0.02,
+   "heritage": "her_197"
   },
   {
    "id": "ND_12_TOWN_SONGHWA",
@@ -5389,7 +5442,8 @@
     125.25
    ],
    "geo_conf": "B",
-   "geo_shift_km": 0.03
+   "geo_shift_km": 0.03,
+   "heritage": "her_198"
   },
   {
    "id": "ND_12_TOWN_BAECHEON",
@@ -5418,7 +5472,8 @@
    "border_to": [
     "MAP_01",
     "MAP_11"
-   ]
+   ],
+   "heritage": "her_199"
   },
   {
    "id": "ND_12_STATION_ANGOKYEOK",
@@ -5712,7 +5767,8 @@
     125.4
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.02
+   "geo_shift_km": 0.02,
+   "heritage": "her_200"
   },
   {
    "id": "ND_13_TOWN_SUKCHEON",
@@ -5737,7 +5793,8 @@
     125.65
    ],
    "geo_conf": "B",
-   "geo_shift_km": 5.23
+   "geo_shift_km": 5.23,
+   "heritage": "her_201"
   },
   {
    "id": "ND_13_TOWN_SUNCHEON",
@@ -5762,7 +5819,8 @@
     125.93
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.03
+   "geo_shift_km": 0.03,
+   "heritage": "her_202"
   },
   {
    "id": "ND_13_TOWN_GANGSEO",
@@ -5787,7 +5845,8 @@
     125.51
    ],
    "geo_conf": "B",
-   "geo_shift_km": 2.45
+   "geo_shift_km": 2.45,
+   "heritage": "her_203"
   },
   {
    "id": "ND_13_TOWN_SEONGCHEON",
@@ -5816,7 +5875,8 @@
    "border_to": [
     "MAP_11",
     "MAP_15"
-   ]
+   ],
+   "heritage": "her_204"
   },
   {
    "id": "ND_13_STATION_DAEDONGYEOK",
@@ -6124,7 +6184,8 @@
     124.92
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.05
+   "geo_shift_km": 0.05,
+   "heritage": "her_205"
   },
   {
    "id": "ND_14_TOWN_JEONGJU",
@@ -6149,7 +6210,8 @@
     125.2
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.03
+   "geo_shift_km": 0.03,
+   "heritage": "her_206"
   },
   {
    "id": "ND_14_TOWN_SAKJU",
@@ -6174,7 +6236,8 @@
     125.03
    ],
    "geo_conf": "B",
-   "geo_shift_km": 0.05
+   "geo_shift_km": 0.05,
+   "heritage": "her_207"
   },
   {
    "id": "ND_14_TOWN_GANGGYE",
@@ -6199,7 +6262,8 @@
     126.6
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.0
+   "geo_shift_km": 0.0,
+   "heritage": "her_208"
   },
   {
    "id": "ND_14_TOWN_NYEONGWON",
@@ -6227,7 +6291,8 @@
    "geo_shift_km": 0.01,
    "border_to": [
     "MAP_15"
-   ]
+   ],
+   "heritage": "her_209"
   },
   {
    "id": "ND_14_STATION_APROKCHAM",
@@ -6376,7 +6441,8 @@
     124.87
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_210"
   },
   {
    "id": "ND_14_BEACON_UIJUBONGSU",
@@ -6494,7 +6560,8 @@
     127.39
    ],
    "geo_conf": "A",
-   "geo_shift_km": 7.48
+   "geo_shift_km": 7.48,
+   "heritage": "her_211"
   },
   {
    "id": "ND_15_TOWN_YEONGHEUNG",
@@ -6523,7 +6590,8 @@
    "border_to": [
     "MAP_13",
     "MAP_14"
-   ]
+   ],
+   "heritage": "her_212"
   },
   {
    "id": "ND_15_TOWN_GOWON",
@@ -6548,7 +6616,8 @@
     127.25
    ],
    "geo_conf": "A",
-   "geo_shift_km": 8.93
+   "geo_shift_km": 8.93,
+   "heritage": "her_213"
   },
   {
    "id": "ND_15_TOWN_DEOKWON",
@@ -6573,7 +6642,8 @@
     127.38
    ],
    "geo_conf": "B",
-   "geo_shift_km": 6.85
+   "geo_shift_km": 6.85,
+   "heritage": "her_214"
   },
   {
    "id": "ND_15_TOWN_MUNCHEON",
@@ -6598,7 +6668,8 @@
     127.35
    ],
    "geo_conf": "A",
-   "geo_shift_km": 8.05
+   "geo_shift_km": 8.05,
+   "heritage": "her_215"
   },
   {
    "id": "ND_15_STATION_MANRYEONGYEOK",
@@ -6884,7 +6955,8 @@
     129.75
    ],
    "geo_conf": "A",
-   "geo_shift_km": 8.88
+   "geo_shift_km": 8.88,
+   "heritage": "her_216"
   },
   {
    "id": "ND_16_TOWN_ONSEONG",
@@ -6909,7 +6981,8 @@
     129.99
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.04
+   "geo_shift_km": 0.04,
+   "heritage": "her_217"
   },
   {
    "id": "ND_16_TOWN_JONGSEONG",
@@ -6934,7 +7007,8 @@
     129.93
    ],
    "geo_conf": "B",
-   "geo_shift_km": 0.07
+   "geo_shift_km": 0.07,
+   "heritage": "her_218"
   },
   {
    "id": "ND_16_TOWN_GYEONGWON",
@@ -6959,7 +7033,8 @@
     130.29
    ],
    "geo_conf": "B",
-   "geo_shift_km": 0.05
+   "geo_shift_km": 0.05,
+   "heritage": "her_219"
   },
   {
    "id": "ND_16_TOWN_BURYEONG",
@@ -6984,7 +7059,8 @@
     129.72
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.05
+   "geo_shift_km": 0.05,
+   "heritage": "her_220"
   },
   {
    "id": "ND_16_STATION_PUNGSANCHAM",
@@ -7214,7 +7290,8 @@
     126.253
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_221"
   },
   {
    "id": "ND_17_TOWN_JEONGUIHYEON",
@@ -7239,7 +7316,8 @@
     126.8
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_222"
   },
   {
    "id": "ND_17_TOWN_AEWOL",
@@ -7265,7 +7343,8 @@
     126.33
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_223"
   },
   {
    "id": "ND_17_TOWN_JOCHEON",
@@ -7291,7 +7370,8 @@
     126.634
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_224"
   },
   {
    "id": "ND_17_TOWN_SEOGWIPO",
@@ -7317,7 +7397,8 @@
     126.56
    ],
    "geo_conf": "A",
-   "geo_shift_km": 0.01
+   "geo_shift_km": 0.01,
+   "heritage": "her_225"
   },
   {
    "id": "ND_17_STATION_SAMYANGCHAM",

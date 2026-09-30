@@ -1162,6 +1162,339 @@
     ],
     "allowed_time": "ANY"
    }
+  },
+  {
+   "id": "en_jeju_dochaebi",
+   "name": "제주 도채비",
+   "kind": "yokai",
+   "yu_bul_seon_type": "none",
+   "tier": 1,
+   "enemy_tier": "NORMAL",
+   "hp": 55,
+   "atk": 13,
+   "def": 7,
+   "speed": 92,
+   "combat_scale": 1.2,
+   "base_ap": 3,
+   "element": "fire",
+   "res": {},
+   "flee_rate": 0.9,
+   "capturable": true,
+   "skills": [
+    "sk_en_bite"
+   ],
+   "lore_tag": "[설화] 제주 도깨비 '도채비'",
+   "drops": [
+    {
+     "id": "food_songgi",
+     "rate": 0.3
+    }
+   ],
+   "spawn_conditions": {
+    "regions": [
+     "MAP_17"
+    ],
+    "terrains": [
+     "road",
+     "mountain",
+     "trail"
+    ],
+    "allowed_time": "NIGHT_ONLY"
+   },
+   "capture_profile": {
+    "dupes_to_upgrade": 2,
+    "companion_bonuses": {
+     "knowledge_add": {},
+     "upkeep": {
+      "type": "wage",
+      "cost": 0
+     },
+     "carry": 8
+    }
+   },
+   "generated": "content2"
+  },
+  {
+   "id": "en_jeju_yeonggam",
+   "name": "영감(도깨비신)",
+   "kind": "yokai",
+   "yu_bul_seon_type": "none",
+   "tier": 2,
+   "enemy_tier": "ELITE",
+   "hp": 190,
+   "atk": 26,
+   "def": 18,
+   "speed": 96,
+   "combat_scale": 1.35,
+   "base_ap": 3,
+   "element": "fire",
+   "res": {},
+   "flee_rate": 0.9,
+   "capturable": true,
+   "skills": [
+    "sk_en_bite",
+    "sk_en_fox_charm"
+   ],
+   "lore_tag": "[설화] 제주 영감놀이의 도깨비신",
+   "drops": [
+    {
+     "id": "sp_jeju_malchong",
+     "rate": 0.4
+    }
+   ],
+   "spawn_conditions": {
+    "regions": [
+     "MAP_17"
+    ],
+    "terrains": [
+     "road",
+     "mountain"
+    ],
+    "allowed_time": "NIGHT_ONLY"
+   },
+   "capture_profile": {
+    "dupes_to_upgrade": 2,
+    "companion_bonuses": {
+     "knowledge_add": {},
+     "upkeep": {
+      "type": "wage",
+      "cost": 0
+     },
+     "carry": 10
+    }
+   },
+   "generated": "content2"
+  },
+  {
+   "id": "en_hwangdangseon",
+   "name": "황당선 선원",
+   "kind": "human",
+   "yu_bul_seon_type": "none",
+   "tier": 2,
+   "enemy_tier": "NORMAL",
+   "hp": 140,
+   "atk": 24,
+   "def": 12,
+   "speed": 92,
+   "combat_scale": 1.2,
+   "base_ap": 3,
+   "element": "water",
+   "res": {},
+   "flee_rate": 0.9,
+   "capturable": true,
+   "skills": [
+    "sk_en_bandit_rush",
+    "sk_en_bleed_slash"
+   ],
+   "lore_tag": "[역사] 19세기 연해의 이양선·황당선",
+   "drops": [
+    {
+     "id": "mat_copper",
+     "rate": 0.3
+    }
+   ],
+   "spawn_conditions": {
+    "regions": [
+     "MAP_06",
+     "MAP_12",
+     "MAP_13",
+     "MAP_17"
+    ],
+    "terrains": [
+     "water",
+     "road"
+    ],
+    "allowed_time": "ANY"
+   },
+   "capture_profile": {
+    "dupes_to_upgrade": 2,
+    "companion_bonuses": {
+     "knowledge_add": {},
+     "upkeep": {
+      "type": "wage",
+      "cost": 0
+     },
+     "carry": 10
+    }
+   },
+   "generated": "content2"
+  },
+  {
+   "id": "en_majeok",
+   "name": "북방 마적",
+   "kind": "human",
+   "yu_bul_seon_type": "none",
+   "tier": 3,
+   "enemy_tier": "NORMAL",
+   "hp": 280,
+   "atk": 38,
+   "def": 24,
+   "speed": 104,
+   "combat_scale": 1.25,
+   "base_ap": 3,
+   "element": "metal",
+   "res": {},
+   "flee_rate": 0.9,
+   "capturable": true,
+   "skills": [
+    "sk_en_bandit_rush",
+    "sk_en_bleed_slash"
+   ],
+   "lore_tag": "[역사] 두만강·압록강 너머의 마적 떼",
+   "drops": [
+    {
+     "id": "mat_cowhide",
+     "rate": 0.5
+    },
+    {
+     "id": "mat_iron",
+     "rate": 0.3
+    }
+   ],
+   "spawn_conditions": {
+    "regions": [
+     "MAP_14",
+     "MAP_15",
+     "MAP_16"
+    ],
+    "terrains": [
+     "road",
+     "mountain"
+    ],
+    "allowed_time": "ANY"
+   },
+   "capture_profile": {
+    "dupes_to_upgrade": 2,
+    "companion_bonuses": {
+     "knowledge_add": {},
+     "upkeep": {
+      "type": "wage",
+      "cost": 0
+     },
+     "carry": 12
+    }
+   },
+   "generated": "content2"
+  },
+  {
+   "id": "en_boar_herd",
+   "name": "멧돼지 떼",
+   "kind": "beast",
+   "yu_bul_seon_type": "none",
+   "tier": 2,
+   "enemy_tier": "NORMAL",
+   "hp": 160,
+   "atk": 25,
+   "def": 14,
+   "speed": 90,
+   "combat_scale": 1.2,
+   "base_ap": 3,
+   "element": "none",
+   "res": {},
+   "flee_rate": 0.9,
+   "capturable": true,
+   "skills": [
+    "sk_en_bite"
+   ],
+   "lore_tag": "역사",
+   "drops": [
+    {
+     "id": "food_boar",
+     "rate": 0.5
+    },
+    {
+     "id": "mat_cowhide",
+     "rate": 0.3
+    }
+   ],
+   "spawn_conditions": {
+    "regions": [
+     "*"
+    ],
+    "terrains": [
+     "mountain"
+    ],
+    "allowed_time": "ANY"
+   },
+   "capture_profile": {
+    "dupes_to_upgrade": 2,
+    "companion_bonuses": {
+     "knowledge_add": {},
+     "upkeep": {
+      "type": "wage",
+      "cost": 0
+     },
+     "carry": 14
+    }
+   },
+   "gimmicks": [
+    {
+     "type": "lure",
+     "item": "item_bait",
+     "qty": 1,
+     "result": "weaken",
+     "atk_mult": 0.8
+    }
+   ],
+   "generated": "content2"
+  },
+  {
+   "id": "en_bear",
+   "name": "반달곰",
+   "kind": "beast",
+   "yu_bul_seon_type": "none",
+   "tier": 3,
+   "enemy_tier": "NORMAL",
+   "hp": 320,
+   "atk": 40,
+   "def": 26,
+   "speed": 96,
+   "combat_scale": 1.25,
+   "base_ap": 3,
+   "element": "none",
+   "res": {},
+   "flee_rate": 0.9,
+   "capturable": true,
+   "skills": [
+    "sk_en_bite",
+    "sk_en_bleed_slash"
+   ],
+   "lore_tag": "역사",
+   "drops": [
+    {
+     "id": "food_bear",
+     "rate": 0.4
+    },
+    {
+     "id": "mat_cowhide",
+     "rate": 0.5
+    }
+   ],
+   "spawn_conditions": {
+    "regions": [
+     "MAP_03",
+     "MAP_04",
+     "MAP_14",
+     "MAP_15",
+     "MAP_16"
+    ],
+    "terrains": [
+     "mountain"
+    ],
+    "allowed_time": "ANY"
+   },
+   "capture_profile": {
+    "dupes_to_upgrade": 2,
+    "companion_bonuses": {
+     "knowledge_add": {},
+     "upkeep": {
+      "type": "wage",
+      "cost": 0
+     },
+     "carry": 18
+    }
+   },
+   "generated": "content2"
   }
  ]
 }

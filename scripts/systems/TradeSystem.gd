@@ -228,6 +228,7 @@ static func buy(entry: Dictionary, qty: int = 1) -> bool:
 		gs.equip(id, "mount")
 		gs.mount_stamina = 100.0
 	gs.note("구매: %s ×%d (−%d냥)" % [entry["name"], qty, total])
+	gs.bump("buy")
 	return true
 
 
@@ -252,6 +253,7 @@ static func sell(id: String, qty: int = 1) -> bool:
 	gs.remove_item(id, qty)
 	gs.add_money(total)
 	gs.note("매각: %s ×%d (+%d냥)" % [DataDB.display_name(id), qty, total])
+	gs.bump("sell")
 	var mj := String(DataDB.get_row(id).get("mojak_recipe", ""))
 	if mj != "" and not (mj in gs.mojak_unlocked):
 		gs.mojak_unlocked.append(mj)
@@ -281,6 +283,7 @@ static func accept_trade(q: Dictionary) -> bool:
 	if quest_state(q) != "":
 		return false
 	gs.trade_cargo[q["id"]] = "accepted"
+	gs.bump("trade_accept")
 	if q.get("consign", false):  # 보부상 위탁: 화주가 짐을 맡김(배낭 무게에 포함, 되팔 수 없음)
 		gs.note("위탁 짐 인수: %s ×%d (무게 %.1f)" % [DataDB.display_name(String(q["item"])), int(q["qty"]), gs.item_weight(String(q["item"])) * int(q["qty"])])
 	gs.note("무역 수락: %s — %s ×%d → %s" % [q["name"], DataDB.display_name(String(q["item"])), int(q["qty"]), DataDB.display_name(String(q["to"]))])
@@ -305,6 +308,7 @@ static func deliver_trade(q: Dictionary) -> bool:
 	var rep := gs.add_reputation(Balance.quest_reward(int(q.get("tier", 1)), "trade", "rep"), DataDB.region_of_node(String(q["to"])))
 	gs.add_knowledge_xp("sang", int(DataDB.classes_doc.get("knowledge", {}).get("xp_sources", {}).get("trade_complete_sang", 30)))
 	gs.trade_cargo[q["id"]] = "done@%d" % market_cycle_id()
+	gs.bump("trade_done")
 	gs.note("무역 완료: +%d냥, 명성 +%d" % [pay, rep])
 	var rw := String(q.get("reward_item", ""))
 	if rw != "" and not gs.has_item(rw):

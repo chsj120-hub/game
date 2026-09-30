@@ -60,8 +60,10 @@ static func check_triggers() -> void:
 		if String(t.get("time", "")) == "NIGHT_ONLY" and not gs.is_night():
 			continue
 		start(eid)
-	for m in DataDB.main_scenarios():
-		if String(m.get("class", "")) == gs.class_id and not gs.events_state.has(m["id"]):
+	for m in DataDB.main_scenarios():  # 시나리오 시작이면 그 시나리오 메인만, 아니면 클래스 기본 메인
+		var sc := String(m.get("scenario", ""))
+		var mine := sc == gs.scenario_id if gs.scenario_id != "" else (sc == "" and String(m.get("class", "")) == gs.class_id)
+		if mine and not gs.events_state.has(m["id"]):
 			start(String(m["id"]))
 
 
@@ -135,6 +137,7 @@ static func resolve_stage(eid: String, result: Dictionary) -> void:
 					gs.add_knowledge_xp(k, int(fx["knowledge_xp"][k]))
 				gs.events_state[eid]["money_mult"] = float(fx.get("money_mult", 1.0))
 	gs.events_state[eid]["stage"] = int(gs.events_state[eid]["stage"]) + 1
+	gs.bump("event_stage")
 	if current_stage(eid).is_empty():
 		complete(eid)
 	else:

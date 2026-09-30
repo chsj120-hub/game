@@ -175,7 +175,8 @@
    "unlocks": [
     "hr_cheongsim",
     "hr_gongjin",
-    "hr_uhwang"
+    "hr_uhwang",
+    "hr_jakseol"
    ]
   },
   {
@@ -390,7 +391,9 @@
      }
     ]
    },
-   "unlocks": []
+   "unlocks": [
+    "eq_w3_dangpa"
+   ]
   },
   {
    "id": "bk_mar_shield",
@@ -405,7 +408,9 @@
      }
     ]
    },
-   "unlocks": []
+   "unlocks": [
+    "eq_c3_deungpae"
+   ]
   },
   {
    "id": "bk_mar_flail",
@@ -420,7 +425,9 @@
      }
     ]
    },
-   "unlocks": []
+   "unlocks": [
+    "eq_w3_pyeongon"
+   ]
   }
  ]
 }

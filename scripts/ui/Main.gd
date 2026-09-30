@@ -24,6 +24,10 @@ var traveler: TravelController
 var fac_state: int = FacState.CLOSED
 var fac_current: String = ""
 var in_battle := false
+var tut_panel: PanelContainer
+var tut_title: Label
+var tut_body: Label
+var tut_next: Button
 
 
 func _ready() -> void:
@@ -74,6 +78,9 @@ func _ready() -> void:
 	dash.command.connect(_on_command)
 	battle.battle_finished.connect(_on_battle_finished)
 	GameState.rank_up.connect(func(_r): field.queue_redraw())
+	_build_tutorial_panel()
+	GameState.stats_changed.connect(_refresh_tutorial)
+	Settings.changed.connect(func(_k): _refresh_tutorial())
 	_title_screen()
 
 
@@ -163,11 +170,16 @@ func _menu_back() -> void:
 
 # ================================================================ 시작 화면
 func _title_screen() -> void:
-	var entries := [{"text": "《대동여지도 어드벤처: 삼한팔도 유람기》 — 직업을 선택하세요"}]
+	var entries := [{"text": "《대동여지도 어드벤처: 삼한팔도 유람기》 — 시나리오 또는 직업을 선택하세요"}]
 	if GameState.has_save():
 		entries.append({"text": "▶ 이어하기 (마지막 주막)", "cb": _continue_game})
+	for sc in DataDB.table("23_tutorial.json", "scenarios"):
+		entries.append({"text": "★ %s" % sc["name"], "hint": String(sc.get("desc", "")), "cb": _new_game.bind(String(sc["class"]), String(sc["id"]))})
+	entries.append({"text": "── 본편: 한양에서 시작 (직업 선택)"})
 	for c in DataDB.table("19_classes_knowledge.json", "classes"):
 		entries.append({"text": "[%s] %s" % [c["name"], c.get("desc", "")], "hint": "시작 엽전 %d냥" % int(c.get("start", {}).get("money", 0)), "cb": _new_game.bind(String(c["id"]))})
+	entries.append({"text": "⚙ 설정", "cb": _open_settings.bind(true), "keep": true})
+	entries.append({"text": "? 도움말", "cb": _open_help.bind(true), "keep": true})
 	open_menu("새 여정", entries)
 
 
@@ -176,16 +188,26 @@ func _continue_game() -> void:
 	_after_start()
 
 
-func _new_game(cls: String) -> void:
-	GameState.new_game(cls)
+func _new_game(cls: String, scenario := "") -> void:
+	GameState.new_game(cls, scenario)
 	SideSystems.refresh_bounties()
 	_after_start()
 
 
 func _after_start() -> void:
-	GameState.note("한양 경조에서 여정을 시작합니다. [지도]로 목적지를 정하고, [거점 시설]에서 주막·관아·장터를 이용하세요.")
-	GameState.note("저장은 대도시 주막에서만 가능합니다. 이동 중 Space = 긴급 정지, M = 지도.")
+	var gs := GameState
+	if gs.scenario_id != "":
+		var sc := DataDB.get_row(gs.scenario_id)
+		gs.note("【%s】 %s에서 %s의 이야기가 시작됩니다." % [sc.get("name", ""), DataDB.display_name(gs.current_node), gs.hero_name])
+		var m := DataDB.get_row(String(sc.get("main", "")))
+		if m.has("era_note"):
+			gs.note("※ " + String(m["era_note"]))
+	else:
+		gs.note("한양 경조에서 여정을 시작합니다. [지도]로 목적지를 정하고, [거점 시설]에서 주막·관아·장터를 이용하세요.")
+	gs.note("저장은 대도시 주막에서만 가능합니다. 이동 중 Space = 긴급 정지, M = 지도. 막히면 [도움말].")
 	EventSystem.check_triggers()
+	field.queue_redraw()
+	_refresh_tutorial()
 
 
 # ================================================================ 입력
@@ -200,27 +222,34 @@ func _unhandled_input(ev: InputEvent) -> void:
 			map_modal.close()
 		else:
 			map_modal.open()
+			GameState.bump("open_map")
 		get_viewport().set_input_as_handled()
 
 
 # ================================================================ 커맨드
 func _on_command(cmd: String) -> void:
-	if in_battle and not (cmd in ["codex", "knowledge"]):
+	if in_battle and not (cmd in ["codex", "knowledge", "help", "settings"]):
 		return
-	if traveler.moving and not (cmd in ["stop", "ff", "map", "codex", "knowledge", "bag"]):
+	if traveler.moving and not (cmd in ["stop", "ff", "map", "codex", "knowledge", "bag", "help", "settings"]):
 		GameState.note("행군 중입니다 — 먼저 정지(Space)하세요.")
 		return
 	match cmd:
-		"map": map_modal.open()
+		"map":
+			map_modal.open()
+			GameState.bump("open_map")
+		"help": _open_help()
+		"settings": _open_settings()
 		"bag": _open_bag()
 		"equip": _open_equip()
 		"codex": _open_codex()
 		"camp":
 			SurvivalSystem.camp()
+			GameState.bump("camp")
 		"search":
 			SideSystems.search()
 		"gather":
 			SideSystems.gather()
+			GameState.bump("gather")
 		"hunt":
 			var w := SideSystems.hunt_waves()
 			if not w.is_empty():
@@ -233,7 +262,7 @@ func _on_command(cmd: String) -> void:
 		"knowledge": _open_knowledge()
 		"stop": traveler.stop("user")
 		"ff":
-			traveler.fast_forward = float(DataDB.overview.get("movement", {}).get("fast_forward", 3.0)) if traveler.fast_forward < 1.5 else 1.0
+			traveler.fast_forward = float(Settings.get_value("fast_forward")) if traveler.fast_forward < 1.5 else 1.0
 			GameState.note("행군 배속 ×%d" % int(traveler.fast_forward))
 
 
@@ -289,6 +318,8 @@ func _on_encounter(waves: Array, near: String) -> void:
 func _open_facilities() -> void:
 	fac_state = FacState.FACILITY_LIST
 	var gs := GameState
+	gs.counters["open_facilities"] = int(gs.counters.get("open_facilities", 0)) + 1
+	_refresh_tutorial()
 	var n := DataDB.get_row(gs.current_node)
 	var entries := [{"text": "%s [%s] — %s" % [n["name"], n.get("type_label", ""), n.get("note", "")]}]
 	if n.has("anachronism"):
@@ -850,6 +881,7 @@ func _on_battle_finished(result: String, summary: Dictionary) -> void:
 			var rep := gs.add_reputation(int(summary["reputation"]), gs.current_region, true)  # 일반 처치 = 반복 원천
 			rep += gs.add_reputation(int(summary.get("rep_boss", 0)), gs.current_region)     # 보스 = 1회성, 도 명성 적립
 			gs.note("전투 보상: 명성 +%d · 엽전 +%d냥" % [rep, int(summary["money"])])
+			gs.bump("battle_win")
 			for k in summary["killed"]:
 				SideSystems.on_kill(String(k))
 			for d in summary["drops"]:
@@ -870,3 +902,114 @@ func _on_battle_finished(result: String, summary: Dictionary) -> void:
 			if inst.get("resume_travel", false):
 				traveler.resume()
 	gs.stats_changed.emit()
+
+
+
+# ================================================================ 튜토리얼 안내 창 (23 시트 · TutorialSystem)
+func _build_tutorial_panel() -> void:
+	tut_panel = PanelContainer.new()
+	tut_panel.position = Vector2(1480, 24)
+	tut_panel.custom_minimum_size = Vector2(420, 0)
+	tut_panel.add_theme_stylebox_override("panel", Assets.panel_style("modal", Color(0.14, 0.1, 0.06, 0.94), Color(0.85, 0.68, 0.35)))
+	var v := VBoxContainer.new()
+	v.add_theme_constant_override("separation", 6)
+	tut_panel.add_child(v)
+	tut_title = Label.new()
+	tut_title.add_theme_color_override("font_color", Color(1, 0.85, 0.5))
+	Assets.title(tut_title, 24)
+	v.add_child(tut_title)
+	tut_body = Label.new()
+	tut_body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	tut_body.custom_minimum_size = Vector2(400, 0)
+	tut_body.add_theme_font_size_override("font_size", 16)
+	tut_body.add_theme_color_override("font_color", Color(0.98, 0.94, 0.85))
+	v.add_child(tut_body)
+	var h := HBoxContainer.new()
+	h.add_theme_constant_override("separation", 6)
+	v.add_child(h)
+	tut_next = Button.new()
+	tut_next.text = "다음 ▶"
+	tut_next.pressed.connect(_tut_next_pressed)
+	h.add_child(tut_next)
+	var hb := Button.new()
+	hb.text = "도움말"
+	hb.pressed.connect(_open_help)
+	h.add_child(hb)
+	var sk := Button.new()
+	sk.text = "건너뛰기"
+	sk.pressed.connect(_tut_skip_pressed)
+	h.add_child(sk)
+	overlay.add_child(tut_panel)
+	tut_panel.hide()
+
+
+func _tut_next_pressed() -> void:
+	TutorialSystem.advance()
+	_refresh_tutorial()
+
+
+func _tut_skip_pressed() -> void:
+	TutorialSystem.skip_all()
+	_refresh_tutorial()
+
+
+func _refresh_tutorial() -> void:
+	if tut_panel == null:
+		return
+	TutorialSystem.check()
+	var st := TutorialSystem.current()
+	if st.is_empty() or not bool(Settings.get_value("tutorial")):
+		tut_panel.hide()
+		return
+	tut_title.text = "안내 %s · %s" % [TutorialSystem.progress_text(), st.get("title", "")]
+	tut_body.text = "%s\n\n▶ %s" % [st.get("text", ""), st.get("hint", "")]
+	tut_next.visible = String(st.get("cond", {}).get("type", "")) == "ack"
+	tut_panel.show()
+	tut_panel.move_to_front()
+
+
+# ================================================================ 도움말 (23 시트 help)
+func _open_help(from_title := false) -> void:
+	var e := [{"text": "시스템 설명 — 항목을 누르면 자세히 봅니다."}]
+	for h in DataDB.table("23_tutorial.json", "help"):
+		e.append({"text": "▸ " + String(h["title"]), "cb": _show_help.bind(String(h["id"]), from_title), "keep": true})
+	if GameState.tutorial_id != "":
+		e.append({"text": "튜토리얼 처음부터 다시 보기", "cb": _tutorial_restart})
+	if from_title:
+		e.append({"text": "← 시작 화면", "cb": _title_screen, "keep": true})
+	open_menu("도움말", e)
+
+
+func _show_help(hid: String, from_title := false) -> void:
+	var h := DataDB.get_row(hid)
+	open_menu("도움말 — " + String(h.get("title", "")), [{"text": String(h.get("text", ""))},
+		{"text": "← 도움말 목록", "cb": _open_help.bind(from_title), "keep": true}])
+
+
+# ================================================================ 설정 (Settings 자동 로드, user://settings.json)
+func _open_settings(from_title := false) -> void:
+	var e := [{"text": "설정은 게임 저장과 따로 보관됩니다. 항목을 누를 때마다 값이 바뀝니다."}]
+	for o in Settings.OPTIONS:
+		var key := String(o[0])
+		e.append({"text": "%s: %s" % [o[1], Settings.label(key)], "hint": String(o[3]), "cb": _cycle_setting.bind(key, from_title), "keep": true})
+	if not from_title:
+		e.append({"text": "이번 게임 — 자동 섭취: %s · 상위 재료 대체: %s" % ["켜짐" if GameState.auto_eat else "꺼짐", SUB_MODE_KO.get(GameState.substitute_mode, "")]})
+	e.append({"text": "기본값으로 되돌리기", "cb": _settings_reset.bind(from_title), "keep": true})
+	e.append({"text": "← 시작 화면" if from_title else "닫기", "cb": _title_screen if from_title else _close_menu, "keep": from_title})
+	open_menu("설정", e)
+
+
+func _settings_reset(from_title: bool) -> void:
+	Settings.reset()
+	_open_settings(from_title)
+
+
+func _tutorial_restart() -> void:
+	TutorialSystem.restart()
+	Settings.set_value("tutorial", true)
+	_refresh_tutorial()
+
+
+func _cycle_setting(key: String, from_title: bool) -> void:
+	Settings.cycle(key)
+	_open_settings(from_title)

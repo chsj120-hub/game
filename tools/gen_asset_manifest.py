@@ -90,6 +90,10 @@ def main():
             out.append(entry(f"res://assets/characters/hero_{cid}/{anim}.png", "sprite", f"주인공 {c['name']} {anim}", cid))
             bp("sprites", "sprite", f"hero_{cid}_{anim}", f"res://assets/characters/hero_{cid}/{anim}.png", f"{c['name']} {anim}",
                f"young Joseon {c['name']} traveller, {'walking' if anim == 'walk' else 'idle breathing'} animation", ck)
+    for sc in load("23_tutorial.json")["scenarios"]:
+        out.append(entry(sc["portrait"], "portrait", f"시나리오 주인공 {sc['hero_name']} 수묵 초상", sc["id"]))
+        bp("portraits_hero", "portrait", sc["id"], sc["portrait"], sc["hero_name"],
+           f"portrait of {sc.get('prompt_who', sc['hero_name'])}", sc.get("costume"))
     for c in load("13_companions.json")["companions"]:
         out.append(entry(f"res://assets/portraits/{c['id']}.png", "portrait", f"동료 {c['name']}", c["id"]))
         out.append(entry(f"res://assets/characters/{c['id']}/walk.png", "sprite", f"동료 {c['name']} 보행", c["id"]))

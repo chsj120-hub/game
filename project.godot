@@ -15,6 +15,7 @@ config/features=PackedStringArray("4.3", "GL Compatibility")
 DataDB="*res://scripts/autoload/DataDB.gd"
 Balance="*res://scripts/autoload/Balance.gd"
 Assets="*res://scripts/autoload/Assets.gd"
+Settings="*res://scripts/autoload/Settings.gd"
 GameState="*res://scripts/autoload/GameState.gd"
 
 [display]

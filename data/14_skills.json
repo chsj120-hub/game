@@ -1898,6 +1898,39 @@
     }
    },
    "generated": "heritage"
+  },
+  {
+   "id": "sk_mt_heonma",
+   "name": "산마장 질주",
+   "owner": "mount",
+   "target": "self",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 4,
+   "effects": {
+    "gauge_boost": 300
+   },
+   "generated": "content2"
+  },
+  {
+   "id": "sk_mt_joun",
+   "name": "세곡 방진",
+   "owner": "mount",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "def_pct": 0.1,
+     "turns": 2
+    }
+   },
+   "generated": "content2"
   }
  ]
 }

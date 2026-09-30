@@ -111,7 +111,7 @@ def _sheet_xml(rows, widths, changed=frozenset(), added_from=None):
 STYLES = ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
           f'<styleSheet xmlns="{NS["m"]}">'
           '<fonts count="2"><font><sz val="10"/><name val="맑은 고딕"/></font><font><b/><sz val="10"/><name val="맑은 고딕"/></font></fonts>'
-          '<fills count="3"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill>'
+          '<fills count="5"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill>'
           '<fill><patternFill patternType="solid"><fgColor rgb="FFDDEBF7"/></patternFill></fill>'
           '<fill><patternFill patternType="solid"><fgColor rgb="FFFFF2A8"/></patternFill></fill>'
           '<fill><patternFill patternType="solid"><fgColor rgb="FFE2EFDA"/></patternFill></fill></fills>'

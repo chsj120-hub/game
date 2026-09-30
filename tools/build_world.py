@@ -346,7 +346,15 @@ def build_sea(nodes):
 RECORD_BUFF = {  # node type → (버프 키, 등급당 값)
     "city": ("trade_price", 0.012), "fort": ("def_pct", 0.015), "temple": ("res_all", 0.01),
     "scenic": ("fatigue_gain", -0.03), "ruin": ("reputation_gain", 0.012), "stupa": ("res_all", 0.012),
+    "town": ("reputation_gain", 0.01),
 }
+JEJU_TOWN = "방사탑"   # 제주 마을 수호 돌탑(방사탑)·돌하르방
+
+
+def town_landmark(n):
+    """고을(town) 1등급 유산 이름 — 고을마다 있던 마을 수호물(장승·서낭당), 제주는 방사탑"""
+    return f"{n['name']} {JEJU_TOWN}" if n["region"] == "MAP_17" else f"{n['name']} 장승·서낭당"
+
 TOMB_ITEMS = [("accessory", "금동관"), ("weapon", "환두대도"), ("armor", "찰갑")]
 
 
@@ -363,7 +371,9 @@ def build_heritage(nodes):
         used_nodes.add(n["id"])
         n["heritage"] = c["id"]
     idx, tomb_i = len(heritage) + 1, 0
-    for n in nodes:
+    # 고을(town) 1등급 유산은 기존 유산 id(her_001~144)를 바꾸지 않도록 맨 뒤에 번호를 매긴다
+    order = [n for n in nodes if n["type"] != "town"] + [n for n in nodes if n["type"] == "town"]
+    for n in order:
         if n["id"] in used_nodes or n["type"] not in H["type_category"]:
             continue
         cat = H["type_category"][n["type"]]
@@ -373,10 +383,11 @@ def build_heritage(nodes):
         hid = f"her_{idx:03d}"
         idx += 1
         s = short(n["name"])
+        hname = town_landmark(n) if n["type"] == "town" else n["name"]
         if cat in ("architecture", "scenic"):
             key, per = RECORD_BUFF.get(n["type"], ("reputation_gain", 0.012))
             rid = f"rec_{hid}"
-            gen["records"].append({"id": rid, "name": f"《{n['name']} 답사록》", "slot": "record", "tier": tier,
+            gen["records"].append({"id": rid, "name": f"《{hname} 답사록》", "slot": "record", "tier": tier,
                                    "icon": "icon_scroll_jokja.png", "buffs": {key: round(per * tier, 3)}, "generated": "heritage"})
             if n["type"] == "scenic":
                 gen["records"][-1]["permanent_hp"] = 1
@@ -416,7 +427,7 @@ def build_heritage(nodes):
                    [{"id": "mat_celadon_clay", "qty": 3}, {"id": "mat_charcoal", "qty": 5}, {"id": "mat_lacquer", "qty": 1}]
             gen["recipes"].append({"id": reward, "name": f"【{s} 복원 비전서】", "tier": tier, "produces": spid, "facility": "gongbang",
                                    "materials": mats, "generated": "heritage"})
-        heritage.append({"id": hid, "name": n["name"], "node": n["id"], "region": n["region"], "category": cat, "tier": tier,
+        heritage.append({"id": hid, "name": hname, "node": n["id"], "region": n["region"], "category": cat, "tier": tier,
                          "reward": reward, "hidden": n["hidden"], "node_type": n["type"], "lore": n.get("lore", "역사")})
         n["heritage"] = hid
     for h in heritage:

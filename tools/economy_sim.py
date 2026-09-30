@@ -20,11 +20,44 @@ from common import load, price, quest_reward, enemy_reward, save, tier_curve
 
 OV = load("00_overview.json")
 E = OV["economy"]
-P = OV["content_plan"]
+P = dict(OV["content_plan"])
+BASIS = "plan" if "--plan" in __import__("sys").argv else "actual"
+
+
+def actual_plan():
+    """실제 데이터 개수로 콘텐츠 목록을 만든다(계획 수량 대신). 동적 원천(현상수배·처치·보스)은 계획값 유지."""
+    her = load("01_heritage.json")["heritage"]
+    eq = load("02_equipment.json")["items"]
+    mts = load("07_mounts.json")["mounts"]
+    comp = load("13_companions.json")["companions"]
+    inst = load("17_instances.json")["instances"]
+    evs = load("20_events.json")["events"]
+    tq = [q for q in load("03_specialties.json")["trade_quests"] if not q.get("repeat")]
+
+    def by_tier(rows, key="tier"):
+        c = Counter(int(r[key]) for r in rows)
+        return [c.get(t, 0) for t in TIERS]
+    out = {
+        "heritage": by_tier(her),
+        "heritage_hidden_share": round(sum(1 for h in her if h.get("hidden")) / max(1, len(her)), 3),
+        "gear_quest": by_tier([e for e in eq if e.get("acquire", {}).get("type") == "quest"]),
+        "mount_quest": by_tier([m for m in mts if m.get("acquire", {}).get("type") == "quest"]),
+        "companion": by_tier(comp, "start_tier"),
+        "companion_promo": by_tier([p for c in comp for p in c.get("promotion", [])]),
+        "instance": by_tier(inst),
+        "event": by_tier(evs),
+        "trade": by_tier(tq),
+    }
+    return out
+
+
+
 SIDE = load("22_side_systems.json")
 HER = load("01_heritage.json")["heritage"]
 NODES = load("regions.json")["nodes"]
 TIERS = [1, 2, 3, 4, 5]
+if BASIS == "actual":
+    P.update(actual_plan())
 D = E["heritage_discovery_share"]
 K_SHAPE = 2.245                      # 기존 적합식 곡률 유지(초반 빠르게·후반 길게)
 PROV = OV["provinces"]
@@ -324,6 +357,8 @@ def main():
     ap.add_argument("--players", type=int, default=300)
     args = ap.parse_args()
     src, prov, tot, reg_base = budget()
+    print(f"══ 보정 기준: {'실제 데이터 개수' if BASIS == 'actual' else '계획 수량(content_plan)'} "
+          f"— 유산 {P['heritage']} · 이벤트 {P['event']} · 무역 퀘스트 {P['trade']} · 탈것 {P['mount_quest']} · 장비 서사 {P['gear_quest']}")
     print(f"══ 명성 총량 (반복 원천 제외: {', '.join(E['repeatable_sources'])}) — 콘텐츠 {len(ITEMS)}건")
     print(f"  {'원천':<16}{'최대(전부 기증)':>14}{'기준(3택 균등)':>14}{'최소(기증 0)':>12}")
     for k, v in sorted(src.items(), key=lambda kv: -kv[1][0]):
@@ -408,6 +443,7 @@ def main():
             "columns": ["최대(전부 기증)", "기준(3택 균등)", "최소(기증 0)"],
             "excludes": E["repeatable_sources"],
             "r5_share_of_max": round(th[4] / tot[0], 3), "r5_share_of_reference": round(th[4] / tot[1], 3)}
+        OV["rank"]["calibration_basis"] = {"basis": BASIS, "content": {k: v for k, v in P.items() if k in ("heritage", "event", "trade", "mount_quest", "gear_quest", "instance", "companion", "companion_promo")}}
         for r in ("pacing", "total_reputation_supply"):
             OV["rank"].pop(r, None)
         OV["provinces"] = PROV
