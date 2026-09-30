@@ -302,6 +302,10 @@ for sr in S["specialty_recipes"]:
 for sp in S["specialties"]:
     ref(sp["node"], f"03 {sp['id']}", {"nodes"})
 for tq in S["trade_quests"]:
+    if tq.get("reward_item"):
+        ref(tq["reward_item"], f"03 {tq['id']}.reward_item")
+    if tq.get("consign") and not tq.get("margin", 1) < 1:
+        E(f"03 {tq['id']}: 위탁(consign) 운임 margin 은 1 미만")
     ref(tq["item"], f"03 {tq['id']}", {"specialties"})
     ref(tq["from"], f"03 {tq['id']}", {"nodes"})
     ref(tq["to"], f"03 {tq['id']}", {"nodes"})

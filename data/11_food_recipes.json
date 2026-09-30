@@ -235,6 +235,10 @@
     {
      "id": "mat_jang",
      "qty": 1
+    },
+    {
+     "id": "sp_yeonan_chamgireum",
+     "qty": 1
     }
    ],
    "effect": {
@@ -571,6 +575,38 @@
    },
    "weight": 0.6,
    "perishable": true
+  },
+  {
+   "id": "fr_miyeokguk",
+   "name": "미역국",
+   "class": "seomin",
+   "tier": 2,
+   "book": "bk_food_jumak",
+   "cook_at": [
+    "jumak_gamasot",
+    "campfire"
+   ],
+   "ingredients": [
+    {
+     "id": "sp_jeju_miyeok",
+     "qty": 1
+    },
+    {
+     "id": "food_beef",
+     "qty": 1
+    },
+    {
+     "id": "mat_jang",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "satiety": 44,
+    "heal_pct": 0.15
+   },
+   "weight": 0.6,
+   "perishable": true,
+   "generated": "craft_trade"
   },
   {
    "id": "fr_dotorimuk",

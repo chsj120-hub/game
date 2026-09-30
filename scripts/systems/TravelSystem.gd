@@ -138,6 +138,9 @@ static func ferry(leg: Dictionary) -> String:
 	var fare := int(leg.get("fare", 0))
 	if gs.weather == "rain":
 		fare = int(fare * float(f.get("fare_mult_rain", 1.5)))
+	var per_sang := float(f.get("sang_discount_per_rank", 0.0))  # 상(商) 지식 랭크당 뱃삯 할인(제주 등 원거리 해로)
+	if per_sang > 0.0:
+		fare = int(fare * maxf(0.5, 1.0 - per_sang * float(gs.knowledge.get("sang", 0))))
 	if not gs.spend_money(fare):
 		return "뱃삯 부족"
 	gs.advance_minutes(int(leg.get("days", 1)) * 1440)

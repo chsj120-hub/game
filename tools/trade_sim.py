@@ -80,6 +80,14 @@ def travel(a, b, v):
     return HOURS[k]
 
 
+def sat_total(unit_price, q, on):
+    """판매 포화: 한 장터에서 q개를 팔 때의 매도 합계 배율(개당 −per_unit, 하한 floor)"""
+    if not on:
+        return q
+    sat = T.get("sell_saturation", {"per_unit": 0.0, "floor": 1.0})
+    return sum(max(sat["floor"], 1 - sat["per_unit"] * k) for k in range(q))
+
+
 def goods(origin, L, per_region):
     dev = min(3, L - 1)
     out = []
@@ -89,12 +97,13 @@ def goods(origin, L, per_region):
         gr = s.get("grade", 0)
         if gr > 0 and L < s["tier"]:
             continue
-        stock = T["stock_by_grade"][gr] if "grade" in s else (6 if s["kind"] == "premium" else 20)
+        stock = s.get("stock", T["stock_by_grade"][gr] if "grade" in s else (6 if s["kind"] == "premium" else 20))
         out.append((s, stock * (1 if per_region else max(1, len(MARKETS[origin])))))
     return out
 
 
-def best_trip(L, per_region):
+def best_trip(L, per_region, saturate=None):
+    saturate = per_region if saturate is None else saturate
     cap = (OV["movement"]["carry_base"] + GEAR[L] + MOUNT[L][0] + CARRY_COMP) * 0.7
     v = MOUNT[L][1]
     best = None
@@ -110,15 +119,22 @@ def best_trip(L, per_region):
             fresh = max(0.0, 1 - 0.05 * nodes) if s.get("perishable") else 1.0
             unit = s["base_price"] * (mult * fresh - T["buy_at_origin"])
             if unit > 0:
-                rows.append((unit / s["weight"], unit, s, stock))
+                rows.append((unit / s["weight"], mult * fresh, s, stock))
         rows.sort(key=lambda r: -r[0])
         left, profit, cash, load_ = cap, 0.0, 0.0, []
-        for _, unit, s, stock in rows:
+        for _, sell_m, s, stock in rows:
             q = min(stock, int(left // s["weight"]))
+            # 포화: 판매 권역 장터 최대 2곳에 나눠 판다고 가정
+            while q > 0:
+                half = (q + 1) // 2
+                gain = s["base_price"] * (sell_m * (sat_total(1, half, saturate) + sat_total(1, q - half, saturate)) - T["buy_at_origin"] * q)
+                if gain > 0:
+                    break
+                q -= 1
             if q <= 0:
                 continue
             left -= q * s["weight"]
-            profit += q * unit
+            profit += gain
             cash += q * s["base_price"] * T["buy_at_origin"]
             load_.append(f"{s['name']}×{q}")
         days = max(gh / 24.0, 0.25)
@@ -146,7 +162,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--per-region", action="store_true")
     a = ap.parse_args()
-    for label, pr in (("현재 코드(장터 노드마다 물량)", False), ("추천안(권역 단위 물량)", True)):
+    for label, pr in (("구 방식(장터 노드마다 물량 · 포화 없음)", False), ("현재(권역 공유 물량 · 판매 포화)", True)):
         if a.per_region and not pr:
             continue
         print(f"\n══ 자유 무역 상한 — {label}")
@@ -156,7 +172,14 @@ def main():
             inc = content_income(L)
             print(f"  R{L}  | {REGIONS[o]['name']}→{REGIONS[d]['name']} ({h}) | {profit:9,.0f} | {days:4.1f} | {per_day:8,.0f} | {cash:8,.0f} | "
                   f"{inc:10,.0f} | {inc / max(profit, 1):5.1f}회   [{', '.join(load_[:4])}{' …' if len(load_) > 4 else ''}]")
-    print("\n  ※ 판매 포화(같은 장터에 연달아 팔면 값이 떨어짐)는 현재 없음 → 상한이 그대로 실현 가능")
+    fm = T.get("free_trade_model", {})
+    print(f"\n  economy_sim 반영: 신분 등급마다 편도 {fm.get('trips_per_tier')}회 × 최선 이익 × 효율 {fm.get('efficiency')}")
+
+
+def free_trade_income(L):
+    """economy_sim 용 — 현재 규칙(권역 공유·포화)에서 신분 L 구간 자유 무역 기대 수입"""
+    fm = T.get("free_trade_model", {"trips_per_tier": 0, "efficiency": 0})
+    return fm["trips_per_tier"] * best_trip(L, T.get("stock_scope") == "region")[1] * fm["efficiency"]
 
 
 if __name__ == "__main__":

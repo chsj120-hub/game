@@ -533,6 +533,111 @@
    "perishable": true
   },
   {
+   "id": "sp_namhae_yuja",
+   "name": "남해 유자",
+   "region": "MAP_10",
+   "node": "ND_10_TOWN_NAMHAE",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.0,
+   "real_name": "남해 유자(柚子)",
+   "desc": "남해안 섬에서 나는 유자. 향이 짙어 청과 차로 담가 진상하였다.",
+   "grade": 0,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_hadong_jakseol",
+   "name": "하동 작설차",
+   "region": "MAP_10",
+   "node": "ND_10_CITY_JINJUMOK",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 0.3,
+   "real_name": "지리산 작설차(雀舌茶)",
+   "desc": "쌍계사 일대 야생 차나무의 어린 잎을 덖은 차. 참새 혀처럼 작은 잎이라 작설이라 불렀다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_yeonan_chamgireum",
+   "name": "연안 참기름",
+   "region": "MAP_12",
+   "node": "ND_12_CITY_YEONANDOHOBU",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.0,
+   "real_name": "연안 진유(眞油·참기름)",
+   "desc": "연안 평야의 참깨로 짠 기름. 비빔밥·나물·전에 두루 쓴다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_jeju_miyeok",
+   "name": "제주 미역",
+   "region": "MAP_17",
+   "node": "ND_17_TOWN_JOCHEON",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 0.5,
+   "real_name": "제주 곽(藿·미역)",
+   "desc": "잠녀가 물질로 딴 돌미역을 말린 것. 산모의 미역국에 쓰였다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_dongnae_waegwan",
+   "name": "동래 왜관 교역품",
+   "region": "MAP_10",
+   "node": "ND_10_CITY_DONGRAEHYEON",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 1.0,
+   "real_name": "왜관 무역품(후추·단목·명반)",
+   "desc": "초량 왜관 개시(開市)에서 들여온 후추·소목(단목)·명반. 동래 상인이 전국으로 넘겼다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_ganggye_sam",
+   "name": "강계 삼",
+   "region": "MAP_14",
+   "node": "ND_14_TOWN_GANGGYE",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 0.5,
+   "real_name": "강삼(江蔘)",
+   "desc": "강계·폐사군 산골에서 캔 삼. 조선 후기 강계 삼은 개성 삼과 함께 으뜸으로 쳤다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_tongyeong_gat",
+   "name": "통영 갓",
+   "region": "MAP_10",
+   "node": "ND_10_FORT_TONGYEONGTONGJEYEONG",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "weight": 0.5,
+   "real_name": "통영 흑립(黑笠)",
+   "desc": "제주 말총과 대오리로 결은 통영 갓. 통제영 12공방의 갓방에서 만들어 양반 사회 전체로 팔렸다.",
+   "generated": "craft_trade"
+  },
+  {
    "id": "sp_jeonju_hanji_g1",
    "name": "전주 한지 상품",
    "region": "MAP_07",
@@ -1050,7 +1155,8 @@
    "desc": "짙은 자줏빛 담비 가죽. 담비 가죽 중 최상등으로 친다.",
    "line": "trade_uiju_dambi",
    "grade": 1,
-   "generated": "craft_trade"
+   "generated": "craft_trade",
+   "stock": 5
   },
   {
    "id": "sp_hoeryeong_oji_g1",
@@ -1304,6 +1410,28 @@
     }
    ],
    "generated": "heritage"
+  },
+  {
+   "id": "spr_tongyeong_gat",
+   "name": "【통영 갓방 비전서】",
+   "tier": 3,
+   "produces": "sp_tongyeong_gat",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "sp_jeju_malchong",
+     "qty": 3
+    },
+    {
+     "id": "mat_bamboo",
+     "qty": 2
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "craft_trade"
   }
  ],
  "trade_quests": [
@@ -1386,6 +1514,127 @@
    "to": "ND_02_CITY_HANYANGGYEONGJO",
    "margin": 1.8,
    "tier": 4
+  },
+  {
+   "id": "tq_ct_01",
+   "name": "말총 갓방 운송",
+   "item": "sp_jeju_malchong",
+   "qty": 20,
+   "from": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "to": "ND_10_FORT_TONGYEONGTONGJEYEONG",
+   "margin": 1.8,
+   "tier": 1,
+   "reward_item": "spr_tongyeong_gat",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_02",
+   "name": "옹진 대하 강화 뱃길",
+   "item": "sp_ongjin_daeha",
+   "qty": 15,
+   "from": "ND_12_TOWN_ONGJIN",
+   "to": "ND_01_CITY_GANGHWAYUSUBU",
+   "margin": 1.8,
+   "tier": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_03",
+   "name": "평양 녹두 한양 진상",
+   "item": "sp_pyeongyang_nokdu",
+   "qty": 20,
+   "from": "ND_13_CITY_PYEONGYANGBU",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_04",
+   "name": "의주 진말 평양 운송",
+   "item": "sp_uiju_jinmal",
+   "qty": 20,
+   "from": "ND_14_CITY_UIJUMOK",
+   "to": "ND_13_CITY_PYEONGYANGBU",
+   "margin": 1.8,
+   "tier": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_05",
+   "name": "가덕 대구 감영 진상",
+   "item": "sp_gadeok_daegu",
+   "qty": 20,
+   "from": "ND_10_TOWN_GIMHAE",
+   "to": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "margin": 1.8,
+   "tier": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_cs_01",
+   "name": "[위탁] 옹진 대하 해주 배달",
+   "item": "sp_ongjin_daeha",
+   "qty": 20,
+   "from": "ND_12_TOWN_ONGJIN",
+   "to": "ND_12_CITY_HAEJUMOK",
+   "margin": 0.3,
+   "tier": 1,
+   "consign": true,
+   "repeat": true,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_cs_02",
+   "name": "[위탁] 평양 녹두 안주 배달",
+   "item": "sp_pyeongyang_nokdu",
+   "qty": 20,
+   "from": "ND_13_CITY_PYEONGYANGBU",
+   "to": "ND_13_CITY_ANJUMOK",
+   "margin": 0.3,
+   "tier": 1,
+   "consign": true,
+   "repeat": true,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_cs_03",
+   "name": "[위탁] 의주 진말 영변 배달",
+   "item": "sp_uiju_jinmal",
+   "qty": 20,
+   "from": "ND_14_CITY_UIJUMOK",
+   "to": "ND_14_CITY_YEONGBYEONDAEDOHOBU",
+   "margin": 0.3,
+   "tier": 1,
+   "consign": true,
+   "repeat": true,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_cs_04",
+   "name": "[위탁] 제주 말총 조천포 배달",
+   "item": "sp_jeju_malchong",
+   "qty": 20,
+   "from": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "to": "ND_17_TOWN_JOCHEON",
+   "margin": 0.3,
+   "tier": 1,
+   "consign": true,
+   "repeat": true,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_cs_05",
+   "name": "[위탁] 가덕 대구 동래 배달",
+   "item": "sp_gadeok_daegu",
+   "qty": 20,
+   "from": "ND_10_TOWN_GIMHAE",
+   "to": "ND_10_CITY_DONGRAEHYEON",
+   "margin": 0.3,
+   "tier": 1,
+   "consign": true,
+   "repeat": true,
+   "generated": "craft_trade"
   }
  ]
 }

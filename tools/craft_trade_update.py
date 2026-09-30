@@ -72,6 +72,54 @@ NEW_SPECIALTIES = [
      "잠녀가 딴 전복을 두드려 말린 진상 전복. 전복초의 재료."),
     ("sp_hanyang_tarak", "타락", "MAP_02", "ND_02_CITY_HANYANGGYEONGJO", 2, 1.0, True, "타락(駝酪·우유)",
      "낙산 아래 유우소에서 짜던 우유. 궁중 타락죽의 재료로 한양에서만 구할 수 있다."),
+    # 밸런스·공백 보강 특산 (2차)
+    ("sp_namhae_yuja", "남해 유자", "MAP_10", "ND_10_TOWN_NAMHAE", 1, 1.0, True, "남해 유자(柚子)",
+     "남해안 섬에서 나는 유자. 향이 짙어 청과 차로 담가 진상하였다."),
+    ("sp_hadong_jakseol", "하동 작설차", "MAP_10", "ND_10_CITY_JINJUMOK", 2, 0.3, False, "지리산 작설차(雀舌茶)",
+     "쌍계사 일대 야생 차나무의 어린 잎을 덖은 차. 참새 혀처럼 작은 잎이라 작설이라 불렀다."),
+    ("sp_yeonan_chamgireum", "연안 참기름", "MAP_12", "ND_12_CITY_YEONANDOHOBU", 2, 1.0, False, "연안 진유(眞油·참기름)",
+     "연안 평야의 참깨로 짠 기름. 비빔밥·나물·전에 두루 쓴다."),
+    ("sp_jeju_miyeok", "제주 미역", "MAP_17", "ND_17_TOWN_JOCHEON", 1, 0.5, False, "제주 곽(藿·미역)",
+     "잠녀가 물질로 딴 돌미역을 말린 것. 산모의 미역국에 쓰였다."),
+]
+PREMIUM_SPECIALTIES = [  # id, 이름, 권역, 노드, 등급, 발전도, 무게, 사슬, 실제 명칭, 설명
+    ("sp_dongnae_waegwan", "동래 왜관 교역품", "MAP_10", "ND_10_CITY_DONGRAEHYEON", 3, 2, 1.0, None, "왜관 무역품(후추·단목·명반)",
+     "초량 왜관 개시(開市)에서 들여온 후추·소목(단목)·명반. 동래 상인이 전국으로 넘겼다."),
+    ("sp_ganggye_sam", "강계 삼", "MAP_14", "ND_14_TOWN_GANGGYE", 3, 1, 0.5, "ginseng", "강삼(江蔘)",
+     "강계·폐사군 산골에서 캔 삼. 조선 후기 강계 삼은 개성 삼과 함께 으뜸으로 쳤다."),
+]
+CRAFTED = [  # 특산 제작품 + 비전서(무역 퀘스트 보상)
+    {"sp": {"id": "sp_tongyeong_gat", "name": "통영 갓", "region": "MAP_10", "node": "ND_10_FORT_TONGYEONGTONGJEYEONG", "kind": "crafted", "tier": 3,
+            "base_price": 540, "dev_level": 0, "weight": 0.5, "real_name": "통영 흑립(黑笠)",
+            "desc": "제주 말총과 대오리로 결은 통영 갓. 통제영 12공방의 갓방에서 만들어 양반 사회 전체로 팔렸다."},
+     "recipe": {"id": "spr_tongyeong_gat", "name": "【통영 갓방 비전서】", "tier": 3, "produces": "sp_tongyeong_gat", "facility": "gongbang",
+                "materials": [{"id": "sp_jeju_malchong", "qty": 3}, {"id": "mat_bamboo", "qty": 2}, {"id": "mat_lacquer", "qty": 1}]}},
+]
+STOCK_OVERRIDE = {"sp_uiju_dambi_g1": 5}   # R5 자유 무역 상한 조정
+
+# ---------------------------------------------------------------- 초반 무역 · 보부상 위탁 (공백 권역)
+TRADE_QUESTS = [
+    {"id": "tq_ct_01", "name": "말총 갓방 운송", "item": "sp_jeju_malchong", "qty": 20, "from": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+     "to": "ND_10_FORT_TONGYEONGTONGJEYEONG", "margin": 1.8, "tier": 1, "reward_item": "spr_tongyeong_gat"},
+    {"id": "tq_ct_02", "name": "옹진 대하 강화 뱃길", "item": "sp_ongjin_daeha", "qty": 15, "from": "ND_12_TOWN_ONGJIN",
+     "to": "ND_01_CITY_GANGHWAYUSUBU", "margin": 1.8, "tier": 1},
+    {"id": "tq_ct_03", "name": "평양 녹두 한양 진상", "item": "sp_pyeongyang_nokdu", "qty": 20, "from": "ND_13_CITY_PYEONGYANGBU",
+     "to": "ND_02_CITY_HANYANGGYEONGJO", "margin": 1.8, "tier": 1},
+    {"id": "tq_ct_04", "name": "의주 진말 평양 운송", "item": "sp_uiju_jinmal", "qty": 20, "from": "ND_14_CITY_UIJUMOK",
+     "to": "ND_13_CITY_PYEONGYANGBU", "margin": 1.8, "tier": 1},
+    {"id": "tq_ct_05", "name": "가덕 대구 감영 진상", "item": "sp_gadeok_daegu", "qty": 20, "from": "ND_10_TOWN_GIMHAE",
+     "to": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG", "margin": 1.8, "tier": 1},
+    # 보부상 위탁(consign): 밑천 없이 짐을 받아 나르고 운임(대금 × margin) — 매 장(5일) 반복
+    {"id": "tq_cs_01", "name": "[위탁] 옹진 대하 해주 배달", "item": "sp_ongjin_daeha", "qty": 20, "from": "ND_12_TOWN_ONGJIN",
+     "to": "ND_12_CITY_HAEJUMOK", "margin": 0.3, "tier": 1, "consign": True, "repeat": True},
+    {"id": "tq_cs_02", "name": "[위탁] 평양 녹두 안주 배달", "item": "sp_pyeongyang_nokdu", "qty": 20, "from": "ND_13_CITY_PYEONGYANGBU",
+     "to": "ND_13_CITY_ANJUMOK", "margin": 0.3, "tier": 1, "consign": True, "repeat": True},
+    {"id": "tq_cs_03", "name": "[위탁] 의주 진말 영변 배달", "item": "sp_uiju_jinmal", "qty": 20, "from": "ND_14_CITY_UIJUMOK",
+     "to": "ND_14_CITY_YEONGBYEONDAEDOHOBU", "margin": 0.3, "tier": 1, "consign": True, "repeat": True},
+    {"id": "tq_cs_04", "name": "[위탁] 제주 말총 조천포 배달", "item": "sp_jeju_malchong", "qty": 20, "from": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+     "to": "ND_17_TOWN_JOCHEON", "margin": 0.3, "tier": 1, "consign": True, "repeat": True},
+    {"id": "tq_cs_05", "name": "[위탁] 가덕 대구 동래 배달", "item": "sp_gadeok_daegu", "qty": 20, "from": "ND_10_TOWN_GIMHAE",
+     "to": "ND_10_CITY_DONGRAEHYEON", "margin": 0.3, "tier": 1, "consign": True, "repeat": True},
 ]
 
 # ---------------------------------------------------------------- 2. 곡물 말 단위 · 식재료
@@ -103,7 +151,7 @@ FOOD = {
     "fr_bindaetteok": (2, [i("sp_pyeongyang_nokdu", 2), g("meat_game", 1)], None),        # 녹두지짐
     "fr_seolleongtang": (2, [i("food_beef", 2), g("grain", 1), i("mat_salt", 1)], None),   # 소 사골
     "fr_tteokguk": (2, [i("food_rice_mal", 2), i("food_pheasant", 1), i("mat_jang", 1)], None),  # 가래떡 + 꿩 육수
-    "fr_jeonju_bibimbap": (3, [i("food_rice_mal", 1), i("food_beef", 1), i("food_kongnamul", 1), i("mat_jang", 1)], None),
+    "fr_jeonju_bibimbap": (3, [i("food_rice_mal", 1), i("food_beef", 1), i("food_kongnamul", 1), i("mat_jang", 1), i("sp_yeonan_chamgireum", 1)], None),
     "fr_pyeongyang_naengmyeon": (3, [i("food_buckwheat", 3), i("food_pheasant", 1)], None),  # 메밀 + 꿩 육수(고증 맞음)
     # 수라
     "fr_galbijjim": (3, [i("food_beef", 2), i("herb_daechu", 2), i("mat_jang", 1)], None),
@@ -116,7 +164,9 @@ FOOD = {
     "fr_daehajjim": (4, [i("sp_ongjin_daeha", 2), i("herb_saenggang", 1), i("sp_chuncheon_jat", 1)], None),  # 대하 + 잣즙
     "fr_sinseollo": (4, [i("food_beef", 1), i("food_pheasant", 1), i("sp_gadeok_daegu", 1), i("sp_chuncheon_jat", 1)], None),
 }
-NEW_DISHES = [  # 미사용 재료 활용
+NEW_DISHES = [  # 미사용 재료 활용 + 신규 특산 활용
+    {"id": "fr_miyeokguk", "name": "미역국", "class": "seomin", "tier": 2, "book": "bk_food_jumak", "cook_at": ["jumak_gamasot", "campfire"],
+     "ingredients": [i("sp_jeju_miyeok", 1), i("food_beef", 1), i("mat_jang", 1)], "effect": {"satiety": 44, "heal_pct": 0.15}, "weight": 0.6, "perishable": True},
     {"id": "fr_dotorimuk", "name": "도토리묵", "class": "seomin", "tier": 2, "book": "bk_food_campfire", "cook_at": ["campfire", "jumak_gamasot"],
      "ingredients": [i("food_acorn", 4), i("mat_jang", 1)], "effect": {"satiety": 36, "heal_pct": 0.05}, "weight": 0.6, "perishable": True},
     {"id": "fr_songgitteok", "name": "송기떡", "class": "seomin", "tier": 2, "book": "bk_food_campfire", "cook_at": ["campfire", "jumak_gamasot"],
@@ -152,7 +202,7 @@ def lines():
         "gu": {"name": "구황 산물", "items": ["food_songgi", "food_acorn", "food_kudzu"]},
         "fiber": {"name": "섬유", "items": ["mat_hemp", "mat_cotton", "mat_silk_thread"]},
         "jujube": {"name": "대추", "items": ["herb_daechu"] + chain_ids("sp_boeun_daechu")},
-        "ginseng": {"name": "인삼", "items": chain_ids("sp_gaeseong_insam")[:2] + ["herb_insam"] + chain_ids("sp_gaeseong_insam")[2:] + ["herb_sansam"]},
+        "ginseng": {"name": "인삼", "items": chain_ids("sp_gaeseong_insam")[:2] + ["herb_insam", "sp_ganggye_sam"] + chain_ids("sp_gaeseong_insam")[2:] + ["herb_sansam"]},
         "jat": {"name": "잣", "items": chain_ids("sp_chuncheon_jat")},
     }
     for base, (short, _) in CHAIN.items():
@@ -176,6 +226,12 @@ def main():
             row["note"] = "구 '인제 황태'(sp_inje_hwangtae) 대체 — 황태 덕장은 1950년대 이후라 1861년 배경에 맞지 않음"
         sp.append(row)
         by[id_] = row
+    for id_, name, reg, node, tier, dev, w, line, real, desc in PREMIUM_SPECIALTIES:
+        row = {"id": id_, "name": name, "region": reg, "node": node, "kind": "premium", "tier": tier, "base_price": PRICE[tier],
+               "dev_level": dev, "weight": w, "real_name": real, "desc": desc, "grade": 0, "generated": TAG}
+        sp.append(row)
+    for c in CRAFTED:
+        sp.append({**c["sp"], "generated": TAG})
     for base, (short, grades) in CHAIN.items():
         b = by[base]
         b["line"], b["grade"] = LINE_KEY.get(base, "trade_" + base[3:]), 0
@@ -194,7 +250,12 @@ def main():
             if b.get("perishable"):
                 row["perishable"] = True
             sp.append(row)
+    for r in sp:
+        if r["id"] in STOCK_OVERRIDE:
+            r["stock"] = STOCK_OVERRIDE[r["id"]]
     doc["specialties"] = sp
+    doc["specialty_recipes"] = [r for r in doc["specialty_recipes"] if r.get("generated") != TAG] + [{**c["recipe"], "generated": TAG} for c in CRAFTED]
+    doc["trade_quests"] = [q for q in doc["trade_quests"] if q.get("generated") != TAG] + [{**q, "generated": TAG} for q in TRADE_QUESTS]
     doc["_schema"] = doc["_schema"].split(" | 등급 사슬")[0] + (
         " | 등급 사슬: line=사슬 id, grade 0 기본/1 상품/2 진상품(해금 = 원산지 발전도 dev_level + 신분 Rank ≥ tier, 5일 물량 trade.stock_by_grade)."
         " real_name·desc = 도감 표시(실제 명칭·설명).")
@@ -261,7 +322,7 @@ def main():
 
     # --- 15 비전서 해금
     doc = load("15_recipe_books.json")
-    add = {"bk_food_campfire": ["fr_dotorimuk", "fr_songgitteok", "fr_sanjeok"], "bk_food_bukgwan": ["fr_ungjang", "fr_nokpo"],
+    add = {"bk_food_jumak": ["fr_miyeokguk"], "bk_food_campfire": ["fr_dotorimuk", "fr_songgitteok", "fr_sanjeok"], "bk_food_bukgwan": ["fr_ungjang", "fr_nokpo"],
            "bk_med_dongui": ["hr_galgeun"]}
     for b in doc["books"]:
         for x in add.get(b["id"], []):
@@ -288,6 +349,12 @@ def main():
     }
     ov["trade"]["stock_by_grade"] = [20, 8, 3]
     ov["trade"]["grade_rank_gate"] = True
+    ov["trade"]["stock_scope"] = "region"        # 특산물 5일 물량을 원산지 권역 전체가 공유
+    ov["trade"]["sell_saturation"] = {"per_unit": 0.02, "floor": 0.6, "_note": "같은 장터·같은 특산물을 이번 장(5일)에 판 개수만큼 개당 −2%, 하한 60%"}
+    ov["trade"]["seasonal_sell_bonus"] = [{"name": "동지사 사행(의주 만상)", "region": "MAP_14", "season": 3, "mult": 1.2}]
+    ov["trade"]["free_trade_model"] = {"trips_per_tier": 6, "efficiency": 0.5,
+                                       "_note": "economy_sim 자유 무역 수입 = 신분 등급마다 편도 trips_per_tier 회 × trade_sim 최선 편도 이익 × efficiency"}
+    ov["facilities"]["ferry"]["sang_discount_per_rank"] = 0.05   # 상(商) 지식 랭크당 뱃삯 −5% (하한 50%)
     save("00_overview.json", ov)
     n_chain = sum(1 for r in load("03_specialties.json")["specialties"] if r.get("grade", 0) > 0)
     print(f"특산물 등급품 {n_chain}종 · 신규 식재료 특산 {len(NEW_SPECIALTIES)} · 말 {len(MAL)} · 식재료 {len(NEW_FOODS) + len(NEW_MATS)} · "

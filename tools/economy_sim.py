@@ -260,6 +260,17 @@ def calibrate_r5(ref_total, reg_base, n):
 
 
 # ================================================================ 엽전
+_FT = {}
+
+
+def _free_trade(t):
+    """자유 무역(시장 매매) 기대 수입 — tools/trade_sim.py 모델(권역 공유 물량·판매 포화)"""
+    if t not in _FT:
+        import trade_sim
+        _FT[t] = trade_sim.free_trade_income(t)
+    return _FT[t]
+
+
 def money_supply_style(sell_share, qm_base=None, parts=None):
     tot = 0.0
     qm = dict(E["quest_money"])
@@ -279,6 +290,9 @@ def money_supply_style(sell_share, qm_base=None, parts=None):
         tr = P["trade"][i] * price("specialty", t) * 10 * (OV["trade"]["specialty_quest_margin"] - OV["trade"]["buy_at_origin"])
         kl = P["kills"][i] * enemy_reward(OV, t, False, "money") + P["boss"][i] * enemy_reward(OV, t, True, "money")
         parts["무역"] = parts.get("무역", 0) + tr
+        ft = _free_trade(t)
+        parts["자유 무역"] = parts.get("자유 무역", 0) + ft
+        tot += ft
         parts["처치·보스"] = parts.get("처치·보스", 0) + kl
         tot += tr + kl
     return tot

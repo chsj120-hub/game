@@ -11,14 +11,14 @@
 | icons_armor.csv | 17 |
 | icons_book.csv | 13 |
 | icons_capture.csv | 20 |
-| icons_food.csv | 43 |
+| icons_food.csv | 44 |
 | icons_herb.csv | 30 |
 | icons_material.csv | 27 |
 | icons_mount.csv | 8 |
-| icons_recipe.csv | 35 |
+| icons_recipe.csv | 36 |
 | icons_record.csv | 111 |
 | icons_shoes.csv | 15 |
-| icons_specialty.csv | 84 |
+| icons_specialty.csv | 91 |
 | icons_weapon.csv | 34 |
 | maps.csv | 18 |
 | markers.csv | 30 |

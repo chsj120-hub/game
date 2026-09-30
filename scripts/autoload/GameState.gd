@@ -294,6 +294,9 @@ func item_weight(id: String) -> float:
 
 func carry_weight() -> float:
 	var w := 0.0
+	for q in DataDB.table("03_specialties.json", "trade_quests"):  # 보부상 위탁 짐
+		if q.get("consign", false) and String(trade_cargo.get(q["id"], "")) == "accepted":
+			w += item_weight(String(q["item"])) * int(q["qty"])
 	var worn := equipped.values() + life_gear.values()
 	for id in inventory.keys():
 		var q := count(id) - (1 if id in worn else 0)

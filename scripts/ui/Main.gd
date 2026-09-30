@@ -495,12 +495,17 @@ func _open_sell() -> void:
 func _open_trade() -> void:
 	var e := []
 	for q in TradeSystem.trade_quests_here():
-		var st := String(GameState.trade_cargo.get(q["id"], ""))
-		var desc := "%s: %s ×%d  %s → %s (대금 1.8배 + 명성)" % [q["name"], DataDB.display_name(String(q["item"])), int(q["qty"]), DataDB.display_name(String(q["from"])), DataDB.display_name(String(q["to"]))]
+		var st := TradeSystem.quest_state(q)
+		var terms := "위탁 운임 %d%% · 짐은 화주 제공(매 장 반복)" % int(float(q.get("margin", 0.3)) * 100) if q.get("consign", false) else "대금 %.1f배 + 명성" % float(q.get("margin", 1.8))
+		if String(q.get("reward_item", "")) != "":
+			terms += " + " + DataDB.display_name(String(q["reward_item"]))
+		var desc := "%s: %s ×%d  %s → %s (%s)" % [q["name"], DataDB.display_name(String(q["item"])), int(q["qty"]), DataDB.display_name(String(q["from"])), DataDB.display_name(String(q["to"])), terms]
 		if st == "":
 			e.append({"text": desc, "hint": "수락", "cb": func(): TradeSystem.accept_trade(q)})
 		elif st == "accepted":
 			e.append({"text": desc, "hint": "납품", "cb": func(): TradeSystem.deliver_trade(q)})
+	for b in DataDB.overview.get("trade", {}).get("seasonal_sell_bonus", []):
+		e.append({"text": "계절 교역: %s — %s 매도가 ×%.2f" % [b["name"], DataDB.display_name(String(b["region"])), float(b["mult"])]})
 	e.append({"text": "쌀 시세: %s %d냥 — 삼남(35냥)에서 사서 북방(80냥)에 팔면 차익. 1섬 무게 20" % [DataDB.display_name(GameState.current_region), Balance.regional_rice_price(GameState.current_region)]})
 	open_menu("무역", e)
 

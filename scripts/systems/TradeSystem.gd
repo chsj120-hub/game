@@ -76,7 +76,7 @@ static func sell_price(id: String) -> int:
 	if DataDB.sheet_of(id) == "03_specialties.json:specialties":
 		var hops := region_hops(String(r.get("region", reg)), reg)
 		var fresh := float(GameState.freshness.get(id, 100.0)) / 100.0 if r.get("perishable", false) else 1.0
-		return maxi(1, int(round(float(r["base_price"]) * Balance.trade_sell_mult(hops) * fresh * _sang_sell())))
+		return maxi(1, int(round(float(r["base_price"]) * Balance.trade_sell_mult(hops) * fresh * _sang_sell() * seasonal_mult(id) * saturation_mult(id))))
 	var base := 0
 	if r.has("price") and typeof(r["price"]) != TYPE_STRING:
 		base = int(r["price"])
@@ -92,21 +92,56 @@ static func market_cycle_id() -> int:
 	return int((GameState.day() - 1) / int(_t().get("restock_days", 5)))
 
 
+## 특산물 물량은 trade.stock_scope="region" 이면 원산지 권역 전체가 공유(장터 순회로 물량이 불어나지 않음)
+static func _stock_key(id: String) -> String:
+	var where := GameState.current_node
+	if DataDB.sheet_of(id) == "03_specialties.json:specialties" and String(_t().get("stock_scope", "node")) == "region":
+		where = GameState.current_region
+	return "%s:%d:%s" % [where, market_cycle_id(), id]
+
+
 static func stock_left(id: String) -> int:
-	var key := "%s:%d:%s" % [GameState.current_node, market_cycle_id(), id]
 	var r := DataDB.get_row(id)
 	var base := 20 if DataDB.sheet_of(id) == "03_specialties.json:specialties" else 99
-	if r.has("grade") and DataDB.sheet_of(id) == "03_specialties.json:specialties":  # 기본 20 / 상품 8 / 진상품 3
+	if r.has("stock"):  # 품목별 물량(예: 의주 자초피 5)
+		base = int(r["stock"])
+	elif r.has("grade") and DataDB.sheet_of(id) == "03_specialties.json:specialties":  # 기본 20 / 상품 8 / 진상품 3
 		var sb: Array = _t().get("stock_by_grade", [20, 8, 3])
 		base = int(sb[clampi(int(r["grade"]), 0, sb.size() - 1)])
 	elif String(r.get("kind", "")) == "premium":
 		base = 6
-	return base - int(GameState.market_cycle.get(key, 0))
+	return base - int(GameState.market_cycle.get(_stock_key(id), 0))
 
 
 static func _take_stock(id: String, qty: int) -> void:
-	var key := "%s:%d:%s" % [GameState.current_node, market_cycle_id(), id]
+	var key := _stock_key(id)
 	GameState.market_cycle[key] = int(GameState.market_cycle.get(key, 0)) + qty
+
+
+## 판매 포화: 같은 장터에서 같은 특산물을 이번 장(5일)에 판 개수만큼 개당 −per_unit, 하한 floor
+static func _sold_key(id: String) -> String:
+	return "sold:%s:%d:%s" % [GameState.current_node, market_cycle_id(), id]
+
+
+static func saturation_mult(id: String, extra := 0) -> float:
+	if DataDB.sheet_of(id) != "03_specialties.json:specialties":
+		return 1.0
+	var sat: Dictionary = _t().get("sell_saturation", {})
+	if sat.is_empty():
+		return 1.0
+	var n := int(GameState.market_cycle.get(_sold_key(id), 0)) + extra
+	return maxf(float(sat.get("floor", 0.6)), 1.0 - float(sat.get("per_unit", 0.02)) * n)
+
+
+## 계절 교역(예: 겨울 동지사 사행 때 의주 매도가 +20%)
+static func seasonal_mult(id: String) -> float:
+	if DataDB.sheet_of(id) != "03_specialties.json:specialties":
+		return 1.0
+	var m := 1.0
+	for b in _t().get("seasonal_sell_bonus", []):
+		if String(b["region"]) == GameState.current_region and int(b["season"]) == GameState.season():
+			m *= float(b["mult"])
+	return m
 
 
 ## 현재 노드 상점 [{id, name, price, facility, lock, stock}]
@@ -208,10 +243,15 @@ static func sell(id: String, qty: int = 1) -> bool:
 		return false
 	if gs.count(id) < qty:
 		return false
-	var each := sell_price(id)
+	var total := 0
+	for k in qty:  # 포화: 한 개 팔 때마다 다음 값이 내려감
+		total += sell_price(id)
+		if DataDB.sheet_of(id) == "03_specialties.json:specialties":
+			var sk := _sold_key(id)
+			gs.market_cycle[sk] = int(gs.market_cycle.get(sk, 0)) + 1
 	gs.remove_item(id, qty)
-	gs.add_money(each * qty)
-	gs.note("매각: %s ×%d (+%d냥)" % [DataDB.display_name(id), qty, each * qty])
+	gs.add_money(total)
+	gs.note("매각: %s ×%d (+%d냥)" % [DataDB.display_name(id), qty, total])
 	var mj := String(DataDB.get_row(id).get("mojak_recipe", ""))
 	if mj != "" and not (mj in gs.mojak_unlocked):
 		gs.mojak_unlocked.append(mj)
@@ -220,9 +260,17 @@ static func sell(id: String, qty: int = 1) -> bool:
 
 
 # ------------------------------------------------------------ 무역 퀘스트 (1.8배 + 명성)
+## 상태: "" 수락 가능 / accepted 진행 중 / done 완료. 반복 의뢰(repeat)는 다음 장(5일)에 다시 "".
+static func quest_state(q: Dictionary) -> String:
+	var st := String(GameState.trade_cargo.get(q["id"], ""))
+	if st.begins_with("done@"):
+		return "" if q.get("repeat", false) and int(st.substr(5)) != market_cycle_id() else "done"
+	return st
+
+
 static func trade_quests_here() -> Array:
 	return DataDB.table("03_specialties.json", "trade_quests").filter(
-		func(q): return q["from"] == GameState.current_node or q["to"] == GameState.current_node or GameState.trade_cargo.get(q["id"], "") == "accepted")
+		func(q): return (q["from"] == GameState.current_node and int(q.get("tier", 1)) <= GameState.rank + 1) or q["to"] == GameState.current_node or quest_state(q) == "accepted")
 
 
 static func accept_trade(q: Dictionary) -> bool:
@@ -230,9 +278,11 @@ static func accept_trade(q: Dictionary) -> bool:
 	if gs.current_node != q["from"]:
 		gs.note("출발지(%s)에서만 수락할 수 있습니다." % DataDB.display_name(String(q["from"])))
 		return false
-	if gs.trade_cargo.has(q["id"]):
+	if quest_state(q) != "":
 		return false
 	gs.trade_cargo[q["id"]] = "accepted"
+	if q.get("consign", false):  # 보부상 위탁: 화주가 짐을 맡김(배낭 무게에 포함, 되팔 수 없음)
+		gs.note("위탁 짐 인수: %s ×%d (무게 %.1f)" % [DataDB.display_name(String(q["item"])), int(q["qty"]), gs.item_weight(String(q["item"])) * int(q["qty"])])
 	gs.note("무역 수락: %s — %s ×%d → %s" % [q["name"], DataDB.display_name(String(q["item"])), int(q["qty"]), DataDB.display_name(String(q["to"]))])
 	gs.stats_changed.emit()
 	return true
@@ -245,7 +295,7 @@ static func deliver_trade(q: Dictionary) -> bool:
 	if gs.current_node != q["to"]:
 		gs.note("도착지(%s)에서 납품하세요." % DataDB.display_name(String(q["to"])))
 		return false
-	if not gs.remove_item(String(q["item"]), int(q["qty"])):
+	if not q.get("consign", false) and not gs.remove_item(String(q["item"]), int(q["qty"])):
 		gs.note("납품 물량 부족 (%d 필요)" % int(q["qty"]))
 		return false
 	var base := float(DataDB.get_row(String(q["item"])).get("base_price", 0))
@@ -254,8 +304,12 @@ static func deliver_trade(q: Dictionary) -> bool:
 	gs.add_money(pay)
 	var rep := gs.add_reputation(Balance.quest_reward(int(q.get("tier", 1)), "trade", "rep"), DataDB.region_of_node(String(q["to"])))
 	gs.add_knowledge_xp("sang", int(DataDB.classes_doc.get("knowledge", {}).get("xp_sources", {}).get("trade_complete_sang", 30)))
-	gs.trade_cargo[q["id"]] = "done"
+	gs.trade_cargo[q["id"]] = "done@%d" % market_cycle_id()
 	gs.note("무역 완료: +%d냥, 명성 +%d" % [pay, rep])
+	var rw := String(q.get("reward_item", ""))
+	if rw != "" and not gs.has_item(rw):
+		gs.add_item(rw)
+		gs.note("보상: %s" % DataDB.display_name(rw))
 	return true
 
 

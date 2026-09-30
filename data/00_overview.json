@@ -381,7 +381,26 @@
    8,
    3
   ],
-  "grade_rank_gate": true
+  "grade_rank_gate": true,
+  "stock_scope": "region",
+  "sell_saturation": {
+   "per_unit": 0.02,
+   "floor": 0.6,
+   "_note": "같은 장터·같은 특산물을 이번 장(5일)에 판 개수만큼 개당 −2%, 하한 60%"
+  },
+  "seasonal_sell_bonus": [
+   {
+    "name": "동지사 사행(의주 만상)",
+    "region": "MAP_14",
+    "season": 3,
+    "mult": 1.2
+   }
+  ],
+  "free_trade_model": {
+   "trips_per_tier": 6,
+   "efficiency": 0.5,
+   "_note": "economy_sim 자유 무역 수입 = 신분 등급마다 편도 trips_per_tier 회 × trade_sim 최선 편도 이익 × efficiency"
+  }
  },
  "town_dev": {
   "max": 5,
@@ -822,7 +841,8 @@
    "wind_cancel_weather": [
     "storm"
    ],
-   "fare_mult_rain": 1.5
+   "fare_mult_rain": 1.5,
+   "sang_discount_per_rank": 0.05
   },
   "beacon": {
    "light_cost_money": 30,
@@ -1450,6 +1470,7 @@
      "sp_gaeseong_insam",
      "sp_gaeseong_hongsam",
      "herb_insam",
+     "sp_ganggye_sam",
      "sp_gaeseong_insam_g2",
      "herb_sansam"
     ]

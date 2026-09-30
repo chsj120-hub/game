@@ -1,7 +1,7 @@
 {
  "_about": "tools/gen_asset_manifest.py 생성. 게임은 파일이 없으면 절차적 그리기로 대체하므로 어떤 순서로 넣어도 된다. 규격은 spec, 경로는 path 그대로.",
  "summary": {
-  "total": 804,
+  "total": 813,
   "present": 17,
   "by_kind": {
    "region_map": 17,
@@ -11,7 +11,7 @@
    "overworld": 1,
    "marker": 30,
    "portrait": 91,
-   "icon": 481,
+   "icon": 490,
    "sprite": 73,
    "ui_9patch": 2,
    "minigame": 24
@@ -7534,6 +7534,18 @@
    "exists": false
   },
   {
+   "path": "res://assets/icons/items/fr_miyeokguk.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "미역국 아이콘",
+   "ref": "fr_miyeokguk",
+   "exists": false
+  },
+  {
    "path": "res://assets/icons/items/fr_dotorimuk.png",
    "kind": "icon",
    "spec": {
@@ -9202,6 +9214,90 @@
    "exists": false
   },
   {
+   "path": "res://assets/icons/items/sp_namhae_yuja.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "남해 유자 아이콘",
+   "ref": "sp_namhae_yuja",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hadong_jakseol.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "하동 작설차 아이콘",
+   "ref": "sp_hadong_jakseol",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_yeonan_chamgireum.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "연안 참기름 아이콘",
+   "ref": "sp_yeonan_chamgireum",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_jeju_miyeok.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "제주 미역 아이콘",
+   "ref": "sp_jeju_miyeok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_dongnae_waegwan.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "동래 왜관 교역품 아이콘",
+   "ref": "sp_dongnae_waegwan",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_ganggye_sam.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "강계 삼 아이콘",
+   "ref": "sp_ganggye_sam",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_tongyeong_gat.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "통영 갓 아이콘",
+   "ref": "sp_tongyeong_gat",
+   "exists": false
+  },
+  {
    "path": "res://assets/icons/items/sp_jeonju_hanji_g1.png",
    "kind": "icon",
    "spec": {
@@ -9739,6 +9835,18 @@
    },
    "use": "【회령 복원 비전서】 아이콘",
    "ref": "spr_her_142",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_tongyeong_gat.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【통영 갓방 비전서】 아이콘",
+   "ref": "spr_tongyeong_gat",
    "exists": false
   }
  ]
