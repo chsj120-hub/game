@@ -131,10 +131,18 @@ def _auto_widths(rows):
     return w
 
 
+class _StableZip(zipfile.ZipFile):
+    """항목 시각을 고정해 내용이 같으면 파일도 바이트 단위로 같게(git 변경 잡음 방지)"""
+    def writestr(self, name, data, *a, **k):
+        zi = zipfile.ZipInfo(name, date_time=(2020, 1, 1, 0, 0, 0))
+        zi.compress_type = zipfile.ZIP_DEFLATED
+        return super().writestr(zi, data)
+
+
 def write(path, sheets, widths=None, marks=None):
     """marks = {시트명: {"changed": {(행, 열)}, "added_from": 열번호}} — 수정 셀 노랑, 추가 열 헤더 초록."""
     widths = widths or {}
-    z = zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED)
+    z = _StableZip(path, "w", zipfile.ZIP_DEFLATED)
     ov = "".join(f'<Override PartName="/xl/worksheets/sheet{i}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>'
                  for i in range(1, len(sheets) + 1))
     z.writestr("[Content_Types].xml",

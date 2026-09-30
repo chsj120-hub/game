@@ -696,6 +696,54 @@
    },
    "codex": "1871년 미국 함대의 강화도 침공(신미양요)과 광성보 전투.",
    "generated": "content2"
+  },
+  {
+   "id": "ev_sc_chaekmun",
+   "name": "책문 후시(柵門後市)",
+   "lore": "역사",
+   "type": "event",
+   "tier": 1,
+   "trigger": {
+    "region": "MAP_14",
+    "rank_min": 1
+   },
+   "stages": [
+    {
+     "node": "ND_14_CITY_UIJUMOK",
+     "action": "talk",
+     "text": "사신 행차가 책문을 지날 때 열리는 뒷장(후시). 나라가 허락하지 않은 거래지만 만상과 청 상인이 모두 기다리는 장이다."
+    },
+    {
+     "node": "ND_14_SCENIC_UIJUTONGGUNJEONG",
+     "action": "choice",
+     "text": "강변 모래톱에 몰래 선 장. 무엇을 할까?",
+     "choices": [
+      {
+       "id": "watch",
+       "text": "거래 품목과 값을 적어 둔다",
+       "effects": {
+        "knowledge_xp": {
+         "sang": 30
+        }
+       }
+      },
+      {
+       "id": "join",
+       "text": "직접 물건을 내놓는다",
+       "effects": {
+        "money_mult": 1.3
+       }
+      }
+     ]
+    }
+   ],
+   "deadline_days": 30,
+   "fail_safe": {
+    "mode": "time_decay",
+    "text": "관원들이 모래톱 장을 흩어 버렸다."
+   },
+   "codex": "조선 후기 의주 건너편 책문에서 열린 사무역 시장. 만상이 크게 성장한 무대였다.",
+   "generated": "content2"
   }
  ],
  "main_scenarios": [
@@ -1090,8 +1138,6 @@
   {
    "id": "ev_main_mandeok",
    "name": "김만덕 — 제주 객주에서 금강산까지",
-   "class": "cls_merchant",
-   "scenario": "sc_jeju_mandeok",
    "lore": "역사",
    "type": "main",
    "era_note": "김만덕(1739~1812)의 실제 생애(1790년대)를 따르는 시나리오. 본편 배경(1861)과 시대가 다르며, 이 시나리오에서만 정조 대 인물이 등장한다.",
@@ -1282,6 +1328,205 @@
      ]
     }
    ],
+   "class": "cls_merchant",
+   "scenario": "sc_jeju_mandeok",
+   "generated": "content2"
+  },
+  {
+   "name": "임상옥 — 압록강의 인삼 거상",
+   "lore": "역사",
+   "era_note": "임상옥(1779~1855)의 생애(순조·헌종 대)를 따르는 시나리오입니다. 본편 배경(1861)보다 앞선 시대입니다.",
+   "chapters": [
+    {
+     "chapter": 1,
+     "tier": 1,
+     "title": "만상의 점원",
+     "stages": [
+      {
+       "node": "ND_14_CITY_UIJUMOK",
+       "action": "talk",
+       "text": "의주 만상(灣商)의 객주. 열여덟의 상옥이 장부를 넘기다 행수에게 불려 간다. '사신 행차가 곧 책문을 지난다. 짐 목록을 한 자도 틀리지 말고 맞춰라.'"
+      },
+      {
+       "node": "ND_14_SCENIC_UIJUTONGGUNJEONG",
+       "action": "choice",
+       "text": "통군정 아래 압록강 나루. 책문 너머 청 상인이 몰래 은을 내밀며 짐 하나를 목록에서 빼 달라고 한다.",
+       "choices": [
+        {
+         "id": "honest",
+         "text": "목록대로 싣는다 — '장부가 틀리면 만상의 이름이 틀립니다'",
+         "effects": {
+          "knowledge_xp": {
+           "sang": 40
+          }
+         }
+        },
+        {
+         "id": "silver",
+         "text": "은을 받고 모른 척한다",
+         "effects": {
+          "money_mult": 1.3
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "chapter": 2,
+     "tier": 2,
+     "title": "강계의 삼",
+     "stages": [
+      {
+       "node": "ND_14_TOWN_GANGGYE",
+       "action": "choice",
+       "text": "강계 산골. 심마니들이 캔 삼을 두고 개성 송상이 먼저 값을 불렀다. 상옥은 무엇으로 삼을 얻을까?",
+       "choices": [
+        {
+         "id": "credit",
+         "text": "다음 해 몫까지 선금을 치러 믿음을 산다",
+         "effects": {
+          "knowledge_xp": {
+           "sang": 50
+          }
+         }
+        },
+        {
+         "id": "price",
+         "text": "송상보다 한 푼 더 얹어 이번 삼만 가져간다",
+         "effects": {
+          "money_mult": 1.25
+         }
+        }
+       ]
+      },
+      {
+       "node": "ND_14_CITY_UIJUMOK",
+       "action": "talk",
+       "text": "의주 객주 창고에 첫 삼을 들인다. 행수가 처음으로 상옥에게 도장을 맡긴다. '이제부터 네 이름으로 장부를 써라.'"
+      }
+     ]
+    },
+    {
+     "chapter": 3,
+     "tier": 3,
+     "title": "홍삼 무역권",
+     "stages": [
+      {
+       "node": "ND_02_CITY_HANYANGGYEONGJO",
+       "action": "talk",
+       "text": "호조(戶曹). 사신 행차 때 가져갈 수 있는 홍삼 수량(포삼)을 정하는 자리다. 상옥은 권세가 박종경의 도움으로 인삼 무역권을 따낸다(1810년대)."
+      },
+      {
+       "node": "ND_01_TOWN_PAJUMOK",
+       "action": "talk",
+       "text": "임진나루를 건너며 개성 송상의 사람을 만난다. '홍삼은 개성에서 찐다. 의주가 판다면 개성은 무엇을 얻소?'"
+      },
+      {
+       "node": "ND_01_CITY_GAESEONGBU",
+       "action": "minigame",
+       "text": "개성 증포소(蒸包所)에서 두 상단의 몫을 셈한다(주판 산학).",
+       "minigame": "mg_abacus"
+      }
+     ]
+    },
+    {
+     "chapter": 4,
+     "tier": 4,
+     "title": "연경의 불",
+     "stages": [
+      {
+       "node": "ND_13_CITY_PYEONGYANGBU",
+       "action": "talk",
+       "text": "동지사 행렬이 평양 대동문을 나선다. 인삼을 실은 수레가 끝없이 이어진다."
+      },
+      {
+       "node": "ND_13_CITY_ANJUMOK",
+       "action": "talk",
+       "text": "안주 백상루. 먼저 다녀온 역관이 전한다. '연경 상인들이 짜고 값을 후려치려 한다오. 사지 않고 버티면 조선 상인이 돌아갈 날만 기다리지.'"
+      },
+      {
+       "node": "ND_14_SCENIC_UIJUTONGGUNJEONG",
+       "action": "choice",
+       "text": "책문 앞. 전하는 이야기에 따르면 상옥은 연경에서 삼 더미에 불을 놓았다고 한다. 조선 삼이 모두 타 버릴까 두려워진 청 상인들이 결국 값을 올렸다. 상옥은 어떻게 할까?",
+       "choices": [
+        {
+         "id": "fire",
+         "text": "삼 한 더미에 불을 놓는다 — '헐값에 넘기느니 태우겠소'",
+         "effects": {
+          "knowledge_xp": {
+           "sang": 80
+          },
+          "money_mult": 1.5
+         }
+        },
+        {
+         "id": "wait",
+         "text": "불은 놓지 않고 겨울이 끝날 때까지 버틴다",
+         "effects": {
+          "knowledge_xp": {
+           "yu": 60
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "chapter": 5,
+     "tier": 5,
+     "title": "재물은 물과 같다",
+     "stages": [
+      {
+       "node": "ND_14_CITY_UIJUMOK",
+       "action": "talk",
+       "text": "큰 수해가 의주를 덮친다. 상옥은 곳간을 열며 말한다. '재물은 평등하기가 물과 같고, 사람은 바르기가 저울과 같다(財上平如水 人中直似衡).'"
+      },
+      {
+       "node": "ND_14_TOWN_JEONGJU",
+       "action": "deliver",
+       "text": "곽산 고을로 가는 길목 정주. 굶주린 사람들에게 구휼미를 나눈다(백미 한 섬 2). 조정은 그 공으로 상옥을 곽산 군수에 임명한다.",
+       "item": "food_rice",
+       "qty": 2
+      },
+      {
+       "node": "ND_13_CITY_PYEONGYANGBU",
+       "action": "talk",
+       "text": "평안감영. 감사가 묻는다. '상인이 수령이 되었으니 무엇이 다르던가?' — '장부 한 장이 백성 한 사람이라는 것을 알았습니다.'"
+      },
+      {
+       "node": "ND_02_CITY_HANYANGGYEONGJO",
+       "action": "choice",
+       "text": "벼슬에서 물러나며 남길 말을 고른다.",
+       "choices": [
+        {
+         "id": "cup",
+         "text": "계영배(戒盈杯)를 남긴다 — 가득 채우면 비워지는 잔",
+         "effects": {
+          "knowledge_xp": {
+           "seon": 80
+          }
+         }
+        },
+        {
+         "id": "book",
+         "text": "장사의 도리를 시문집 『가포집』에 남긴다",
+         "effects": {
+          "knowledge_xp": {
+           "yu": 80
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "id": "ev_main_uiju_imsangok",
+   "class": "cls_merchant",
+   "scenario": "sc_uiju_imsangok",
+   "type": "main",
    "generated": "content2"
   }
  ]

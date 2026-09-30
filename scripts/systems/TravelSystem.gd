@@ -43,14 +43,11 @@ static func find_path(from: String, to: String) -> Array:
 		return []
 	var dist := {from: 0.0}
 	var prev := {}
-	var open := [from]
+	var heap := [[0.0, from]]  # 이진 힙 [거리, 노드] — 노드 760여 곳에서 O(E log V)
 	var done := {}
-	while open.size() > 0:
-		var best_i := 0
-		for i in open.size():
-			if float(dist[open[i]]) < float(dist[open[best_i]]):
-				best_i = i
-		var cur: String = open.pop_at(best_i)
+	while heap.size() > 0:
+		var top: Array = _heap_pop(heap)
+		var cur: String = top[1]
 		if cur == to:
 			break
 		if done.has(cur):
@@ -64,7 +61,7 @@ static func find_path(from: String, to: String) -> Array:
 			if not dist.has(nx) or nd < float(dist[nx]):
 				dist[nx] = nd
 				prev[nx] = {"from": cur, "leg": leg}
-				open.append(nx)
+				_heap_push(heap, [nd, nx])
 	if not prev.has(to):
 		return []
 	var legs := []
@@ -76,6 +73,43 @@ static func find_path(from: String, to: String) -> Array:
 		legs.push_front(leg)
 		c = String(p["from"])
 	return legs
+
+
+static func _heap_push(h: Array, item: Array) -> void:
+	h.append(item)
+	var i := h.size() - 1
+	while i > 0:
+		var p := (i - 1) >> 1
+		if float(h[p][0]) <= float(h[i][0]):
+			break
+		var t = h[p]
+		h[p] = h[i]
+		h[i] = t
+		i = p
+
+
+static func _heap_pop(h: Array) -> Array:
+	var top: Array = h[0]
+	var last: Array = h.pop_back()
+	if h.size() > 0:
+		h[0] = last
+		var i := 0
+		var n := h.size()
+		while true:
+			var l := 2 * i + 1
+			var r := l + 1
+			var m := i
+			if l < n and float(h[l][0]) < float(h[m][0]):
+				m = l
+			if r < n and float(h[r][0]) < float(h[m][0]):
+				m = r
+			if m == i:
+				break
+			var t = h[m]
+			h[m] = h[i]
+			h[i] = t
+			i = m
+	return top
 
 
 static func path_li(legs: Array) -> float:

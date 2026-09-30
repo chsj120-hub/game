@@ -26,7 +26,21 @@ func _ready() -> void:
 	mat.shader = load("res://shaders/season_weather.gdshader")
 	weather_rect.material = mat
 	add_child(weather_rect)
-	GameState.stats_changed.connect(_refresh)
+	GameState.stats_changed.connect(_queue_refresh)
+	_refresh()
+
+
+var _refresh_queued := false
+
+
+func _queue_refresh() -> void:
+	if not _refresh_queued:
+		_refresh_queued = true
+		call_deferred("_do_refresh")
+
+
+func _do_refresh() -> void:
+	_refresh_queued = false
 	_refresh()
 
 

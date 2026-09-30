@@ -150,6 +150,7 @@ static func shop_list() -> Array:
 	var fac := _fac()
 	var reg := gs.current_region
 	var out := []
+	_pushed = {}
 	var market := "market" in fac or "market5" in fac
 	if market:
 		for f in DataDB.table("04_food_staples.json", "foods"):
@@ -203,10 +204,13 @@ static func shop_list() -> Array:
 	return out
 
 
+static var _pushed: Dictionary = {}  ## shop_list 중복 방지(목록 선형 검색 대신)
+
+
 static func _push(out: Array, id: String, facility: String, lock: String) -> void:
-	for e in out:
-		if e["id"] == id:
-			return
+	if _pushed.has(id):
+		return
+	_pushed[id] = true
 	var st := stock_left(id)
 	out.append({"id": id, "name": DataDB.display_name(id), "price": buy_price(id), "facility": facility,
 		"lock": lock if st > 0 else "이번 장(5일) 물량 소진", "stock": st})

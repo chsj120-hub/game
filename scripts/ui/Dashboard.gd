@@ -112,7 +112,7 @@ func _ready() -> void:
 	log_box.scroll_following = true
 	_font(log_box, 15)
 	add_child(log_box)
-	GameState.stats_changed.connect(refresh)
+	GameState.stats_changed.connect(_queue_refresh)
 	GameState.log_message.connect(_on_log)
 	refresh()
 
@@ -151,6 +151,22 @@ func _bar(k: String, v: float, mx: float, text: String) -> void:
 	pb.max_value = maxf(mx, 1.0)
 	pb.value = v
 	bars[k][1].text = text
+
+
+var _refresh_queued := false
+
+
+## stats_changed 가 한 프레임에 수십 번 와도(구매·섭취·행동 카운터 등) 프레임 끝에 한 번만 다시 그림
+func _queue_refresh() -> void:
+	if _refresh_queued:
+		return
+	_refresh_queued = true
+	call_deferred("_do_refresh")
+
+
+func _do_refresh() -> void:
+	_refresh_queued = false
+	refresh()
 
 
 func refresh() -> void:

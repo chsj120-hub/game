@@ -72,9 +72,16 @@ def gear_stats(slot, tier, family="none", scale=1.0):
 
 
 # ---------------------------------------------------------------- 가격 자동 공식  price = base[cat] × growth^(tier-1)
+_PRICE_CACHE = {}
+
+
 def price(cat, tier):
-    """00_overview.economy.price 단일 원천. 5냥 단위 반올림."""
-    p = load("00_overview.json")["economy"]["price"]
+    """00_overview.economy.price 단일 원천. 5냥 단위 반올림. (파일 수정 시각 기준 캐시 — 빌더가 수백 번 호출)"""
+    f = DATA / "00_overview.json"
+    key = f.stat().st_mtime_ns
+    if _PRICE_CACHE.get("key") != key:
+        _PRICE_CACHE.update(key=key, p=load("00_overview.json")["economy"]["price"])
+    p = _PRICE_CACHE["p"]
     return int(round(p["base"][cat] * p["growth"] ** (tier - 1) / 5.0) * 5) or 5
 
 
@@ -117,3 +124,19 @@ def enemy_reward(ov, tier, boss, key):
     e = ov["economy"]
     v = tier_curve(e["enemy_" + key], tier)
     return v * (e["boss_mult"][key] if boss else 1.0)
+
+
+def parallel_map(fn, args_list):
+    """결정적 병렬 실행: 각 작업이 자체 시드(random.Random)로 돌므로 결과는 순차 실행과 같다.
+    fork 가 되는 OS(리눅스·맥)에서만 병렬, 작업 수 1 이하·SIM_JOBS=1 이면 순차. fn 은 모듈 최상위 함수."""
+    import multiprocessing as mp
+    import os
+    n = int(os.environ.get("SIM_JOBS", os.cpu_count() or 1))
+    if n <= 1 or len(args_list) < 2:
+        return [fn(*a) for a in args_list]
+    try:
+        ctx = mp.get_context("fork")
+    except ValueError:
+        return [fn(*a) for a in args_list]
+    with ctx.Pool(min(n, len(args_list))) as pool:
+        return pool.starmap(fn, args_list)

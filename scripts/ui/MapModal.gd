@@ -245,7 +245,7 @@ func _draw_region() -> void:
 	var vis := {}
 	for n in _visible_nodes():
 		vis[n["id"]] = n
-	for e in DataDB.docs.get("regions.json", {}).get("edges", []):
+	for e in DataDB.edges_in(region_view):  # 권역 색인(전체 900여 간선을 매 프레임 훑지 않음)
 		if vis.has(e["a"]) and vis.has(e["b"]):
 			var col := {"road": Color(0.15, 0.1, 0.05), "mountain": Color(0.35, 0.25, 0.1), "water": Color(0.2, 0.35, 0.7), "trail": Color(0.4, 0.3, 0.2)}.get(String(e["terrain"]), Color.BLACK)
 			draw_line(_to_screen(DataDB.node_pos(e["a"])), _to_screen(DataDB.node_pos(e["b"])), col, 3.0 if e["terrain"] == "road" else 2.0)

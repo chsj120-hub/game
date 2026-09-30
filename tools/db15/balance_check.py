@@ -43,13 +43,16 @@ def register(tuning=None):
 
 def boss_eval(eid, trials, t5):
     rows = {}
+    jobs, keys = [], []
     for cls in S.CLASSES:
         scs = S.scenarios_t5(eid, cls) if t5 else S.scenarios(eid, cls)
         for name, sc in scs.items():
             if name[0] not in ("A", "B", "D", "F", "H"):
                 continue
-            wr, turns, hp, _ = S.simulate(eid, sc, trials)
-            rows.setdefault(name[0], []).append((wr, statistics.median(turns) if turns else None, statistics.mean(hp) if hp else 0))
+            jobs.append((eid, sc, trials))
+            keys.append(name[0])
+    for k, (wr, turns, hp, _) in zip(keys, S.parallel_map(S.simulate, jobs)):   # 결정적 병렬(작업마다 고정 시드)
+        rows.setdefault(k, []).append((wr, statistics.median(turns) if turns else None, statistics.mean(hp) if hp else 0))
     agg = {k: (sum(x[0] for x in v) / 3, statistics.mean([x[1] for x in v if x[1]]) if any(x[1] for x in v) else 0, sum(x[2] for x in v) / 3)
            for k, v in rows.items()}
     return agg
@@ -187,6 +190,16 @@ def main():
 
     print("\n══ 3) 일반 적 필드 조우 (1마리 ≥85%, 같은 적 3마리 50~90%)")
     trials_f = max(60, a.trials // 2)
+    pre = {}
+    if not a.tune:   # 보정 없이 판정만 할 때는 모든 적을 한꺼번에 병렬 계산
+        jobs = []
+        for eid, e in enemies.items():
+            if e["boss_tier"]:
+                continue
+            n = 2 if e["enemy_tier"] == "ELITE" else 3
+            jobs += [([eid], int(e["tier"]), trials_f), ([eid] * n, int(e["tier"]), trials_f)]
+        res = S.parallel_map(field_rate, jobs)
+        pre = {(tuple(j[0])): r for j, r in zip(jobs, res)}
     for eid, e in enemies.items():
         tier = int(e["tier"])
         if e["boss_tier"]:
@@ -213,8 +226,8 @@ def main():
             # 승률은 HP·ATK 정수 반올림 때문에 계단형 → 평가한 점 중 50~90% 안에서 70%에 가장 가까운 배율 채택
             inside = [x for x in seen if 0.55 <= x[1] <= 0.85] or seen
             at(min(inside, key=lambda x: abs(x[1] - 0.7))[0])
-        r1 = field_rate([eid], tier, trials_f)
-        r3 = field_rate([eid] * n, tier, trials_f)
+        r1 = pre[(eid,)] if pre else field_rate([eid], tier, trials_f)
+        r3 = pre[tuple([eid] * n)] if pre else field_rate([eid] * n, tier, trials_f)
         good = r1 >= 0.85 and 0.5 <= r3 <= 0.9
         ok_all &= good
         result["field"][eid] = {"ok": good, "r1": round(r1, 2), "rn": round(r3, 2), "n": n, "hp": S.IDX[eid]["hp"], "atk": S.IDX[eid]["atk"],
@@ -223,8 +236,9 @@ def main():
               f"1마리 {r1*100:3.0f}% · {n}마리 {r3*100:3.0f}% {'' if good else '✗'}")
 
     print("\n══ 4) 인스턴스 풀코스 (DB-15 웨이브 그대로, 미니게임·정비 미사용)")
-    for w in EXP["14_탐색_미니게임_연속전투"]:
-        rate = instance_rate(w["waves_json"], int(w["tier"]), max(30, a.trials // 4))
+    inst = EXP["14_탐색_미니게임_연속전투"]
+    rates = S.parallel_map(instance_rate, [(w["waves_json"], int(w["tier"]), max(30, a.trials // 4)) for w in inst])
+    for w, rate in zip(inst, rates):
         result["instance"][w["instance_id"]] = round(rate, 2)
         print(f"  {w['instance_id']} T{w['tier']} {w['name_kr'][:18]:<18} {rate*100:5.1f}%")
 

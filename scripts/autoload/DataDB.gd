@@ -42,6 +42,11 @@ var side_doc: Dictionary = {}
 var category_reward_map: Dictionary = {}
 var life_gear_repair: Dictionary = {}
 var graph: Dictionary = {}           ## node id -> Array[{to, li, terrain, kind, fare?, days?, wind?}]
+## 조회 색인(로드 시 1회 생성) — 매 프레임·매 메뉴 호출되는 필터를 O(1)로
+var _nodes_by_region: Dictionary = {}   ## region -> Array[node]
+var _edges_by_region: Dictionary = {}   ## region -> Array[edge] (양 끝이 그 권역인 도로·오솔길)
+var _tutorial_steps: Dictionary = {}    ## tutorial id -> Array[step] (순서 유지)
+var consign_quests: Array = []          ## 보부상 위탁 무역 퀘스트(배낭 무게 계산용)
 var load_errors: PackedStringArray = []
 
 
@@ -83,9 +88,33 @@ func reload() -> void:
 		field_buffs[s["id"]] = s
 	side_doc = _read_json(DATA_DIR + "22_side_systems.json")
 	_build_graph()
+	_build_indexes()
 	for e in load_errors:
 		push_warning(e)
 	print("[DataDB] %d 레코드 · 노드 %d · 간선 그래프 %d 로드" % [by_id.size(), nodes().size(), graph.size()])
+
+
+func _build_indexes() -> void:
+	_nodes_by_region.clear()
+	_edges_by_region.clear()
+	_tutorial_steps.clear()
+	for n in nodes():
+		var r := String(n["region"])
+		if not _nodes_by_region.has(r):
+			_nodes_by_region[r] = []
+		_nodes_by_region[r].append(n)
+	for e in docs.get("regions.json", {}).get("edges", []):
+		var r := region_of_node(String(e["a"]))
+		if r == region_of_node(String(e["b"])):
+			if not _edges_by_region.has(r):
+				_edges_by_region[r] = []
+			_edges_by_region[r].append(e)
+	for st in table("23_tutorial.json", "steps"):
+		var t := String(st["tutorial"])
+		if not _tutorial_steps.has(t):
+			_tutorial_steps[t] = []
+		_tutorial_steps[t].append(st)
+	consign_quests = table("03_specialties.json", "trade_quests").filter(func(q): return q.get("consign", false))
 
 
 func _read_json(path: String) -> Dictionary:
@@ -163,8 +192,17 @@ func is_node(id: String) -> bool:
 	return sheet_of(id) == "regions.json:nodes"
 
 
+## 권역의 노드(읽기 전용 — 호출한 쪽에서 배열을 바꾸지 말 것)
 func nodes_in(region_id: String) -> Array:
-	return nodes().filter(func(n): return n["region"] == region_id)
+	return _nodes_by_region.get(region_id, [])
+
+
+func edges_in(region_id: String) -> Array:
+	return _edges_by_region.get(region_id, [])
+
+
+func tutorial_steps(tid: String) -> Array:
+	return _tutorial_steps.get(tid, [])
 
 
 func heritage_list() -> Array:

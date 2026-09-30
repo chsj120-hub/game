@@ -16,7 +16,7 @@ import random
 import statistics
 from collections import Counter, defaultdict
 
-from common import load, price, quest_reward, enemy_reward, save, tier_curve
+from common import load, parallel_map, price, quest_reward, enemy_reward, save, tier_curve
 
 OV = load("00_overview.json")
 E = OV["economy"]
@@ -174,16 +174,37 @@ def thresholds_from_r5(r5):
 
 
 # ================================================================ 진행 몬테카를로
+KEYS = list(dict.fromkeys((it["g"], it["t"]) for it in ITEMS))          # 버킷 순서 = 기존 defaultdict 삽입 순서(난수열 동일)
+KEY_ITEMS = [[i for i, it in enumerate(ITEMS) if (it["g"], it["t"]) == k] for k in KEYS]
+HW_TOTAL = sum(1 for it in ITEMS if it.get("src", it["g"]) == "hwacheop")
+TK_TOTAL = sum(1 for it in ITEMS if it.get("src") == "takbon")
+PROV_TOTAL = Counter(it["prov"] for it in ITEMS)
+REG_H_TOTAL = Counter(it["reg"] for it in ITEMS if it["g"] == "H")
+
+
+def key_weights(rank):
+    """버킷별 선택 가중치(신분에 따라서만 바뀜 — 신분이 오를 때만 다시 계산)"""
+    out = []
+    for g, t in KEYS:
+        if g == "H":
+            out.append(1.0 if t <= rank + 1 else 0.2)
+        elif g in ("M", "P"):
+            out.append(1.0 if rank >= t else 0.0)
+        elif g == "S":
+            out.append(1.0)
+        else:
+            out.append(1.0 if rank >= max(1, t - 1) else 0.0)
+    return out
+
+
 def play(style, th, rng, reg_base, d_share=D):
     pd, pu, ps = STYLES[style]
-    buckets = defaultdict(list)
-    for i, it in enumerate(ITEMS):
-        buckets[(it["g"], it["t"])].append(i)
-    for b in buckets.values():
+    lists = [list(b) for b in KEY_ITEMS]
+    for b in lists:
         rng.shuffle(b)
     total = len(ITEMS)
-    prov_total = Counter(it["prov"] for it in ITEMS)
-    reg_left = Counter(it["reg"] for it in ITEMS if it["g"] == "H")
+    prov_total = PROV_TOTAL
+    reg_left = Counter(REG_H_TOTAL)
     prov_done = Counter()
     rep, rank, done = 0.0, 1, 0
     prov_rep = defaultdict(float)
@@ -192,8 +213,10 @@ def play(style, th, rng, reg_base, d_share=D):
     prov_at_23 = {}
     rep_at = {}
     dmr = OV["rank"]["donate_min_rank"]
-    hw_left = sum(1 for it in ITEMS if it["src" if "src" in it else "g"] == "hwacheop")
-    tk_left = sum(1 for it in ITEMS if it.get("src") == "takbon")
+    hw_left = HW_TOTAL
+    tk_left = TK_TOTAL
+    wk = key_weights(rank)
+    wk_rank = rank
 
     def gain(v, prov):
         nonlocal rep
@@ -204,28 +227,21 @@ def play(style, th, rng, reg_base, d_share=D):
         gain(it["base"] * (1 - d_share) * rank_gap(it["t"], rank), it["prov"])
 
     while done < total:
-        ws = []
-        for (g, t), lst in buckets.items():
-            if not lst:
-                continue
-            if g == "H":
-                w = 1.0 if t <= rank + 1 else 0.2
-            elif g in ("M", "P"):
-                w = 1.0 if rank >= t else 0.0
-            elif g == "S":
-                w = 1.0
-            else:
-                w = 1.0 if rank >= max(1, t - 1) else 0.0
-            if w > 0:
-                ws.append(((g, t), w * len(lst)))
-        if not ws:
+        if wk_rank != rank:
+            wk, wk_rank = key_weights(rank), rank
+        ws = [w * len(l) for w, l in zip(wk, lists)]
+        tot_w = sum(ws)
+        if tot_w <= 0:
             break
-        r = rng.random() * sum(w for _, w in ws)
-        for key, w in ws:
-            r -= w
-            if r <= 0:
-                break
-        it = ITEMS[buckets[key].pop()]
+        r = rng.random() * tot_w
+        pick = -1
+        for i, w in enumerate(ws):
+            if w:
+                pick = i
+                r -= w
+                if r <= 0:
+                    break
+        it = ITEMS[lists[pick].pop()]
         done += 1
         prov_done[it["prov"]] += 1
         if it["g"] == "H":
@@ -376,7 +392,7 @@ def main():
         print(f"  Rank {L}: {th[L-1]:>8,}   (최대치 대비 {th[L-1]/tot[0]*100:5.1f}% · 기준치 대비 {th[L-1]/tot[1]*100:5.1f}%)")
     print(f"  적합식 Threshold(L) = {a:,.0f}·(L−1)^{K_SHAPE}")
 
-    res = {s: run(s, th, args.players, reg_base, seed=11) for s in STYLES}
+    res = dict(zip(STYLES, parallel_map(run, [(s, th, args.players, reg_base, 11) for s in STYLES])))   # 성향별 고정 시드 → 결정적 병렬
     prov_req = {}
     for p in PROV:
         vals = [r["prov_at_23"].get(p["id"]) for r in res["균형형"] if p["id"] in r["prov_at_23"]]

@@ -14,27 +14,42 @@ static func _fac() -> Dictionary:
 
 # ================================================================ 생활 스킬
 ## [탐색] 반경(15리 + 사 지식×3리 + 행장) 내 은닉 노드 판정. 사 지식 5 '선비의 안목'은 자동 힌트.
-static func search() -> Array:
+## 탐색 반경(리)·발견 확률 — [탐색]과 채집·야영·사냥 발견이 같은 규칙을 쓴다
+static func _search_params() -> Dictionary:
 	var gs := GameState
 	var cfg: Dictionary = _fac().get("search", {})
 	var sa := int(gs.party_knowledge().get("sa", 0))
 	var radius_li := float(cfg.get("radius_li", 15)) + float(cfg.get("radius_li_per_sa", 3)) * sa
 	for id in gs.life_gear.values():
 		radius_li += float(DataDB.skill(String(DataDB.get_row(id).get("skill", ""))).get("effects", {}).get("field_search_radius_li", 0))
-	var ppl := float(DataDB.docs.get("regions.json", {}).get("px_per_li", 20.0))
+	return {"radius_li": radius_li, "ppl": float(DataDB.docs.get("regions.json", {}).get("px_per_li", 20.0)),
+		"chance": float(cfg.get("detect_chance", 0.55)) + float(cfg.get("detect_per_sa", 0.05)) * sa, "hours": float(cfg.get("hours", 1))}
+
+
+## 현재 노드 주변 은닉지 중 skill 로 찾을 수 있는 것을 확률 판정해 발견
+static func _reveal(skill: String, sp: Dictionary) -> Array:
+	var gs := GameState
 	var here := DataDB.node_pos(gs.current_node)
-	var chance := float(cfg.get("detect_chance", 0.55)) + float(cfg.get("detect_per_sa", 0.05)) * sa
+	var reach := float(sp["radius_li"]) * float(sp["ppl"])
 	var found := []
 	for n in DataDB.nodes_in(gs.current_region):
-		if not n.get("hidden", false) or gs.discovered.has(n["id"]):
+		if not n.get("hidden", false) or gs.discovered.has(n["id"]) or not _discover_ok(n, skill):
 			continue
-		if not _discover_ok(n, "search"):
-			continue
-		if here.distance_to(DataDB.node_pos(n["id"])) <= radius_li * ppl and gs.rng.randf() < chance:
+		if here.distance_to(DataDB.node_pos(n["id"])) <= reach and gs.rng.randf() < float(sp["chance"]):
 			gs.discover(n["id"])
 			found.append(n["id"])
+	return found
+
+
+static func search() -> Array:
+	var gs := GameState
+	var sp := _search_params()
+	var radius_li := float(sp["radius_li"])
+	var ppl := float(sp["ppl"])
+	var here := DataDB.node_pos(gs.current_node)
+	var found := _reveal("search", sp)
 	gs.add_knowledge_xp("sa", int(DataDB.classes_doc.get("knowledge", {}).get("xp_sources", {}).get("search_sa", 5)))
-	gs.advance_minutes(int(float(cfg.get("hours", 1)) * 60))
+	gs.advance_minutes(int(float(sp["hours"]) * 60))
 	if found.is_empty():
 		gs.note("주변 %.0f리를 살폈으나 특별한 것은 없었다." % radius_li)
 		var best := ""
@@ -63,21 +78,7 @@ static func _discover_ok(n: Dictionary, skill: String) -> bool:
 
 ## [채집]·[야영]·[사냥]으로만 드러나는 은닉지(약초 캐다 발견한 폐사지 등). 반경·확률은 [탐색]과 같음
 static func reveal_by_skill(skill: String) -> Array:
-	var gs := GameState
-	var cfg: Dictionary = _fac().get("search", {})
-	var sa := int(gs.party_knowledge().get("sa", 0))
-	var radius_li := float(cfg.get("radius_li", 15)) + float(cfg.get("radius_li_per_sa", 3)) * sa
-	var ppl := float(DataDB.docs.get("regions.json", {}).get("px_per_li", 20.0))
-	var here := DataDB.node_pos(gs.current_node)
-	var chance := float(cfg.get("detect_chance", 0.55)) + float(cfg.get("detect_per_sa", 0.05)) * sa
-	var found := []
-	for n in DataDB.nodes_in(gs.current_region):
-		if not n.get("hidden", false) or gs.discovered.has(n["id"]) or not _discover_ok(n, skill):
-			continue
-		if here.distance_to(DataDB.node_pos(n["id"])) <= radius_li * ppl and gs.rng.randf() < chance:
-			gs.discover(n["id"])
-			found.append(n["id"])
-	return found
+	return _reveal(skill, _search_params())
 
 
 static func hint_hidden() -> Array:

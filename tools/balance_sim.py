@@ -13,7 +13,11 @@ import json
 import math
 import random
 import statistics
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from common import parallel_map  # noqa: E402
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 
@@ -107,7 +111,10 @@ class C:
     ratio = property(lambda s: s.hp / max(s.max_hp, 1))
 
     def bsum(self, st):
-        v = sum(b[1] for b in self.buffs if b[0] == st)
+        v = 0
+        for b in self.buffs:
+            if b[0] == st:
+                v += b[1]
         for sid in self.statuses:
             v += STATUS[sid].get(st, 0.0)
         return v
@@ -158,6 +165,9 @@ class C:
         self.taunt = max(0, self.taunt - 1)
 
 
+BASIC_SKILL = {"id": "basic", "name": "공격", "target": "enemy", "element": "weapon", "affinity": "weapon", "power": 1.0, "ap_cost": 1, "cooldown": 0}
+
+
 # ------------------------------------------------------------ CTBEngine.gd
 class Engine:
     def __init__(self, allies, enemies, items, rng):
@@ -172,12 +182,15 @@ class Engine:
 
     def next_actor(self):
         best, bt = None, 1e18
-        for c in self.all_living():
-            t = max(0.0, (B["gauge_max"] - c.gauge) / c.rate())
+        live = self.all_living()
+        rates = [c.rate() for c in live]      # 한 번만 계산(같은 순간의 속도 — 결과 동일)
+        gmax = B["gauge_max"]
+        for c, rt in zip(live, rates):
+            t = max(0.0, (gmax - c.gauge) / rt)
             if t < bt - 1e-9 or (abs(t - bt) < 1e-9 and c.side == "ally" and best.side == "enemy"):
                 best, bt = c, t
-        for c in self.all_living():
-            c.gauge += c.rate() * bt
+        for c, rt in zip(live, rates):
+            c.gauge += rt * bt
         best.gauge = B["gauge_max"]
         return best
 
@@ -222,7 +235,7 @@ class Engine:
         return self.lowest(foes)
 
     def skill(self, sid):
-        return IDX.get(sid) or {"id": "basic", "name": "공격", "target": "enemy", "element": "weapon", "affinity": "weapon", "power": 1.0, "ap_cost": 1, "cooldown": 0}
+        return IDX.get(sid) or BASIC_SKILL
 
     def can_use(self, actor, sid):
         sk = self.skill(sid)
@@ -726,13 +739,20 @@ def main():
         groups.append(("5등급 신화보스 (Rank 5)", ["en_arang", "en_heukryong", "en_yeokcheon"], scenarios_t5, "F", ("H",)))
     for title, bosses, fn, main_key, fail_keys in groups:
         print(f"\n══ {title}   (판정: 3클래스 평균 — 개별 클래스 편차는 상성 카운터로 허용)")
+        jobs, keys = [], []
+        for boss in bosses:
+            for cls in CLASSES:
+                for name, sc in fn(boss, cls).items():
+                    jobs.append((boss, sc, args.trials))
+                    keys.append((boss, cls, name))
+        results = dict(zip(keys, parallel_map(simulate, jobs)))
         for boss in bosses:
             e = IDX[boss]
             print(f"■ {e['name']} [{e['yu_bul_seon_type']}] (HP {e['hp']}, ATK {e['atk']}, DEF {e['def']}, 전투속도 {e['speed']*e['combat_scale']:.0f})")
             agg = {}
             for cls in CLASSES:
                 for name, sc in fn(boss, cls).items():
-                    wr, turns, hp, dth = simulate(boss, sc, args.trials)
+                    wr, turns, hp, dth = results[(boss, cls, name)]
                     agg.setdefault(name[0], []).append((wr, statistics.median(turns) if turns else None, statistics.mean(hp) if hp else 0))
                     report(f"[{CLASSES[cls]['name']}] {name}", wr, turns, hp, dth)
             m = agg[main_key]

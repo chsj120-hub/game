@@ -26,5 +26,5 @@
 | parallax.csv | 51 |
 | portraits_companion.csv | 67 |
 | portraits_enemy.csv | 27 |
-| portraits_hero.csv | 4 |
+| portraits_hero.csv | 5 |
 | sprites.csv | 73 |

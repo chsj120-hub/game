@@ -2,7 +2,7 @@
 """콘텐츠 확충(2차) — 이벤트·권역 적·무예 단조 장비·탈것 퀘스트·작설차, 제주 김만덕 시나리오와 튜토리얼·도움말.
 여러 번 실행해도 결과가 같다(generated="content2" 행만 교체). 파이프라인에서 craft_trade_update 다음에 실행.
 
-  20_events.json      역사·설화 이벤트 +10, 메인 시나리오 '김만덕 — 제주 객주에서 금강산까지'(시나리오 전용)
+  20_events.json      역사·설화 이벤트 +10, 시나리오 메인(data_src/scenarios/*.json — 김만덕 편 등)
   12_enemies.json     권역 적 +6 (제주 도채비·영감, 황당선, 북방 마적, 멧돼지 떼, 반달곰)
   02_equipment.json   무예 단조서 3권(당파창·등패·편곤) 장비
   07_mounts.json      4등급 탈것 퀘스트 +2 (제주 헌마, 경강 조운선) + 14 탈것 스킬
@@ -10,6 +10,7 @@
   23_tutorial.json    시나리오(시작 설정) · 튜토리얼 단계 · 도움말 항목  (신규 시트)
 """
 from common import load, save
+import scenario_lib
 
 TAG = "content2"
 
@@ -146,107 +147,8 @@ EVENTS = [
      "codex": "1871년 미국 함대의 강화도 침공(신미양요)과 광성보 전투."},
 ]
 
-# ================================================================ 김만덕 시나리오 (메인, 시나리오 전용 — 클래스 메인 대신 시작)
-MANDEOK_MAIN = {
-    "id": "ev_main_mandeok", "name": "김만덕 — 제주 객주에서 금강산까지", "class": "cls_merchant", "scenario": "sc_jeju_mandeok",
-    "lore": "역사", "type": "main",
-    "era_note": "김만덕(1739~1812)의 실제 생애(1790년대)를 따르는 시나리오. 본편 배경(1861)과 시대가 다르며, 이 시나리오에서만 정조 대 인물이 등장한다.",
-    "chapters": [
-        {"chapter": 1, "tier": 1, "title": "객주를 열다", "stages": [
-            {"node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG", "action": "talk",
-             "text": "제주목 관아. 만덕은 관기 명부에서 이름을 지워 달라는 소지를 올린다. 목사가 묻는다. '양인으로 돌아가 무엇을 하려느냐?' "
-                     "— '포구에 객주를 열어 뭍과 섬을 잇겠습니다. 섬에서 나는 것은 제값에, 뭍에서 오는 것은 제때에.'"},
-            {"node": "ND_17_TOWN_JOCHEON", "action": "choice",
-             "text": "조천포 첫 거래. 육지 장사꾼이 말총을 헐값에 넘기라며 웃돈 대신 '다음 배'를 약속한다.",
-             "choices": [{"id": "fair", "text": "저울을 바로 달고 제값만 받는다 — '신용이 밑천입니다'", "effects": {"knowledge_xp": {"sang": 40}}},
-                         {"id": "bargain", "text": "뭍 시세를 짚어 웃돈을 받아 낸다", "effects": {"money_mult": 1.3}}]}]},
-        {"chapter": 2, "tier": 2, "title": "뭍으로 가는 배", "stages": [
-            {"node": "ND_17_FORT_HWABUKJIN", "action": "deliver",
-             "text": "화북포에 뭍으로 가는 상선이 닿았다. 객주의 첫 짐으로 제주 말총을 싣는다(말총 10).", "item": "sp_jeju_malchong", "qty": 10},
-            {"node": "ND_17_TOWN_SEOGWIPO", "action": "choice",
-             "text": "서귀포 잠녀들이 딴 전복을 객주에 맡기려 한다. 관아의 진상 몫을 떼고 나면 남는 것이 없다는 하소연이다.",
-             "choices": [{"id": "share", "text": "잠녀 몫을 먼저 셈해 주고 남은 것으로 이문을 본다", "effects": {"knowledge_xp": {"sang": 40, "nong": 20}}},
-                         {"id": "stock", "text": "전복을 모두 사들여 뭍에 비싸게 판다", "effects": {"money_mult": 1.3}}]}]},
-        {"chapter": 3, "tier": 3, "title": "을묘년 흉년", "stages": [
-            {"node": "ND_08_CITY_NAJUMOK", "action": "choice",
-             "text": "을묘년(1795), 태풍과 가뭄으로 제주에 굶주림이 번진다. 만덕은 평생 모은 재산을 들고 나주 영산창으로 건너왔다. 쌀을 얼마나 살까?",
-             "choices": [{"id": "all", "text": "객주 재산을 모두 털어 쌀을 산다", "effects": {"knowledge_xp": {"sang": 60}}},
-                         {"id": "part", "text": "객주를 이어 갈 밑천은 남긴다", "effects": {"money_mult": 1.2}}]},
-            {"node": "ND_08_TOWN_HAENAM", "action": "talk",
-             "text": "해남 포구. 사공들이 풍랑을 걱정한다. '섬이 굶는데 바람을 기다릴 수 있소.' 만덕은 쌀배를 띄운다."},
-            {"node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG", "action": "deliver",
-             "text": "제주목 관덕정 앞에 구휼미를 푼다(백미 3섬). 사람들이 줄지어 만덕의 이름을 부른다.", "item": "food_rice", "qty": 3}]},
-        {"chapter": 4, "tier": 4, "title": "바다를 건너는 부름", "stages": [
-            {"node": "ND_08_TOWN_HAENAM", "action": "talk",
-             "text": "목사가 전한다. '임금께서 소원을 물으셨다.' 만덕이 답한다. '한양 대궐을 우러르고 금강산 일만이천 봉을 보는 것입니다.' "
-                     "제주 여인은 뭍에 나갈 수 없다는 출륙금지령이 있었으나, 임금이 특별히 허락했다."},
-            {"node": "ND_07_CITY_JEONJUJEONRAGAMYEONG", "action": "talk",
-             "text": "전라감영이 역마와 숙식을 내어 준다. 감사가 웃는다. '섬 객주가 감영 손님이 되었구려.'"},
-            {"node": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG", "action": "minigame",
-             "text": "충청감영에서 구휼 장부를 셈해 올린다(주판 산학).", "minigame": "mg_abacus"}]},
-        {"chapter": 5, "tier": 5, "title": "일만이천 봉", "stages": [
-            {"node": "ND_02_CITY_HANYANGGYEONGJO", "action": "talk",
-             "text": "평민은 임금을 뵐 수 없는 법. 조정은 만덕에게 내의원 의녀반수(醫女班首) 벼슬을 내려 대궐에 들게 한다. "
-                     "정조가 말한다. '네가 한 일은 사내도 못 할 일이다.'"},
-            {"node": "ND_01_CITY_GAESEONGBU", "action": "choice",
-             "text": "금강산 가는 길에 들른 개성. 송상(개성상인)들이 섬 객주가 쓰는 장부법을 묻는다.",
-             "choices": [{"id": "teach", "text": "섬과 뭍의 시세를 한 장에 맞춰 적는 법을 가르쳐 준다", "effects": {"knowledge_xp": {"sang": 80}}},
-                         {"id": "learn", "text": "송상의 사개치부법(四介治簿法)을 배운다", "effects": {"knowledge_xp": {"sa": 80}}}]},
-            {"node": "ND_03_CITY_CHEOLWONDOHOBU", "action": "talk",
-             "text": "철원을 지나 단발령에 오르자 구름 사이로 금강산 봉우리가 펼쳐진다. 재상 채제공은 훗날 이 여정을 「만덕전」에 적었다."},
-            {"node": "ND_03_SCENIC_GEUMGANGSANGURYONGPOK", "action": "talk",
-             "text": "구룡폭 앞. '섬 여인이 금강산을 본 것은 만덕이 처음'이라 했다. 만덕은 바다 쪽을 돌아본다. 객주의 문은 여전히 열려 있다."}]},
-    ],
-}
-
-SCENARIOS = [{
-    "id": "sc_jeju_mandeok", "name": "[테스트] 제주 객주 김만덕 편", "hero_name": "김만덕", "class": "cls_merchant",
-    "start_node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG", "money": 500, "tutorial": "tut_jeju", "main": "ev_main_mandeok",
-    "items": {"food_rice_mal": 3, "mat_jang": 1, "bk_food_jumak": 1},
-    "desc": "제주목에서 객주를 여는 상인 김만덕으로 시작합니다. 튜토리얼이 장터·제작·이동·답사·전투·무역·이벤트·저장을 차례로 안내합니다.",
-    "portrait": "res://assets/portraits/hero_mandeok.png", "costume": "jeju_merchant_woman",
-    "prompt_who": "Kim Man-deok (1739-1812), Jeju island merchant and philanthropist who fed the island in the 1795 famine",
-}]
-
-# 조건 type: ack(다음 버튼) · counter{key,n} · visited{n} · at_node{node} · has_item{item,n} · event_progress{event,n}
-TUTORIAL = [
-    {"id": "tut_jeju_01", "tutorial": "tut_jeju", "title": "제주목에 오신 것을 환영합니다",
-     "text": "화면 위쪽은 필드, 아래쪽은 대시보드입니다. 체력·피로·포만·배낭 무게를 늘 확인하세요. 오른쪽 기록창에 모든 소식이 쌓입니다.",
-     "hint": "읽었으면 [다음]을 누르세요.", "cond": {"type": "ack"}},
-    {"id": "tut_jeju_02", "tutorial": "tut_jeju", "title": "거점 시설 열기",
-     "text": "도시·고을에는 장터·주막·관아 같은 시설이 있습니다. [거점 시설]을 누르면 지금 있는 곳의 시설 목록이 열립니다.",
-     "hint": "대시보드 [거점 시설] 버튼", "cond": {"type": "counter", "key": "open_facilities", "n": 1}},
-    {"id": "tut_jeju_03", "tutorial": "tut_jeju", "title": "장터에서 사기",
-     "text": "장터에서 콩나물을 하나 사 보세요. 특산물은 원산지에서 싸고(×0.72) 멀리 갈수록 비싸게 팔립니다. 5일장마다 물량이 다시 채워집니다.",
-     "hint": "거점 시설 → 장터 → 콩나물", "cond": {"type": "has_item", "item": "food_kongnamul", "n": 1}},
-    {"id": "tut_jeju_04", "tutorial": "tut_jeju", "title": "요리하기",
-     "text": "주막 국밥 조리서가 있으니 콩나물국밥(곡물 한 말 + 콩나물 + 장)을 만들 수 있습니다. 비전서가 있어야 레시피가 열리고, 주막 가마솥이나 야영 노구솥이 필요합니다.",
-     "hint": "대시보드 [제작] → 콩나물국밥 (주막이 있는 곳에서)", "cond": {"type": "counter", "key": "craft", "n": 1}},
-    {"id": "tut_jeju_05", "tutorial": "tut_jeju", "title": "대동여지도 펼치기",
-     "text": "[지도](M 키)에서 목적지를 누르면 길을 따라 걸어갑니다. 산길은 느리고, 한 번 걸은 길은 빨라집니다. 이동 중에는 Space로 멈춥니다.",
-     "hint": "[지도] 또는 M", "cond": {"type": "counter", "key": "open_map", "n": 1}},
-    {"id": "tut_jeju_06", "tutorial": "tut_jeju", "title": "조천포로 가기",
-     "text": "지도에서 동쪽 조천을 골라 이동하세요. 걷는 동안 피로가 쌓이고 포만감이 줄어듭니다. 신선 식품은 노드를 지날 때마다 신선도가 떨어집니다.",
-     "hint": "지도 → 조천", "cond": {"type": "at_node", "node": "ND_17_TOWN_JOCHEON"}},
-    {"id": "tut_jeju_07", "tutorial": "tut_jeju", "title": "이야기 진행",
-     "text": "주황 표시가 있는 곳에서 [이벤트]를 누르면 시나리오가 진행됩니다. 김만덕 1장의 첫 이야기는 제주목에서, 두 번째는 조천에서 이어집니다.",
-     "hint": "제주목·조천에서 [이벤트] → 진행", "cond": {"type": "event_progress", "event": "ev_main_mandeok", "n": 2}},
-    {"id": "tut_jeju_08", "tutorial": "tut_jeju", "title": "유산 답사",
-     "text": "방사탑·진·절 같은 유산에 가면 [거점 시설]에서 답사할 수 있습니다. 답사하면 명성과 보상(답사록·장비·비전서)을 얻고, 보상은 쓰기·기증·매각 중 하나를 고릅니다.",
-     "hint": "조천 방사탑 또는 화북진에서 답사", "cond": {"type": "counter", "key": "heritage", "n": 1}},
-    {"id": "tut_jeju_09", "tutorial": "tut_jeju", "title": "첫 전투",
-     "text": "밤길이나 산길에서는 적과 마주칩니다. 전투는 행동 순서(CTB) 방식이라 빠른 쪽이 자주 움직입니다. [사냥]으로 연습 전투를 할 수도 있습니다.",
-     "hint": "[사냥] 또는 이동 중 조우", "cond": {"type": "counter", "key": "battle_win", "n": 1}},
-    {"id": "tut_jeju_10", "tutorial": "tut_jeju", "title": "보부상 위탁",
-     "text": "밑천이 없어도 [무역]의 [위탁] 의뢰로 짐을 날라 운임을 벌 수 있습니다. 제주목 → 조천 말총 배달부터 해 보세요. 일반 무역 퀘스트는 대금 1.8배와 명성을 줍니다.",
-     "hint": "제주목 장터 → 무역 → [위탁] 제주 말총 조천포 배달", "cond": {"type": "counter", "key": "trade_accept", "n": 1}},
-    {"id": "tut_jeju_11", "tutorial": "tut_jeju", "title": "여정 기록(저장)",
-     "text": "저장은 대도시 주막(온돌방)에서만 됩니다. 제주에서는 제주목 주막입니다. 먼 길을 떠나기 전에 꼭 기록하세요.",
-     "hint": "제주목 → 주막 → 여정 기록", "cond": {"type": "counter", "key": "save", "n": 1}},
-    {"id": "tut_jeju_12", "tutorial": "tut_jeju", "title": "튜토리얼 완료",
-     "text": "이제 1장을 마치고 신분 Rank 2가 되면 2장 '뭍으로 가는 배'가 열립니다. 막히면 [도움말]에서 각 시스템 설명을 볼 수 있습니다.",
-     "hint": "[다음]으로 마칩니다.", "cond": {"type": "ack"}},
-]
+# ================================================================ 시나리오: data_src/scenarios/*.json (파일 1개 = 1편, tools/scenario_lib.py)
+#   김만덕 편 등 시나리오·튜토리얼은 이제 JSON 파일로 관리한다. 새 시나리오 = 파일 추가(tools/scenario_tool.py new).
 
 HELP = [
     {"id": "help_move", "title": "이동·지도", "text": "지도에서 목적지를 누르면 최단 경로로 걷습니다. 산길 ×0.65, 뱃길 ×0.85 속도이고, 비·눈·밤에는 느려집니다. 한 번 걸은 간선은 빨라집니다. 역참에서는 엽전을 내고 빠른 이동을 할 수 있고, 나루에서는 뱃길을 탑니다(폭풍이면 결항)."},
@@ -335,9 +237,12 @@ JAKSEOL = {"id": "hr_jakseol", "name": "작설차", "form": "탕약", "tier": 2,
 
 
 def main():
+    SC = scenario_lib.load_all()
+    if SC["errors"]:
+        raise SystemExit("✗ 시나리오 파일 오류 — python3 tools/scenario_tool.py check\n  " + "\n  ".join(SC["errors"]))
     doc = load("20_events.json")
-    doc["events"] = keep(doc["events"]) + tag(EVENTS)
-    doc["main_scenarios"] = keep(doc["main_scenarios"]) + tag([MANDEOK_MAIN])
+    doc["events"] = keep(doc["events"]) + tag(EVENTS) + tag(SC["events"])
+    doc["main_scenarios"] = keep(doc["main_scenarios"]) + tag(SC["mains"])
     doc["_schema"] = doc["_schema"].split(" | 시나리오")[0] + (" | 시나리오: main_scenarios[].scenario 가 있으면 그 시작 설정(23_tutorial.scenarios)으로 "
                                                          "새 게임을 시작했을 때만 진행(클래스 기본 메인 대신).")
     save("20_events.json", doc)
@@ -374,9 +279,9 @@ def main():
                    "steps=튜토리얼 단계(tutorial 묶음 순서대로, cond 충족 시 다음 단계). cond.type: ack|counter{key,n}|visited{n}|at_node{node}|"
                    "has_item{item,n}|event_progress{event,n}. counter 키: open_facilities·open_map·buy·sell·craft·unpack·heritage·battle_win·"
                    "trade_accept·trade_done·save·event_stage·gather·camp. help=도움말 항목(대시보드 [도움말]).",
-        "scenarios": SCENARIOS, "steps": TUTORIAL, "help": HELP})
-    print(f"이벤트 +{len(EVENTS)} · 메인 시나리오 +1(김만덕 5장) · 적 +{len(ENEMIES)} · 무예 장비 +{len(MARTIAL)} · 탈것 +{len(MOUNTS)} · "
-          f"작설차 · 튜토리얼 {len(TUTORIAL)}단계 · 도움말 {len(HELP)}")
+        "scenarios": SC["scenarios"], "steps": SC["steps"], "help": HELP})
+    print(f"이벤트 +{len(EVENTS) + len(SC['events'])} · 시나리오 {len(SC['scenarios'])}편({', '.join(s['hero_name'] for s in SC['scenarios'])}) · "
+          f"적 +{len(ENEMIES)} · 무예 장비 +{len(MARTIAL)} · 탈것 +{len(MOUNTS)} · 작설차 · 튜토리얼 {len(SC['steps'])}단계 · 도움말 {len(HELP)}")
 
 
 if __name__ == "__main__":

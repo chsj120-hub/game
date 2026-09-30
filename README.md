@@ -29,6 +29,10 @@
 6. 데이터를 고쳤다면 아래 파이프라인을 다시 돌립니다(Python 3.9 이상).
 
 ## 데이터 파이프라인
+**한 번에 실행:** `python3 tools/run_pipeline.py` (전체 약 33초) · `--fast` (전투 시뮬 생략, 약 17초) · `--terrain` (지형 마스크 재생성 포함) · `--from 단계`
+
+**시나리오 추가:** `data_src/scenarios/*.json` 파일 하나가 1편입니다. [docs/시나리오_작성_가이드.md](docs/시나리오_작성_가이드.md)를 보고 `tools/scenario_tool.py`(nodes · new · check)로 작성합니다.
+
 ```
 data_src/world_table.json, heritage_curated.json   ← 기획자가 수정하는 원천 (완전판 3.3 노드 표 + 분류 보정 + 은닉 노드)
         │  python3 tools/import_heritage450.py 국가유산 448·공식/이벤트 노드(data_src/heritage450/*.xlsx) 중복·좌표·지명 검증 → import.json

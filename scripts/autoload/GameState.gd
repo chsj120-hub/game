@@ -321,9 +321,19 @@ func item_weight(id: String) -> float:
 
 
 func carry_weight() -> float:
+	var sig := hash([inventory, equipped, life_gear, trade_cargo])
+	var hit = _memo_get("cw", sig)
+	if hit != null:
+		return float(hit)
+	var w := _carry_weight_calc()
+	_memo_put("cw", sig, w)
+	return w
+
+
+func _carry_weight_calc() -> float:
 	var w := 0.0
-	for q in DataDB.table("03_specialties.json", "trade_quests"):  # 보부상 위탁 짐
-		if q.get("consign", false) and String(trade_cargo.get(q["id"], "")) == "accepted":
+	for q in DataDB.consign_quests:  # 보부상 위탁 짐
+		if String(trade_cargo.get(q["id"], "")) == "accepted":
 			w += item_weight(String(q["item"])) * int(q["qty"])
 	var worn := equipped.values() + life_gear.values()
 	for id in inventory.keys():
@@ -438,7 +448,33 @@ func add_knowledge_xp(k: String, xp: int) -> void:
 
 
 ## 파티 지식 = 본인 + 서책 패시브 + 동행 동료 knowledge_add (상한 10) — 완전판 8장 '100% 합산'
+## 자주 불리는 합산값(매 프레임 이동 속도·메뉴마다) 메모 — 입력 상태의 해시가 같으면 이전 결과 재사용.
+## 해시는 엔진 내부(C++)에서 계산되어 GDScript 반복보다 훨씬 싸다. 상태가 바뀌면 해시가 달라져 자동으로 다시 계산.
+var _memo: Dictionary = {}
+
+
+func _memo_get(key: String, sig: int):
+	var m = _memo.get(key)
+	if m != null and int(m[0]) == sig:
+		return m[1]
+	return null
+
+
+func _memo_put(key: String, sig: int, v) -> void:
+	_memo[key] = [sig, v]
+
+
 func party_knowledge() -> Dictionary:
+	var sig := hash([knowledge, party, equipped, companions])
+	var hit = _memo_get("pk", sig)
+	if hit != null:
+		return hit.duplicate()  # 호출한 쪽이 고쳐도 메모가 오염되지 않도록 얕은 복사
+	var res := _party_knowledge_calc()
+	_memo_put("pk", sig, res)
+	return res.duplicate()
+
+
+func _party_knowledge_calc() -> Dictionary:
 	var out := knowledge.duplicate()
 	for slot in ACC_SLOTS:
 		var ps := String(DataDB.get_row(String(equipped.get(slot, ""))).get("passive_skill", ""))
@@ -564,6 +600,16 @@ func has_water_mount() -> bool:
 
 ## 행장·서책 패시브·음식·필드 버프 전역 합산
 func buff_totals() -> Dictionary:
+	var sig := hash([life_gear, gear_durability, equipped, food_buff, field_statuses, knowledge, party, companions])
+	var hit = _memo_get("bt", sig)
+	if hit != null:
+		return hit.duplicate()
+	var res := _buff_totals_calc()
+	_memo_put("bt", sig, res)
+	return res.duplicate()
+
+
+func _buff_totals_calc() -> Dictionary:
 	var total := {}
 	for id in life_gear.values():
 		if int(gear_durability.get(id, 1)) <= 0:

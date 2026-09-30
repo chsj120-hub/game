@@ -6,7 +6,7 @@ extends RefCounted
 
 
 static func steps(tid: String) -> Array:
-	return DataDB.table("23_tutorial.json", "steps").filter(func(s): return String(s["tutorial"]) == tid)
+	return DataDB.tutorial_steps(tid)
 
 
 static func active() -> bool:

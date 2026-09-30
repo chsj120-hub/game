@@ -79,7 +79,7 @@ func _ready() -> void:
 	battle.battle_finished.connect(_on_battle_finished)
 	GameState.rank_up.connect(func(_r): field.queue_redraw())
 	_build_tutorial_panel()
-	GameState.stats_changed.connect(_refresh_tutorial)
+	GameState.stats_changed.connect(_queue_tutorial)
 	Settings.changed.connect(func(_k): _refresh_tutorial())
 	_title_screen()
 
@@ -957,6 +957,20 @@ func _tut_next_pressed() -> void:
 
 func _tut_skip_pressed() -> void:
 	TutorialSystem.skip_all()
+	_refresh_tutorial()
+
+
+var _tut_queued := false
+
+
+func _queue_tutorial() -> void:
+	if not _tut_queued:
+		_tut_queued = true
+		call_deferred("_do_tutorial")
+
+
+func _do_tutorial() -> void:
+	_tut_queued = false
 	_refresh_tutorial()
 
 

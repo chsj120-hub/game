@@ -1,7 +1,7 @@
 {
  "_about": "tools/gen_asset_manifest.py 생성. 게임은 파일이 없으면 절차적 그리기로 대체하므로 어떤 순서로 넣어도 된다. 규격은 spec, 경로는 path 그대로.",
  "summary": {
-  "total": 1725,
+  "total": 1726,
   "present": 17,
   "by_kind": {
    "region_map": 17,
@@ -10,7 +10,7 @@
    "battle_bg": 17,
    "overworld": 1,
    "marker": 30,
-   "portrait": 98,
+   "portrait": 99,
    "icon": 1395,
    "sprite": 73,
    "ui_9patch": 2,
@@ -1663,6 +1663,18 @@
    },
    "use": "시나리오 주인공 김만덕 수묵 초상",
    "ref": "sc_jeju_mandeok",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/hero_imsangok.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "시나리오 주인공 임상옥 수묵 초상",
+   "ref": "sc_uiju_imsangok",
    "exists": false
   },
   {

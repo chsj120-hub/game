@@ -3,9 +3,9 @@
  "rank": {
   "formula": {
    "type": "power",
-   "a": 3916.1,
+   "a": 4005.1,
    "k": 2.245,
-   "note": "Threshold(L) = 3,916·(L−1)^2.245. R5 = 균형형이 콘텐츠 1/3 을 찾았을 때(중앙값) 도달하도록 진행 시뮬로 보정"
+   "note": "Threshold(L) = 4,005·(L−1)^2.245. R5 = 균형형이 콘텐츠 1/3 을 찾았을 때(중앙값) 도달하도록 진행 시뮬로 보정"
   },
   "table": [
    {
@@ -22,7 +22,7 @@
    },
    {
     "rank": 2,
-    "threshold": 3900,
+    "threshold": 4000,
     "titles": {
      "cls_eosa": "향촌 유생",
      "cls_merchant": "보부상",
@@ -36,7 +36,7 @@
    },
    {
     "rank": 3,
-    "threshold": 18500,
+    "threshold": 19000,
     "titles": {
      "cls_eosa": "진사",
      "cls_merchant": "객주 대행수",
@@ -52,7 +52,7 @@
    },
    {
     "rank": 4,
-    "threshold": 46500,
+    "threshold": 47500,
     "titles": {
      "cls_eosa": "종사관·어사",
      "cls_merchant": "대방",
@@ -66,7 +66,7 @@
    },
    {
     "rank": 5,
-    "threshold": 88000,
+    "threshold": 90000,
     "titles": {
      "cls_eosa": "판서",
      "cls_merchant": "팔도 도대행수",
@@ -102,9 +102,9 @@
    "note": "메인 시나리오 N장은 신분 Rank N 이상에서 진행. 5장 완료 = 엔딩"
   },
   "reputation_budget": {
-   "max": 556381,
-   "reference": 415475,
-   "min": 345022,
+   "max": 556537,
+   "reference": 415631,
+   "min": 345178,
    "by_source": {
     "유산(답사+기증)": [
      325168,
@@ -137,9 +137,9 @@
      10840
     ],
     "역사·설화 이벤트": [
-     8220,
-     8220,
-     8220
+     8376,
+     8376,
+     8376
     ],
     "무역 퀘스트": [
      1991,
@@ -189,8 +189,8 @@
     "normal_kill",
     "town_invest"
    ],
-   "r5_share_of_max": 0.158,
-   "r5_share_of_reference": 0.212
+   "r5_share_of_max": 0.162,
+   "r5_share_of_reference": 0.217
   },
   "calibration_basis": {
    "basis": "actual",
@@ -231,7 +231,7 @@
      3
     ],
     "event": [
-     2,
+     3,
      5,
      4,
      2,
@@ -1304,11 +1304,11 @@
    ],
    "capital": "ND_02_CITY_HANYANGGYEONGJO",
    "standing_req": [
-    2700,
-    6700,
-    11350,
-    16500,
-    22100
+    2750,
+    6800,
+    11500,
+    16750,
+    22400
    ],
    "standing_max": 58467,
    "standing_ref": 43637
@@ -1323,10 +1323,10 @@
    "capital": "ND_04_CITY_WONJUGANGWONGAMYEONG",
    "standing_req": [
     2400,
-    5900,
-    10000,
-    14500,
-    19400
+    5950,
+    10100,
+    14700,
+    19650
    ],
    "standing_max": 53264,
    "standing_ref": 39498
@@ -1341,10 +1341,10 @@
    "capital": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
    "standing_req": [
     2250,
-    5500,
-    9300,
-    13550,
-    18100
+    5550,
+    9400,
+    13650,
+    18250
    ],
    "standing_max": 49331,
    "standing_ref": 36253
@@ -1358,14 +1358,14 @@
    ],
    "capital": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
    "standing_req": [
-    3750,
-    9200,
-    15550,
-    22600,
-    30200
+    3800,
+    9400,
+    15900,
+    23100,
+    30900
    ],
-   "standing_max": 80797,
-   "standing_ref": 60083
+   "standing_max": 80953,
+   "standing_ref": 60239
   },
   {
    "id": "P_GYEONGSANG",
@@ -1377,10 +1377,10 @@
    "capital": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
    "standing_req": [
     2850,
-    7000,
+    7050,
     11900,
     17300,
-    23100
+    23150
    ],
    "standing_max": 62177,
    "standing_ref": 45417
@@ -1414,9 +1414,9 @@
    "standing_req": [
     2700,
     6600,
-    11150,
-    16200,
-    21700
+    11200,
+    16300,
+    21800
    ],
    "standing_max": 59173,
    "standing_ref": 43050
@@ -1430,11 +1430,11 @@
    ],
    "capital": "ND_15_CITY_HAMHEUNGBU",
    "standing_req": [
-    6550,
-    16150,
-    27350,
-    39750,
-    53150
+    6650,
+    16350,
+    27650,
+    40200,
+    53750
    ],
    "standing_max": 130804,
    "standing_ref": 101474
@@ -1447,11 +1447,11 @@
    ],
    "capital": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
    "standing_req": [
-    850,
-    2150,
-    3650,
-    5300,
-    7100
+    900,
+    2200,
+    3700,
+    5400,
+    7200
    ],
    "standing_max": 22306,
    "standing_ref": 15539
