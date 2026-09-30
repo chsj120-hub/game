@@ -1900,6 +1900,2020 @@
    "generated": "heritage"
   },
   {
+   "id": "sk_pas_her_n001",
+   "name": "제주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n005",
+   "name": "대정현 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n012",
+   "name": "제주 판각 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n015",
+   "name": "용두암 용왕부적 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n027",
+   "name": "해남 일괄 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n028",
+   "name": "완도 목간 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n036",
+   "name": "강진 시첩 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n052",
+   "name": "순천 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n055",
+   "name": "순천 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n056",
+   "name": "여수 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n060",
+   "name": "광양 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n069",
+   "name": "담양 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n070",
+   "name": "광주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n072",
+   "name": "나주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n075",
+   "name": "나주 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n076",
+   "name": "광주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n080",
+   "name": "동래 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n092",
+   "name": "경주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n095",
+   "name": "경주 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n096",
+   "name": "대구 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n100",
+   "name": "남원 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n104",
+   "name": "전주 어진 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.05,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n113",
+   "name": "전주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n116",
+   "name": "전주 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n117",
+   "name": "익산 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n121",
+   "name": "영일 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n133",
+   "name": "공주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n136",
+   "name": "공주 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n137",
+   "name": "부여 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n141",
+   "name": "안동 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n148",
+   "name": "청주 인판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.05,
+     "knowledge": {
+      "bul": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n152",
+   "name": "옥천 유묵 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n154",
+   "name": "회덕 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n157",
+   "name": "문경 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n158",
+   "name": "회덕 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n162",
+   "name": "회덕 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n174",
+   "name": "충주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n177",
+   "name": "울진 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n178",
+   "name": "충주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n182",
+   "name": "충주 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n191",
+   "name": "당진 유품 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n194",
+   "name": "수원 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n197",
+   "name": "서산 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n198",
+   "name": "수원 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n202",
+   "name": "수원 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n208",
+   "name": "훈민정음 해례본(간송본) 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n209",
+   "name": "조선왕조실록 태백산사고본 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.05,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n213",
+   "name": "강릉 병풍 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n214",
+   "name": "한양 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n217",
+   "name": "강릉 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n218",
+   "name": "한양 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n222",
+   "name": "한양 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n234",
+   "name": "화천 마애부적 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n235",
+   "name": "파주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n238",
+   "name": "양양 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n239",
+   "name": "파주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n243",
+   "name": "파주 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n255",
+   "name": "개성 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n258",
+   "name": "김화 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n259",
+   "name": "통천 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n263",
+   "name": "김화 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n273",
+   "name": "재령 현판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n275",
+   "name": "해주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n278",
+   "name": "재령 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n279",
+   "name": "해주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n283",
+   "name": "해주 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n288",
+   "name": "강서대묘 벽화 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "seon": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n295",
+   "name": "평양 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n298",
+   "name": "강서 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n299",
+   "name": "평양 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n303",
+   "name": "평양 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n313",
+   "name": "숙천 시판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n316",
+   "name": "안주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n319",
+   "name": "영흥 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n320",
+   "name": "안주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n324",
+   "name": "안주 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n327",
+   "name": "영변 보관함 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "bul": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n336",
+   "name": "영변 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n339",
+   "name": "홍원 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n340",
+   "name": "영변 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n344",
+   "name": "영변 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n355",
+   "name": "의주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n356",
+   "name": "의주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n359",
+   "name": "이원 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n360",
+   "name": "의주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n364",
+   "name": "의주 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n368",
+   "name": "단천 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n376",
+   "name": "강계 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n379",
+   "name": "단천 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n380",
+   "name": "강계 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n384",
+   "name": "강계 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n389",
+   "name": "삼수 부적 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n394",
+   "name": "삼수 필사본 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n397",
+   "name": "갑산 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n400",
+   "name": "경성 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n401",
+   "name": "갑산 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n405",
+   "name": "갑산 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n417",
+   "name": "회령 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n420",
+   "name": "경흥 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n421",
+   "name": "회령 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n425",
+   "name": "회령 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n432",
+   "name": "종성 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n437",
+   "name": "온성 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n440",
+   "name": "온성 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n441",
+   "name": "온성 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n445",
+   "name": "온성 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
    "id": "sk_mt_heonma",
    "name": "산마장 질주",
    "owner": "mount",

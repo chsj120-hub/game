@@ -28,6 +28,8 @@ TYPE_CODE = {"city": "CITY", "town": "TOWN", "station": "STATION", "temple": "TE
 MOUNTAIN_TYPES = {"temple", "fort", "scenic", "stupa", "hazard", "beacon", "shrine"}
 
 W = json.loads((SRC / "world_table.json").read_text(encoding="utf-8"))
+IMP_PATH = SRC / "heritage450" / "import.json"   # tools/import_heritage450.py 생성(국가유산 448 · 공식/이벤트 노드)
+IMP = json.loads(IMP_PATH.read_text(encoding="utf-8")) if IMP_PATH.exists() else {"nodes": [], "heritage": [], "official_links": {}}
 H = json.loads((SRC / "heritage_curated.json").read_text(encoding="utf-8"))
 
 
@@ -78,13 +80,27 @@ def build_nodes():
         make(rid, W["beacons"][rid], "beacon", source="added", note="원문 표에 봉수 노드가 없어 권역당 1개 추가(명칭 고증 필요)")
     for h in W["hidden"]:
         make(h["region"], h["name"], h["type"], hidden=True, source="added", parent=h["parent"], lore=h.get("lore", "역사"))
+    # 국가유산 448 반영분: 공식 노드(중복 제외) + 유산 자리 노드(가시·은닉). 기존 노드 id·순서는 그대로
+    for x in IMP["nodes"]:
+        n = make(x["region"], x["name"], x["type"], hidden=x["hidden"], source="heritage450", note=x.get("note", ""),
+                 parent=x.get("parent"))
+        n["facilities"] = sorted(set(n["facilities"]) | set(x.get("facilities_extra", [])))
+        for k in ("official", "discover"):
+            if k in x:
+                n[k] = x[k]
+        if x.get("source_heritage"):
+            n["_imported_site"] = True
+    for n in nodes:
+        if n["id"] in IMP["official_links"]:
+            n["official"] = IMP["official_links"][n["id"]]
     return nodes, by_name
 
 
 GEO = json.loads((SRC / "node_geo.json").read_text(encoding="utf-8")) if (SRC / "node_geo.json").exists() else {}
 GEO_MARGIN = (260, 220)      # 지도 가장자리 여백(px) — 국경 통로·UI 공간
 GEO_MIN_GAP = 150            # 가시 노드 최소 간격(px) = 7.5리. 실제 위치가 더 가까우면 밀어냄(한양 도성 안 여러 노드 등)
-GEO_HIDDEN_RANGE = (150, 420)  # 은닉 노드 ↔ 부모 거리(px). 탐색 반경 13~33리 규칙이 성립하도록 방향은 유지·거리만 이 범위로
+GEO_HIDDEN_RANGE = (150, 420)
+GEO_HIDDEN_GAP = 90          # 은닉 노드 최소 간격(px)  # 은닉 노드 ↔ 부모 거리(px). 탐색 반경 13~33리 규칙이 성립하도록 방향은 유지·거리만 이 범위로
 KM_PER_DEG_LAT = 110.57
 
 
@@ -166,6 +182,31 @@ def place_geo(nodes, r):
             d = math.hypot(dx, dy) or 1.0
             k = min(GEO_HIDDEN_RANGE[1], max(GEO_HIDDEN_RANGE[0], d)) / d
             n["pos"] = [par["pos"][0] + dx * k, par["pos"][1] + dy * k]
+    hid = [n for n in mine if n["hidden"]]
+    lo, hi = GEO_HIDDEN_RANGE
+    for _ in range(200):   # 은닉 노드끼리·가시 노드와 최소 간격(국가유산 반영으로 한 고을 주변 은닉지가 여럿)
+        moved = False
+        for a in hid:
+            for b in mine:
+                if a is b:
+                    continue
+                dx, dy = a["pos"][0] - b["pos"][0], a["pos"][1] - b["pos"][1]
+                d = math.hypot(dx, dy)
+                if d < GEO_HIDDEN_GAP:
+                    if d < 1e-6:
+                        ang = (sum(map(ord, a["id"])) % 360) * math.pi / 180
+                        dx, dy, d = math.cos(ang), math.sin(ang), 1.0
+                    push = (GEO_HIDDEN_GAP - d) * (0.5 if b["hidden"] else 1.0) + 0.5
+                    a["pos"][0] += dx / d * push
+                    a["pos"][1] += dy / d * push
+                    moved = True
+            par = by[a["_parent"]]
+            dx, dy = a["pos"][0] - par["pos"][0], a["pos"][1] - par["pos"][1]
+            d = math.hypot(dx, dy) or 1.0
+            k = min(hi + 40, max(lo, d)) / d
+            a["pos"] = [par["pos"][0] + dx * k, par["pos"][1] + dy * k]
+        if not moved:
+            break
     for n in mine:
         n["pos"] = [round(min(MAP_W - 60, max(60, n["pos"][0]))), round(min(MAP_H - 60, max(60, n["pos"][1])))]
         n["geo_shift_km"] = round(math.dist(n["pos"], n["_true"]) * pr["km_per_px"], 2)
@@ -371,8 +412,15 @@ def build_heritage(nodes):
         used_nodes.add(n["id"])
         n["heritage"] = c["id"]
     idx, tomb_i = len(heritage) + 1, 0
-    # 고을(town) 1등급 유산은 기존 유산 id(her_001~144)를 바꾸지 않도록 맨 뒤에 번호를 매긴다
-    order = [n for n in nodes if n["type"] != "town"] + [n for n in nodes if n["type"] == "town"]
+    by_rn = {(n["region"], n["name"]): n for n in nodes}
+    imp_nodes = set()
+    for x in IMP["heritage"]:
+        imp_nodes.add(by_rn[(x["region"], x["node_name"])]["id"])
+    # 고을(town) 1등급 유산은 기존 유산 id(her_001~144)를 바꾸지 않도록 맨 뒤에 번호를 매긴다.
+    # 국가유산 448 반영 노드는 그 뒤(기존 id 불변). 국가유산이 놓인 새 노드는 자동 유산을 만들지 않는다
+    basen = [n for n in nodes if n.get("source") != "heritage450"]
+    newn = [n for n in nodes if n.get("source") == "heritage450" and n["id"] not in imp_nodes]
+    order = [n for n in basen if n["type"] != "town"] + [n for n in basen if n["type"] == "town"] + newn
     for n in order:
         if n["id"] in used_nodes or n["type"] not in H["type_category"]:
             continue
@@ -430,10 +478,87 @@ def build_heritage(nodes):
         heritage.append({"id": hid, "name": hname, "node": n["id"], "region": n["region"], "category": cat, "tier": tier,
                          "reward": reward, "hidden": n["hidden"], "node_type": n["type"], "lore": n.get("lore", "역사")})
         n["heritage"] = hid
+    heritage += build_imported(nodes, heritage, gen, by_rn)
+    per_node = {}
+    for h in heritage:
+        per_node.setdefault(h["node"], []).append(h["id"])
+    for n in nodes:
+        if n["id"] in per_node:
+            n["heritage"] = per_node[n["id"]][0]
+            if len(per_node[n["id"]]) > 1:
+                n["heritage_ids"] = per_node[n["id"]]
     for h in heritage:
         h["public_data"] = {"provider": "국가유산청", "license": "공공누리 제1유형(출처표시)",
                             "ccbaKdcd": "", "ccbaAsno": "", "ccbaCtcd": "", "source_url": "", "description": ""}
     return heritage, gen
+
+
+IMP_RECORD_BUFF = {"architecture": ("reputation_gain", 0.012), "scenic": ("fatigue_gain", -0.03)}
+IMP_FAMILY = {"yu": "yu", "bul": "bul", "seon": "seon"}
+
+
+def imported_tiers(imported, others):
+    """국가유산 448: 원본 등급(3~5만 존재)·고정 보상 대신, 전체 유산 등급 분포가 content_plan.heritage 모양이 되도록
+    지정 종별 점수 순으로 1~5등급 배정 → 보상은 economy 공식, 신분 임계는 economy_sim 이 재보정."""
+    shape = load("00_overview.json")["content_plan"]["heritage"]
+    total = len(imported) + len(others)
+    fixed = [sum(1 for h in others if h["tier"] == t) for t in range(1, 6)]
+    quota = [max(0, round(total * shape[t] / sum(shape)) - fixed[t]) for t in range(5)]
+    diff = len(imported) - sum(quota)
+    quota[0] += diff        # 반올림 차이는 1등급에서 흡수
+    ranked = sorted(imported, key=lambda x: (-x["score"], x["name"]))
+    tiers, i = {}, 0
+    for t in (5, 4, 3, 2, 1):
+        for x in ranked[i:i + max(0, quota[t - 1])]:
+            tiers[x["id"]] = t
+        i += max(0, quota[t - 1])
+    for x in ranked:
+        tiers.setdefault(x["id"], 1)
+    return tiers
+
+
+def build_imported(nodes, others, gen, by_rn):
+    out = []
+    tiers = imported_tiers(IMP["heritage"], others)
+    for x in IMP["heritage"]:
+        n = by_rn[(x["region"], x["node_name"])]
+        hid, tier, cat, name = x["id"], tiers[x["id"]], x["category"], x["name"]
+        fam = IMP_FAMILY.get(x.get("faction", ""), "none")
+        if cat in ("architecture", "scenic"):
+            key, per = IMP_RECORD_BUFF[cat] if cat == "scenic" else RECORD_BUFF.get(n["type"], IMP_RECORD_BUFF["architecture"])
+            reward = f"rec_{hid}"
+            gen["records"].append({"id": reward, "name": f"《{name} 답사록》", "slot": "record", "tier": tier, "icon": "icon_scroll_jokja.png",
+                                   "buffs": {key: round(per * tier, 3)}, "generated": "heritage", **({"permanent_hp": 1} if cat == "scenic" else {})})
+        elif cat in ("metal", "folk_craft"):
+            reward = f"eq_{hid}"
+            label = "원불(願佛)" if x.get("category_kr") == "불상" else ("모각 의장품" if cat == "metal" else "벽사 패물")
+            gen["items"].append({"id": reward, "name": f"{name} {label}", "slot": "accessory", "tier": tier, "family": fam,
+                                 "element": "metal" if cat == "metal" else "holy", "stats": gear_stats("accessory", tier, fam, 0.9 if cat == "metal" else 1.0),
+                                 "acquire": {"type": "heritage", "heritage": hid}, "generated": "heritage"})
+        elif cat == "document":
+            reward, sk = f"eq_{hid}", f"sk_pas_{hid}"
+            k = fam if fam in ("yu", "bul", "seon") else "yu"
+            gen["skills"].append({"id": sk, "name": f"{name.split()[0]} {name.split()[-1]} 학통"[:24], "owner": "passive", "target": "self",
+                                  "element": "none", "power": 0.0, "ap_cost": 0, "cooldown": 0,
+                                  "effects": {"passive": {"def_pct": round(0.01 * tier, 3), "knowledge": {k: 1 + tier // 3}}}, "generated": "heritage"})
+            gen["items"].append({"id": reward, "name": f"《{name}》 필사본", "slot": "book", "tier": tier, "family": k, "element": "none",
+                                 "stats": {}, "passive_skill": sk, "acquire": {"type": "heritage", "heritage": hid}, "generated": "heritage"})
+        else:  # ceramic_specialty
+            spid, reward = f"sp_{hid}", f"spr_{hid}"
+            gen["specialties"].append({"id": spid, "name": f"{name} 재현품", "region": n["region"], "node": n["id"], "kind": "crafted",
+                                       "tier": tier, "base_price": price("specialty_crafted", tier), "dev_level": 0, "generated": "heritage",
+                                       "real_name": name, "desc": x.get("desc", "")})
+            mats = [{"id": "mat_white_clay", "qty": 3}, {"id": "mat_charcoal", "qty": 4}] if tier <= 3 else \
+                   [{"id": "mat_celadon_clay", "qty": 3}, {"id": "mat_charcoal", "qty": 5}, {"id": "mat_lacquer", "qty": 1}]
+            gen["recipes"].append({"id": reward, "name": f"【{name} 재현 비전서】", "tier": tier, "produces": spid, "facility": "gongbang",
+                                   "materials": mats, "generated": "heritage"})
+        row = {"id": hid, "name": name, "node": n["id"], "region": n["region"], "category": cat, "tier": tier, "reward": reward,
+               "hidden": n["hidden"], "node_type": n["type"], "lore": x.get("lore", "역사"), "faction": x.get("faction", ""),
+               "designation": x["designation"], "desc": x.get("desc", ""), "source": "heritage450", "src_tier": x["src_tier"]}
+        if x.get("template"):
+            row["orig_name"] = x["orig_name"]
+        out.append(row)
+    return out
 
 
 def merge(file, key, rows, tag="heritage"):

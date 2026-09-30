@@ -409,6 +409,656 @@
    "generated": "heritage"
   },
   {
+   "id": "sp_her_n007",
+   "name": "제주 목관아지 출토 분청사기 재현품",
+   "region": "MAP_17",
+   "node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "제주 목관아지 출토 분청사기",
+   "desc": "조선 전기 관아 공납용 상감분청사기 대접"
+  },
+  {
+   "id": "sp_her_n020",
+   "name": "차귀도 해역 침몰선 해저 청자 재현품",
+   "region": "MAP_17",
+   "node": "ND_17_WRECK_CHAGWIDOHAEYEOKCHIMMOLSEONHAEJEOCHEONGJA",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "차귀도 해역 침몰선 해저 청자",
+   "desc": "송·원대 동아시아 해상 실크로드를 누비던 침몰선 인양 청자"
+  },
+  {
+   "id": "sp_her_n024",
+   "name": "강진 청자 상감운학문 매병 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "강진 청자 상감운학문 매병",
+   "desc": "전남 남해안 (해남/강진/완도/진도) 일대 유서 깊은 국가유산 명작"
+  },
+  {
+   "id": "sp_her_n030",
+   "name": "진도 용장산성 행궁터 유물 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_FORT_JINDOYONGJANGSANSEONGHAENGGUNGJI",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "진도 용장산성 행궁터 유물",
+   "desc": "전남 남해안 (해남/강진/완도/진도) 일대 유서 깊은 국가유산 명작"
+  },
+  {
+   "id": "sp_her_n032",
+   "name": "강진 사당리 고려청자 요지 비색발 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "강진 사당리 고려청자 요지 비색발",
+   "desc": "전남 남해안 (해남/강진/완도/진도) 일대 유서 깊은 국가유산 명작"
+  },
+  {
+   "id": "sp_her_n054",
+   "name": "광양 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_TOWN_GWANGYANGHYEONCHISO",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "광양 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제20첩 순천/여수/광양의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n061",
+   "name": "순천 도요지 백자 청화항아리 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_SCENIC_SUNCHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "순천 도요지 백자 청화항아리",
+   "desc": "대동여지도 제20첩 순천/여수/광양의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n067",
+   "name": "동래 동삼동 패총 융기문토기 재현품",
+   "region": "MAP_10",
+   "node": "ND_10_TOMB_DONGRAEDONGSAMDONGPAECHONGYUNGGIMUNTOGI",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "동래 동삼동 패총 융기문토기",
+   "desc": "대동여지도 제19첩 나주/광주/부산 권역의 대표 역사 유적 및 공인 문화유산"
+  },
+  {
+   "id": "sp_her_n074",
+   "name": "동래 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_10",
+   "node": "ND_10_SCENIC_DONGRAEGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "동래 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제19첩 나주/광주/부산의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n081",
+   "name": "나주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_RUIN_NAJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "나주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제19첩 나주/광주/부산의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n094",
+   "name": "남원 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_07",
+   "node": "ND_07_SCENIC_NAMWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "남원 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제18첩 경주/대구/남원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n101",
+   "name": "경주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_09",
+   "node": "ND_09_SCENIC_GYEONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "경주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제18첩 경주/대구/남원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n115",
+   "name": "영일 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_09",
+   "node": "ND_09_SCENIC_YEONGILGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "영일 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제17첩 전주/익산/포항의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n122",
+   "name": "전주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_07",
+   "node": "ND_07_SCENIC_JEONJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "전주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제17첩 전주/익산/포항의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n135",
+   "name": "안동 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_09",
+   "node": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "안동 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제16첩 공주/부여/안동의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n142",
+   "name": "공주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_06",
+   "node": "ND_06_SCENIC_GONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "공주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제16첩 공주/부여/안동의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n156",
+   "name": "영주 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_09",
+   "node": "ND_09_SCENIC_YEONGJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "영주 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제15첩 대전/청주/영주/문경의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n163",
+   "name": "청주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_05",
+   "node": "ND_05_SCENIC_CHEONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "청주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제15첩 대전/청주/영주/문경의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n176",
+   "name": "단양 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_05",
+   "node": "ND_05_RUIN_DANYANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "단양 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제14첩 충주/원주/단양/울진의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n183",
+   "name": "원주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_04",
+   "node": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "원주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제14첩 충주/원주/단양/울진의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n196",
+   "name": "여주 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_02",
+   "node": "ND_02_SCENIC_YEOJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "여주 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제13첩 수원/화성/여주/서산의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n203",
+   "name": "남양 도요지 백자 청화항아리 재현품",
+   "region": "MAP_02",
+   "node": "ND_02_SCENIC_NAMYANGDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "남양 도요지 백자 청화항아리",
+   "desc": "대동여지도 제13첩 수원/화성/여주/서산의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n216",
+   "name": "개성 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_01",
+   "node": "ND_01_SCENIC_GAESEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "개성 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제12첩 한양(서울)/강화/개성/강릉의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n223",
+   "name": "강화 도요지 백자 청화항아리 재현품",
+   "region": "MAP_01",
+   "node": "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "강화 도요지 백자 청화항아리",
+   "desc": "대동여지도 제12첩 한양(서울)/강화/개성/강릉의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n232",
+   "name": "철원 궁예 태봉국 철원도성 금와 재현품",
+   "region": "MAP_03",
+   "node": "ND_03_SCENIC_CHEOLWONGUNGYETAEBONGGUKCHEOLWONDOSEONGGEUMWA",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "철원 궁예 태봉국 철원도성 금와",
+   "desc": "대동여지도 제11첩 파주/철원/인제/양양 권역의 대표 역사 유적 및 공인 문화유산"
+  },
+  {
+   "id": "sp_her_n237",
+   "name": "인제 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_03",
+   "node": "ND_03_TOWN_INJEHYEONBAEKDAMSA",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "인제 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제11첩 파주/철원/인제/양양의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n244",
+   "name": "철원 도요지 백자 청화항아리 재현품",
+   "region": "MAP_03",
+   "node": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "철원 도요지 백자 청화항아리",
+   "desc": "대동여지도 제11첩 파주/철원/인제/양양의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n257",
+   "name": "평강 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_03",
+   "node": "ND_03_SCENIC_PYEONGGANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "평강 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제10첩 개풍/연안/평강/김화/통천의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n264",
+   "name": "통천 도요지 백자 청화항아리 재현품",
+   "region": "MAP_03",
+   "node": "ND_03_RUIN_TONGCHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "통천 도요지 백자 청화항아리",
+   "desc": "대동여지도 제10첩 개풍/연안/평강/김화/통천의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n277",
+   "name": "신천 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_12",
+   "node": "ND_12_SCENIC_SINCHEONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "신천 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제9첩 해주/옹진/신천/재령의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n284",
+   "name": "옹진 도요지 백자 청화항아리 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_ONGJINDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "옹진 도요지 백자 청화항아리",
+   "desc": "대동여지도 제9첩 해주/옹진/신천/재령의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n292",
+   "name": "평양 안학궁터 고구려 수막새 재현품",
+   "region": "MAP_13",
+   "node": "ND_13_SCENIC_PYEONGYANGEULMILDAE",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "평양 안학궁터 고구려 수막새",
+   "desc": "대동여지도 제8첩 평양/원산/안변/강서 권역의 대표 역사 유적 및 공인 문화유산"
+  },
+  {
+   "id": "sp_her_n297",
+   "name": "안변 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_ANBYEONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "안변 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제8첩 평양/원산/안변/강서의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n304",
+   "name": "덕원 도요지 백자 청화항아리 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_DEOKWONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "덕원 도요지 백자 청화항아리",
+   "desc": "대동여지도 제8첩 평양/원산/안변/강서의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n318",
+   "name": "함흥 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_HAMHEUNGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "함흥 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제7첩 안주/순천/함흥/영흥의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n325",
+   "name": "함흥 도요지 백자 청화항아리 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_HAMHEUNGDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "함흥 도요지 백자 청화항아리",
+   "desc": "대동여지도 제7첩 안주/순천/함흥/영흥의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n338",
+   "name": "홍원 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_HONGWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "홍원 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제6첩 영변/희천/신흥/홍원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n345",
+   "name": "희천 도요지 백자 청화항아리 재현품",
+   "region": "MAP_13",
+   "node": "ND_13_SCENIC_HUICHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "희천 도요지 백자 청화항아리",
+   "desc": "대동여지도 제6첩 영변/희천/신흥/홍원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n358",
+   "name": "북청 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_BUKCHEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "북청 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제5첩 의주/선천/북청/이원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n365",
+   "name": "선천 도요지 백자 청화항아리 재현품",
+   "region": "MAP_14",
+   "node": "ND_14_TOWN_SEONCHEONDOHOBUDONGRIMSANSEONG",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "선천 도요지 백자 청화항아리",
+   "desc": "대동여지도 제5첩 의주/선천/북청/이원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n378",
+   "name": "길주 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_GILJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "길주 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제4첩 강계/초산/길주/단천의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n385",
+   "name": "초산 도요지 백자 청화항아리 재현품",
+   "region": "MAP_14",
+   "node": "ND_14_SCENIC_CHOSANDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "초산 도요지 백자 청화항아리",
+   "desc": "대동여지도 제4첩 강계/초산/길주/단천의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n395",
+   "name": "경성 온천 도요지 고려 흑유자기 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_GYEONGSEONGONCHEONDOYOJIGORYEOHEUKYUJAGI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "경성 온천 도요지 고려 흑유자기",
+   "desc": "대동여지도 제3첩 혜산/삼수/갑산/경성 권역의 대표 역사 유적 및 공인 문화유산"
+  },
+  {
+   "id": "sp_her_n399",
+   "name": "갑산 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_GAPSANGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "갑산 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제3첩 혜산/삼수/갑산/경성의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n406",
+   "name": "삼수 도요지 백자 청화항아리 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_SAMSUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "삼수 도요지 백자 청화항아리",
+   "desc": "대동여지도 제3첩 혜산/삼수/갑산/경성의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n408",
+   "name": "무산 오진리 원시 주거지 빗살무늬토기 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_TOMB_MUSANOJINRIWONSIJUGEOJIBITSALMUNUITOGI",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "무산 오진리 원시 주거지 빗살무늬토기",
+   "desc": "대동여지도 제2첩 회령/무산/청진/나진 권역의 대표 역사 유적 및 공인 문화유산"
+  },
+  {
+   "id": "sp_her_n419",
+   "name": "부령 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_BURYEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "부령 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제2첩 회령/무산/청진/나진의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n426",
+   "name": "무산 도요지 백자 청화항아리 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_MUSANDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "무산 도요지 백자 청화항아리",
+   "desc": "대동여지도 제2첩 회령/무산/청진/나진의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n439",
+   "name": "경원 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_GYEONGWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "경원 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제1첩 온성/종성/경원/경흥의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n446",
+   "name": "종성 도요지 백자 청화항아리 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_JONGSEONGDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "종성 도요지 백자 청화항아리",
+   "desc": "대동여지도 제1첩 온성/종성/경원/경흥의 공인 지정 문화유산"
+  },
+  {
    "id": "sp_chuncheon_jat",
    "name": "춘천 잣",
    "region": "MAP_03",
@@ -1426,6 +2076,914 @@
    "name": "【회령 복원 비전서】",
    "tier": 2,
    "produces": "sp_her_142",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n007",
+   "name": "【제주 목관아지 출토 분청사기 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n007",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n020",
+   "name": "【차귀도 해역 침몰선 해저 청자 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n020",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n024",
+   "name": "【강진 청자 상감운학문 매병 재현 비전서】",
+   "tier": 4,
+   "produces": "sp_her_n024",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n030",
+   "name": "【진도 용장산성 행궁터 유물 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n030",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n032",
+   "name": "【강진 사당리 고려청자 요지 비색발 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n032",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n054",
+   "name": "【광양 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n054",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n061",
+   "name": "【순천 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n061",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n067",
+   "name": "【동래 동삼동 패총 융기문토기 재현 비전서】",
+   "tier": 4,
+   "produces": "sp_her_n067",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n074",
+   "name": "【동래 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n074",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n081",
+   "name": "【나주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n081",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n094",
+   "name": "【남원 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n094",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n101",
+   "name": "【경주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n101",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n115",
+   "name": "【영일 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n115",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n122",
+   "name": "【전주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n122",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n135",
+   "name": "【안동 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n135",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n142",
+   "name": "【공주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n142",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n156",
+   "name": "【영주 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n156",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n163",
+   "name": "【청주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n163",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n176",
+   "name": "【단양 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n176",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n183",
+   "name": "【원주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n183",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n196",
+   "name": "【여주 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n196",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n203",
+   "name": "【남양 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n203",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n216",
+   "name": "【개성 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n216",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n223",
+   "name": "【강화 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n223",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n232",
+   "name": "【철원 궁예 태봉국 철원도성 금와 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n232",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n237",
+   "name": "【인제 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n237",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n244",
+   "name": "【철원 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n244",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n257",
+   "name": "【평강 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n257",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n264",
+   "name": "【통천 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n264",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n277",
+   "name": "【신천 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n277",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n284",
+   "name": "【옹진 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n284",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n292",
+   "name": "【평양 안학궁터 고구려 수막새 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n292",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n297",
+   "name": "【안변 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n297",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n304",
+   "name": "【덕원 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n304",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n318",
+   "name": "【함흥 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n318",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n325",
+   "name": "【함흥 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n325",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n338",
+   "name": "【홍원 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n338",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n345",
+   "name": "【희천 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n345",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n358",
+   "name": "【북청 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n358",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n365",
+   "name": "【선천 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n365",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n378",
+   "name": "【길주 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n378",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n385",
+   "name": "【초산 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n385",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n395",
+   "name": "【경성 온천 도요지 고려 흑유자기 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n395",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n399",
+   "name": "【갑산 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n399",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n406",
+   "name": "【삼수 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n406",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n408",
+   "name": "【무산 오진리 원시 주거지 빗살무늬토기 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n408",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n419",
+   "name": "【부령 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n419",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n426",
+   "name": "【무산 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n426",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n439",
+   "name": "【경원 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n439",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n446",
+   "name": "【종성 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n446",
    "facility": "gongbang",
    "materials": [
     {

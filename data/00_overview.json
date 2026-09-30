@@ -3,9 +3,9 @@
  "rank": {
   "formula": {
    "type": "power",
-   "a": 2291.8,
+   "a": 3916.1,
    "k": 2.245,
-   "note": "Threshold(L) = 2,292·(L−1)^2.245. R5 = 균형형이 콘텐츠 1/3 을 찾았을 때(중앙값) 도달하도록 진행 시뮬로 보정"
+   "note": "Threshold(L) = 3,916·(L−1)^2.245. R5 = 균형형이 콘텐츠 1/3 을 찾았을 때(중앙값) 도달하도록 진행 시뮬로 보정"
   },
   "table": [
    {
@@ -22,7 +22,7 @@
    },
    {
     "rank": 2,
-    "threshold": 2300,
+    "threshold": 3900,
     "titles": {
      "cls_eosa": "향촌 유생",
      "cls_merchant": "보부상",
@@ -36,7 +36,7 @@
    },
    {
     "rank": 3,
-    "threshold": 11000,
+    "threshold": 18500,
     "titles": {
      "cls_eosa": "진사",
      "cls_merchant": "객주 대행수",
@@ -52,7 +52,7 @@
    },
    {
     "rank": 4,
-    "threshold": 27000,
+    "threshold": 46500,
     "titles": {
      "cls_eosa": "종사관·어사",
      "cls_merchant": "대방",
@@ -66,7 +66,7 @@
    },
    {
     "rank": 5,
-    "threshold": 51500,
+    "threshold": 88000,
     "titles": {
      "cls_eosa": "판서",
      "cls_merchant": "팔도 도대행수",
@@ -102,14 +102,14 @@
    "note": "메인 시나리오 N장은 신분 Rank N 이상에서 진행. 5장 완료 = 엔딩"
   },
   "reputation_budget": {
-   "max": 302213,
-   "reference": 261434,
-   "min": 241044,
+   "max": 556381,
+   "reference": 415475,
+   "min": 345022,
    "by_source": {
     "유산(답사+기증)": [
-     94106,
-     53327,
-     32937
+     325168,
+     184262,
+     113809
     ],
     "장비 서사 퀘스트": [
      30207,
@@ -167,9 +167,9 @@
      1760
     ],
     "권역 전수 수집 보너스": [
-     9411,
-     9411,
-     9411
+     32517,
+     32517,
+     32517
     ],
     "화첩·탁본 완성": [
      4500,
@@ -189,18 +189,18 @@
     "normal_kill",
     "town_invest"
    ],
-   "r5_share_of_max": 0.17,
-   "r5_share_of_reference": 0.197
+   "r5_share_of_max": 0.158,
+   "r5_share_of_reference": 0.212
   },
   "calibration_basis": {
    "basis": "actual",
    "content": {
     "heritage": [
-     84,
-     60,
-     40,
-     29,
-     12
+     241,
+     208,
+     152,
+     80,
+     40
     ],
     "gear_quest": [
      0,
@@ -1304,14 +1304,14 @@
    ],
    "capital": "ND_02_CITY_HANYANGGYEONGJO",
    "standing_req": [
-    2200,
-    5400,
-    9150,
-    13300,
-    17800
+    2700,
+    6700,
+    11350,
+    16500,
+    22100
    ],
-   "standing_max": 39798,
-   "standing_ref": 33818
+   "standing_max": 58467,
+   "standing_ref": 43637
   },
   {
    "id": "P_GANGWON",
@@ -1322,14 +1322,14 @@
    ],
    "capital": "ND_04_CITY_WONJUGANGWONGAMYEONG",
    "standing_req": [
-    1800,
-    4450,
-    7550,
-    10950,
-    14650
+    2400,
+    5900,
+    10000,
+    14500,
+    19400
    ],
-   "standing_max": 34062,
-   "standing_ref": 28809
+   "standing_max": 53264,
+   "standing_ref": 39498
   },
   {
    "id": "P_CHUNGCHEONG",
@@ -1340,14 +1340,14 @@
    ],
    "capital": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
    "standing_req": [
-    2950,
-    7200,
-    12250,
-    17750,
-    23750
+    2250,
+    5500,
+    9300,
+    13550,
+    18100
    ],
-   "standing_max": 47041,
-   "standing_ref": 42727
+   "standing_max": 49331,
+   "standing_ref": 36253
   },
   {
    "id": "P_JEOLLA",
@@ -1358,14 +1358,14 @@
    ],
    "capital": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
    "standing_req": [
-    2550,
-    6300,
-    10650,
-    15500,
-    20700
+    3750,
+    9200,
+    15550,
+    22600,
+    30200
    ],
-   "standing_max": 43831,
-   "standing_ref": 37829
+   "standing_max": 80797,
+   "standing_ref": 60083
   },
   {
    "id": "P_GYEONGSANG",
@@ -1376,14 +1376,14 @@
    ],
    "capital": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
    "standing_req": [
-    3100,
-    7700,
-    13000,
-    18900,
-    25300
+    2850,
+    7000,
+    11900,
+    17300,
+    23100
    ],
-   "standing_max": 51567,
-   "standing_ref": 45379
+   "standing_max": 62177,
+   "standing_ref": 45417
   },
   {
    "id": "P_HWANGHAE",
@@ -1394,14 +1394,14 @@
    ],
    "capital": "ND_12_CITY_HAEJUMOK",
    "standing_req": [
-    850,
-    2100,
-    3600,
-    5200,
-    6950
+    1600,
+    3900,
+    6650,
+    9650,
+    12900
    ],
-   "standing_max": 15816,
-   "standing_ref": 13440
+   "standing_max": 35562,
+   "standing_ref": 26023
   },
   {
    "id": "P_PYEONGAN",
@@ -1412,14 +1412,14 @@
    ],
    "capital": "ND_13_CITY_PYEONGYANGBU",
    "standing_req": [
-    1400,
-    3400,
-    5800,
-    8400,
-    11250
+    2700,
+    6600,
+    11150,
+    16200,
+    21700
    ],
-   "standing_max": 24800,
-   "standing_ref": 20722
+   "standing_max": 59173,
+   "standing_ref": 43050
   },
   {
    "id": "P_HAMGYEONG",
@@ -1430,14 +1430,14 @@
    ],
    "capital": "ND_15_CITY_HAMHEUNGBU",
    "standing_req": [
-    1450,
-    3600,
-    6050,
-    8850,
-    11800
+    6550,
+    16150,
+    27350,
+    39750,
+    53150
    ],
-   "standing_max": 26318,
-   "standing_ref": 22387
+   "standing_max": 130804,
+   "standing_ref": 101474
   },
   {
    "id": "P_JEJU",
@@ -1447,14 +1447,14 @@
    ],
    "capital": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
    "standing_req": [
-    750,
-    1850,
-    3150,
-    4600,
-    6150
+    850,
+    2150,
+    3650,
+    5300,
+    7100
    ],
-   "standing_max": 14480,
-   "standing_ref": 11822
+   "standing_max": 22306,
+   "standing_ref": 15539
   }
  ],
  "companion_promotion": {

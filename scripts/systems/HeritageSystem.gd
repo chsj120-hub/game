@@ -66,6 +66,8 @@ static func visit(her_id: String, ok: bool) -> String:
 	var dg := gs.add_reputation(disc, String(her["region"]))
 	gs.note("답사 명성 +%d (보상 선택과 무관)" % dg)
 	var aff := {"temple": "bul", "stupa": "bul", "seowon": "yu", "shrine": "seon", "tomb": "yu"}.get(String(her.get("node_type", "")), "sa")
+	if String(her.get("faction", "")) in ["yu", "bul", "seon"]:  # 국가유산 448: 유·불·선 계열
+		aff = String(her["faction"])
 	gs.add_knowledge_xp(aff, int(xs.get("heritage_visit_affinity", 40)))
 	if her.get("hidden", false):
 		gs.add_knowledge_xp("sa", int(xs.get("investigate_success", 60)))

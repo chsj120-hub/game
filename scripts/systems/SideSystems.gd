@@ -28,6 +28,8 @@ static func search() -> Array:
 	for n in DataDB.nodes_in(gs.current_region):
 		if not n.get("hidden", false) or gs.discovered.has(n["id"]):
 			continue
+		if not _discover_ok(n, "search"):
+			continue
 		if here.distance_to(DataDB.node_pos(n["id"])) <= radius_li * ppl and gs.rng.randf() < chance:
 			gs.discover(n["id"])
 			found.append(n["id"])
@@ -35,6 +37,46 @@ static func search() -> Array:
 	gs.advance_minutes(int(float(cfg.get("hours", 1)) * 60))
 	if found.is_empty():
 		gs.note("주변 %.0f리를 살폈으나 특별한 것은 없었다." % radius_li)
+		var best := ""
+		var bd := radius_li * ppl * 1.5
+		for n in DataDB.nodes_in(gs.current_region):  # 지식·방법이 맞지 않아 못 찾은 은닉지의 풍문
+			if n.get("hidden", false) and not gs.discovered.has(n["id"]) and n.has("discover"):
+				var d := here.distance_to(DataDB.node_pos(n["id"]))
+				if d < bd:
+					bd = d
+					best = String(n["id"])
+		if best != "":
+			var dc: Dictionary = DataDB.get_row(best)["discover"]
+			gs.note("풍문: %s — [%s] · 사 지식 %d 필요" % [String(dc.get("clue", "")), {"search": "탐색", "gather": "채집", "camp": "야영", "hunt": "사냥"}.get(String(dc.get("skill", "search")), "탐색"), int(dc.get("sa", 0))])
+	return found
+
+
+## 국가유산 이벤트 노드의 발견 조건: discover{skill: search|gather|camp|hunt, sa: 파티 사(士) 지식 요구}
+static func _discover_ok(n: Dictionary, skill: String) -> bool:
+	var dc: Dictionary = n.get("discover", {})
+	if dc.is_empty():
+		return skill == "search"
+	if String(dc.get("skill", "search")) != skill:
+		return false
+	return int(GameState.party_knowledge().get("sa", 0)) >= int(dc.get("sa", 0))
+
+
+## [채집]·[야영]·[사냥]으로만 드러나는 은닉지(약초 캐다 발견한 폐사지 등). 반경·확률은 [탐색]과 같음
+static func reveal_by_skill(skill: String) -> Array:
+	var gs := GameState
+	var cfg: Dictionary = _fac().get("search", {})
+	var sa := int(gs.party_knowledge().get("sa", 0))
+	var radius_li := float(cfg.get("radius_li", 15)) + float(cfg.get("radius_li_per_sa", 3)) * sa
+	var ppl := float(DataDB.docs.get("regions.json", {}).get("px_per_li", 20.0))
+	var here := DataDB.node_pos(gs.current_node)
+	var chance := float(cfg.get("detect_chance", 0.55)) + float(cfg.get("detect_per_sa", 0.05)) * sa
+	var found := []
+	for n in DataDB.nodes_in(gs.current_region):
+		if not n.get("hidden", false) or gs.discovered.has(n["id"]) or not _discover_ok(n, skill):
+			continue
+		if here.distance_to(DataDB.node_pos(n["id"])) <= radius_li * ppl and gs.rng.randf() < chance:
+			gs.discover(n["id"])
+			found.append(n["id"])
 	return found
 
 

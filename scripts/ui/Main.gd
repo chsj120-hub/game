@@ -245,12 +245,15 @@ func _on_command(cmd: String) -> void:
 		"camp":
 			SurvivalSystem.camp()
 			GameState.bump("camp")
+			SideSystems.reveal_by_skill("camp")
 		"search":
 			SideSystems.search()
 		"gather":
 			SideSystems.gather()
 			GameState.bump("gather")
+			SideSystems.reveal_by_skill("gather")
 		"hunt":
+			SideSystems.reveal_by_skill("hunt")
 			var w := SideSystems.hunt_waves()
 			if not w.is_empty():
 				_begin_battle({"id": "hunt", "name": "사냥", "waves": w}, "")
@@ -329,10 +332,10 @@ func _open_facilities() -> void:
 	else:
 		for f in FacilitySystem.facilities_here():
 			entries.append({"text": FacilitySystem.NAMES.get(f, f), "cb": _open_facility.bind(String(f)), "keep": true})
-	var her := DataDB.heritage_at(gs.current_node)
-	if not her.is_empty():
+	for her in DataDB.heritages_at(gs.current_node):
 		var st := String(gs.heritage_state.get(her["id"], ""))
-		entries.append({"text": "【유산】 %s (%d등급 · %s)" % [her["name"], int(her["tier"]), HeritageSystem.reward_type_label(HeritageSystem.reward_type(her))],
+		var desig := (" · " + String(her["designation"])) if her.has("designation") else ""
+		entries.append({"text": "【유산】 %s (%d등급 · %s%s)" % [her["name"], int(her["tier"]), HeritageSystem.reward_type_label(HeritageSystem.reward_type(her)), desig],
 			"hint": {"": "답사 가능", "pending": "보상 선택 대기"}.get(st, "완료"), "cb": _heritage_node.bind(String(her["id"])), "keep": true})
 	for a in EventSystem.actionable_here():
 		entries.append({"text": "【이벤트】 %s" % EventSystem.definition(a["eid"]).get("name", ""), "hint": a["block"] if a["block"] != "" else String(a["stage"].get("text", "")).left(40),
@@ -395,11 +398,15 @@ func _facility_action(fac: String, aid: String) -> void:
 				else:
 					SideSystems.take_snapshot(av[0])
 			"investigate":
-				var her := DataDB.heritage_at(gs.current_node)
-				if her.is_empty():
-					err = "조사할 유적이 없습니다"
+				var target := ""
+				for h in DataDB.heritages_at(gs.current_node):  # 아직 답사하지 않은 첫 유산
+					if not gs.heritage_state.has(h["id"]):
+						target = String(h["id"])
+						break
+				if target == "":
+					err = "조사할 유적이 없습니다(모두 답사함)"
 				else:
-					_heritage_node(String(her["id"]))
+					_heritage_node(target)
 			"ferry": _open_ferry()
 			"hazard_fight":
 				var w := TravelSystem.roll_encounter("mountain", gs.current_node)

@@ -7,19 +7,19 @@
 | 배치 | 건수 |
 |---|---|
 | battle_bg.csv | 17 |
-| icons_accessory.csv | 41 |
-| icons_armor.csv | 17 |
-| icons_book.csv | 13 |
+| icons_accessory.csv | 198 |
+| icons_armor.csv | 20 |
+| icons_book.csv | 225 |
 | icons_capture.csv | 20 |
 | icons_food.csv | 47 |
 | icons_herb.csv | 32 |
 | icons_material.csv | 28 |
 | icons_mount.csv | 10 |
-| icons_recipe.csv | 38 |
-| icons_record.csv | 192 |
+| icons_recipe.csv | 88 |
+| icons_record.csv | 425 |
 | icons_shoes.csv | 15 |
-| icons_specialty.csv | 93 |
-| icons_weapon.csv | 36 |
+| icons_specialty.csv | 193 |
+| icons_weapon.csv | 90 |
 | maps.csv | 18 |
 | markers.csv | 30 |
 | minigames.csv | 24 |

@@ -2168,6 +2168,2580 @@
     "reputation_gain": 0.01
    },
    "generated": "heritage"
+  },
+  {
+   "id": "rec_her_226",
+   "name": "《별방진 성지 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_227",
+   "name": "《장흥도호부 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_228",
+   "name": "《흥양현 치소(고흥) 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_229",
+   "name": "《거제현 기성관 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_230",
+   "name": "《조계산 선암사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_231",
+   "name": "《창원도호부 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_232",
+   "name": "《금정산 범어사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_233",
+   "name": "《구례현 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_234",
+   "name": "《청도군 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_235",
+   "name": "《김제군 벽골제 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_236",
+   "name": "《성주목 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_237",
+   "name": "《모악산 금산사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_239",
+   "name": "《은진현 관촉사(논산) 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_240",
+   "name": "《보령현 충청수영성 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_241",
+   "name": "《선산도호부 치소(구미) 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_242",
+   "name": "《영주 풍기도호부 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_243",
+   "name": "《예천군 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_244",
+   "name": "《면천군 치소(당진) 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_245",
+   "name": "《진위현 치소(평택) 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_248",
+   "name": "《인천도호부 관아 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_251",
+   "name": "《연천현 숭의전 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_252",
+   "name": "《설악산 신흥사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_253",
+   "name": "《연안도호부 치소 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_254",
+   "name": "《배천군 온정 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_255",
+   "name": "《고성군 삼일포 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_256",
+   "name": "《평강현 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_257",
+   "name": "《신천군 구월산 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_258",
+   "name": "《재령현 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_259",
+   "name": "《곡산군 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_260",
+   "name": "《구월산 패엽사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_262",
+   "name": "《덕원도호부(원산포) 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_263",
+   "name": "《안변도호부 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_264",
+   "name": "《중화군 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_265",
+   "name": "《설봉산 석왕사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_268",
+   "name": "《용천현 용골산성 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_269",
+   "name": "《이원현 마운령 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_270",
+   "name": "《명천현 칠보산 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_271",
+   "name": "《칠보산 개심사 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_272",
+   "name": "《갑산도호부 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_273",
+   "name": "《혜산진 관방망루 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_274",
+   "name": "《삼수군 치소 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_276",
+   "name": "《부령도호부(청진포) 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_277",
+   "name": "《무산진 쇠돌광 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_278",
+   "name": "《나진포 어유진 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_279",
+   "name": "《경원도호부 아산보 장승·서낭당 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n002",
+   "name": "《제주 불탑사 오층석탑 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n003",
+   "name": "《제주 관덕정 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n006",
+   "name": "《대정향교 대성전 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n009",
+   "name": "《정의현 치소 성곽 및 연희각 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n011",
+   "name": "《한라산 백록담 마애명문 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n014",
+   "name": "《조천 연북정 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n016",
+   "name": "《산방산 산방굴사 석간수 석조 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_n017",
+   "name": "《성산일출봉 수군 만호 망루터 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n021",
+   "name": "《서귀포 정방폭포 서불과지 마애석각 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_n022",
+   "name": "《해남 대흥사 북미륵암 마애여래좌상 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n023",
+   "name": "《강진 무위사 극락보전 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n026",
+   "name": "《강진 백련사 사적비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n029",
+   "name": "《완도 묘당도 이충무공 유적 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n033",
+   "name": "《해남 미황사 대웅보전 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n034",
+   "name": "《완도 보길도 세연정 윤선도 원림 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_n037",
+   "name": "《해남 우수영 명량대첩비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n039",
+   "name": "《장흥 천관산 동백정 마애선인좌상 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_n040",
+   "name": "《영암 도갑사 해탈문 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n041",
+   "name": "《영암 월출산 마애여래좌상 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n043",
+   "name": "《여수 진남관 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n044",
+   "name": "《순천 송광사 국사전 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n045",
+   "name": "《순천 선암사 승선교 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n046",
+   "name": "《광양 옥룡사지 선각국사 도선비 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n047",
+   "name": "《통영 세병관 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n048",
+   "name": "《남해 금산 보리암 마애불 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n049",
+   "name": "《여수 흥국사 대웅전 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n050",
+   "name": "《남해 관음포 이충무공 전몰유허비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n053",
+   "name": "《여수 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.012
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n059",
+   "name": "《여수 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n064",
+   "name": "《동래 범어사 대웅전 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n065",
+   "name": "《김해 구지봉 수로왕릉비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n066",
+   "name": "《창원 봉림사지 진경대사탑비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n068",
+   "name": "《나주 금성관 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n073",
+   "name": "《광주 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.012
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n079",
+   "name": "《광주 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n082",
+   "name": "《경주 불국사 다보탑 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n085",
+   "name": "《경주 첨성대 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n086",
+   "name": "《대구 달성 도동서원 중정당 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n087",
+   "name": "《남원 실상사 백장암 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n088",
+   "name": "《울산 대곡리 반구대 암각화 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n089",
+   "name": "《청도 운문사 원응국사비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n090",
+   "name": "《경주 분황사 모전석탑 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n091",
+   "name": "《구례 화엄사 각황전 앞 석등 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n093",
+   "name": "《대구 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n099",
+   "name": "《대구 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n106",
+   "name": "《김제 금산사 미륵전 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n107",
+   "name": "《영일 중성리 신라비 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n108",
+   "name": "《전주 풍남문 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n109",
+   "name": "《성주 한개마을 북비고택 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n110",
+   "name": "《영천 은해사 거조암 영산전 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n111",
+   "name": "《군산 발산리 오층석탑 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n112",
+   "name": "《영일 냉수리 신라비 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n114",
+   "name": "《익산 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.012
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n120",
+   "name": "《익산 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n126",
+   "name": "《안동 봉정사 극락전 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n127",
+   "name": "《안동 도산서원 전교당 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n130",
+   "name": "《논산 쌍계사 대웅전 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n132",
+   "name": "《구미 채미정 길재 유허각 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n134",
+   "name": "《부여 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n140",
+   "name": "《부여 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n144",
+   "name": "《영주 부석사 무량수전 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n146",
+   "name": "《보은 법주사 팔상전 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n147",
+   "name": "《보은 법주사 쌍사자 석등 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n149",
+   "name": "《문경 봉암사 지증대사탑비 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n150",
+   "name": "《회덕 동춘당 송준길 종택 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n153",
+   "name": "《문경 조령 문경새재 관문 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n155",
+   "name": "《청주 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.012
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n161",
+   "name": "《문경 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n164",
+   "name": "《단양 신라 적성비 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n165",
+   "name": "《충주 고구려비 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n166",
+   "name": "《충주 탑평리 칠층석탑(중앙탑) 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n167",
+   "name": "《원주 거돈사지 원공국사탑비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n168",
+   "name": "《원주 법천사지 지광국사탑비 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n169",
+   "name": "《영월 장릉 단종 능침 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n171",
+   "name": "《울진 봉평리 신라비 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n172",
+   "name": "《제천 점말동굴 구석기 석기 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n173",
+   "name": "《단양 구담봉 마애각자 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_n175",
+   "name": "《원주 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.012
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n181",
+   "name": "《울진 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n184",
+   "name": "《수원 화성 팔달문 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n185",
+   "name": "《수원 화성 서장대 성곽 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n186",
+   "name": "《여주 신륵사 다층전탑 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n187",
+   "name": "《서산 용현리 마애여래삼존상 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n188",
+   "name": "《태안 동문리 마애삼존불입상 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n193",
+   "name": "《여주 명성황후 생가 감고당 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n195",
+   "name": "《남양 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n201",
+   "name": "《서산 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n204",
+   "name": "《한양 숭례문(남대문) 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n205",
+   "name": "《한양 흥인지문(동대문) 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n206",
+   "name": "《한양 원각사지 십층석탑 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n207",
+   "name": "《한양 종묘 정전 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n210",
+   "name": "《강화 부근리 지석묘(고인돌) 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n212",
+   "name": "《강릉 임영관 삼문 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.15
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n215",
+   "name": "《강화 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "def_pct": 0.015
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n221",
+   "name": "《강릉 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n225",
+   "name": "《파주 용미리 마애이불입상 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n227",
+   "name": "《양양 낙산사 해수관음상 및 칠층석탑 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n228",
+   "name": "《양양 진전사지 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 5,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n230",
+   "name": "《연천 전곡리 아슐리안형 주먹도끼 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n231",
+   "name": "《파주 혜음원지 고려 행궁 석조 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n233",
+   "name": "《고성 건봉사 치아사리탑 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n236",
+   "name": "《철원 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.012
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n242",
+   "name": "《양양 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n245",
+   "name": "《개성 경천사지 십층석탑 원터 비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n246",
+   "name": "《연안 읍성 대첩비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n247",
+   "name": "《배천 강태공 사당 주초석 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n248",
+   "name": "《김화 백현원 승도 석비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n249",
+   "name": "《평강 삼방폭포 마애신선명 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_n250",
+   "name": "《통천 총석정 사선봉 주상절리 각석 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_n253",
+   "name": "《연안 연릉군 묘역 석인상 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n254",
+   "name": "《통천 금란굴 관음보살 석각 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_n256",
+   "name": "《연안 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n262",
+   "name": "《평강 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n265",
+   "name": "《해주 다라니석당 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n267",
+   "name": "《재령 장수산성 현무문 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n268",
+   "name": "《해주 신광사 승탑 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n270",
+   "name": "《해주 수양산성 이이 문묘비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n272",
+   "name": "《신계 백련산 관음암 감로수 석조 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n274",
+   "name": "《황주 정방산성 성문 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n276",
+   "name": "《옹진 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n282",
+   "name": "《재령 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n286",
+   "name": "《평양 연광정 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n287",
+   "name": "《평양 을밀대 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n289",
+   "name": "《평양 보통문 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n290",
+   "name": "《덕원 명사십리 해신비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n291",
+   "name": "《안변 석왕사 호지문 및 응진전 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n293",
+   "name": "《평양 평양성 외성 각자석 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n294",
+   "name": "《덕원 원산항 개항 조약비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n296",
+   "name": "《덕원 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n302",
+   "name": "《강서 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n306",
+   "name": "《안주 백상루(관서제일루) 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n307",
+   "name": "《함흥 본궁(이성계 조상 사당) 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n309",
+   "name": "《함흥 만세교 목조교각비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n310",
+   "name": "《순천 자산산성 고려 마애불 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n311",
+   "name": "《정평 관평루 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n314",
+   "name": "《영흥 용흥각 태조 개국비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n315",
+   "name": "《안주 살수대첩 을지문덕 장군 비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n317",
+   "name": "《순천 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n323",
+   "name": "《영흥 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n326",
+   "name": "《영변 묘향산 보현사 대웅전 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.04
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n328",
+   "name": "《영변 철옹산성 십자각 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n329",
+   "name": "《희천 읍성 진남루 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n331",
+   "name": "《태천 능한산성 봉수대 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n334",
+   "name": "《묘향산 상원암 노적봉 마애비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_n337",
+   "name": "《희천 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n343",
+   "name": "《홍원 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n346",
+   "name": "《의주 통군정(압록강 망루) 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n347",
+   "name": "《의주 백마산성 성벽 및 무기고 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n348",
+   "name": "《선천 동림산성 철옹문 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n349",
+   "name": "《북청 북관대첩비 원터 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n351",
+   "name": "《용천 용골산성 봉화대 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n353",
+   "name": "《이원 마운령 진흥왕 순수비 원터 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n354",
+   "name": "《철산 차련관 사신 접대 영빈각 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n357",
+   "name": "《선천 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n363",
+   "name": "《이원 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n366",
+   "name": "《강계 인풍루 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.048
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n367",
+   "name": "《강계 아사 관아 동헌 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n369",
+   "name": "《길주 목성리 고인돌군 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n370",
+   "name": "《초산 압록강 국경 수비 망대 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n371",
+   "name": "《벽동 읍성 서문 남벽 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n372",
+   "name": "《단천 백운산 만덕사지 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.02
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n373",
+   "name": "《명천 칠보산 개심사 대웅전 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n374",
+   "name": "《길주 영동관 왜란 승첩비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "trade_price": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n377",
+   "name": "《초산 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.03
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n383",
+   "name": "《단천 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n387",
+   "name": "《경성 읍성 남문(해청문) 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n388",
+   "name": "《갑산 진영 척경비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n390",
+   "name": "《갑산 백두산 관방 초소 망루 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n391",
+   "name": "《경성 개심사 팔각석등 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n393",
+   "name": "《갑산 만덕산 산신단 신위 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n396",
+   "name": "《백두산 천지 제천단 석단터 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_n398",
+   "name": "《삼수 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.012
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n404",
+   "name": "《경성 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n407",
+   "name": "《회령 읍성 오순문 답사록》",
+   "slot": "record",
+   "tier": 4,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.12
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n409",
+   "name": "《청진 만덕산 봉수대 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n413",
+   "name": "《무산 쇠돌 광산 고대 제철로터 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n414",
+   "name": "《회령 김종서 6진 개척 기념 송덕비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n416",
+   "name": "《부령 한천사 석조여래입상 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n418",
+   "name": "《무산 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.024
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n424",
+   "name": "《경흥 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.01
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n427",
+   "name": "《온성 두만강 수구진 초소 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n429",
+   "name": "《경원 아산보 이순신 조산보 만호터 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n430",
+   "name": "《경흥 조산진 흑요석 촉 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n431",
+   "name": "《온성 세종 6진 척경 기념비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.036
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n434",
+   "name": "《경흥 녹둔도 둔전 경작 개척비 답사록》",
+   "slot": "record",
+   "tier": 3,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.09
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n435",
+   "name": "《두만강 하구 해신 제천암 답사록》",
+   "slot": "record",
+   "tier": 2,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "fatigue_gain": -0.06
+   },
+   "generated": "heritage",
+   "permanent_hp": 1
+  },
+  {
+   "id": "rec_her_n438",
+   "name": "《종성 주성 삼층석탑 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "res_all": 0.012
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "rec_her_n444",
+   "name": "《온성 방어 성곽 진호비 답사록》",
+   "slot": "record",
+   "tier": 1,
+   "icon": "icon_scroll_jokja.png",
+   "buffs": {
+    "reputation_gain": 0.012
+   },
+   "generated": "heritage"
   }
  ],
  "repair": {

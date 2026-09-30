@@ -61,18 +61,18 @@
      },
      "route": [
       "ND_16_CITY_GYEONGSEONGDOHOBU",
-      "ND_16_BEACON_GYEONGSEONGBONGSU"
+      "ND_16_TOWN_GYEONGHEUNGDOHOBUJOSANJIN"
      ],
      "steps": [
       "1) 경성도호부: 수영(水營)과 포구를 살피며 뱃사람들을 모은다",
-      "2) 경성 봉수: 봉수를 올려 방어선을 점검한다"
+      "2) 경흥도호부 조산진: 포구에서 배를 손보며 물길과 물때를 묻는다"
      ]
     },
     {
      "id": "promo_cp_chakho_3",
      "tier": 3,
-     "name": "[착호갑사] 3등급 승급 — 함흥 봉수 장인의 비법",
-     "lore": "착호갑사의 사연이 함흥 봉수로 이어진다. 착호갑사 쇠뿔 화약통에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[착호갑사] 3등급 승급 — 이원현 마운령 치소 장인의 비법",
+     "lore": "착호갑사의 사연이 이원현 마운령 치소로 이어진다. 착호갑사 쇠뿔 화약통에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_16_CITY_GYEONGSEONGDOHOBU",
      "requires": {
@@ -83,20 +83,20 @@
      },
      "route": [
       "ND_16_CITY_GYEONGSEONGDOHOBU",
-      "ND_15_BEACON_HAMHEUNGBONGSU",
-      "ND_16_BEACON_GYEONGSEONGBONGSU"
+      "ND_15_TOWN_IWONHYEONMAUNRYEONGCHISO",
+      "ND_16_TOWN_GYEONGHEUNGDOHOBUJOSANJIN"
      ],
      "steps": [
       "1) 경성도호부: 수영(水營)과 포구를 살피며 뱃사람들을 모은다",
-      "2) 함흥 봉수: 봉수를 올려 방어선을 점검한다",
-      "3) 경성 봉수: 봉수를 올려 방어선을 점검한다"
+      "2) 이원현 마운령 치소: 포구에서 배를 손보며 물길과 물때를 묻는다",
+      "3) 경흥도호부 조산진: 포구에서 배를 손보며 물길과 물때를 묻는다"
      ]
     },
     {
      "id": "promo_cp_chakho_4",
      "tier": 4,
      "name": "[착호갑사] 4등급 승급 — 팔도 명인 겨루기",
-     "lore": "이름이 알려진 착호갑사에게 「호표 관통사격」을 온전히 펼칠 시험이 찾아온다. 함흥 봉수·경성 봉수를 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 착호갑사에게 「호표 관통사격」을 온전히 펼칠 시험이 찾아온다. 홍원현 포구·혜산진 관방망루를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_16_CITY_GYEONGSEONGDOHOBU",
      "requires": {
@@ -107,13 +107,13 @@
      },
      "route": [
       "ND_16_CITY_GYEONGSEONGDOHOBU",
-      "ND_15_BEACON_HAMHEUNGBONGSU",
-      "ND_16_BEACON_GYEONGSEONGBONGSU"
+      "ND_15_TOWN_HONGWONHYEONPOGU",
+      "ND_16_TOWN_HYESANJINGWANBANGMANGRU"
      ],
      "steps": [
       "1) 경성도호부: 수영(水營)과 포구를 살피며 뱃사람들을 모은다",
-      "2) 함흥 봉수: 봉수를 올려 방어선을 점검한다",
-      "3) 경성 봉수: 봉수를 올려 방어선을 점검한다"
+      "2) 홍원현 포구: 포구에서 배를 손보며 물길과 물때를 묻는다",
+      "3) 혜산진 관방망루: 포구에서 배를 손보며 물길과 물때를 묻는다"
      ]
     },
     {
@@ -131,13 +131,13 @@
      },
      "route": [
       "ND_16_CITY_GYEONGSEONGDOHOBU",
-      "ND_15_BEACON_HAMHEUNGBONGSU",
+      "ND_15_TOWN_HONGWONHYEONPOGU",
       "ND_13_TOWN_JINNAMPO",
       "ND_16_SCENIC_BAEKDUSANCHEONJI"
      ],
      "steps": [
       "1) 경성도호부: 수영(水營)과 포구를 살피며 뱃사람들을 모은다",
-      "2) 함흥 봉수: 봉수를 올려 방어선을 점검한다",
+      "2) 홍원현 포구: 포구에서 배를 손보며 물길과 물때를 묻는다",
       "3) 진남포: 포구에서 배를 손보며 물길과 물때를 묻는다",
       "4) 백두산 천지: 절경 앞에서 마음을 비우고 수련한다"
      ]
@@ -182,7 +182,7 @@
     "route": [
      "ND_07_CITY_NAMWONDOHOBU",
      "ND_08_CITY_NAJUMOK",
-     "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO"
+     "ND_08_TOWN_GANGJINHYEONCHISO"
     ],
     "condition": "《목민심서》 초고 회수 퀘스트 완수 및 호남 도(道) 명성 5단계"
    },
@@ -200,7 +200,7 @@
      "name": "[정약용] 4등급 승급 — 「기중가설(起重架設)」 재현",
      "lore": "이름이 알려진 정약용에게 「기중가설(起重架設)」을 온전히 펼칠 시험이 찾아온다. 화북진·동래 황령산 봉수를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
-     "trigger_node": "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
+     "trigger_node": "ND_08_TOWN_GANGJINHYEONCHISO",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -208,12 +208,12 @@
       }
      },
      "route": [
-      "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
+      "ND_08_TOWN_GANGJINHYEONCHISO",
       "ND_17_FORT_HWABUKJIN",
       "ND_10_BEACON_DONGRAEHWANGRYEONGSANBONGSU"
      ],
      "steps": [
-      "1) 강진 사당리 청자 가마터: 옛터를 발굴해 잊힌 기술을 되살린다",
+      "1) 강진현 치소: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "2) 화북진: 진법을 익히며 옛 전장을 되짚는다",
       "3) 동래 황령산 봉수: 봉수를 올려 방어선을 점검한다"
      ]
@@ -224,7 +224,7 @@
      "name": "[정약용] 5등급 승급 — 수원화성에 새긴 이름",
      "lore": "팔도를 두루 거쳐 수원화성에 이르러야 정약용의 서사가 완성된다. 실학의 집대성자.",
      "min_rank": 5,
-     "trigger_node": "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
+     "trigger_node": "ND_08_TOWN_GANGJINHYEONCHISO",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -232,13 +232,13 @@
       }
      },
      "route": [
-      "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
+      "ND_08_TOWN_GANGJINHYEONCHISO",
       "ND_07_FORT_JEOKSANGSANSEONG",
       "ND_09_BEACON_GYEONGJUBONGSU",
       "ND_02_CITY_SUWONHWASEONG"
      ],
      "steps": [
-      "1) 강진 사당리 청자 가마터: 옛터를 발굴해 잊힌 기술을 되살린다",
+      "1) 강진현 치소: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "2) 적상산성: 진법을 익히며 옛 전장을 되짚는다",
       "3) 경주 봉수: 봉수를 올려 방어선을 점검한다",
       "4) 수원화성: 병영의 군사를 조련한다"
@@ -332,14 +332,14 @@
      },
      "route": [
       "ND_10_CITY_JINJUMOK",
-      "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
-      "ND_17_TOWN_AEWOL",
+      "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG",
+      "ND_17_RUIN_HAWONDONGTAMRAWANGJAMYOCHULTOGEUMDONGRYEONG",
       "ND_09_TOMB_GYEONGJUDAEREUNGWON"
      ],
      "steps": [
       "1) 진주목: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 강진 사당리 청자 가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
-      "3) 애월: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
+      "2) 강진 청자 상감운학문 매병: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "3) 하원동 탐라왕자묘 출토 금동령: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
       "4) 경주 대릉원: 능역을 참배하고 비문을 탁본한다"
      ]
     }
@@ -419,7 +419,7 @@
      "id": "promo_cp_c04_4",
      "tier": 4,
      "name": "[박지원] 4등급 승급 — 「호질(虎叱)의 일갈」 재현",
-     "lore": "이름이 알려진 박지원에게 「호질(虎叱)의 일갈」을 온전히 펼칠 시험이 찾아온다. 함흥부·양덕온천을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 박지원에게 「호질(虎叱)의 일갈」을 온전히 펼칠 시험이 찾아온다. 함흥부·강서 탄산약수(약정)을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_14_CITY_UIJUMOK",
      "requires": {
@@ -431,12 +431,12 @@
      "route": [
       "ND_14_CITY_UIJUMOK",
       "ND_15_CITY_HAMHEUNGBU",
-      "ND_13_SPRING_YANGDEOKONCHEON"
+      "ND_13_SPRING_GANGSEOTANSANYAKSUYAKJEONG"
      ],
      "steps": [
       "1) 의주목: 약방·혜민서에서 병자를 돌본다",
       "2) 함흥부: 약방·혜민서에서 병자를 돌본다",
-      "3) 양덕온천: 온천에서 병든 이들을 요양시킨다"
+      "3) 강서 탄산약수(약정): 온천에서 병든 이들을 요양시킨다"
      ]
     },
     {
@@ -643,7 +643,7 @@
     "min_rank": 3,
     "route": [
      "ND_01_CITY_GAESEONGBU",
-     "ND_02_STATION_YANGJAEYEOK",
+     "ND_02_STATION_NOWONYEOKUIJEONGBUPOCHEONYEOKCHAM",
      "ND_02_CITY_HANYANGGYEONGJO"
     ],
     "condition": "한양 도성 축조 설계도 3편 복원 및 건국 이념 퀴즈 통과"
@@ -683,8 +683,8 @@
     {
      "id": "promo_cp_c06_5",
      "tier": 5,
-     "name": "[정도전] 5등급 승급 — 경주 대릉원에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 경주 대릉원에 이르러야 정도전의 서사가 완성된다. 조선의 기틀을 세운 대정치가.",
+     "name": "[정도전] 5등급 승급 — 울산 대곡리 반구대 암각화에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 울산 대곡리 반구대 암각화에 이르러야 정도전의 서사가 완성된다. 조선의 기틀을 세운 대정치가.",
      "min_rank": 5,
      "trigger_node": "ND_02_CITY_HANYANGGYEONGJO",
      "requires": {
@@ -697,13 +697,13 @@
       "ND_02_CITY_HANYANGGYEONGJO",
       "ND_06_BEACON_GONGJUWOLSEONGSANBONGSU",
       "ND_07_FORT_JEOKSANGSANSEONG",
-      "ND_09_TOMB_GYEONGJUDAEREUNGWON"
+      "ND_10_TOMB_ULSANDAEGOKRIBANGUDAEAMGAKHWA"
      ],
      "steps": [
       "1) 한양 경조: 병영의 군사를 조련한다",
       "2) 공주 월성산 봉수: 봉수를 올려 방어선을 점검한다",
       "3) 적상산성: 진법을 익히며 옛 전장을 되짚는다",
-      "4) 경주 대릉원: 능역을 참배하고 비문을 탁본한다"
+      "4) 울산 대곡리 반구대 암각화: 능역을 참배하고 비문을 탁본한다"
      ]
     }
    ]
@@ -881,7 +881,7 @@
      "id": "promo_cp_c08_4",
      "tier": 4,
      "name": "[김정희] 4등급 승급 — 「추사필체(秋史筆體) 세한송백」 재현",
-     "lore": "이름이 알려진 김정희에게 「추사필체(秋史筆體) 세한송백」을 온전히 펼칠 시험이 찾아온다. 담양 소쇄원·추사 유배지를 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 김정희에게 「추사필체(秋史筆體) 세한송백」을 온전히 펼칠 시험이 찾아온다. 광양 어사 순력기 고문서·추사 유배지를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_17_TOWN_DAEJEONGHYEON",
      "requires": {
@@ -892,12 +892,12 @@
      },
      "route": [
       "ND_17_TOWN_DAEJEONGHYEON",
-      "ND_08_SCENIC_DAMYANGSOSWAEWON",
+      "ND_08_SCENIC_GWANGYANGEOSASUNRYEOKGIGOMUNSEO",
       "ND_17_SEOWON_CHUSAYUBAEJI"
      ],
      "steps": [
       "1) 대정현: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 담양 소쇄원: 절경을 화폭과 시문에 담는다",
+      "2) 광양 어사 순력기 고문서: 절경을 화폭과 시문에 담는다",
       "3) 추사 유배지: 서원 선비들과 시서화를 겨룬다"
      ]
     },
@@ -916,14 +916,14 @@
      },
      "route": [
       "ND_17_TOWN_DAEJEONGHYEON",
-      "ND_08_SCENIC_DAMYANGSOSWAEWON",
-      "ND_10_SCENIC_MILYANGYEONGNAMRU",
+      "ND_08_SCENIC_YEOSUJINNAMGWAN",
+      "ND_10_SCENIC_TONGYEONGSEBYEONGGWAN",
       "ND_17_SEOWON_CHUSAYUBAEJI"
      ],
      "steps": [
       "1) 대정현: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 담양 소쇄원: 절경을 화폭과 시문에 담는다",
-      "3) 밀양 영남루: 절경을 화폭과 시문에 담는다",
+      "2) 여수 진남관: 절경을 화폭과 시문에 담는다",
+      "3) 통영 세병관: 절경을 화폭과 시문에 담는다",
       "4) 추사 유배지: 서원 선비들과 시서화를 겨룬다"
      ]
     }
@@ -1087,7 +1087,7 @@
     "min_rank": 3,
     "route": [
      "ND_05_CITY_CHEONGJUMOK",
-     "ND_02_STATION_YANGJAEYEOK",
+     "ND_02_STATION_NOWONYEOKUIJEONGBUPOCHEONYEOKCHAM",
      "ND_02_CITY_HANYANGGYEONGJO"
     ],
     "condition": "자격루 톱니바퀴 부품 4종 수리 및 세종대왕 천거 퀘스트"
@@ -1127,8 +1127,8 @@
     {
      "id": "promo_cp_c10_5",
      "tier": 5,
-     "name": "[장영실] 5등급 승급 — 전주 경기전에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 전주 경기전에 이르러야 장영실의 서사가 완성된다. 조선 최고의 천재 과학 발명가.",
+     "name": "[장영실] 5등급 승급 — 울산 대곡리 반구대 암각화에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 울산 대곡리 반구대 암각화에 이르러야 장영실의 서사가 완성된다. 조선 최고의 천재 과학 발명가.",
      "min_rank": 5,
      "trigger_node": "ND_02_CITY_HANYANGGYEONGJO",
      "requires": {
@@ -1141,13 +1141,13 @@
       "ND_02_CITY_HANYANGGYEONGJO",
       "ND_04_SEOWON_GANGREUNGOJUKHEON",
       "ND_09_SEOWON_ANDONGDOSANSEOWON",
-      "ND_07_SEOWON_JEONJUGYEONGGIJEON"
+      "ND_10_TOMB_ULSANDAEGOKRIBANGUDAEAMGAKHWA"
      ],
      "steps": [
       "1) 한양 경조: 관아와 장터에서 옛 인연을 수소문한다",
       "2) 강릉 오죽헌: 강학에 참석해 뜻을 가다듬는다",
       "3) 안동 도산서원: 강학에 참석해 뜻을 가다듬는다",
-      "4) 전주 경기전: 강학에 참석해 뜻을 가다듬는다"
+      "4) 울산 대곡리 반구대 암각화: 능역을 참배하고 비문을 탁본한다"
      ]
     }
    ]
@@ -1325,7 +1325,7 @@
      "id": "promo_cp_c12_4",
      "tier": 4,
      "name": "[김정호] 4등급 승급 — 「지형지물 전술 전개」 재현",
-     "lore": "이름이 알려진 김정호에게 「지형지물 전술 전개」를 온전히 펼칠 시험이 찾아온다. 태안·제천을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 김정호에게 「지형지물 전술 전개」를 온전히 펼칠 시험이 찾아온다. 부여 능산리 백제 금동대향로·제천을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_02_CITY_HANYANGGYEONGJO",
      "requires": {
@@ -1336,12 +1336,12 @@
      },
      "route": [
       "ND_02_CITY_HANYANGGYEONGJO",
-      "ND_06_TOWN_TAEAN",
+      "ND_06_RUIN_BUYEONEUNGSANRIBAEKJEGEUMDONGDAEHYANGRO",
       "ND_05_TOWN_JECHEON"
      ],
      "steps": [
       "1) 한양 경조: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 태안: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
+      "2) 부여 능산리 백제 금동대향로: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
       "3) 제천: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
      ]
     },
@@ -1409,7 +1409,7 @@
     "route": [
      "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
      "ND_08_CITY_NAJUMOK",
-     "ND_08_FORT_YEOSUJWASUYEONG"
+     "ND_08_SCENIC_YEOSUJINNAMGWAN"
     ],
     "condition": "난중일기 친필 수첩 전달 및 남해안 왜구 잔당 5함대 격퇴"
    },
@@ -1427,7 +1427,7 @@
      "name": "[이순신] 4등급 승급 — 「학익진(鶴翼陣) 전군 돌격」 재현",
      "lore": "이름이 알려진 이순신에게 「학익진(鶴翼陣) 전군 돌격」을 온전히 펼칠 시험이 찾아온다. 남해·서귀포를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
-     "trigger_node": "ND_08_FORT_YEOSUJWASUYEONG",
+     "trigger_node": "ND_08_SCENIC_YEOSUJINNAMGWAN",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -1435,12 +1435,12 @@
       }
      },
      "route": [
-      "ND_08_FORT_YEOSUJWASUYEONG",
+      "ND_08_SCENIC_YEOSUJINNAMGWAN",
       "ND_10_TOWN_NAMHAE",
       "ND_17_TOWN_SEOGWIPO"
      ],
      "steps": [
-      "1) 여수 좌수영: 진(鎭)의 수군과 함께 해상 진법을 익힌다",
+      "1) 여수 진남관: 절경 앞에서 마음을 비우고 수련한다",
       "2) 남해: 포구에서 배를 손보며 물길과 물때를 묻는다",
       "3) 서귀포: 포구에서 배를 손보며 물길과 물때를 묻는다"
      ]
@@ -1451,7 +1451,7 @@
      "name": "[이순신] 5등급 승급 — 명량 울돌목에 새긴 이름",
      "lore": "팔도를 두루 거쳐 명량 울돌목에 이르러야 이순신의 서사가 완성된다. 불패의 구국 성웅.",
      "min_rank": 5,
-     "trigger_node": "ND_08_FORT_YEOSUJWASUYEONG",
+     "trigger_node": "ND_08_SCENIC_YEOSUJINNAMGWAN",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -1459,14 +1459,14 @@
       }
      },
      "route": [
-      "ND_08_FORT_YEOSUJWASUYEONG",
-      "ND_17_TOWN_AEWOL",
+      "ND_08_SCENIC_YEOSUJINNAMGWAN",
+      "ND_17_WRECK_CHAGWIDOHAEYEOKCHIMMOLSEONHAEJEOCHEONGJA",
       "ND_01_TOWN_MUNSANPOGU",
       "ND_08_WRECK_MYEONGRYANGULDOLMOK"
      ],
      "steps": [
-      "1) 여수 좌수영: 진(鎭)의 수군과 함께 해상 진법을 익힌다",
-      "2) 애월: 포구에서 배를 손보며 물길과 물때를 묻는다",
+      "1) 여수 진남관: 절경 앞에서 마음을 비우고 수련한다",
+      "2) 차귀도 해역 침몰선 해저 청자: 가라앉은 배를 조사해 옛 해전의 흔적을 찾는다",
       "3) 문산포구: 포구에서 배를 손보며 물길과 물때를 묻는다",
       "4) 명량 울돌목: 가라앉은 배를 조사해 옛 해전의 흔적을 찾는다"
      ]
@@ -1744,8 +1744,8 @@
     {
      "id": "promo_cp_hwangjini_3",
      "tier": 3,
-     "name": "[황진이] 3등급 승급 — 춘천부에 남은 자취",
-     "lore": "황진이의 사연이 춘천부로 이어진다. 명월 거문고에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[황진이] 3등급 승급 — 철원도호부 치소에 남은 자취",
+     "lore": "황진이의 사연이 철원도호부 치소로 이어진다. 명월 거문고에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_01_CITY_GAESEONGBU",
      "requires": {
@@ -1756,12 +1756,12 @@
      },
      "route": [
       "ND_01_CITY_GAESEONGBU",
-      "ND_03_CITY_CHUNCHEONBU",
+      "ND_03_CITY_CHEOLWONDOHOBUCHISO",
       "ND_01_CITY_GANGHWAYUSUBU"
      ],
      "steps": [
       "1) 개성부: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 춘천부: 관아와 장터에서 옛 인연을 수소문한다",
+      "2) 철원도호부 치소: 관아와 장터에서 옛 인연을 수소문한다",
       "3) 강화유수부: 관아와 장터에서 옛 인연을 수소문한다"
      ]
     },
@@ -1805,13 +1805,13 @@
      "route": [
       "ND_01_CITY_GAESEONGBU",
       "ND_12_SEOWON_HAEJUSOHYEONSEOWON",
-      "ND_13_CITY_PYEONGYANGBU",
+      "ND_13_SEOWON_GANGSEOSANSINGAKMAAECHILSEONGDO",
       "ND_09_SEOWON_ANDONGDOSANSEOWON"
      ],
      "steps": [
       "1) 개성부: 관아와 장터에서 옛 인연을 수소문한다",
       "2) 해주 소현서원: 강학에 참석해 뜻을 가다듬는다",
-      "3) 평양부: 관아와 장터에서 옛 인연을 수소문한다",
+      "3) 강서 산신각 마애칠성도: 강학에 참석해 뜻을 가다듬는다",
       "4) 안동 도산서원: 강학에 참석해 뜻을 가다듬는다"
      ]
     }
@@ -1851,7 +1851,7 @@
     "min_rank": 2,
     "route": [
      "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
-     "ND_06_TOWN_HAEMI"
+     "ND_06_SCENIC_SEOSANYONGHYEONRIMAAEYEORAESAMJONSANG"
     ],
     "condition": "안평대군의 꿈을 기록한 도원경 수묵 스케치 복원"
    },
@@ -1866,10 +1866,10 @@
     {
      "id": "promo_cp_c17_3",
      "tier": 3,
-     "name": "[안견] 3등급 승급 — 전주 경기전에 남은 자취",
-     "lore": "안견의 사연이 전주 경기전으로 이어진다. 몽유도원도 붓에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[안견] 3등급 승급 — 남원 고려청자 가마터 출토 명품완에 남은 자취",
+     "lore": "안견의 사연이 남원 고려청자 가마터 출토 명품완으로 이어진다. 몽유도원도 붓에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
-     "trigger_node": "ND_06_TOWN_HAEMI",
+     "trigger_node": "ND_06_SCENIC_SEOSANYONGHYEONRIMAAEYEORAESAMJONSANG",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -1877,23 +1877,23 @@
       }
      },
      "route": [
-      "ND_06_TOWN_HAEMI",
-      "ND_07_SEOWON_JEONJUGYEONGGIJEON",
-      "ND_06_CITY_HONGJUMOK"
+      "ND_06_SCENIC_SEOSANYONGHYEONRIMAAEYEORAESAMJONSANG",
+      "ND_07_SCENIC_NAMWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+      "ND_06_SEOWON_GONGJUSANSINGAKMAAECHILSEONGDO"
      ],
      "steps": [
-      "1) 해미: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 전주 경기전: 서원 선비들과 시서화를 겨룬다",
-      "3) 홍주목: 관아와 장터에서 옛 인연을 수소문한다"
+      "1) 서산 용현리 마애여래삼존상: 절경을 화폭과 시문에 담는다",
+      "2) 남원 고려청자 가마터 출토 명품완: 절경을 화폭과 시문에 담는다",
+      "3) 공주 산신각 마애칠성도: 서원 선비들과 시서화를 겨룬다"
      ]
     },
     {
      "id": "promo_cp_c17_4",
      "tier": 4,
      "name": "[안견] 4등급 승급 — 「몽유도원(夢遊桃源) 경계」 재현",
-     "lore": "이름이 알려진 안견에게 「몽유도원(夢遊桃源) 경계」를 온전히 펼칠 시험이 찾아온다. 단양 수벌 고려가마터·전주 경기전을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 안견에게 「몽유도원(夢遊桃源) 경계」를 온전히 펼칠 시험이 찾아온다. 충주 어사 순력기 고문서·전주 경기전을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
-     "trigger_node": "ND_06_TOWN_HAEMI",
+     "trigger_node": "ND_06_SCENIC_SEOSANYONGHYEONRIMAAEYEORAESAMJONSANG",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -1901,23 +1901,23 @@
       }
      },
      "route": [
-      "ND_06_TOWN_HAEMI",
-      "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO",
+      "ND_06_SCENIC_SEOSANYONGHYEONRIMAAEYEORAESAMJONSANG",
+      "ND_05_SCENIC_CHUNGJUEOSASUNRYEOKGIGOMUNSEO",
       "ND_07_SEOWON_JEONJUGYEONGGIJEON"
      ],
      "steps": [
-      "1) 해미: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 단양 수벌 고려가마터: 옛터의 자취를 그림으로 남긴다",
+      "1) 서산 용현리 마애여래삼존상: 절경을 화폭과 시문에 담는다",
+      "2) 충주 어사 순력기 고문서: 절경을 화폭과 시문에 담는다",
       "3) 전주 경기전: 서원 선비들과 시서화를 겨룬다"
      ]
     },
     {
      "id": "promo_cp_c17_5",
      "tier": 5,
-     "name": "[안견] 5등급 승급 — 백두산 천지에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 백두산 천지에 이르러야 안견의 서사가 완성된다. 조선 최고의 산수화가.",
+     "name": "[안견] 5등급 승급 — 강릉 임영관 삼문에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 강릉 임영관 삼문에 이르러야 안견의 서사가 완성된다. 조선 최고의 산수화가.",
      "min_rank": 5,
-     "trigger_node": "ND_06_TOWN_HAEMI",
+     "trigger_node": "ND_06_SCENIC_SEOSANYONGHYEONRIMAAEYEORAESAMJONSANG",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -1925,16 +1925,16 @@
       }
      },
      "route": [
-      "ND_06_TOWN_HAEMI",
-      "ND_07_SEOWON_JEONJUGYEONGGIJEON",
-      "ND_09_SEOWON_ANDONGDOSANSEOWON",
-      "ND_16_SCENIC_BAEKDUSANCHEONJI"
+      "ND_06_SCENIC_SEOSANYONGHYEONRIMAAEYEORAESAMJONSANG",
+      "ND_07_SCENIC_NAMWONEOSASUNRYEOKGIGOMUNSEO",
+      "ND_09_SCENIC_GYEONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+      "ND_04_SCENIC_GANGREUNGIMYEONGGWANSAMMUN"
      ],
      "steps": [
-      "1) 해미: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 전주 경기전: 서원 선비들과 시서화를 겨룬다",
-      "3) 안동 도산서원: 서원 선비들과 시서화를 겨룬다",
-      "4) 백두산 천지: 절경을 화폭과 시문에 담는다"
+      "1) 서산 용현리 마애여래삼존상: 절경을 화폭과 시문에 담는다",
+      "2) 남원 어사 순력기 고문서: 절경을 화폭과 시문에 담는다",
+      "3) 경주 도요지 백자 청화항아리: 절경을 화폭과 시문에 담는다",
+      "4) 강릉 임영관 삼문: 절경을 화폭과 시문에 담는다"
      ]
     }
    ]
@@ -1991,7 +1991,7 @@
      "id": "promo_cp_kimhongdo_4",
      "tier": 4,
      "name": "[김홍도] 4등급 승급 — 「씨름판 뒤집기」 재현",
-     "lore": "이름이 알려진 김홍도에게 「씨름판 뒤집기」를 온전히 펼칠 시험이 찾아온다. 계룡산 천황봉·강릉 오죽헌을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 김홍도에게 「씨름판 뒤집기」를 온전히 펼칠 시험이 찾아온다. 부여 향교 대성전 목판·강릉 오죽헌을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_02_TOWN_NAMYANG",
      "requires": {
@@ -2002,12 +2002,12 @@
      },
      "route": [
       "ND_02_TOWN_NAMYANG",
-      "ND_06_SCENIC_GYERYONGSANCHEONHWANGBONG",
+      "ND_06_SCENIC_BUYEOHYANGGYODAESEONGJEONMOKPAN",
       "ND_04_SEOWON_GANGREUNGOJUKHEON"
      ],
      "steps": [
       "1) 남양: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 계룡산 천황봉: 절경을 화폭과 시문에 담는다",
+      "2) 부여 향교 대성전 목판: 절경을 화폭과 시문에 담는다",
       "3) 강릉 오죽헌: 서원 선비들과 시서화를 겨룬다"
      ]
     },
@@ -2026,14 +2026,14 @@
      },
      "route": [
       "ND_02_TOWN_NAMYANG",
-      "ND_03_SCENIC_CHEOLWONSAMBUYEON",
-      "ND_11_SCENIC_HWANGJUWOLPARU",
+      "ND_03_SCENIC_TONGCHEONHYANGGYODAESEONGJEONMOKPAN",
+      "ND_11_SCENIC_JAERYEONGSANSINGAKMAAECHILSEONGDO",
       "ND_03_SCENIC_GEUMGANGSANGURYONGPOK"
      ],
      "steps": [
       "1) 남양: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 철원 삼부연: 절경을 화폭과 시문에 담는다",
-      "3) 황주 월파루: 절경을 화폭과 시문에 담는다",
+      "2) 통천 향교 대성전 목판: 절경을 화폭과 시문에 담는다",
+      "3) 재령 산신각 마애칠성도: 절경을 화폭과 시문에 담는다",
       "4) 금강산 구룡폭: 절경을 화폭과 시문에 담는다"
      ]
     }
@@ -2072,7 +2072,7 @@
    "recruit": {
     "min_rank": 3,
     "route": [
-     "ND_03_CITY_CHEOLWONDOHOBU",
+     "ND_03_CITY_CHEOLWONDOHOBUCHISO",
      "ND_04_CITY_WONJUGANGWONGAMYEONG",
      "ND_04_SEOWON_GANGREUNGOJUKHEON"
     ],
@@ -2125,13 +2125,13 @@
      },
      "route": [
       "ND_04_SEOWON_GANGREUNGOJUKHEON",
-      "ND_03_CITY_CHUNCHEONBU",
+      "ND_03_CITY_CHEOLWONDOHOBUCHISO",
       "ND_01_CITY_GAESEONGBU",
       "ND_10_TEMPLE_HAEINSA"
      ],
      "steps": [
       "1) 강릉 오죽헌: 서원 선비들과 시서화를 겨룬다",
-      "2) 춘천부: 약방·혜민서에서 병자를 돌본다",
+      "2) 철원도호부 치소: 약방·혜민서에서 병자를 돌본다",
       "3) 개성부: 약방·혜민서에서 병자를 돌본다",
       "4) 해인사: 절 약사전에서 약초를 달이며 수행한다"
      ]
@@ -2190,7 +2190,7 @@
      "id": "promo_cp_heojun_4",
      "tier": 4,
      "name": "[허준] 4등급 승급 — 「동의보감 진액 환생」 재현",
-     "lore": "이름이 알려진 허준에게 「동의보감 진액 환생」을 온전히 펼칠 시험이 찾아온다. 해주목·백담사를 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 허준에게 「동의보감 진액 환생」을 온전히 펼칠 시험이 찾아온다. 해주목·오색 온천(한계령 탄산약수)를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_01_TOWN_PAJUMOK",
      "requires": {
@@ -2202,12 +2202,12 @@
      "route": [
       "ND_01_TOWN_PAJUMOK",
       "ND_12_CITY_HAEJUMOK",
-      "ND_03_TEMPLE_BAEKDAMSA"
+      "ND_03_SPRING_OSAEKONCHEONHANGYERYEONGTANSANYAKSU"
      ],
      "steps": [
       "1) 파주목: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "2) 해주목: 약방·혜민서에서 병자를 돌본다",
-      "3) 백담사: 절 약사전에서 약초를 달이며 수행한다"
+      "3) 오색 온천(한계령 탄산약수): 온천에서 병든 이들을 요양시킨다"
      ]
     },
     {
@@ -2300,19 +2300,19 @@
      "route": [
       "ND_15_CITY_HAMHEUNGBU",
       "ND_14_CITY_UIJUMOK",
-      "ND_15_SPRING_DALCHEONONCHEON"
+      "ND_15_SPRING_YEONGHEUNGONJEONGONCHEON"
      ],
      "steps": [
       "1) 함흥부: 약방·혜민서에서 병자를 돌본다",
       "2) 의주목: 약방·혜민서에서 병자를 돌본다",
-      "3) 달천온천: 온천에서 병든 이들을 요양시킨다"
+      "3) 영흥 온정 온천: 온천에서 병든 이들을 요양시킨다"
      ]
     },
     {
      "id": "promo_cp_c21_4",
      "tier": 4,
      "name": "[이제마] 4등급 승급 — 「사상 체질 처방」 재현",
-     "lore": "이름이 알려진 이제마에게 「사상 체질 처방」을 온전히 펼칠 시험이 찾아온다. 의주목·양덕온천을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 이제마에게 「사상 체질 처방」을 온전히 펼칠 시험이 찾아온다. 의주목·강서 탄산약수(약정)을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_15_CITY_HAMHEUNGBU",
      "requires": {
@@ -2324,12 +2324,12 @@
      "route": [
       "ND_15_CITY_HAMHEUNGBU",
       "ND_14_CITY_UIJUMOK",
-      "ND_13_SPRING_YANGDEOKONCHEON"
+      "ND_13_SPRING_GANGSEOTANSANYAKSUYAKJEONG"
      ],
      "steps": [
       "1) 함흥부: 약방·혜민서에서 병자를 돌본다",
       "2) 의주목: 약방·혜민서에서 병자를 돌본다",
-      "3) 양덕온천: 온천에서 병든 이들을 요양시킨다"
+      "3) 강서 탄산약수(약정): 온천에서 병든 이들을 요양시킨다"
      ]
     },
     {
@@ -2347,13 +2347,13 @@
      },
      "route": [
       "ND_15_CITY_HAMHEUNGBU",
-      "ND_16_CITY_GILJUMOK",
+      "ND_16_CITY_BURYEONGDOHOBUCHEONGJINPO",
       "ND_09_CITY_SANGJUMOK",
       "ND_10_TEMPLE_HAEINSA"
      ],
      "steps": [
       "1) 함흥부: 약방·혜민서에서 병자를 돌본다",
-      "2) 길주목: 약방·혜민서에서 병자를 돌본다",
+      "2) 부령도호부(청진포): 약방·혜민서에서 병자를 돌본다",
       "3) 상주목: 약방·혜민서에서 병자를 돌본다",
       "4) 해인사: 절 약사전에서 약초를 달이며 수행한다"
      ]
@@ -2409,8 +2409,8 @@
     {
      "id": "promo_cp_c22_3",
      "tier": 3,
-     "name": "[채규서] 3등급 승급 — 청주목에 남은 자취",
-     "lore": "채규서의 사연이 청주목으로 이어진다. 진휼 곡식 계량되에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[채규서] 3등급 승급 — 문경 산신각 마애칠성도에 남은 자취",
+     "lore": "채규서의 사연이 문경 산신각 마애칠성도로 이어진다. 진휼 곡식 계량되에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
      "requires": {
@@ -2421,12 +2421,12 @@
      },
      "route": [
       "ND_07_CITY_JEONJUJEONRAGAMYEONG",
-      "ND_05_CITY_CHEONGJUMOK",
+      "ND_05_SEOWON_MUNGYEONGSANSINGAKMAAECHILSEONGDO",
       "ND_07_CITY_NAMWONDOHOBU"
      ],
      "steps": [
       "1) 전주 전라감영: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 청주목: 관아와 장터에서 옛 인연을 수소문한다",
+      "2) 문경 산신각 마애칠성도: 강학에 참석해 뜻을 가다듬는다",
       "3) 남원도호부: 관아와 장터에서 옛 인연을 수소문한다"
      ]
     },
@@ -2434,7 +2434,7 @@
      "id": "promo_cp_c22_4",
      "tier": 4,
      "name": "[채규서] 4등급 승급 — 「진휼미 보급」 재현",
-     "lore": "이름이 알려진 채규서에게 「진휼미 보급」을 온전히 펼칠 시험이 찾아온다. 홍주목·상주목을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 채규서에게 「진휼미 보급」을 온전히 펼칠 시험이 찾아온다. 공주 산신각 마애칠성도·상주목을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
      "requires": {
@@ -2445,12 +2445,12 @@
      },
      "route": [
       "ND_07_CITY_JEONJUJEONRAGAMYEONG",
-      "ND_06_CITY_HONGJUMOK",
+      "ND_06_SEOWON_GONGJUSANSINGAKMAAECHILSEONGDO",
       "ND_09_CITY_SANGJUMOK"
      ],
      "steps": [
       "1) 전주 전라감영: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 홍주목: 관아와 장터에서 옛 인연을 수소문한다",
+      "2) 공주 산신각 마애칠성도: 강학에 참석해 뜻을 가다듬는다",
       "3) 상주목: 관아와 장터에서 옛 인연을 수소문한다"
      ]
     },
@@ -2592,13 +2592,13 @@
      "route": [
       "ND_02_CITY_GWANGJUYUSUBU",
       "ND_04_CITY_WONJUGANGWONGAMYEONG",
-      "ND_03_CITY_CHEOLWONDOHOBU",
+      "ND_03_CITY_CHEOLWONDOHOBUCHISO",
       "ND_09_TEMPLE_BULGUKSA"
      ],
      "steps": [
       "1) 광주유수부: 약방·혜민서에서 병자를 돌본다",
       "2) 원주 강원감영: 약방·혜민서에서 병자를 돌본다",
-      "3) 철원도호부: 약방·혜민서에서 병자를 돌본다",
+      "3) 철원도호부 치소: 약방·혜민서에서 병자를 돌본다",
       "4) 불국사: 절 약사전에서 약초를 달이며 수행한다"
      ]
     }
@@ -2678,8 +2678,8 @@
     {
      "id": "promo_cp_c24_5",
      "tier": 5,
-     "name": "[을지문덕] 5등급 승급 — 경주 대릉원에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 경주 대릉원에 이르러야 을지문덕의 서사가 완성된다. 살수에서 30만 수나라 대군을 수장시킨 지략의 명장.",
+     "name": "[을지문덕] 5등급 승급 — 강릉 임영관 삼문에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 강릉 임영관 삼문에 이르러야 을지문덕의 서사가 완성된다. 살수에서 30만 수나라 대군을 수장시킨 지략의 명장.",
      "min_rank": 5,
      "trigger_node": "ND_13_CITY_ANJUMOK",
      "requires": {
@@ -2692,13 +2692,13 @@
       "ND_13_CITY_ANJUMOK",
       "ND_14_BEACON_UIJUBONGSU",
       "ND_15_BEACON_HAMHEUNGBONGSU",
-      "ND_09_TOMB_GYEONGJUDAEREUNGWON"
+      "ND_04_SCENIC_GANGREUNGIMYEONGGWANSAMMUN"
      ],
      "steps": [
       "1) 안주목: 병영의 군사를 조련한다",
       "2) 의주 봉수: 봉수를 올려 방어선을 점검한다",
       "3) 함흥 봉수: 봉수를 올려 방어선을 점검한다",
-      "4) 경주 대릉원: 능역을 참배하고 비문을 탁본한다"
+      "4) 강릉 임영관 삼문: 절경 앞에서 마음을 비우고 수련한다"
      ]
     }
    ]
@@ -2754,7 +2754,7 @@
      "id": "promo_cp_c25_4",
      "tier": 4,
      "name": "[연개소문] 4등급 승급 — 「오검 비도술(飛刀術)」 재현",
-     "lore": "이름이 알려진 연개소문에게 「오검 비도술(飛刀術)」을 온전히 펼칠 시험이 찾아온다. 북청 사자놀음 마당·황주 월파루를 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 연개소문에게 「오검 비도술(飛刀術)」을 온전히 펼칠 시험이 찾아온다. 북청 사자놀음 탈 및 복식·재령 산신각 마애칠성도를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_13_CITY_PYEONGYANGBU",
      "requires": {
@@ -2765,20 +2765,20 @@
      },
      "route": [
       "ND_13_CITY_PYEONGYANGBU",
-      "ND_15_SHRINE_BUKCHEONGSAJANOLEUMMADANG",
-      "ND_11_SCENIC_HWANGJUWOLPARU"
+      "ND_15_SHRINE_BUKCHEONGSAJANOLEUMTALMITBOKSIK",
+      "ND_11_SCENIC_JAERYEONGSANSINGAKMAAECHILSEONGDO"
      ],
      "steps": [
       "1) 평양부: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 북청 사자놀음 마당: 제를 올려 신령의 뜻을 묻는다",
-      "3) 황주 월파루: 절경 앞에서 마음을 비우고 수련한다"
+      "2) 북청 사자놀음 탈 및 복식: 제를 올려 신령의 뜻을 묻는다",
+      "3) 재령 산신각 마애칠성도: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_c25_5",
      "tier": 5,
-     "name": "[연개소문] 5등급 승급 — 백두산 천지에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 백두산 천지에 이르러야 연개소문의 서사가 완성된다. 당 태종의 대군을 격퇴한 철권의 대막리지.",
+     "name": "[연개소문] 5등급 승급 — 원주 법천사지 지광국사탑비에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 원주 법천사지 지광국사탑비에 이르러야 연개소문의 서사가 완성된다. 당 태종의 대군을 격퇴한 철권의 대막리지.",
      "min_rank": 5,
      "trigger_node": "ND_13_CITY_PYEONGYANGBU",
      "requires": {
@@ -2790,14 +2790,14 @@
      "route": [
       "ND_13_CITY_PYEONGYANGBU",
       "ND_15_SHRINE_BUKCHEONGSAJANOLEUMMADANG",
-      "ND_14_SCENIC_YEONGBYEONYAKSANDONGDAE",
-      "ND_16_SCENIC_BAEKDUSANCHEONJI"
+      "ND_14_SHRINE_GANGGYEINPUNGRU",
+      "ND_04_SCENIC_WONJUBEOPCHEONSAJIJIGWANGGUKSATAPBI"
      ],
      "steps": [
       "1) 평양부: 관아와 장터에서 옛 인연을 수소문한다",
       "2) 북청 사자놀음 마당: 제를 올려 신령의 뜻을 묻는다",
-      "3) 영변 약산 동대: 절경 앞에서 마음을 비우고 수련한다",
-      "4) 백두산 천지: 절경 앞에서 마음을 비우고 수련한다"
+      "3) 강계 인풍루: 제를 올려 신령의 뜻을 묻는다",
+      "4) 원주 법천사지 지광국사탑비: 절경 앞에서 마음을 비우고 수련한다"
      ]
     }
    ]
@@ -2876,8 +2876,8 @@
     {
      "id": "promo_cp_c26_5",
      "tier": 5,
-     "name": "[계백] 5등급 승급 — 백두산 천지에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 백두산 천지에 이르러야 계백의 서사가 완성된다. 황산벌에서 5천 결사대로 신라 5만 대군과 맞선 비장한 명장.",
+     "name": "[계백] 5등급 승급 — 나주 신촌리 금동관에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 나주 신촌리 금동관에 이르러야 계백의 서사가 완성된다. 황산벌에서 5천 결사대로 신라 5만 대군과 맞선 비장한 명장.",
      "min_rank": 5,
      "trigger_node": "ND_06_TOWN_BUYEO",
      "requires": {
@@ -2890,13 +2890,13 @@
       "ND_06_TOWN_BUYEO",
       "ND_07_FORT_JEOKSANGSANSEONG",
       "ND_10_FORT_TONGYEONGTONGJEYEONG",
-      "ND_16_SCENIC_BAEKDUSANCHEONJI"
+      "ND_08_SHRINE_NAJUSINCHONRIGEUMDONGGWAN"
      ],
      "steps": [
       "1) 부여: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "2) 적상산성: 진법을 익히며 옛 전장을 되짚는다",
       "3) 통영 통제영: 진법을 익히며 옛 전장을 되짚는다",
-      "4) 백두산 천지: 절경 앞에서 마음을 비우고 수련한다"
+      "4) 나주 신촌리 금동관: 제를 올려 신령의 뜻을 묻는다"
      ]
     }
    ]
@@ -2952,7 +2952,7 @@
      "id": "promo_cp_c27_4",
      "tier": 4,
      "name": "[강림도령] 4등급 승급 — 하늘의 시험",
-     "lore": "이름이 알려진 강림도령에게 「적색포 영혼 결박(즉사)」를 온전히 펼칠 시험이 찾아온다. 진도 씻김굿 당골판·성산일출봉을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 강림도령에게 「적색포 영혼 결박(즉사)」를 온전히 펼칠 시험이 찾아온다. 완도 보길도 세연정 윤선도 원림·성산일출봉을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_17_TOWN_SEOGWIPO",
      "requires": {
@@ -2963,12 +2963,12 @@
      },
      "route": [
       "ND_17_TOWN_SEOGWIPO",
-      "ND_08_SHRINE_JINDOSSITGIMGUTDANGGOLPAN",
+      "ND_08_SHRINE_WANDOBOGILDOSEYEONJEONGYUNSEONDOWONRIM",
       "ND_17_SCENIC_SEONGSANILCHULBONG"
      ],
      "steps": [
       "1) 서귀포: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 진도 씻김굿 당골판: 제를 올려 신령의 뜻을 묻는다",
+      "2) 완도 보길도 세연정 윤선도 원림: 제를 올려 신령의 뜻을 묻는다",
       "3) 성산일출봉: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
@@ -2987,14 +2987,14 @@
      },
      "route": [
       "ND_17_TOWN_SEOGWIPO",
-      "ND_08_SHRINE_JINDOSSITGIMGUTDANGGOLPAN",
-      "ND_07_TEMPLE_GEUMSANSA",
+      "ND_08_SHRINE_WANDOBOGILDOSEYEONJEONGYUNSEONDOWONRIM",
+      "ND_07_SCENIC_JEONJUGYEONGGIJEONTAEJOISEONGGYEEOJIN",
       "ND_17_SHRINE_JEJUCHILMEORIDANG"
      ],
      "steps": [
       "1) 서귀포: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 진도 씻김굿 당골판: 제를 올려 신령의 뜻을 묻는다",
-      "3) 금산사: 주지와 법담을 나누며 수행한다",
+      "2) 완도 보길도 세연정 윤선도 원림: 제를 올려 신령의 뜻을 묻는다",
+      "3) 전주 경기전 태조 이성계 어진: 절경 앞에서 마음을 비우고 수련한다",
       "4) 제주 칠머리당: 제를 올려 신령의 뜻을 묻는다"
      ]
     }
@@ -3130,13 +3130,13 @@
      "route": [
       "ND_02_CITY_HANYANGGYEONGJO",
       "ND_04_WRECK_SAMCHEOKANTAEKSEONCHIMMOLJI",
-      "ND_03_TOWN_TONGCHEON",
+      "ND_03_TOWN_TONGCHEONHYEONCHONGSEOKJEONG",
       "ND_08_WRECK_MYEONGRYANGULDOLMOK"
      ],
      "steps": [
       "1) 한양 경조: 수영(水營)과 포구를 살피며 뱃사람들을 모은다",
       "2) 삼척 안택선 침몰지: 가라앉은 배를 조사해 옛 해전의 흔적을 찾는다",
-      "3) 통천: 포구에서 배를 손보며 물길과 물때를 묻는다",
+      "3) 통천현 총석정: 포구에서 배를 손보며 물길과 물때를 묻는다",
       "4) 명량 울돌목: 가라앉은 배를 조사해 옛 해전의 흔적을 찾는다"
      ]
     }
@@ -3217,8 +3217,8 @@
     {
      "id": "promo_cp_samyeong_5",
      "tier": 5,
-     "name": "[사명대사] 5등급 승급 — 부석사에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 부석사에 이르러야 사명대사의 서사가 완성된다. 임진왜란 승병을 총지휘하고 일본에 건너가 포로 3천 명을 쇄환한 호국성승.",
+     "name": "[사명대사] 5등급 승급 — 경주 분황사 모전석탑에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 경주 분황사 모전석탑에 이르러야 사명대사의 서사가 완성된다. 임진왜란 승병을 총지휘하고 일본에 건너가 포로 3천 명을 쇄환한 호국성승.",
      "min_rank": 5,
      "trigger_node": "ND_10_TEMPLE_HAEINSA",
      "requires": {
@@ -3231,13 +3231,13 @@
       "ND_10_TEMPLE_HAEINSA",
       "ND_07_FORT_JEOKSANGSANSEONG",
       "ND_06_BEACON_GONGJUWOLSEONGSANBONGSU",
-      "ND_09_TEMPLE_BUSEOKSA"
+      "ND_09_STUPA_GYEONGJUBUNHWANGSAMOJEONSEOKTAP"
      ],
      "steps": [
       "1) 해인사: 주지와 법담을 나누며 수행한다",
       "2) 적상산성: 진법을 익히며 옛 전장을 되짚는다",
       "3) 공주 월성산 봉수: 봉수를 올려 방어선을 점검한다",
-      "4) 부석사: 주지와 법담을 나누며 수행한다"
+      "4) 경주 분황사 모전석탑: 탑돌이를 하며 발원한다"
      ]
     }
    ]
@@ -3277,7 +3277,7 @@
     "route": [
      "ND_01_CITY_GANGHWAYUSUBU",
      "ND_02_CITY_HANYANGGYEONGJO",
-     "ND_02_CITY_SUWONHWASEONG"
+     "ND_02_TOMB_HWASEONGYUNGREUNGGWAGEONREUNG"
     ],
     "condition": "해골물 일체유심조 깨달음 퀴즈 통과 및 무애가 호리병 전달"
    },
@@ -3295,7 +3295,7 @@
      "name": "[원효대사] 4등급 승급 — 「일체유심조 무애박(無碍拍)」 재현",
      "lore": "이름이 알려진 원효대사에게 「일체유심조 무애박(無碍拍)」을 온전히 펼칠 시험이 찾아온다. 철원도호부·울진 백암온천을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
-     "trigger_node": "ND_02_CITY_SUWONHWASEONG",
+     "trigger_node": "ND_02_TOMB_HWASEONGYUNGREUNGGWAGEONREUNG",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -3303,12 +3303,12 @@
       }
      },
      "route": [
-      "ND_02_CITY_SUWONHWASEONG",
+      "ND_02_TOMB_HWASEONGYUNGREUNGGWAGEONREUNG",
       "ND_03_CITY_CHEOLWONDOHOBU",
       "ND_04_SPRING_ULJINBAEKAMONCHEON"
      ],
      "steps": [
-      "1) 수원화성: 약방·혜민서에서 병자를 돌본다",
+      "1) 화성 융릉과 건릉: 능역을 참배하고 비문을 탁본한다",
       "2) 철원도호부: 약방·혜민서에서 병자를 돌본다",
       "3) 울진 백암온천: 온천에서 병든 이들을 요양시킨다"
      ]
@@ -3319,7 +3319,7 @@
      "name": "[원효대사] 5등급 승급 — 경주 석굴암에 새긴 이름",
      "lore": "팔도를 두루 거쳐 경주 석굴암에 이르러야 원효대사의 서사가 완성된다. 분황사에서 《대승기신론소》를 짓고 무애가를 부르며 민중 속으로 들어간 대성승.",
      "min_rank": 5,
-     "trigger_node": "ND_02_CITY_SUWONHWASEONG",
+     "trigger_node": "ND_02_TOMB_HWASEONGYUNGREUNGGWAGEONREUNG",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -3327,13 +3327,13 @@
       }
      },
      "route": [
-      "ND_02_CITY_SUWONHWASEONG",
+      "ND_02_TOMB_HWASEONGYUNGREUNGGWAGEONREUNG",
       "ND_03_CITY_CHUNCHEONBU",
       "ND_04_CITY_GANGREUNGDAEDOHOBU",
       "ND_09_STUPA_GYEONGJUSEOKGULAM"
      ],
      "steps": [
-      "1) 수원화성: 약방·혜민서에서 병자를 돌본다",
+      "1) 화성 융릉과 건릉: 능역을 참배하고 비문을 탁본한다",
       "2) 춘천부: 약방·혜민서에서 병자를 돌본다",
       "3) 강릉대도호부: 약방·혜민서에서 병자를 돌본다",
       "4) 경주 석굴암: 탑돌이를 하며 발원한다"
@@ -3392,7 +3392,7 @@
      "id": "promo_cp_c31_4",
      "tier": 4,
      "name": "[의상대사] 4등급 승급 — 「화엄일승법계진(法界陣)」 재현",
-     "lore": "이름이 알려진 의상대사에게 「화엄일승법계진(法界陣)」을 온전히 펼칠 시험이 찾아온다. 해인사·익산 미륵사지 석탑을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 의상대사에게 「화엄일승법계진(法界陣)」을 온전히 펼칠 시험이 찾아온다. 해인사·구례 화엄사 각황전 앞 석등을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_09_TEMPLE_BUSEOKSA",
      "requires": {
@@ -3404,19 +3404,19 @@
      "route": [
       "ND_09_TEMPLE_BUSEOKSA",
       "ND_10_TEMPLE_HAEINSA",
-      "ND_07_STUPA_IKSANMIREUKSAJISEOKTAP"
+      "ND_07_STUPA_GURYEHWAEOMSAGAKHWANGJEONAPSEOKDEUNG"
      ],
      "steps": [
       "1) 부석사: 주지와 법담을 나누며 수행한다",
       "2) 해인사: 주지와 법담을 나누며 수행한다",
-      "3) 익산 미륵사지 석탑: 탑돌이를 하며 발원한다"
+      "3) 구례 화엄사 각황전 앞 석등: 탑돌이를 하며 발원한다"
      ]
     },
     {
      "id": "promo_cp_c31_5",
      "tier": 5,
-     "name": "[의상대사] 5등급 승급 — 송광사에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 송광사에 이르러야 의상대사의 서사가 완성된다. 해동 화엄종의 개조.",
+     "name": "[의상대사] 5등급 승급 — 구례 화엄사 각황전 앞 석등에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 구례 화엄사 각황전 앞 석등에 이르러야 의상대사의 서사가 완성된다. 해동 화엄종의 개조.",
      "min_rank": 5,
      "trigger_node": "ND_09_TEMPLE_BUSEOKSA",
      "requires": {
@@ -3429,13 +3429,13 @@
       "ND_09_TEMPLE_BUSEOKSA",
       "ND_05_TEMPLE_SOKRISANBEOPJUSA",
       "ND_04_TEMPLE_WOLJEONGSA",
-      "ND_08_TEMPLE_SONGGWANGSA"
+      "ND_07_STUPA_GURYEHWAEOMSAGAKHWANGJEONAPSEOKDEUNG"
      ],
      "steps": [
       "1) 부석사: 주지와 법담을 나누며 수행한다",
       "2) 속리산 법주사: 주지와 법담을 나누며 수행한다",
       "3) 월정사: 주지와 법담을 나누며 수행한다",
-      "4) 송광사: 주지와 법담을 나누며 수행한다"
+      "4) 구례 화엄사 각황전 앞 석등: 탑돌이를 하며 발원한다"
      ]
     }
    ]
@@ -3515,8 +3515,8 @@
     {
      "id": "promo_cp_seosan_5",
      "tier": 5,
-     "name": "[서산대사(휴정)] 5등급 승급 — 송광사에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 송광사에 이르러야 서산대사(휴정)의 서사가 완성된다. 임진왜란 당시 묘향산에서 73세의 나이로 팔도 승병을 총궐기시킨 대종사.",
+     "name": "[서산대사(휴정)] 5등급 승급 — 남양 융건릉 정조 원찰 용주사 동종에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 남양 융건릉 정조 원찰 용주사 동종에 이르러야 서산대사(휴정)의 서사가 완성된다. 임진왜란 당시 묘향산에서 73세의 나이로 팔도 승병을 총궐기시킨 대종사.",
      "min_rank": 5,
      "trigger_node": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
      "requires": {
@@ -3529,13 +3529,13 @@
       "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
       "ND_15_BEACON_HAMHEUNGBONGSU",
       "ND_14_BEACON_UIJUBONGSU",
-      "ND_08_TEMPLE_SONGGWANGSA"
+      "ND_02_STUPA_NAMYANGYUNGGEONREUNGJEONGJOWONCHALYONGJUSADONGJONG"
      ],
      "steps": [
       "1) 묘향산 보현사: 주지와 법담을 나누며 수행한다",
       "2) 함흥 봉수: 봉수를 올려 방어선을 점검한다",
       "3) 의주 봉수: 봉수를 올려 방어선을 점검한다",
-      "4) 송광사: 주지와 법담을 나누며 수행한다"
+      "4) 남양 융건릉 정조 원찰 용주사 동종: 탑돌이를 하며 발원한다"
      ]
     }
    ]
@@ -3591,7 +3591,7 @@
      "id": "promo_cp_c33_4",
      "tier": 4,
      "name": "[보조국사 지눌] 4등급 승급 — 「정혜쌍수(定慧雙修) 돈오」 재현",
-     "lore": "이름이 알려진 보조국사 지눌에게 「정혜쌍수(定慧雙修) 돈오」를 온전히 펼칠 시험이 찾아온다. 쌍계사·성산일출봉을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 보조국사 지눌에게 「정혜쌍수(定慧雙修) 돈오」를 온전히 펼칠 시험이 찾아온다. 남해 금산 보리암·한라산 백록담 마애명문을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_08_TEMPLE_SONGGWANGSA",
      "requires": {
@@ -3602,20 +3602,20 @@
      },
      "route": [
       "ND_08_TEMPLE_SONGGWANGSA",
-      "ND_10_TEMPLE_SSANGGYESA",
-      "ND_17_SCENIC_SEONGSANILCHULBONG"
+      "ND_10_TEMPLE_NAMHAEGEUMSANBORIAM",
+      "ND_17_STUPA_HANRASANBAEKROKDAMMAAEMYEONGMUN"
      ],
      "steps": [
       "1) 송광사: 주지와 법담을 나누며 수행한다",
-      "2) 쌍계사: 주지와 법담을 나누며 수행한다",
-      "3) 성산일출봉: 절경 앞에서 마음을 비우고 수련한다"
+      "2) 남해 금산 보리암: 주지와 법담을 나누며 수행한다",
+      "3) 한라산 백록담 마애명문: 탑돌이를 하며 발원한다"
      ]
     },
     {
      "id": "promo_cp_c33_5",
      "tier": 5,
-     "name": "[보조국사 지눌] 5등급 승급 — 경주 석굴암에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 경주 석굴암에 이르러야 보조국사 지눌의 서사가 완성된다. 정혜쌍수와 돈오점수를 제창하며 조계종을 중흥시킨 명승.",
+     "name": "[보조국사 지눌] 5등급 승급 — 서산 용현리 마애여래삼존상에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 서산 용현리 마애여래삼존상에 이르러야 보조국사 지눌의 서사가 완성된다. 정혜쌍수와 돈오점수를 제창하며 조계종을 중흥시킨 명승.",
      "min_rank": 5,
      "trigger_node": "ND_08_TEMPLE_SONGGWANGSA",
      "requires": {
@@ -3626,15 +3626,15 @@
      },
      "route": [
       "ND_08_TEMPLE_SONGGWANGSA",
-      "ND_10_TEMPLE_HAEINSA",
+      "ND_10_TEMPLE_GEUMJEONGSANBEOMEOSA",
       "ND_04_TEMPLE_SAMCHEOKSINHEUNGSA",
-      "ND_09_STUPA_GYEONGJUSEOKGULAM"
+      "ND_06_SCENIC_SEOSANYONGHYEONRIMAAEYEORAESAMJONSANG"
      ],
      "steps": [
       "1) 송광사: 주지와 법담을 나누며 수행한다",
-      "2) 해인사: 주지와 법담을 나누며 수행한다",
+      "2) 금정산 범어사: 주지와 법담을 나누며 수행한다",
       "3) 삼척 신흥사: 주지와 법담을 나누며 수행한다",
-      "4) 경주 석굴암: 탑돌이를 하며 발원한다"
+      "4) 서산 용현리 마애여래삼존상: 절경 앞에서 마음을 비우고 수련한다"
      ]
     }
    ]
@@ -3814,7 +3814,7 @@
      "id": "promo_cp_jeonuchi_4",
      "tier": 4,
      "name": "[전우치] 4등급 승급 — 위기와 반전",
-     "lore": "이름이 알려진 전우치에게 「족자 속 호리병 환술」을 온전히 펼칠 시험이 찾아온다. 성균관 명륜당·해주 소현서원을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 전우치에게 「족자 속 호리병 환술」을 온전히 펼칠 시험이 찾아온다. 한양 흥인지문(동대문)·해주 소현서원을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_01_CITY_GAESEONGBU",
      "requires": {
@@ -3825,12 +3825,12 @@
      },
      "route": [
       "ND_01_CITY_GAESEONGBU",
-      "ND_02_SEOWON_SEONGGYUNGWANMYEONGRYUNDANG",
+      "ND_02_SCENIC_HANYANGHEUNGINJIMUNDONGDAEMUN",
       "ND_12_SEOWON_HAEJUSOHYEONSEOWON"
      ],
      "steps": [
       "1) 개성부: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 성균관 명륜당: 서원 선비들과 시서화를 겨룬다",
+      "2) 한양 흥인지문(동대문): 절경을 화폭과 시문에 담는다",
       "3) 해주 소현서원: 서원 선비들과 시서화를 겨룬다"
      ]
     },
@@ -3850,13 +3850,13 @@
      "route": [
       "ND_01_CITY_GAESEONGBU",
       "ND_12_SCENIC_JANGYEONMONGGEUMPO",
-      "ND_13_SCENIC_EULMILDAE",
+      "ND_13_SCENIC_ANJUEOSASUNRYEOKGIGOMUNSEO",
       "ND_01_RUIN_GAESEONGMANWOLDAEYETTEO"
      ],
      "steps": [
       "1) 개성부: 관아와 장터에서 옛 인연을 수소문한다",
       "2) 장연 몽금포: 절경을 화폭과 시문에 담는다",
-      "3) 을밀대: 절경을 화폭과 시문에 담는다",
+      "3) 안주 어사 순력기 고문서: 절경을 화폭과 시문에 담는다",
       "4) 개성 만월대 옛터: 옛터의 자취를 그림으로 남긴다"
      ]
     }
@@ -3914,7 +3914,7 @@
      "id": "promo_cp_honggildong_4",
      "tier": 4,
      "name": "[홍길동] 4등급 승급 — 위기와 반전",
-     "lore": "이름이 알려진 홍길동에게 「팔대 분신 축지참(八大分身)」을 온전히 펼칠 시험이 찾아온다. 지리산 천왕봉·전주 봉수를 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 홍길동에게 「팔대 분신 축지참(八大分身)」을 온전히 펼칠 시험이 찾아온다. 지리산 천왕봉·익산 향교 대성전 목판을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
      "requires": {
@@ -3926,19 +3926,19 @@
      "route": [
       "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
       "ND_10_SCENIC_JIRISANCHEONWANGBONG",
-      "ND_07_BEACON_JEONJUBONGSU"
+      "ND_07_SCENIC_IKSANHYANGGYODAESEONGJEONMOKPAN"
      ],
      "steps": [
       "1) 장성 백양사: 주지와 법담을 나누며 수행한다",
       "2) 지리산 천왕봉: 절경 앞에서 마음을 비우고 수련한다",
-      "3) 전주 봉수: 봉수를 올려 먼 곳과 신호를 주고받는다"
+      "3) 익산 향교 대성전 목판: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_honggildong_5",
      "tier": 5,
-     "name": "[홍길동] 5등급 승급 — 대단원 — 백두산 천지",
-     "lore": "팔도를 두루 거쳐 백두산 천지에 이르러야 홍길동의 서사가 완성된다. 허균의 《홍길동전》 주인공.",
+     "name": "[홍길동] 5등급 승급 — 대단원 — 영일 중성리 신라비",
+     "lore": "팔도를 두루 거쳐 영일 중성리 신라비에 이르러야 홍길동의 서사가 완성된다. 허균의 《홍길동전》 주인공.",
      "min_rank": 5,
      "trigger_node": "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
      "requires": {
@@ -3949,15 +3949,15 @@
      },
      "route": [
       "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
-      "ND_07_TEMPLE_GEUMSANSA",
-      "ND_05_SPRING_SUANBOONCHEON",
-      "ND_16_SCENIC_BAEKDUSANCHEONJI"
+      "ND_07_SCENIC_JEONJUSANSINGAKMAAECHILSEONGDO",
+      "ND_05_SCENIC_CHEONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+      "ND_09_SCENIC_YEONGILJUNGSEONGRISINRABI"
      ],
      "steps": [
       "1) 장성 백양사: 주지와 법담을 나누며 수행한다",
-      "2) 금산사: 주지와 법담을 나누며 수행한다",
-      "3) 수안보온천: 온천에서 몸과 기운을 다스린다",
-      "4) 백두산 천지: 절경 앞에서 마음을 비우고 수련한다"
+      "2) 전주 산신각 마애칠성도: 절경 앞에서 마음을 비우고 수련한다",
+      "3) 청주 도요지 백자 청화항아리: 절경 앞에서 마음을 비우고 수련한다",
+      "4) 영일 중성리 신라비: 절경 앞에서 마음을 비우고 수련한다"
      ]
     }
    ]
@@ -3996,7 +3996,7 @@
     "min_rank": 2,
     "route": [
      "ND_10_CITY_JINJUMOK",
-     "ND_10_CITY_DONGRAEHYEON"
+     "ND_10_TOMB_ULSANDAEGOKRIBANGUDAEAMGAKHWA"
     ],
     "condition": "동해 용왕의 아들 맞이 굿 및 역병신을 쫓는 처용가무 헌무 완수"
    },
@@ -4011,10 +4011,10 @@
     {
      "id": "promo_cp_c37_3",
      "tier": 3,
-     "name": "[처용(處容)] 3등급 승급 — 무주 제의(祭儀)",
-     "lore": "처용(處容)의 사연이 무주로 이어진다. 처용 가면과 홍포에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[처용(處容)] 3등급 승급 — 전주 산신각 마애칠성도 제의(祭儀)",
+     "lore": "처용(處容)의 사연이 전주 산신각 마애칠성도로 이어진다. 처용 가면과 홍포에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
-     "trigger_node": "ND_10_CITY_DONGRAEHYEON",
+     "trigger_node": "ND_10_TOMB_ULSANDAEGOKRIBANGUDAEAMGAKHWA",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -4022,23 +4022,23 @@
       }
      },
      "route": [
-      "ND_10_CITY_DONGRAEHYEON",
-      "ND_07_TOWN_MUJU",
-      "ND_10_SCENIC_JIRISANCHEONWANGBONG"
+      "ND_10_TOMB_ULSANDAEGOKRIBANGUDAEAMGAKHWA",
+      "ND_07_SCENIC_JEONJUSANSINGAKMAAECHILSEONGDO",
+      "ND_10_SCENIC_SEONGJUHANGAEMAEULBUKBIGOTAEK"
      ],
      "steps": [
-      "1) 동래현: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 무주: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "3) 지리산 천왕봉: 절경 앞에서 마음을 비우고 수련한다"
+      "1) 울산 대곡리 반구대 암각화: 능역을 참배하고 비문을 탁본한다",
+      "2) 전주 산신각 마애칠성도: 절경 앞에서 마음을 비우고 수련한다",
+      "3) 성주 한개마을 북비고택: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_c37_4",
      "tier": 4,
      "name": "[처용(處容)] 4등급 승급 — 하늘의 시험",
-     "lore": "이름이 알려진 처용(處容)에게 「처용 벽사가무(處容舞)」을 온전히 펼칠 시험이 찾아온다. 전주 경기전·영월 장릉을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 처용(處容)에게 「처용 벽사가무(處容舞)」을 온전히 펼칠 시험이 찾아온다. 전주 경기전 태조 이성계 어진·울진 산신각 마애칠성도를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
-     "trigger_node": "ND_10_CITY_DONGRAEHYEON",
+     "trigger_node": "ND_10_TOMB_ULSANDAEGOKRIBANGUDAEAMGAKHWA",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -4046,14 +4046,14 @@
       }
      },
      "route": [
-      "ND_10_CITY_DONGRAEHYEON",
-      "ND_07_SEOWON_JEONJUGYEONGGIJEON",
-      "ND_04_TOMB_YEONGWOLJANGREUNG"
+      "ND_10_TOMB_ULSANDAEGOKRIBANGUDAEAMGAKHWA",
+      "ND_07_SCENIC_JEONJUGYEONGGIJEONTAEJOISEONGGYEEOJIN",
+      "ND_04_SCENIC_ULJINSANSINGAKMAAECHILSEONGDO"
      ],
      "steps": [
-      "1) 동래현: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 전주 경기전: 강학에 참석해 뜻을 가다듬는다",
-      "3) 영월 장릉: 능역을 참배하고 비문을 탁본한다"
+      "1) 울산 대곡리 반구대 암각화: 능역을 참배하고 비문을 탁본한다",
+      "2) 전주 경기전 태조 이성계 어진: 절경 앞에서 마음을 비우고 수련한다",
+      "3) 울진 산신각 마애칠성도: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
@@ -4062,7 +4062,7 @@
      "name": "[처용(處容)] 5등급 승급 — 경주 대릉원에서의 현현",
      "lore": "팔도를 두루 거쳐 경주 대릉원에 이르러야 처용(處容)의 서사가 완성된다. 동해 용왕의 아들로 처용가를 불러 아내를 범하려던 역신(疫神)을 스스로 꿇어 엎드리게 만든 벽사 무속의 수호신.",
      "min_rank": 5,
-     "trigger_node": "ND_10_CITY_DONGRAEHYEON",
+     "trigger_node": "ND_10_TOMB_ULSANDAEGOKRIBANGUDAEAMGAKHWA",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -4070,15 +4070,15 @@
       }
      },
      "route": [
-      "ND_10_CITY_DONGRAEHYEON",
-      "ND_04_TOMB_YEONGWOLJANGREUNG",
-      "ND_02_TOMB_HEONREUNG",
+      "ND_10_TOMB_ULSANDAEGOKRIBANGUDAEAMGAKHWA",
+      "ND_04_SHRINE_GANGREUNGOJUKHEONSINSAIMDANGCHOCHUNGDOBYEONGPUNG",
+      "ND_02_SHRINE_DANGJINSINRISEONGJIDABEULRWIJUGYOYUPUM",
       "ND_09_TOMB_GYEONGJUDAEREUNGWON"
      ],
      "steps": [
-      "1) 동래현: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 영월 장릉: 능역을 참배하고 비문을 탁본한다",
-      "3) 헌릉: 능역을 참배하고 비문을 탁본한다",
+      "1) 울산 대곡리 반구대 암각화: 능역을 참배하고 비문을 탁본한다",
+      "2) 강릉 오죽헌 신사임당 초충도 병풍: 제를 올려 신령의 뜻을 묻는다",
+      "3) 당진 신리성지 다블뤼 주교 유품: 제를 올려 신령의 뜻을 묻는다",
       "4) 경주 대릉원: 능역을 참배하고 비문을 탁본한다"
      ]
     }
@@ -4143,11 +4143,11 @@
      },
      "route": [
       "ND_05_CITY_CHUNGJUMOK",
-      "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO"
+      "ND_05_RUIN_DANYANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
      ],
      "steps": [
       "1) 충주목: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 단양 수벌 고려가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
+      "2) 단양 고려청자 가마터 출토 명품완: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
      ]
     },
     {
@@ -4213,14 +4213,14 @@
      },
      "route": [
       "ND_05_CITY_CHUNGJUMOK",
-      "ND_06_TOWN_ASAN",
-      "ND_02_RUIN_GWANGJUBUNWONBAEKJAGAMATEO",
+      "ND_06_RUIN_BUYEONEUNGSANRIBAEKJEGEUMDONGDAEHYANGRO",
+      "ND_02_RUIN_SUWONHWASEONGSEOJANGDAESEONGGWAK",
       "ND_15_RUIN_MAUNRYEONGJINHEUNGWANGSUNSUBI"
      ],
      "steps": [
       "1) 충주목: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 아산: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
-      "3) 광주 분원 백자 가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "2) 부여 능산리 백제 금동대향로: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "3) 수원 화성 서장대 성곽: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
       "4) 마운령 진흥왕 순수비: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
      ]
     }
@@ -4308,12 +4308,12 @@
      "route": [
       "ND_02_CITY_SUWONHWASEONG",
       "ND_01_TOWN_PAJUMOK",
-      "ND_02_STATION_YEONGHWAYEOK"
+      "ND_02_STATION_NOWONYEOKUIJEONGBUPOCHEONYEOKCHAM"
      ],
      "steps": [
       "1) 수원화성: 관아와 장터에서 옛 인연을 수소문한다",
       "2) 파주목: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "3) 영화역: 역참에서 팔도 소식을 모은다"
+      "3) 노원역(의정부-포천역참): 역참에서 팔도 소식을 모은다"
      ]
     },
     {
@@ -4399,7 +4399,7 @@
    "recruit": {
     "min_rank": 1,
     "route": [
-     "ND_03_CITY_CHUNCHEONBU",
+     "ND_03_CITY_CHEOLWONDOHOBUCHISO",
      "ND_03_TOWN_INJE"
     ],
     "condition": "야생 더덕과 당귀 10뿌리 채취 납품"
@@ -4427,11 +4427,11 @@
      },
      "route": [
       "ND_03_TOWN_INJE",
-      "ND_03_CITY_CHUNCHEONBU"
+      "ND_03_CITY_CHEOLWONDOHOBUCHISO"
      ],
      "steps": [
       "1) 인제: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 춘천부: 약방·혜민서에서 병자를 돌본다"
+      "2) 철원도호부 치소: 약방·혜민서에서 병자를 돌본다"
      ]
     },
     {
@@ -4450,12 +4450,12 @@
      "route": [
       "ND_03_TOWN_INJE",
       "ND_02_CITY_GWANGJUYUSUBU",
-      "ND_03_TEMPLE_BAEKDAMSA"
+      "ND_03_SPRING_CHEOKSANONCHEONSOKCHOSOWONJEONG"
      ],
      "steps": [
       "1) 인제: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "2) 광주유수부: 약방·혜민서에서 병자를 돌본다",
-      "3) 백담사: 절 약사전에서 약초를 달이며 수행한다"
+      "3) 척산 온천(속초 소원정): 온천에서 병든 이들을 요양시킨다"
      ]
     },
     {
@@ -4497,13 +4497,13 @@
      },
      "route": [
       "ND_03_TOWN_INJE",
-      "ND_11_CITY_BONGSANGUN",
+      "ND_11_CITY_YEONANDOHOBUCHISO",
       "ND_13_CITY_ANJUMOK",
       "ND_10_TEMPLE_TONGDOSA"
      ],
      "steps": [
       "1) 인제: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 봉산군: 약방·혜민서에서 병자를 돌본다",
+      "2) 연안도호부 치소: 약방·혜민서에서 병자를 돌본다",
       "3) 안주목: 약방·혜민서에서 병자를 돌본다",
       "4) 통도사: 절 약사전에서 약초를 달이며 수행한다"
      ]
@@ -4579,8 +4579,8 @@
     {
      "id": "promo_cp_c41_3",
      "tier": 3,
-     "name": "[옹기장이] 3등급 승급 — 천안 장인의 비법",
-     "lore": "옹기장이의 사연이 천안으로 이어진다. 통기 옹기 항아리에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[옹기장이] 3등급 승급 — 부여 능산리 백제 금동대향로 장인의 비법",
+     "lore": "옹기장이의 사연이 부여 능산리 백제 금동대향로로 이어진다. 통기 옹기 항아리에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_02_CITY_GWANGJUYUSUBU",
      "requires": {
@@ -4591,20 +4591,20 @@
      },
      "route": [
       "ND_02_CITY_GWANGJUYUSUBU",
-      "ND_06_TOWN_CHEONAN",
-      "ND_02_TOWN_ICHEON"
+      "ND_06_RUIN_BUYEONEUNGSANRIBAEKJEGEUMDONGDAEHYANGRO",
+      "ND_02_TOWN_JINWIHYEONCHISOPYEONGTAEK"
      ],
      "steps": [
       "1) 광주유수부: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 천안: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
-      "3) 이천: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
+      "2) 부여 능산리 백제 금동대향로: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "3) 진위현 치소(평택): 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
      ]
     },
     {
      "id": "promo_cp_c41_4",
      "tier": 4,
      "name": "[옹기장이] 4등급 승급 — 팔도 명인 겨루기",
-     "lore": "이름이 알려진 옹기장이에게 「옹기 물벼락」을 온전히 펼칠 시험이 찾아온다. 태안·인제를 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 옹기장이에게 「옹기 물벼락」을 온전히 펼칠 시험이 찾아온다. 부여 능산리 백제 금동대향로·평강현 치소를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_02_CITY_GWANGJUYUSUBU",
      "requires": {
@@ -4615,13 +4615,13 @@
      },
      "route": [
       "ND_02_CITY_GWANGJUYUSUBU",
-      "ND_06_TOWN_TAEAN",
-      "ND_03_TOWN_INJE"
+      "ND_06_RUIN_BUYEONEUNGSANRIBAEKJEGEUMDONGDAEHYANGRO",
+      "ND_03_TOWN_PYEONGGANGHYEONCHISO"
      ],
      "steps": [
       "1) 광주유수부: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 태안: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
-      "3) 인제: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
+      "2) 부여 능산리 백제 금동대향로: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "3) 평강현 치소: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
      ]
     },
     {
@@ -4640,13 +4640,13 @@
      "route": [
       "ND_02_CITY_GWANGJUYUSUBU",
       "ND_04_TOWN_JEONGSEON",
-      "ND_03_TOWN_INJE",
+      "ND_03_RUIN_TONGCHEONDOYOJIBAEKJACHEONGHWAHANGARI",
       "ND_15_RUIN_MAUNRYEONGJINHEUNGWANGSUNSUBI"
      ],
      "steps": [
       "1) 광주유수부: 관아 공방의 까다로운 주문을 받아 낸다",
       "2) 정선: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
-      "3) 인제: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
+      "3) 통천 도요지 백자 청화항아리: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
       "4) 마운령 진흥왕 순수비: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
      ]
     }
@@ -4747,7 +4747,7 @@
      "id": "promo_cp_bobusang_4",
      "tier": 4,
      "name": "[보부상(부상)] 4등급 승급 — 팔도 명인 겨루기",
-     "lore": "이름이 알려진 보부상(부상)에게 「봇짐 털기 휘두르기」를 온전히 펼칠 시험이 찾아온다. 해미·별전역을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 보부상(부상)에게 「봇짐 털기 휘두르기」를 온전히 펼칠 시험이 찾아온다. 공주목 회덕현 치소(대전)·영산포 조창 역참을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
      "requires": {
@@ -4758,13 +4758,13 @@
      },
      "route": [
       "ND_07_CITY_JEONJUJEONRAGAMYEONG",
-      "ND_06_TOWN_HAEMI",
-      "ND_08_STATION_BYEOLJEONYEOK"
+      "ND_06_TOWN_GONGJUMOKHOEDEOKHYEONCHISODAEJEON",
+      "ND_08_STATION_YEONGSANPOJOCHANGYEOKCHAM"
      ],
      "steps": [
       "1) 전주 전라감영: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 해미: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "3) 별전역: 역참에서 팔도 소식을 모은다"
+      "2) 공주목 회덕현 치소(대전): 마을 사람들의 일을 거들며 솜씨를 보인다",
+      "3) 영산포 조창 역참: 역참에서 팔도 소식을 모은다"
      ]
     },
     {
@@ -4854,11 +4854,11 @@
      },
      "route": [
       "ND_09_TOWN_MUNGYEONG",
-      "ND_09_TOWN_CHEONGSONG"
+      "ND_09_TOWN_YEONGJUPUNGGIDOHOBU"
      ],
      "steps": [
       "1) 문경: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 청송: 마을 사람들의 일을 거들며 솜씨를 보인다"
+      "2) 영주 풍기도호부: 마을 사람들의 일을 거들며 솜씨를 보인다"
      ]
     },
     {
@@ -4877,12 +4877,12 @@
      "route": [
       "ND_09_TOWN_MUNGYEONG",
       "ND_04_TOWN_SAMCHEOK",
-      "ND_09_STATION_YUGOKYEOK"
+      "ND_09_STATION_SANGJUNAKDONGYEOKCHAM"
      ],
      "steps": [
       "1) 문경: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "2) 삼척: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "3) 유곡역: 역참에서 팔도 소식을 모은다"
+      "3) 상주 낙동역참: 역참에서 팔도 소식을 모은다"
      ]
     },
     {
@@ -5138,18 +5138,18 @@
      },
      "route": [
       "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
-      "ND_06_TOWN_HAEMI"
+      "ND_06_RUIN_BUYEONEUNGSANRIBAEKJEGEUMDONGDAEHYANGRO"
      ],
      "steps": [
       "1) 공주 충청감영: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 해미: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
+      "2) 부여 능산리 백제 금동대향로: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
      ]
     },
     {
      "id": "promo_cp_c45_3",
      "tier": 3,
-     "name": "[짚신장이] 3등급 승급 — 단양 수벌 고려가마터 장인의 비법",
-     "lore": "짚신장이의 사연이 단양 수벌 고려가마터로 이어진다. 유혜골과 신칼에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[짚신장이] 3등급 승급 — 단양 고려청자 가마터 출토 명품완 장인의 비법",
+     "lore": "짚신장이의 사연이 단양 고려청자 가마터 출토 명품완으로 이어진다. 유혜골과 신칼에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
      "requires": {
@@ -5160,13 +5160,13 @@
      },
      "route": [
       "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
-      "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO",
-      "ND_06_TOWN_BUYEO"
+      "ND_05_RUIN_DANYANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+      "ND_06_TOWN_GONGJUMOKHOEDEOKHYEONCHISODAEJEON"
      ],
      "steps": [
       "1) 공주 충청감영: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 단양 수벌 고려가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
-      "3) 부여: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
+      "2) 단양 고려청자 가마터 출토 명품완: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "3) 공주목 회덕현 치소(대전): 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
      ]
     },
     {
@@ -5196,8 +5196,8 @@
     {
      "id": "promo_cp_c45_5",
      "tier": 5,
-     "name": "[짚신장이] 5등급 승급 — 명장(名匠)의 칭호 — 백두산 정계비 터",
-     "lore": "팔도를 두루 거쳐 백두산 정계비 터에 이르러야 짚신장이의 서사가 완성된다. 삼과 볏짚, 무명을 질기게 꼬아 비바람에도 끄떡없는 미투리를 짓는 장인.",
+     "name": "[짚신장이] 5등급 승급 — 명장(名匠)의 칭호 — 강진 청자 상감운학문 매병",
+     "lore": "팔도를 두루 거쳐 강진 청자 상감운학문 매병에 이르러야 짚신장이의 서사가 완성된다. 삼과 볏짚, 무명을 질기게 꼬아 비바람에도 끄떡없는 미투리를 짓는 장인.",
      "min_rank": 5,
      "trigger_node": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
      "requires": {
@@ -5209,14 +5209,14 @@
      "route": [
       "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
       "ND_07_RUIN_BUANYUCHEONRICHEONGJAGAMATEO",
-      "ND_09_TOWN_CHEONGSONG",
-      "ND_16_RUIN_BAEKDUSANJEONGGYEBITEO"
+      "ND_09_RUIN_HOEDEOKDONGCHUNDANGSONGJUNGILJONGTAEK",
+      "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG"
      ],
      "steps": [
       "1) 공주 충청감영: 관아 공방의 까다로운 주문을 받아 낸다",
       "2) 부안 유천리 청자 가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
-      "3) 청송: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
-      "4) 백두산 정계비 터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
+      "3) 회덕 동춘당 송준길 종택: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "4) 강진 청자 상감운학문 매병: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
      ]
     }
    ]
@@ -5280,11 +5280,11 @@
      },
      "route": [
       "ND_01_TOWN_PAJUMOK",
-      "ND_01_TOWN_JANGDAN"
+      "ND_01_TOWN_YEONCHEONHYEONSUNGUIJEON"
      ],
      "steps": [
       "1) 파주목: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 장단: 마을 사람들의 일을 거들며 솜씨를 보인다"
+      "2) 연천현 숭의전: 마을 사람들의 일을 거들며 솜씨를 보인다"
      ]
     },
     {
@@ -5445,12 +5445,12 @@
      "route": [
       "ND_09_CITY_ANDONGDAEDOHOBU",
       "ND_04_TOWN_PYEONGCHANG",
-      "ND_09_STATION_YUGOKYEOK"
+      "ND_09_STATION_CHEONGHAHYEONYEOKCHAM"
      ],
      "steps": [
       "1) 안동대도호부: 관아와 장터에서 옛 인연을 수소문한다",
       "2) 평창: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "3) 유곡역: 역참에서 팔도 소식을 모은다"
+      "3) 청하현 역참: 역참에서 팔도 소식을 모은다"
      ]
     },
     {
@@ -5493,13 +5493,13 @@
      "route": [
       "ND_09_CITY_ANDONGDAEDOHOBU",
       "ND_10_TOWN_MILYANG",
-      "ND_08_TOWN_YEONGAM",
+      "ND_08_TOWN_GANGJINHYEONCHISO",
       "ND_02_CITY_HANYANGGYEONGJO"
      ],
      "steps": [
       "1) 안동대도호부: 관아와 장터에서 옛 인연을 수소문한다",
       "2) 밀양: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "3) 영암: 마을 사람들의 일을 거들며 솜씨를 보인다",
+      "3) 강진현 치소: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "4) 한양 경조: 관아와 장터에서 옛 인연을 수소문한다"
      ]
     }
@@ -5574,8 +5574,8 @@
     {
      "id": "promo_cp_c48_3",
      "tier": 3,
-     "name": "[뗏목사공] 3등급 승급 — 통천 장인의 비법",
-     "lore": "뗏목사공의 사연이 통천으로 이어진다. 정선 물박달나무 노에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[뗏목사공] 3등급 승급 — 양양도호부 낙산사 장인의 비법",
+     "lore": "뗏목사공의 사연이 양양도호부 낙산사로 이어진다. 정선 물박달나무 노에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_04_TOWN_JEONGSEON",
      "requires": {
@@ -5586,12 +5586,12 @@
      },
      "route": [
       "ND_04_TOWN_JEONGSEON",
-      "ND_03_TOWN_TONGCHEON",
+      "ND_03_TOWN_YANGYANGDOHOBUNAKSANSA",
       "ND_04_TOWN_SAMCHEOK"
      ],
      "steps": [
       "1) 정선: 포구에서 배를 손보며 물길과 물때를 묻는다",
-      "2) 통천: 포구에서 배를 손보며 물길과 물때를 묻는다",
+      "2) 양양도호부 낙산사: 포구에서 배를 손보며 물길과 물때를 묻는다",
       "3) 삼척: 포구에서 배를 손보며 물길과 물때를 묻는다"
      ]
     },
@@ -5599,7 +5599,7 @@
      "id": "promo_cp_c48_4",
      "tier": 4,
      "name": "[뗏목사공] 4등급 승급 — 팔도 명인 겨루기",
-     "lore": "이름이 알려진 뗏목사공에게 「물길 노젓기 강타」를 온전히 펼칠 시험이 찾아온다. 통천·남양을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 뗏목사공에게 「물길 노젓기 강타」를 온전히 펼칠 시험이 찾아온다. 고성군 삼일포·남양을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_04_TOWN_JEONGSEON",
      "requires": {
@@ -5610,12 +5610,12 @@
      },
      "route": [
       "ND_04_TOWN_JEONGSEON",
-      "ND_03_TOWN_TONGCHEON",
+      "ND_03_TOWN_GOSEONGGUNSAMILPO",
       "ND_02_TOWN_NAMYANG"
      ],
      "steps": [
       "1) 정선: 포구에서 배를 손보며 물길과 물때를 묻는다",
-      "2) 통천: 포구에서 배를 손보며 물길과 물때를 묻는다",
+      "2) 고성군 삼일포: 포구에서 배를 손보며 물길과 물때를 묻는다",
       "3) 남양: 포구에서 배를 손보며 물길과 물때를 묻는다"
      ]
     },
@@ -5634,14 +5634,14 @@
      },
      "route": [
       "ND_04_TOWN_JEONGSEON",
-      "ND_03_TOWN_TONGCHEON",
-      "ND_15_STATION_SINEUNCHAM",
+      "ND_03_TOWN_GOSEONGGUNSAMILPO",
+      "ND_15_TOWN_HONGWONHYEONPOGU",
       "ND_04_TOMB_YEONGWOLJANGREUNG"
      ],
      "steps": [
       "1) 정선: 포구에서 배를 손보며 물길과 물때를 묻는다",
-      "2) 통천: 포구에서 배를 손보며 물길과 물때를 묻는다",
-      "3) 신은참: 역참에서 팔도 소식을 모은다",
+      "2) 고성군 삼일포: 포구에서 배를 손보며 물길과 물때를 묻는다",
+      "3) 홍원현 포구: 포구에서 배를 손보며 물길과 물때를 묻는다",
       "4) 영월 장릉: 능역을 참배하고 비문을 탁본한다"
      ]
     }
@@ -5741,7 +5741,7 @@
      "id": "promo_cp_c49_4",
      "tier": 4,
      "name": "[채석 광부] 4등급 승급 — 팔도 명인 겨루기",
-     "lore": "이름이 알려진 채석 광부에게 「곡괭이 내리찍기」를 온전히 펼칠 시험이 찾아온다. 광주 분원 백자 가마터·천안을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 채석 광부에게 「곡괭이 내리찍기」를 온전히 펼칠 시험이 찾아온다. 광주 분원 백자 가마터·은진현 관촉사(논산)을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_05_TOWN_DANYANG",
      "requires": {
@@ -5753,19 +5753,19 @@
      "route": [
       "ND_05_TOWN_DANYANG",
       "ND_02_RUIN_GWANGJUBUNWONBAEKJAGAMATEO",
-      "ND_06_TOWN_CHEONAN"
+      "ND_06_TOWN_EUNJINHYEONGWANCHOKSANONSAN"
      ],
      "steps": [
       "1) 단양: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
       "2) 광주 분원 백자 가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
-      "3) 천안: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
+      "3) 은진현 관촉사(논산): 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
      ]
     },
     {
      "id": "promo_cp_c49_5",
      "tier": 5,
-     "name": "[채석 광부] 5등급 승급 — 명장(名匠)의 칭호 — 강진 사당리 청자 가마터",
-     "lore": "팔도를 두루 거쳐 강진 사당리 청자 가마터에 이르러야 채석 광부의 서사가 완성된다. 어두운 막장에서 돌을 쪼개고 광맥을 찾아내는 강인한 팔뚝의 광부.",
+     "name": "[채석 광부] 5등급 승급 — 명장(名匠)의 칭호 — 부여 능산리 백제 금동대향로",
+     "lore": "팔도를 두루 거쳐 부여 능산리 백제 금동대향로에 이르러야 채석 광부의 서사가 완성된다. 어두운 막장에서 돌을 쪼개고 광맥을 찾아내는 강인한 팔뚝의 광부.",
      "min_rank": 5,
      "trigger_node": "ND_05_TOWN_DANYANG",
      "requires": {
@@ -5778,13 +5778,13 @@
       "ND_05_TOWN_DANYANG",
       "ND_02_RUIN_GWANGJUBUNWONBAEKJAGAMATEO",
       "ND_01_RUIN_GAESEONGMANWOLDAEYETTEO",
-      "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO"
+      "ND_06_RUIN_BUYEONEUNGSANRIBAEKJEGEUMDONGDAEHYANGRO"
      ],
      "steps": [
       "1) 단양: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
       "2) 광주 분원 백자 가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
       "3) 개성 만월대 옛터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
-      "4) 강진 사당리 청자 가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
+      "4) 부여 능산리 백제 금동대향로: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
      ]
     }
    ]
@@ -5858,8 +5858,8 @@
     {
      "id": "promo_cp_c50_3",
      "tier": 3,
-     "name": "[옻칠장] 3등급 승급 — 단양 수벌 고려가마터 장인의 비법",
-     "lore": "옻칠장의 사연이 단양 수벌 고려가마터로 이어진다. 옻칠 붓과 주걱에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[옻칠장] 3등급 승급 — 보은 법주사 팔상전 장인의 비법",
+     "lore": "옻칠장의 사연이 보은 법주사 팔상전으로 이어진다. 옻칠 붓과 주걱에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_04_CITY_WONJUGANGWONGAMYEONG",
      "requires": {
@@ -5870,12 +5870,12 @@
      },
      "route": [
       "ND_04_CITY_WONJUGANGWONGAMYEONG",
-      "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO",
+      "ND_05_RUIN_BOEUNBEOPJUSAPALSANGJEON",
       "ND_04_TOWN_PYEONGCHANG"
      ],
      "steps": [
       "1) 원주 강원감영: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 단양 수벌 고려가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "2) 보은 법주사 팔상전: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
       "3) 평창: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
      ]
     },
@@ -5883,7 +5883,7 @@
      "id": "promo_cp_c50_4",
      "tier": 4,
      "name": "[옻칠장] 4등급 승급 — 팔도 명인 겨루기",
-     "lore": "이름이 알려진 옻칠장에게 「옻물 붓기」를 온전히 펼칠 시험이 찾아온다. 단양 수벌 고려가마터·화천을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 옻칠장에게 「옻물 붓기」를 온전히 펼칠 시험이 찾아온다. 보은 법주사 팔상전·화천을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_04_CITY_WONJUGANGWONGAMYEONG",
      "requires": {
@@ -5894,12 +5894,12 @@
      },
      "route": [
       "ND_04_CITY_WONJUGANGWONGAMYEONG",
-      "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO",
+      "ND_05_RUIN_BOEUNBEOPJUSAPALSANGJEON",
       "ND_03_TOWN_HWACHEON"
      ],
      "steps": [
       "1) 원주 강원감영: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 단양 수벌 고려가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "2) 보은 법주사 팔상전: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
       "3) 화천: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
      ]
     },
@@ -5918,13 +5918,13 @@
      },
      "route": [
       "ND_04_CITY_WONJUGANGWONGAMYEONG",
-      "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO",
+      "ND_05_RUIN_BOEUNBEOPJUSAPALSANGJEON",
       "ND_07_RUIN_BUANYUCHEONRICHEONGJAGAMATEO",
       "ND_09_CITY_GYEONGJUBU"
      ],
      "steps": [
       "1) 원주 강원감영: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 단양 수벌 고려가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "2) 보은 법주사 팔상전: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
       "3) 부안 유천리 청자 가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
       "4) 경주부: 관아 공방의 까다로운 주문을 받아 낸다"
      ]
@@ -6000,8 +6000,8 @@
     {
      "id": "promo_cp_c51_3",
      "tier": 3,
-     "name": "[한지장이] 3등급 승급 — 태안 장인의 비법",
-     "lore": "한지장이의 사연이 태안으로 이어진다. 한지 발과 물질틀에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[한지장이] 3등급 승급 — 부여 능산리 백제 금동대향로 장인의 비법",
+     "lore": "한지장이의 사연이 부여 능산리 백제 금동대향로로 이어진다. 한지 발과 물질틀에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
      "requires": {
@@ -6012,12 +6012,12 @@
      },
      "route": [
       "ND_07_CITY_JEONJUJEONRAGAMYEONG",
-      "ND_06_TOWN_TAEAN",
+      "ND_06_RUIN_BUYEONEUNGSANRIBAEKJEGEUMDONGDAEHYANGRO",
       "ND_07_TOWN_JEONGEUP"
      ],
      "steps": [
       "1) 전주 전라감영: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 태안: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
+      "2) 부여 능산리 백제 금동대향로: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
       "3) 정읍: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
      ]
     },
@@ -6025,7 +6025,7 @@
      "id": "promo_cp_c51_4",
      "tier": 4,
      "name": "[한지장이] 4등급 승급 — 팔도 명인 겨루기",
-     "lore": "이름이 알려진 한지장이에게 「닥나무 닥줄 휘감기」를 온전히 펼칠 시험이 찾아온다. 강진 사당리 청자 가마터·해미를 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 한지장이에게 「닥나무 닥줄 휘감기」를 온전히 펼칠 시험이 찾아온다. 강진 사당리 청자 가마터·은진현 관촉사(논산)을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
      "requires": {
@@ -6037,19 +6037,19 @@
      "route": [
       "ND_07_CITY_JEONJUJEONRAGAMYEONG",
       "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
-      "ND_06_TOWN_HAEMI"
+      "ND_06_TOWN_EUNJINHYEONGWANCHOKSANONSAN"
      ],
      "steps": [
       "1) 전주 전라감영: 관아 공방의 까다로운 주문을 받아 낸다",
       "2) 강진 사당리 청자 가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
-      "3) 해미: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
+      "3) 은진현 관촉사(논산): 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
      ]
     },
     {
      "id": "promo_cp_c51_5",
      "tier": 5,
-     "name": "[한지장이] 5등급 승급 — 명장(名匠)의 칭호 — 강진 사당리 청자 가마터",
-     "lore": "팔도를 두루 거쳐 강진 사당리 청자 가마터에 이르러야 한지장이의 서사가 완성된다. 맑은 물에 닥나무를 풀고 물질하여 질기고 고운 천년 한지를 뜨는 장인.",
+     "name": "[한지장이] 5등급 승급 — 명장(名匠)의 칭호 — 보은 법주사 팔상전",
+     "lore": "팔도를 두루 거쳐 보은 법주사 팔상전에 이르러야 한지장이의 서사가 완성된다. 맑은 물에 닥나무를 풀고 물질하여 질기고 고운 천년 한지를 뜨는 장인.",
      "min_rank": 5,
      "trigger_node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
      "requires": {
@@ -6060,15 +6060,15 @@
      },
      "route": [
       "ND_07_CITY_JEONJUJEONRAGAMYEONG",
-      "ND_06_TOWN_ASAN",
-      "ND_02_RUIN_GWANGJUBUNWONBAEKJAGAMATEO",
-      "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO"
+      "ND_06_RUIN_BUYEONEUNGSANRIBAEKJEGEUMDONGDAEHYANGRO",
+      "ND_02_RUIN_SUWONHWASEONGSEOJANGDAESEONGGWAK",
+      "ND_05_RUIN_BOEUNBEOPJUSAPALSANGJEON"
      ],
      "steps": [
       "1) 전주 전라감영: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 아산: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
-      "3) 광주 분원 백자 가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
-      "4) 강진 사당리 청자 가마터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
+      "2) 부여 능산리 백제 금동대향로: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "3) 수원 화성 서장대 성곽: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "4) 보은 법주사 팔상전: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
      ]
     }
    ]
@@ -6105,7 +6105,7 @@
     "min_rank": 1,
     "route": [
      "ND_01_CITY_GAESEONGBU",
-     "ND_01_CITY_GANGHWAYUSUBU"
+     "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI"
     ],
     "condition": "무너진 산성 성벽 축조 보수"
    },
@@ -6121,9 +6121,9 @@
      "id": "promo_cp_c52_2",
      "tier": 2,
      "name": "[석공(석수)] 2등급 승급 — 손에 익은 연장",
-     "lore": "석공(석수)는 강화유수부에서 석수 정과 망치를 다시 꺼내 든다. 동행하며 쌓은 신뢰가 첫 시험으로 이어진다.",
+     "lore": "석공(석수)는 강화 도요지 백자 청화항아리에서 석수 정과 망치를 다시 꺼내 든다. 동행하며 쌓은 신뢰가 첫 시험으로 이어진다.",
      "min_rank": 2,
-     "trigger_node": "ND_01_CITY_GANGHWAYUSUBU",
+     "trigger_node": "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -6131,21 +6131,21 @@
       }
      },
      "route": [
-      "ND_01_CITY_GANGHWAYUSUBU",
+      "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
       "ND_01_RUIN_GAESEONGMANWOLDAEYETTEO"
      ],
      "steps": [
-      "1) 강화유수부: 관아 공방의 까다로운 주문을 받아 낸다",
+      "1) 강화 도요지 백자 청화항아리: 절경 앞에서 마음을 비우고 수련한다",
       "2) 개성 만월대 옛터: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다"
      ]
     },
     {
      "id": "promo_cp_c52_3",
      "tier": 3,
-     "name": "[석공(석수)] 3등급 승급 — 배천 장인의 비법",
-     "lore": "석공(석수)의 사연이 배천으로 이어진다. 석수 정과 망치에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[석공(석수)] 3등급 승급 — 신천군 구월산 치소 장인의 비법",
+     "lore": "석공(석수)의 사연이 신천군 구월산 치소로 이어진다. 석수 정과 망치에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
-     "trigger_node": "ND_01_CITY_GANGHWAYUSUBU",
+     "trigger_node": "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -6153,13 +6153,13 @@
       }
      },
      "route": [
-      "ND_01_CITY_GANGHWAYUSUBU",
-      "ND_12_TOWN_BAECHEON",
+      "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
+      "ND_12_TOWN_SINCHEONGUNGUWOLSANCHISO",
       "ND_01_TOWN_MUNSANPOGU"
      ],
      "steps": [
-      "1) 강화유수부: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 배천: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
+      "1) 강화 도요지 백자 청화항아리: 절경 앞에서 마음을 비우고 수련한다",
+      "2) 신천군 구월산 치소: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
       "3) 문산포구: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
      ]
     },
@@ -6167,9 +6167,9 @@
      "id": "promo_cp_c52_4",
      "tier": 4,
      "name": "[석공(석수)] 4등급 승급 — 팔도 명인 겨루기",
-     "lore": "이름이 알려진 석공(석수)에게 「거석 내던지기」를 온전히 펼칠 시험이 찾아온다. 회양·수안을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 석공(석수)에게 「거석 내던지기」를 온전히 펼칠 시험이 찾아온다. 통천 도요지 백자 청화항아리·재령현 치소를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
-     "trigger_node": "ND_01_CITY_GANGHWAYUSUBU",
+     "trigger_node": "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -6177,14 +6177,14 @@
       }
      },
      "route": [
-      "ND_01_CITY_GANGHWAYUSUBU",
-      "ND_03_TOWN_HOEYANG",
-      "ND_11_TOWN_SUAN"
+      "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
+      "ND_03_RUIN_TONGCHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+      "ND_11_TOWN_JAERYEONGHYEONCHISO"
      ],
      "steps": [
-      "1) 강화유수부: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 회양: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
-      "3) 수안: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
+      "1) 강화 도요지 백자 청화항아리: 절경 앞에서 마음을 비우고 수련한다",
+      "2) 통천 도요지 백자 청화항아리: 옛 가마·공방터를 발굴해 잊힌 기법을 되살린다",
+      "3) 재령현 치소: 장터 공방에서 솜씨를 겨루며 연장을 벼린다"
      ]
     },
     {
@@ -6193,7 +6193,7 @@
      "name": "[석공(석수)] 5등급 승급 — 명장(名匠)의 칭호 — 경주부",
      "lore": "팔도를 두루 거쳐 경주부에 이르러야 석공(석수)의 서사가 완성된다. 거친 암반을 정과 망치로 쪼개어 천년을 버티는 산성과 석탑을 세우는 석수.",
      "min_rank": 5,
-     "trigger_node": "ND_01_CITY_GANGHWAYUSUBU",
+     "trigger_node": "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -6201,15 +6201,15 @@
       }
      },
      "route": [
-      "ND_01_CITY_GANGHWAYUSUBU",
-      "ND_12_TOWN_JANGYEON",
-      "ND_13_TOWN_GANGSEO",
+      "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
+      "ND_12_TOWN_SINCHEONGUNGUWOLSANCHISO",
+      "ND_13_TOWN_JUNGHWAGUNCHISO",
       "ND_09_CITY_GYEONGJUBU"
      ],
      "steps": [
-      "1) 강화유수부: 관아 공방의 까다로운 주문을 받아 낸다",
-      "2) 장연: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
-      "3) 강서: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
+      "1) 강화 도요지 백자 청화항아리: 절경 앞에서 마음을 비우고 수련한다",
+      "2) 신천군 구월산 치소: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
+      "3) 중화군 치소: 장터 공방에서 솜씨를 겨루며 연장을 벼린다",
       "4) 경주부: 관아 공방의 까다로운 주문을 받아 낸다"
      ]
     }
@@ -6264,8 +6264,8 @@
     {
      "id": "promo_cp_c53_3",
      "tier": 3,
-     "name": "[박씨부인] 3등급 승급 — 계룡산 신도안에서 만난 운명",
-     "lore": "박씨부인의 사연이 계룡산 신도안으로 이어진다. 박씨 옥화선(부채)에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[박씨부인] 3등급 승급 — 부여 고목 당산 신목 신위에서 만난 운명",
+     "lore": "박씨부인의 사연이 부여 고목 당산 신목 신위로 이어진다. 박씨 옥화선(부채)에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_02_CITY_SUWONHWASEONG",
      "requires": {
@@ -6276,20 +6276,20 @@
      },
      "route": [
       "ND_02_CITY_SUWONHWASEONG",
-      "ND_06_SHRINE_GYERYONGSANSINDOAN",
-      "ND_02_TOMB_HEONREUNG"
+      "ND_06_SHRINE_BUYEOGOMOKDANGSANSINMOKSINWI",
+      "ND_02_SCENIC_HANYANGJONGMYOJEONGJEON"
      ],
      "steps": [
       "1) 수원화성: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 계룡산 신도안: 제를 올려 신령의 뜻을 묻는다",
-      "3) 헌릉: 능역을 참배하고 비문을 탁본한다"
+      "2) 부여 고목 당산 신목 신위: 제를 올려 신령의 뜻을 묻는다",
+      "3) 한양 종묘 정전: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_c53_4",
      "tier": 4,
      "name": "[박씨부인] 4등급 승급 — 위기와 반전",
-     "lore": "이름이 알려진 박씨부인에게 「도술 삼매진화(三昧眞火)」을 온전히 펼칠 시험이 찾아온다. 영월 장릉·수안보온천을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 박씨부인에게 「도술 삼매진화(三昧眞火)」을 온전히 펼칠 시험이 찾아온다. 강릉 오죽헌 신사임당 초충도 병풍·회덕 관아 동헌 현판 및 옥인을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_02_CITY_SUWONHWASEONG",
      "requires": {
@@ -6300,20 +6300,20 @@
      },
      "route": [
       "ND_02_CITY_SUWONHWASEONG",
-      "ND_04_TOMB_YEONGWOLJANGREUNG",
-      "ND_05_SPRING_SUANBOONCHEON"
+      "ND_04_SHRINE_GANGREUNGOJUKHEONSINSAIMDANGCHOCHUNGDOBYEONGPUNG",
+      "ND_05_SCENIC_HOEDEOKGWANADONGHEONHYEONPANMITOKIN"
      ],
      "steps": [
       "1) 수원화성: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 영월 장릉: 능역을 참배하고 비문을 탁본한다",
-      "3) 수안보온천: 온천에서 몸과 기운을 다스린다"
+      "2) 강릉 오죽헌 신사임당 초충도 병풍: 제를 올려 신령의 뜻을 묻는다",
+      "3) 회덕 관아 동헌 현판 및 옥인: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_c53_5",
      "tier": 5,
-     "name": "[박씨부인] 5등급 승급 — 대단원 — 백두산 천지",
-     "lore": "팔도를 두루 거쳐 백두산 천지에 이르러야 박씨부인의 서사가 완성된다. 《박씨전》의 여걸.",
+     "name": "[박씨부인] 5등급 승급 — 대단원 — 조선왕조실록 태백산사고본",
+     "lore": "팔도를 두루 거쳐 조선왕조실록 태백산사고본에 이르러야 박씨부인의 서사가 완성된다. 《박씨전》의 여걸.",
      "min_rank": 5,
      "trigger_node": "ND_02_CITY_SUWONHWASEONG",
      "requires": {
@@ -6324,15 +6324,15 @@
      },
      "route": [
       "ND_02_CITY_SUWONHWASEONG",
-      "ND_04_TOMB_YEONGWOLJANGREUNG",
-      "ND_09_TOMB_GYEONGJUDAEREUNGWON",
-      "ND_16_SCENIC_BAEKDUSANCHEONJI"
+      "ND_04_SHRINE_GANGREUNGOJUKHEONSINSAIMDANGCHOCHUNGDOBYEONGPUNG",
+      "ND_09_SHRINE_ANDONGDOSANSEOWONJEONGYODANG",
+      "ND_01_SCENIC_JOSEONWANGJOSILROKTAEBAEKSANSAGOBON"
      ],
      "steps": [
       "1) 수원화성: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 영월 장릉: 능역을 참배하고 비문을 탁본한다",
-      "3) 경주 대릉원: 능역을 참배하고 비문을 탁본한다",
-      "4) 백두산 천지: 절경 앞에서 마음을 비우고 수련한다"
+      "2) 강릉 오죽헌 신사임당 초충도 병풍: 제를 올려 신령의 뜻을 묻는다",
+      "3) 안동 도산서원 전교당: 제를 올려 신령의 뜻을 묻는다",
+      "4) 조선왕조실록 태백산사고본: 절경 앞에서 마음을 비우고 수련한다"
      ]
     }
    ]
@@ -6508,8 +6508,8 @@
     {
      "id": "promo_cp_c55_3",
      "tier": 3,
-     "name": "[성춘향] 3등급 승급 — 안동 도산서원에서 만난 운명",
-     "lore": "성춘향의 사연이 안동 도산서원으로 이어진다. 춘향 옥중 형틀 조각에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[성춘향] 3등급 승급 — 회덕 어사 순력기 고문서에서 만난 운명",
+     "lore": "성춘향의 사연이 회덕 어사 순력기 고문서로 이어진다. 춘향 옥중 형틀 조각에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_07_CITY_NAMWONDOHOBU",
      "requires": {
@@ -6520,12 +6520,12 @@
      },
      "route": [
       "ND_07_CITY_NAMWONDOHOBU",
-      "ND_09_SEOWON_ANDONGDOSANSEOWON",
+      "ND_09_SEOWON_HOEDEOKEOSASUNRYEOKGIGOMUNSEO",
       "ND_07_CITY_JEONJUJEONRAGAMYEONG"
      ],
      "steps": [
       "1) 남원도호부: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 안동 도산서원: 강학에 참석해 뜻을 가다듬는다",
+      "2) 회덕 어사 순력기 고문서: 강학에 참석해 뜻을 가다듬는다",
       "3) 전주 전라감영: 관아와 장터에서 옛 인연을 수소문한다"
      ]
     },
@@ -6533,7 +6533,7 @@
      "id": "promo_cp_c55_4",
      "tier": 4,
      "name": "[성춘향] 4등급 승급 — 위기와 반전",
-     "lore": "이름이 알려진 성춘향에게 「옥중 십장가(十杖歌)」을 온전히 펼칠 시험이 찾아온다. 충주목·광주목을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 성춘향에게 「옥중 십장가(十杖歌)」을 온전히 펼칠 시험이 찾아온다. 회덕 향교 대성전 목판·광주목을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_07_CITY_NAMWONDOHOBU",
      "requires": {
@@ -6544,12 +6544,12 @@
      },
      "route": [
       "ND_07_CITY_NAMWONDOHOBU",
-      "ND_05_CITY_CHUNGJUMOK",
+      "ND_05_SEOWON_HOEDEOKHYANGGYODAESEONGJEONMOKPAN",
       "ND_08_CITY_GWANGJUMOK"
      ],
      "steps": [
       "1) 남원도호부: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 충주목: 관아와 장터에서 옛 인연을 수소문한다",
+      "2) 회덕 향교 대성전 목판: 강학에 참석해 뜻을 가다듬는다",
       "3) 광주목: 관아와 장터에서 옛 인연을 수소문한다"
      ]
     },
@@ -6568,13 +6568,13 @@
      },
      "route": [
       "ND_07_CITY_NAMWONDOHOBU",
-      "ND_06_CITY_HONGJUMOK",
+      "ND_06_SEOWON_GONGJUSANSINGAKMAAECHILSEONGDO",
       "ND_02_SEOWON_SEONGGYUNGWANMYEONGRYUNDANG",
       "ND_09_SEOWON_ANDONGDOSANSEOWON"
      ],
      "steps": [
       "1) 남원도호부: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 홍주목: 관아와 장터에서 옛 인연을 수소문한다",
+      "2) 공주 산신각 마애칠성도: 강학에 참석해 뜻을 가다듬는다",
       "3) 성균관 명륜당: 강학에 참석해 뜻을 가다듬는다",
       "4) 안동 도산서원: 강학에 참석해 뜻을 가다듬는다"
      ]
@@ -6737,7 +6737,7 @@
     "min_rank": 2,
     "route": [
      "ND_08_CITY_GWANGJUMOK",
-     "ND_08_CITY_SUNCHEONDOHOBU"
+     "ND_08_TOWN_GURYEHYEONCHISO"
     ],
     "condition": "다리 부러진 제비 치료 및 은혜 갚은 박씨 심기"
    },
@@ -6755,7 +6755,7 @@
      "name": "[흥부] 3등급 승급 — 추사 유배지에서 만난 운명",
      "lore": "흥부의 사연이 추사 유배지로 이어진다. 제비 박씨 씨앗에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
-     "trigger_node": "ND_08_CITY_SUNCHEONDOHOBU",
+     "trigger_node": "ND_08_TOWN_GURYEHYEONCHISO",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -6763,12 +6763,12 @@
       }
      },
      "route": [
-      "ND_08_CITY_SUNCHEONDOHOBU",
+      "ND_08_TOWN_GURYEHYEONCHISO",
       "ND_17_SEOWON_CHUSAYUBAEJI",
       "ND_08_CITY_GWANGJUMOK"
      ],
      "steps": [
-      "1) 순천도호부: 관아와 장터에서 옛 인연을 수소문한다",
+      "1) 구례현 치소: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "2) 추사 유배지: 강학에 참석해 뜻을 가다듬는다",
       "3) 광주목: 관아와 장터에서 옛 인연을 수소문한다"
      ]
@@ -6779,7 +6779,7 @@
      "name": "[흥부] 4등급 승급 — 위기와 반전",
      "lore": "이름이 알려진 흥부에게 「대박 터뜨리기」를 온전히 펼칠 시험이 찾아온다. 대구 경상감영·전주 전라감영을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
-     "trigger_node": "ND_08_CITY_SUNCHEONDOHOBU",
+     "trigger_node": "ND_08_TOWN_GURYEHYEONCHISO",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -6787,12 +6787,12 @@
       }
      },
      "route": [
-      "ND_08_CITY_SUNCHEONDOHOBU",
+      "ND_08_TOWN_GURYEHYEONCHISO",
       "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
       "ND_07_CITY_JEONJUJEONRAGAMYEONG"
      ],
      "steps": [
-      "1) 순천도호부: 관아와 장터에서 옛 인연을 수소문한다",
+      "1) 구례현 치소: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "2) 대구 경상감영: 관아와 장터에서 옛 인연을 수소문한다",
       "3) 전주 전라감영: 관아와 장터에서 옛 인연을 수소문한다"
      ]
@@ -6803,7 +6803,7 @@
      "name": "[흥부] 5등급 승급 — 대단원 — 남원도호부",
      "lore": "팔도를 두루 거쳐 남원도호부에 이르러야 흥부의 서사가 완성된다. 《흥부전》의 주인공.",
      "min_rank": 5,
-     "trigger_node": "ND_08_CITY_SUNCHEONDOHOBU",
+     "trigger_node": "ND_08_TOWN_GURYEHYEONCHISO",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -6811,13 +6811,13 @@
       }
      },
      "route": [
-      "ND_08_CITY_SUNCHEONDOHOBU",
+      "ND_08_TOWN_GURYEHYEONCHISO",
       "ND_17_SEOWON_CHUSAYUBAEJI",
       "ND_03_CITY_CHEOLWONDOHOBU",
       "ND_07_CITY_NAMWONDOHOBU"
      ],
      "steps": [
-      "1) 순천도호부: 관아와 장터에서 옛 인연을 수소문한다",
+      "1) 구례현 치소: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "2) 추사 유배지: 강학에 참석해 뜻을 가다듬는다",
       "3) 철원도호부: 관아와 장터에서 옛 인연을 수소문한다",
       "4) 남원도호부: 관아와 장터에서 옛 인연을 수소문한다"
@@ -6874,8 +6874,8 @@
     {
      "id": "promo_cp_c58_3",
      "tier": 3,
-     "name": "[배비장] 3등급 승급 — 광주목에서 만난 운명",
-     "lore": "배비장의 사연이 광주목으로 이어진다. 배비장 방울과 궤짝에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[배비장] 3등급 승급 — 담양 소쇄원 목판에서 만난 운명",
+     "lore": "배비장의 사연이 담양 소쇄원 목판으로 이어진다. 배비장 방울과 궤짝에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
      "requires": {
@@ -6886,12 +6886,12 @@
      },
      "route": [
       "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
-      "ND_08_CITY_GWANGJUMOK",
+      "ND_08_SEOWON_DAMYANGSOSWAEWONMOKPAN",
       "ND_17_FORT_HWABUKJIN"
      ],
      "steps": [
       "1) 제주목 제주읍성: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 광주목: 관아와 장터에서 옛 인연을 수소문한다",
+      "2) 담양 소쇄원 목판: 강학에 참석해 뜻을 가다듬는다",
       "3) 화북진: 진법을 익히며 옛 전장을 되짚는다"
      ]
     },
@@ -6899,7 +6899,7 @@
      "id": "promo_cp_c58_4",
      "tier": 4,
      "name": "[배비장] 4등급 승급 — 위기와 반전",
-     "lore": "이름이 알려진 배비장에게 「궤짝 속 방심 기습」을 온전히 펼칠 시험이 찾아온다. 순천도호부·화북진을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 배비장에게 「궤짝 속 방심 기습」을 온전히 펼칠 시험이 찾아온다. 담양 소쇄원 목판·별방진 성지를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
      "requires": {
@@ -6910,13 +6910,13 @@
      },
      "route": [
       "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
-      "ND_08_CITY_SUNCHEONDOHOBU",
-      "ND_17_FORT_HWABUKJIN"
+      "ND_08_SEOWON_DAMYANGSOSWAEWONMOKPAN",
+      "ND_17_FORT_BYEOLBANGJINSEONGJI"
      ],
      "steps": [
       "1) 제주목 제주읍성: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 순천도호부: 관아와 장터에서 옛 인연을 수소문한다",
-      "3) 화북진: 진법을 익히며 옛 전장을 되짚는다"
+      "2) 담양 소쇄원 목판: 강학에 참석해 뜻을 가다듬는다",
+      "3) 별방진 성지: 진법을 익히며 옛 전장을 되짚는다"
      ]
     },
     {
@@ -6934,13 +6934,13 @@
      },
      "route": [
       "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
-      "ND_08_CITY_NAJUMOK",
+      "ND_08_SEOWON_DAMYANGSOSWAEWONMOKPAN",
       "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
       "ND_09_SEOWON_ANDONGDOSANSEOWON"
      ],
      "steps": [
       "1) 제주목 제주읍성: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 나주목: 관아와 장터에서 옛 인연을 수소문한다",
+      "2) 담양 소쇄원 목판: 강학에 참석해 뜻을 가다듬는다",
       "3) 대구 경상감영: 관아와 장터에서 옛 인연을 수소문한다",
       "4) 안동 도산서원: 강학에 참석해 뜻을 가다듬는다"
      ]
@@ -6996,8 +6996,8 @@
     {
      "id": "promo_cp_c59_3",
      "tier": 3,
-     "name": "[허생] 3등급 승급 — 홍주목에서 만난 운명",
-     "lore": "허생의 사연이 홍주목으로 이어진다. 허생 변씨 차용증에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[허생] 3등급 승급 — 공주 산신각 마애칠성도에서 만난 운명",
+     "lore": "허생의 사연이 공주 산신각 마애칠성도로 이어진다. 허생 변씨 차용증에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_02_CITY_HANYANGGYEONGJO",
      "requires": {
@@ -7008,12 +7008,12 @@
      },
      "route": [
       "ND_02_CITY_HANYANGGYEONGJO",
-      "ND_06_CITY_HONGJUMOK",
+      "ND_06_SEOWON_GONGJUSANSINGAKMAAECHILSEONGDO",
       "ND_02_CITY_SUWONHWASEONG"
      ],
      "steps": [
       "1) 한양 경조: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 홍주목: 관아와 장터에서 옛 인연을 수소문한다",
+      "2) 공주 산신각 마애칠성도: 강학에 참석해 뜻을 가다듬는다",
       "3) 수원화성: 관아와 장터에서 옛 인연을 수소문한다"
      ]
     },
@@ -7056,14 +7056,14 @@
      },
      "route": [
       "ND_02_CITY_HANYANGGYEONGJO",
-      "ND_03_CITY_CHEOLWONDOHOBU",
-      "ND_11_CITY_HWANGJUMOK",
+      "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+      "ND_11_CITY_YEONANDOHOBUCHISO",
       "ND_09_SEOWON_ANDONGDOSANSEOWON"
      ],
      "steps": [
       "1) 한양 경조: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 철원도호부: 관아와 장터에서 옛 인연을 수소문한다",
-      "3) 황주목: 관아와 장터에서 옛 인연을 수소문한다",
+      "2) 철원도호부 치소: 관아와 장터에서 옛 인연을 수소문한다",
+      "3) 연안도호부 치소: 관아와 장터에서 옛 인연을 수소문한다",
       "4) 안동 도산서원: 강학에 참석해 뜻을 가다듬는다"
      ]
     }
@@ -7102,7 +7102,7 @@
    "recruit": {
     "min_rank": 2,
     "route": [
-     "ND_03_CITY_CHUNCHEONBU",
+     "ND_03_CITY_CHEOLWONDOHOBUCHISO",
      "ND_03_CITY_CHEOLWONDOHOBU"
     ],
     "condition": "월경대사에게 병법과 무예를 익히고 명검 획득"
@@ -7166,8 +7166,8 @@
     {
      "id": "promo_cp_c60_5",
      "tier": 5,
-     "name": "[조웅] 5등급 승급 — 대단원 — 경주 대릉원",
-     "lore": "팔도를 두루 거쳐 경주 대릉원에 이르러야 조웅의 서사가 완성된다. 《조웅전》의 주인공.",
+     "name": "[조웅] 5등급 승급 — 대단원 — 서산 용현리 마애여래삼존상",
+     "lore": "팔도를 두루 거쳐 서산 용현리 마애여래삼존상에 이르러야 조웅의 서사가 완성된다. 《조웅전》의 주인공.",
      "min_rank": 5,
      "trigger_node": "ND_03_CITY_CHEOLWONDOHOBU",
      "requires": {
@@ -7180,13 +7180,13 @@
       "ND_03_CITY_CHEOLWONDOHOBU",
       "ND_15_BEACON_HAMHEUNGBONGSU",
       "ND_14_BEACON_UIJUBONGSU",
-      "ND_09_TOMB_GYEONGJUDAEREUNGWON"
+      "ND_06_SCENIC_SEOSANYONGHYEONRIMAAEYEORAESAMJONSANG"
      ],
      "steps": [
       "1) 철원도호부: 병영의 군사를 조련한다",
       "2) 함흥 봉수: 봉수를 올려 방어선을 점검한다",
       "3) 의주 봉수: 봉수를 올려 방어선을 점검한다",
-      "4) 경주 대릉원: 능역을 참배하고 비문을 탁본한다"
+      "4) 서산 용현리 마애여래삼존상: 절경 앞에서 마음을 비우고 수련한다"
      ]
     }
    ]
@@ -7240,8 +7240,8 @@
     {
      "id": "promo_cp_c61_3",
      "tier": 3,
-     "name": "[유충렬] 3등급 승급 — 수안보온천에서 만난 운명",
-     "lore": "유충렬의 사연이 수안보온천으로 이어진다. 일월보검과 천마에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[유충렬] 3등급 승급 — 충주 관아 동헌 현판 및 옥인에서 만난 운명",
+     "lore": "유충렬의 사연이 충주 관아 동헌 현판 및 옥인으로 이어진다. 일월보검과 천마에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_06_TOWN_CHEONAN",
      "requires": {
@@ -7252,20 +7252,20 @@
      },
      "route": [
       "ND_06_TOWN_CHEONAN",
-      "ND_05_SPRING_SUANBOONCHEON",
-      "ND_06_SCENIC_GYERYONGSANCHEONHWANGBONG"
+      "ND_05_SCENIC_CHUNGJUGWANADONGHEONHYEONPANMITOKIN",
+      "ND_06_SCENIC_BUYEOHYANGGYODAESEONGJEONMOKPAN"
      ],
      "steps": [
       "1) 천안: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 수안보온천: 온천에서 몸과 기운을 다스린다",
-      "3) 계룡산 천황봉: 절경 앞에서 마음을 비우고 수련한다"
+      "2) 충주 관아 동헌 현판 및 옥인: 절경 앞에서 마음을 비우고 수련한다",
+      "3) 부여 향교 대성전 목판: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_c61_4",
      "tier": 4,
      "name": "[유충렬] 4등급 승급 — 위기와 반전",
-     "lore": "이름이 알려진 유충렬에게 「일월보검(日月寶劍) 천강베기」를 온전히 펼칠 시험이 찾아온다. 헌릉·부안 유천리 청자 가마터를 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 유충렬에게 「일월보검(日月寶劍) 천강베기」를 온전히 펼칠 시험이 찾아온다. 당진 신리성지 다블뤼 주교 유품·전주 관아 동헌 현판 및 옥인을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_06_TOWN_CHEONAN",
      "requires": {
@@ -7276,20 +7276,20 @@
      },
      "route": [
       "ND_06_TOWN_CHEONAN",
-      "ND_02_TOMB_HEONREUNG",
-      "ND_07_RUIN_BUANYUCHEONRICHEONGJAGAMATEO"
+      "ND_02_SHRINE_DANGJINSINRISEONGJIDABEULRWIJUGYOYUPUM",
+      "ND_07_SCENIC_JEONJUGWANADONGHEONHYEONPANMITOKIN"
      ],
      "steps": [
       "1) 천안: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 헌릉: 능역을 참배하고 비문을 탁본한다",
-      "3) 부안 유천리 청자 가마터: 옛터를 발굴해 잊힌 기술을 되살린다"
+      "2) 당진 신리성지 다블뤼 주교 유품: 제를 올려 신령의 뜻을 묻는다",
+      "3) 전주 관아 동헌 현판 및 옥인: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_c61_5",
      "tier": 5,
-     "name": "[유충렬] 5등급 승급 — 대단원 — 경주 대릉원",
-     "lore": "팔도를 두루 거쳐 경주 대릉원에 이르러야 유충렬의 서사가 완성된다. 《유충렬전》의 주인공.",
+     "name": "[유충렬] 5등급 승급 — 대단원 — 통영 세병관",
+     "lore": "팔도를 두루 거쳐 통영 세병관에 이르러야 유충렬의 서사가 완성된다. 《유충렬전》의 주인공.",
      "min_rank": 5,
      "trigger_node": "ND_06_TOWN_CHEONAN",
      "requires": {
@@ -7300,15 +7300,15 @@
      },
      "route": [
       "ND_06_TOWN_CHEONAN",
-      "ND_05_SPRING_SUANBOONCHEON",
-      "ND_04_TOMB_YEONGWOLJANGREUNG",
-      "ND_09_TOMB_GYEONGJUDAEREUNGWON"
+      "ND_05_SCENIC_CHUNGJUHYANGGYODAESEONGJEONMOKPAN",
+      "ND_04_SHRINE_GANGREUNGOJUKHEONSINSAIMDANGCHOCHUNGDOBYEONGPUNG",
+      "ND_10_SCENIC_TONGYEONGSEBYEONGGWAN"
      ],
      "steps": [
       "1) 천안: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 수안보온천: 온천에서 몸과 기운을 다스린다",
-      "3) 영월 장릉: 능역을 참배하고 비문을 탁본한다",
-      "4) 경주 대릉원: 능역을 참배하고 비문을 탁본한다"
+      "2) 충주 향교 대성전 목판: 절경 앞에서 마음을 비우고 수련한다",
+      "3) 강릉 오죽헌 신사임당 초충도 병풍: 제를 올려 신령의 뜻을 묻는다",
+      "4) 통영 세병관: 절경 앞에서 마음을 비우고 수련한다"
      ]
     }
    ]
@@ -7362,8 +7362,8 @@
     {
      "id": "promo_cp_c62_3",
      "tier": 3,
-     "name": "[양소유] 3등급 승급 — 헌릉에서 만난 운명",
-     "lore": "양소유의 사연이 헌릉으로 이어진다. 육관대사 염주와 백유선에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[양소유] 3등급 승급 — 당진 신리성지 다블뤼 주교 유품에서 만난 운명",
+     "lore": "양소유의 사연이 당진 신리성지 다블뤼 주교 유품으로 이어진다. 육관대사 염주와 백유선에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_05_TOWN_BOEUN",
      "requires": {
@@ -7374,20 +7374,20 @@
      },
      "route": [
       "ND_05_TOWN_BOEUN",
-      "ND_02_TOMB_HEONREUNG",
-      "ND_05_SPRING_SUANBOONCHEON"
+      "ND_02_SHRINE_DANGJINSINRISEONGJIDABEULRWIJUGYOYUPUM",
+      "ND_05_SCENIC_CHEONGJUDOYOJIBAEKJACHEONGHWAHANGARI"
      ],
      "steps": [
       "1) 보은: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 헌릉: 능역을 참배하고 비문을 탁본한다",
-      "3) 수안보온천: 온천에서 몸과 기운을 다스린다"
+      "2) 당진 신리성지 다블뤼 주교 유품: 제를 올려 신령의 뜻을 묻는다",
+      "3) 청주 도요지 백자 청화항아리: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_c62_4",
      "tier": 4,
      "name": "[양소유] 4등급 승급 — 위기와 반전",
-     "lore": "이름이 알려진 양소유에게 「구운몽(九雲夢) 몽환술」을 온전히 펼칠 시험이 찾아온다. 계룡산 신도안·영월 장릉을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 양소유에게 「구운몽(九雲夢) 몽환술」을 온전히 펼칠 시험이 찾아온다. 부여 고목 당산 신목 신위·양양 산신각 마애칠성도를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_05_TOWN_BOEUN",
      "requires": {
@@ -7398,20 +7398,20 @@
      },
      "route": [
       "ND_05_TOWN_BOEUN",
-      "ND_06_SHRINE_GYERYONGSANSINDOAN",
-      "ND_04_TOMB_YEONGWOLJANGREUNG"
+      "ND_06_SHRINE_BUYEOGOMOKDANGSANSINMOKSINWI",
+      "ND_04_SCENIC_YANGYANGSANSINGAKMAAECHILSEONGDO"
      ],
      "steps": [
       "1) 보은: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 계룡산 신도안: 제를 올려 신령의 뜻을 묻는다",
-      "3) 영월 장릉: 능역을 참배하고 비문을 탁본한다"
+      "2) 부여 고목 당산 신목 신위: 제를 올려 신령의 뜻을 묻는다",
+      "3) 양양 산신각 마애칠성도: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_c62_5",
      "tier": 5,
-     "name": "[양소유] 5등급 승급 — 대단원 — 백두산 천지",
-     "lore": "팔도를 두루 거쳐 백두산 천지에 이르러야 양소유의 서사가 완성된다. 김만중의 《구운몽》 주인공.",
+     "name": "[양소유] 5등급 승급 — 대단원 — 한양 숭례문(남대문)",
+     "lore": "팔도를 두루 거쳐 한양 숭례문(남대문)에 이르러야 양소유의 서사가 완성된다. 김만중의 《구운몽》 주인공.",
      "min_rank": 5,
      "trigger_node": "ND_05_TOWN_BOEUN",
      "requires": {
@@ -7422,15 +7422,15 @@
      },
      "route": [
       "ND_05_TOWN_BOEUN",
-      "ND_09_TOMB_GYEONGJUDAEREUNGWON",
-      "ND_04_TOMB_YEONGWOLJANGREUNG",
-      "ND_16_SCENIC_BAEKDUSANCHEONJI"
+      "ND_09_SHRINE_ANDONGHAHOETALMITBYEONGSANTAL",
+      "ND_04_SHRINE_GANGREUNGOJUKHEONSINSAIMDANGCHOCHUNGDOBYEONGPUNG",
+      "ND_02_SCENIC_HANYANGSUNGRYEMUNNAMDAEMUN"
      ],
      "steps": [
       "1) 보은: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 경주 대릉원: 능역을 참배하고 비문을 탁본한다",
-      "3) 영월 장릉: 능역을 참배하고 비문을 탁본한다",
-      "4) 백두산 천지: 절경 앞에서 마음을 비우고 수련한다"
+      "2) 안동 하회탈 및 병산탈: 제를 올려 신령의 뜻을 묻는다",
+      "3) 강릉 오죽헌 신사임당 초충도 병풍: 제를 올려 신령의 뜻을 묻는다",
+      "4) 한양 숭례문(남대문): 절경 앞에서 마음을 비우고 수련한다"
      ]
     }
    ]
@@ -7467,7 +7467,7 @@
     "min_rank": 1,
     "route": [
      "ND_15_CITY_BUKCHEONGDOHOBU",
-     "ND_15_TOWN_DEOKWON"
+     "ND_15_TOWN_ANBYEONDOHOBUCHISO"
     ],
     "condition": "선녀 환생 굴레와 화재 조난 극복 및 파랑새 인연 맺기"
    },
@@ -7483,9 +7483,9 @@
      "id": "promo_cp_c63_2",
      "tier": 2,
      "name": "[숙향] 2등급 승급 — 이야기의 첫 대목",
-     "lore": "숙향은 덕원에서 숙향 파랑새 깃털을 다시 꺼내 든다. 동행하며 쌓은 신뢰가 첫 시험으로 이어진다.",
+     "lore": "숙향은 안변도호부 치소에서 숙향 파랑새 깃털을 다시 꺼내 든다. 동행하며 쌓은 신뢰가 첫 시험으로 이어진다.",
      "min_rank": 2,
-     "trigger_node": "ND_15_TOWN_DEOKWON",
+     "trigger_node": "ND_15_TOWN_ANBYEONDOHOBUCHISO",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -7493,21 +7493,21 @@
       }
      },
      "route": [
-      "ND_15_TOWN_DEOKWON",
-      "ND_15_SHRINE_BUKCHEONGSAJANOLEUMMADANG"
+      "ND_15_TOWN_ANBYEONDOHOBUCHISO",
+      "ND_15_SHRINE_ANBYEONGOMOKDANGSANSINMOKSINWI"
      ],
      "steps": [
-      "1) 덕원: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 북청 사자놀음 마당: 제를 올려 신령의 뜻을 묻는다"
+      "1) 안변도호부 치소: 마을 사람들의 일을 거들며 솜씨를 보인다",
+      "2) 안변 고목 당산 신목 신위: 제를 올려 신령의 뜻을 묻는다"
      ]
     },
     {
      "id": "promo_cp_c63_3",
      "tier": 3,
-     "name": "[숙향] 3등급 승급 — 영변 약산 동대에서 만난 운명",
-     "lore": "숙향의 사연이 영변 약산 동대로 이어진다. 숙향 파랑새 깃털에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[숙향] 3등급 승급 — 강계 인풍루에서 만난 운명",
+     "lore": "숙향의 사연이 강계 인풍루로 이어진다. 숙향 파랑새 깃털에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
-     "trigger_node": "ND_15_TOWN_DEOKWON",
+     "trigger_node": "ND_15_TOWN_ANBYEONDOHOBUCHISO",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -7515,13 +7515,13 @@
       }
      },
      "route": [
-      "ND_15_TOWN_DEOKWON",
-      "ND_14_SCENIC_YEONGBYEONYAKSANDONGDAE",
+      "ND_15_TOWN_ANBYEONDOHOBUCHISO",
+      "ND_14_SHRINE_GANGGYEINPUNGRU",
       "ND_15_SCENIC_GAEMAGOWONSAMSUGAPSAN"
      ],
      "steps": [
-      "1) 덕원: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 영변 약산 동대: 절경 앞에서 마음을 비우고 수련한다",
+      "1) 안변도호부 치소: 마을 사람들의 일을 거들며 솜씨를 보인다",
+      "2) 강계 인풍루: 제를 올려 신령의 뜻을 묻는다",
       "3) 개마고원 삼수갑산: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
@@ -7529,9 +7529,9 @@
      "id": "promo_cp_c63_4",
      "tier": 4,
      "name": "[숙향] 4등급 승급 — 위기와 반전",
-     "lore": "이름이 알려진 숙향에게 「선녀의 요지연(瑤池宴) 하례」를 온전히 펼칠 시험이 찾아온다. 묘향산 단군굴·백두산 천지를 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 숙향에게 「선녀의 요지연(瑤池宴) 하례」를 온전히 펼칠 시험이 찾아온다. 묘향산 단군굴·온성 어사 순력기 고문서를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
-     "trigger_node": "ND_15_TOWN_DEOKWON",
+     "trigger_node": "ND_15_TOWN_ANBYEONDOHOBUCHISO",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -7539,23 +7539,23 @@
       }
      },
      "route": [
-      "ND_15_TOWN_DEOKWON",
+      "ND_15_TOWN_ANBYEONDOHOBUCHISO",
       "ND_13_SHRINE_MYOHYANGSANDANGUNGUL",
-      "ND_16_SCENIC_BAEKDUSANCHEONJI"
+      "ND_16_SCENIC_ONSEONGEOSASUNRYEOKGIGOMUNSEO"
      ],
      "steps": [
-      "1) 덕원: 마을 사람들의 일을 거들며 솜씨를 보인다",
+      "1) 안변도호부 치소: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "2) 묘향산 단군굴: 제를 올려 신령의 뜻을 묻는다",
-      "3) 백두산 천지: 절경 앞에서 마음을 비우고 수련한다"
+      "3) 온성 어사 순력기 고문서: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_c63_5",
      "tier": 5,
-     "name": "[숙향] 5등급 승급 — 대단원 — 경주 대릉원",
-     "lore": "팔도를 두루 거쳐 경주 대릉원에 이르러야 숙향의 서사가 완성된다. 《숙향전》의 주인공.",
+     "name": "[숙향] 5등급 승급 — 대단원 — 경주 금관총 금관 및 금제관식",
+     "lore": "팔도를 두루 거쳐 경주 금관총 금관 및 금제관식에 이르러야 숙향의 서사가 완성된다. 《숙향전》의 주인공.",
      "min_rank": 5,
-     "trigger_node": "ND_15_TOWN_DEOKWON",
+     "trigger_node": "ND_15_TOWN_ANBYEONDOHOBUCHISO",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -7563,16 +7563,16 @@
       }
      },
      "route": [
-      "ND_15_TOWN_DEOKWON",
-      "ND_16_SCENIC_CHILBOSAN",
-      "ND_05_SPRING_SUANBOONCHEON",
-      "ND_09_TOMB_GYEONGJUDAEREUNGWON"
+      "ND_15_TOWN_ANBYEONDOHOBUCHISO",
+      "ND_16_SHRINE_ONSEONGYUWONBYEONBANGDOKKAEBIBANGMANGIMINGANSINANGPAE",
+      "ND_05_SCENIC_JECHEONJEOMMALDONGGULGUSEOKGISEOKGI",
+      "ND_09_SHRINE_GYEONGJUGEUMGWANCHONGGEUMGWANMITGEUMJEGWANSIK"
      ],
      "steps": [
-      "1) 덕원: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 칠보산: 절경 앞에서 마음을 비우고 수련한다",
-      "3) 수안보온천: 온천에서 몸과 기운을 다스린다",
-      "4) 경주 대릉원: 능역을 참배하고 비문을 탁본한다"
+      "1) 안변도호부 치소: 마을 사람들의 일을 거들며 솜씨를 보인다",
+      "2) 온성 유원변방 도깨비 방망이 민간신앙패: 제를 올려 신령의 뜻을 묻는다",
+      "3) 제천 점말동굴 구석기 석기: 절경 앞에서 마음을 비우고 수련한다",
+      "4) 경주 금관총 금관 및 금제관식: 제를 올려 신령의 뜻을 묻는다"
      ]
     }
    ]
@@ -7609,7 +7609,7 @@
     "min_rank": 1,
     "route": [
      "ND_14_CITY_UIJUMOK",
-     "ND_14_TOWN_SEONCHEON"
+     "ND_14_SCENIC_CHEOLSANCHARYEONGWANSASINJEOPDAEYEONGBINGAK"
     ],
     "condition": "사또에게 피눈물 원통함 고변 퀘스트 완수"
    },
@@ -7625,9 +7625,9 @@
      "id": "promo_cp_c64_2",
      "tier": 2,
      "name": "[장화] 2등급 승급 — 이야기의 첫 대목",
-     "lore": "장화는 선천에서 장화의 옥가락지를 다시 꺼내 든다. 동행하며 쌓은 신뢰가 첫 시험으로 이어진다.",
+     "lore": "장화는 철산 차련관 사신 접대 영빈각에서 장화의 옥가락지를 다시 꺼내 든다. 동행하며 쌓은 신뢰가 첫 시험으로 이어진다.",
      "min_rank": 2,
-     "trigger_node": "ND_14_TOWN_SEONCHEON",
+     "trigger_node": "ND_14_SCENIC_CHEOLSANCHARYEONGWANSASINJEOPDAEYEONGBINGAK",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -7635,21 +7635,21 @@
       }
      },
      "route": [
-      "ND_14_TOWN_SEONCHEON",
+      "ND_14_SCENIC_CHEOLSANCHARYEONGWANSASINJEOPDAEYEONGBINGAK",
       "ND_14_TEMPLE_BAEKMASANSA"
      ],
      "steps": [
-      "1) 선천: 마을 사람들의 일을 거들며 솜씨를 보인다",
+      "1) 철산 차련관 사신 접대 영빈각: 절경 앞에서 마음을 비우고 수련한다",
       "2) 백마산사: 주지와 법담을 나누며 수행한다"
      ]
     },
     {
      "id": "promo_cp_c64_3",
      "tier": 3,
-     "name": "[장화] 3등급 승급 — 묘향산 보현사에서 만난 운명",
-     "lore": "장화의 사연이 묘향산 보현사로 이어진다. 장화의 옥가락지에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[장화] 3등급 승급 — 박천 삼숭사 고려 석불에서 만난 운명",
+     "lore": "장화의 사연이 박천 삼숭사 고려 석불로 이어진다. 장화의 옥가락지에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
-     "trigger_node": "ND_14_TOWN_SEONCHEON",
+     "trigger_node": "ND_14_SCENIC_CHEOLSANCHARYEONGWANSASINJEOPDAEYEONGBINGAK",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -7657,23 +7657,23 @@
       }
      },
      "route": [
-      "ND_14_TOWN_SEONCHEON",
-      "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
-      "ND_14_SCENIC_YEONGBYEONYAKSANDONGDAE"
+      "ND_14_SCENIC_CHEOLSANCHARYEONGWANSASINJEOPDAEYEONGBINGAK",
+      "ND_13_TEMPLE_BAKCHEONSAMSUNGSAGORYEOSEOKBUL",
+      "ND_14_STUPA_YEONGBYEONMYOHYANGSANPALMANDAEJANGGYEONGINSWAEBONBOGWANHAM"
      ],
      "steps": [
-      "1) 선천: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "2) 묘향산 보현사: 주지와 법담을 나누며 수행한다",
-      "3) 영변 약산 동대: 절경 앞에서 마음을 비우고 수련한다"
+      "1) 철산 차련관 사신 접대 영빈각: 절경 앞에서 마음을 비우고 수련한다",
+      "2) 박천 삼숭사 고려 석불: 주지와 법담을 나누며 수행한다",
+      "3) 영변 묘향산 팔만대장경 인쇄본 보관함: 탑돌이를 하며 발원한다"
      ]
     },
     {
      "id": "promo_cp_c64_4",
      "tier": 4,
      "name": "[장화] 4등급 승급 — 위기와 반전",
-     "lore": "이름이 알려진 장화에게 「원혼의 억울함 호소」를 온전히 펼칠 시험이 찾아온다. 영명사·개마고원 삼수갑산을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 장화에게 「원혼의 억울함 호소」를 온전히 펼칠 시험이 찾아온다. 영명사·덕원 주성 삼층석탑을 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
-     "trigger_node": "ND_14_TOWN_SEONCHEON",
+     "trigger_node": "ND_14_SCENIC_CHEOLSANCHARYEONGWANSASINJEOPDAEYEONGBINGAK",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -7681,23 +7681,23 @@
       }
      },
      "route": [
-      "ND_14_TOWN_SEONCHEON",
+      "ND_14_SCENIC_CHEOLSANCHARYEONGWANSASINJEOPDAEYEONGBINGAK",
       "ND_13_TEMPLE_YEONGMYEONGSA",
-      "ND_15_SCENIC_GAEMAGOWONSAMSUGAPSAN"
+      "ND_15_STUPA_DEOKWONJUSEONGSAMCHEUNGSEOKTAP"
      ],
      "steps": [
-      "1) 선천: 마을 사람들의 일을 거들며 솜씨를 보인다",
+      "1) 철산 차련관 사신 접대 영빈각: 절경 앞에서 마음을 비우고 수련한다",
       "2) 영명사: 주지와 법담을 나누며 수행한다",
-      "3) 개마고원 삼수갑산: 절경 앞에서 마음을 비우고 수련한다"
+      "3) 덕원 주성 삼층석탑: 탑돌이를 하며 발원한다"
      ]
     },
     {
      "id": "promo_cp_c64_5",
      "tier": 5,
-     "name": "[장화] 5등급 승급 — 대단원 — 송광사",
-     "lore": "팔도를 두루 거쳐 송광사에 이르러야 장화의 서사가 완성된다. 《장화홍련전》의 맏딸.",
+     "name": "[장화] 5등급 승급 — 대단원 — 문경 봉암사 지증대사탑비",
+     "lore": "팔도를 두루 거쳐 문경 봉암사 지증대사탑비에 이르러야 장화의 서사가 완성된다. 《장화홍련전》의 맏딸.",
      "min_rank": 5,
-     "trigger_node": "ND_14_TOWN_SEONCHEON",
+     "trigger_node": "ND_14_SCENIC_CHEOLSANCHARYEONGWANSASINJEOPDAEYEONGBINGAK",
      "requires": {
       "in_party": true,
       "knowledge": {
@@ -7705,16 +7705,16 @@
       }
      },
      "route": [
-      "ND_14_TOWN_SEONCHEON",
+      "ND_14_SCENIC_CHEOLSANCHARYEONGWANSASINJEOPDAEYEONGBINGAK",
       "ND_15_TEMPLE_GWIJUSA",
       "ND_03_TEMPLE_BAEKDAMSA",
-      "ND_08_TEMPLE_SONGGWANGSA"
+      "ND_09_SCENIC_MUNGYEONGBONGAMSAJIJEUNGDAESATAPBI"
      ],
      "steps": [
-      "1) 선천: 마을 사람들의 일을 거들며 솜씨를 보인다",
+      "1) 철산 차련관 사신 접대 영빈각: 절경 앞에서 마음을 비우고 수련한다",
       "2) 귀주사: 주지와 법담을 나누며 수행한다",
       "3) 백담사: 주지와 법담을 나누며 수행한다",
-      "4) 송광사: 주지와 법담을 나누며 수행한다"
+      "4) 문경 봉암사 지증대사탑비: 절경 앞에서 마음을 비우고 수련한다"
      ]
     }
    ]
@@ -7905,8 +7905,8 @@
     {
      "id": "promo_cp_namsago_3",
      "tier": 3,
-     "name": "[남사고] 3등급 승급 — 익산 미륵사지 석탑에 남은 자취",
-     "lore": "남사고의 사연이 익산 미륵사지 석탑으로 이어진다. 손때 묻은 물건에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[남사고] 3등급 승급 — 전주 산신각 마애칠성도에 남은 자취",
+     "lore": "남사고의 사연이 전주 산신각 마애칠성도로 이어진다. 손때 묻은 물건에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_09_CITY_GYEONGJUBU",
      "requires": {
@@ -7917,20 +7917,20 @@
      },
      "route": [
       "ND_09_CITY_GYEONGJUBU",
-      "ND_07_STUPA_IKSANMIREUKSAJISEOKTAP",
-      "ND_09_TOMB_GYEONGJUDAEREUNGWON"
+      "ND_07_SCENIC_JEONJUSANSINGAKMAAECHILSEONGDO",
+      "ND_09_SCENIC_YEONGILJUNGSEONGRISINRABI"
      ],
      "steps": [
       "1) 경주부: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 익산 미륵사지 석탑: 탑돌이를 하며 발원한다",
-      "3) 경주 대릉원: 능역을 참배하고 비문을 탁본한다"
+      "2) 전주 산신각 마애칠성도: 절경 앞에서 마음을 비우고 수련한다",
+      "3) 영일 중성리 신라비: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_namsago_4",
      "tier": 4,
      "name": "[남사고] 4등급 승급 — 「풍수 명당」 재현",
-     "lore": "이름이 알려진 남사고에게 「풍수 명당」을 온전히 펼칠 시험이 찾아온다. 익산·영월 장릉을 거치며 스스로를 증명해야 한다.",
+     "lore": "이름이 알려진 남사고에게 「풍수 명당」을 온전히 펼칠 시험이 찾아온다. 전주 관아 동헌 현판 및 옥인·강릉 방어 성곽 진호비를 거치며 스스로를 증명해야 한다.",
      "min_rank": 4,
      "trigger_node": "ND_09_CITY_GYEONGJUBU",
      "requires": {
@@ -7941,20 +7941,20 @@
      },
      "route": [
       "ND_09_CITY_GYEONGJUBU",
-      "ND_07_TOWN_IKSAN",
-      "ND_04_TOMB_YEONGWOLJANGREUNG"
+      "ND_07_SCENIC_JEONJUGWANADONGHEONHYEONPANMITOKIN",
+      "ND_04_SCENIC_GANGREUNGBANGEOSEONGGWAKJINHOBI"
      ],
      "steps": [
       "1) 경주부: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 익산: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "3) 영월 장릉: 능역을 참배하고 비문을 탁본한다"
+      "2) 전주 관아 동헌 현판 및 옥인: 절경 앞에서 마음을 비우고 수련한다",
+      "3) 강릉 방어 성곽 진호비: 절경 앞에서 마음을 비우고 수련한다"
      ]
     },
     {
      "id": "promo_cp_namsago_5",
      "tier": 5,
-     "name": "[남사고] 5등급 승급 — 백두산 천지에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 백두산 천지에 이르러야 남사고의 서사가 완성된다. ",
+     "name": "[남사고] 5등급 승급 — 울진 봉평리 신라비에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 울진 봉평리 신라비에 이르러야 남사고의 서사가 완성된다. ",
      "min_rank": 5,
      "trigger_node": "ND_09_CITY_GYEONGJUBU",
      "requires": {
@@ -7965,15 +7965,15 @@
      },
      "route": [
       "ND_09_CITY_GYEONGJUBU",
-      "ND_05_SPRING_SUANBOONCHEON",
-      "ND_02_TOMB_HEONREUNG",
-      "ND_16_SCENIC_BAEKDUSANCHEONJI"
+      "ND_05_SCENIC_MUNGYEONGBANGEOSEONGGWAKJINHOBI",
+      "ND_02_SHRINE_DANGJINSINRISEONGJIDABEULRWIJUGYOYUPUM",
+      "ND_04_SCENIC_ULJINBONGPYEONGRISINRABI"
      ],
      "steps": [
       "1) 경주부: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 수안보온천: 온천에서 몸과 기운을 다스린다",
-      "3) 헌릉: 능역을 참배하고 비문을 탁본한다",
-      "4) 백두산 천지: 절경 앞에서 마음을 비우고 수련한다"
+      "2) 문경 방어 성곽 진호비: 절경 앞에서 마음을 비우고 수련한다",
+      "3) 당진 신리성지 다블뤼 주교 유품: 제를 올려 신령의 뜻을 묻는다",
+      "4) 울진 봉평리 신라비: 절경 앞에서 마음을 비우고 수련한다"
      ]
     }
    ]
@@ -8032,18 +8032,18 @@
      },
      "route": [
       "ND_02_CITY_GWANGJUYUSUBU",
-      "ND_02_TOWN_YANGPYEONG"
+      "ND_02_TOWN_JINWIHYEONCHISOPYEONGTAEK"
      ],
      "steps": [
       "1) 광주유수부: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 양평: 마을 사람들의 일을 거들며 솜씨를 보인다"
+      "2) 진위현 치소(평택): 마을 사람들의 일을 거들며 솜씨를 보인다"
      ]
     },
     {
      "id": "promo_cp_sinyunbok_3",
      "tier": 3,
-     "name": "[혜원 신윤복] 3등급 승급 — 회양에 남은 자취",
-     "lore": "혜원 신윤복의 사연이 회양으로 이어진다. 손때 묻은 물건에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
+     "name": "[혜원 신윤복] 3등급 승급 — 인제현 백담사에 남은 자취",
+     "lore": "혜원 신윤복의 사연이 인제현 백담사로 이어진다. 손때 묻은 물건에 얽힌 옛 인연을 찾아 이웃 고을까지 발걸음을 옮긴다.",
      "min_rank": 3,
      "trigger_node": "ND_02_CITY_GWANGJUYUSUBU",
      "requires": {
@@ -8054,13 +8054,13 @@
      },
      "route": [
       "ND_02_CITY_GWANGJUYUSUBU",
-      "ND_03_TOWN_HOEYANG",
-      "ND_02_STATION_YANGJAEYEOK"
+      "ND_03_TOWN_INJEHYEONBAEKDAMSA",
+      "ND_02_STATION_YANGHWANARUYANGHWAJIN"
      ],
      "steps": [
       "1) 광주유수부: 관아와 장터에서 옛 인연을 수소문한다",
-      "2) 회양: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "3) 양재역: 역참에서 팔도 소식을 모은다"
+      "2) 인제현 백담사: 마을 사람들의 일을 거들며 솜씨를 보인다",
+      "3) 양화나루 양화진: 역참에서 팔도 소식을 모은다"
      ]
     },
     {
@@ -8090,8 +8090,8 @@
     {
      "id": "promo_cp_sinyunbok_5",
      "tier": 5,
-     "name": "[혜원 신윤복] 5등급 승급 — 개성부에 새긴 이름",
-     "lore": "팔도를 두루 거쳐 개성부에 이르러야 혜원 신윤복의 서사가 완성된다. ",
+     "name": "[혜원 신윤복] 5등급 승급 — 단천현 은광진에 새긴 이름",
+     "lore": "팔도를 두루 거쳐 단천현 은광진에 이르러야 혜원 신윤복의 서사가 완성된다. ",
      "min_rank": 5,
      "trigger_node": "ND_02_CITY_GWANGJUYUSUBU",
      "requires": {
@@ -8104,13 +8104,13 @@
       "ND_02_CITY_GWANGJUYUSUBU",
       "ND_04_TOWN_JEONGSEON",
       "ND_09_TOWN_YEONGCHEON",
-      "ND_01_CITY_GAESEONGBU"
+      "ND_15_TOWN_DANCHEONHYEONEUNGWANGJIN"
      ],
      "steps": [
       "1) 광주유수부: 관아와 장터에서 옛 인연을 수소문한다",
       "2) 정선: 마을 사람들의 일을 거들며 솜씨를 보인다",
       "3) 영천: 마을 사람들의 일을 거들며 솜씨를 보인다",
-      "4) 개성부: 관아와 장터에서 옛 인연을 수소문한다"
+      "4) 단천현 은광진: 마을 사람들의 일을 거들며 솜씨를 보인다"
      ]
     }
    ]

@@ -171,6 +171,20 @@ func heritage_list() -> Array:
 	return table("01_heritage.json", "heritage")
 
 
+## 한 노드의 유산 전부(국가유산 448 반영으로 한 고을에 여러 유산) — heritage_ids 가 없으면 heritage 하나
+func heritages_at(node_id: String) -> Array:
+	var n := get_row(node_id)
+	var ids: Array = n.get("heritage_ids", [])
+	if ids.is_empty() and String(n.get("heritage", "")) != "":
+		ids = [n["heritage"]]
+	var out := []
+	for id in ids:
+		var h := get_row(String(id))
+		if not h.is_empty():
+			out.append(h)
+	return out
+
+
 func heritage_at(node_id: String) -> Dictionary:
 	var hid := String(get_row(node_id).get("heritage", ""))
 	return get_row(hid) if hid != "" else {}

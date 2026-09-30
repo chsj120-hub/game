@@ -188,6 +188,24 @@ def route(rt, tier, where):
             E(f"{where}: 인접 권역 연계 아님 {regs}")
 
 
+# ================================================================ 국가유산 448 반영: 한 노드 여러 유산 · 발견 조건
+her_by_node = defaultdict(list)
+for h in S["heritage"]:
+    her_by_node[h["node"]].append(h["id"])
+for n in S["nodes"]:
+    ids = n.get("heritage_ids") or ([n["heritage"]] if "heritage" in n else [])
+    if sorted(ids) != sorted(her_by_node.get(n["id"], [])):
+        E(f"node {n['id']}: heritage/heritage_ids 와 01 유산 배치 불일치")
+    dc = n.get("discover")
+    if dc:
+        if not n["hidden"]:
+            E(f"node {n['id']}: 발견 조건(discover)은 은닉 노드만")
+        if dc.get("skill") not in ("search", "gather", "camp", "hunt") or not 0 <= dc.get("sa", 0) <= 10:
+            E(f"node {n['id']}: 발견 조건 {dc}")
+for h in S["heritage"]:
+    if h.get("source") == "heritage450" and h.get("faction") not in ("yu", "bul", "seon", ""):
+        E(f"01 {h['id']}: 계열 {h.get('faction')}")
+
 # ================================================================ 유산
 exp = {"record": {"life_gear"}, "specialty_recipe": {"specialty_recipes"}, "accessory": {"items"}, "equipment": {"items"}, "book": {"items"}}
 for h in S["heritage"]:
