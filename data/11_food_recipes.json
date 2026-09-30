@@ -577,6 +577,112 @@
    "perishable": true
   },
   {
+   "id": "fr_tangpyeongchae",
+   "name": "탕평채",
+   "class": "sura",
+   "tier": 3,
+   "book": "bk_food_sura",
+   "cook_at": [
+    "jumak_gamasot"
+   ],
+   "ingredients": [
+    {
+     "id": "sp_pyeongyang_nokdu",
+     "qty": 2
+    },
+    {
+     "id": "food_beef",
+     "qty": 1
+    },
+    {
+     "id": "sp_yeonan_chamgireum",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "satiety": 48,
+    "battle_buff": {
+     "res_all": 0.1,
+     "duration_battles": 3
+    }
+   },
+   "weight": 0.6,
+   "perishable": true,
+   "note": "청포묵(녹두묵)에 쇠고기·나물을 참기름에 무친 궁중 음식. 영조의 탕평책에서 이름이 나왔다",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "fr_yakgwa",
+   "name": "약과",
+   "class": "sura",
+   "tier": 3,
+   "book": "bk_food_sura",
+   "cook_at": [
+    "jumak_gamasot"
+   ],
+   "ingredients": [
+    {
+     "id": "sp_uiju_jinmal",
+     "qty": 2
+    },
+    {
+     "id": "sp_yeonan_chamgireum",
+     "qty": 1
+    },
+    {
+     "group": "jujube",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "satiety": 40,
+    "heal_pct": 0.1,
+    "battle_buff": {
+     "spd_bonus": 0.05,
+     "duration_battles": 2
+    }
+   },
+   "weight": 0.3,
+   "perishable": false,
+   "note": "밀가루를 참기름에 반죽해 기름에 지진 유밀과. 상하지 않아 먼 길에 좋다",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "fr_yuja_hwachae",
+   "name": "유자화채",
+   "class": "sura",
+   "tier": 3,
+   "book": "bk_food_sura",
+   "cook_at": [
+    "jumak_gamasot"
+   ],
+   "ingredients": [
+    {
+     "id": "sp_namhae_yuja",
+     "qty": 1
+    },
+    {
+     "id": "sp_bongsan_bae",
+     "qty": 1
+    },
+    {
+     "id": "sp_chuncheon_jat",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "satiety": 24,
+    "heal_pct": 0.2,
+    "cure": [
+     "burn"
+    ]
+   },
+   "weight": 0.5,
+   "perishable": true,
+   "note": "유자와 배를 가늘게 채 썰어 꿀물에 띄우고 잣을 얹은 궁중 화채",
+   "generated": "craft_trade"
+  },
+  {
    "id": "fr_miyeokguk",
    "name": "미역국",
    "class": "seomin",

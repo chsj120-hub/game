@@ -488,8 +488,34 @@ func _open_sell() -> void:
 			continue
 		var sid := String(id)
 		var fresh := " · 신선도 %d%%" % int(GameState.freshness[sid]) if GameState.freshness.has(sid) else ""
-		e.append({"text": "%s ×%d%s" % [DataDB.display_name(sid), GameState.count(sid), fresh], "hint": "개당 %d냥" % TradeSystem.sell_price(sid), "cb": func(): TradeSystem.sell(sid)})
-	open_menu("매각 (%s 시세)" % DataDB.display_name(GameState.current_region), e)
+		e.append({"text": "%s ×%d%s" % [DataDB.display_name(sid), GameState.count(sid), fresh], "hint": _sell_hint(sid), "cb": _sell_one.bind(sid), "keep": true})
+	var sat: Dictionary = DataDB.overview.get("trade", {}).get("sell_saturation", {})
+	var head := "매각 (%s 시세)" % DataDB.display_name(GameState.current_region)
+	if not sat.is_empty():
+		e.push_front({"text": "장터 포화: 같은 특산물을 이 장터에서 이번 장(5일)에 팔수록 개당 −%d%% (최저 %d%%). 포화가 크면 다른 장터에 나눠 파세요." % [int(float(sat.get("per_unit", 0.02)) * 100), int(float(sat.get("floor", 0.6)) * 100)]})
+	open_menu(head, e)
+
+
+## "개당 120냥 · 포화 −8% (4개 판매) · 10개 더 팔면 −28%" / 계절 교역 표시
+func _sell_hint(sid: String) -> String:
+	var h := "개당 %d냥" % TradeSystem.sell_price(sid)
+	if DataDB.sheet_of(sid) != "03_specialties.json:specialties":
+		return h
+	var sm := TradeSystem.saturation_mult(sid)
+	if sm < 0.999:
+		h += " · 이 장터 포화 −%d%%" % int(round((1.0 - sm) * 100))
+	var more := mini(GameState.count(sid), 10)
+	if more > 1:
+		h += " · %d개 더 팔면 −%d%%" % [more, int(round((1.0 - TradeSystem.saturation_mult(sid, more)) * 100))]
+	var season := TradeSystem.seasonal_mult(sid)
+	if season > 1.001:
+		h += " · 계절 교역 ×%.2f" % season
+	return h
+
+
+func _sell_one(sid: String) -> void:
+	TradeSystem.sell(sid)
+	_open_sell()
 
 
 func _open_trade() -> void:

@@ -638,6 +638,34 @@
    "generated": "craft_trade"
   },
   {
+   "id": "sp_haeju_songyeonmuk",
+   "name": "해주 송연먹",
+   "region": "MAP_12",
+   "node": "ND_12_CITY_HAEJUMOK",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "weight": 0.3,
+   "real_name": "해주 송연묵(松煙墨)",
+   "desc": "송연을 어교와 반죽해 틀에 박고 오래 말린 먹. 해주 먹은 결이 곱고 향이 맑아 사대부와 사신 예물로 귀히 쓰였다.",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_hansan_mosi_jeoksam",
+   "name": "한산 모시 적삼",
+   "region": "MAP_06",
+   "node": "ND_06_TOWN_BUYEO",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "weight": 0.5,
+   "real_name": "한산 세모시 적삼",
+   "desc": "한산 모시로 지은 여름 홑저고리. 풀을 먹여 다듬이질하면 잠자리 날개처럼 비친다.",
+   "generated": "craft_trade"
+  },
+  {
    "id": "sp_jeonju_hanji_g1",
    "name": "전주 한지 상품",
    "region": "MAP_07",
@@ -1432,6 +1460,42 @@
     }
    ],
    "generated": "craft_trade"
+  },
+  {
+   "id": "spr_haeju_muk",
+   "name": "【해주 먹방 비전서】",
+   "tier": 3,
+   "produces": "sp_haeju_songyeonmuk",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_songyeon",
+     "qty": 4
+    },
+    {
+     "id": "mat_fish_glue",
+     "qty": 2
+    }
+   ],
+   "generated": "craft_trade"
+  },
+  {
+   "id": "spr_hansan_jeoksam",
+   "name": "【한산 모시 침선 비전서】",
+   "tier": 3,
+   "produces": "sp_hansan_mosi_jeoksam",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "sp_hansan_mosi",
+     "qty": 3
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 1
+    }
+   ],
+   "generated": "craft_trade"
   }
  ],
  "trade_quests": [
@@ -1558,6 +1622,30 @@
    "to": "ND_13_CITY_PYEONGYANGBU",
    "margin": 1.8,
    "tier": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_06",
+   "name": "해주 먹 한양 진상",
+   "item": "sp_haeju_meok",
+   "qty": 5,
+   "from": "ND_12_CITY_HAEJUMOK",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 3,
+   "reward_item": "spr_haeju_muk",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_07",
+   "name": "한산 모시 한양 진상",
+   "item": "sp_hansan_mosi",
+   "qty": 10,
+   "from": "ND_06_TOWN_BUYEO",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 2,
+   "reward_item": "spr_hansan_jeoksam",
    "generated": "craft_trade"
   },
   {

@@ -95,6 +95,18 @@ CRAFTED = [  # 특산 제작품 + 비전서(무역 퀘스트 보상)
      "recipe": {"id": "spr_tongyeong_gat", "name": "【통영 갓방 비전서】", "tier": 3, "produces": "sp_tongyeong_gat", "facility": "gongbang",
                 "materials": [{"id": "sp_jeju_malchong", "qty": 3}, {"id": "mat_bamboo", "qty": 2}, {"id": "mat_lacquer", "qty": 1}]}},
 ]
+CRAFTED += [
+    {"sp": {"id": "sp_haeju_songyeonmuk", "name": "해주 송연먹", "region": "MAP_12", "node": "ND_12_CITY_HAEJUMOK", "kind": "crafted", "tier": 3,
+            "base_price": 540, "dev_level": 0, "weight": 0.3, "real_name": "해주 송연묵(松煙墨)",
+            "desc": "송연을 어교와 반죽해 틀에 박고 오래 말린 먹. 해주 먹은 결이 곱고 향이 맑아 사대부와 사신 예물로 귀히 쓰였다."},
+     "recipe": {"id": "spr_haeju_muk", "name": "【해주 먹방 비전서】", "tier": 3, "produces": "sp_haeju_songyeonmuk", "facility": "gongbang",
+                "materials": [{"id": "mat_songyeon", "qty": 4}, {"id": "mat_fish_glue", "qty": 2}]}},
+    {"sp": {"id": "sp_hansan_mosi_jeoksam", "name": "한산 모시 적삼", "region": "MAP_06", "node": "ND_06_TOWN_BUYEO", "kind": "crafted", "tier": 3,
+            "base_price": 540, "dev_level": 0, "weight": 0.5, "real_name": "한산 세모시 적삼",
+            "desc": "한산 모시로 지은 여름 홑저고리. 풀을 먹여 다듬이질하면 잠자리 날개처럼 비친다."},
+     "recipe": {"id": "spr_hansan_jeoksam", "name": "【한산 모시 침선 비전서】", "tier": 3, "produces": "sp_hansan_mosi_jeoksam", "facility": "gongbang",
+                "materials": [{"id": "sp_hansan_mosi", "qty": 3}, {"id": "mat_silk_thread", "qty": 1}]}},
+]
 STOCK_OVERRIDE = {"sp_uiju_dambi_g1": 5}   # R5 자유 무역 상한 조정
 
 # ---------------------------------------------------------------- 초반 무역 · 보부상 위탁 (공백 권역)
@@ -107,6 +119,10 @@ TRADE_QUESTS = [
      "to": "ND_02_CITY_HANYANGGYEONGJO", "margin": 1.8, "tier": 1},
     {"id": "tq_ct_04", "name": "의주 진말 평양 운송", "item": "sp_uiju_jinmal", "qty": 20, "from": "ND_14_CITY_UIJUMOK",
      "to": "ND_13_CITY_PYEONGYANGBU", "margin": 1.8, "tier": 1},
+    {"id": "tq_ct_06", "name": "해주 먹 한양 진상", "item": "sp_haeju_meok", "qty": 5, "from": "ND_12_CITY_HAEJUMOK",
+     "to": "ND_02_CITY_HANYANGGYEONGJO", "margin": 1.8, "tier": 3, "reward_item": "spr_haeju_muk"},
+    {"id": "tq_ct_07", "name": "한산 모시 한양 진상", "item": "sp_hansan_mosi", "qty": 10, "from": "ND_06_TOWN_BUYEO",
+     "to": "ND_02_CITY_HANYANGGYEONGJO", "margin": 1.8, "tier": 2, "reward_item": "spr_hansan_jeoksam"},
     {"id": "tq_ct_05", "name": "가덕 대구 감영 진상", "item": "sp_gadeok_daegu", "qty": 20, "from": "ND_10_TOWN_GIMHAE",
      "to": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG", "margin": 1.8, "tier": 1},
     # 보부상 위탁(consign): 밑천 없이 짐을 받아 나르고 운임(대금 × margin) — 매 장(5일) 반복
@@ -131,7 +147,9 @@ NEW_FOODS = [
     {"id": "food_kongnamul", "name": "콩나물", "kind": "ingredient", "tier": 1, "price": 3, "weight": 0.5, "perishable": True,
      "note": "콩나물국밥·비빔밥 재료"},
 ]
-NEW_MATS = [{"id": "mat_jang", "name": "장(간장·된장)", "tier": 1, "price": 6, "weight": 1.0}]
+NEW_MATS = [{"id": "mat_jang", "name": "장(간장·된장)", "tier": 1, "price": 6, "weight": 1.0},
+            {"id": "mat_songyeon", "name": "송연(松煙)", "tier": 1, "price": 6, "weight": 0.3,
+             "note": "소나무를 태워 받은 그을음. 먹의 재료", "real_name": "송연(松煙)", "desc": "관솔을 태운 그을음을 모은 것. 아교(어교)와 반죽해 먹을 만든다."}]
 
 # 요리: id → (등급, 재료, 효과 변경)   g() = 공용 재료군
 def g(group, qty):
@@ -165,6 +183,18 @@ FOOD = {
     "fr_sinseollo": (4, [i("food_beef", 1), i("food_pheasant", 1), i("sp_gadeok_daegu", 1), i("sp_chuncheon_jat", 1)], None),
 }
 NEW_DISHES = [  # 미사용 재료 활용 + 신규 특산 활용
+    {"id": "fr_tangpyeongchae", "name": "탕평채", "class": "sura", "tier": 3, "book": "bk_food_sura", "cook_at": ["jumak_gamasot"],
+     "ingredients": [i("sp_pyeongyang_nokdu", 2), i("food_beef", 1), i("sp_yeonan_chamgireum", 1)],
+     "effect": {"satiety": 48, "battle_buff": {"res_all": 0.1, "duration_battles": 3}}, "weight": 0.6, "perishable": True,
+     "note": "청포묵(녹두묵)에 쇠고기·나물을 참기름에 무친 궁중 음식. 영조의 탕평책에서 이름이 나왔다"},
+    {"id": "fr_yakgwa", "name": "약과", "class": "sura", "tier": 3, "book": "bk_food_sura", "cook_at": ["jumak_gamasot"],
+     "ingredients": [i("sp_uiju_jinmal", 2), i("sp_yeonan_chamgireum", 1), g("jujube", 1)],
+     "effect": {"satiety": 40, "heal_pct": 0.1, "battle_buff": {"spd_bonus": 0.05, "duration_battles": 2}}, "weight": 0.3, "perishable": False,
+     "note": "밀가루를 참기름에 반죽해 기름에 지진 유밀과. 상하지 않아 먼 길에 좋다"},
+    {"id": "fr_yuja_hwachae", "name": "유자화채", "class": "sura", "tier": 3, "book": "bk_food_sura", "cook_at": ["jumak_gamasot"],
+     "ingredients": [i("sp_namhae_yuja", 1), i("sp_bongsan_bae", 1), i("sp_chuncheon_jat", 1)],
+     "effect": {"satiety": 24, "heal_pct": 0.2, "cure": ["burn"]}, "weight": 0.5, "perishable": True,
+     "note": "유자와 배를 가늘게 채 썰어 꿀물에 띄우고 잣을 얹은 궁중 화채"},
     {"id": "fr_miyeokguk", "name": "미역국", "class": "seomin", "tier": 2, "book": "bk_food_jumak", "cook_at": ["jumak_gamasot", "campfire"],
      "ingredients": [i("sp_jeju_miyeok", 1), i("food_beef", 1), i("mat_jang", 1)], "effect": {"satiety": 44, "heal_pct": 0.15}, "weight": 0.6, "perishable": True},
     {"id": "fr_dotorimuk", "name": "도토리묵", "class": "seomin", "tier": 2, "book": "bk_food_campfire", "cook_at": ["campfire", "jumak_gamasot"],
@@ -181,6 +211,8 @@ NEW_DISHES = [  # 미사용 재료 활용 + 신규 특산 활용
      "ingredients": [i("food_white_deer", 1), i("mat_salt", 2), i("mat_jang", 1)],
      "effect": {"satiety": 100, "battle_buff": {"atk_pct": 0.15, "def_pct": 0.15, "duration_battles": 3}}, "weight": 0.3, "perishable": False},
 ]
+YUJACHA = {"id": "hr_yujacha", "name": "유자차", "form": "탕약", "tier": 1, "book": "bk_med_dongui",
+           "ingredients": [i("sp_namhae_yuja", 1), i("herb_saenggang", 1)], "effect": {"heal_pct": 0.08, "cure": ["frost"]}, "battle_usable": True}
 GALGEUN = {"id": "hr_galgeun", "name": "갈근탕", "form": "탕약", "tier": 1, "book": "bk_med_dongui",
            "ingredients": [i("food_kudzu", 2), i("herb_saenggang", 1), i("herb_daechu", 1)], "effect": {"heal_pct": 0.1}, "battle_usable": False}
 
@@ -317,13 +349,14 @@ def main():
                 if x.get("id") == "herb_insam":
                     x["id"] = "sp_gaeseong_insam"
     rs.append({**GALGEUN, "generated": TAG})
+    rs.append({**YUJACHA, "generated": TAG})
     doc["recipes"] = rs
     save("09_herbal_recipes.json", doc)
 
     # --- 15 비전서 해금
     doc = load("15_recipe_books.json")
-    add = {"bk_food_jumak": ["fr_miyeokguk"], "bk_food_campfire": ["fr_dotorimuk", "fr_songgitteok", "fr_sanjeok"], "bk_food_bukgwan": ["fr_ungjang", "fr_nokpo"],
-           "bk_med_dongui": ["hr_galgeun"]}
+    add = {"bk_food_sura": ["fr_tangpyeongchae", "fr_yakgwa", "fr_yuja_hwachae"], "bk_food_jumak": ["fr_miyeokguk"], "bk_food_campfire": ["fr_dotorimuk", "fr_songgitteok", "fr_sanjeok"], "bk_food_bukgwan": ["fr_ungjang", "fr_nokpo"],
+           "bk_med_dongui": ["hr_galgeun", "hr_yujacha"]}
     for b in doc["books"]:
         for x in add.get(b["id"], []):
             if x not in b["unlocks"]:
@@ -333,8 +366,10 @@ def main():
     # --- 18 감기 치료: 갈근탕
     doc = load("18_status_effects.json")
     for f in doc["field"]:
-        if f["id"] == "cold" and "hr_galgeun" not in f["cure_by"]:
-            f["cure_by"].insert(1, "hr_galgeun")
+        if f["id"] == "cold":
+            for x in ("hr_galgeun", "hr_yujacha"):
+                if x not in f["cure_by"]:
+                    f["cure_by"].insert(1, x)
     save("18_status_effects.json", doc)
 
     # --- 00 개요: 재료군·대체 규칙, 등급별 물량

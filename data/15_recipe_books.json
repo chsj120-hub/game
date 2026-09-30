@@ -116,7 +116,10 @@
     "fr_yaksik",
     "fr_gungjung_tteokbokki",
     "fr_daehajjim",
-    "fr_sinseollo"
+    "fr_sinseollo",
+    "fr_tangpyeongchae",
+    "fr_yakgwa",
+    "fr_yuja_hwachae"
    ]
   },
   {
@@ -133,7 +136,8 @@
    "unlocks": [
     "hr_ssanghwa",
     "hr_haedok",
-    "hr_galgeun"
+    "hr_galgeun",
+    "hr_yujacha"
    ]
   },
   {

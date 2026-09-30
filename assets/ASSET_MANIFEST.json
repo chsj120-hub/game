@@ -1,7 +1,7 @@
 {
  "_about": "tools/gen_asset_manifest.py 생성. 게임은 파일이 없으면 절차적 그리기로 대체하므로 어떤 순서로 넣어도 된다. 규격은 spec, 경로는 path 그대로.",
  "summary": {
-  "total": 813,
+  "total": 822,
   "present": 17,
   "by_kind": {
    "region_map": 17,
@@ -11,7 +11,7 @@
    "overworld": 1,
    "marker": 30,
    "portrait": 91,
-   "icon": 490,
+   "icon": 499,
    "sprite": 73,
    "ui_9patch": 2,
    "minigame": 24
@@ -7090,6 +7090,18 @@
    "exists": false
   },
   {
+   "path": "res://assets/icons/items/hr_yujacha.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "유자차 아이콘",
+   "ref": "hr_yujacha",
+   "exists": false
+  },
+  {
    "path": "res://assets/icons/items/herb_gamcho.png",
    "kind": "icon",
    "spec": {
@@ -7531,6 +7543,42 @@
    },
    "use": "신선로 아이콘",
    "ref": "fr_sinseollo",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_tangpyeongchae.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "탕평채 아이콘",
+   "ref": "fr_tangpyeongchae",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_yakgwa.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "약과 아이콘",
+   "ref": "fr_yakgwa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/fr_yuja_hwachae.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "유자화채 아이콘",
+   "ref": "fr_yuja_hwachae",
    "exists": false
   },
   {
@@ -8506,6 +8554,18 @@
    "exists": false
   },
   {
+   "path": "res://assets/icons/items/mat_songyeon.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "송연(松煙) 아이콘",
+   "ref": "mat_songyeon",
+   "exists": false
+  },
+  {
    "path": "res://assets/icons/items/food_rice.png",
    "kind": "icon",
    "spec": {
@@ -9298,6 +9358,30 @@
    "exists": false
   },
   {
+   "path": "res://assets/icons/items/sp_haeju_songyeonmuk.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "해주 송연먹 아이콘",
+   "ref": "sp_haeju_songyeonmuk",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/sp_hansan_mosi_jeoksam.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "한산 모시 적삼 아이콘",
+   "ref": "sp_hansan_mosi_jeoksam",
+   "exists": false
+  },
+  {
    "path": "res://assets/icons/items/sp_jeonju_hanji_g1.png",
    "kind": "icon",
    "spec": {
@@ -9847,6 +9931,30 @@
    },
    "use": "【통영 갓방 비전서】 아이콘",
    "ref": "spr_tongyeong_gat",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_haeju_muk.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【해주 먹방 비전서】 아이콘",
+   "ref": "spr_haeju_muk",
+   "exists": false
+  },
+  {
+   "path": "res://assets/icons/items/spr_hansan_jeoksam.png",
+   "kind": "icon",
+   "spec": {
+    "size": "256x256 정사각, 단색 한지 배경",
+    "format": "PNG 32-bit",
+    "import": "Lossless, Mipmaps on"
+   },
+   "use": "【한산 모시 침선 비전서】 아이콘",
+   "ref": "spr_hansan_jeoksam",
    "exists": false
   }
  ]

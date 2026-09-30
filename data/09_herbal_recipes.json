@@ -317,6 +317,31 @@
    },
    "battle_usable": false,
    "generated": "craft_trade"
+  },
+  {
+   "id": "hr_yujacha",
+   "name": "유자차",
+   "form": "탕약",
+   "tier": 1,
+   "book": "bk_med_dongui",
+   "ingredients": [
+    {
+     "id": "sp_namhae_yuja",
+     "qty": 1
+    },
+    {
+     "id": "herb_saenggang",
+     "qty": 1
+    }
+   ],
+   "effect": {
+    "heal_pct": 0.08,
+    "cure": [
+     "frost"
+    ]
+   },
+   "battle_usable": true,
+   "generated": "craft_trade"
   }
  ]
 }
