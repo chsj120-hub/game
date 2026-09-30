@@ -4,7 +4,8 @@
 추가 설치 없음(파이썬 3.8+ 표준 라이브러리만 사용). 쉬운 설명은 docs/AI_에셋_제작_가이드.txt 참고.
 
 자주 쓰는 명령
-  python3 tools/comfy_batch.py --check                         연결·모델 확인
+  python3 tools/comfy_batch.py --check                         연결·모델 확인 + 추천 프리셋 안내
+  python3 tools/comfy_batch.py --preset mini16                 맥 미니 메모리별 추천 설정(mini8 / mini16 / standard)
   python3 tools/comfy_batch.py --set ckpt=sd_xl_base_1.0.safetensors   설정 저장(tools/comfy_config.json)
   python3 tools/comfy_batch.py maps --ids MAP_08 --test 4      스타일 시험: 시드 4개 → assets/_drafts/
   python3 tools/comfy_batch.py maps                            본 생성(이미 있는 파일은 건너뜀)
@@ -43,6 +44,13 @@ DEFAULTS = {
     "map_depth_strength": 0.5,        # 지도: 고도(depth) 고정 강도
     "canny_low": 0.15, "canny_high": 0.45,
     "low_memory": False,              # True = 작은 해상도로 생성(GTX 1060 6GB 등)
+}
+
+# 컴퓨터별 추천 묶음 (--preset 이름) — 맥 미니 M1/M2 기준으로 조정
+PRESETS = {
+    "mini8":    {"low_memory": True, "steps": 22, "map_depth_strength": 0.0},   # 맥 미니 메모리 8GB: 작은 해상도·depth 끔
+    "mini16":   {"low_memory": True, "steps": 25, "map_depth_strength": 0.5},   # 맥 미니 메모리 16GB 이상
+    "standard": {"low_memory": False, "steps": 30, "map_depth_strength": 0.5},  # 메모리 32GB 이상(M1 Max·M2 Pro 등)
 }
 
 # kind → (생성 폭, 높이), (저메모리 폭, 높이), (최종 폭, 높이)  — 모두 최종 비율과 정확히 같음
@@ -269,8 +277,14 @@ def check(cfg):
     c = Comfy(cfg["server"])
     print(f"✓ ComfyUI 연결: {c.base}")
     stats = c.get_json("/system_stats")
+    mem = 0
     for d in stats.get("devices", []):
+        mem = max(mem, d.get("vram_total", 0) / 2**30)
         print(f"  장치: {d.get('name')} · 메모리 {d.get('vram_total', 0) / 2**30:.1f} GB")
+    if mem:
+        rec = "mini8" if mem < 12 else "mini16" if mem < 28 else "standard"
+        cur = next((k for k, v in PRESETS.items() if all(cfg.get(x) == y for x, y in v.items())), None)
+        print(f"  추천 설정: {rec}" + ("  (적용됨)" if cur == rec else f"  → python3 tools/comfy_batch.py --preset {rec}"))
     ok = True
     for label, node, field, key in (("기본 모델", "CheckpointLoaderSimple", "ckpt_name", "ckpt"),
                                     ("ControlNet", "ControlNetLoader", "control_net_name", "controlnet"),
@@ -305,9 +319,14 @@ def main():
     ap.add_argument("--check", action="store_true", help="연결·모델 파일 점검")
     ap.add_argument("--set", nargs="*", metavar="키=값", help="설정 저장 (예: --set cfg=6.5 seed=42 low_memory=true)")
     ap.add_argument("--show", action="store_true", help="현재 설정 보기")
+    ap.add_argument("--preset", choices=sorted(PRESETS), help="컴퓨터별 추천 설정 저장: mini8 / mini16 / standard")
     a = ap.parse_args()
 
     cfg = load_cfg()
+    if a.preset:
+        cfg.update(PRESETS[a.preset])
+        save_cfg(cfg)
+        print(f"✓ 추천 설정 '{a.preset}' 적용:", ", ".join(f"{k}={v}" for k, v in PRESETS[a.preset].items()))
     if a.set:
         for kv in a.set:
             k, _, v = kv.partition("=")
