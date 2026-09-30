@@ -132,10 +132,12 @@ static func resolve_stage(eid: String, result: Dictionary) -> void:
 	if s.has("choices") and result.has("choice"):
 		for c in s["choices"]:
 			if c["id"] == result["choice"]:
-				var fx: Dictionary = c.get("effects", {})
-				for k in fx.get("knowledge_xp", {}).keys():
-					gs.add_knowledge_xp(k, int(fx["knowledge_xp"][k]))
-				gs.events_state[eid]["money_mult"] = float(fx.get("money_mult", 1.0))
+				if DialogueSystem.check_req(c.get("req", {})) != "":
+					gs.note("그 선택지는 조건이 맞지 않습니다.")
+					return
+				gs.flags["choice:%s:%d" % [eid, int(gs.events_state[eid].get("stage", 0))]] = String(c["id"])
+				var got := DialogueSystem.apply_effects(c.get("effects", {}))  # 지식·엽전·물품·플래그·명성 (24_story 와 같은 효과 키)
+				gs.events_state[eid]["money_mult"] = float(got.get("money_mult", 1.0))
 	gs.events_state[eid]["stage"] = int(gs.events_state[eid]["stage"]) + 1
 	gs.bump("event_stage")
 	if current_stage(eid).is_empty():

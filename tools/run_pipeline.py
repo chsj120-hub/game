@@ -24,6 +24,7 @@ STEPS = [
     ("gen_systematic", [], "build"),           # 4·5등급 세트·모작·포획구
     ("db15/audit_fix", [], "build"),           # DB-15 원본 점검(동료 병합 전제)
     ("db15/merge_companions", [], "build"),    # 동료·스킬 병합
+    ("gen_story", [], "build"),                # 대화·서사 초안 + data_src/story/edits 병합 → 24_story (레시피·전설 퀘스트, 미니게임 변형)
     ("economy_sim", ["--write", "--players", "300"], "build"),   # 신분 임계·도 명성 요건 재보정(데이터에 기록)
     ("validate_data", [], "check"),
     ("balance_sim", ["--trials", "150"], "sim"),
@@ -32,6 +33,7 @@ STEPS = [
     ("trade_sim", [], "check"),
     ("gen_asset_manifest", [], "out"),
     ("export_xlsx", [], "out"),
+    ("story_tool", ["export"], "out"),         # docs/대화_서사.xlsx (대사·선택지 한 줄씩 — 고친 뒤 story_tool import)
     ("report_heritage450", [], "out"),
     ("db15/audit_fix", [], "out"),             # 점검 문구(신분 임계 인용)를 방금 보정한 값으로 갱신
 ]

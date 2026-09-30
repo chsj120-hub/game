@@ -18,7 +18,7 @@ ACTIONS = {"talk", "choice", "minigame", "deliver", "battle", "instance"}
 CONDS = {"ack", "counter", "visited", "at_node", "has_item", "event_progress"}
 COUNTERS = {"open_facilities", "open_map", "buy", "sell", "craft", "unpack", "heritage", "battle_win", "trade_accept", "trade_done",
             "save", "event_stage", "gather", "camp"}
-EFFECT_KEYS = {"knowledge_xp", "money_mult"}
+EFFECT_KEYS = {"knowledge_xp", "money_mult", "money", "give", "take", "flag"}  # 24_story 대화 효과와 같은 키(명성 제외)
 
 
 def _load(n):
@@ -139,7 +139,7 @@ def load_file(path, world):
                 for c in ch_:
                     for k in c.get("effects", {}):
                         if k not in EFFECT_KEYS:
-                            errs.append(f"{sw}: 선택 효과 '{k}' (가능: knowledge_xp, money_mult)")
+                            errs.append(f"{sw}: 선택 효과 '{k}' (가능: {', '.join(sorted(EFFECT_KEYS))})")
             if a == "minigame" and st.get("minigame") not in world.ids:
                 errs.append(f"{sw}: 미니게임 {st.get('minigame')} 없음")
             if a == "deliver" and st.get("item") not in world.ids:

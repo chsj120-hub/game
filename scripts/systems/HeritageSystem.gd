@@ -21,14 +21,37 @@ static func reward_type_label(t: String) -> String:
 	return t
 
 
-## 답사에 필요한 미니게임 (은닉 유형 기본값 / 유산 지정값). 없으면 ""
+## 답사에 필요한 미니게임: 유산 지정값 → 24 시트 유산별 변형(mg_variants) → 은닉 유형 기본값. 없으면 ""
 static func required_minigame(her: Dictionary) -> String:
 	if her.has("minigame"):
 		return String(her["minigame"])
+	var v := DataDB.mg_variant(String(her.get("id", "")))
+	if not v.is_empty():
+		return String(v.get("minigame", ""))
 	if not her.get("hidden", false) and String(her.get("node_type", "")) in ["city", "temple", "fort", "scenic"]:
 		return ""
 	var d: Dictionary = DataDB.docs.get("21_minigames.json", {}).get("node_type_default", {})
 	return String(d.get(String(her.get("node_type", "")), ""))
+
+
+## 유산별 미니게임 내용 덮어쓰기(문항·단계·난이도). 같은 미니게임을 유산마다 다르게 — MinigameBase.create_from_catalog(id, overrides)
+static func minigame_overrides(her_id: String) -> Dictionary:
+	var her := DataDB.get_row(her_id)
+	var v := DataDB.mg_variant(her_id)
+	if v.is_empty() or String(v.get("minigame", "")) != required_minigame(her):
+		return {}
+	var o: Dictionary = v.get("params", {}).duplicate()
+	o["_title"] = String(her.get("name", ""))
+	return o
+
+
+## 전설 퀘스트 잠금 사유("" = 없음)
+static func lore_lock(her_id: String) -> String:
+	var qid := DataDB.lore_gate(her_id)
+	if qid == "" or qid in GameState.completed_quests:
+		return ""
+	var st := "진행 중" if GameState.active_quests.has(qid) else "[퀘스트]에서 수락"
+	return "「%s」 전설을 먼저 따라가야 모습을 드러냅니다 — %s" % [DataDB.display_name(qid), st]
 
 
 static func can_visit(her_id: String) -> String:
@@ -40,6 +63,9 @@ static func can_visit(her_id: String) -> String:
 		return "%s 에 가야 답사할 수 있습니다." % DataDB.display_name(String(her.get("node", "")))
 	if gs.heritage_state.has(her_id):
 		return "이미 답사한 유산입니다."
+	var ll := lore_lock(her_id)
+	if ll != "":
+		return ll
 	if int(gs.investigate_retry.get(gs.current_node, 0)) > gs.minutes:
 		return "조사 흔적이 흐트러졌습니다 — 반나절 뒤 다시 시도하세요."
 	var mg := required_minigame(her)

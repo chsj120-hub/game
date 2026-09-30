@@ -27,6 +27,7 @@ const SHEETS := {
 	"20_events.json": ["events", "main_scenarios"],
 	"21_minigames.json": ["minigames"],
 	"23_tutorial.json": ["scenarios", "steps", "help"],
+	"24_story.json": ["quests", "minigames"],
 }
 
 var overview: Dictionary = {}
@@ -289,3 +290,18 @@ func events() -> Array:
 
 func main_scenarios() -> Array:
 	return table("20_events.json", "main_scenarios")
+
+
+## 24 시트: 대화·서사 퀘스트(레시피 비전 전수·전설)
+func story_quests() -> Array:
+	return table("24_story.json", "quests")
+
+
+## 유산별 미니게임 변형 {minigame, params} (없으면 {})
+func mg_variant(her_id: String) -> Dictionary:
+	return docs.get("24_story.json", {}).get("mg_variants", {}).get(her_id, {})
+
+
+## 전설 퀘스트로 잠긴 유산 → 퀘스트 id ("" = 잠금 없음)
+func lore_gate(her_id: String) -> String:
+	return String(docs.get("24_story.json", {}).get("lore_gate", {}).get(her_id, ""))

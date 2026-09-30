@@ -24,7 +24,10 @@ func _setup() -> void:
 	if params.get("quality_bonus", false):  # 대장간: 공 지식 랭크당 명중대 +5%
 		zone *= 1.0 + GameState.life_effect("gong", "forge_window")
 	spd = float(params.get("speed", 1.2))
-	rnd.randomize()
+	if params.has("seed"):  # 유산별 변형: 명중대 위치 고정
+		rnd.seed = int(params["seed"])
+	else:
+		rnd.randomize()
 	zone_c = rnd.randf_range(0.25, 0.75)
 	instruction = "커서가 금빛 명중대에 들어올 때 [스페이스] 또는 클릭 — %d회 중 %d회 명중" % [attempts, hits_need]
 

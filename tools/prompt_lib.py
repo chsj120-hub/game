@@ -25,6 +25,7 @@ KIND_TAIL = {
     "marker":     ("small emblem icon, bold readable silhouette at 64px, thick ink outline, transparent background, 1:1 --ar 1:1 --style raw", "fine detail, text"),
     "overworld":  ("whole Korean peninsula in the style of the Daedongyeojido, vertical composition, eight provinces subtly tinted, 7:10 --ar 7:10 --style raw", "labels, modern borders"),
     "minigame":   ("flat frontal composition filling the frame, even lighting, 1:1 --ar 1:1 --style raw", "text, frame border"),
+    "scene":      ("visual-novel background, eye-level wide establishing shot, empty of people, lower quarter kept calm for a dialogue box, 16:9 --ar 16:9 --style raw", "people, characters, text, UI"),
 }
 
 # ── 복식 고증 ────────────────────────────────────────────────

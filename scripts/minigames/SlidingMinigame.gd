@@ -11,6 +11,8 @@ var moves := 0
 func _setup() -> void:
 	n = clampi(int(params.get("size", 3)), 3, 5)
 	var img_path := String(params.get("image", ""))
+	if img_path == "" or not ResourceLoader.exists(img_path):
+		img_path = String(params.get("image_fallback", ""))  # 유산 전용 그림이 아직 없으면 카탈로그 기본 그림
 	if img_path != "" and ResourceLoader.exists(img_path):
 		tex = load(img_path)
 	tiles = []

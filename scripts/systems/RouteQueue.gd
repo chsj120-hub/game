@@ -2,14 +2,16 @@ class_name RouteQueue
 extends RefCounted
 ## 동선 큐 압축 규칙 (2~5 노드): 1~2등급 동일 권역 2노드 / 3~4등급 인접 2~3권역 3노드 / 5등급 전국 3~5권역 4~5노드.
 ## 국가유산 답사·탈것·장비 전용 퀘스트·동료 영입·탐색 인스턴스·이벤트 단계에 일괄 적용. 보상은 economy quest 공식.
+## 전설 퀘스트(24_story type=lore)는 rules="lore_quest_rules"(같은 권역·마지막 노드=유산)를 쓴다.
+## 서사: 수락 → narratives intro, 동선 i번째 도착 → steps[i], 완료 → outro (DialogueSystem.play_quest)
 
 
-static func rule_for(tier: int) -> Dictionary:
-	return DataDB.overview.get("route_rules", {}).get(str(clampi(tier, 1, 5)), {})
+static func rule_for(tier: int, rules_key: String = "route_rules") -> Dictionary:
+	return DataDB.overview.get(rules_key, {}).get(str(clampi(tier, 1, 5)), {})
 
 
-static func validate(route: Array, tier: int) -> String:
-	var rule := rule_for(tier)
+static func validate(route: Array, tier: int, rules_key: String = "route_rules") -> String:
+	var rule := rule_for(tier, rules_key)
 	var n: Array = rule.get("nodes", [2, 5])
 	if route.size() < int(n[0]) or route.size() > int(n[1]):
 		return "노드 수 %d (허용 %d~%d)" % [route.size(), int(n[0]), int(n[1])]
@@ -58,6 +60,9 @@ static func describe(route: Array) -> String:
 static func lock_reason(q: Dictionary) -> String:
 	if q.has("companion"):
 		return CompanionSystem.promotion_lock(String(q["companion"]), q)
+	var av: Dictionary = q.get("avail", {})
+	if av.has("heritage_resolved") and not (String(GameState.heritage_state.get(String(av["heritage_resolved"]), "")) in ["donate", "sell", "sell_black"]):
+		return "%s 답사 후 비전서를 기증·매각했을 때만" % DataDB.display_name(String(av["heritage_resolved"]))
 	if GameState.rank < int(q.get("min_rank", 1)):
 		return "Rank %d 필요" % int(q.get("min_rank", 1))
 	return ""
@@ -69,7 +74,7 @@ static func start_quest(q: Dictionary) -> bool:
 	if lock != "":
 		gs.note("[수락 불가] %s: %s" % [q["name"], lock])
 		return false
-	var err := validate(q["route"], int(q["tier"]))
+	var err := validate(q["route"], int(q["tier"]), String(q.get("rules", "route_rules")))
 	if err != "":
 		gs.note("[동선 큐 규칙 위반] %s: %s" % [q["name"], err])
 		return false
@@ -78,6 +83,8 @@ static func start_quest(q: Dictionary) -> bool:
 		return false
 	gs.active_quests[q["id"]] = {"name": q["name"], "tier": int(q["tier"]), "type": q["type"], "route": q["route"].duplicate(), "index": 0, "reward": q["reward"]}
 	gs.note("퀘스트 수락: %s — 동선 %s" % [q["name"], describe(q["route"])])
+	DialogueSystem.play_quest(String(q["id"]), "intro")
+	_reveal_target(String(q["id"]))
 	on_node_visited(gs.current_node)
 	gs.stats_changed.emit()
 	return true
@@ -101,14 +108,26 @@ static func on_node_visited(node_id: String) -> Array:
 		var target := String(q["route"][int(q["index"])])
 		if target != node_id and DataDB.node_of(target) != node_id:
 			continue
+		DialogueSystem.play_quest(String(qid), "step", int(q["index"]))
 		q["index"] = int(q["index"]) + 1
 		if int(q["index"]) >= q["route"].size():
 			finished.append(qid)
 		else:
 			gs.note("[%s] %d/%d — 다음: %s" % [q["name"], q["index"], q["route"].size(), DataDB.display_name(String(q["route"][q["index"]]))])
+			_reveal_target(String(qid))
 	for qid in finished:
 		_complete(qid)
 	return finished
+
+
+## 다음 목표가 은닉 노드면 서사 단서로 자동 발견(지도에 표시)
+static func _reveal_target(qid: String) -> void:
+	var gs := GameState
+	var nid := DataDB.node_of(current_target(qid))
+	var n := DataDB.get_row(nid)
+	if n.get("hidden", false) and not gs.discovered.has(nid):
+		gs.discovered[nid] = true
+		gs.note("[단서] 숨은 장소 %s 이(가) 지도에 드러났습니다." % DataDB.display_name(nid))
 
 
 static func _complete(qid: String) -> void:
@@ -129,6 +148,7 @@ static func complete_external(qid: String) -> void:
 	var q: Dictionary = gs.active_quests[qid]
 	gs.active_quests.erase(qid)
 	gs.completed_quests.append(qid)
+	DialogueSystem.play_quest(String(qid), "outro")
 	grant(q["reward"], int(q["tier"]), String(q["type"]), DataDB.region_of_node(String(q["route"][-1])))
 	gs.note("퀘스트 완료: %s" % q["name"])
 
@@ -158,6 +178,8 @@ static func grant(reward: Dictionary, tier: int, qtype: String, region: String =
 		gs.recruit(String(reward["companion"]))
 	if reward.has("companion_tier"):
 		CompanionSystem.promote(String(reward["companion_tier"]["id"]), int(reward["companion_tier"]["tier"]))
+	if reward.has("heritage_unlock"):
+		gs.note("【전설 해금】 %s — 이제 답사할 수 있습니다." % DataDB.display_name(String(reward["heritage_unlock"])))
 	var rep := Balance.quest_reward(tier, qtype, "rep")
 	var mon := Balance.quest_reward(tier, qtype, "money")
 	if rep > 0:
@@ -192,7 +214,25 @@ static func available_quests() -> Array:
 			out.append({"id": String(pq["id"]), "name": String(pq["name"]), "tier": int(pq["tier"]), "type": String(DataDB.overview.get("companion_promotion", {}).get("quest_type", "companion_promo")),
 				"min_rank": int(pq["min_rank"]), "route": pq["route"], "companion": String(cid), "lore": String(pq.get("lore", "")),
 				"reward": {"companion_tier": {"id": String(cid), "tier": int(pq["tier"])}}})
+	for sq in DataDB.story_quests():  # 24 시트: 레시피 비전 전수·전설(현재 권역에서만 목록에 표시)
+		if story_available(sq):
+			out.append(sq)
 	for inst in DataDB.instances():
 		out.append({"id": "q_" + inst["id"], "name": "[탐색] " + String(inst["name"]), "tier": int(inst["tier"]), "type": "instance",
 			"min_rank": maxi(1, int(inst["tier"]) - 1), "route": inst["route"], "reward": {"instance": inst["id"]}})
 	return out
+
+
+## 24 시트 퀘스트 노출 조건 avail: region(현재 권역) · not_has(보유 시 숨김) · heritage_unvisited(답사 전) · heritage_resolved(잠금 사유로 표시)
+static func story_available(q: Dictionary) -> bool:
+	var gs := GameState
+	var av: Dictionary = q.get("avail", {})
+	if av.has("region") and String(av["region"]) != gs.current_region:
+		return false
+	if av.has("not_has") and gs.has_item(String(av["not_has"])):
+		return false
+	if av.has("heritage_unvisited") and gs.heritage_state.has(String(av["heritage_unvisited"])):
+		return false
+	if av.has("heritage_resolved") and not gs.heritage_state.has(String(av["heritage_resolved"])):
+		return false  # 아직 답사하지 않은 유산의 비전은 목록에 띄우지 않음(유산 답사가 첫 번째 길)
+	return true

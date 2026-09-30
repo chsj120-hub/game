@@ -11,12 +11,13 @@
 사용: python3 tools/economy_sim.py [--write] [--players 300]
 """
 import argparse
+import json
 import math
 import random
 import statistics
 from collections import Counter, defaultdict
 
-from common import load, parallel_map, price, quest_reward, enemy_reward, save, tier_curve
+from common import DATA, load, parallel_map, price, quest_reward, enemy_reward, save, tier_curve
 
 OV = load("00_overview.json")
 E = OV["economy"]
@@ -48,6 +49,9 @@ def actual_plan():
         "event": by_tier(evs),
         "trade": by_tier(tq),
     }
+    sp = DATA / "24_story.json"   # 레시피 비전 전수(유산 비전서를 기증·매각한 뒤의 두 번째 길). 전설(lore)은 보상 0 이라 제외
+    if sp.exists():
+        out["recipe_quest"] = by_tier([q for q in json.loads(sp.read_text(encoding="utf-8"))["quests"] if q["type"] == "recipe"])
     return out
 
 
@@ -58,6 +62,7 @@ NODES = load("regions.json")["nodes"]
 TIERS = [1, 2, 3, 4, 5]
 if BASIS == "actual":
     P.update(actual_plan())
+P.setdefault("recipe_quest", [0, 0, 0, 0, 0])
 D = E["heritage_discovery_share"]
 K_SHAPE = 2.245                      # 기존 적합식 곡률 유지(초반 빠르게·후반 길게)
 PROV = OV["provinces"]
@@ -96,7 +101,7 @@ def build_items(seed=1):
                 base = tier_curve(E["heritage_rep"], t) * E["category_mult"].get(cat, {}).get("rep", 1.0) * (E["hidden_mult"] if hidden else 1.0)
                 items.append({"g": "H", "t": t, "reg": reg, "prov": R2P[reg], "base": base})
     qtypes = {"gear_quest": "gear", "mount_quest": "mount", "companion": "companion", "companion_promo": "companion_promo",
-              "instance": "instance", "event": "event", "trade": "trade"}
+              "instance": "instance", "event": "event", "trade": "trade", "recipe_quest": "recipe"}
     for key, qt in qtypes.items():
         g = "P" if key.startswith("companion") else "Q"   # 동료 영입·승급은 신분 Rank ≥ 등급에서만(일반 퀘스트는 등급−1)
         for t in TIERS:
@@ -142,7 +147,7 @@ def budget():
             key = {"gear_quest": "장비 서사 퀘스트", "mount_quest": "탈것 퀘스트", "companion": "동료 영입", "companion_promo": "동료 승급 퀘스트",
                    "instance": "탐색 연속전투",
                    "event": "역사·설화 이벤트", "trade": "무역 퀘스트", "boss": "권역·신화 보스", "main": "메인 시나리오",
-                   "hwacheop": "화첩", "takbon": "탁본"}[it["src"]]
+                   "hwacheop": "화첩", "takbon": "탁본", "recipe_quest": "레시피 비전 전수"}[it["src"]]
         for i, v in enumerate((mx, ref, mn)):
             src[key][i] += v
             prov[it["prov"]][i] += v
@@ -332,8 +337,8 @@ def money_supply_style(sell_share, qm_base=None, parts=None):
         tot += P["heritage"][i] * h * sell_share
         parts["유산 매각"] = parts.get("유산 매각", 0) + P["heritage"][i] * h * sell_share
         q0 = tot
-        for k in ("gear_quest", "mount_quest", "companion", "companion_promo", "instance", "event", "main", "bounty"):
-            qt = {"gear_quest": "gear", "mount_quest": "mount"}.get(k, k)
+        for k in ("gear_quest", "mount_quest", "companion", "companion_promo", "instance", "event", "main", "bounty", "recipe_quest"):
+            qt = {"gear_quest": "gear", "mount_quest": "mount", "recipe_quest": "recipe"}.get(k, k)
             tot += P[k][i] * qm["base"] * qm["growth"] ** i * E["quest_type_mult"][qt]["money"]
         parts["퀘스트·이벤트"] = parts.get("퀘스트·이벤트", 0) + tot - q0
         tr = P["trade"][i] * price("specialty", t) * 10 * (OV["trade"]["specialty_quest_margin"] - OV["trade"]["buy_at_origin"])

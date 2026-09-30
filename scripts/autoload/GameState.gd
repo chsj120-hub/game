@@ -7,6 +7,7 @@ signal rank_up(new_rank: int)
 signal log_message(text: String)
 signal node_changed(node_id: String)
 signal day_passed(day: int)
+signal dialogue_requested
 
 const EQUIP_SLOTS := ["weapon", "armor", "shoes", "mount", "acc1", "acc2", "acc3"]
 const ACC_SLOTS := ["acc1", "acc2", "acc3"]
@@ -74,6 +75,8 @@ var tutorial_step: int = 0
 var counters: Dictionary = {}           ## 행동 횟수(튜토리얼 조건·플레이 기록): buy·craft·battle_win·save …
 var substitute_mode: String = "confirm"  ## 상위 재료 대체: off | confirm | auto (00_overview.crafting.substitute_default)
 var last_checkpoint: String = ""
+var flags: Dictionary = {}              ## 대화 선택·서사 분기 플래그(24_story req.flag / effects.flag)
+var dialogue_queue: Array = []          ## 재생 대기 대화 [{dialogue, cb}] (저장하지 않음)
 var rng := RandomNumberGenerator.new()
 
 
@@ -90,6 +93,13 @@ func bump(key: String, n := 1) -> void:
 
 func note(text: String) -> void:
 	log_message.emit(text)
+
+
+## 대화 장면 재생 요청 — Main 이 전투·미니게임·다른 대화가 끝난 뒤 차례로 보여 준다.
+## cb(choice_id: String) 는 대화가 끝난 뒤 호출(선택지 효과는 DialogueSystem 이 먼저 적용)
+func request_dialogue(d: Dictionary, cb: Callable = Callable()) -> void:
+	dialogue_queue.append({"dialogue": d, "cb": cb})
+	dialogue_requested.emit()
 
 
 # ================================================================ 새 게임
@@ -158,6 +168,8 @@ func new_game(cls: String, scenario := "") -> void:
 	province_rep = {}
 	walked_edges = {}
 	ending_seen = false
+	flags = {}
+	dialogue_queue = []
 	current_region = "MAP_02"
 	current_node = String(DataDB.get_row("MAP_02").get("hub", ""))
 	if not sc.is_empty():  # 시나리오 시작 노드·엽전·추가 아이템
@@ -937,7 +949,7 @@ const SAVE_FIELDS := ["class_id", "reputation", "money", "rank", "hp", "fatigue"
 	"mount_stamina", "knowledge", "knowledge_xp", "companions", "party", "barracks", "dispatch", "field_statuses", "discovered",
 	"visited_nodes", "lit_beacons", "heritage_state", "investigate_retry", "town_dev", "active_quests", "completed_quests",
 	"mojak_unlocked", "trade_cargo", "events_state", "bounties", "bounty_refresh_day", "hwacheop", "takbon", "seasonal_done",
-	"codex", "market_cycle", "food_buff", "auto_eat", "substitute_mode", "scenario_id", "hero_name", "tutorial_id", "tutorial_step", "counters", "last_checkpoint", "province_rep", "ending_seen", "walked_edges"]
+	"codex", "market_cycle", "food_buff", "auto_eat", "substitute_mode", "scenario_id", "hero_name", "tutorial_id", "tutorial_step", "counters", "last_checkpoint", "province_rep", "ending_seen", "walked_edges", "flags"]
 const INT_FIELDS := ["reputation", "money", "rank", "permanent_hp", "minutes", "bounty_refresh_day", "tutorial_step"]
 const SAVE_VERSION := 2
 ## 세이브 호환: 데이터 개편으로 바뀐 id (옛 세이브 → 새 id)

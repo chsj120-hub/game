@@ -1,0 +1,8014 @@
+{
+ "quest:q_cp_chakho": {
+  "status": "draft",
+  "title": "동료 영입: 착호갑사",
+  "intro": {
+   "bg": "ND_16_CITY_GILJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 정씨",
+     "text": "착호갑사를 찾는다면 먼저 길주목에서 수소문해 보시오. 「야생 맹수(호랑이/곰) 3마리 포획 납품」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 정씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_16_CITY_GILJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "착호갑사 말이오? 호랑이를 전문적으로 사냥하던 정예 특수군. 요즘 경성도호부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 착호갑사 이야기를 캐묻는다) 고맙소. 경성도호부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 이씨"
+    ]
+   },
+   {
+    "bg": "ND_16_CITY_GYEONGSEONGDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 강씨",
+      "text": "저기 계신 분이 바로 착호갑사, 그분이오."
+     },
+     {
+      "who": "cp_chakho",
+      "text": "(관군 막사 옆에서 손질하던 착호갑사 쇠뿔 화약통을 내려놓고 고개를 든다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「야생 맹수(호랑이/곰) 3마리 포획 납품」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_chakho",
+     "npc:official:아전 강씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 2〕 불법의 가르침을 빌려 마음을 연다",
+      "req": {
+       "knowledge": {
+        "bul": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 25
+       }
+      },
+      "result": "착호갑사: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_chakho"
+      },
+      "result": "착호갑사: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "착호갑사: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_CITY_GYEONGSEONGDOHOBU",
+   "lines": [
+    {
+     "who": "cp_chakho",
+     "text": "임무라면 목숨 걸고 해 보겠소. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "착호갑사, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_chakho"
+   ]
+  }
+ },
+ "quest:q_cp_jeongyakyong": {
+  "status": "draft",
+  "title": "동료 영입: 정약용",
+  "intro": {
+   "bg": "ND_07_CITY_NAMWONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 문씨",
+     "text": "정약용을 찾는다면 먼저 남원도호부에서 수소문해 보시오. 「《목민심서》 초고 회수 퀘스트 완수 및 호남 도(道) 명성 5단계」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 문씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_CITY_NAMWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 장씨",
+      "text": "정약용 말이오? 실학의 집대성자. 요즘 나주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 정약용 이야기를 캐묻는다) 고맙소. 나주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 장씨"
+    ]
+   },
+   {
+    "bg": "ND_08_CITY_NAJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "정약용 말이오? 요즘 강진현 치소 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 정약용 이야기를 캐묻는다) 고맙소. 강진현 치소로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 정씨"
+    ]
+   },
+   {
+    "bg": "ND_08_TOWN_GANGJINHYEONCHISO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 강씨",
+      "text": "저기 계신 분이 바로 정약용, 그분이오."
+     },
+     {
+      "who": "cp_jeongyakyong",
+      "text": "(다산 친필 여유당전서를 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「《목민심서》 초고 회수 퀘스트 완수 및 호남 도(道) 명성 5단계」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_jeongyakyong",
+     "npc:elder:촌로 강씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 4〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 75
+       }
+      },
+      "result": "정약용: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_jeongyakyong"
+      },
+      "result": "정약용: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "정약용: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_TOWN_GANGJINHYEONCHISO",
+   "lines": [
+    {
+     "who": "cp_jeongyakyong",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 험한 길이라면 내가 앞에 서서 막아 주리다."
+    },
+    {
+     "who": "hero",
+     "text": "정약용, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_jeongyakyong"
+   ]
+  }
+ },
+ "quest:q_cp_c03": {
+  "status": "draft",
+  "title": "동료 영입: 문익점",
+  "intro": {
+   "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 안씨",
+     "text": "문익점을 찾는다면 먼저 강릉대도호부에서 수소문해 보시오. 「붓두껍 속에 숨겨온 목화씨 발아」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 안씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 김씨",
+      "text": "문익점 말이오? 목화씨를 들여와 백성들을 추위에서 구한 선구자. 요즘 대구 경상감영 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 문익점 이야기를 캐묻는다) 고맙소. 대구 경상감영으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 김씨"
+    ]
+   },
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 최씨",
+      "text": "문익점 말이오? 요즘 진주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 문익점의 행방을 수소문한다) 고맙소. 진주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 최씨"
+    ]
+   },
+   {
+    "bg": "ND_10_CITY_JINJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 전씨",
+      "text": "저기 계신 분이 바로 문익점, 그분이오."
+     },
+     {
+      "who": "cp_c03",
+      "text": "(목화씨 붓두껍을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「붓두껍 속에 숨겨온 목화씨 발아」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c03",
+     "npc:official:아전 전씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 손재주로 연장을 고쳐 해결한다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "문익점: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c03"
+      },
+      "result": "문익점: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "문익점: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_10_CITY_JINJUMOK",
+   "lines": [
+    {
+     "who": "cp_c03",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 다친 이가 있으면 먼저 내게 보이시오."
+    },
+    {
+     "who": "hero",
+     "text": "문익점, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c03"
+   ]
+  }
+ },
+ "quest:q_cp_c04": {
+  "status": "draft",
+  "title": "동료 영입: 박지원",
+  "intro": {
+   "bg": "ND_14_CITY_YEONGBYEONDAEDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 배씨",
+     "text": "박지원을 찾는다면 먼저 영변대도호부에서 수소문해 보시오. 「열하일기 초고를 완성하기 위한 대청 무역 은화 500냥 투자」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 배씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_14_CITY_YEONGBYEONDAEDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "박지원 말이오? 북학파의 거두이자 문장가. 요즘 의주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 박지원 이야기를 캐묻는다) 고맙소. 의주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 류씨"
+    ]
+   },
+   {
+    "bg": "ND_14_CITY_UIJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "저기 계신 분이 바로 박지원, 그분이오."
+     },
+     {
+      "who": "cp_c04",
+      "text": "(연암 열하일기 원고를 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「열하일기 초고를 완성하기 위한 대청 무역 은화 500냥 투자」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c04",
+     "npc:official:아전 정씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔상(商) 3〕 셈과 흥정으로 실타래를 푼다",
+      "req": {
+       "knowledge": {
+        "sang": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sang": 50
+       }
+      },
+      "result": "박지원: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c04"
+      },
+      "result": "박지원: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "박지원: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_14_CITY_UIJUMOK",
+   "lines": [
+    {
+     "who": "cp_c04",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "박지원, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c04"
+   ]
+  }
+ },
+ "quest:q_cp_c05": {
+  "status": "draft",
+  "title": "동료 영입: 심마니",
+  "intro": {
+   "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 손씨",
+     "text": "심마니를 찾는다면 먼저 원주 강원감영에서 수소문해 보시오. 「오대산 산삼 서식지에서 조난당한 심마니 구출」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 손씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "심마니 말이오? 평생을 백두대간 산삼과 약초를 찾아다닌 산사나이. 요즘 평창 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 심마니 이야기를 캐묻는다) 고맙소. 평창으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 이씨"
+    ]
+   },
+   {
+    "bg": "ND_04_TOWN_PYEONGCHANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 서씨",
+      "text": "저기 계신 분이 바로 심마니, 그분이오."
+     },
+     {
+      "who": "cp_c05",
+      "text": "(일손을 멈추고 심마니 놋쇠 괭이를 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「오대산 산삼 서식지에서 조난당한 심마니 구출」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c05",
+     "npc:elder:촌로 서씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 2〕 불법의 가르침을 빌려 마음을 연다",
+      "req": {
+       "knowledge": {
+        "bul": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 25
+       }
+      },
+      "result": "심마니: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c05"
+      },
+      "result": "심마니: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "심마니: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_04_TOWN_PYEONGCHANG",
+   "lines": [
+    {
+     "who": "cp_c05",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 다친 이가 있으면 먼저 내게 보이시오."
+    },
+    {
+     "who": "hero",
+     "text": "심마니, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c05"
+   ]
+  }
+ },
+ "quest:q_cp_c06": {
+  "status": "draft",
+  "title": "동료 영입: 정도전",
+  "intro": {
+   "bg": "ND_01_CITY_GAESEONGBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 황씨",
+     "text": "정도전을 찾는다면 먼저 개성부에서 수소문해 보시오. 「한양 도성 축조 설계도 3편 복원 및 건국 이념 퀴즈 통과」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 황씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_01_CITY_GAESEONGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 손씨",
+      "text": "정도전 말이오? 조선의 기틀을 세운 대정치가. 요즘 노원역(의정부-포천역참) 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 정도전의 행방을 수소문한다) 고맙소. 노원역(의정부-포천역참)으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 손씨"
+    ]
+   },
+   {
+    "bg": "ND_02_STATION_NOWONYEOKUIJEONGBUPOCHEONYEOKCHAM",
+    "lines": [
+     {
+      "who": "npc:soldier:역졸 황씨",
+      "text": "정도전 말이오? 요즘 한양 경조 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(역참 마구간에서 정도전의 흔적을 찾는다) 고맙소. 한양 경조로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:soldier:역졸 황씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "저기 계신 분이 바로 정도전, 그분이오."
+     },
+     {
+      "who": "cp_c06",
+      "text": "(삼봉 조선경국전을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「한양 도성 축조 설계도 3편 복원 및 건국 이념 퀴즈 통과」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c06",
+     "npc:official:아전 이씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "정도전: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c06"
+      },
+      "result": "정도전: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "정도전: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "cp_c06",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "정도전, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c06"
+   ]
+  }
+ },
+ "quest:q_cp_c07": {
+  "status": "draft",
+  "title": "동료 영입: 채제공",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 황씨",
+     "text": "채제공을 찾는다면 먼저 한양 경조에서 수소문해 보시오. 「통공정책(신해통공) 반대 시전상인 설득」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 황씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "채제공 말이오? 정조를 보좌한 명재상. 요즘 수원화성 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 채제공의 자취를 찾는다) 고맙소. 수원화성으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 안씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_SUWONHWASEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 권씨",
+      "text": "저기 계신 분이 바로 채제공, 그분이오."
+     },
+     {
+      "who": "cp_c07",
+      "text": "(신해통공 어명 윤음을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「통공정책(신해통공) 반대 시전상인 설득」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c07",
+     "npc:official:아전 권씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔상(商) 3〕 셈과 흥정으로 실타래를 푼다",
+      "req": {
+       "knowledge": {
+        "sang": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sang": 50
+       }
+      },
+      "result": "채제공: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c07"
+      },
+      "result": "채제공: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "채제공: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_SUWONHWASEONG",
+   "lines": [
+    {
+     "who": "cp_c07",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "채제공, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c07"
+   ]
+  }
+ },
+ "quest:q_cp_c08": {
+  "status": "draft",
+  "title": "동료 영입: 김정희",
+  "intro": {
+   "bg": "ND_08_CITY_SUNCHEONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 조씨",
+     "text": "김정희를 찾는다면 먼저 순천도호부에서 수소문해 보시오. 「가시 울타리(위리안치) 유배지에서 《세한도》 창작 도구 전달」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 조씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_08_CITY_SUNCHEONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 조씨",
+      "text": "김정희 말이오? 추사체를 창시한 예술과 금석학의 대가. 요즘 제주목 제주읍성 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 김정희의 자취를 찾는다) 고맙소. 제주목 제주읍성으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 조씨"
+    ]
+   },
+   {
+    "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "김정희 말이오? 요즘 대정현 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 김정희의 행방을 수소문한다) 고맙소. 대정현으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 이씨"
+    ]
+   },
+   {
+    "bg": "ND_17_TOWN_DAEJEONGHYEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 김씨",
+      "text": "저기 계신 분이 바로 김정희, 그분이오."
+     },
+     {
+      "who": "cp_c08",
+      "text": "(추사 친필 세한도 복본을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「가시 울타리(위리안치) 유배지에서 《세한도》 창작 도구 전달」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c08",
+     "npc:elder:촌로 김씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "김정희: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c08"
+      },
+      "result": "김정희: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "김정희: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_17_TOWN_DAEJEONGHYEON",
+   "lines": [
+    {
+     "who": "cp_c08",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "김정희, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c08"
+   ]
+  }
+ },
+ "quest:q_cp_c09": {
+  "status": "draft",
+  "title": "동료 영입: 신숙주",
+  "intro": {
+   "bg": "ND_01_CITY_GAESEONGBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 임씨",
+     "text": "신숙주를 찾는다면 먼저 개성부에서 수소문해 보시오. 「《해동제국기》 지도 조각 수집」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 임씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_01_CITY_GAESEONGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 권씨",
+      "text": "신숙주 말이오? 훈민정음 창제와 일본·여진 외교를 총괄한 언어와 외교의 천재. 요즘 강화유수부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 신숙주의 행방을 수소문한다) 고맙소. 강화유수부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 권씨"
+    ]
+   },
+   {
+    "bg": "ND_01_CITY_GANGHWAYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 김씨",
+      "text": "저기 계신 분이 바로 신숙주, 그분이오."
+     },
+     {
+      "who": "cp_c09",
+      "text": "(해동제국기 목판본을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「《해동제국기》 지도 조각 수집」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c09",
+     "npc:official:아전 김씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "신숙주: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c09"
+      },
+      "result": "신숙주: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "신숙주: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_01_CITY_GANGHWAYUSUBU",
+   "lines": [
+    {
+     "who": "cp_c09",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "신숙주, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c09"
+   ]
+  }
+ },
+ "quest:q_cp_c10": {
+  "status": "draft",
+  "title": "동료 영입: 장영실",
+  "intro": {
+   "bg": "ND_05_CITY_CHEONGJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 서씨",
+     "text": "장영실을 찾는다면 먼저 청주목에서 수소문해 보시오. 「자격루 톱니바퀴 부품 4종 수리 및 세종대왕 천거 퀘스트」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 서씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_05_CITY_CHEONGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 고씨",
+      "text": "장영실 말이오? 조선 최고의 천재 과학 발명가. 요즘 노원역(의정부-포천역참) 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 장영실 이야기를 캐묻는다) 고맙소. 노원역(의정부-포천역참)으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 고씨"
+    ]
+   },
+   {
+    "bg": "ND_02_STATION_NOWONYEOKUIJEONGBUPOCHEONYEOKCHAM",
+    "lines": [
+     {
+      "who": "npc:soldier:역졸 이씨",
+      "text": "장영실 말이오? 요즘 한양 경조 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(역참 마구간에서 장영실의 흔적을 찾는다) 고맙소. 한양 경조로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:soldier:역졸 이씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 오씨",
+      "text": "저기 계신 분이 바로 장영실, 그분이오."
+     },
+     {
+      "who": "cp_c10",
+      "text": "(소형 혼천의 모형을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「자격루 톱니바퀴 부품 4종 수리 및 세종대왕 천거 퀘스트」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c10",
+     "npc:official:아전 오씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 손재주로 연장을 고쳐 해결한다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장영실: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c10"
+      },
+      "result": "장영실: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "장영실: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "cp_c10",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "장영실, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c10"
+   ]
+  }
+ },
+ "quest:q_cp_c11": {
+  "status": "draft",
+  "title": "동료 영입: 이천",
+  "intro": {
+   "bg": "ND_02_CITY_SUWONHWASEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 오씨",
+     "text": "이천을 찾는다면 먼저 수원화성에서 수소문해 보시오. 「갑인자 활자 주조 및 총통 개량 시험 사격 성공」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 오씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_SUWONHWASEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 임씨",
+      "text": "이천 말이오? 세종 대 무기 개량과 금속활자 주조를 총지휘한 무관 겸 공학자. 요즘 한양 경조 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 이천의 자취를 찾는다) 고맙소. 한양 경조로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 임씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 황씨",
+      "text": "저기 계신 분이 바로 이천, 그분이오."
+     },
+     {
+      "who": "cp_c11",
+      "text": "(갑인자 금속활자 판을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「갑인자 활자 주조 및 총통 개량 시험 사격 성공」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c11",
+     "npc:official:아전 황씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 손재주로 연장을 고쳐 해결한다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "이천: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c11"
+      },
+      "result": "이천: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "이천: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "cp_c11",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "이천, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c11"
+   ]
+  }
+ },
+ "quest:q_cp_c12": {
+  "status": "draft",
+  "title": "동료 영입: 김정호",
+  "intro": {
+   "bg": "ND_03_CITY_CHUNCHEONBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 문씨",
+     "text": "김정호를 찾는다면 먼저 춘천부에서 수소문해 보시오. 「대동여지도 22첩 목판 인출본 5첩 수합 납품」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 문씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_03_CITY_CHUNCHEONBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 최씨",
+      "text": "김정호 말이오? 국토의 산줄기와 물길을 발로 걸어 완성한 지도 제작자. 요즘 영화역 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 김정호의 행방을 수소문한다) 고맙소. 영화역으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 최씨"
+    ]
+   },
+   {
+    "bg": "ND_02_STATION_YEONGHWAYEOK",
+    "lines": [
+     {
+      "who": "npc:soldier:역졸 임씨",
+      "text": "김정호 말이오? 요즘 한양 경조 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(역참 마구간에서 김정호의 흔적을 찾는다) 고맙소. 한양 경조로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:soldier:역졸 임씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 홍씨",
+      "text": "저기 계신 분이 바로 김정호, 그분이오."
+     },
+     {
+      "who": "cp_c12",
+      "text": "(대동여지도 축척 자를 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「대동여지도 22첩 목판 인출본 5첩 수합 납품」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c12",
+     "npc:official:아전 홍씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "김정호: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c12"
+      },
+      "result": "김정호: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "김정호: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "cp_c12",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "김정호, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c12"
+   ]
+  }
+ },
+ "quest:q_cp_yisunsin": {
+  "status": "draft",
+  "title": "동료 영입: 이순신",
+  "intro": {
+   "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 정씨",
+     "text": "이순신을 찾는다면 먼저 제주목 제주읍성에서 수소문해 보시오. 「난중일기 친필 수첩 전달 및 남해안 왜구 잔당 5함대 격퇴」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 정씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 최씨",
+      "text": "이순신 말이오? 불패의 구국 성웅. 요즘 나주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 이순신의 자취를 찾는다) 고맙소. 나주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 최씨"
+    ]
+   },
+   {
+    "bg": "ND_08_CITY_NAJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 문씨",
+      "text": "이순신 말이오? 요즘 여수 진남관 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 이순신 이야기를 캐묻는다) 고맙소. 여수 진남관으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 문씨"
+    ]
+   },
+   {
+    "bg": "ND_08_SCENIC_YEOSUJINNAMGWAN",
+    "lines": [
+     {
+      "who": "npc:traveler:유람객 오씨",
+      "text": "저기 계신 분이 바로 이순신, 그분이오."
+     },
+     {
+      "who": "cp_yisunsin",
+      "text": "(충무공 친필 장도를 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「난중일기 친필 수첩 전달 및 남해안 왜구 잔당 5함대 격퇴」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_yisunsin",
+     "npc:traveler:유람객 오씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "이순신: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_yisunsin"
+      },
+      "result": "이순신: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "이순신: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_SCENIC_YEOSUJINNAMGWAN",
+   "lines": [
+    {
+     "who": "cp_yisunsin",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "이순신, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_yisunsin"
+   ]
+  }
+ },
+ "quest:q_cp_c14": {
+  "status": "draft",
+  "title": "동료 영입: 남이",
+  "intro": {
+   "bg": "ND_01_CITY_GAESEONGBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 황씨",
+     "text": "남이를 찾는다면 먼저 개성부에서 수소문해 보시오. 「백두산 바위에 칼을 갈아 여진족 잔당을 격퇴하는 무예 시험 통과」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 황씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_01_CITY_GAESEONGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 서씨",
+      "text": "남이 말이오? 약관의 나이에 북방을 평정한 맹장. 요즘 연천 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 남이의 행방을 수소문한다) 고맙소. 연천으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 서씨"
+    ]
+   },
+   {
+    "bg": "ND_01_TOWN_YEONCHEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 오씨",
+      "text": "저기 계신 분이 바로 남이, 그분이오."
+     },
+     {
+      "who": "cp_c14",
+      "text": "(남이 장군 장검을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「백두산 바위에 칼을 갈아 여진족 잔당을 격퇴하는 무예 시험 통과」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c14",
+     "npc:elder:촌로 오씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "남이: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c14"
+      },
+      "result": "남이: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "남이: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_01_TOWN_YEONCHEON",
+   "lines": [
+    {
+     "who": "cp_c14",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "남이, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c14"
+   ]
+  }
+ },
+ "quest:q_cp_c15": {
+  "status": "draft",
+  "title": "동료 영입: 권율",
+  "intro": {
+   "bg": "ND_11_CITY_BONGSANGUN",
+   "lines": [
+    {
+     "who": "npc:official:아전 송씨",
+     "text": "권율을 찾는다면 먼저 봉산군에서 수소문해 보시오. 「행주치마로 돌을 날라 성벽을 방어하는 수성전」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 송씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_11_CITY_BONGSANGUN",
+    "lines": [
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "권율 말이오? 행주대첩을 이끈 도원수. 요즘 개성부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 권율의 자취를 찾는다) 고맙소. 개성부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 정씨"
+    ]
+   },
+   {
+    "bg": "ND_01_CITY_GAESEONGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "권율 말이오? 요즘 파주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 권율 이야기를 캐묻는다) 고맙소. 파주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 류씨"
+    ]
+   },
+   {
+    "bg": "ND_01_TOWN_PAJUMOK",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 최씨",
+      "text": "저기 계신 분이 바로 권율, 그분이오."
+     },
+     {
+      "who": "cp_c15",
+      "text": "(도원수 지휘봉을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「행주치마로 돌을 날라 성벽을 방어하는 수성전」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c15",
+     "npc:elder:촌로 최씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 손재주로 연장을 고쳐 해결한다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "권율: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c15"
+      },
+      "result": "권율: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "권율: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_01_TOWN_PAJUMOK",
+   "lines": [
+    {
+     "who": "cp_c15",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 험한 길이라면 내가 앞에 서서 막아 주리다."
+    },
+    {
+     "who": "hero",
+     "text": "권율, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c15"
+   ]
+  }
+ },
+ "quest:q_cp_hwangjini": {
+  "status": "draft",
+  "title": "동료 영입: 황진이",
+  "intro": {
+   "bg": "ND_01_CITY_GANGHWAYUSUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 장씨",
+     "text": "황진이를 찾는다면 먼저 강화유수부에서 수소문해 보시오. 「청산리 벽계수 시조 화답 퀴즈 통과」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 장씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_01_CITY_GANGHWAYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "황진이 말이오? 송도삼절로 꼽히는 절세 가인. 요즘 개성부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 황진이 이야기를 캐묻는다) 고맙소. 개성부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 정씨"
+    ]
+   },
+   {
+    "bg": "ND_01_CITY_GAESEONGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 신씨",
+      "text": "저기 계신 분이 바로 황진이, 그분이오."
+     },
+     {
+      "who": "cp_hwangjini",
+      "text": "(명월 거문고를 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「청산리 벽계수 시조 화답 퀴즈 통과」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_hwangjini",
+     "npc:official:아전 신씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 3〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 50
+       }
+      },
+      "result": "황진이: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_hwangjini"
+      },
+      "result": "황진이: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "황진이: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_01_CITY_GAESEONGBU",
+   "lines": [
+    {
+     "who": "cp_hwangjini",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "황진이, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_hwangjini"
+   ]
+  }
+ },
+ "quest:q_cp_c17": {
+  "status": "draft",
+  "title": "동료 영입: 안견",
+  "intro": {
+   "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 이씨",
+     "text": "안견을 찾는다면 먼저 공주 충청감영에서 수소문해 보시오. 「안평대군의 꿈을 기록한 도원경 수묵 스케치 복원」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 이씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "안견 말이오? 조선 최고의 산수화가. 요즘 서산 용현리 마애여래삼존상 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 안견의 자취를 찾는다) 고맙소. 서산 용현리 마애여래삼존상으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 이씨"
+    ]
+   },
+   {
+    "bg": "ND_06_SCENIC_SEOSANYONGHYEONRIMAAEYEORAESAMJONSANG",
+    "lines": [
+     {
+      "who": "npc:traveler:유람객 윤씨",
+      "text": "저기 계신 분이 바로 안견, 그분이오."
+     },
+     {
+      "who": "cp_c17",
+      "text": "(몽유도원도 붓을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「안평대군의 꿈을 기록한 도원경 수묵 스케치 복원」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c17",
+     "npc:traveler:유람객 윤씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "안견: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c17"
+      },
+      "result": "안견: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "안견: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_06_SCENIC_SEOSANYONGHYEONRIMAAEYEORAESAMJONSANG",
+   "lines": [
+    {
+     "who": "cp_c17",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "안견, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c17"
+   ]
+  }
+ },
+ "quest:q_cp_kimhongdo": {
+  "status": "draft",
+  "title": "동료 영입: 김홍도",
+  "intro": {
+   "bg": "ND_01_CITY_GAESEONGBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 장씨",
+     "text": "김홍도를 찾는다면 먼저 개성부에서 수소문해 보시오. 「단원풍속도첩 잃어버린 낱장 3장 회수」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 장씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_01_CITY_GAESEONGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 김씨",
+      "text": "김홍도 말이오? 서민의 삶을 해학적으로 포착한 풍속화의 대가. 요즘 한양 경조 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 김홍도의 행방을 수소문한다) 고맙소. 한양 경조로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 김씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "김홍도 말이오? 요즘 남양 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 김홍도의 자취를 찾는다) 고맙소. 남양으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 안씨"
+    ]
+   },
+   {
+    "bg": "ND_02_TOWN_NAMYANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 전씨",
+      "text": "저기 계신 분이 바로 김홍도, 그분이오."
+     },
+     {
+      "who": "cp_kimhongdo",
+      "text": "(단원 풍속 화첩을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「단원풍속도첩 잃어버린 낱장 3장 회수」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_kimhongdo",
+     "npc:elder:촌로 전씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "김홍도: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_kimhongdo"
+      },
+      "result": "김홍도: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "김홍도: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_TOWN_NAMYANG",
+   "lines": [
+    {
+     "who": "cp_kimhongdo",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "김홍도, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_kimhongdo"
+   ]
+  }
+ },
+ "quest:q_cp_c19": {
+  "status": "draft",
+  "title": "동료 영입: 신사임당",
+  "intro": {
+   "bg": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+   "lines": [
+    {
+     "who": "npc:official:아전 한씨",
+     "text": "신사임당을 찾는다면 먼저 철원도호부 치소에서 수소문해 보시오. 「오죽헌 앞마당 초충도 풀벌레 관찰 스케치 완료」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 한씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+    "lines": [
+     {
+      "who": "npc:official:아전 최씨",
+      "text": "신사임당 말이오? 예술과 덕성을 겸비한 현모양처이자 화가. 요즘 원주 강원감영 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 신사임당 이야기를 캐묻는다) 고맙소. 원주 강원감영으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 최씨"
+    ]
+   },
+   {
+    "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 신씨",
+      "text": "신사임당 말이오? 요즘 강릉 오죽헌 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 신사임당의 자취를 찾는다) 고맙소. 강릉 오죽헌으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 신씨"
+    ]
+   },
+   {
+    "bg": "ND_04_SEOWON_GANGREUNGOJUKHEON",
+    "lines": [
+     {
+      "who": "npc:scholar:유생 전씨",
+      "text": "저기 계신 분이 바로 신사임당, 그분이오."
+     },
+     {
+      "who": "cp_c19",
+      "text": "(초충도 자수 병풍 조각을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「오죽헌 앞마당 초충도 풀벌레 관찰 스케치 완료」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c19",
+     "npc:scholar:유생 전씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 4〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 75
+       }
+      },
+      "result": "신사임당: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c19"
+      },
+      "result": "신사임당: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "신사임당: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_04_SEOWON_GANGREUNGOJUKHEON",
+   "lines": [
+    {
+     "who": "cp_c19",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 다친 이가 있으면 먼저 내게 보이시오."
+    },
+    {
+     "who": "hero",
+     "text": "신사임당, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c19"
+   ]
+  }
+ },
+ "quest:q_cp_heojun": {
+  "status": "draft",
+  "title": "동료 영입: 허준",
+  "intro": {
+   "bg": "ND_03_CITY_CHEOLWONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 임씨",
+     "text": "허준을 찾는다면 먼저 철원도호부에서 수소문해 보시오. 「《동의보감》 탕액편 초고 복원 및 역병에 걸린 마을 치료」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 임씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_03_CITY_CHEOLWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "허준 말이오? 한의학의 최고봉. 요즘 개성부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 허준 이야기를 캐묻는다) 고맙소. 개성부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 정씨"
+    ]
+   },
+   {
+    "bg": "ND_01_CITY_GAESEONGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "허준 말이오? 요즘 파주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 허준 이야기를 캐묻는다) 고맙소. 파주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 정씨"
+    ]
+   },
+   {
+    "bg": "ND_01_TOWN_PAJUMOK",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 조씨",
+      "text": "저기 계신 분이 바로 허준, 그분이오."
+     },
+     {
+      "who": "cp_heojun",
+      "text": "(동의보감 침통과 약침을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「《동의보감》 탕액편 초고 복원 및 역병에 걸린 마을 치료」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_heojun",
+     "npc:elder:촌로 조씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 4〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 75
+       }
+      },
+      "result": "허준: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_heojun"
+      },
+      "result": "허준: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "허준: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_01_TOWN_PAJUMOK",
+   "lines": [
+    {
+     "who": "cp_heojun",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 다친 이가 있으면 먼저 내게 보이시오."
+    },
+    {
+     "who": "hero",
+     "text": "허준, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_heojun"
+   ]
+  }
+ },
+ "quest:q_cp_c21": {
+  "status": "draft",
+  "title": "동료 영입: 이제마",
+  "intro": {
+   "bg": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 황씨",
+     "text": "이제마를 찾는다면 먼저 북청도호부에서 수소문해 보시오. 「사상체질(태양·태음·소양·소음) 진단 시험 통과」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 황씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_CITY_BUKCHEONGDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 서씨",
+      "text": "이제마 말이오? 사상의학을 창시한 의학자. 요즘 함흥부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 이제마 이야기를 캐묻는다) 고맙소. 함흥부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 서씨"
+    ]
+   },
+   {
+    "bg": "ND_15_CITY_HAMHEUNGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 강씨",
+      "text": "저기 계신 분이 바로 이제마, 그분이오."
+     },
+     {
+      "who": "cp_c21",
+      "text": "(동의수세보원 목판을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「사상체질(태양·태음·소양·소음) 진단 시험 통과」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c21",
+     "npc:official:아전 강씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 3〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 50
+       }
+      },
+      "result": "이제마: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c21"
+      },
+      "result": "이제마: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "이제마: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_15_CITY_HAMHEUNGBU",
+   "lines": [
+    {
+     "who": "cp_c21",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "이제마, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c21"
+   ]
+  }
+ },
+ "quest:q_cp_c22": {
+  "status": "draft",
+  "title": "동료 영입: 채규서",
+  "intro": {
+   "bg": "ND_07_CITY_NAMWONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 김씨",
+     "text": "채규서를 찾는다면 먼저 남원도호부에서 수소문해 보시오. 「흉년 구휼미 100석 확보 및 빈민 구제」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 김씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_CITY_NAMWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 조씨",
+      "text": "채규서 말이오? 흉년 때 사재를 털어 백성을 구휼한 모범적 관리. 요즘 전주 전라감영 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 채규서 이야기를 캐묻는다) 고맙소. 전주 전라감영으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 조씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 손씨",
+      "text": "저기 계신 분이 바로 채규서, 그분이오."
+     },
+     {
+      "who": "cp_c22",
+      "text": "(진휼 곡식 계량되를 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「흉년 구휼미 100석 확보 및 빈민 구제」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c22",
+     "npc:official:아전 손씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 3〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 50
+       }
+      },
+      "result": "채규서: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c22"
+      },
+      "result": "채규서: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "채규서: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "cp_c22",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "채규서, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c22"
+   ]
+  }
+ },
+ "quest:q_cp_c23": {
+  "status": "draft",
+  "title": "동료 영입: 정약종",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 한씨",
+     "text": "정약종을 찾는다면 먼저 한양 경조에서 수소문해 보시오. 「서학(천주실의) 한글 교리서 수호」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 한씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 손씨",
+      "text": "정약종 말이오? 새로운 사상을 목숨 바쳐 전파한 사상가. 요즘 광주유수부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 정약종의 자취를 찾는다) 고맙소. 광주유수부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 손씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_GWANGJUYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 윤씨",
+      "text": "저기 계신 분이 바로 정약종, 그분이오."
+     },
+     {
+      "who": "cp_c23",
+      "text": "(주교요지 한글본을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「서학(천주실의) 한글 교리서 수호」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c23",
+     "npc:official:아전 윤씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "정약종: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c23"
+      },
+      "result": "정약종: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "정약종: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_GWANGJUYUSUBU",
+   "lines": [
+    {
+     "who": "cp_c23",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 험한 길이라면 내가 앞에 서서 막아 주리다."
+    },
+    {
+     "who": "hero",
+     "text": "정약종, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c23"
+   ]
+  }
+ },
+ "quest:q_cp_c24": {
+  "status": "draft",
+  "title": "동료 영입: 을지문덕",
+  "intro": {
+   "bg": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 고씨",
+     "text": "을지문덕을 찾는다면 먼저 북청도호부에서 수소문해 보시오. 「수나라 우중문에게 보낸 《여수장우중문시》 현판 완성 및 살수 수공 진법 재현」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 고씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_CITY_BUKCHEONGDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 홍씨",
+      "text": "을지문덕 말이오? 살수에서 30만 수나라 대군을 수장시킨 지략의 명장. 요즘 평양부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 을지문덕 이야기를 캐묻는다) 고맙소. 평양부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 홍씨"
+    ]
+   },
+   {
+    "bg": "ND_13_CITY_PYEONGYANGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 손씨",
+      "text": "을지문덕 말이오? 요즘 안주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 을지문덕의 자취를 찾는다) 고맙소. 안주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 손씨"
+    ]
+   },
+   {
+    "bg": "ND_13_CITY_ANJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 박씨",
+      "text": "저기 계신 분이 바로 을지문덕, 그분이오."
+     },
+     {
+      "who": "cp_c24",
+      "text": "(살수 수공 지휘기를 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「수나라 우중문에게 보낸 《여수장우중문시》 현판 완성 및 살수 수공 진법 재현」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c24",
+     "npc:official:아전 박씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "을지문덕: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c24"
+      },
+      "result": "을지문덕: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "을지문덕: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_13_CITY_ANJUMOK",
+   "lines": [
+    {
+     "who": "cp_c24",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "을지문덕, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c24"
+   ]
+  }
+ },
+ "quest:q_cp_c25": {
+  "status": "draft",
+  "title": "동료 영입: 연개소문",
+  "intro": {
+   "bg": "ND_12_CITY_YEONANDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 손씨",
+     "text": "연개소문을 찾는다면 먼저 연안도호부에서 수소문해 보시오. 「다섯 자루의 비도(비도술) 시험을 통과하고 고구려 영광 재현 서약」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 손씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_12_CITY_YEONANDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 최씨",
+      "text": "연개소문 말이오? 당 태종의 대군을 격퇴한 철권의 대막리지. 요즘 조양역 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 연개소문의 자취를 찾는다) 고맙소. 조양역으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 최씨"
+    ]
+   },
+   {
+    "bg": "ND_13_STATION_JOYANGYEOK",
+    "lines": [
+     {
+      "who": "npc:soldier:역졸 송씨",
+      "text": "연개소문 말이오? 요즘 평양부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(역참 마구간에서 연개소문의 흔적을 찾는다) 고맙소. 평양부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:soldier:역졸 송씨"
+    ]
+   },
+   {
+    "bg": "ND_13_CITY_PYEONGYANGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 임씨",
+      "text": "저기 계신 분이 바로 연개소문, 그분이오."
+     },
+     {
+      "who": "cp_c25",
+      "text": "(비도 다섯 자루를 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「다섯 자루의 비도(비도술) 시험을 통과하고 고구려 영광 재현 서약」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c25",
+     "npc:official:아전 임씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "연개소문: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c25"
+      },
+      "result": "연개소문: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "연개소문: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_13_CITY_PYEONGYANGBU",
+   "lines": [
+    {
+     "who": "cp_c25",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "연개소문, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c25"
+   ]
+  }
+ },
+ "quest:q_cp_c26": {
+  "status": "draft",
+  "title": "동료 영입: 계백",
+  "intro": {
+   "bg": "ND_07_CITY_NAMWONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 문씨",
+     "text": "계백을 찾는다면 먼저 남원도호부에서 수소문해 보시오. 「오천 결사대 위령비에서 백제 충절의 곡도 의식」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 문씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_CITY_NAMWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 윤씨",
+      "text": "계백 말이오? 황산벌에서 5천 결사대로 신라 5만 대군과 맞선 비장한 명장. 요즘 공주 충청감영 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 계백 이야기를 캐묻는다) 고맙소. 공주 충청감영으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 윤씨"
+    ]
+   },
+   {
+    "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 임씨",
+      "text": "계백 말이오? 요즘 부여 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 계백 이야기를 캐묻는다) 고맙소. 부여로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 임씨"
+    ]
+   },
+   {
+    "bg": "ND_06_TOWN_BUYEO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 전씨",
+      "text": "저기 계신 분이 바로 계백, 그분이오."
+     },
+     {
+      "who": "cp_c26",
+      "text": "(황산벌 백제 결사항전 검을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「오천 결사대 위령비에서 백제 충절의 곡도 의식」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c26",
+     "npc:elder:촌로 전씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "계백: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c26"
+      },
+      "result": "계백: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "계백: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_06_TOWN_BUYEO",
+   "lines": [
+    {
+     "who": "cp_c26",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "계백, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c26"
+   ]
+  }
+ },
+ "quest:q_cp_c27": {
+  "status": "draft",
+  "title": "동료 영입: 강림도령",
+  "intro": {
+   "bg": "ND_08_CITY_NAJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 손씨",
+     "text": "강림도령을 찾는다면 먼저 나주목에서 수소문해 보시오. 「저승사자 차사본풀이 의식 완료 및 붉은 적색포 찾기 퀘스트」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 손씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_08_CITY_NAJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 문씨",
+      "text": "강림도령 말이오? 염라대왕의 명을 받아 영혼을 인도하는 저승차사. 요즘 제주목 제주읍성 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 강림도령 이야기를 캐묻는다) 고맙소. 제주목 제주읍성으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 문씨"
+    ]
+   },
+   {
+    "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 오씨",
+      "text": "강림도령 말이오? 요즘 서귀포 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 강림도령의 행방을 수소문한다) 고맙소. 서귀포로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 오씨"
+    ]
+   },
+   {
+    "bg": "ND_17_TOWN_SEOGWIPO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 윤씨",
+      "text": "저기 계신 분이 바로 강림도령, 그분이오."
+     },
+     {
+      "who": "cp_c27",
+      "text": "(안개 속에서 저승차사 적색포와 명부를 든 채 모습을 드러낸다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「저승사자 차사본풀이 의식 완료 및 붉은 적색포 찾기 퀘스트」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c27",
+     "npc:elder:촌로 윤씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "강림도령: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c27"
+      },
+      "result": "강림도령: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "강림도령: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_17_TOWN_SEOGWIPO",
+   "lines": [
+    {
+     "who": "cp_c27",
+     "text": "산 자의 길과 죽은 자의 길이 잠시 겹쳤구려. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "강림도령, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c27"
+   ]
+  }
+ },
+ "quest:q_cp_c28": {
+  "status": "draft",
+  "title": "동료 영입: 뱃사공",
+  "intro": {
+   "bg": "ND_02_CITY_GWANGJUYUSUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 임씨",
+     "text": "뱃사공을 찾는다면 먼저 광주유수부에서 수소문해 보시오. 「마포나루에서 침몰 위기의 뗏목 수리 돕기」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 임씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_GWANGJUYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 서씨",
+      "text": "뱃사공 말이오? 평생 물길을 거슬러 오르내린 베테랑 뱃사공. 요즘 한양 경조 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 뱃사공 이야기를 캐묻는다) 고맙소. 한양 경조로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 서씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 한씨",
+      "text": "저기 계신 분이 바로 뱃사공, 그분이오."
+     },
+     {
+      "who": "cp_c28",
+      "text": "(일손을 멈추고 사공의 삿대와 노를 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「마포나루에서 침몰 위기의 뗏목 수리 돕기」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c28",
+     "npc:official:아전 한씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 2〕 불법의 가르침을 빌려 마음을 연다",
+      "req": {
+       "knowledge": {
+        "bul": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 25
+       }
+      },
+      "result": "뱃사공: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c28"
+      },
+      "result": "뱃사공: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "뱃사공: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "cp_c28",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "뱃사공, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c28"
+   ]
+  }
+ },
+ "quest:q_cp_samyeong": {
+  "status": "draft",
+  "title": "동료 영입: 사명대사",
+  "intro": {
+   "bg": "ND_08_CITY_SUNCHEONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 문씨",
+     "text": "사명대사를 찾는다면 먼저 순천도호부에서 수소문해 보시오. 「금강계단 진신사리 친견 및 일본 도쿠가와 이에야스 담판 역사」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 문씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_08_CITY_SUNCHEONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "사명대사 말이오? 임진왜란 승병을 총지휘하고 일본에 건너가 포로 3천 명을 쇄환한 호국성승. 요즘 대구 경상감영 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 사명대사의 자취를 찾는다) 고맙소. 대구 경상감영으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 이씨"
+    ]
+   },
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 윤씨",
+      "text": "사명대사 말이오? 요즘 해인사 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 사명대사의 행방을 수소문한다) 고맙소. 해인사로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 윤씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TEMPLE_HAEINSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 월조",
+      "text": "저기 계신 분이 바로 사명대사, 그분이오."
+     },
+     {
+      "who": "cp_samyeong",
+      "text": "(사명대사 금란가사를 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「금강계단 진신사리 친견 및 일본 도쿠가와 이에야스 담판 역사」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_samyeong",
+     "npc:monk:노승 월조"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 4〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 75
+       }
+      },
+      "result": "사명대사: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_samyeong"
+      },
+      "result": "사명대사: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "사명대사: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_10_TEMPLE_HAEINSA",
+   "lines": [
+    {
+     "who": "cp_samyeong",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 험한 길이라면 내가 앞에 서서 막아 주리다."
+    },
+    {
+     "who": "hero",
+     "text": "사명대사, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_samyeong"
+   ]
+  }
+ },
+ "quest:q_cp_c30": {
+  "status": "draft",
+  "title": "동료 영입: 원효대사",
+  "intro": {
+   "bg": "ND_01_CITY_GANGHWAYUSUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 황씨",
+     "text": "원효대사를 찾는다면 먼저 강화유수부에서 수소문해 보시오. 「해골물 일체유심조 깨달음 퀴즈 통과 및 무애가 호리병 전달」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 황씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_01_CITY_GANGHWAYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 배씨",
+      "text": "원효대사 말이오? 분황사에서 《대승기신론소》를 짓고 무애가를 부르며 민중 속으로 들어간 대성승. 요즘 한양 경조 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 원효대사 이야기를 캐묻는다) 고맙소. 한양 경조로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 배씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 조씨",
+      "text": "원효대사 말이오? 요즘 화성 융릉과 건릉 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 원효대사의 자취를 찾는다) 고맙소. 화성 융릉과 건릉으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 조씨"
+    ]
+   },
+   {
+    "bg": "ND_02_TOMB_HWASEONGYUNGREUNGGWAGEONREUNG",
+    "lines": [
+     {
+      "who": "npc:official:능참봉 최씨",
+      "text": "저기 계신 분이 바로 원효대사, 그분이오."
+     },
+     {
+      "who": "cp_c30",
+      "text": "(원효 무애호리박을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「해골물 일체유심조 깨달음 퀴즈 통과 및 무애가 호리병 전달」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c30",
+     "npc:official:능참봉 최씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "원효대사: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c30"
+      },
+      "result": "원효대사: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "원효대사: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_TOMB_HWASEONGYUNGREUNGGWAGEONREUNG",
+   "lines": [
+    {
+     "who": "cp_c30",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "원효대사, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c30"
+   ]
+  }
+ },
+ "quest:q_cp_c31": {
+  "status": "draft",
+  "title": "동료 영입: 의상대사",
+  "intro": {
+   "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 한씨",
+     "text": "의상대사를 찾는다면 먼저 대구 경상감영에서 수소문해 보시오. 「선묘낭자의 뜬바위(부석) 전설 퀘스트 완수 및 화엄일승법계도 복원」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 한씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "의상대사 말이오? 해동 화엄종의 개조. 요즘 상주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 의상대사의 자취를 찾는다) 고맙소. 상주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 류씨"
+    ]
+   },
+   {
+    "bg": "ND_09_CITY_SANGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 강씨",
+      "text": "의상대사 말이오? 요즘 부석사 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 의상대사 이야기를 캐묻는다) 고맙소. 부석사로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 강씨"
+    ]
+   },
+   {
+    "bg": "ND_09_TEMPLE_BUSEOKSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 원명",
+      "text": "저기 계신 분이 바로 의상대사, 그분이오."
+     },
+     {
+      "who": "cp_c31",
+      "text": "(화엄일승법계도 인경본을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「선묘낭자의 뜬바위(부석) 전설 퀘스트 완수 및 화엄일승법계도 복원」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c31",
+     "npc:monk:노승 원명"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "의상대사: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c31"
+      },
+      "result": "의상대사: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "의상대사: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_09_TEMPLE_BUSEOKSA",
+   "lines": [
+    {
+     "who": "cp_c31",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 험한 길이라면 내가 앞에 서서 막아 주리다."
+    },
+    {
+     "who": "hero",
+     "text": "의상대사, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c31"
+   ]
+  }
+ },
+ "quest:q_cp_seosan": {
+  "status": "draft",
+  "title": "동료 영입: 서산대사(휴정)",
+  "intro": {
+   "bg": "ND_11_CITY_BONGSANGUN",
+   "lines": [
+    {
+     "who": "npc:official:아전 류씨",
+     "text": "서산대사(휴정)을 찾는다면 먼저 봉산군에서 수소문해 보시오. 「팔도 16종 승병 격문 수합 및 《선가귀감》 목판 수호」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 류씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_11_CITY_BONGSANGUN",
+    "lines": [
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "서산대사(휴정) 말이오? 임진왜란 당시 묘향산에서 73세의 나이로 팔도 승병을 총궐기시킨 대종사. 요즘 평양부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 서산대사(휴정)의 자취를 찾는다) 고맙소. 평양부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 안씨"
+    ]
+   },
+   {
+    "bg": "ND_13_CITY_PYEONGYANGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 고씨",
+      "text": "서산대사(휴정) 말이오? 요즘 묘향산 보현사 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 서산대사(휴정)의 자취를 찾는다) 고맙소. 묘향산 보현사로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 고씨"
+    ]
+   },
+   {
+    "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 법운",
+      "text": "저기 계신 분이 바로 서산대사(휴정), 그분이오."
+     },
+     {
+      "who": "cp_seosan",
+      "text": "(서산대사 팔도도총섭 가사를 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「팔도 16종 승병 격문 수합 및 《선가귀감》 목판 수호」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_seosan",
+     "npc:monk:노승 법운"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "서산대사(휴정): 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_seosan"
+      },
+      "result": "서산대사(휴정): 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "서산대사(휴정): 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+   "lines": [
+    {
+     "who": "cp_seosan",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "서산대사(휴정), 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_seosan"
+   ]
+  }
+ },
+ "quest:q_cp_c33": {
+  "status": "draft",
+  "title": "동료 영입: 보조국사 지눌",
+  "intro": {
+   "bg": "ND_10_CITY_DONGRAEHYEON",
+   "lines": [
+    {
+     "who": "npc:official:아전 황씨",
+     "text": "보조국사 지눌을 찾는다면 먼저 동래현에서 수소문해 보시오. 「송광사 수선사 결사문 서명 및 조계산 16국사 사리친견 퀘스트」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 황씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_10_CITY_DONGRAEHYEON",
+    "lines": [
+     {
+      "who": "npc:official:아전 서씨",
+      "text": "보조국사 지눌 말이오? 정혜쌍수와 돈오점수를 제창하며 조계종을 중흥시킨 명승. 요즘 나주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 보조국사 지눌의 자취를 찾는다) 고맙소. 나주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 서씨"
+    ]
+   },
+   {
+    "bg": "ND_08_CITY_NAJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "보조국사 지눌 말이오? 요즘 송광사 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 보조국사 지눌 이야기를 캐묻는다) 고맙소. 송광사로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 이씨"
+    ]
+   },
+   {
+    "bg": "ND_08_TEMPLE_SONGGWANGSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 선각",
+      "text": "저기 계신 분이 바로 보조국사 지눌, 그분이오."
+     },
+     {
+      "who": "cp_c33",
+      "text": "(목조삼존불감 휴대본을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「송광사 수선사 결사문 서명 및 조계산 16국사 사리친견 퀘스트」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c33",
+     "npc:monk:노승 선각"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "보조국사 지눌: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_c33"
+      },
+      "result": "보조국사 지눌: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "보조국사 지눌: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_TEMPLE_SONGGWANGSA",
+   "lines": [
+    {
+     "who": "cp_c33",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 다친 이가 있으면 먼저 내게 보이시오."
+    },
+    {
+     "who": "hero",
+     "text": "보조국사 지눌, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c33"
+   ]
+  }
+ },
+ "quest:q_cp_bari": {
+  "status": "draft",
+  "title": "동료 영입: 바리공주",
+  "intro": {
+   "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 이씨",
+     "text": "바리공주를 찾는다면 먼저 대구 경상감영에서 수소문해 보시오. 「서천서역국 삼신산 생명수 항아리 회수 및 부모 구원 무속 제의」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 이씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 신씨",
+      "text": "바리공주 말이오? 버림받았으나 저승을 건너 생명수를 구해 부모를 살려내고 무조신(巫祖神)이 된 무속 설화의 주인공. 요즘 전주 전라감영 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 바리공주의 자취를 찾는다) 고맙소. 전주 전라감영으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 신씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "바리공주 말이오? 요즘 남원도호부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 바리공주의 자취를 찾는다) 고맙소. 남원도호부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 이씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_NAMWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "저기 계신 분이 바로 바리공주, 그분이오."
+     },
+     {
+      "who": "cp_bari",
+      "text": "(안개 속에서 서천 생명수 물병과 오색 꽃을 든 채 모습을 드러낸다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「서천서역국 삼신산 생명수 항아리 회수 및 부모 구원 무속 제의」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_bari",
+     "npc:official:아전 이씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "바리공주: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_bari"
+      },
+      "result": "바리공주: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "바리공주: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_NAMWONDOHOBU",
+   "lines": [
+    {
+     "who": "cp_bari",
+     "text": "산 자의 길과 죽은 자의 길이 잠시 겹쳤구려. 다친 이가 있으면 먼저 내게 보이시오."
+    },
+    {
+     "who": "hero",
+     "text": "바리공주, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_bari"
+   ]
+  }
+ },
+ "quest:q_cp_jeonuchi": {
+  "status": "draft",
+  "title": "동료 영입: 전우치",
+  "intro": {
+   "bg": "ND_01_CITY_GANGHWAYUSUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 송씨",
+     "text": "전우치를 찾는다면 먼저 강화유수부에서 수소문해 보시오. 「구미호의 호리병에서 천서(天書) 3권을 빼앗아 도술 대결에서 승리」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 송씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_01_CITY_GANGHWAYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 박씨",
+      "text": "전우치 말이오? 《전우치전》의 주인공이자 실존 도인. 요즘 개성부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 전우치 이야기를 캐묻는다) 고맙소. 개성부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 박씨"
+    ]
+   },
+   {
+    "bg": "ND_01_CITY_GAESEONGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 윤씨",
+      "text": "저기 계신 분이 바로 전우치, 그분이오."
+     },
+     {
+      "who": "cp_jeonuchi",
+      "text": "(구미호 비전 천서를 손끝에서 빙글 돌리며 나타난다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「구미호의 호리병에서 천서(天書) 3권을 빼앗아 도술 대결에서 승리」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_jeonuchi",
+     "npc:official:아전 윤씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "전우치: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_jeonuchi"
+      },
+      "result": "전우치: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "전우치: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_01_CITY_GAESEONGBU",
+   "lines": [
+    {
+     "who": "cp_jeonuchi",
+     "text": "재미있는 길이 되겠군. 따라가 주지. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "전우치, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_jeonuchi"
+   ]
+  }
+ },
+ "quest:q_cp_honggildong": {
+  "status": "draft",
+  "title": "동료 영입: 홍길동",
+  "intro": {
+   "bg": "ND_07_CITY_NAMWONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 강씨",
+     "text": "홍길동을 찾는다면 먼저 남원도호부에서 수소문해 보시오. 「탐관오리 율도미 압류 퀘스트 및 둔갑 분신술 8체 구별 시험 통과」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 강씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_CITY_NAMWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 장씨",
+      "text": "홍길동 말이오? 허균의 《홍길동전》 주인공. 요즘 나주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 홍길동 이야기를 캐묻는다) 고맙소. 나주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 장씨"
+    ]
+   },
+   {
+    "bg": "ND_08_CITY_NAJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 고씨",
+      "text": "홍길동 말이오? 요즘 장성 백양사 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 홍길동 이야기를 캐묻는다) 고맙소. 장성 백양사로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 고씨"
+    ]
+   },
+   {
+    "bg": "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 지공",
+      "text": "저기 계신 분이 바로 홍길동, 그분이오."
+     },
+     {
+      "who": "cp_honggildong",
+      "text": "(율도국 국왕인을 손끝에서 빙글 돌리며 나타난다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「탐관오리 율도미 압류 퀘스트 및 둔갑 분신술 8체 구별 시험 통과」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_honggildong",
+     "npc:monk:노승 지공"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 4〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 75
+       }
+      },
+      "result": "홍길동: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:cp_honggildong"
+      },
+      "result": "홍길동: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "홍길동: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_TEMPLE_JANGSEONGBAEKYANGSA",
+   "lines": [
+    {
+     "who": "cp_honggildong",
+     "text": "재미있는 길이 되겠군. 따라가 주지. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "홍길동, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_honggildong"
+   ]
+  }
+ },
+ "quest:q_cp_c37": {
+  "status": "draft",
+  "title": "동료 영입: 처용(處容)",
+  "intro": {
+   "bg": "ND_10_CITY_JINJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 오씨",
+     "text": "처용(處容)을 찾는다면 먼저 진주목에서 수소문해 보시오. 「동해 용왕의 아들 맞이 굿 및 역병신을 쫓는 처용가무 헌무」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 오씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_10_CITY_JINJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 윤씨",
+      "text": "처용(處容) 말이오? 동해 용왕의 아들로 처용가를 불러 아내를 범하려던 역신(疫神)을 스스로 꿇어 엎드리게 만든 벽사 무속의 수호신. 요즘 울산 대곡리 반구대 암각화 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 처용(處容) 이야기를 캐묻는다) 고맙소. 울산 대곡리 반구대 암각화로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 윤씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TOMB_ULSANDAEGOKRIBANGUDAEAMGAKHWA",
+    "lines": [
+     {
+      "who": "npc:official:능참봉 정씨",
+      "text": "저기 계신 분이 바로 처용(處容), 그분이오."
+     },
+     {
+      "who": "cp_c37",
+      "text": "(안개 속에서 처용 가면과 홍포를 든 채 모습을 드러낸다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「동해 용왕의 아들 맞이 굿 및 역병신을 쫓는 처용가무 헌무」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c37",
+     "npc:official:능참봉 정씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 3〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 50
+       }
+      },
+      "result": "처용(處容): 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c37"
+      },
+      "result": "처용(處容): 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "처용(處容): 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_10_TOMB_ULSANDAEGOKRIBANGUDAEAMGAKHWA",
+   "lines": [
+    {
+     "who": "cp_c37",
+     "text": "산 자의 길과 죽은 자의 길이 잠시 겹쳤구려. 다친 이가 있으면 먼저 내게 보이시오."
+    },
+    {
+     "who": "hero",
+     "text": "처용(處容), 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c37"
+   ]
+  }
+ },
+ "quest:q_cp_c38": {
+  "status": "draft",
+  "title": "동료 영입: 대장장이",
+  "intro": {
+   "bg": "ND_05_CITY_CHEONGJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 류씨",
+     "text": "대장장이를 찾는다면 먼저 청주목에서 수소문해 보시오. 「무쇠괴 5개 납품 및 단조 시험」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 류씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_05_CITY_CHEONGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 박씨",
+      "text": "대장장이 말이오? 달천 철산의 쇠를 달구어 조선 최고의 환도와 호미를 벼려내는 장인. 요즘 충주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 대장장이 이야기를 캐묻는다) 고맙소. 충주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 박씨"
+    ]
+   },
+   {
+    "bg": "ND_05_CITY_CHUNGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 최씨",
+      "text": "저기 계신 분이 바로 대장장이, 그분이오."
+     },
+     {
+      "who": "cp_c38",
+      "text": "(일손을 멈추고 무쇠 벼림망치를 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「무쇠괴 5개 납품 및 단조 시험」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c38",
+     "npc:official:아전 최씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 손재주로 연장을 고쳐 해결한다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "대장장이: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c38"
+      },
+      "result": "대장장이: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "대장장이: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_05_CITY_CHUNGJUMOK",
+   "lines": [
+    {
+     "who": "cp_c38",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 험한 길이라면 내가 앞에 서서 막아 주리다."
+    },
+    {
+     "who": "hero",
+     "text": "대장장이, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c38"
+   ]
+  }
+ },
+ "quest:q_cp_c39": {
+  "status": "draft",
+  "title": "동료 영입: 백정",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 송씨",
+     "text": "백정을 찾는다면 먼저 한양 경조에서 수소문해 보시오. 「미치광이 멧돼지 1마리 도축 가공」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 송씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 조씨",
+      "text": "백정 말이오? 가축과 맹수의 근골 구조를 꿰뚫어 보아 한 치의 오차 없이 급소를 가르는 도축 전문가. 요즘 수원화성 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 백정의 자취를 찾는다) 고맙소. 수원화성으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 조씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_SUWONHWASEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "저기 계신 분이 바로 백정, 그분이오."
+     },
+     {
+      "who": "cp_c39",
+      "text": "(일손을 멈추고 백정 골도(骨刀)을 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「미치광이 멧돼지 1마리 도축 가공」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c39",
+     "npc:official:아전 안씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 2〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 25
+       }
+      },
+      "result": "백정: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c39"
+      },
+      "result": "백정: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "백정: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_SUWONHWASEONG",
+   "lines": [
+    {
+     "who": "cp_c39",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "백정, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c39"
+   ]
+  }
+ },
+ "quest:q_cp_c40": {
+  "status": "draft",
+  "title": "동료 영입: 약초꾼",
+  "intro": {
+   "bg": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+   "lines": [
+    {
+     "who": "npc:official:아전 한씨",
+     "text": "약초꾼을 찾는다면 먼저 철원도호부 치소에서 수소문해 보시오. 「야생 더덕과 당귀 10뿌리 채취 납품」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 한씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+    "lines": [
+     {
+      "who": "npc:official:아전 서씨",
+      "text": "약초꾼 말이오? 오지에 서식하는 들풀과 나무뿌리의 독성과 약효를 몸으로 체득한 산나물꾼. 요즘 인제 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 약초꾼 이야기를 캐묻는다) 고맙소. 인제로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 서씨"
+    ]
+   },
+   {
+    "bg": "ND_03_TOWN_INJE",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 정씨",
+      "text": "저기 계신 분이 바로 약초꾼, 그분이오."
+     },
+     {
+      "who": "cp_c40",
+      "text": "(일손을 멈추고 약초 채반망을 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「야생 더덕과 당귀 10뿌리 채취 납품」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c40",
+     "npc:elder:촌로 정씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 2〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 25
+       }
+      },
+      "result": "약초꾼: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c40"
+      },
+      "result": "약초꾼: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "약초꾼: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_03_TOWN_INJE",
+   "lines": [
+    {
+     "who": "cp_c40",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 다친 이가 있으면 먼저 내게 보이시오."
+    },
+    {
+     "who": "hero",
+     "text": "약초꾼, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c40"
+   ]
+  }
+ },
+ "quest:q_cp_c41": {
+  "status": "draft",
+  "title": "동료 영입: 옹기장이",
+  "intro": {
+   "bg": "ND_02_CITY_SUWONHWASEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 배씨",
+     "text": "옹기장이를 찾는다면 먼저 수원화성에서 수소문해 보시오. 「고령토 10자루 채취 및 옹기 굽기」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 배씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_SUWONHWASEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 문씨",
+      "text": "옹기장이 말이오? 숨 쉬는 질그릇과 옹기를 빚어 곡식과 장류를 썩지 않게 보관하는 요업 장인. 요즘 광주유수부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 옹기장이의 자취를 찾는다) 고맙소. 광주유수부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 문씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_GWANGJUYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 윤씨",
+      "text": "저기 계신 분이 바로 옹기장이, 그분이오."
+     },
+     {
+      "who": "cp_c41",
+      "text": "(일손을 멈추고 통기 옹기 항아리를 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「고령토 10자루 채취 및 옹기 굽기」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c41",
+     "npc:official:아전 윤씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 2〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 25
+       }
+      },
+      "result": "옹기장이: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c41"
+      },
+      "result": "옹기장이: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "옹기장이: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_GWANGJUYUSUBU",
+   "lines": [
+    {
+     "who": "cp_c41",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "옹기장이, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c41"
+   ]
+  }
+ },
+ "quest:q_cp_bobusang": {
+  "status": "draft",
+  "title": "동료 영입: 보부상(부상)",
+  "intro": {
+   "bg": "ND_07_CITY_NAMWONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 류씨",
+     "text": "보부상(부상)을 찾는다면 먼저 남원도호부에서 수소문해 보시오. 「세 도시에 걸친 특산물 무역 3회」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 류씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_CITY_NAMWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 황씨",
+      "text": "보부상(부상) 말이오? 오일장을 돌며 소금과 미역, 무명을 지고 삼남대로를 주름잡는 길위의 상인. 요즘 전주 전라감영 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 보부상(부상) 이야기를 캐묻는다) 고맙소. 전주 전라감영으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 황씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 문씨",
+      "text": "저기 계신 분이 바로 보부상(부상), 그분이오."
+     },
+     {
+      "who": "cp_bobusang",
+      "text": "(일손을 멈추고 보부상 패랭이와 봇짐을 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「세 도시에 걸친 특산물 무역 3회」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_bobusang",
+     "npc:official:아전 문씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔상(商) 2〕 셈과 흥정으로 실타래를 푼다",
+      "req": {
+       "knowledge": {
+        "sang": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sang": 25
+       }
+      },
+      "result": "보부상(부상): 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_bobusang"
+      },
+      "result": "보부상(부상): 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "보부상(부상): 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "cp_bobusang",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "보부상(부상), 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_bobusang"
+   ]
+  }
+ },
+ "quest:q_cp_c43": {
+  "status": "draft",
+  "title": "동료 영입: 역졸(마부)",
+  "intro": {
+   "bg": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 한씨",
+     "text": "역졸(마부)를 찾는다면 먼저 안동대도호부에서 수소문해 보시오. 「지친 역마 3필 치료 및 편자 갈기」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 한씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_CITY_ANDONGDAEDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 박씨",
+      "text": "역졸(마부) 말이오? 역참의 말들을 훈련시키고 파발로를 관리하며 준마의 잠재력을 끌어내는 마부. 요즘 문경 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 역졸(마부)의 자취를 찾는다) 고맙소. 문경으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 박씨"
+    ]
+   },
+   {
+    "bg": "ND_09_TOWN_MUNGYEONG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 조씨",
+      "text": "저기 계신 분이 바로 역졸(마부), 그분이오."
+     },
+     {
+      "who": "cp_c43",
+      "text": "(일손을 멈추고 역졸 말채찍을 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「지친 역마 3필 치료 및 편자 갈기」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c43",
+     "npc:elder:촌로 조씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 2〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 25
+       }
+      },
+      "result": "역졸(마부): 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c43"
+      },
+      "result": "역졸(마부): 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "역졸(마부): 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_09_TOWN_MUNGYEONG",
+   "lines": [
+    {
+     "who": "cp_c43",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "역졸(마부), 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c43"
+   ]
+  }
+ },
+ "quest:q_cp_c44": {
+  "status": "draft",
+  "title": "동료 영입: 산포수",
+  "intro": {
+   "bg": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 서씨",
+     "text": "산포수를 찾는다면 먼저 북청도호부에서 수소문해 보시오. 「날아가는 꿩 5마리 조총 저격」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 서씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_CITY_BUKCHEONGDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 황씨",
+      "text": "산포수 말이오? 백두대간의 칼바람 속에서 화승총 한 자루로 맹수를 쓰러뜨리는 노련한 포수. 요즘 함흥부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 산포수 이야기를 캐묻는다) 고맙소. 함흥부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 황씨"
+    ]
+   },
+   {
+    "bg": "ND_15_CITY_HAMHEUNGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 윤씨",
+      "text": "저기 계신 분이 바로 산포수, 그분이오."
+     },
+     {
+      "who": "cp_c44",
+      "text": "(일손을 멈추고 화승총과 뇌관을 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「날아가는 꿩 5마리 조총 저격」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c44",
+     "npc:official:아전 윤씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 2〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 25
+       }
+      },
+      "result": "산포수: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c44"
+      },
+      "result": "산포수: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "산포수: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_15_CITY_HAMHEUNGBU",
+   "lines": [
+    {
+     "who": "cp_c44",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "산포수, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c44"
+   ]
+  }
+ },
+ "quest:q_cp_c45": {
+  "status": "draft",
+  "title": "동료 영입: 짚신장이",
+  "intro": {
+   "bg": "ND_06_CITY_HONGJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 송씨",
+     "text": "짚신장이를 찾는다면 먼저 홍주목에서 수소문해 보시오. 「볏짚과 왕골 20단으로 삼신 엮기」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 송씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_06_CITY_HONGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "짚신장이 말이오? 삼과 볏짚, 무명을 질기게 꼬아 비바람에도 끄떡없는 미투리를 짓는 장인. 요즘 공주 충청감영 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 짚신장이의 자취를 찾는다) 고맙소. 공주 충청감영으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 류씨"
+    ]
+   },
+   {
+    "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 박씨",
+      "text": "저기 계신 분이 바로 짚신장이, 그분이오."
+     },
+     {
+      "who": "cp_c45",
+      "text": "(일손을 멈추고 유혜골과 신칼을 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「볏짚과 왕골 20단으로 삼신 엮기」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c45",
+     "npc:official:아전 박씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 손재주로 연장을 고쳐 해결한다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "짚신장이: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c45"
+      },
+      "result": "짚신장이: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "짚신장이: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "lines": [
+    {
+     "who": "cp_c45",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "짚신장이, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c45"
+   ]
+  }
+ },
+ "quest:q_cp_c46": {
+  "status": "draft",
+  "title": "동료 영입: 주모",
+  "intro": {
+   "bg": "ND_01_CITY_GAESEONGBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 안씨",
+     "text": "주모를 찾는다면 먼저 개성부에서 수소문해 보시오. 「막걸리 10사발과 파전 5장 조리 돕기」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 안씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_01_CITY_GAESEONGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 손씨",
+      "text": "주모 말이오? 길손들의 피로를 풀어주는 손맛과 구수한 입담으로 천하의 소식을 꿰뚫는 주모. 요즘 파주목 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 주모의 행방을 수소문한다) 고맙소. 파주목으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 손씨"
+    ]
+   },
+   {
+    "bg": "ND_01_TOWN_PAJUMOK",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 신씨",
+      "text": "저기 계신 분이 바로 주모, 그분이오."
+     },
+     {
+      "who": "cp_c46",
+      "text": "(일손을 멈추고 주모 국밥 뚝배기를 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「막걸리 10사발과 파전 5장 조리 돕기」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c46",
+     "npc:elder:촌로 신씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 2〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 25
+       }
+      },
+      "result": "주모: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c46"
+      },
+      "result": "주모: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "주모: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_01_TOWN_PAJUMOK",
+   "lines": [
+    {
+     "who": "cp_c46",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "주모, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c46"
+   ]
+  }
+ },
+ "quest:q_cp_c47": {
+  "status": "draft",
+  "title": "동료 영입: 시골 훈장",
+  "intro": {
+   "bg": "ND_09_CITY_GYEONGJUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 배씨",
+     "text": "시골 훈장을 찾는다면 먼저 경주부에서 수소문해 보시오. 「천자문 훈장 퀴즈 10문 정답」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 배씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_CITY_GYEONGJUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "시골 훈장 말이오? 시골 서당에서 아이들을 가르치며 성현의 도리와 예법으로 마음을 다잡아주는 훈장. 요즘 안동대도호부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 시골 훈장 이야기를 캐묻는다) 고맙소. 안동대도호부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 류씨"
+    ]
+   },
+   {
+    "bg": "ND_09_CITY_ANDONGDAEDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 박씨",
+      "text": "저기 계신 분이 바로 시골 훈장, 그분이오."
+     },
+     {
+      "who": "cp_c47",
+      "text": "(일손을 멈추고 훈장 참나무 회초리를 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「천자문 훈장 퀴즈 10문 정답」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c47",
+     "npc:official:아전 박씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 2〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 25
+       }
+      },
+      "result": "시골 훈장: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c47"
+      },
+      "result": "시골 훈장: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "시골 훈장: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "lines": [
+    {
+     "who": "cp_c47",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "시골 훈장, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c47"
+   ]
+  }
+ },
+ "quest:q_cp_c48": {
+  "status": "draft",
+  "title": "동료 영입: 뗏목사공",
+  "intro": {
+   "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 이씨",
+     "text": "뗏목사공을 찾는다면 먼저 원주 강원감영에서 수소문해 보시오. 「남한강 상류 뗏목 엮기 목재 운반」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 이씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 전씨",
+      "text": "뗏목사공 말이오? 아우라지 물길을 따라 뗏목을 몰아 한양 마포종점까지 나무를 나르는 억척사공. 요즘 정선 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 뗏목사공 이야기를 캐묻는다) 고맙소. 정선으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 전씨"
+    ]
+   },
+   {
+    "bg": "ND_04_TOWN_JEONGSEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 문씨",
+      "text": "저기 계신 분이 바로 뗏목사공, 그분이오."
+     },
+     {
+      "who": "cp_c48",
+      "text": "(일손을 멈추고 정선 물박달나무 노를 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「남한강 상류 뗏목 엮기 목재 운반」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c48",
+     "npc:elder:촌로 문씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 2〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 25
+       }
+      },
+      "result": "뗏목사공: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c48"
+      },
+      "result": "뗏목사공: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "뗏목사공: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_04_TOWN_JEONGSEON",
+   "lines": [
+    {
+     "who": "cp_c48",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "뗏목사공, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c48"
+   ]
+  }
+ },
+ "quest:q_cp_c49": {
+  "status": "draft",
+  "title": "동료 영입: 채석 광부",
+  "intro": {
+   "bg": "ND_05_CITY_CHUNGJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 권씨",
+     "text": "채석 광부를 찾는다면 먼저 충주목에서 수소문해 보시오. 「단양석 10덩이 채굴 및 동굴 붕괴 방지」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 권씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_05_CITY_CHUNGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 한씨",
+      "text": "채석 광부 말이오? 어두운 막장에서 돌을 쪼개고 광맥을 찾아내는 강인한 팔뚝의 광부. 요즘 단양 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 채석 광부 이야기를 캐묻는다) 고맙소. 단양으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 한씨"
+    ]
+   },
+   {
+    "bg": "ND_05_TOWN_DANYANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 손씨",
+      "text": "저기 계신 분이 바로 채석 광부, 그분이오."
+     },
+     {
+      "who": "cp_c49",
+      "text": "(일손을 멈추고 단단한 쇠곡괭이를 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「단양석 10덩이 채굴 및 동굴 붕괴 방지」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c49",
+     "npc:elder:촌로 손씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 손재주로 연장을 고쳐 해결한다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "채석 광부: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c49"
+      },
+      "result": "채석 광부: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "채석 광부: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_05_TOWN_DANYANG",
+   "lines": [
+    {
+     "who": "cp_c49",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 험한 길이라면 내가 앞에 서서 막아 주리다."
+    },
+    {
+     "who": "hero",
+     "text": "채석 광부, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c49"
+   ]
+  }
+ },
+ "quest:q_cp_c50": {
+  "status": "draft",
+  "title": "동료 영입: 옻칠장",
+  "intro": {
+   "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 류씨",
+     "text": "옻칠장을 찾는다면 먼저 강릉대도호부에서 수소문해 보시오. 「야생 옻나무 원액 5통 채취 및 알레르기 극복」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 류씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 강씨",
+      "text": "옻칠장 말이오? 치악산 옻나무 진액을 채취해 천 년이 지나도 썩지 않는 칠을 올리는 전통 옻칠장. 요즘 원주 강원감영 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 옻칠장 이야기를 캐묻는다) 고맙소. 원주 강원감영으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 강씨"
+    ]
+   },
+   {
+    "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 박씨",
+      "text": "저기 계신 분이 바로 옻칠장, 그분이오."
+     },
+     {
+      "who": "cp_c50",
+      "text": "(일손을 멈추고 옻칠 붓과 주걱을 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「야생 옻나무 원액 5통 채취 및 알레르기 극복」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c50",
+     "npc:official:아전 박씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 손재주로 연장을 고쳐 해결한다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "옻칠장: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c50"
+      },
+      "result": "옻칠장: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "옻칠장: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "lines": [
+    {
+     "who": "cp_c50",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "옻칠장, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c50"
+   ]
+  }
+ },
+ "quest:q_cp_c51": {
+  "status": "draft",
+  "title": "동료 영입: 한지장이",
+  "intro": {
+   "bg": "ND_07_CITY_NAMWONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 이씨",
+     "text": "한지장이를 찾는다면 먼저 남원도호부에서 수소문해 보시오. 「닥나무 찌기와 닥풀 쑤기 퀘스트」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 이씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_CITY_NAMWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 박씨",
+      "text": "한지장이 말이오? 맑은 물에 닥나무를 풀고 물질하여 질기고 고운 천년 한지를 뜨는 장인. 요즘 전주 전라감영 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 한지장이 이야기를 캐묻는다) 고맙소. 전주 전라감영으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 박씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 오씨",
+      "text": "저기 계신 분이 바로 한지장이, 그분이오."
+     },
+     {
+      "who": "cp_c51",
+      "text": "(일손을 멈추고 한지 발과 물질틀을 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「닥나무 찌기와 닥풀 쑤기 퀘스트」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c51",
+     "npc:official:아전 오씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 손재주로 연장을 고쳐 해결한다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "한지장이: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c51"
+      },
+      "result": "한지장이: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "한지장이: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "cp_c51",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "한지장이, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c51"
+   ]
+  }
+ },
+ "quest:q_cp_c52": {
+  "status": "draft",
+  "title": "동료 영입: 석공(석수)",
+  "intro": {
+   "bg": "ND_01_CITY_GAESEONGBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 손씨",
+     "text": "석공(석수)를 찾는다면 먼저 개성부에서 수소문해 보시오. 「무너진 산성 성벽 축조 보수」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 손씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_01_CITY_GAESEONGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "석공(석수) 말이오? 거친 암반을 정과 망치로 쪼개어 천년을 버티는 산성과 석탑을 세우는 석수. 요즘 강화 도요지 백자 청화항아리 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 석공(석수)의 행방을 수소문한다) 고맙소. 강화 도요지 백자 청화항아리로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 정씨"
+    ]
+   },
+   {
+    "bg": "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:traveler:유람객 류씨",
+      "text": "저기 계신 분이 바로 석공(석수), 그분이오."
+     },
+     {
+      "who": "cp_c52",
+      "text": "(일손을 멈추고 석수 정과 망치를 옆에 둔 채 흙 묻은 손을 턴다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「무너진 산성 성벽 축조 보수」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c52",
+     "npc:traveler:유람객 류씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 손재주로 연장을 고쳐 해결한다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "석공(석수): 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c52"
+      },
+      "result": "석공(석수): 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "석공(석수): 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "cp_c52",
+     "text": "먹고살 길만 열어 준다면야, 어디든 따라가지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "석공(석수), 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c52"
+   ]
+  }
+ },
+ "quest:q_cp_c53": {
+  "status": "draft",
+  "title": "동료 영입: 박씨부인",
+  "intro": {
+   "bg": "ND_02_CITY_GWANGJUYUSUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 한씨",
+     "text": "박씨부인을 찾는다면 먼저 광주유수부에서 수소문해 보시오. 「시집살이 허물 벗기 퀘스트 및 호황(胡皇)의 암살자 격퇴」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 한씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_GWANGJUYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "박씨부인 말이오? 《박씨전》의 여걸. 요즘 수원화성 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 박씨부인 이야기를 캐묻는다) 고맙소. 수원화성으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 이씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_SUWONHWASEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 강씨",
+      "text": "저기 계신 분이 바로 박씨부인, 그분이오."
+     },
+     {
+      "who": "cp_c53",
+      "text": "(박씨 옥화선(부채)를 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「시집살이 허물 벗기 퀘스트 및 호황(胡皇)의 암살자 격퇴」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c53",
+     "npc:official:아전 강씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "박씨부인: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c53"
+      },
+      "result": "박씨부인: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "박씨부인: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_SUWONHWASEONG",
+   "lines": [
+    {
+     "who": "cp_c53",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "박씨부인, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c53"
+   ]
+  }
+ },
+ "quest:q_cp_c54": {
+  "status": "draft",
+  "title": "동료 영입: 심청",
+  "intro": {
+   "bg": "ND_12_CITY_YEONANDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 전씨",
+     "text": "심청을 찾는다면 먼저 연안도호부에서 수소문해 보시오. 「공양미 삼백석 조달 및 심봉사 눈뜨기 맹세」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 전씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_12_CITY_YEONANDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 임씨",
+      "text": "심청 말이오? 《심청전》의 효녀. 요즘 장산곶 진보 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 심청의 자취를 찾는다) 고맙소. 장산곶 진보로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 임씨"
+    ]
+   },
+   {
+    "bg": "ND_12_FORT_JANGSANGOTJINBO",
+    "lines": [
+     {
+      "who": "npc:soldier:군관 정씨",
+      "text": "저기 계신 분이 바로 심청, 그분이오."
+     },
+     {
+      "who": "cp_c54",
+      "text": "(인당수 연화좌를 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「공양미 삼백석 조달 및 심봉사 눈뜨기 맹세」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c54",
+     "npc:soldier:군관 정씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "심청: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c54"
+      },
+      "result": "심청: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "심청: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_12_FORT_JANGSANGOTJINBO",
+   "lines": [
+    {
+     "who": "cp_c54",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 다친 이가 있으면 먼저 내게 보이시오."
+    },
+    {
+     "who": "hero",
+     "text": "심청, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c54"
+   ]
+  }
+ },
+ "quest:q_cp_c55": {
+  "status": "draft",
+  "title": "동료 영입: 성춘향",
+  "intro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 송씨",
+     "text": "성춘향을 찾는다면 먼저 전주 전라감영에서 수소문해 보시오. 「변학도의 수청 강요 거부 및 옥중 절개 지키기」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 송씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "성춘향 말이오? 《춘향전》의 주인공. 요즘 남원도호부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 성춘향의 행방을 수소문한다) 고맙소. 남원도호부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 류씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_NAMWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 박씨",
+      "text": "저기 계신 분이 바로 성춘향, 그분이오."
+     },
+     {
+      "who": "cp_c55",
+      "text": "(춘향 옥중 형틀 조각을 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「변학도의 수청 강요 거부 및 옥중 절개 지키기」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c55",
+     "npc:official:아전 박씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "성춘향: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c55"
+      },
+      "result": "성춘향: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "성춘향: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_NAMWONDOHOBU",
+   "lines": [
+    {
+     "who": "cp_c55",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "성춘향, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c55"
+   ]
+  }
+ },
+ "quest:q_cp_c56": {
+  "status": "draft",
+  "title": "동료 영입: 이몽룡",
+  "intro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 윤씨",
+     "text": "이몽룡을 찾는다면 먼저 전주 전라감영에서 수소문해 보시오. 「암행어사 출두 마패 3마패 입수 및 봉고파직 퀘스트」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 윤씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 고씨",
+      "text": "이몽룡 말이오? 《춘향전》의 남주인공. 요즘 남원도호부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 이몽룡의 행방을 수소문한다) 고맙소. 남원도호부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 고씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_NAMWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 홍씨",
+      "text": "저기 계신 분이 바로 이몽룡, 그분이오."
+     },
+     {
+      "who": "cp_c56",
+      "text": "(어사 출두 3마패를 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「암행어사 출두 마패 3마패 입수 및 봉고파직 퀘스트」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c56",
+     "npc:official:아전 홍씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 3〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 50
+       }
+      },
+      "result": "이몽룡: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c56"
+      },
+      "result": "이몽룡: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "이몽룡: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_NAMWONDOHOBU",
+   "lines": [
+    {
+     "who": "cp_c56",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "이몽룡, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c56"
+   ]
+  }
+ },
+ "quest:q_cp_c57": {
+  "status": "draft",
+  "title": "동료 영입: 흥부",
+  "intro": {
+   "bg": "ND_08_CITY_GWANGJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 류씨",
+     "text": "흥부를 찾는다면 먼저 광주목에서 수소문해 보시오. 「다리 부러진 제비 치료 및 은혜 갚은 박씨 심기」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 류씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_08_CITY_GWANGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 배씨",
+      "text": "흥부 말이오? 《흥부전》의 주인공. 요즘 구례현 치소 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 흥부의 행방을 수소문한다) 고맙소. 구례현 치소로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 배씨"
+    ]
+   },
+   {
+    "bg": "ND_08_TOWN_GURYEHYEONCHISO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 최씨",
+      "text": "저기 계신 분이 바로 흥부, 그분이오."
+     },
+     {
+      "who": "cp_c57",
+      "text": "(제비 박씨 씨앗을 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「다리 부러진 제비 치료 및 은혜 갚은 박씨 심기」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c57",
+     "npc:elder:촌로 최씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔농(農) 3〕 약초와 농사 지식으로 문제를 푼다",
+      "req": {
+       "knowledge": {
+        "nong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "nong": 50
+       }
+      },
+      "result": "흥부: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c57"
+      },
+      "result": "흥부: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "흥부: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_TOWN_GURYEHYEONCHISO",
+   "lines": [
+    {
+     "who": "cp_c57",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "흥부, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c57"
+   ]
+  }
+ },
+ "quest:q_cp_c58": {
+  "status": "draft",
+  "title": "동료 영입: 배비장",
+  "intro": {
+   "bg": "ND_17_TOWN_DAEJEONGHYEON",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 황씨",
+     "text": "배비장을 찾는다면 먼저 대정현에서 수소문해 보시오. 「기생 애랑의 유혹 시험과 방심 해프닝 극복」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:elder:촌로 황씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_17_TOWN_DAEJEONGHYEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 권씨",
+      "text": "배비장 말이오? 《배비장전》의 주인공. 요즘 제주목 제주읍성 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 배비장 이야기를 듣는다) 고맙소. 제주목 제주읍성으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 권씨"
+    ]
+   },
+   {
+    "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "저기 계신 분이 바로 배비장, 그분이오."
+     },
+     {
+      "who": "cp_c58",
+      "text": "(배비장 방울과 궤짝을 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「기생 애랑의 유혹 시험과 방심 해프닝 극복」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c58",
+     "npc:official:아전 이씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "배비장: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c58"
+      },
+      "result": "배비장: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "배비장: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "lines": [
+    {
+     "who": "cp_c58",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "배비장, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c58"
+   ]
+  }
+ },
+ "quest:q_cp_c59": {
+  "status": "draft",
+  "title": "동료 영입: 허생",
+  "intro": {
+   "bg": "ND_02_CITY_GWANGJUYUSUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 임씨",
+     "text": "허생을 찾는다면 먼저 광주유수부에서 수소문해 보시오. 「변승업에게 1만 냥을 빌려 과일/말총 매점매석 무역」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 임씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_GWANGJUYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "허생 말이오? 박지원의 《허생전》 주인공. 요즘 한양 경조 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 허생 이야기를 캐묻는다) 고맙소. 한양 경조로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 류씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 장씨",
+      "text": "저기 계신 분이 바로 허생, 그분이오."
+     },
+     {
+      "who": "cp_c59",
+      "text": "(허생 변씨 차용증을 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「변승업에게 1만 냥을 빌려 과일/말총 매점매석 무역」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c59",
+     "npc:official:아전 장씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔상(商) 3〕 셈과 흥정으로 실타래를 푼다",
+      "req": {
+       "knowledge": {
+        "sang": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sang": 50
+       }
+      },
+      "result": "허생: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c59"
+      },
+      "result": "허생: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "허생: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "cp_c59",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "허생, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c59"
+   ]
+  }
+ },
+ "quest:q_cp_c60": {
+  "status": "draft",
+  "title": "동료 영입: 조웅",
+  "intro": {
+   "bg": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+   "lines": [
+    {
+     "who": "npc:official:아전 고씨",
+     "text": "조웅을 찾는다면 먼저 철원도호부 치소에서 수소문해 보시오. 「월경대사에게 병법과 무예를 익히고 명검 획득」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 고씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+    "lines": [
+     {
+      "who": "npc:official:아전 홍씨",
+      "text": "조웅 말이오? 《조웅전》의 주인공. 요즘 철원도호부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 조웅 이야기를 캐묻는다) 고맙소. 철원도호부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 홍씨"
+    ]
+   },
+   {
+    "bg": "ND_03_CITY_CHEOLWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 문씨",
+      "text": "저기 계신 분이 바로 조웅, 그분이오."
+     },
+     {
+      "who": "cp_c60",
+      "text": "(조웅 보검과 철퇴를 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「월경대사에게 병법과 무예를 익히고 명검 획득」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c60",
+     "npc:official:아전 문씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "조웅: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c60"
+      },
+      "result": "조웅: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "조웅: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_03_CITY_CHEOLWONDOHOBU",
+   "lines": [
+    {
+     "who": "cp_c60",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "조웅, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c60"
+   ]
+  }
+ },
+ "quest:q_cp_c61": {
+  "status": "draft",
+  "title": "동료 영입: 유충렬",
+  "intro": {
+   "bg": "ND_06_CITY_HONGJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 최씨",
+     "text": "유충렬을 찾는다면 먼저 홍주목에서 수소문해 보시오. 「백용선생에게 일월보검을 전수받고 부모 구출 서약」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 최씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_06_CITY_HONGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "유충렬 말이오? 《유충렬전》의 주인공. 요즘 천안 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 유충렬의 자취를 찾는다) 고맙소. 천안으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 정씨"
+    ]
+   },
+   {
+    "bg": "ND_06_TOWN_CHEONAN",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 손씨",
+      "text": "저기 계신 분이 바로 유충렬, 그분이오."
+     },
+     {
+      "who": "cp_c61",
+      "text": "(일월보검과 천마를 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「백용선생에게 일월보검을 전수받고 부모 구출 서약」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c61",
+     "npc:elder:촌로 손씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "유충렬: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c61"
+      },
+      "result": "유충렬: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "유충렬: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_06_TOWN_CHEONAN",
+   "lines": [
+    {
+     "who": "cp_c61",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 앞길을 막는 것은 내가 먼저 베어 내겠소."
+    },
+    {
+     "who": "hero",
+     "text": "유충렬, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c61"
+   ]
+  }
+ },
+ "quest:q_cp_c62": {
+  "status": "draft",
+  "title": "동료 영입: 양소유",
+  "intro": {
+   "bg": "ND_05_CITY_CHUNGJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 신씨",
+     "text": "양소유를 찾는다면 먼저 충주목에서 수소문해 보시오. 「성진의 환생 굴레 깨닫기 및 팔선녀 결속 퀘스트」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 신씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_05_CITY_CHUNGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 오씨",
+      "text": "양소유 말이오? 김만중의 《구운몽》 주인공. 요즘 보은 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 양소유 이야기를 캐묻는다) 고맙소. 보은으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 오씨"
+    ]
+   },
+   {
+    "bg": "ND_05_TOWN_BOEUN",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 홍씨",
+      "text": "저기 계신 분이 바로 양소유, 그분이오."
+     },
+     {
+      "who": "cp_c62",
+      "text": "(육관대사 염주와 백유선을 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「성진의 환생 굴레 깨닫기 및 팔선녀 결속 퀘스트」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c62",
+     "npc:elder:촌로 홍씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "양소유: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_c62"
+      },
+      "result": "양소유: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "양소유: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_05_TOWN_BOEUN",
+   "lines": [
+    {
+     "who": "cp_c62",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "양소유, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c62"
+   ]
+  }
+ },
+ "quest:q_cp_c63": {
+  "status": "draft",
+  "title": "동료 영입: 숙향",
+  "intro": {
+   "bg": "ND_15_CITY_BUKCHEONGDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 전씨",
+     "text": "숙향을 찾는다면 먼저 북청도호부에서 수소문해 보시오. 「선녀 환생 굴레와 화재 조난 극복 및 파랑새 인연 맺기」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 전씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_CITY_BUKCHEONGDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "숙향 말이오? 《숙향전》의 주인공. 요즘 안변도호부 치소 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 숙향 이야기를 캐묻는다) 고맙소. 안변도호부 치소로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 안씨"
+    ]
+   },
+   {
+    "bg": "ND_15_TOWN_ANBYEONDOHOBUCHISO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 고씨",
+      "text": "저기 계신 분이 바로 숙향, 그분이오."
+     },
+     {
+      "who": "cp_c63",
+      "text": "(숙향 파랑새 깃털을 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「선녀 환생 굴레와 화재 조난 극복 및 파랑새 인연 맺기」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c63",
+     "npc:elder:촌로 고씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔선(仙) 2〕 선도의 기운을 읽어 길을 찾는다",
+      "req": {
+       "knowledge": {
+        "seon": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "seon": 25
+       }
+      },
+      "result": "숙향: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c63"
+      },
+      "result": "숙향: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "숙향: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_15_TOWN_ANBYEONDOHOBUCHISO",
+   "lines": [
+    {
+     "who": "cp_c63",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "숙향, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c63"
+   ]
+  }
+ },
+ "quest:q_cp_c64": {
+  "status": "draft",
+  "title": "동료 영입: 장화",
+  "intro": {
+   "bg": "ND_14_CITY_UIJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 박씨",
+     "text": "장화를 찾는다면 먼저 의주목에서 수소문해 보시오. 「사또에게 피눈물 원통함 고변」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 박씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_14_CITY_UIJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "장화 말이오? 《장화홍련전》의 맏딸. 요즘 철산 차련관 사신 접대 영빈각 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 장화의 행방을 수소문한다) 고맙소. 철산 차련관 사신 접대 영빈각으로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 이씨"
+    ]
+   },
+   {
+    "bg": "ND_14_SCENIC_CHEOLSANCHARYEONGWANSASINJEOPDAEYEONGBINGAK",
+    "lines": [
+     {
+      "who": "npc:traveler:유람객 문씨",
+      "text": "저기 계신 분이 바로 장화, 그분이오."
+     },
+     {
+      "who": "cp_c64",
+      "text": "(장화의 옥가락지를 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「사또에게 피눈물 원통함 고변」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c64",
+     "npc:traveler:유람객 문씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 2〕 불법의 가르침을 빌려 마음을 연다",
+      "req": {
+       "knowledge": {
+        "bul": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 25
+       }
+      },
+      "result": "장화: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c64"
+      },
+      "result": "장화: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "장화: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_14_SCENIC_CHEOLSANCHARYEONGWANSASINJEOPDAEYEONGBINGAK",
+   "lines": [
+    {
+     "who": "cp_c64",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "장화, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c64"
+   ]
+  }
+ },
+ "quest:q_cp_c65": {
+  "status": "draft",
+  "title": "동료 영입: 홍계월",
+  "intro": {
+   "bg": "ND_02_CITY_GWANGJUYUSUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 서씨",
+     "text": "홍계월을 찾는다면 먼저 광주유수부에서 수소문해 보시오. 「남장 여장군 과거 급제 및 왜적 토벌 총사령관 퀘스트」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 서씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_GWANGJUYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 문씨",
+      "text": "홍계월 말이오? 《홍계월전》의 여주인공. 요즘 한양 경조 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 홍계월 이야기를 캐묻는다) 고맙소. 한양 경조로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 문씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "저기 계신 분이 바로 홍계월, 그분이오."
+     },
+     {
+      "who": "cp_c65",
+      "text": "(평국대원수 인수(印綬)을 소중히 품은 채 조심스레 다가온다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「남장 여장군 과거 급제 및 왜적 토벌 총사령관 퀘스트」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_c65",
+     "npc:official:아전 류씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔유(儒) 2〕 예법과 경전의 도리로 설득한다",
+      "req": {
+       "knowledge": {
+        "yu": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "yu": 25
+       }
+      },
+      "result": "홍계월: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_c65"
+      },
+      "result": "홍계월: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "홍계월: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "cp_c65",
+     "text": "제 이야기가 여기서 끝나지 않았다면, 함께 가겠습니다. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "홍계월, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_c65"
+   ]
+  }
+ },
+ "quest:q_cp_namsago": {
+  "status": "draft",
+  "title": "동료 영입: 남사고",
+  "intro": {
+   "bg": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 송씨",
+     "text": "남사고를 찾는다면 먼저 안동대도호부에서 수소문해 보시오. 「남사고의 부탁을 들어주기」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 송씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_CITY_ANDONGDAEDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 홍씨",
+      "text": "남사고 말이오? 요즘 경주부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 남사고의 자취를 찾는다) 고맙소. 경주부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 홍씨"
+    ]
+   },
+   {
+    "bg": "ND_09_CITY_GYEONGJUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 권씨",
+      "text": "저기 계신 분이 바로 남사고, 그분이오."
+     },
+     {
+      "who": "cp_namsago",
+      "text": "(남사고의 물건을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「남사고의 부탁을 들어주기」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_namsago",
+     "npc:official:아전 권씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 3〕 주변을 샅샅이 살펴 단서를 맞춘다",
+      "req": {
+       "knowledge": {
+        "sa": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 50
+       }
+      },
+      "result": "남사고: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:cp_namsago"
+      },
+      "result": "남사고: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "남사고: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_09_CITY_GYEONGJUBU",
+   "lines": [
+    {
+     "who": "cp_namsago",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "남사고, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_namsago"
+   ]
+  }
+ },
+ "quest:q_cp_sinyunbok": {
+  "status": "draft",
+  "title": "동료 영입: 혜원 신윤복",
+  "intro": {
+   "bg": "ND_02_CITY_SUWONHWASEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 최씨",
+     "text": "혜원 신윤복을 찾는다면 먼저 수원화성에서 수소문해 보시오. 「혜원 신윤복의 부탁을 들어주기」 — 이 일을 해내야 마음을 연다더이다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 최씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_SUWONHWASEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "혜원 신윤복 말이오? 요즘 광주유수부 쪽에서 보았다는 이가 있소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 혜원 신윤복의 자취를 찾는다) 고맙소. 광주유수부로 가 보겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 류씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_GWANGJUYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 신씨",
+      "text": "저기 계신 분이 바로 혜원 신윤복, 그분이오."
+     },
+     {
+      "who": "cp_sinyunbok",
+      "text": "(혜원 신윤복의 물건을 곁에 두고 무언가를 적고 있다가 붓을 놓는다) 나를 찾아왔다고? 그렇다면 청이 하나 있소 — 「혜원 신윤복의 부탁을 들어주기」. 이 일을 해내면 함께 가겠소."
+     },
+     {
+      "who": "hero",
+      "text": "어떻게 도우면 좋겠소?"
+     }
+    ],
+    "cast": [
+     "hero",
+     "cp_sinyunbok",
+     "npc:official:아전 신씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 손재주로 연장을 고쳐 해결한다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "혜원 신윤복: 역시 보는 눈이 있구려. 그 방법이면 되겠소."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 필요한 물자를 넉넉히 사서 돕는다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:cp_sinyunbok"
+      },
+      "result": "혜원 신윤복: 이렇게까지… 신세를 졌소."
+     },
+     {
+      "id": "plain",
+      "text": "직접 발로 뛰어 돕는다",
+      "req": {},
+      "effects": {},
+      "result": "혜원 신윤복: 땀 흘려 도와준 마음, 잊지 않겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_GWANGJUYUSUBU",
+   "lines": [
+    {
+     "who": "cp_sinyunbok",
+     "text": "뜻이 같다면 길을 함께하는 것도 인연이겠지요. 길 위의 일은 내가 챙길 테니 걱정 마시오."
+    },
+    {
+     "who": "hero",
+     "text": "혜원 신윤복, 함께 팔도를 누빕시다."
+    }
+   ],
+   "cast": [
+    "hero",
+    "cp_sinyunbok"
+   ]
+  }
+ }
+}

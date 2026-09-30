@@ -4,6 +4,7 @@
 검사: id 중복 · 교차 참조 · 17권역 인접 대칭·쌀 시세 · 노드 시설/좌표/연결성 · 유산→보상 형태 · 동선 큐 2~5노드
       (장비·탈것·동료·인스턴스·이벤트 단계·메인 챕터) · 비전서 분배 6/5/5/8 · 모작 70~80% · 포획구 4×5 · 보스 도주 0%
       · 스킬 상태이상 · 미니게임 구현/문항 · 세시 24절기 · 신분 임계 단조성
+      · 24 대화·서사: 퀘스트 동선·보상 · 서사 키/동선 길이 · 화자(who) · 선택지 조건(req)/효과(effects) 키 · 전설 잠금 · 유산별 미니게임 변형
 """
 import sys
 from collections import Counter, deque, defaultdict
@@ -163,10 +164,10 @@ def connected(regs):
 routes_checked = 0
 
 
-def route(rt, tier, where):
+def route(rt, tier, where, rules_key="route_rules"):
     global routes_checked
     routes_checked += 1
-    rule = OV["route_rules"][str(tier)]
+    rule = OV[rules_key][str(tier)]
     n0, n1 = rule["nodes"]
     if not n0 <= len(rt) <= n1:
         E(f"{where}: 동선 {len(rt)}노드 (T{tier} 허용 {n0}~{n1})")
@@ -591,6 +592,179 @@ if th != sorted(th) or th[0] != 0 or len(set(th)) != len(th):
 if OV["rank"]["formula"].get("a", 0) <= 0:
     E("rank.formula 미적합 — tools/economy_sim.py --write 실행 필요")
 
+# ================================================================ 24 대화·서사 (tools/gen_story.py + data_src/story/edits)
+STORY = load("24_story.json")
+REQ_KEYS = {"rank", "money", "items", "knowledge", "party", "class", "flag", "visited"}
+FX_KEYS = {"knowledge_xp", "money", "money_mult", "give", "take", "flag", "reputation"}
+NPC_ROLES = {"official", "monk", "elder", "soldier", "merchant", "shaman", "scholar", "fisher", "innkeeper", "traveler"}
+for m in STORY.get("minigames", []):
+    if m["id"] in by:
+        E(f"24 minigames: id 중복 {m['id']}")
+    by[m["id"]], sheet[m["id"]] = m, "minigames"
+    if m.get("impl") not in IMPLS:
+        E(f"24 {m['id']}: impl {m.get('impl')}")
+qids = set()
+for it in S["items"]:
+    if it.get("acquire", {}).get("type") == "quest":
+        qids.add("q_" + it["id"])
+for m in S["mounts"]:
+    if m.get("acquire", {}).get("type") == "quest":
+        qids.add("q_" + m["id"])
+for c in S["companions"]:
+    if c.get("recruit", {}).get("route"):
+        qids.add("q_" + c["id"])
+    for pq in c.get("promotion", []):
+        qids.add(pq["id"])
+for inst in S["instances"]:
+    qids.add("q_" + inst["id"])
+QROUTE = {}
+for it in S["items"] + S["mounts"]:
+    a = it.get("acquire", {})
+    if a.get("type") == "quest":
+        QROUTE["q_" + it["id"]] = a["route"]
+for c in S["companions"]:
+    if c.get("recruit", {}).get("route"):
+        QROUTE["q_" + c["id"]] = c["recruit"]["route"]
+    for pq in c.get("promotion", []):
+        QROUTE[pq["id"]] = pq["route"]
+for q in STORY.get("quests", []):
+    w = f"24 퀘스트 {q['id']}"
+    if q["id"] in qids or q["id"] in by:
+        E(f"{w}: id 중복")
+    qids.add(q["id"])
+    QROUTE[q["id"]] = q["route"]
+    if q.get("type") not in OV["economy"]["quest_type_mult"]:
+        E(f"{w}: quest_type_mult 에 {q.get('type')} 없음")
+    route(q["route"], q["tier"], w, q.get("rules", "route_rules"))
+    if len(set(q["route"])) != len(q["route"]):
+        E(f"{w}: 동선 중복 노드")
+    rw = q.get("reward", {})
+    if "item" in rw:
+        ref(rw["item"], w, {"specialty_recipes", "items", "books"})
+    if "heritage_unlock" in rw:
+        ref(rw["heritage_unlock"], w, {"heritage"})
+        if q["route"][-1] != rw["heritage_unlock"]:
+            E(f"{w}: 전설 동선의 마지막은 그 유산이어야 함")
+    av = q.get("avail", {})
+    if "region" in av and av["region"] not in adj:
+        E(f"{w}: avail.region {av['region']}")
+    for k in ("heritage_resolved", "heritage_unvisited"):
+        if k in av:
+            ref(av[k], w, {"heritage"})
+for hid, qid in STORY.get("lore_gate", {}).items():
+    ref(hid, f"24 lore_gate {hid}", {"heritage"})
+    if qid not in qids:
+        E(f"24 lore_gate {hid}: 퀘스트 {qid} 없음")
+comp_ids = {c["id"] for c in S["companions"]}
+class_ids = {c["id"] for c in S["classes"]}
+n_scene = n_choice = 0
+
+
+def check_scene(sc, w):
+    global n_scene, n_choice
+    n_scene += 1
+    bg = sc.get("bg", "")
+    if bg and not bg.startswith("res://") and bg not in by:
+        E(f"{w}: 배경 {bg} 없음")
+    lines_ = sc.get("lines", [])
+    if not lines_ and not sc.get("choices"):
+        E(f"{w}: 대사 없음")
+    for who in [ln.get("who", "") for ln in lines_] + list(sc.get("cast", [])):
+        if who in ("hero", "narration", "") or who in comp_ids:
+            continue
+        if who.startswith("npc:"):
+            parts = who.split(":", 2)
+            if len(parts) < 3 or parts[1] not in NPC_ROLES:
+                E(f"{w}: NPC 화자 형식 npc:<역할>:<이름> — {who}")
+            continue
+        E(f"{w}: 알 수 없는 화자 {who}")
+    for ln in lines_:
+        if not str(ln.get("text", "")).strip():
+            E(f"{w}: 빈 대사")
+    chs = sc.get("choices", [])
+    ids_ = [c.get("id") for c in chs]
+    if len(set(ids_)) != len(ids_):
+        E(f"{w}: 선택지 id 중복")
+    if chs and all(c.get("req") for c in chs):
+        W(f"{w}: 조건 없는 선택지가 하나도 없음(모두 비활성일 수 있음)")
+    for c in chs:
+        n_choice += 1
+        wc = f"{w} 선택지 {c.get('id')}"
+        req, fx = c.get("req", {}), c.get("effects", {})
+        for k in set(req) - REQ_KEYS:
+            E(f"{wc}: 알 수 없는 조건 키 {k}")
+        for k in set(fx) - FX_KEYS:
+            E(f"{wc}: 알 수 없는 효과 키 {k}")
+        for k in list(req.get("knowledge", {})) + list(fx.get("knowledge_xp", {})):
+            if k not in KNOW:
+                E(f"{wc}: 지식 키 {k}")
+        for d_ in (req.get("items", {}), fx.get("give", {}), fx.get("take", {})):
+            for iid in d_:
+                ref(iid, wc)
+        for cid in ([req["party"]] if isinstance(req.get("party"), str) else req.get("party", [])):
+            if cid not in comp_ids:
+                E(f"{wc}: 동료 {cid} 없음")
+        for cl in ([req["class"]] if isinstance(req.get("class"), str) else req.get("class", [])):
+            if cl not in class_ids:
+                E(f"{wc}: 직업 {cl} 없음")
+        for nd in ([req["visited"]] if isinstance(req.get("visited"), str) else req.get("visited", [])):
+            ref(nd, wc, {"nodes"})
+
+
+for key, nv in STORY.get("narratives", {}).items():
+    w = f"24 서사 {key}"
+    if not key.startswith("quest:") or key[6:] not in qids:
+        E(f"{w}: 연결된 퀘스트 없음")
+        continue
+    rt = QROUTE.get(key[6:])
+    if rt is not None and len(nv.get("steps", [])) != len(rt):
+        E(f"{w}: steps {len(nv.get('steps', []))}개 ≠ 동선 {len(rt)}노드")
+    if nv.get("status") not in ("draft", "edited", "final"):
+        E(f"{w}: status {nv.get('status')} (draft|edited|final)")
+    for part in ("intro", "outro"):
+        if part in nv:
+            check_scene(nv[part], f"{w}.{part}")
+    for i, st in enumerate(nv.get("steps", [])):
+        check_scene(st, f"{w}.steps[{i}]")
+for e in S["events"]:
+    for i, st in enumerate(e.get("stages", [])):
+        if "dialogue" in st:
+            check_scene(st["dialogue"], f"20 {e['id']} 단계 {i} dialogue")
+for m in S["mains"]:
+    for ch in m.get("chapters", []):
+        for i, st in enumerate(ch.get("stages", [])):
+            if "dialogue" in st:
+                check_scene(st["dialogue"], f"20 {m['id']} {ch.get('chapter')}장 {i} dialogue")
+            for c in st.get("choices", []):
+                for k in set(c.get("req", {})) - REQ_KEYS:
+                    E(f"20 {m['id']} {ch.get('chapter')}장 {i}: 알 수 없는 조건 키 {k}")
+MG_ALL = {m["id"]: m for m in S["minigames"] + STORY.get("minigames", [])}
+for hid, v in STORY.get("mg_variants", {}).items():
+    w = f"24 mg_variants {hid}"
+    ref(hid, w, {"heritage"})
+    m = MG_ALL.get(v.get("minigame"))
+    if not m:
+        E(f"{w}: 미니게임 {v.get('minigame')} 없음")
+        continue
+    pr, impl = v.get("params", {}), m["impl"]
+    if impl == "quiz":
+        bank = pr.get("bank", m.get("params", {}).get("bank", []))
+        if len(bank) < int(pr.get("need", 1)):
+            E(f"{w}: 문항 {len(bank)} < need {pr.get('need')}")
+        for qq in bank:
+            if len(qq.get("options", [])) < 2 or not 0 <= int(qq.get("answer", -1)) < len(qq["options"]):
+                E(f"{w}: 문항 형식 오류 {qq.get('q', '')[:20]}")
+    elif impl == "sliding" and not 3 <= int(pr.get("size", 3)) <= 5:
+        E(f"{w}: size {pr.get('size')}")
+    elif impl == "trace" and len(pr.get("points", m.get("params", {}).get("points", []))) < 3:
+        E(f"{w}: 부적 점 3개 미만")
+    elif impl == "timing" and not 0 < float(pr.get("zone", 0.1)) < 0.5:
+        E(f"{w}: zone {pr.get('zone')}")
+    elif impl == "gauge":
+        b = pr.get("band", m.get("params", {}).get("band", [40, 60]))
+        if not 0 <= b[0] < b[1] <= 100:
+            E(f"{w}: band {b}")
+
 # ================================================================ 보고
 cnt = {"01": "heritage", "02": "items", "03": "specialties", "04": "foods", "05": "materials", "06": "life_gear", "07": "mounts",
        "08": "capture", "09": "herbal", "10": "herbs", "11": "food_recipes", "12": "enemies", "13": "companions", "14": "skills",
@@ -605,6 +779,8 @@ for s in OV["sheets"]:
     print(f"  {s['no']} {s['name']:<24} {n:>4} / {s['target_count']:<4} {'완비' if n >= s['target_count'] else ''}")
 print(f"  월드: 권역 {len(S['regions'])} · 노드 {len(S['nodes'])} · 간선 {len(REG['edges'])} · 국경 {len(REG['border_links'])} · 뱃길 {len(REG['sea_routes'])}")
 print(f"  이벤트 {len(S['events'])} + 메인 {len(S['mains'])}×{len(S['mains'][0]['chapters'])}장 · 동선 큐 검증 {routes_checked}건")
+print(f"  24 대화·서사: 퀘스트 {len(STORY.get('quests', []))} · 서사 {len(STORY.get('narratives', {}))} · 장면 {n_scene} · 선택지 {n_choice}"
+      f" · 전설 잠금 {len(STORY.get('lore_gate', {}))} · 미니게임 변형 {len(STORY.get('mg_variants', {}))}")
 print("  신분 임계:", th, f"≈ {OV['rank']['formula']['a']:,.0f}·(L−1)^{OV['rank']['formula']['k']}",
       f"· 명성 예산 최대 {rb.get('max', 0):,} / 기준 {rb.get('reference', 0):,} / 최소 {rb.get('min', 0):,}")
 print("  도 5단계 요건:", {p["name"]: p["standing_req"][-1] for p in OV["provinces"]})

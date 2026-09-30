@@ -28,6 +28,7 @@ var tut_panel: PanelContainer
 var tut_title: Label
 var tut_body: Label
 var tut_next: Button
+var dlg: DialogueView = null   ## 재생 중인 대화(없으면 null)
 
 
 func _ready() -> void:
@@ -80,6 +81,7 @@ func _ready() -> void:
 	GameState.rank_up.connect(func(_r): field.queue_redraw())
 	_build_tutorial_panel()
 	GameState.stats_changed.connect(_queue_tutorial)
+	GameState.dialogue_requested.connect(_pump_dialogue)
 	Settings.changed.connect(func(_k): _refresh_tutorial())
 	_title_screen()
 
@@ -145,6 +147,8 @@ func open_menu(title: String, entries: Array) -> void:
 		menu_list.add_child(b)
 	menu.show()
 	menu.move_to_front()
+	if dlg != null:
+		dlg.move_to_front()  # 대화가 끝날 때까지 대화 화면이 위
 
 
 func _menu_pick(cb: Callable, keep: bool) -> void:
@@ -294,6 +298,7 @@ func _on_arrived(node_id: String, is_final: bool) -> void:
 	else:
 		entries.append({"text": "외곽에 머무르기", "cb": func(): pass})
 	open_menu("거점 도달", entries)
+	_pump_dialogue()
 
 
 func _enter_node() -> void:
@@ -303,6 +308,7 @@ func _enter_node() -> void:
 
 
 func _on_stopped(reason: String) -> void:
+	_pump_dialogue.call_deferred()
 	match reason:
 		"exhausted":
 			GameState.note("완전 탈진 — 야영하거나 탕약을 복용하기 전에는 움직일 수 없습니다.")
@@ -336,7 +342,8 @@ func _open_facilities() -> void:
 		var st := String(gs.heritage_state.get(her["id"], ""))
 		var desig := (" · " + String(her["designation"])) if her.has("designation") else ""
 		entries.append({"text": "【유산】 %s (%d등급 · %s%s)" % [her["name"], int(her["tier"]), HeritageSystem.reward_type_label(HeritageSystem.reward_type(her)), desig],
-			"hint": {"": "답사 가능", "pending": "보상 선택 대기"}.get(st, "완료"), "cb": _heritage_node.bind(String(her["id"])), "keep": true})
+			"hint": ("전설 퀘스트 필요" if st == "" and HeritageSystem.lore_lock(String(her["id"])) != "" else {"": "답사 가능", "pending": "보상 선택 대기"}.get(st, "완료")),
+			"cb": _heritage_node.bind(String(her["id"])), "keep": true})
 	for a in EventSystem.actionable_here():
 		entries.append({"text": "【이벤트】 %s" % EventSystem.definition(a["eid"]).get("name", ""), "hint": a["block"] if a["block"] != "" else String(a["stage"].get("text", "")).left(40),
 			"disabled": a["block"] != "", "cb": _event_stage.bind(String(a["eid"]))})
@@ -421,6 +428,10 @@ func _heritage_node(her_id: String) -> void:
 	var gs := GameState
 	var st := String(gs.heritage_state.get(her_id, ""))
 	if st == "":
+		var ll := HeritageSystem.lore_lock(her_id)
+		if ll != "":
+			_lore_locked(her_id, ll)
+			return
 		var err := HeritageSystem.can_visit(her_id)
 		if err != "":
 			gs.note(err)
@@ -431,12 +442,25 @@ func _heritage_node(her_id: String) -> void:
 			_heritage_choice(her_id)
 		else:
 			gs.note("유적 조사: %s" % DataDB.minigame(mg).get("name", mg))
-			_play_field_mg(mg, _on_investigate_done.bind(her_id))
+			_play_field_mg(mg, _on_investigate_done.bind(her_id), HeritageSystem.minigame_overrides(her_id))
 	elif st == "pending":
 		_heritage_choice(her_id)
 	else:
 		RouteQueue.on_node_visited(her_id)
 		gs.note("%s — 이미 답사 완료(%s)" % [DataDB.display_name(her_id), st])
+
+
+## 전설 퀘스트로 잠긴 국보급 유산: 사유 + 바로 수락
+func _lore_locked(her_id: String, reason: String) -> void:
+	var qid := DataDB.lore_gate(her_id)
+	var q := DataDB.get_row(qid)
+	var e := [{"text": reason}]
+	if not q.is_empty() and not GameState.active_quests.has(qid):
+		var lock := RouteQueue.lock_reason(q)
+		e.append({"text": "전설 따라가기 — %s" % RouteQueue.describe(q["route"]), "disabled": lock != "", "hint": lock, "cb": func(): RouteQueue.start_quest(q)})
+	elif GameState.active_quests.has(qid):
+		e.append({"text": "다음 목적지: %s" % DataDB.display_name(RouteQueue.current_target(qid))})
+	open_menu(DataDB.display_name(her_id), e)
 
 
 func _on_investigate_done(ok: bool, her_id: String) -> void:
@@ -477,8 +501,8 @@ func _open_pending() -> void:
 
 
 # ================================================================ 필드 미니게임
-func _play_field_mg(mg_id: String, cb: Callable) -> void:
-	var mg := MinigameBase.create_from_catalog(mg_id)
+func _play_field_mg(mg_id: String, cb: Callable, overrides: Dictionary = {}) -> void:
+	var mg := MinigameBase.create_from_catalog(mg_id, overrides)
 	if mg == null:
 		cb.call(true)
 		return
@@ -491,6 +515,7 @@ func _play_field_mg(mg_id: String, cb: Callable) -> void:
 func _on_field_mg_done(ok: bool, cb: Callable) -> void:
 	mg_host.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	cb.call(ok)
+	_pump_dialogue.call_deferred()
 
 
 func _do_takbon() -> void:
@@ -733,16 +758,25 @@ func _open_events() -> void:
 	open_menu("이벤트·시나리오", e)
 
 
+## 이벤트 단계: 먼저 대화 장면(stage.dialogue 또는 text) → talk 는 진행, choice 는 가운데 선택지(조건 미충족 비활성), 나머지는 행동 실행
 func _event_stage(eid: String) -> void:
+	var s := EventSystem.current_stage(eid)
+	if s.is_empty():
+		return
+	var d := DialogueSystem.from_stage(eid, s)
+	GameState.request_dialogue(d, _event_after_dialogue.bind(eid))
+
+
+func _event_after_dialogue(choice: String, eid: String) -> void:
 	var s := EventSystem.current_stage(eid)
 	match String(s.get("action", "talk")):
 		"talk":
 			EventSystem.resolve_stage(eid, {"ok": true})
 		"choice":
-			var e := [{"text": String(s.get("text", ""))}]
-			for c in s.get("choices", []):
-				e.append({"text": String(c["text"]), "cb": _event_choice.bind(eid, String(c["id"]))})
-			open_menu(EventSystem.definition(eid)["name"], e)
+			if choice == "":
+				GameState.note("【%s】 결정을 미뤘습니다 — 다시 [이벤트]에서 이어 갈 수 있습니다." % EventSystem.definition(eid).get("name", eid))
+			else:
+				_event_choice(eid, choice)
 		"minigame":
 			_play_field_mg(String(s["minigame"]), func(ok): EventSystem.resolve_stage(eid, {"ok": ok}))
 		"deliver":
@@ -909,7 +943,34 @@ func _on_battle_finished(result: String, summary: Dictionary) -> void:
 			if inst.get("resume_travel", false):
 				traveler.resume()
 	gs.stats_changed.emit()
+	_pump_dialogue.call_deferred()
 
+
+
+# ================================================================ 대화 (24 시트 서사 · 이벤트 단계)
+## 대기열의 대화를 하나씩 재생. 전투·필드 미니게임·행군 중에는 기다렸다가 끝난 뒤 재생
+func _pump_dialogue() -> void:
+	if dlg != null or in_battle or traveler.moving or GameState.dialogue_queue.is_empty():
+		return
+	for c in mg_host.get_children():  # 진행 중인 필드 미니게임(끝나서 지워지는 중인 것은 제외)
+		if not c.is_queued_for_deletion():
+			return
+	var entry: Dictionary = GameState.dialogue_queue.pop_front()
+	dlg = DialogueView.new()
+	overlay.add_child(dlg)
+	dlg.start(entry["dialogue"])
+	dlg.finished.connect(_on_dialogue_done.bind(entry))
+
+
+## cb 가 있으면 cb 가 선택 결과를 처리(이벤트), 없으면 선택지 효과를 여기서 적용(퀘스트 서사)
+func _on_dialogue_done(choice: String, entry: Dictionary) -> void:
+	dlg = null
+	var cb: Callable = entry.get("cb", Callable())
+	if cb.is_valid():
+		cb.call(choice)
+	elif choice != "":
+		DialogueSystem.apply_choice(entry["dialogue"], choice)
+	_pump_dialogue.call_deferred()
 
 
 # ================================================================ 튜토리얼 안내 창 (23 시트 · TutorialSystem)

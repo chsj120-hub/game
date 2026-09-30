@@ -1,7 +1,7 @@
 {
  "_about": "tools/gen_asset_manifest.py 생성. 게임은 파일이 없으면 절차적 그리기로 대체하므로 어떤 순서로 넣어도 된다. 규격은 spec, 경로는 path 그대로.",
  "summary": {
-  "total": 1726,
+  "total": 1810,
   "present": 17,
   "by_kind": {
    "region_map": 17,
@@ -10,11 +10,12 @@
    "battle_bg": 17,
    "overworld": 1,
    "marker": 30,
-   "portrait": 99,
+   "scene": 15,
+   "portrait": 109,
+   "minigame": 82,
    "icon": 1395,
    "sprite": 73,
-   "ui_9patch": 2,
-   "minigame": 24
+   "ui_9patch": 3
   }
  },
  "specs": {
@@ -72,6 +73,11 @@
   "minigame": {
    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
    "format": "PNG",
+   "import": "Lossless"
+  },
+  "scene": {
+   "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+   "format": "PNG/WebP",
    "import": "Lossless"
   }
  },
@@ -1507,6 +1513,1002 @@
    },
    "use": "노드 마커(hazard)",
    "ref": "hazard",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/city.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(city)",
+   "ref": "city",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/town.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(town)",
+   "ref": "town",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/station.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(station)",
+   "ref": "station",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/temple.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(temple)",
+   "ref": "temple",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/spring.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(spring)",
+   "ref": "spring",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/fort.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(fort)",
+   "ref": "fort",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/beacon.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(beacon)",
+   "ref": "beacon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/stupa.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(stupa)",
+   "ref": "stupa",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/tomb.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(tomb)",
+   "ref": "tomb",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/scenic.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(scenic)",
+   "ref": "scenic",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/wreck.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(wreck)",
+   "ref": "wreck",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/ruin.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(ruin)",
+   "ref": "ruin",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/seowon.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(seowon)",
+   "ref": "seowon",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/shrine.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(shrine)",
+   "ref": "shrine",
+   "exists": false
+  },
+  {
+   "path": "res://assets/scenes/hazard.png",
+   "kind": "scene",
+   "spec": {
+    "size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)",
+    "format": "PNG/WebP",
+    "import": "Lossless"
+   },
+   "use": "대화 배경(hazard)",
+   "ref": "hazard",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/npc_official.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "대화 NPC 아전 상반신",
+   "ref": "official",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/npc_monk.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "대화 NPC 노승 상반신",
+   "ref": "monk",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/npc_elder.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "대화 NPC 촌로 상반신",
+   "ref": "elder",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/npc_soldier.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "대화 NPC 군관·역졸 상반신",
+   "ref": "soldier",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/npc_merchant.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "대화 NPC 객주·장인 상반신",
+   "ref": "merchant",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/npc_shaman.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "대화 NPC 무녀 상반신",
+   "ref": "shaman",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/npc_scholar.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "대화 NPC 유생 상반신",
+   "ref": "scholar",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/npc_fisher.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "대화 NPC 어부·뱃사람 상반신",
+   "ref": "fisher",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/npc_innkeeper.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "대화 NPC 주모 상반신",
+   "ref": "innkeeper",
+   "exists": false
+  },
+  {
+   "path": "res://assets/portraits/npc_traveler.png",
+   "kind": "portrait",
+   "spec": {
+    "size": "512x640 (HUD 210x240 · 전투 84x84 로 축소)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "대화 NPC 유람객 상반신",
+   "ref": "traveler",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_006.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "강진 청자 요지 조각 맞추기 원본",
+   "ref": "her_006",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_007.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "광주 분원 백자 가마터 조각 맞추기 원본",
+   "ref": "her_007",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_008.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "통영 나전칠기 공방 조각 맞추기 원본",
+   "ref": "her_008",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_015.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "개성 만월대 조각 맞추기 원본",
+   "ref": "her_015",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_017.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "백두산 정계비 터 조각 맞추기 원본",
+   "ref": "her_017",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_115.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "단양 수벌 고려가마터 조각 맞추기 원본",
+   "ref": "her_115",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_123.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "부안 유천리 청자 가마터 조각 맞추기 원본",
+   "ref": "her_123",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_142.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "회령 오지 가마터 조각 맞추기 원본",
+   "ref": "her_142",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n007.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "제주 목관아지 출토 분청사기 조각 맞추기 원본",
+   "ref": "her_n007",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n024.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "강진 청자 상감운학문 매병 조각 맞추기 원본",
+   "ref": "her_n024",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n029.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "완도 묘당도 이충무공 유적 조각 맞추기 원본",
+   "ref": "her_n029",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n030.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "진도 용장산성 행궁터 유물 조각 맞추기 원본",
+   "ref": "her_n030",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n032.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "강진 사당리 고려청자 요지 비색발 조각 맞추기 원본",
+   "ref": "her_n032",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n040.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "영암 도갑사 해탈문 조각 맞추기 원본",
+   "ref": "her_n040",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n061.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "순천 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n061",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n074.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "동래 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n074",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n081.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "나주 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n081",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n094.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "남원 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n094",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n101.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "경주 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n101",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n104.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "전주 경기전 태조 이성계 어진 조각 맞추기 원본",
+   "ref": "her_n104",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n115.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "영일 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n115",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n122.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "전주 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n122",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n142.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "공주 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n142",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n146.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "보은 법주사 팔상전 조각 맞추기 원본",
+   "ref": "her_n146",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n150.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "회덕 동춘당 송준길 종택 조각 맞추기 원본",
+   "ref": "her_n150",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n156.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "영주 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n156",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n163.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "청주 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n163",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n176.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "단양 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n176",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n185.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "수원 화성 서장대 성곽 조각 맞추기 원본",
+   "ref": "her_n185",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n196.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "여주 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n196",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n203.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "남양 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n203",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n213.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "강릉 오죽헌 신사임당 초충도 병풍 조각 맞추기 원본",
+   "ref": "her_n213",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n216.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "개성 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n216",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n223.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "강화 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n223",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n232.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "철원 궁예 태봉국 철원도성 금와 조각 맞추기 원본",
+   "ref": "her_n232",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n257.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "평강 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n257",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n264.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "통천 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n264",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n277.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "신천 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n277",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n284.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "옹진 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n284",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n288.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "강서대묘 고구려 사신도 벽화 조각 맞추기 원본",
+   "ref": "her_n288",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n292.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "평양 안학궁터 고구려 수막새 조각 맞추기 원본",
+   "ref": "her_n292",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n297.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "안변 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n297",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n304.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "덕원 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n304",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n308.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "영흥 준원당 태조 어진 보관함 조각 맞추기 원본",
+   "ref": "her_n308",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n318.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "함흥 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n318",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n325.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "함흥 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n325",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n338.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "홍원 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n338",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n345.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "희천 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n345",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n358.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "북청 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n358",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n378.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "길주 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n378",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n385.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "초산 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n385",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n395.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "경성 온천 도요지 고려 흑유자기 조각 맞추기 원본",
+   "ref": "her_n395",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n399.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "갑산 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n399",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n406.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "삼수 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n406",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n419.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "부령 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n419",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n426.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "무산 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n426",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n439.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "경원 고려청자 가마터 출토 명품완 조각 맞추기 원본",
+   "ref": "her_n439",
+   "exists": false
+  },
+  {
+   "path": "res://assets/minigames/heritage/her_n446.png",
+   "kind": "minigame",
+   "spec": {
+    "size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)",
+    "format": "PNG",
+    "import": "Lossless"
+   },
+   "use": "종성 도요지 백자 청화항아리 조각 맞추기 원본",
+   "ref": "her_n446",
    "exists": false
   },
   {
@@ -3811,6 +4813,18 @@
    },
    "use": "하단 대시보드 프레임 1920x360",
    "ref": "dashboard_frame",
+   "exists": false
+  },
+  {
+   "path": "res://assets/ui/panels/dialogue.png",
+   "kind": "ui_9patch",
+   "spec": {
+    "size": "64x64 ~ 512x512 9-패치(여백 24px)",
+    "format": "PNG 32-bit",
+    "import": "Lossless"
+   },
+   "use": "대화창 패널 1840x290(9-패치)",
+   "ref": "dialogue",
    "exists": false
   },
   {

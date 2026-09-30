@@ -30,7 +30,17 @@ SPEC = {
     "ui_9patch":   {"size": "64x64 ~ 512x512 9-패치(여백 24px)", "format": "PNG 32-bit", "import": "Lossless"},
     "battle_bg":   {"size": "1920x720", "format": "PNG/WebP", "import": "Lossless"},
     "minigame":    {"size": "1024x1024(슬라이딩 원본) / 1600x1000(탁본 판목)", "format": "PNG", "import": "Lossless"},
+    "scene":       {"size": "1920x1080 (대화 배경, 하단 300px 은 대화창에 가려짐)", "format": "PNG/WebP", "import": "Lossless"},
 }
+SCENE_DESC = {"city": "a walled Joseon provincial town with a government office gate and market street", "town": "a small Joseon village with thatched houses and a big zelkova tree",
+              "station": "a Joseon post-horse relay station with stables", "temple": "a Korean Buddhist mountain temple courtyard with a stone pagoda",
+              "spring": "a Joseon hot-spring inn with steam rising", "fort": "a Joseon mountain fortress wall and gate tower", "beacon": "a stone beacon-fire mound on a ridge",
+              "stupa": "an old stone pagoda standing in a temple ruin", "tomb": "a royal burial mound with stone guardian statues", "scenic": "a famous Korean scenic landscape of cliffs and pines",
+              "wreck": "a tidal mudflat coast with fishing boats and old ship timbers", "ruin": "an overgrown site of old foundation stones and broken kiln shards",
+              "seowon": "a Confucian academy lecture hall with a pavilion", "shrine": "a village shaman shrine under a sacred tree with straw ropes", "hazard": "a steep mountain pass trail"}
+NPC_BUST = {"official": ("아전", "civil_official"), "monk": ("노승", "monk"), "elder": ("촌로", "laborer"), "soldier": ("군관·역졸", "military"),
+            "merchant": ("객주·장인", "merchant"), "shaman": ("무녀", "shaman"), "scholar": ("유생", "scholar"), "fisher": ("어부·뱃사람", "boatman"),
+            "innkeeper": ("주모", "innkeeper"), "traveler": ("유람객", "scholar")}
 
 PROMPT = ("A museum-quality historical artifact illustration of {name_kr} ({category_sub}), crafted from {material}, dating back to {era} "
           "Joseon Dynasty. " + PL.STYLE_COMMON + ", " + PL.KIND_TAIL["icon"][0])
@@ -80,6 +90,19 @@ def main():
     for t in ["city", "town", "station", "temple", "spring", "fort", "beacon", "stupa", "tomb", "scenic", "wreck", "ruin", "seowon", "shrine", "hazard"]:
         out.append(entry(f"res://assets/ui/markers/{t}.png", "marker", f"노드 마커({t})", t))
         bp("markers", "marker", f"marker_{t}", f"res://assets/ui/markers/{t}.png", t, f"map marker symbol for a {t} site on a Joseon map")
+    for t, desc in SCENE_DESC.items():   # 대화 배경(노드 유형) — 노드 전용 삽화는 res://assets/scenes/nodes/<노드 id>.png 로 덮어쓰기
+        out.append(entry(f"res://assets/scenes/{t}.png", "scene", f"대화 배경({t})", t))
+        bp("scenes", "scene", f"scene_{t}", f"res://assets/scenes/{t}.png", t, desc + ", Joseon 1861")
+    for role, (ko, ck) in NPC_BUST.items():  # 대화 NPC 상반신(역할별 공용)
+        out.append(entry(f"res://assets/portraits/npc_{role}.png", "portrait", f"대화 NPC {ko} 상반신", role))
+        bp("portraits_npc", "portrait", f"npc_{role}", f"res://assets/portraits/npc_{role}.png", ko, f"half-length portrait of a Joseon {role} ({ko}), friendly, speaking", ck)
+    story = load("24_story.json") if (DATA / "24_story.json").exists() else {}
+    for hid, v in sorted(story.get("mg_variants", {}).items()):  # 유산별 슬라이딩 원본(없으면 카탈로그 기본 그림)
+        img = v.get("params", {}).get("image", "")
+        if img.startswith("res://assets/minigames/heritage/"):
+            h = next((x for x in load("01_heritage.json")["heritage"] if x["id"] == hid), {})
+            out.append(entry(img, "minigame", f"{h.get('name', hid)} 조각 맞추기 원본", hid))
+            bp("minigames_heritage", "minigame", hid, img, h.get("name", hid), f"frontal illustration of the Korean heritage artifact {h.get('name', hid)}")
     for c in load("19_classes_knowledge.json")["classes"]:
         cid = c["id"]
         out.append(entry(f"res://assets/portraits/hero_{cid}.png", "portrait", f"주인공 {c['name']} 수묵 초상", cid))
@@ -114,7 +137,7 @@ def main():
     for r in range(1, 6):
         out.append(entry(f"res://assets/ui/seals/rank_{r}.png", "marker", f"신분 {r}등급 인장", str(r)))
         bp("markers", "marker", f"rank_{r}", f"res://assets/ui/seals/rank_{r}.png", f"{r}등급 인장", f"red cinnabar square seal impression, rank {r} of 5, {r} ornamental borders")
-    for name, use in (("modal", "모달 패널(한지+놋쇠)"), ("dashboard_frame", "하단 대시보드 프레임 1920x360")):
+    for name, use in (("modal", "모달 패널(한지+놋쇠)"), ("dashboard_frame", "하단 대시보드 프레임 1920x360"), ("dialogue", "대화창 패널 1840x290(9-패치)")):
         out.append(entry(f"res://assets/ui/panels/{name}.png", "ui_9patch", use, name))
     out.append(entry("res://assets/icons/common/icon_scroll_jokja.png", "icon", "두루마기 족자 답사록 공통 아이콘", "record"))
     for m in load("21_minigames.json")["minigames"]:

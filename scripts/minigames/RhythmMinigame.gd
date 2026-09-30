@@ -16,11 +16,16 @@ var judged := 0
 func _setup() -> void:
 	instruction = "떨어지는 비트가 판정선에 닿을 때 D·F·J·K 입력 — 명중률 %d%% 이상이면 제령 성공" % int(NEED_RATE * 100)
 	var r := RandomNumberGenerator.new()
-	r.randomize()
+	if params.has("seed"):  # 유산별 변형: 같은 유산은 늘 같은 악보
+		r.seed = int(params["seed"])
+	else:
+		r.randomize()
+	var g0 := float(params.get("gap_min", 0.35))
+	var g1 := maxf(g0 + 0.05, float(params.get("gap_max", 0.7)))
 	var t := 1.8
 	while t < time_limit - 1.0:
 		notes.append({"lane": r.randi_range(0, 3), "t": t, "state": 0})
-		t += r.randf_range(0.35, 0.7)
+		t += r.randf_range(g0, g1)
 
 
 func _tick(delta: float) -> void:

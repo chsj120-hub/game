@@ -38,14 +38,21 @@ var params: Dictionary = {}
 
 
 ## 21 시트 카탈로그 id 로 생성. 제한시간 = time × (1 + 0.03 × 해당 지식 랭크)
-static func create_from_catalog(mg_id: String) -> MinigameBase:
+## overrides: 유산별 변형(24_story mg_variants) — params 키를 얕게 덮어씀(bank·size·zone·seed …). "_title" 은 제목 뒤에 붙임
+static func create_from_catalog(mg_id: String, overrides: Dictionary = {}) -> MinigameBase:
 	var row := DataDB.minigame(mg_id)
 	if row.is_empty() or not IMPL.has(String(row.get("impl", ""))):
 		push_warning("미니게임 정의 없음: " + mg_id)
 		return null
 	var mg: MinigameBase = load(IMPL[row["impl"]]).new()
 	mg.title = String(row.get("name", mg_id))
-	mg.params = row.get("params", {})
+	var p: Dictionary = row.get("params", {}).duplicate()
+	for k in overrides.keys():
+		if not String(k).begins_with("_"):
+			p[k] = overrides[k]
+	if String(overrides.get("_title", "")) != "":
+		mg.title += " — " + String(overrides["_title"])
+	mg.params = p
 	var k := String(row.get("knowledge", "sa"))
 	var bonus := float(DataDB.classes_doc.get("life_effects", {}).get("sa", {}).get("puzzle_time", 0.03))
 	mg.time_limit = float(row.get("time", 20)) * (1.0 + bonus * int(GameState.party_knowledge().get(k, 0)))

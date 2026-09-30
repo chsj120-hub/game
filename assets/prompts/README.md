@@ -23,8 +23,11 @@
 | maps.csv | 18 |
 | markers.csv | 30 |
 | minigames.csv | 24 |
+| minigames_heritage.csv | 58 |
 | parallax.csv | 51 |
 | portraits_companion.csv | 67 |
 | portraits_enemy.csv | 27 |
 | portraits_hero.csv | 5 |
+| portraits_npc.csv | 10 |
+| scenes.csv | 15 |
 | sprites.csv | 73 |
