@@ -29,6 +29,8 @@
 6. 데이터를 고쳤다면 아래 파이프라인을 다시 돌립니다(Python 3.9 이상).
 
 ## 데이터 파이프라인
+**고치는 법 한눈에:** [docs/수정_가이드.md](docs/수정_가이드.md) — 값·문구는 `tools/overrides.py`(where · set · unset · copy · list)로 `data_src/overrides/`에 기록합니다. `data/*.json`은 생성 결과이므로 직접 고치지 않습니다.
+
 **한 번에 실행:** `python3 tools/run_pipeline.py` (전체 약 33초) · `--fast` (전투 시뮬 생략, 약 17초) · `--terrain` (지형 마스크 재생성 포함) · `--from 단계`
 
 **시나리오 추가:** `data_src/scenarios/*.json` 파일 하나가 1편입니다. [docs/시나리오_작성_가이드.md](docs/시나리오_작성_가이드.md)를 보고 `tools/scenario_tool.py`(nodes · new · check)로 작성합니다.
@@ -43,6 +45,7 @@ data_src/world_table.json, heritage_curated.json   ← 기획자가 수정하는
         │  python3 tools/craft_trade_update.py  무역품 등급 사슬(상품·진상품)·곡물 말 단위·요리 고증·공용 재료군/상위 대체 적용
         │  python3 tools/content_expand.py    이벤트·권역 적·무예 장비·탈것·김만덕 시나리오·튜토리얼·도움말(23 시트)
         │  python3 tools/gen_systematic.py    4·5등급 유불선 세트 24 · 모작 24 · 포획구 20
+        │  python3 tools/overrides.py apply   data_src/overrides/*.json 사람이 고친 값·새 행을 생성 결과 위에 덮어쓰기(되돌리기 기록)
         │  python3 tools/gen_story.py         대화·서사 443건 + 비전 전수 61 · 전설 83 퀘스트 + 유산별 미니게임 변형 481 → 24_story (edits 병합)
         ▼
 data/00~24 *.json, regions.json                    ← 런타임 데이터 (DataDB 가 로드)
