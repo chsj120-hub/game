@@ -29,6 +29,8 @@
 6. 데이터를 고쳤다면 아래 파이프라인을 다시 돌립니다(Python 3.9 이상).
 
 ## 데이터 파이프라인
+**에셋 만들기:** [docs/에셋_제작_가이드_2025.md](docs/에셋_제작_가이드_2025.md) — 구글 AI 스튜디오(브라우저 무설치)와 Comfy Desktop(맥 앱)을 단계별로 설명합니다. 모든 프롬프트는 `assets/prompts/*.csv`에 미리 만들어져 있습니다(총 1,786건). 파일이 없어도 게임이 대체 그림으로 실행됩니다.
+
 **고치는 법 한눈에:** [docs/수정_가이드.md](docs/수정_가이드.md) — 값·문구는 `tools/overrides.py`(where · set · unset · copy · list)로 `data_src/overrides/`에 기록합니다. `data/*.json`은 생성 결과이므로 직접 고치지 않습니다.
 
 **한 번에 실행:** `python3 tools/run_pipeline.py` (전체 약 33초) · `--fast` (전투 시뮬 생략, 약 17초) · `--terrain` (지형 마스크 재생성 포함) · `--from 단계`
