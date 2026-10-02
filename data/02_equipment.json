@@ -1,0 +1,5028 @@
+{
+ "_schema": "02_장착아이템. slot=weapon|armor|shoes|accessory|book (서책은 장신구 슬롯 3칸에 장착). mount 는 07 시트. stats: atk,def,hp,spd(V_mount px/s),res,crit,def_ignore,flat_red. affinity=유불선 공격 상성. class_restriction/req_knowledge=장착 조건. acquire.type=shop|forge|heritage|quest. price=economy.price 공식(base×3^(t−1)). generated=systematic(gen_systematic.py 4·5등급 세트) / heritage(build_world.py 유산 보상).",
+ "items": [
+  {
+   "id": "eq_w1_mokgeom",
+   "name": "박달 목검",
+   "slot": "weapon",
+   "tier": 1,
+   "family": "none",
+   "element": "none",
+   "affinity": "none",
+   "stats": {
+    "atk": 4
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "market5",
+    "price": 60
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_w2_hwando",
+   "name": "환도",
+   "slot": "weapon",
+   "tier": 2,
+   "family": "yu",
+   "element": "metal",
+   "affinity": "yu",
+   "stats": {
+    "atk": 10
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "forge",
+    "price": 180
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_w2_suljang",
+   "name": "도사 철선장",
+   "slot": "weapon",
+   "tier": 2,
+   "family": "seon",
+   "element": "fire",
+   "affinity": "seon",
+   "class_restriction": [
+    "cls_dosa"
+   ],
+   "stats": {
+    "atk": 11,
+    "res": 0.04
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "forge",
+    "price": 180
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_w2_jeoul",
+   "name": "상인 저울추 철퇴",
+   "slot": "weapon",
+   "tier": 2,
+   "family": "none",
+   "element": "metal",
+   "affinity": "none",
+   "class_restriction": [
+    "cls_merchant"
+   ],
+   "stats": {
+    "atk": 10,
+    "crit": 0.05
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "forge",
+    "price": 180
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_w3_byeolungeom",
+   "name": "별운검",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "yu",
+   "element": "metal",
+   "affinity": "yu",
+   "stats": {
+    "atk": 20
+   },
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_hwando",
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 6
+     },
+     {
+      "id": "mat_charcoal",
+      "qty": 4
+     },
+     {
+      "id": "mat_fish_glue",
+      "qty": 1
+     }
+    ],
+    "min_rank": 3
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_w3_hwaseon",
+   "name": "화전(火箭) 각궁",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "fire",
+   "affinity": "none",
+   "stats": {
+    "atk": 19,
+    "crit": 0.08
+   },
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_bow",
+    "materials": [
+     {
+      "id": "mat_bamboo",
+      "qty": 4
+     },
+     {
+      "id": "mat_ox_horn",
+      "qty": 2
+     },
+     {
+      "id": "mat_fish_glue",
+      "qty": 2
+     }
+    ],
+    "min_rank": 3
+   },
+   "weight": 3.0
+  },
+  {
+   "id": "eq_a1_cheollik",
+   "name": "무명 철릭",
+   "slot": "armor",
+   "tier": 1,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "def": 4,
+    "hp": 0
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "market5",
+    "price": 80
+   },
+   "weight": 6.0,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_a2_dujeonggap",
+   "name": "두정갑",
+   "slot": "armor",
+   "tier": 2,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "def": 10,
+    "hp": 10
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "forge",
+    "price": 240
+   },
+   "weight": 6.0,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_a3_gyeongbeon",
+   "name": "경번갑",
+   "slot": "armor",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {
+    "def": 20,
+    "hp": 20,
+    "flat_red": 2
+   },
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_armor",
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 8
+     },
+     {
+      "id": "mat_cowhide",
+      "qty": 3
+     },
+     {
+      "id": "mat_cotton",
+      "qty": 2
+     }
+    ],
+    "min_rank": 3
+   },
+   "weight": 6.0,
+   "affinity": "yu"
+  },
+  {
+   "id": "eq_s1_jipsin",
+   "name": "짚신",
+   "slot": "shoes",
+   "tier": 1,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "spd": 10
+   },
+   "fatigue_mult": 1.0,
+   "acquire": {
+    "type": "shop",
+    "facility": "market5",
+    "price": 20
+   },
+   "weight": 0.8,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_s2_bidan_jipsin",
+   "name": "비단 삼첩 짚신",
+   "slot": "shoes",
+   "tier": 2,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "spd": 15,
+    "def": 1
+   },
+   "fatigue_mult": 0.9,
+   "acquire": {
+    "type": "shop",
+    "facility": "market",
+    "price": 60
+   },
+   "weight": 0.8,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_s3_mokhwa",
+   "name": "수혜자 목화",
+   "slot": "shoes",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "spd": 20,
+    "def": 3
+   },
+   "fatigue_mult": 0.85,
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_boots",
+    "materials": [
+     {
+      "id": "mat_cowhide",
+      "qty": 3
+     },
+     {
+      "id": "mat_silk_thread",
+      "qty": 2
+     }
+    ],
+    "min_rank": 3
+   },
+   "weight": 0.8,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_c1_hopae",
+   "name": "호패",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "res": 0.03,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "shop",
+    "facility": "gwana",
+    "price": 45
+   },
+   "weight": 0.2,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_c2_yeongdeung",
+   "name": "영등 영패",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "none",
+   "element": "water",
+   "stats": {
+    "res": 0.06,
+    "atk": 2,
+    "hp": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_009"
+   },
+   "weight": 0.2,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_c2_ssitgim",
+   "name": "씻김굿 방울",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_010"
+   },
+   "weight": 0.2,
+   "affinity": "bul"
+  },
+  {
+   "id": "eq_c3_byeoksa",
+   "name": "벽사 삼작노리개",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_charm",
+    "materials": [
+     {
+      "id": "mat_silk_thread",
+      "qty": 3
+     },
+     {
+      "id": "mat_copper",
+      "qty": 2
+     }
+    ],
+    "min_rank": 3
+   },
+   "weight": 0.2,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_c3_gaya_crown",
+   "name": "가야 금동관",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "stats": {
+    "res": 0.1,
+    "atk": 4,
+    "def": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_012"
+   },
+   "weight": 0.2,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_b3_gyeonggukjeon",
+   "name": "조선경국전",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_gyeonggukjeon",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_014"
+   },
+   "weight": 0.5,
+   "affinity": "yu"
+  },
+  {
+   "id": "eq_b3_muyedobo",
+   "name": "무예도보통지",
+   "slot": "book",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_muyedobo",
+   "acquire": {
+    "type": "shop",
+    "facility": "bookstore",
+    "price": 2250,
+    "min_rank": 3
+   },
+   "weight": 0.5,
+   "affinity": "none"
+  },
+  {
+   "id": "eq_b5_hunminjeongeum",
+   "name": "훈민정음 해례본",
+   "slot": "book",
+   "tier": 5,
+   "family": "yu",
+   "element": "holy",
+   "stats": {},
+   "passive_skill": "sk_pas_hunmin",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_013"
+   },
+   "weight": 0.5,
+   "affinity": "yu"
+  },
+  {
+   "id": "eq_saingeom_5",
+   "name": "순조 인월 인일 사인검(四寅劍)",
+   "slot": "weapon",
+   "tier": 5,
+   "family": "seon",
+   "element": "holy",
+   "affinity": "seon",
+   "weight": 3.8,
+   "class_restriction": [
+    "cls_eosa",
+    "cls_dosa"
+   ],
+   "req_knowledge": {
+    "seon": 4,
+    "yu": 3
+   },
+   "stats": {
+    "atk": 45,
+    "def_ignore": 0.25,
+    "crit": 0.15
+   },
+   "affinity_bonus": {
+    "seon": 0.3,
+    "yu": 0.15
+   },
+   "granted_skills": {
+    "active": "sk_act_tiger_banish",
+    "passive": "sk_pas_evil_repel"
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "사인검 벼리는 인년·인월·인일",
+    "min_rank": 4,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_SHRINE_GYERYONGSANSINDOAN",
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI"
+    ]
+   }
+  },
+  {
+   "id": "eq_her_108",
+   "name": "강화 벽사 패물",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_108"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_109",
+   "name": "강화 금동관",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "res": 0.054,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_109"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_110",
+   "name": "금강산 사리장엄구",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "none",
+   "stats": {
+    "res": 0.144,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_110"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_111",
+   "name": "화천 벽사 패물",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.03,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_111"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_113",
+   "name": "《강릉 문집》",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_113",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_113"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_114",
+   "name": "영월 환두대도",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "stats": {
+    "atk": 18
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_114"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_116",
+   "name": "충주 사리장엄구",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "bul",
+   "element": "none",
+   "stats": {
+    "res": 0.108,
+    "atk": 3
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_116"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_117",
+   "name": "계룡산 벽사 패물",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_117"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_119",
+   "name": "부여 사리장엄구",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "none",
+   "stats": {
+    "res": 0.144,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_119"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_120",
+   "name": "공주 찰갑",
+   "slot": "armor",
+   "tier": 4,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "def": 29,
+    "hp": 32
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_120"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_122",
+   "name": "익산 사리장엄구",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "bul",
+   "element": "none",
+   "stats": {
+    "res": 0.18,
+    "atk": 7
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_122"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_124",
+   "name": "《전주 문집》",
+   "slot": "book",
+   "tier": 4,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_124",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_124"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_127",
+   "name": "경주 금동관",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "res": 0.162,
+    "atk": 8
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_127"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_129",
+   "name": "김해 환두대도",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "stats": {
+    "atk": 18
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_129"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_130",
+   "name": "봉산 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.06,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_130"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_132",
+   "name": "《해주 문집》",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_132",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_132"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_134",
+   "name": "묘향산 벽사 패물",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.14,
+    "atk": 6
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_134"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_135",
+   "name": "평양 찰갑",
+   "slot": "armor",
+   "tier": 4,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "def": 29,
+    "hp": 32
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_135"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_136",
+   "name": "강서 금동관",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "res": 0.126,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_136"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_139",
+   "name": "북청 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.06,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_139"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_143",
+   "name": "삼성혈 벽사 패물",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_143"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_144",
+   "name": "《추사 문집》",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_144",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_144"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_238",
+   "name": "전주 환두대도",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "stats": {
+    "atk": 18
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_238"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_246",
+   "name": "여주 찰갑",
+   "slot": "armor",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "def": 18,
+    "hp": 18
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_246"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_247",
+   "name": "화성 금동관",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "res": 0.09,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_247"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_249",
+   "name": "종묘 환두대도",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "stats": {
+    "atk": 18
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_249"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_250",
+   "name": "구리 찰갑",
+   "slot": "armor",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "def": 18,
+    "hp": 18
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_250"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_261",
+   "name": "구월산 금동관",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "res": 0.09,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_261"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_266",
+   "name": "고구려 환두대도",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "stats": {
+    "atk": 18
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_266"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_267",
+   "name": "함흥본궁 찰갑",
+   "slot": "armor",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "def": 18,
+    "hp": 18
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_267"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_275",
+   "name": "백두산 금동관",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "stats": {
+    "res": 0.09,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_275"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n001",
+   "name": "《제주 삼도동 탐라성주 옥인》 필사본",
+   "slot": "book",
+   "tier": 4,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n001",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n001"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n004",
+   "name": "한라산 존자암지 삼존석불 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n004"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n005",
+   "name": "《대정현 삼성혈 도태 사당 목판》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n005",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n005"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n008",
+   "name": "제주 칠머리당영등굿 제단 목기 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n008"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n010",
+   "name": "서귀진지 군선 수군 인장 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.054,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n010"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n012",
+   "name": "《제주 오현단 송자대전 판각》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n012",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n012"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n013",
+   "name": "애월 곽지리 조개더미 옥장신구 모각 의장품",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.126,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n013"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n015",
+   "name": "《용두암 해신당 용왕부적》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n015",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n015"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n018",
+   "name": "구엄리 돌염전 볏짚 소금솥 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n018"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n019",
+   "name": "하원동 탐라왕자묘 출토 금동령 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n019"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n025",
+   "name": "해남 대흥사 금동관음보살좌상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.12,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n025"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n027",
+   "name": "《해남 윤씨 녹우당 고문서 일괄》 필사본",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n027",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n027"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n028",
+   "name": "《완도 청해진 유적 출토 목간》 필사본",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n028",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n028"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n031",
+   "name": "진도 남도진성 만호인장 모각 의장품",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n031"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n035",
+   "name": "진도 씻김굿 무속 무구 일괄 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n035"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n036",
+   "name": "《강진 영랑생가 모란 시첩》 필사본",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n036",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n036"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n038",
+   "name": "장흥 보림사 철조비로자나불좌상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.16,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n038"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n042",
+   "name": "순천 송광사 목조삼존불감 원불(願佛)",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.16,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n042"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n051",
+   "name": "통영 충렬사 팔사품 모각 의장품",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n051"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n052",
+   "name": "《순천 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n052",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n052"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n055",
+   "name": "《순천 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n055",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n055"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n056",
+   "name": "《여수 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n056",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n056"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n057",
+   "name": "광양 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n057"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n058",
+   "name": "순천 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n058"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n060",
+   "name": "《광양 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n060",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n060"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n062",
+   "name": "나주 신촌리 금동관 모각 의장품",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.198,
+    "atk": 9
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n062"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n063",
+   "name": "광주 증심사 철조비로자나불 원불(願佛)",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.12,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n063"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n069",
+   "name": "《담양 소쇄원 목판》 필사본",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n069",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n069"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n070",
+   "name": "《광주 충장사 목판》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n070",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n070"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n071",
+   "name": "김해 대성동 고분군 금동판 모각 의장품",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.126,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n071"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n072",
+   "name": "《나주 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n072",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n072"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n075",
+   "name": "《나주 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n075",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n075"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n076",
+   "name": "《광주 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n076",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n076"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n077",
+   "name": "동래 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n077"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n078",
+   "name": "나주 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n078"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n080",
+   "name": "《동래 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n080",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n080"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n084",
+   "name": "경주 금관총 금관 및 금제관식 모각 의장품",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.198,
+    "atk": 9
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n084"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n092",
+   "name": "《경주 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n092",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n092"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n095",
+   "name": "《경주 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n095",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n095"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n096",
+   "name": "《대구 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n096",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n096"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n097",
+   "name": "남원 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n097"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n098",
+   "name": "경주 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n098"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n100",
+   "name": "《남원 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n100",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n100"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n102",
+   "name": "대구 고목 당산 신목 신위 벽사 패물",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.07,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n102"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n104",
+   "name": "《전주 경기전 태조 이성계 어진》 필사본",
+   "slot": "book",
+   "tier": 5,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n104",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n104"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n105",
+   "name": "익산 왕궁리 오층석탑 사리장엄구 모각 의장품",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "bul",
+   "element": "metal",
+   "stats": {
+    "res": 0.18,
+    "atk": 7
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n105"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n113",
+   "name": "《전주 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n113",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n113"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n116",
+   "name": "《전주 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n116",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n116"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n117",
+   "name": "《익산 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n117",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n117"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n118",
+   "name": "영일 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.05,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n118"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n119",
+   "name": "전주 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.063,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n119"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n121",
+   "name": "《영일 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n121",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n121"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n123",
+   "name": "공주 무령왕릉 금제관식 모각 의장품",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.162,
+    "atk": 6
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n123"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n125",
+   "name": "부여 능산리 백제 금동대향로 모각 의장품",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.162,
+    "atk": 6
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n125"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n128",
+   "name": "공주 공산성 백제 옻칠갑옷 모각 의장품",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n128"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n129",
+   "name": "상주 남장사 철조비로자나불 원불(願佛)",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.12,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n129"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n131",
+   "name": "안동 하회탈 및 병산탈 벽사 패물",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.22,
+    "atk": 10
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n131"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n133",
+   "name": "《공주 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n133",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n133"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n136",
+   "name": "《공주 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n136",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n136"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n137",
+   "name": "《부여 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n137",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n137"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n138",
+   "name": "안동 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n138"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n139",
+   "name": "공주 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.063,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n139"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n141",
+   "name": "《안동 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n141",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n141"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n143",
+   "name": "부여 고목 당산 신목 신위 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n143"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n145",
+   "name": "영주 부석사 소조여래좌상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.16,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n145"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n148",
+   "name": "《청주 흥덕사지 직지심체요절 인판》 필사본",
+   "slot": "book",
+   "tier": 5,
+   "family": "bul",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n148",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n148"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n151",
+   "name": "예천 용문사 대장전 윤장대 벽사 패물",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.16,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n151"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n152",
+   "name": "《옥천 이지당 조헌 유묵》 필사본",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n152",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n152"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n154",
+   "name": "《회덕 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n154",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n154"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n157",
+   "name": "《문경 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n157",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n157"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n158",
+   "name": "《회덕 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n158",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n158"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n159",
+   "name": "청주 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.05,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n159"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n160",
+   "name": "영주 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.063,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n160"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n162",
+   "name": "《회덕 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n162",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n162"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n174",
+   "name": "《충주 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n174",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n174"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n177",
+   "name": "《울진 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n177",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n177"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n178",
+   "name": "《충주 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n178",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n178"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n179",
+   "name": "원주 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.05,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n179"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n180",
+   "name": "단양 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n180"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n182",
+   "name": "《충주 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n182",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n182"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n189",
+   "name": "남양 융건릉 정조 원찰 용주사 동종 모각 의장품",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "bul",
+   "element": "metal",
+   "stats": {
+    "res": 0.18,
+    "atk": 7
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n189"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n190",
+   "name": "안성 청룡사 금동관음보살 원불(願佛)",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.12,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n190"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n191",
+   "name": "《당진 신리성지 다블뤼 주교 유품》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n191",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n191"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n192",
+   "name": "이천 설봉산 삼국시대 토성 출토 인장 모각 의장품",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n192"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n194",
+   "name": "《수원 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n194",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n194"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n197",
+   "name": "《서산 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n197",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n197"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n198",
+   "name": "《수원 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n198",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n198"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n199",
+   "name": "남양 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n199"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n200",
+   "name": "여주 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.063,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n200"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n202",
+   "name": "《수원 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n202",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n202"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n208",
+   "name": "《훈민정음 해례본(간송본)》 필사본",
+   "slot": "book",
+   "tier": 4,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n208",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n208"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n209",
+   "name": "《조선왕조실록 태백산사고본》 필사본",
+   "slot": "book",
+   "tier": 5,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n209",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n209"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n211",
+   "name": "강화 정족산사고 조선실록 보관함 벽사 패물",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "yu",
+   "element": "holy",
+   "stats": {
+    "res": 0.14,
+    "atk": 6
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n211"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n213",
+   "name": "《강릉 오죽헌 신사임당 초충도 병풍》 필사본",
+   "slot": "book",
+   "tier": 4,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n213",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n213"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n214",
+   "name": "《한양 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n214",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n214"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n217",
+   "name": "《강릉 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n217",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n217"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n218",
+   "name": "《한양 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n218",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n218"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n219",
+   "name": "강화 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n219"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n220",
+   "name": "개성 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.063,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n220"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n222",
+   "name": "《한양 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n222",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n222"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n224",
+   "name": "개성 고목 당산 신목 신위 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n224"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n226",
+   "name": "철원 도피안사 철조비로자나불 원불(願佛)",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.2,
+    "atk": 8
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n226"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n229",
+   "name": "인제 백담사 목조아미타여래좌상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.12,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n229"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n234",
+   "name": "《화천 비수구미 산신각 마애부적》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n234",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n234"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n235",
+   "name": "《파주 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n235",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n235"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n238",
+   "name": "《양양 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n238",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n238"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n239",
+   "name": "《파주 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n239",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n239"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n240",
+   "name": "철원 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.05,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n240"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n241",
+   "name": "인제 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.063,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n241"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n243",
+   "name": "《파주 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n243",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n243"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n251",
+   "name": "금천 강북사지 고려 청동은입사향완 모각 의장품",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "metal",
+   "stats": {
+    "res": 0.144,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n251"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n252",
+   "name": "회양 마식령 관문 찰방인장 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.054,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n252"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n255",
+   "name": "《개성 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n255",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n255"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n258",
+   "name": "《김화 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n258",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n258"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n259",
+   "name": "《통천 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n259",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n259"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n260",
+   "name": "개성 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n260"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n261",
+   "name": "연안 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.063,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n261"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n263",
+   "name": "《김화 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n263",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n263"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n266",
+   "name": "신천 패엽사 대웅전 및 철불 원불(願佛)",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.16,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n266"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n269",
+   "name": "옹진 백령도 심청각 인당수 제단 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n269"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n271",
+   "name": "곡산 구월산 삼성사(단군사당) 위패 벽사 패물",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.14,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n271"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n273",
+   "name": "《재령 강선루 현판》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n273",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n273"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n275",
+   "name": "《해주 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n275",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n275"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n278",
+   "name": "《재령 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n278",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n278"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n279",
+   "name": "《해주 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n279",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n279"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n280",
+   "name": "옹진 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.05,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n280"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n281",
+   "name": "신천 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n281"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n283",
+   "name": "《해주 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n283",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n283"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n288",
+   "name": "《강서대묘 고구려 사신도 벽화》 필사본",
+   "slot": "book",
+   "tier": 4,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n288",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n288"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n295",
+   "name": "《평양 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n295",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n295"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n298",
+   "name": "《강서 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n298",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n298"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n299",
+   "name": "《평양 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n299",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n299"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n300",
+   "name": "덕원 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n300"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n301",
+   "name": "안변 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n301"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n303",
+   "name": "《평양 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n303",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n303"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n305",
+   "name": "안변 고목 당산 신목 신위 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n305"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n308",
+   "name": "영흥 준원당 태조 어진 보관함 벽사 패물",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "yu",
+   "element": "holy",
+   "stats": {
+    "res": 0.14,
+    "atk": 6
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n308"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n312",
+   "name": "함흥 낙민루 종각 동종 모각 의장품",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n312"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n313",
+   "name": "《숙천 열파정 시판》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n313",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n313"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n316",
+   "name": "《안주 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n316",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n316"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n319",
+   "name": "《영흥 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n319",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n319"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n320",
+   "name": "《안주 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n320",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n320"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n321",
+   "name": "순천 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n321"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n322",
+   "name": "함흥 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.063,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n322"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n324",
+   "name": "《안주 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n324",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n324"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n327",
+   "name": "《영변 묘향산 팔만대장경 인쇄본 보관함》 필사본",
+   "slot": "book",
+   "tier": 4,
+   "family": "bul",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n327",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n327"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n330",
+   "name": "함흥 백운암 금동보살 원불(願佛)",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.12,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n330"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n332",
+   "name": "운산 금광 옛 채굴 도량형기 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.054,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n332"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n333",
+   "name": "박천 삼숭사 고려 석불 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n333"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n335",
+   "name": "홍원 사포진 어민 풍어당 목각신상 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n335"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n336",
+   "name": "《영변 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n336",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n336"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n339",
+   "name": "《홍원 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n339",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n339"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n340",
+   "name": "《영변 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n340",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n340"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n341",
+   "name": "희천 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.05,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n341"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n342",
+   "name": "홍원 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.063,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n342"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n344",
+   "name": "《영변 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n344",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n344"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n350",
+   "name": "북청 사자놀음 탈 및 복식 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n350"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n352",
+   "name": "삭주 압록강 수군 절도사 도장 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.054,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n352"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n355",
+   "name": "《의주 의순관 사신 행차록 목판》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n355",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n355"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n356",
+   "name": "《의주 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n356",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n356"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n359",
+   "name": "《이원 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n359",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n359"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n360",
+   "name": "《의주 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n360",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n360"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n361",
+   "name": "선천 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n361"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n362",
+   "name": "북청 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n362"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n364",
+   "name": "《의주 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n364",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n364"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n368",
+   "name": "《단천 은광 채굴 감영 장부 목판》 필사본",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n368",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n368"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n375",
+   "name": "강계 포수단 편전 및 화약통 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.054,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n375"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n376",
+   "name": "《강계 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n376",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n376"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n379",
+   "name": "《단천 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n379",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n379"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n380",
+   "name": "《강계 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n380",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n380"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n381",
+   "name": "초산 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.05,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n381"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n382",
+   "name": "길주 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n382"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n384",
+   "name": "《강계 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n384",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n384"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n386",
+   "name": "길주 고목 당산 신목 신위 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n386"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n389",
+   "name": "《삼수 포수단 호작도 호랑이 부적》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n389",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n389"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n392",
+   "name": "후창 백두대간 삼림 벌채 뗏목패 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n392"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n394",
+   "name": "《삼수 귀양 선비 유배일기 필사본》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n394",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n394"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n397",
+   "name": "《갑산 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n397",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n397"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n400",
+   "name": "《경성 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n400",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n400"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n401",
+   "name": "《갑산 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n401",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n401"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n402",
+   "name": "삼수 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n402"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n403",
+   "name": "갑산 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n403"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n405",
+   "name": "《갑산 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 2,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n405",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n405"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n410",
+   "name": "부령 관방 수비대 화포 신기전기 모각 의장품",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n410"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n411",
+   "name": "나진 초도 패총 조개목걸이 벽사 패물",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.14,
+    "atk": 4
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n411"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n412",
+   "name": "회령 백제·여진 교역 호패 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "yu",
+   "element": "holy",
+   "stats": {
+    "res": 0.06,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n412"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n415",
+   "name": "청진 어랑천 어로 도구 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n415"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n417",
+   "name": "《회령 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n417",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n417"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n420",
+   "name": "《경흥 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n420",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n420"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n421",
+   "name": "《회령 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n421",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n421"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n422",
+   "name": "무산 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.08,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n422"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n423",
+   "name": "부령 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n423"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n425",
+   "name": "《회령 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n425",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n425"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n428",
+   "name": "종성 수진관 척경인장 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "yu",
+   "element": "metal",
+   "stats": {
+    "res": 0.054,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n428"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n432",
+   "name": "《종성 관아 호좌 동헌 목판》 필사본",
+   "slot": "book",
+   "tier": 3,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n432",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n432"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n433",
+   "name": "경원 유원진 수군 만호패 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "yu",
+   "element": "holy",
+   "stats": {
+    "res": 0.06,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n433"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n436",
+   "name": "온성 유원변방 도깨비 방망이 민간신앙패 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n436"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n437",
+   "name": "《온성 관아 동헌 현판 및 옥인》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n437",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n437"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n440",
+   "name": "《온성 산신각 마애칠성도》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "seon",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n440",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n440"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n441",
+   "name": "《온성 향교 대성전 목판》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n441",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n441"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n442",
+   "name": "종성 호국 사찰 금동여래입상 원불(願佛)",
+   "slot": "accessory",
+   "tier": 1,
+   "family": "bul",
+   "element": "holy",
+   "stats": {
+    "res": 0.05,
+    "atk": 1
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n442"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n443",
+   "name": "경원 고분군 금동관식 및 곡옥 모각 의장품",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "metal",
+   "stats": {
+    "res": 0.09,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n443"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n445",
+   "name": "《온성 어사 순력기 고문서》 필사본",
+   "slot": "book",
+   "tier": 1,
+   "family": "yu",
+   "element": "none",
+   "stats": {},
+   "passive_skill": "sk_pas_her_n445",
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n445"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_her_n447",
+   "name": "경원 고목 당산 신목 신위 벽사 패물",
+   "slot": "accessory",
+   "tier": 2,
+   "family": "seon",
+   "element": "holy",
+   "stats": {
+    "res": 0.1,
+    "atk": 2
+   },
+   "acquire": {
+    "type": "heritage",
+    "heritage": "her_n447"
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "eq_w3_dangpa",
+   "name": "당파창(鏜鈀槍)",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "affinity": "none",
+   "stats": {
+    "atk": 19,
+    "def": 3
+   },
+   "weight": 3.5,
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_spear",
+    "min_rank": 3,
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 6
+     },
+     {
+      "id": "mat_charcoal",
+      "qty": 4
+     },
+     {
+      "id": "mat_wood",
+      "qty": 2
+     }
+    ]
+   },
+   "desc": "끝이 세 갈래인 창. 『무예도보통지』 24기의 하나로, 적의 창칼을 걸어 막고 찌른다.",
+   "generated": "content2"
+  },
+  {
+   "id": "eq_c3_deungpae",
+   "name": "등패(藤牌)",
+   "slot": "accessory",
+   "tier": 3,
+   "family": "none",
+   "element": "none",
+   "affinity": "none",
+   "stats": {
+    "def": 8,
+    "res": 0.05
+   },
+   "weight": 2.0,
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_shield",
+    "min_rank": 3,
+    "materials": [
+     {
+      "id": "mat_bamboo",
+      "qty": 6
+     },
+     {
+      "id": "mat_cowhide",
+      "qty": 2
+     },
+     {
+      "id": "mat_lacquer",
+      "qty": 1
+     }
+    ]
+   },
+   "desc": "등나무를 엮어 옻칠한 방패. 등패수는 요도와 표창을 함께 썼다.",
+   "generated": "content2"
+  },
+  {
+   "id": "eq_w3_pyeongon",
+   "name": "편곤(鞭棍)",
+   "slot": "weapon",
+   "tier": 3,
+   "family": "none",
+   "element": "metal",
+   "affinity": "none",
+   "stats": {
+    "atk": 21,
+    "crit": 0.05
+   },
+   "weight": 3.0,
+   "acquire": {
+    "type": "forge",
+    "book": "bk_mar_flail",
+    "min_rank": 3,
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 5
+     },
+     {
+      "id": "mat_charcoal",
+      "qty": 3
+     },
+     {
+      "id": "mat_cowhide",
+      "qty": 2
+     }
+    ]
+   },
+   "desc": "긴 자루 끝에 짧은 도리깨를 쇠사슬로 단 무기. 기병의 마상편곤으로 이름났다.",
+   "generated": "content2"
+  },
+  {
+   "id": "eq_yu_weapon_4",
+   "name": "사인참사검",
+   "slot": "weapon",
+   "tier": 4,
+   "family": "yu",
+   "element": "metal",
+   "affinity": "yu",
+   "weight": 3.0,
+   "stats": {
+    "atk": 32
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "사인참사검 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_weapon_4"
+   },
+   "mojak_recipe": "mj_yu_weapon_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_weapon_5",
+   "name": "용천 어검",
+   "slot": "weapon",
+   "tier": 5,
+   "family": "yu",
+   "element": "metal",
+   "affinity": "yu",
+   "weight": 3.0,
+   "stats": {
+    "atk": 45
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "용천 어검 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_CITY_PYEONGYANGBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_weapon_5"
+   },
+   "mojak_recipe": "mj_yu_weapon_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_armor_4",
+   "name": "두석린갑",
+   "slot": "armor",
+   "tier": 4,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 6.0,
+   "stats": {
+    "def": 32,
+    "hp": 35
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "두석린갑 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_armor_4"
+   },
+   "mojak_recipe": "mj_yu_armor_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_armor_5",
+   "name": "용린 어갑",
+   "slot": "armor",
+   "tier": 5,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 6.0,
+   "stats": {
+    "def": 45,
+    "hp": 60
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "용린 어갑 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_CITY_PYEONGYANGBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_armor_5"
+   },
+   "mojak_recipe": "mj_yu_armor_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_shoes_4",
+   "name": "흑피 목화",
+   "slot": "shoes",
+   "tier": 4,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 0.8,
+   "stats": {
+    "spd": 25,
+    "def": 5
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "흑피 목화 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_shoes_4"
+   },
+   "mojak_recipe": "mj_yu_shoes_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_shoes_5",
+   "name": "청룡 목화",
+   "slot": "shoes",
+   "tier": 5,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 0.8,
+   "stats": {
+    "spd": 30,
+    "def": 8
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "청룡 목화 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_CITY_PYEONGYANGBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_shoes_5"
+   },
+   "mojak_recipe": "mj_yu_shoes_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_accessory_4",
+   "name": "수군 청동인장",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.14,
+    "atk": 6
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "수군 청동인장 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_accessory_4"
+   },
+   "mojak_recipe": "mj_yu_accessory_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_yu_accessory_5",
+   "name": "어보 옥인",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "yu",
+   "element": "none",
+   "affinity": "yu",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.18,
+    "atk": 9
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "어보 옥인 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_CITY_PYEONGYANGBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG"
+    ],
+    "fail_consolation": "mj_yu_accessory_5"
+   },
+   "mojak_recipe": "mj_yu_accessory_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_weapon_4",
+   "name": "금강저",
+   "slot": "weapon",
+   "tier": 4,
+   "family": "bul",
+   "element": "holy",
+   "affinity": "bul",
+   "weight": 3.0,
+   "stats": {
+    "atk": 29,
+    "res": 0.02
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "금강저 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_10_TOWN_MILYANG"
+    ],
+    "fail_consolation": "mj_bul_weapon_4"
+   },
+   "mojak_recipe": "mj_bul_weapon_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_weapon_5",
+   "name": "항마 금강저",
+   "slot": "weapon",
+   "tier": 5,
+   "family": "bul",
+   "element": "holy",
+   "affinity": "bul",
+   "weight": 3.0,
+   "stats": {
+    "atk": 40,
+    "res": 0.02
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "항마 금강저 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_TEMPLE_HAEINSA",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI"
+    ],
+    "fail_consolation": "mj_bul_weapon_5"
+   },
+   "mojak_recipe": "mj_bul_weapon_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_armor_4",
+   "name": "승군 철가사",
+   "slot": "armor",
+   "tier": 4,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 6.0,
+   "stats": {
+    "def": 37,
+    "hp": 40,
+    "res": 0.02
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "승군 철가사 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_10_TOWN_MILYANG"
+    ],
+    "fail_consolation": "mj_bul_armor_4"
+   },
+   "mojak_recipe": "mj_bul_armor_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_armor_5",
+   "name": "사명 금란가사",
+   "slot": "armor",
+   "tier": 5,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 6.0,
+   "stats": {
+    "def": 52,
+    "hp": 69,
+    "res": 0.02
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "사명 금란가사 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_TEMPLE_HAEINSA",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI"
+    ],
+    "fail_consolation": "mj_bul_armor_5"
+   },
+   "mojak_recipe": "mj_bul_armor_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_shoes_4",
+   "name": "행각 철혜",
+   "slot": "shoes",
+   "tier": 4,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 0.8,
+   "stats": {
+    "spd": 25,
+    "def": 6
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "행각 철혜 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_10_TOWN_MILYANG"
+    ],
+    "fail_consolation": "mj_bul_shoes_4"
+   },
+   "mojak_recipe": "mj_bul_shoes_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_shoes_5",
+   "name": "달마 초혜",
+   "slot": "shoes",
+   "tier": 5,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 0.8,
+   "stats": {
+    "spd": 30,
+    "def": 9
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "달마 초혜 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_TEMPLE_HAEINSA",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI"
+    ],
+    "fail_consolation": "mj_bul_shoes_5"
+   },
+   "mojak_recipe": "mj_bul_shoes_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_accessory_4",
+   "name": "사리함 패",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.16,
+    "atk": 5
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "사리함 패 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+     "ND_10_TOWN_MILYANG"
+    ],
+    "fail_consolation": "mj_bul_accessory_4"
+   },
+   "mojak_recipe": "mj_bul_accessory_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_bul_accessory_5",
+   "name": "진신사리 패",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "bul",
+   "element": "none",
+   "affinity": "bul",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.2,
+    "atk": 8
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "진신사리 패 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_09_CITY_GYEONGJUBU",
+     "ND_10_TEMPLE_HAEINSA",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI"
+    ],
+    "fail_consolation": "mj_bul_accessory_5"
+   },
+   "mojak_recipe": "mj_bul_accessory_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_weapon_4",
+   "name": "칠성검",
+   "slot": "weapon",
+   "tier": 4,
+   "family": "seon",
+   "element": "fire",
+   "affinity": "seon",
+   "weight": 3.0,
+   "stats": {
+    "atk": 35,
+    "res": 0.04
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "칠성검 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_04_CITY_GANGREUNGDAEDOHOBU",
+     "ND_04_CITY_WONJUGANGWONGAMYEONG",
+     "ND_05_CITY_CHUNGJUMOK"
+    ],
+    "fail_consolation": "mj_seon_weapon_4"
+   },
+   "mojak_recipe": "mj_seon_weapon_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_weapon_5",
+   "name": "태을 뇌검",
+   "slot": "weapon",
+   "tier": 5,
+   "family": "seon",
+   "element": "fire",
+   "affinity": "seon",
+   "weight": 3.0,
+   "stats": {
+    "atk": 50,
+    "res": 0.04
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "태을 뇌검 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_06_SHRINE_GYERYONGSANSINDOAN",
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI",
+     "ND_17_CITY_JEJUMOKJEJUEUPSEONG"
+    ],
+    "fail_consolation": "mj_seon_weapon_5"
+   },
+   "mojak_recipe": "mj_seon_weapon_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_armor_4",
+   "name": "학창의",
+   "slot": "armor",
+   "tier": 4,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 6.0,
+   "stats": {
+    "def": 29,
+    "hp": 32,
+    "res": 0.04
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "학창의 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_04_CITY_GANGREUNGDAEDOHOBU",
+     "ND_04_CITY_WONJUGANGWONGAMYEONG",
+     "ND_05_CITY_CHUNGJUMOK"
+    ],
+    "fail_consolation": "mj_seon_armor_4"
+   },
+   "mojak_recipe": "mj_seon_armor_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_armor_5",
+   "name": "우의 선포",
+   "slot": "armor",
+   "tier": 5,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 6.0,
+   "stats": {
+    "def": 40,
+    "hp": 54,
+    "res": 0.04
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "우의 선포 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_06_SHRINE_GYERYONGSANSINDOAN",
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI",
+     "ND_17_CITY_JEJUMOKJEJUEUPSEONG"
+    ],
+    "fail_consolation": "mj_seon_armor_5"
+   },
+   "mojak_recipe": "mj_seon_armor_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_shoes_4",
+   "name": "운혜",
+   "slot": "shoes",
+   "tier": 4,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 0.8,
+   "stats": {
+    "spd": 25,
+    "def": 4
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "운혜 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_04_CITY_GANGREUNGDAEDOHOBU",
+     "ND_04_CITY_WONJUGANGWONGAMYEONG",
+     "ND_05_CITY_CHUNGJUMOK"
+    ],
+    "fail_consolation": "mj_seon_shoes_4"
+   },
+   "mojak_recipe": "mj_seon_shoes_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_shoes_5",
+   "name": "축지 운리",
+   "slot": "shoes",
+   "tier": 5,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 0.8,
+   "stats": {
+    "spd": 30,
+    "def": 7
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "축지 운리 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_06_SHRINE_GYERYONGSANSINDOAN",
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI",
+     "ND_17_CITY_JEJUMOKJEJUEUPSEONG"
+    ],
+    "fail_consolation": "mj_seon_shoes_5"
+   },
+   "mojak_recipe": "mj_seon_shoes_5",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_accessory_4",
+   "name": "호로병 패",
+   "slot": "accessory",
+   "tier": 4,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.18,
+    "atk": 7
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "호로병 패 전승 서사",
+    "min_rank": 4,
+    "route": [
+     "ND_04_CITY_GANGREUNGDAEDOHOBU",
+     "ND_04_CITY_WONJUGANGWONGAMYEONG",
+     "ND_05_CITY_CHUNGJUMOK"
+    ],
+    "fail_consolation": "mj_seon_accessory_4"
+   },
+   "mojak_recipe": "mj_seon_accessory_4",
+   "generated": "systematic"
+  },
+  {
+   "id": "eq_seon_accessory_5",
+   "name": "선도 복숭아 옥패",
+   "slot": "accessory",
+   "tier": 5,
+   "family": "seon",
+   "element": "none",
+   "affinity": "seon",
+   "weight": 0.2,
+   "stats": {
+    "res": 0.22,
+    "atk": 10
+   },
+   "acquire": {
+    "type": "quest",
+    "quest_name": "선도 복숭아 옥패 전승 서사",
+    "min_rank": 5,
+    "route": [
+     "ND_06_SHRINE_GYERYONGSANSINDOAN",
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+     "ND_16_SCENIC_BAEKDUSANCHEONJI",
+     "ND_17_CITY_JEJUMOKJEJUEUPSEONG"
+    ],
+    "fail_consolation": "mj_seon_accessory_5"
+   },
+   "mojak_recipe": "mj_seon_accessory_5",
+   "generated": "systematic"
+  }
+ ]
+}

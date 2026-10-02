@@ -1,0 +1,3297 @@
+{
+ "q_rcp_gangjin_celadon": {
+  "id": "q_rcp_gangjin_celadon",
+  "name": "비전 전수: 강진 상감청자",
+  "tier": 4,
+  "type": "recipe",
+  "min_rank": 3,
+  "route": [
+   "ND_10_CITY_JINJUMOK",
+   "ND_08_TEMPLE_WOLCHULSANMUWISA",
+   "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO"
+  ],
+  "reward": {
+   "item": "spr_gangjin_celadon"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "not_has": "spr_gangjin_celadon",
+   "heritage_resolved": "her_006"
+  }
+ },
+ "q_rcp_bunwon_porcelain": {
+  "id": "q_rcp_bunwon_porcelain",
+  "name": "비전 전수: 분원 백자 달항아리",
+  "tier": 3,
+  "type": "recipe",
+  "min_rank": 2,
+  "route": [
+   "ND_05_TOWN_DANYANG",
+   "ND_02_CITY_GWANGJUYUSUBU",
+   "ND_02_RUIN_GWANGJUBUNWONBAEKJAGAMATEO"
+  ],
+  "reward": {
+   "item": "spr_bunwon_porcelain"
+  },
+  "avail": {
+   "region": "MAP_02",
+   "not_has": "spr_bunwon_porcelain",
+   "heritage_resolved": "her_007"
+  }
+ },
+ "q_rcp_tongyeong_najeon": {
+  "id": "q_rcp_tongyeong_najeon",
+  "name": "비전 전수: 통영 나전칠기함",
+  "tier": 3,
+  "type": "recipe",
+  "min_rank": 2,
+  "route": [
+   "ND_08_TOWN_CHEONGHAEJINWANDOBO",
+   "ND_10_TOWN_GEOJEHYEONGISEONGGWAN",
+   "ND_10_RUIN_TONGYEONG12GONGBANGYETTEO"
+  ],
+  "reward": {
+   "item": "spr_tongyeong_najeon"
+  },
+  "avail": {
+   "region": "MAP_10",
+   "not_has": "spr_tongyeong_najeon",
+   "heritage_resolved": "her_008"
+  }
+ },
+ "q_rcp_her_066": {
+  "id": "q_rcp_her_066",
+  "name": "비전 전수: 명량 해저 인양 청자",
+  "tier": 5,
+  "type": "recipe",
+  "min_rank": 4,
+  "route": [
+   "ND_09_TOWN_SEONSANDOHOBUCHISOGUMI",
+   "ND_07_TOWN_JEONGEUP",
+   "ND_08_TOWN_HAENAM",
+   "ND_08_WRECK_MYEONGRYANGULDOLMOK"
+  ],
+  "reward": {
+   "item": "spr_her_066"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "not_has": "spr_her_066",
+   "heritage_resolved": "her_066"
+  }
+ },
+ "q_rcp_her_112": {
+  "id": "q_rcp_her_112",
+  "name": "비전 전수: 삼척 해저 인양 청자",
+  "tier": 4,
+  "type": "recipe",
+  "min_rank": 3,
+  "route": [
+   "ND_09_TOWN_CHEONGSONG",
+   "ND_04_TEMPLE_SAMCHEOKSINHEUNGSA",
+   "ND_04_WRECK_SAMCHEOKANTAEKSEONCHIMMOLJI"
+  ],
+  "reward": {
+   "item": "spr_her_112"
+  },
+  "avail": {
+   "region": "MAP_04",
+   "not_has": "spr_her_112",
+   "heritage_resolved": "her_112"
+  }
+ },
+ "q_rcp_her_115": {
+  "id": "q_rcp_her_115",
+  "name": "비전 전수: 단양 복원 도자",
+  "tier": 3,
+  "type": "recipe",
+  "min_rank": 2,
+  "route": [
+   "ND_06_TOWN_ASAN",
+   "ND_05_RUIN_DANYANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO"
+  ],
+  "reward": {
+   "item": "spr_her_115"
+  },
+  "avail": {
+   "region": "MAP_05",
+   "not_has": "spr_her_115",
+   "heritage_resolved": "her_115"
+  }
+ },
+ "q_rcp_her_121": {
+  "id": "q_rcp_her_121",
+  "name": "비전 전수: 태안 해저 인양 청자",
+  "tier": 4,
+  "type": "recipe",
+  "min_rank": 3,
+  "route": [
+   "ND_02_TOWN_NAMYANG",
+   "ND_06_TOWN_TAEAN",
+   "ND_06_WRECK_TAEANMADOCHIMMOLSEON"
+  ],
+  "reward": {
+   "item": "spr_her_121"
+  },
+  "avail": {
+   "region": "MAP_06",
+   "not_has": "spr_her_121",
+   "heritage_resolved": "her_121"
+  }
+ },
+ "q_rcp_her_123": {
+  "id": "q_rcp_her_123",
+  "name": "비전 전수: 부안 복원 도자",
+  "tier": 4,
+  "type": "recipe",
+  "min_rank": 3,
+  "route": [
+   "ND_05_CITY_CHEONGJUMOK",
+   "ND_07_TOWN_GIMJEGUNBYEOKGOLJECHISO",
+   "ND_07_RUIN_BUANYUCHEONRICHEONGJAGAMATEO"
+  ],
+  "reward": {
+   "item": "spr_her_123"
+  },
+  "avail": {
+   "region": "MAP_07",
+   "not_has": "spr_her_123",
+   "heritage_resolved": "her_123"
+  }
+ },
+ "q_rcp_her_125": {
+  "id": "q_rcp_her_125",
+  "name": "비전 전수: 신안 해저 인양 청자",
+  "tier": 5,
+  "type": "recipe",
+  "min_rank": 4,
+  "route": [
+   "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "ND_10_TOWN_HAPCHEON",
+   "ND_08_CITY_NAJUMOK",
+   "ND_08_WRECK_SINANHAEJEOMUYEOKSEON"
+  ],
+  "reward": {
+   "item": "spr_her_125"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "not_has": "spr_her_125",
+   "heritage_resolved": "her_125"
+  }
+ },
+ "q_rcp_her_138": {
+  "id": "q_rcp_her_138",
+  "name": "비전 전수: 압록강 해저 인양 청자",
+  "tier": 3,
+  "type": "recipe",
+  "min_rank": 2,
+  "route": [
+   "ND_13_TOWN_JINNAMPO",
+   "ND_14_TEMPLE_BAEKMASANSA",
+   "ND_14_WRECK_APROKGANGHAGUCHIMMOLSEON"
+  ],
+  "reward": {
+   "item": "spr_her_138"
+  },
+  "avail": {
+   "region": "MAP_14",
+   "not_has": "spr_her_138",
+   "heritage_resolved": "her_138"
+  }
+ },
+ "q_rcp_her_142": {
+  "id": "q_rcp_her_142",
+  "name": "비전 전수: 회령 복원 도자",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_16_TOWN_JONGSEONG",
+   "ND_16_RUIN_HOERYEONGOJIGAMATEO"
+  ],
+  "reward": {
+   "item": "spr_her_142"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "not_has": "spr_her_142",
+   "heritage_resolved": "her_142"
+  }
+ },
+ "q_rcp_her_n007": {
+  "id": "q_rcp_her_n007",
+  "name": "비전 전수: 제주 목관아지 출토 분청사기 재현품",
+  "tier": 3,
+  "type": "recipe",
+  "min_rank": 2,
+  "route": [
+   "ND_08_TOWN_DAMYANG",
+   "ND_17_TEMPLE_GWANEUMSA",
+   "ND_17_CITY_JEJUMOKJEJUEUPSEONG"
+  ],
+  "reward": {
+   "item": "spr_her_n007"
+  },
+  "avail": {
+   "region": "MAP_17",
+   "not_has": "spr_her_n007",
+   "heritage_resolved": "her_n007"
+  }
+ },
+ "q_rcp_her_n020": {
+  "id": "q_rcp_her_n020",
+  "name": "비전 전수: 차귀도 해역 침몰선 해저 청자 재현품",
+  "tier": 3,
+  "type": "recipe",
+  "min_rank": 2,
+  "route": [
+   "ND_08_TOWN_JINDO",
+   "ND_17_TOWN_DAEJEONGHYEON",
+   "ND_17_WRECK_CHAGWIDOHAEYEOKCHIMMOLSEONHAEJEOCHEONGJA"
+  ],
+  "reward": {
+   "item": "spr_her_n020"
+  },
+  "avail": {
+   "region": "MAP_17",
+   "not_has": "spr_her_n020",
+   "heritage_resolved": "her_n020"
+  }
+ },
+ "q_rcp_her_n024": {
+  "id": "q_rcp_her_n024",
+  "name": "비전 전수: 강진 청자 상감운학문 매병 재현품",
+  "tier": 4,
+  "type": "recipe",
+  "min_rank": 3,
+  "route": [
+   "ND_07_TOWN_JEONGEUP",
+   "ND_08_TOWN_GANGJINHYEONCHISO",
+   "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG"
+  ],
+  "reward": {
+   "item": "spr_her_n024"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "not_has": "spr_her_n024",
+   "heritage_resolved": "her_n024"
+  }
+ },
+ "q_rcp_her_n030": {
+  "id": "q_rcp_her_n030",
+  "name": "비전 전수: 진도 용장산성 행궁터 유물 재현품",
+  "tier": 3,
+  "type": "recipe",
+  "min_rank": 2,
+  "route": [
+   "ND_17_TOWN_DAEJEONGHYEON",
+   "ND_08_TOWN_JINDO",
+   "ND_08_FORT_JINDOYONGJANGSANSEONGHAENGGUNGJI"
+  ],
+  "reward": {
+   "item": "spr_her_n030"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "not_has": "spr_her_n030",
+   "heritage_resolved": "her_n030"
+  }
+ },
+ "q_rcp_her_n032": {
+  "id": "q_rcp_her_n032",
+  "name": "비전 전수: 강진 사당리 고려청자 요지 비색발 재현품",
+  "tier": 3,
+  "type": "recipe",
+  "min_rank": 2,
+  "route": [
+   "ND_07_TOWN_JEONGEUP",
+   "ND_08_TOWN_JANGHEUNGDOHOBUCHISO",
+   "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG"
+  ],
+  "reward": {
+   "item": "spr_her_n032"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "not_has": "spr_her_n032",
+   "heritage_resolved": "her_n032"
+  }
+ },
+ "q_rcp_her_n054": {
+  "id": "q_rcp_her_n054",
+  "name": "비전 전수: 광양 고려청자 가마터 출토 명품완 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_08_CITY_SUNCHEONDOHOBU",
+   "ND_08_TOWN_GWANGYANGHYEONCHISO"
+  ],
+  "reward": {
+   "item": "spr_her_n054"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "not_has": "spr_her_n054",
+   "heritage_resolved": "her_n054"
+  }
+ },
+ "q_rcp_her_n061": {
+  "id": "q_rcp_her_n061",
+  "name": "비전 전수: 순천 도요지 백자 청화항아리 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_08_CITY_SUNCHEONDOHOBU",
+   "ND_08_SCENIC_SUNCHEONDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n061"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "not_has": "spr_her_n061",
+   "heritage_resolved": "her_n061"
+  }
+ },
+ "q_rcp_her_n067": {
+  "id": "q_rcp_her_n067",
+  "name": "비전 전수: 동래 동삼동 패총 융기문토기 재현품",
+  "tier": 4,
+  "type": "recipe",
+  "min_rank": 3,
+  "route": [
+   "ND_07_CITY_NAMWONDOHOBU",
+   "ND_10_TOWN_GIMHAE",
+   "ND_10_TOMB_DONGRAEDONGSAMDONGPAECHONGYUNGGIMUNTOGI"
+  ],
+  "reward": {
+   "item": "spr_her_n067"
+  },
+  "avail": {
+   "region": "MAP_10",
+   "not_has": "spr_her_n067",
+   "heritage_resolved": "her_n067"
+  }
+ },
+ "q_rcp_her_n074": {
+  "id": "q_rcp_her_n074",
+  "name": "비전 전수: 동래 고려청자 가마터 출토 명품완 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_10_BEACON_DONGRAEHWANGRYEONGSANBONGSU",
+   "ND_10_SCENIC_DONGRAEGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n074"
+  },
+  "avail": {
+   "region": "MAP_10",
+   "not_has": "spr_her_n074",
+   "heritage_resolved": "her_n074"
+  }
+ },
+ "q_rcp_her_n081": {
+  "id": "q_rcp_her_n081",
+  "name": "비전 전수: 나주 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_08_CITY_GWANGJUMOK",
+   "ND_08_RUIN_NAJUDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n081"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "not_has": "spr_her_n081",
+   "heritage_resolved": "her_n081"
+  }
+ },
+ "q_rcp_her_n094": {
+  "id": "q_rcp_her_n094",
+  "name": "비전 전수: 남원 고려청자 가마터 출토 명품완 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_07_TEMPLE_GEUMSANSA",
+   "ND_07_SCENIC_NAMWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n094"
+  },
+  "avail": {
+   "region": "MAP_07",
+   "not_has": "spr_her_n094",
+   "heritage_resolved": "her_n094"
+  }
+ },
+ "q_rcp_her_n101": {
+  "id": "q_rcp_her_n101",
+  "name": "비전 전수: 경주 도요지 백자 청화항아리 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_09_TOWN_YEONGILHYEONJANGGIJINPOHANG",
+   "ND_09_SCENIC_GYEONGJUDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n101"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "not_has": "spr_her_n101",
+   "heritage_resolved": "her_n101"
+  }
+ },
+ "q_rcp_her_n115": {
+  "id": "q_rcp_her_n115",
+  "name": "비전 전수: 영일 고려청자 가마터 출토 명품완 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_09_TEMPLE_BULGUKSA",
+   "ND_09_SCENIC_YEONGILGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n115"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "not_has": "spr_her_n115",
+   "heritage_resolved": "her_n115"
+  }
+ },
+ "q_rcp_her_n122": {
+  "id": "q_rcp_her_n122",
+  "name": "비전 전수: 전주 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_07_TEMPLE_GEUMSANSA",
+   "ND_07_SCENIC_JEONJUDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n122"
+  },
+  "avail": {
+   "region": "MAP_07",
+   "not_has": "spr_her_n122",
+   "heritage_resolved": "her_n122"
+  }
+ },
+ "q_rcp_her_n135": {
+  "id": "q_rcp_her_n135",
+  "name": "비전 전수: 안동 고려청자 가마터 출토 명품완 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_09_TOWN_CHEONGSONG",
+   "ND_09_CITY_ANDONGDAEDOHOBU"
+  ],
+  "reward": {
+   "item": "spr_her_n135"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "not_has": "spr_her_n135",
+   "heritage_resolved": "her_n135"
+  }
+ },
+ "q_rcp_her_n142": {
+  "id": "q_rcp_her_n142",
+  "name": "비전 전수: 공주 도요지 백자 청화항아리 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_06_TEMPLE_MAGOKSA",
+   "ND_06_SCENIC_GONGJUDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n142"
+  },
+  "avail": {
+   "region": "MAP_06",
+   "not_has": "spr_her_n142",
+   "heritage_resolved": "her_n142"
+  }
+ },
+ "q_rcp_her_n156": {
+  "id": "q_rcp_her_n156",
+  "name": "비전 전수: 영주 고려청자 가마터 출토 명품완 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_09_TOWN_YEONGJU",
+   "ND_09_SCENIC_YEONGJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n156"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "not_has": "spr_her_n156",
+   "heritage_resolved": "her_n156"
+  }
+ },
+ "q_rcp_her_n163": {
+  "id": "q_rcp_her_n163",
+  "name": "비전 전수: 청주 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_05_TOWN_OKCHEON",
+   "ND_05_SCENIC_CHEONGJUDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n163"
+  },
+  "avail": {
+   "region": "MAP_05",
+   "not_has": "spr_her_n163",
+   "heritage_resolved": "her_n163"
+  }
+ },
+ "q_rcp_her_n176": {
+  "id": "q_rcp_her_n176",
+  "name": "비전 전수: 단양 고려청자 가마터 출토 명품완 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_05_TOWN_JECHEON",
+   "ND_05_RUIN_DANYANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n176"
+  },
+  "avail": {
+   "region": "MAP_05",
+   "not_has": "spr_her_n176",
+   "heritage_resolved": "her_n176"
+  }
+ },
+ "q_rcp_her_n183": {
+  "id": "q_rcp_her_n183",
+  "name": "비전 전수: 원주 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_04_TOWN_PYEONGCHANG",
+   "ND_04_CITY_WONJUGANGWONGAMYEONG"
+  ],
+  "reward": {
+   "item": "spr_her_n183"
+  },
+  "avail": {
+   "region": "MAP_04",
+   "not_has": "spr_her_n183",
+   "heritage_resolved": "her_n183"
+  }
+ },
+ "q_rcp_her_n196": {
+  "id": "q_rcp_her_n196",
+  "name": "비전 전수: 여주 고려청자 가마터 출토 명품완 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_02_TOWN_ICHEON",
+   "ND_02_SCENIC_YEOJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n196"
+  },
+  "avail": {
+   "region": "MAP_02",
+   "not_has": "spr_her_n196",
+   "heritage_resolved": "her_n196"
+  }
+ },
+ "q_rcp_her_n203": {
+  "id": "q_rcp_her_n203",
+  "name": "비전 전수: 남양 도요지 백자 청화항아리 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_02_CITY_SUWONHWASEONG",
+   "ND_02_SCENIC_NAMYANGDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n203"
+  },
+  "avail": {
+   "region": "MAP_02",
+   "not_has": "spr_her_n203",
+   "heritage_resolved": "her_n203"
+  }
+ },
+ "q_rcp_her_n216": {
+  "id": "q_rcp_her_n216",
+  "name": "비전 전수: 개성 고려청자 가마터 출토 명품완 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_01_TOWN_MUNSANPOGU",
+   "ND_01_SCENIC_GAESEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n216"
+  },
+  "avail": {
+   "region": "MAP_01",
+   "not_has": "spr_her_n216",
+   "heritage_resolved": "her_n216"
+  }
+ },
+ "q_rcp_her_n223": {
+  "id": "q_rcp_her_n223",
+  "name": "비전 전수: 강화 도요지 백자 청화항아리 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_01_TEMPLE_JEONDEUNGSA",
+   "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n223"
+  },
+  "avail": {
+   "region": "MAP_01",
+   "not_has": "spr_her_n223",
+   "heritage_resolved": "her_n223"
+  }
+ },
+ "q_rcp_her_n232": {
+  "id": "q_rcp_her_n232",
+  "name": "비전 전수: 철원 궁예 태봉국 철원도성 금와 재현품",
+  "tier": 3,
+  "type": "recipe",
+  "min_rank": 2,
+  "route": [
+   "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+   "ND_03_SCENIC_CHEOLWONGUNGYETAEBONGGUKCHEOLWONDOSEONGGEUMWA"
+  ],
+  "reward": {
+   "item": "spr_her_n232"
+  },
+  "avail": {
+   "region": "MAP_03",
+   "not_has": "spr_her_n232",
+   "heritage_resolved": "her_n232"
+  }
+ },
+ "q_rcp_her_n237": {
+  "id": "q_rcp_her_n237",
+  "name": "비전 전수: 인제 고려청자 가마터 출토 명품완 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_03_TOWN_YANGGU",
+   "ND_03_TOWN_INJEHYEONBAEKDAMSA"
+  ],
+  "reward": {
+   "item": "spr_her_n237"
+  },
+  "avail": {
+   "region": "MAP_03",
+   "not_has": "spr_her_n237",
+   "heritage_resolved": "her_n237"
+  }
+ },
+ "q_rcp_her_n244": {
+  "id": "q_rcp_her_n244",
+  "name": "비전 전수: 철원 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_03_CITY_CHEOLWONDOHOBU",
+   "ND_03_CITY_CHEOLWONDOHOBUCHISO"
+  ],
+  "reward": {
+   "item": "spr_her_n244"
+  },
+  "avail": {
+   "region": "MAP_03",
+   "not_has": "spr_her_n244",
+   "heritage_resolved": "her_n244"
+  }
+ },
+ "q_rcp_her_n257": {
+  "id": "q_rcp_her_n257",
+  "name": "비전 전수: 평강 고려청자 가마터 출토 명품완 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+   "ND_03_SCENIC_PYEONGGANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n257"
+  },
+  "avail": {
+   "region": "MAP_03",
+   "not_has": "spr_her_n257",
+   "heritage_resolved": "her_n257"
+  }
+ },
+ "q_rcp_her_n264": {
+  "id": "q_rcp_her_n264",
+  "name": "비전 전수: 통천 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_03_TOWN_TONGCHEON",
+   "ND_03_RUIN_TONGCHEONDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n264"
+  },
+  "avail": {
+   "region": "MAP_03",
+   "not_has": "spr_her_n264",
+   "heritage_resolved": "her_n264"
+  }
+ },
+ "q_rcp_her_n277": {
+  "id": "q_rcp_her_n277",
+  "name": "비전 전수: 신천 고려청자 가마터 출토 명품완 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_12_TOWN_SINCHEONGUNGUWOLSANCHISO",
+   "ND_12_SCENIC_SINCHEONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n277"
+  },
+  "avail": {
+   "region": "MAP_12",
+   "not_has": "spr_her_n277",
+   "heritage_resolved": "her_n277"
+  }
+ },
+ "q_rcp_her_n284": {
+  "id": "q_rcp_her_n284",
+  "name": "비전 전수: 옹진 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_15_TOWN_GOWON",
+   "ND_15_SCENIC_ONGJINDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n284"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "not_has": "spr_her_n284",
+   "heritage_resolved": "her_n284"
+  }
+ },
+ "q_rcp_her_n292": {
+  "id": "q_rcp_her_n292",
+  "name": "비전 전수: 평양 안학궁터 고구려 수막새 재현품",
+  "tier": 3,
+  "type": "recipe",
+  "min_rank": 2,
+  "route": [
+   "ND_12_TOWN_ONGJIN",
+   "ND_13_SCENIC_EULMILDAE",
+   "ND_13_SCENIC_PYEONGYANGEULMILDAE"
+  ],
+  "reward": {
+   "item": "spr_her_n292"
+  },
+  "avail": {
+   "region": "MAP_13",
+   "not_has": "spr_her_n292",
+   "heritage_resolved": "her_n292"
+  }
+ },
+ "q_rcp_her_n297": {
+  "id": "q_rcp_her_n297",
+  "name": "비전 전수: 안변 고려청자 가마터 출토 명품완 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_15_TOWN_ANBYEONDOHOBUCHISO",
+   "ND_15_SCENIC_ANBYEONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n297"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "not_has": "spr_her_n297",
+   "heritage_resolved": "her_n297"
+  }
+ },
+ "q_rcp_her_n304": {
+  "id": "q_rcp_her_n304",
+  "name": "비전 전수: 덕원 도요지 백자 청화항아리 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_15_TEMPLE_SEOKWANGSA",
+   "ND_15_SCENIC_DEOKWONDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n304"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "not_has": "spr_her_n304",
+   "heritage_resolved": "her_n304"
+  }
+ },
+ "q_rcp_her_n318": {
+  "id": "q_rcp_her_n318",
+  "name": "비전 전수: 함흥 고려청자 가마터 출토 명품완 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_15_BEACON_HAMHEUNGBONGSU",
+   "ND_15_SCENIC_HAMHEUNGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n318"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "not_has": "spr_her_n318",
+   "heritage_resolved": "her_n318"
+  }
+ },
+ "q_rcp_her_n325": {
+  "id": "q_rcp_her_n325",
+  "name": "비전 전수: 함흥 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_15_TOWN_MUNCHEON",
+   "ND_15_SCENIC_HAMHEUNGDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n325"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "not_has": "spr_her_n325",
+   "heritage_resolved": "her_n325"
+  }
+ },
+ "q_rcp_her_n338": {
+  "id": "q_rcp_her_n338",
+  "name": "비전 전수: 홍원 고려청자 가마터 출토 명품완 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_15_CITY_HAMHEUNGBU",
+   "ND_15_SCENIC_HONGWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n338"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "not_has": "spr_her_n338",
+   "heritage_resolved": "her_n338"
+  }
+ },
+ "q_rcp_her_n345": {
+  "id": "q_rcp_her_n345",
+  "name": "비전 전수: 희천 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+   "ND_13_SCENIC_HUICHEONDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n345"
+  },
+  "avail": {
+   "region": "MAP_13",
+   "not_has": "spr_her_n345",
+   "heritage_resolved": "her_n345"
+  }
+ },
+ "q_rcp_her_n358": {
+  "id": "q_rcp_her_n358",
+  "name": "비전 전수: 북청 고려청자 가마터 출토 명품완 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_15_TOWN_HONGWONHYEONPOGU",
+   "ND_15_SCENIC_BUKCHEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n358"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "not_has": "spr_her_n358",
+   "heritage_resolved": "her_n358"
+  }
+ },
+ "q_rcp_her_n365": {
+  "id": "q_rcp_her_n365",
+  "name": "비전 전수: 선천 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_14_TEMPLE_BAEKMASANSA",
+   "ND_14_TOWN_SEONCHEONDOHOBUDONGRIMSANSEONG"
+  ],
+  "reward": {
+   "item": "spr_her_n365"
+  },
+  "avail": {
+   "region": "MAP_14",
+   "not_has": "spr_her_n365",
+   "heritage_resolved": "her_n365"
+  }
+ },
+ "q_rcp_her_n378": {
+  "id": "q_rcp_her_n378",
+  "name": "비전 전수: 길주 고려청자 가마터 출토 명품완 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_16_CITY_GILJUMOK",
+   "ND_16_SCENIC_GILJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n378"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "not_has": "spr_her_n378",
+   "heritage_resolved": "her_n378"
+  }
+ },
+ "q_rcp_her_n385": {
+  "id": "q_rcp_her_n385",
+  "name": "비전 전수: 초산 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_14_TOWN_SAKJU",
+   "ND_14_SCENIC_CHOSANDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n385"
+  },
+  "avail": {
+   "region": "MAP_14",
+   "not_has": "spr_her_n385",
+   "heritage_resolved": "her_n385"
+  }
+ },
+ "q_rcp_her_n395": {
+  "id": "q_rcp_her_n395",
+  "name": "비전 전수: 경성 온천 도요지 고려 흑유자기 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_16_TOWN_MUSANJINSOEDOLGWANG",
+   "ND_16_SCENIC_GYEONGSEONGONCHEONDOYOJIGORYEOHEUKYUJAGI"
+  ],
+  "reward": {
+   "item": "spr_her_n395"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "not_has": "spr_her_n395",
+   "heritage_resolved": "her_n395"
+  }
+ },
+ "q_rcp_her_n399": {
+  "id": "q_rcp_her_n399",
+  "name": "비전 전수: 갑산 고려청자 가마터 출토 명품완 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_15_TOWN_GAPSANDOHOBUCHISO",
+   "ND_15_SCENIC_GAPSANGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n399"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "not_has": "spr_her_n399",
+   "heritage_resolved": "her_n399"
+  }
+ },
+ "q_rcp_her_n406": {
+  "id": "q_rcp_her_n406",
+  "name": "비전 전수: 삼수 도요지 백자 청화항아리 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_16_TOWN_HYESANJINGWANBANGMANGRU",
+   "ND_16_SCENIC_SAMSUDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n406"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "not_has": "spr_her_n406",
+   "heritage_resolved": "her_n406"
+  }
+ },
+ "q_rcp_her_n408": {
+  "id": "q_rcp_her_n408",
+  "name": "비전 전수: 무산 오진리 원시 주거지 빗살무늬토기 재현품",
+  "tier": 3,
+  "type": "recipe",
+  "min_rank": 2,
+  "route": [
+   "ND_15_TOWN_IWONHYEONMAUNRYEONGCHISO",
+   "ND_16_TOWN_BURYEONG",
+   "ND_16_TOMB_MUSANOJINRIWONSIJUGEOJIBITSALMUNUITOGI"
+  ],
+  "reward": {
+   "item": "spr_her_n408"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "not_has": "spr_her_n408",
+   "heritage_resolved": "her_n408"
+  }
+ },
+ "q_rcp_her_n419": {
+  "id": "q_rcp_her_n419",
+  "name": "비전 전수: 부령 고려청자 가마터 출토 명품완 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_16_SEOWON_GYEONGSEONGSANSINGAKMAAECHILSEONGDO",
+   "ND_16_SCENIC_BURYEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n419"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "not_has": "spr_her_n419",
+   "heritage_resolved": "her_n419"
+  }
+ },
+ "q_rcp_her_n426": {
+  "id": "q_rcp_her_n426",
+  "name": "비전 전수: 무산 도요지 백자 청화항아리 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_16_SHRINE_CHEONGJINEORANGCHEONEORODOGU",
+   "ND_16_SCENIC_MUSANDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n426"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "not_has": "spr_her_n426",
+   "heritage_resolved": "her_n426"
+  }
+ },
+ "q_rcp_her_n439": {
+  "id": "q_rcp_her_n439",
+  "name": "비전 전수: 경원 고려청자 가마터 출토 명품완 재현품",
+  "tier": 2,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_16_TOWN_GYEONGWON",
+   "ND_16_SCENIC_GYEONGWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN"
+  ],
+  "reward": {
+   "item": "spr_her_n439"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "not_has": "spr_her_n439",
+   "heritage_resolved": "her_n439"
+  }
+ },
+ "q_rcp_her_n446": {
+  "id": "q_rcp_her_n446",
+  "name": "비전 전수: 종성 도요지 백자 청화항아리 재현품",
+  "tier": 1,
+  "type": "recipe",
+  "min_rank": 1,
+  "route": [
+   "ND_16_TOWN_JONGSEONGDOHOBUSUJINGWAN",
+   "ND_16_SCENIC_JONGSEONGDOYOJIBAEKJACHEONGHWAHANGARI"
+  ],
+  "reward": {
+   "item": "spr_her_n446"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "not_has": "spr_her_n446",
+   "heritage_resolved": "her_n446"
+  }
+ },
+ "q_lore_001": {
+  "id": "q_lore_001",
+  "name": "【전설】 경주 불국사",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_TEMPLE_GOUNSA",
+   "ND_09_TOWN_UISEONG",
+   "ND_09_TOWN_YEONGCHEON",
+   "her_001"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_001"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_001"
+  },
+  "legend": {
+   "key": "불국사",
+   "figure": "김대성",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_002": {
+  "id": "q_lore_002",
+  "name": "【전설】 경주 석굴암 석굴",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_TOWN_UISEONG",
+   "ND_09_TOWN_CHEONGSONG",
+   "ND_09_CITY_GYEONGJUBU",
+   "her_002"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_002"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_002"
+  },
+  "legend": {
+   "key": "석굴암",
+   "figure": "김대성",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_005": {
+  "id": "q_lore_005",
+  "name": "【전설】 합천 해인사 장경판전",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_10_TOWN_MILYANG",
+   "ND_10_TOWN_CHEONGDOGUNCHISO",
+   "ND_10_TOWN_HAPCHEON",
+   "her_005"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_005"
+  },
+  "avail": {
+   "region": "MAP_10",
+   "heritage_unvisited": "her_005"
+  },
+  "legend": {
+   "key": "장경판전",
+   "figure": "판전 노승",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_013": {
+  "id": "q_lore_013",
+  "name": "【전설】 훈민정음 해례본",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_TEMPLE_BUSEOKSA",
+   "ND_09_TOWN_CHEONGSONG",
+   "ND_09_SEOWON_HOEDEOKEOSASUNRYEOKGIGOMUNSEO",
+   "her_013"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_013"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_013"
+  },
+  "legend": {
+   "key": "훈민정음",
+   "figure": "세종",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_063": {
+  "id": "q_lore_063",
+  "name": "【전설】 송광사",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_08_TOWN_GURYEHYEONCHISO",
+   "ND_08_CITY_SUNCHEONDOHOBU",
+   "ND_08_SEOWON_DAMYANGSOSWAEWONMOKPAN",
+   "her_063"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_063"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_063"
+  },
+  "legend": {
+   "key": "송광사",
+   "figure": "보조국사 지눌",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_066": {
+  "id": "q_lore_066",
+  "name": "【전설】 명량 울돌목",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_08_TOWN_GANGJINHYEONCHISO",
+   "ND_08_TEMPLE_WOLCHULSANMUWISA",
+   "ND_08_TOWN_HAENAM",
+   "her_066"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_066"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_066"
+  },
+  "legend": {
+   "key": "울돌목",
+   "figure": "이순신",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_070": {
+  "id": "q_lore_070",
+  "name": "【전설】 부석사",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_TOWN_MUNGYEONG",
+   "ND_09_CITY_ANDONGDAEDOHOBU",
+   "ND_09_SEOWON_HOEDEOKEOSASUNRYEOKGIGOMUNSEO",
+   "her_070"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_070"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_070"
+  },
+  "legend": {
+   "key": "부석사",
+   "figure": "의상",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_076": {
+  "id": "q_lore_076",
+  "name": "【전설】 통도사",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_10_TOWN_CHEONGDOGUNCHISO",
+   "ND_10_TOWN_GIMHAE",
+   "ND_10_STATION_HWANGSANYEOK",
+   "her_076"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_076"
+  },
+  "avail": {
+   "region": "MAP_10",
+   "heritage_unvisited": "her_076"
+  },
+  "legend": {
+   "key": "통도사",
+   "figure": "자장",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_101": {
+  "id": "q_lore_101",
+  "name": "【전설】 백두산 천지",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_16_SEOWON_GYEONGSEONGSANSINGAKMAAECHILSEONGDO",
+   "ND_16_CITY_GYEONGSEONGDOHOBU",
+   "ND_16_TOWN_MUSANJINSOEDOLGWANG",
+   "her_101"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_101"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "heritage_unvisited": "her_101"
+  },
+  "legend": {
+   "key": "천지",
+   "figure": "백두 산신",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_122": {
+  "id": "q_lore_122",
+  "name": "【전설】 익산 미륵사지 석탑",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_07_TEMPLE_GEUMSANSA",
+   "ND_07_TEMPLE_MOAKSANGEUMSANSA",
+   "ND_07_TOWN_IKSAN",
+   "her_122"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_122"
+  },
+  "avail": {
+   "region": "MAP_07",
+   "heritage_unvisited": "her_122"
+  },
+  "legend": {
+   "key": "미륵사지",
+   "figure": "서동",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_125": {
+  "id": "q_lore_125",
+  "name": "【전설】 신안 해저 무역선",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_08_CITY_GWANGJUMOK",
+   "ND_08_TEMPLE_WOLCHULSANMUWISA",
+   "ND_08_TOWN_HAENAM",
+   "her_125"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_125"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_125"
+  },
+  "legend": {
+   "key": "신안 해저",
+   "figure": "옛 무역선 선장",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_127": {
+  "id": "q_lore_127",
+  "name": "【전설】 경주 대릉원",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_TOWN_CHEONGSONG",
+   "ND_09_TOWN_UISEONG",
+   "ND_09_TEMPLE_BULGUKSA",
+   "her_127"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_127"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_127"
+  },
+  "legend": {
+   "key": "대릉원",
+   "figure": "미추왕",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n001": {
+  "id": "q_lore_n001",
+  "name": "【전설】 제주 삼도동 탐라성주 옥인",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_17_STATION_SAMYANGCHAM",
+   "ND_17_FORT_HWABUKJIN",
+   "her_n001"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n001"
+  },
+  "avail": {
+   "region": "MAP_17",
+   "heritage_unvisited": "her_n001"
+  },
+  "legend": {
+   "key": "탐라성주",
+   "figure": "고을나·양을나·부을나",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n022": {
+  "id": "q_lore_n022",
+  "name": "【전설】 해남 대흥사 북미륵암 마애여래좌상",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_08_TOWN_GANGJINHYEONCHISO",
+   "ND_08_SEOWON_HAENAMYUNSSINOKUDANGGOMUNSEOILGWAL",
+   "her_n022"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n022"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_n022"
+  },
+  "legend": {
+   "key": "대흥사",
+   "figure": "천녀",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n023": {
+  "id": "q_lore_n023",
+  "name": "【전설】 강진 무위사 극락보전",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_08_TEMPLE_DAEHEUNGSA",
+   "ND_08_RUIN_YEONGAMDOGAPSAHAETALMUN",
+   "her_n023"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n023"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_n023"
+  },
+  "legend": {
+   "key": "무위사",
+   "figure": "파랑새 노거사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n024": {
+  "id": "q_lore_n024",
+  "name": "【전설】 강진 청자 상감운학문 매병",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_08_TOWN_JANGHEUNGDOHOBUCHISO",
+   "ND_08_STATION_BYEOLJINYEOKGANGJINTAMJINYEOKCHAM",
+   "her_n024"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n024"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_n024"
+  },
+  "legend": {
+   "key": "매병",
+   "figure": "강진 도공",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n038": {
+  "id": "q_lore_n038",
+  "name": "【전설】 장흥 보림사 철조비로자나불좌상",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_08_TOWN_YEONGAM",
+   "ND_08_STATION_BYEOLJINYEOKGANGJINTAMJINYEOKCHAM",
+   "her_n038"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n038"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_n038"
+  },
+  "legend": {
+   "key": "보림사",
+   "figure": "보조선사 체징",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n040": {
+  "id": "q_lore_n040",
+  "name": "【전설】 영암 도갑사 해탈문",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_08_TEMPLE_GAJISANBORIMSA",
+   "ND_08_TOWN_HAENAM",
+   "her_n040"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n040"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_n040"
+  },
+  "legend": {
+   "key": "도갑사",
+   "figure": "도선국사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n041": {
+  "id": "q_lore_n041",
+  "name": "【전설】 영암 월출산 마애여래좌상",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_08_TEMPLE_GAJISANBORIMSA",
+   "ND_08_TOWN_YEONGAM",
+   "her_n041"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n041"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_n041"
+  },
+  "legend": {
+   "key": "월출산",
+   "figure": "도선국사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n042": {
+  "id": "q_lore_n042",
+  "name": "【전설】 순천 송광사 목조삼존불감",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_08_STATION_NAKANEUPSEONGIYANGYEOKCHAM",
+   "ND_08_TEMPLE_JOGYESANSEONAMSA",
+   "her_n042"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n042"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_n042"
+  },
+  "legend": {
+   "key": "목조삼존불감",
+   "figure": "보조국사 지눌",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n043": {
+  "id": "q_lore_n043",
+  "name": "【전설】 여수 진남관",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_08_CITY_SUNCHEONDOHOBU",
+   "ND_08_SEOWON_SUNCHEONGWANADONGHEONHYEONPANMITOKIN",
+   "ND_08_FORT_YEOSUJWASUYEONG",
+   "her_n043"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n043"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_n043"
+  },
+  "legend": {
+   "key": "진남관",
+   "figure": "이순신",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n044": {
+  "id": "q_lore_n044",
+  "name": "【전설】 순천 송광사 국사전",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_08_STATION_NAKANEUPSEONGIYANGYEOKCHAM",
+   "ND_08_CITY_SUNCHEONDOHOBU",
+   "ND_08_TEMPLE_JOGYESANSEONAMSA",
+   "her_n044"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n044"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_n044"
+  },
+  "legend": {
+   "key": "송광사",
+   "figure": "보조국사 지눌",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n047": {
+  "id": "q_lore_n047",
+  "name": "【전설】 통영 세병관",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_10_CITY_JINJUMOK",
+   "ND_10_TOWN_NAMHAE",
+   "ND_10_FORT_TONGYEONGTONGJEYEONG",
+   "her_n047"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n047"
+  },
+  "avail": {
+   "region": "MAP_10",
+   "heritage_unvisited": "her_n047"
+  },
+  "legend": {
+   "key": "세병관",
+   "figure": "통제사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n062": {
+  "id": "q_lore_n062",
+  "name": "【전설】 나주 신촌리 금동관",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_08_STATION_BYEOLJINYEOKGANGJINTAMJINYEOKCHAM",
+   "ND_08_TEMPLE_GAJISANBORIMSA",
+   "ND_08_STATION_YEONGSANPOJOCHANGYEOKCHAM",
+   "her_n062"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n062"
+  },
+  "avail": {
+   "region": "MAP_08",
+   "heritage_unvisited": "her_n062"
+  },
+  "legend": {
+   "key": "",
+   "figure": "옛사람",
+   "source": "가상 창작"
+  }
+ },
+ "q_lore_n082": {
+  "id": "q_lore_n082",
+  "name": "【전설】 경주 불국사 다보탑",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_09_TOWN_YEONGCHEON",
+   "ND_09_TOWN_YEONGILHYEONJANGGIJINPOHANG",
+   "her_n082"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n082"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n082"
+  },
+  "legend": {
+   "key": "다보탑",
+   "figure": "아사달",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n084": {
+  "id": "q_lore_n084",
+  "name": "【전설】 경주 금관총 금관 및 금제관식",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_STATION_CHEONGHAHYEONYEOKCHAM",
+   "ND_09_TOWN_YEONGILHYEONJANGGIJINPOHANG",
+   "ND_09_TEMPLE_BULGUKSA",
+   "her_n084"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n084"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n084"
+  },
+  "legend": {
+   "key": "금관",
+   "figure": "신라 장인",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n085": {
+  "id": "q_lore_n085",
+  "name": "【전설】 경주 첨성대",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_09_TOWN_YEONGILHYEONJANGGIJINPOHANG",
+   "ND_09_CITY_GYEONGJUBU",
+   "her_n085"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n085"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n085"
+  },
+  "legend": {
+   "key": "첨성대",
+   "figure": "선덕여왕",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n087": {
+  "id": "q_lore_n087",
+  "name": "【전설】 남원 실상사 백장암 삼층석탑",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_07_TOWN_JINAN",
+   "ND_07_STATION_OSUYEOK",
+   "her_n087"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n087"
+  },
+  "avail": {
+   "region": "MAP_07",
+   "heritage_unvisited": "her_n087"
+  },
+  "legend": {
+   "key": "실상사",
+   "figure": "홍척국사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n088": {
+  "id": "q_lore_n088",
+  "name": "【전설】 울산 대곡리 반구대 암각화",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_10_TOWN_HAPCHEON",
+   "ND_10_STATION_BEOMEOYEOK",
+   "ND_10_TOWN_SEONGJUMOKCHISO",
+   "her_n088"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n088"
+  },
+  "avail": {
+   "region": "MAP_10",
+   "heritage_unvisited": "her_n088"
+  },
+  "legend": {
+   "key": "반구대",
+   "figure": "옛 사냥꾼",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n090": {
+  "id": "q_lore_n090",
+  "name": "【전설】 경주 분황사 모전석탑",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_TOWN_YEONGILHYEONJANGGIJINPOHANG",
+   "ND_09_BEACON_GYEONGJUBONGSU",
+   "ND_09_TEMPLE_BULGUKSA",
+   "her_n090"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n090"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n090"
+  },
+  "legend": {
+   "key": "분황사",
+   "figure": "원효",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n091": {
+  "id": "q_lore_n091",
+  "name": "【전설】 구례 화엄사 각황전 앞 석등",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_07_TEMPLE_GEUMSANSA",
+   "ND_07_STATION_OSUYEOK",
+   "ND_07_CITY_NAMWONDOHOBU",
+   "her_n091"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n091"
+  },
+  "avail": {
+   "region": "MAP_07",
+   "heritage_unvisited": "her_n091"
+  },
+  "legend": {
+   "key": "각황전",
+   "figure": "계파선사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n104": {
+  "id": "q_lore_n104",
+  "name": "【전설】 전주 경기전 태조 이성계 어진",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_07_STATION_SAMRYEYEOK",
+   "ND_07_TEMPLE_GEUMSANSA",
+   "ND_07_TEMPLE_MOAKSANGEUMSANSA",
+   "her_n104"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n104"
+  },
+  "avail": {
+   "region": "MAP_07",
+   "heritage_unvisited": "her_n104"
+  },
+  "legend": {
+   "key": "어진",
+   "figure": "손홍록·안의",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n105": {
+  "id": "q_lore_n105",
+  "name": "【전설】 익산 왕궁리 오층석탑 사리장엄구",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_07_TEMPLE_MOAKSANGEUMSANSA",
+   "ND_07_STUPA_IKSANJUSEONGSAMCHEUNGSEOKTAP",
+   "ND_07_STATION_SAMRYEYEOK",
+   "her_n105"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n105"
+  },
+  "avail": {
+   "region": "MAP_07",
+   "heritage_unvisited": "her_n105"
+  },
+  "legend": {
+   "key": "왕궁리",
+   "figure": "무왕",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n106": {
+  "id": "q_lore_n106",
+  "name": "【전설】 김제 금산사 미륵전",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_07_STUPA_IKSANJUSEONGSAMCHEUNGSEOKTAP",
+   "ND_07_TEMPLE_MOAKSANGEUMSANSA",
+   "her_n106"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n106"
+  },
+  "avail": {
+   "region": "MAP_07",
+   "heritage_unvisited": "her_n106"
+  },
+  "legend": {
+   "key": "금산사",
+   "figure": "진표",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n107": {
+  "id": "q_lore_n107",
+  "name": "【전설】 영일 중성리 신라비",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_CITY_ANDONGDAEDOHOBU",
+   "ND_09_BEACON_GYEONGJUBONGSU",
+   "ND_09_CITY_GYEONGJUBU",
+   "her_n107"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n107"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n107"
+  },
+  "legend": {
+   "key": "신라비",
+   "figure": "신라 관리",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n110": {
+  "id": "q_lore_n110",
+  "name": "【전설】 영천 은해사 거조암 영산전",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_09_BEACON_GYEONGJUBONGSU",
+   "ND_09_CITY_GYEONGJUBU",
+   "her_n110"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n110"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n110"
+  },
+  "legend": {
+   "key": "거조암",
+   "figure": "오백나한",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n112": {
+  "id": "q_lore_n112",
+  "name": "【전설】 영일 냉수리 신라비",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_STATION_CHEONGHAHYEONYEOKCHAM",
+   "ND_09_CITY_GYEONGJUBU",
+   "ND_09_TEMPLE_BULGUKSA",
+   "her_n112"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n112"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n112"
+  },
+  "legend": {
+   "key": "신라비",
+   "figure": "신라 관리",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n123": {
+  "id": "q_lore_n123",
+  "name": "【전설】 공주 무령왕릉 금제관식",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_06_STATION_GWANGJEONGYEOK",
+   "ND_06_STATION_IINYEOK",
+   "her_n123"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n123"
+  },
+  "avail": {
+   "region": "MAP_06",
+   "heritage_unvisited": "her_n123"
+  },
+  "legend": {
+   "key": "무령왕릉",
+   "figure": "무령왕(사마)",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n125": {
+  "id": "q_lore_n125",
+  "name": "【전설】 부여 능산리 백제 금동대향로",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_06_STATION_GONGJUIINYEOKCHAM",
+   "ND_06_TOWN_BUYEO",
+   "her_n125"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n125"
+  },
+  "avail": {
+   "region": "MAP_06",
+   "heritage_unvisited": "her_n125"
+  },
+  "legend": {
+   "key": "금동대향로",
+   "figure": "백제 유민",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n126": {
+  "id": "q_lore_n126",
+  "name": "【전설】 안동 봉정사 극락전",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_RUIN_HOEDEOKDONGCHUNDANGSONGJUNGILJONGTAEK",
+   "ND_09_TOWN_UISEONG",
+   "ND_09_STATION_ANGIYEOK",
+   "her_n126"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n126"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n126"
+  },
+  "legend": {
+   "key": "봉정사",
+   "figure": "의상",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n131": {
+  "id": "q_lore_n131",
+  "name": "【전설】 안동 하회탈 및 병산탈",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_TOWN_CHEONGSONG",
+   "ND_09_STATION_ANGIYEOK",
+   "ND_09_TEMPLE_GOUNSA",
+   "her_n131"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n131"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n131"
+  },
+  "legend": {
+   "key": "하회탈",
+   "figure": "허도령",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n144": {
+  "id": "q_lore_n144",
+  "name": "【전설】 영주 부석사 무량수전",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_SPRING_YEONGJUPUNGGIONCHEON",
+   "ND_09_TOWN_YEONGJUPUNGGIDOHOBU",
+   "ND_09_SEOWON_HOEDEOKEOSASUNRYEOKGIGOMUNSEO",
+   "her_n144"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n144"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n144"
+  },
+  "legend": {
+   "key": "부석사",
+   "figure": "의상",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n145": {
+  "id": "q_lore_n145",
+  "name": "【전설】 영주 부석사 소조여래좌상",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_09_TOWN_YEONGJU",
+   "ND_09_SCENIC_DANYANGGUDAMBONGMAAEGAKJA",
+   "her_n145"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n145"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n145"
+  },
+  "legend": {
+   "key": "부석사",
+   "figure": "의상",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n146": {
+  "id": "q_lore_n146",
+  "name": "【전설】 보은 법주사 팔상전",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_05_TEMPLE_SOKRISANBEOPJUSA",
+   "ND_05_TOWN_BOEUN",
+   "her_n146"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n146"
+  },
+  "avail": {
+   "region": "MAP_05",
+   "heritage_unvisited": "her_n146"
+  },
+  "legend": {
+   "key": "팔상전",
+   "figure": "의신조사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n147": {
+  "id": "q_lore_n147",
+  "name": "【전설】 보은 법주사 쌍사자 석등",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_05_STATION_YULBONGYEOK",
+   "ND_05_TOWN_OKCHEON",
+   "ND_05_TOWN_BOEUN",
+   "her_n147"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n147"
+  },
+  "avail": {
+   "region": "MAP_05",
+   "heritage_unvisited": "her_n147"
+  },
+  "legend": {
+   "key": "쌍사자 석등",
+   "figure": "세조",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n148": {
+  "id": "q_lore_n148",
+  "name": "【전설】 청주 흥덕사지 직지심체요절 인판",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_05_SPRING_SUANBOONCHEON",
+   "ND_05_CITY_CHUNGJUMOK",
+   "ND_05_STATION_YULBONGYEOK",
+   "her_n148"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n148"
+  },
+  "avail": {
+   "region": "MAP_05",
+   "heritage_unvisited": "her_n148"
+  },
+  "legend": {
+   "key": "직지",
+   "figure": "백운화상",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n149": {
+  "id": "q_lore_n149",
+  "name": "【전설】 문경 봉암사 지증대사탑비",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_09_TOWN_YECHEONGUNCHISO",
+   "ND_09_TOWN_MUNGYEONG",
+   "ND_09_SPRING_MUNGYEONGONCHEON",
+   "her_n149"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n149"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n149"
+  },
+  "legend": {
+   "key": "봉암사",
+   "figure": "지증대사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n151": {
+  "id": "q_lore_n151",
+  "name": "【전설】 예천 용문사 대장전 윤장대",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_09_TOWN_YEONGJUPUNGGIDOHOBU",
+   "ND_09_TOWN_YECHEONGUNCHISO",
+   "her_n151"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n151"
+  },
+  "avail": {
+   "region": "MAP_09",
+   "heritage_unvisited": "her_n151"
+  },
+  "legend": {
+   "key": "윤장대",
+   "figure": "용문사 노승",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n164": {
+  "id": "q_lore_n164",
+  "name": "【전설】 단양 신라 적성비",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_05_TOWN_DANYANG",
+   "ND_05_RUIN_DANYANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "her_n164"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n164"
+  },
+  "avail": {
+   "region": "MAP_05",
+   "heritage_unvisited": "her_n164"
+  },
+  "legend": {
+   "key": "적성비",
+   "figure": "진흥왕",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n165": {
+  "id": "q_lore_n165",
+  "name": "【전설】 충주 고구려비",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_05_SEOWON_HOEDEOKHYANGGYODAESEONGJEONMOKPAN",
+   "ND_05_SEOWON_MUNGYEONGSANSINGAKMAAECHILSEONGDO",
+   "her_n165"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n165"
+  },
+  "avail": {
+   "region": "MAP_05",
+   "heritage_unvisited": "her_n165"
+  },
+  "legend": {
+   "key": "고구려비",
+   "figure": "입석마을 대장장이",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n166": {
+  "id": "q_lore_n166",
+  "name": "【전설】 충주 탑평리 칠층석탑(중앙탑)",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_05_CITY_CHUNGJUMOK",
+   "ND_05_STATION_GAHEUNGYEOK",
+   "her_n166"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n166"
+  },
+  "avail": {
+   "region": "MAP_05",
+   "heritage_unvisited": "her_n166"
+  },
+  "legend": {
+   "key": "중앙탑",
+   "figure": "원성왕",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n168": {
+  "id": "q_lore_n168",
+  "name": "【전설】 원주 법천사지 지광국사탑비",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_04_TEMPLE_SAMCHEOKSINHEUNGSA",
+   "ND_04_TEMPLE_WOLJEONGSA",
+   "ND_04_STATION_ANHEUNGYEOK",
+   "her_n168"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n168"
+  },
+  "avail": {
+   "region": "MAP_04",
+   "heritage_unvisited": "her_n168"
+  },
+  "legend": {
+   "key": "지광국사",
+   "figure": "지광국사 해린",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n171": {
+  "id": "q_lore_n171",
+  "name": "【전설】 울진 봉평리 신라비",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "ND_04_STATION_PYEONGHAEYEOK",
+   "ND_04_TEMPLE_SAMCHEOKSINHEUNGSA",
+   "her_n171"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n171"
+  },
+  "avail": {
+   "region": "MAP_04",
+   "heritage_unvisited": "her_n171"
+  },
+  "legend": {
+   "key": "신라비",
+   "figure": "신라 관리",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n187": {
+  "id": "q_lore_n187",
+  "name": "【전설】 서산 용현리 마애여래삼존상",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_06_CITY_HONGJUMOK",
+   "ND_06_TOWN_TAEAN",
+   "ND_06_TOWN_HAEMI",
+   "her_n187"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n187"
+  },
+  "avail": {
+   "region": "MAP_06",
+   "heritage_unvisited": "her_n187"
+  },
+  "legend": {
+   "key": "서산 용현리",
+   "figure": "나무꾼",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n188": {
+  "id": "q_lore_n188",
+  "name": "【전설】 태안 동문리 마애삼존불입상",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_06_TOWN_MYEONCHEONGUNCHISODANGJIN",
+   "ND_06_CITY_HONGJUMOK",
+   "ND_06_TOWN_HAEMI",
+   "her_n188"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n188"
+  },
+  "avail": {
+   "region": "MAP_06",
+   "heritage_unvisited": "her_n188"
+  },
+  "legend": {
+   "key": "태안",
+   "figure": "뱃사람",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n189": {
+  "id": "q_lore_n189",
+  "name": "【전설】 남양 융건릉 정조 원찰 용주사 동종",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_02_STATION_GEUMRYUNYEOKSUWONDAEHWANGGYOYEOKCHAM",
+   "ND_02_TOWN_NAMYANG",
+   "ND_02_TEMPLE_YONGJUSA",
+   "her_n189"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n189"
+  },
+  "avail": {
+   "region": "MAP_02",
+   "heritage_unvisited": "her_n189"
+  },
+  "legend": {
+   "key": "용주사",
+   "figure": "정조",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n204": {
+  "id": "q_lore_n204",
+  "name": "【전설】 한양 숭례문(남대문)",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_02_CITY_GWANGJUYUSUBU",
+   "ND_02_TEMPLE_JOGYESA",
+   "ND_02_STATION_NOWONYEOKUIJEONGBUPOCHEONYEOKCHAM",
+   "her_n204"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n204"
+  },
+  "avail": {
+   "region": "MAP_02",
+   "heritage_unvisited": "her_n204"
+  },
+  "legend": {
+   "key": "숭례문",
+   "figure": "양녕대군",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n206": {
+  "id": "q_lore_n206",
+  "name": "【전설】 한양 원각사지 십층석탑",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_02_TOMB_GURIDONGGUREUNGTAEJOGEONWONREUNG",
+   "ND_02_TOMB_JONGMYOJEONGJEON",
+   "her_n206"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n206"
+  },
+  "avail": {
+   "region": "MAP_02",
+   "heritage_unvisited": "her_n206"
+  },
+  "legend": {
+   "key": "원각사지",
+   "figure": "세조",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n207": {
+  "id": "q_lore_n207",
+  "name": "【전설】 한양 종묘 정전",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_02_TOMB_JONGMYOJEONGJEON",
+   "ND_02_BEACON_MOKMYEOKSANBONGSU",
+   "her_n207"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n207"
+  },
+  "avail": {
+   "region": "MAP_02",
+   "heritage_unvisited": "her_n207"
+  },
+  "legend": {
+   "key": "종묘",
+   "figure": "세종",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n208": {
+  "id": "q_lore_n208",
+  "name": "【전설】 훈민정음 해례본(간송본)",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_02_CITY_SUWONHWASEONG",
+   "ND_02_STATION_YANGHWANARUYANGHWAJIN",
+   "her_n208"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n208"
+  },
+  "avail": {
+   "region": "MAP_02",
+   "heritage_unvisited": "her_n208"
+  },
+  "legend": {
+   "key": "훈민정음",
+   "figure": "세종",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n209": {
+  "id": "q_lore_n209",
+  "name": "【전설】 조선왕조실록 태백산사고본",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_01_CITY_GANGHWAYUSUBU",
+   "ND_01_FORT_DEOKJINJIN",
+   "ND_01_TOWN_INCHEONDOHOBUGWANA",
+   "her_n209"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n209"
+  },
+  "avail": {
+   "region": "MAP_01",
+   "heritage_unvisited": "her_n209"
+  },
+  "legend": {
+   "key": "실록",
+   "figure": "사고 참봉",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n212": {
+  "id": "q_lore_n212",
+  "name": "【전설】 강릉 임영관 삼문",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_04_TEMPLE_WOLJEONGSA",
+   "ND_04_STATION_DAEGWANRYEONGCHAM",
+   "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "her_n212"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n212"
+  },
+  "avail": {
+   "region": "MAP_04",
+   "heritage_unvisited": "her_n212"
+  },
+  "legend": {
+   "key": "임영관",
+   "figure": "강릉 객사지기",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n226": {
+  "id": "q_lore_n226",
+  "name": "【전설】 철원 도피안사 철조비로자나불",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_03_STATION_GIMHWASAENGCHANGYEOKCHAM",
+   "ND_03_CITY_CHEOLWONDOHOBU",
+   "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+   "her_n226"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n226"
+  },
+  "avail": {
+   "region": "MAP_03",
+   "heritage_unvisited": "her_n226"
+  },
+  "legend": {
+   "key": "도피안사",
+   "figure": "도선국사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n228": {
+  "id": "q_lore_n228",
+  "name": "【전설】 양양 진전사지 삼층석탑",
+  "tier": 5,
+  "type": "lore",
+  "min_rank": 4,
+  "route": [
+   "ND_04_TEMPLE_SAMCHEOKSINHEUNGSA",
+   "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "ND_04_TEMPLE_WOLJEONGSA",
+   "her_n228"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n228"
+  },
+  "avail": {
+   "region": "MAP_04",
+   "heritage_unvisited": "her_n228"
+  },
+  "legend": {
+   "key": "진전사지",
+   "figure": "도의선사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n251": {
+  "id": "q_lore_n251",
+  "name": "【전설】 금천 강북사지 고려 청동은입사향완",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_03_SCENIC_GEUMGANGSANGURYONGPOK",
+   "ND_03_TOWN_HOEYANG",
+   "her_n251"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n251"
+  },
+  "avail": {
+   "region": "MAP_03",
+   "heritage_unvisited": "her_n251"
+  },
+  "legend": {
+   "key": "향완",
+   "figure": "고려 은입사 장인",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n265": {
+  "id": "q_lore_n265",
+  "name": "【전설】 해주 다라니석당",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_12_CITY_HAEJUMOK",
+   "ND_12_STATION_ANGOKYEOK",
+   "her_n265"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n265"
+  },
+  "avail": {
+   "region": "MAP_12",
+   "heritage_unvisited": "her_n265"
+  },
+  "legend": {
+   "key": "다라니석당",
+   "figure": "해주 승려",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n266": {
+  "id": "q_lore_n266",
+  "name": "【전설】 신천 패엽사 대웅전 및 철불",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_12_TOMB_GUWOLSANSAMSEONGSADANGUNSADANG",
+   "ND_12_SPRING_SINCHEONONCHEON",
+   "her_n266"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n266"
+  },
+  "avail": {
+   "region": "MAP_12",
+   "heritage_unvisited": "her_n266"
+  },
+  "legend": {
+   "key": "패엽사",
+   "figure": "패엽사 노승",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n286": {
+  "id": "q_lore_n286",
+  "name": "【전설】 평양 연광정",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_13_SCENIC_EULMILDAE",
+   "ND_13_CITY_PYEONGYANGBU",
+   "her_n286"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n286"
+  },
+  "avail": {
+   "region": "MAP_13",
+   "heritage_unvisited": "her_n286"
+  },
+  "legend": {
+   "key": "연광정",
+   "figure": "계월향",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n287": {
+  "id": "q_lore_n287",
+  "name": "【전설】 평양 을밀대",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_13_SCENIC_EULMILDAE",
+   "ND_13_STATION_DAEDONGGANGYANGROCHAMYEOKCHAM",
+   "her_n287"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n287"
+  },
+  "avail": {
+   "region": "MAP_13",
+   "heritage_unvisited": "her_n287"
+  },
+  "legend": {
+   "key": "을밀대",
+   "figure": "을밀선녀",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n288": {
+  "id": "q_lore_n288",
+  "name": "【전설】 강서대묘 고구려 사신도 벽화",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_13_SCENIC_EULMILDAE",
+   "ND_13_TOWN_JUNGHWAGUNCHISO",
+   "her_n288"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n288"
+  },
+  "avail": {
+   "region": "MAP_13",
+   "heritage_unvisited": "her_n288"
+  },
+  "legend": {
+   "key": "사신도",
+   "figure": "고구려 화공",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n289": {
+  "id": "q_lore_n289",
+  "name": "【전설】 평양 보통문",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_13_CITY_PYEONGYANGBU",
+   "ND_13_STATION_DAEDONGGANGYANGROCHAMYEOKCHAM",
+   "her_n289"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n289"
+  },
+  "avail": {
+   "region": "MAP_13",
+   "heritage_unvisited": "her_n289"
+  },
+  "legend": {
+   "key": "보통문",
+   "figure": "평양 백성",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n291": {
+  "id": "q_lore_n291",
+  "name": "【전설】 안변 석왕사 호지문 및 응진전",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_15_TEMPLE_SEOKWANGSA",
+   "ND_15_TOWN_DEOKWON",
+   "her_n291"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n291"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "heritage_unvisited": "her_n291"
+  },
+  "legend": {
+   "key": "석왕사",
+   "figure": "무학대사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n306": {
+  "id": "q_lore_n306",
+  "name": "【전설】 안주 백상루(관서제일루)",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_13_STATION_SUKCHEONCHAM",
+   "ND_13_TOWN_SUNCHEON",
+   "her_n306"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n306"
+  },
+  "avail": {
+   "region": "MAP_13",
+   "heritage_unvisited": "her_n306"
+  },
+  "legend": {
+   "key": "백상루",
+   "figure": "관서 선비",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n307": {
+  "id": "q_lore_n307",
+  "name": "【전설】 함흥 본궁(이성계 조상 사당)",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_15_CITY_HAMHEUNGBU",
+   "ND_15_TOMB_HAMHEUNGBONGUNG",
+   "her_n307"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n307"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "heritage_unvisited": "her_n307"
+  },
+  "legend": {
+   "key": "함흥 본궁",
+   "figure": "태조 이성계",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n308": {
+  "id": "q_lore_n308",
+  "name": "【전설】 영흥 준원당 태조 어진 보관함",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_15_TOMB_HAMHEUNGBONGUNG",
+   "ND_15_TOWN_JEONGPYEONG",
+   "her_n308"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n308"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "heritage_unvisited": "her_n308"
+  },
+  "legend": {
+   "key": "어진",
+   "figure": "손홍록·안의",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n326": {
+  "id": "q_lore_n326",
+  "name": "【전설】 영변 묘향산 보현사 대웅전",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_13_CITY_ANJUMOK",
+   "ND_13_TOWN_HUICHEONHYEONCHISO",
+   "her_n326"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n326"
+  },
+  "avail": {
+   "region": "MAP_13",
+   "heritage_unvisited": "her_n326"
+  },
+  "legend": {
+   "key": "보현사",
+   "figure": "서산대사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n327": {
+  "id": "q_lore_n327",
+  "name": "【전설】 영변 묘향산 팔만대장경 인쇄본 보관함",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_14_SEOWON_YEONGBYEONGWANADONGHEONHYEONPANMITOKIN",
+   "ND_14_STATION_SALSUANHEUNGYEOKCHAM",
+   "her_n327"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n327"
+  },
+  "avail": {
+   "region": "MAP_14",
+   "heritage_unvisited": "her_n327"
+  },
+  "legend": {
+   "key": "팔만대장경 인쇄본",
+   "figure": "서산대사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n346": {
+  "id": "q_lore_n346",
+  "name": "【전설】 의주 통군정(압록강 망루)",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_14_STATION_APROKCHAM",
+   "ND_14_BEACON_UIJUBONGSU",
+   "her_n346"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n346"
+  },
+  "avail": {
+   "region": "MAP_14",
+   "heritage_unvisited": "her_n346"
+  },
+  "legend": {
+   "key": "통군정",
+   "figure": "선조",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n353": {
+  "id": "q_lore_n353",
+  "name": "【전설】 이원 마운령 진흥왕 순수비 원터",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_15_CITY_BUKCHEONGDOHOBU",
+   "ND_15_STATION_MAUNRYEONGYEOKCHAM",
+   "her_n353"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n353"
+  },
+  "avail": {
+   "region": "MAP_15",
+   "heritage_unvisited": "her_n353"
+  },
+  "legend": {
+   "key": "순수비",
+   "figure": "진흥왕",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n366": {
+  "id": "q_lore_n366",
+  "name": "【전설】 강계 인풍루",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_14_SEOWON_YEONGBYEONGWANADONGHEONHYEONPANMITOKIN",
+   "ND_14_TOWN_GANGGYE",
+   "her_n366"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n366"
+  },
+  "avail": {
+   "region": "MAP_14",
+   "heritage_unvisited": "her_n366"
+  },
+  "legend": {
+   "key": "인풍루",
+   "figure": "강계 부사",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n373": {
+  "id": "q_lore_n373",
+  "name": "【전설】 명천 칠보산 개심사 대웅전",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_16_TEMPLE_GAESIMSA",
+   "ND_16_TEMPLE_CHILBOSANGAESIMSA",
+   "her_n373"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n373"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "heritage_unvisited": "her_n373"
+  },
+  "legend": {
+   "key": "개심사",
+   "figure": "칠보산 노승",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n387": {
+  "id": "q_lore_n387",
+  "name": "【전설】 경성 읍성 남문(해청문)",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_16_SEOWON_GYEONGSEONGSANSINGAKMAAECHILSEONGDO",
+   "ND_16_SPRING_GYEONGSEONGJUEULONCHEON",
+   "her_n387"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n387"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "heritage_unvisited": "her_n387"
+  },
+  "legend": {
+   "key": "해청문",
+   "figure": "경성 군관",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ },
+ "q_lore_n407": {
+  "id": "q_lore_n407",
+  "name": "【전설】 회령 읍성 오순문",
+  "tier": 4,
+  "type": "lore",
+  "min_rank": 3,
+  "route": [
+   "ND_16_TOWN_NAJINPOEOYUJIN",
+   "ND_16_STATION_HOERYEONGCHAM",
+   "her_n407"
+  ],
+  "rules": "lore_quest_rules",
+  "reward": {
+   "heritage_unlock": "her_n407"
+  },
+  "avail": {
+   "region": "MAP_16",
+   "heritage_unvisited": "her_n407"
+  },
+  "legend": {
+   "key": "오순문",
+   "figure": "회령 군관",
+   "source": "설화·기록 참조 가상 각색"
+  }
+ }
+}

@@ -1,0 +1,4400 @@
+{
+ "quest:q_eq_saingeom_5": {
+  "status": "draft",
+  "title": "사인검 벼리는 인년·인월·인일",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 서씨",
+     "text": "순조 인월 인일 사인검(四寅劍) 이야기를 들으셨소? 신선이 남겼다는 물건이라, 한양 경조 → 계룡산 신도안 → 경주부 → 백두산 천지 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 서씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 순조 인월 인일 사인검(四寅劍)의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 한씨",
+      "text": "옛 어른들 말로는 계룡산 신도안에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "계룡산 신도안으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 한씨"
+    ]
+   },
+   {
+    "bg": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(무녀가 방울을 흔들며 순조 인월 인일 사인검(四寅劍)의 행방을 점친다)"
+     },
+     {
+      "who": "npc:shaman:금단 무녀",
+      "text": "옛 어른들 말로는 경주부에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "경주부로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:shaman:금단 무녀"
+    ]
+   },
+   {
+    "bg": "ND_09_CITY_GYEONGJUBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 순조 인월 인일 사인검(四寅劍) 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 김씨",
+      "text": "백두산 천지로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 김씨"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+    "lines": [
+     {
+      "who": "npc:traveler:유람객 고씨",
+      "text": "신선이 남겼다는 순조 인월 인일 사인검(四寅劍)이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "사인검 벼리는 인년·인월·인일 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:traveler:유람객 고씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔선(仙) 6〕 선(仙)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "seon": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "seon": 125
+       }
+      },
+      "result": "백두산 천지의 수호자: 과연 순조 인월 인일 사인검(四寅劍)의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_saingeom_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "순조 인월 인일 사인검(四寅劍)을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_yu_weapon_4": {
+  "status": "draft",
+  "title": "사인참사검 전승 서사",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 황씨",
+     "text": "사인참사검 이야기를 들으셨소? 유학자 집안에 대대로 전하는 물건이라, 한양 경조 → 공주 충청감영 → 전주 전라감영 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 황씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 사인참사검의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 손씨",
+      "text": "사인참사검이라… 다음 실마리는 공주 충청감영에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "사인참사검… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 손씨"
+    ]
+   },
+   {
+    "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 사인참사검의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 김씨",
+      "text": "전주 전라감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 김씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 오씨",
+      "text": "유학자 집안에 대대로 전하는 사인참사검이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "사인참사검 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 오씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔유(儒) 5〕 유(儒)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "yu": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "yu": 100
+       }
+      },
+      "result": "전주 전라감영의 수호자: 과연 사인참사검의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_yu_weapon_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "사인참사검을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_yu_weapon_5": {
+  "status": "draft",
+  "title": "용천 어검 전승 서사",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 조씨",
+     "text": "용천 어검 이야기를 들으셨소? 유학자 집안에 대대로 전하는 물건이라, 한양 경조 → 평양부 → 대구 경상감영 → 전주 전라감영 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 조씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 용천 어검 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 신씨",
+      "text": "옛 어른들 말로는 평양부에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "평양부로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 신씨"
+    ]
+   },
+   {
+    "bg": "ND_13_CITY_PYEONGYANGBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 용천 어검의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 박씨",
+      "text": "옛 어른들 말로는 대구 경상감영에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "대구 경상감영으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 박씨"
+    ]
+   },
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 용천 어검의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "전주 전라감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 정씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 임씨",
+      "text": "유학자 집안에 대대로 전하는 용천 어검이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "용천 어검 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 임씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔유(儒) 6〕 유(儒)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "yu": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "yu": 125
+       }
+      },
+      "result": "전주 전라감영의 수호자: 과연 용천 어검의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_yu_weapon_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "용천 어검을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_yu_armor_4": {
+  "status": "draft",
+  "title": "두석린갑 전승 서사",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 류씨",
+     "text": "두석린갑 이야기를 들으셨소? 유학자 집안에 대대로 전하는 물건이라, 한양 경조 → 공주 충청감영 → 전주 전라감영 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 류씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 두석린갑의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 문씨",
+      "text": "두석린갑이라… 다음 실마리는 공주 충청감영에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "두석린갑… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 문씨"
+    ]
+   },
+   {
+    "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 두석린갑 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 신씨",
+      "text": "옛 어른들 말로는 전주 전라감영에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "전주 전라감영으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 신씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 임씨",
+      "text": "유학자 집안에 대대로 전하는 두석린갑이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "두석린갑 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 임씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔유(儒) 5〕 유(儒)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "yu": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "yu": 100
+       }
+      },
+      "result": "전주 전라감영의 수호자: 과연 두석린갑의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_yu_armor_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "두석린갑을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_yu_armor_5": {
+  "status": "draft",
+  "title": "용린 어갑 전승 서사",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 박씨",
+     "text": "용린 어갑 이야기를 들으셨소? 유학자 집안에 대대로 전하는 물건이라, 한양 경조 → 평양부 → 대구 경상감영 → 전주 전라감영 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 박씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 용린 어갑 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 전씨",
+      "text": "용린 어갑이라… 다음 실마리는 평양부에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "용린 어갑… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 전씨"
+    ]
+   },
+   {
+    "bg": "ND_13_CITY_PYEONGYANGBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 용린 어갑의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 홍씨",
+      "text": "대구 경상감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 홍씨"
+    ]
+   },
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 용린 어갑의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "전주 전라감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 류씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 김씨",
+      "text": "유학자 집안에 대대로 전하는 용린 어갑이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "용린 어갑 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 김씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔유(儒) 6〕 유(儒)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "yu": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "yu": 125
+       }
+      },
+      "result": "전주 전라감영의 수호자: 과연 용린 어갑의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_yu_armor_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "용린 어갑을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_yu_shoes_4": {
+  "status": "draft",
+  "title": "흑피 목화 전승 서사",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 전씨",
+     "text": "흑피 목화 이야기를 들으셨소? 유학자 집안에 대대로 전하는 물건이라, 한양 경조 → 공주 충청감영 → 전주 전라감영 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 전씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 흑피 목화 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 한씨",
+      "text": "흑피 목화라… 다음 실마리는 공주 충청감영에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "흑피 목화… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 한씨"
+    ]
+   },
+   {
+    "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 흑피 목화 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 전씨",
+      "text": "전주 전라감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 전씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 전씨",
+      "text": "유학자 집안에 대대로 전하는 흑피 목화가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "흑피 목화 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 전씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔유(儒) 5〕 유(儒)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "yu": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "yu": 100
+       }
+      },
+      "result": "전주 전라감영의 수호자: 과연 흑피 목화의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_yu_shoes_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "흑피 목화를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_yu_shoes_5": {
+  "status": "draft",
+  "title": "청룡 목화 전승 서사",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 정씨",
+     "text": "청룡 목화 이야기를 들으셨소? 유학자 집안에 대대로 전하는 물건이라, 한양 경조 → 평양부 → 대구 경상감영 → 전주 전라감영 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 정씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 청룡 목화의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 고씨",
+      "text": "청룡 목화라… 다음 실마리는 평양부에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "청룡 목화… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 고씨"
+    ]
+   },
+   {
+    "bg": "ND_13_CITY_PYEONGYANGBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 청룡 목화의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 송씨",
+      "text": "대구 경상감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 송씨"
+    ]
+   },
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 청룡 목화의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 고씨",
+      "text": "옛 어른들 말로는 전주 전라감영에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "전주 전라감영으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 고씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 강씨",
+      "text": "유학자 집안에 대대로 전하는 청룡 목화가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "청룡 목화 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 강씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔유(儒) 6〕 유(儒)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "yu": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "yu": 125
+       }
+      },
+      "result": "전주 전라감영의 수호자: 과연 청룡 목화의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_yu_shoes_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "청룡 목화를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_yu_accessory_4": {
+  "status": "draft",
+  "title": "수군 청동인장 전승 서사",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 김씨",
+     "text": "수군 청동인장 이야기를 들으셨소? 유학자 집안에 대대로 전하는 물건이라, 한양 경조 → 공주 충청감영 → 전주 전라감영 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 김씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 수군 청동인장 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 강씨",
+      "text": "공주 충청감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 강씨"
+    ]
+   },
+   {
+    "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 수군 청동인장의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 권씨",
+      "text": "수군 청동인장이라… 다음 실마리는 전주 전라감영에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "수군 청동인장… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 권씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 한씨",
+      "text": "유학자 집안에 대대로 전하는 수군 청동인장이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "수군 청동인장 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 한씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔유(儒) 5〕 유(儒)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "yu": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "yu": 100
+       }
+      },
+      "result": "전주 전라감영의 수호자: 과연 수군 청동인장의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_yu_accessory_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "수군 청동인장을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_yu_accessory_5": {
+  "status": "draft",
+  "title": "어보 옥인 전승 서사",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 고씨",
+     "text": "어보 옥인 이야기를 들으셨소? 유학자 집안에 대대로 전하는 물건이라, 한양 경조 → 평양부 → 대구 경상감영 → 전주 전라감영 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 고씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 어보 옥인의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 윤씨",
+      "text": "어보 옥인이라… 다음 실마리는 평양부에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "어보 옥인… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 윤씨"
+    ]
+   },
+   {
+    "bg": "ND_13_CITY_PYEONGYANGBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 어보 옥인의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "옛 어른들 말로는 대구 경상감영에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "대구 경상감영으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 안씨"
+    ]
+   },
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 어보 옥인의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 임씨",
+      "text": "옛 어른들 말로는 전주 전라감영에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "전주 전라감영으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 임씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 오씨",
+      "text": "유학자 집안에 대대로 전하는 어보 옥인이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "어보 옥인 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 오씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔유(儒) 6〕 유(儒)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "yu": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "yu": 125
+       }
+      },
+      "result": "전주 전라감영의 수호자: 과연 어보 옥인의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_yu_accessory_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "어보 옥인을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_bul_weapon_4": {
+  "status": "draft",
+  "title": "금강저 전승 서사",
+  "intro": {
+   "bg": "ND_09_CITY_GYEONGJUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 전씨",
+     "text": "금강저 이야기를 들으셨소? 호국 승병이 지켰다는 물건이라, 경주부 → 대구 경상감영 → 밀양 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 전씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_CITY_GYEONGJUBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 금강저의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 임씨",
+      "text": "대구 경상감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 임씨"
+    ]
+   },
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 금강저 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 장씨",
+      "text": "밀양으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 장씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TOWN_MILYANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 장씨",
+      "text": "호국 승병이 지켰다는 금강저가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "금강저 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 장씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 5〕 불(佛)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "bul": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 100
+       }
+      },
+      "result": "밀양의 수호자: 과연 금강저의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_bul_weapon_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_10_TOWN_MILYANG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "금강저를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_bul_weapon_5": {
+  "status": "draft",
+  "title": "항마 금강저 전승 서사",
+  "intro": {
+   "bg": "ND_09_CITY_GYEONGJUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 홍씨",
+     "text": "항마 금강저 이야기를 들으셨소? 호국 승병이 지켰다는 물건이라, 경주부 → 해인사 → 묘향산 보현사 → 백두산 천지 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 홍씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_CITY_GYEONGJUBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 항마 금강저의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 조씨",
+      "text": "옛 어른들 말로는 해인사에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "해인사로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 조씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TEMPLE_HAEINSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(노승에게 항마 금강저에 얽힌 인연을 여쭙는다)"
+     },
+     {
+      "who": "npc:monk:노승 무진",
+      "text": "항마 금강저라… 다음 실마리는 묘향산 보현사에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "항마 금강저… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 무진"
+    ]
+   },
+   {
+    "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(노승에게 항마 금강저에 얽힌 인연을 여쭙는다)"
+     },
+     {
+      "who": "npc:monk:노승 월조",
+      "text": "백두산 천지로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 월조"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+    "lines": [
+     {
+      "who": "npc:traveler:유람객 황씨",
+      "text": "호국 승병이 지켰다는 항마 금강저가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "항마 금강저 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:traveler:유람객 황씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 6〕 불(佛)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "bul": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 125
+       }
+      },
+      "result": "백두산 천지의 수호자: 과연 항마 금강저의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_bul_weapon_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "항마 금강저를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_bul_armor_4": {
+  "status": "draft",
+  "title": "승군 철가사 전승 서사",
+  "intro": {
+   "bg": "ND_09_CITY_GYEONGJUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 강씨",
+     "text": "승군 철가사 이야기를 들으셨소? 호국 승병이 지켰다는 물건이라, 경주부 → 대구 경상감영 → 밀양 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 강씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_CITY_GYEONGJUBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 승군 철가사 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 장씨",
+      "text": "대구 경상감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 장씨"
+    ]
+   },
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 승군 철가사의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "옛 어른들 말로는 밀양에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "밀양으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 안씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TOWN_MILYANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 손씨",
+      "text": "호국 승병이 지켰다는 승군 철가사가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "승군 철가사 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 손씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 5〕 불(佛)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "bul": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 100
+       }
+      },
+      "result": "밀양의 수호자: 과연 승군 철가사의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_bul_armor_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_10_TOWN_MILYANG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "승군 철가사를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_bul_armor_5": {
+  "status": "draft",
+  "title": "사명 금란가사 전승 서사",
+  "intro": {
+   "bg": "ND_09_CITY_GYEONGJUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 황씨",
+     "text": "사명 금란가사 이야기를 들으셨소? 호국 승병이 지켰다는 물건이라, 경주부 → 해인사 → 묘향산 보현사 → 백두산 천지 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 황씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_CITY_GYEONGJUBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 사명 금란가사의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 최씨",
+      "text": "사명 금란가사라… 다음 실마리는 해인사에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "사명 금란가사… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 최씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TEMPLE_HAEINSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(법당 뒤 오래된 기록에서 사명 금란가사의 이름을 찾는다)"
+     },
+     {
+      "who": "npc:monk:노승 선각",
+      "text": "묘향산 보현사로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 선각"
+    ]
+   },
+   {
+    "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(노승에게 사명 금란가사에 얽힌 인연을 여쭙는다)"
+     },
+     {
+      "who": "npc:monk:노승 법운",
+      "text": "옛 어른들 말로는 백두산 천지에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "백두산 천지로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 법운"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+    "lines": [
+     {
+      "who": "npc:traveler:유람객 류씨",
+      "text": "호국 승병이 지켰다는 사명 금란가사가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "사명 금란가사 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:traveler:유람객 류씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 6〕 불(佛)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "bul": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 125
+       }
+      },
+      "result": "백두산 천지의 수호자: 과연 사명 금란가사의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_bul_armor_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "사명 금란가사를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_bul_shoes_4": {
+  "status": "draft",
+  "title": "행각 철혜 전승 서사",
+  "intro": {
+   "bg": "ND_09_CITY_GYEONGJUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 황씨",
+     "text": "행각 철혜 이야기를 들으셨소? 호국 승병이 지켰다는 물건이라, 경주부 → 대구 경상감영 → 밀양 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 황씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_CITY_GYEONGJUBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 행각 철혜 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 윤씨",
+      "text": "행각 철혜라… 다음 실마리는 대구 경상감영에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "행각 철혜… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 윤씨"
+    ]
+   },
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 행각 철혜의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 강씨",
+      "text": "행각 철혜라… 다음 실마리는 밀양에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "행각 철혜… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 강씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TOWN_MILYANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 장씨",
+      "text": "호국 승병이 지켰다는 행각 철혜가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "행각 철혜 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 장씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 5〕 불(佛)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "bul": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 100
+       }
+      },
+      "result": "밀양의 수호자: 과연 행각 철혜의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_bul_shoes_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_10_TOWN_MILYANG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "행각 철혜를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_bul_shoes_5": {
+  "status": "draft",
+  "title": "달마 초혜 전승 서사",
+  "intro": {
+   "bg": "ND_09_CITY_GYEONGJUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 서씨",
+     "text": "달마 초혜 이야기를 들으셨소? 호국 승병이 지켰다는 물건이라, 경주부 → 해인사 → 묘향산 보현사 → 백두산 천지 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 서씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_CITY_GYEONGJUBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 달마 초혜 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 조씨",
+      "text": "옛 어른들 말로는 해인사에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "해인사로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 조씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TEMPLE_HAEINSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(절 마당을 쓸던 동자승이 달마 초혜 이야기를 꺼낸다)"
+     },
+     {
+      "who": "npc:monk:노승 해안",
+      "text": "묘향산 보현사로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 해안"
+    ]
+   },
+   {
+    "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(절 마당을 쓸던 동자승이 달마 초혜 이야기를 꺼낸다)"
+     },
+     {
+      "who": "npc:monk:노승 지공",
+      "text": "옛 어른들 말로는 백두산 천지에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "백두산 천지로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 지공"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+    "lines": [
+     {
+      "who": "npc:traveler:유람객 안씨",
+      "text": "호국 승병이 지켰다는 달마 초혜가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "달마 초혜 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:traveler:유람객 안씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 6〕 불(佛)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "bul": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 125
+       }
+      },
+      "result": "백두산 천지의 수호자: 과연 달마 초혜의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_bul_shoes_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "달마 초혜를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_bul_accessory_4": {
+  "status": "draft",
+  "title": "사리함 패 전승 서사",
+  "intro": {
+   "bg": "ND_09_CITY_GYEONGJUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 신씨",
+     "text": "사리함 패 이야기를 들으셨소? 호국 승병이 지켰다는 물건이라, 경주부 → 대구 경상감영 → 밀양 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 신씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_CITY_GYEONGJUBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 사리함 패의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 오씨",
+      "text": "사리함 패라… 다음 실마리는 대구 경상감영에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "사리함 패… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 오씨"
+    ]
+   },
+   {
+    "bg": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 사리함 패 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 홍씨",
+      "text": "옛 어른들 말로는 밀양에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "밀양으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 홍씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TOWN_MILYANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 최씨",
+      "text": "호국 승병이 지켰다는 사리함 패가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "사리함 패 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 최씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 5〕 불(佛)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "bul": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 100
+       }
+      },
+      "result": "밀양의 수호자: 과연 사리함 패의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_bul_accessory_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_10_TOWN_MILYANG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "사리함 패를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_bul_accessory_5": {
+  "status": "draft",
+  "title": "진신사리 패 전승 서사",
+  "intro": {
+   "bg": "ND_09_CITY_GYEONGJUBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 임씨",
+     "text": "진신사리 패 이야기를 들으셨소? 호국 승병이 지켰다는 물건이라, 경주부 → 해인사 → 묘향산 보현사 → 백두산 천지 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 임씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_CITY_GYEONGJUBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 진신사리 패 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 손씨",
+      "text": "진신사리 패라… 다음 실마리는 해인사에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "진신사리 패… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 손씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TEMPLE_HAEINSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(노승에게 진신사리 패에 얽힌 인연을 여쭙는다)"
+     },
+     {
+      "who": "npc:monk:노승 지공",
+      "text": "옛 어른들 말로는 묘향산 보현사에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "묘향산 보현사로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 지공"
+    ]
+   },
+   {
+    "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(절 마당을 쓸던 동자승이 진신사리 패 이야기를 꺼낸다)"
+     },
+     {
+      "who": "npc:monk:노승 월조",
+      "text": "옛 어른들 말로는 백두산 천지에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "백두산 천지로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 월조"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+    "lines": [
+     {
+      "who": "npc:traveler:유람객 임씨",
+      "text": "호국 승병이 지켰다는 진신사리 패가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "진신사리 패 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:traveler:유람객 임씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔불(佛) 6〕 불(佛)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "bul": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "bul": 125
+       }
+      },
+      "result": "백두산 천지의 수호자: 과연 진신사리 패의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_bul_accessory_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "진신사리 패를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_seon_weapon_4": {
+  "status": "draft",
+  "title": "칠성검 전승 서사",
+  "intro": {
+   "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 고씨",
+     "text": "칠성검 이야기를 들으셨소? 신선이 남겼다는 물건이라, 강릉대도호부 → 원주 강원감영 → 충주목 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 고씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 칠성검 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 조씨",
+      "text": "칠성검이라… 다음 실마리는 원주 강원감영에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "칠성검… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 조씨"
+    ]
+   },
+   {
+    "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 칠성검의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 한씨",
+      "text": "옛 어른들 말로는 충주목에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "충주목으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 한씨"
+    ]
+   },
+   {
+    "bg": "ND_05_CITY_CHUNGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 강씨",
+      "text": "신선이 남겼다는 칠성검이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "칠성검 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 강씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔선(仙) 5〕 선(仙)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "seon": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "seon": 100
+       }
+      },
+      "result": "충주목의 수호자: 과연 칠성검의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_seon_weapon_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_05_CITY_CHUNGJUMOK",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "칠성검을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_seon_weapon_5": {
+  "status": "draft",
+  "title": "태을 뇌검 전승 서사",
+  "intro": {
+   "bg": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+   "lines": [
+    {
+     "who": "npc:shaman:연화 만신",
+     "text": "태을 뇌검 이야기를 들으셨소? 신선이 남겼다는 물건이라, 계룡산 신도안 → 한양 경조 → 묘향산 보현사 → 백두산 천지 → 제주목 제주읍성 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:shaman:연화 만신"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(당산나무 금줄 아래서 태을 뇌검의 이야기를 듣는다)"
+     },
+     {
+      "who": "npc:shaman:연화 만신",
+      "text": "한양 경조로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:shaman:연화 만신"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 태을 뇌검 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "옛 어른들 말로는 묘향산 보현사에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "묘향산 보현사로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 이씨"
+    ]
+   },
+   {
+    "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(노승에게 태을 뇌검에 얽힌 인연을 여쭙는다)"
+     },
+     {
+      "who": "npc:monk:노승 무진",
+      "text": "태을 뇌검이라… 다음 실마리는 백두산 천지에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "태을 뇌검… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 무진"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(바위에 새겨진 옛 시에서 태을 뇌검의 단서를 읽는다)"
+     },
+     {
+      "who": "npc:traveler:유람객 신씨",
+      "text": "옛 어른들 말로는 제주목 제주읍성에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "제주목 제주읍성으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:traveler:유람객 신씨"
+    ]
+   },
+   {
+    "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "신선이 남겼다는 태을 뇌검이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "태을 뇌검 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 안씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔선(仙) 6〕 선(仙)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "seon": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "seon": 125
+       }
+      },
+      "result": "제주목 제주읍성의 수호자: 과연 태을 뇌검의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_seon_weapon_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "태을 뇌검을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_seon_armor_4": {
+  "status": "draft",
+  "title": "학창의 전승 서사",
+  "intro": {
+   "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 홍씨",
+     "text": "학창의 이야기를 들으셨소? 신선이 남겼다는 물건이라, 강릉대도호부 → 원주 강원감영 → 충주목 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 홍씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 학창의의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 배씨",
+      "text": "학창의라… 다음 실마리는 원주 강원감영에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "학창의… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 배씨"
+    ]
+   },
+   {
+    "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 학창의 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "옛 어른들 말로는 충주목에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "충주목으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 안씨"
+    ]
+   },
+   {
+    "bg": "ND_05_CITY_CHUNGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 권씨",
+      "text": "신선이 남겼다는 학창의가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "학창의 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 권씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔선(仙) 5〕 선(仙)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "seon": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "seon": 100
+       }
+      },
+      "result": "충주목의 수호자: 과연 학창의의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_seon_armor_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_05_CITY_CHUNGJUMOK",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "학창의를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_seon_armor_5": {
+  "status": "draft",
+  "title": "우의 선포 전승 서사",
+  "intro": {
+   "bg": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+   "lines": [
+    {
+     "who": "npc:shaman:달래 무녀",
+     "text": "우의 선포 이야기를 들으셨소? 신선이 남겼다는 물건이라, 계룡산 신도안 → 한양 경조 → 묘향산 보현사 → 백두산 천지 → 제주목 제주읍성 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:shaman:달래 무녀"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(당산나무 금줄 아래서 우의 선포의 이야기를 듣는다)"
+     },
+     {
+      "who": "npc:shaman:달래 무녀",
+      "text": "한양 경조로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:shaman:달래 무녀"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 우의 선포의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 송씨",
+      "text": "묘향산 보현사로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 송씨"
+    ]
+   },
+   {
+    "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(법당 뒤 오래된 기록에서 우의 선포의 이름을 찾는다)"
+     },
+     {
+      "who": "npc:monk:노승 도안",
+      "text": "백두산 천지로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 도안"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(경치를 즐기던 유람객이 우의 선포 이야기를 들려준다)"
+     },
+     {
+      "who": "npc:traveler:유람객 홍씨",
+      "text": "옛 어른들 말로는 제주목 제주읍성에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "제주목 제주읍성으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:traveler:유람객 홍씨"
+    ]
+   },
+   {
+    "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 서씨",
+      "text": "신선이 남겼다는 우의 선포가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "우의 선포 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 서씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔선(仙) 6〕 선(仙)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "seon": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "seon": 125
+       }
+      },
+      "result": "제주목 제주읍성의 수호자: 과연 우의 선포의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_seon_armor_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "우의 선포를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_seon_shoes_4": {
+  "status": "draft",
+  "title": "운혜 전승 서사",
+  "intro": {
+   "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 김씨",
+     "text": "운혜 이야기를 들으셨소? 신선이 남겼다는 물건이라, 강릉대도호부 → 원주 강원감영 → 충주목 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 김씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 운혜의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 오씨",
+      "text": "원주 강원감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 오씨"
+    ]
+   },
+   {
+    "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 운혜의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 한씨",
+      "text": "충주목으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 한씨"
+    ]
+   },
+   {
+    "bg": "ND_05_CITY_CHUNGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 신씨",
+      "text": "신선이 남겼다는 운혜가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "운혜 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 신씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔선(仙) 5〕 선(仙)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "seon": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "seon": 100
+       }
+      },
+      "result": "충주목의 수호자: 과연 운혜의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_seon_shoes_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_05_CITY_CHUNGJUMOK",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "운혜를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_seon_shoes_5": {
+  "status": "draft",
+  "title": "축지 운리 전승 서사",
+  "intro": {
+   "bg": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+   "lines": [
+    {
+     "who": "npc:shaman:명월 만신",
+     "text": "축지 운리 이야기를 들으셨소? 신선이 남겼다는 물건이라, 계룡산 신도안 → 한양 경조 → 묘향산 보현사 → 백두산 천지 → 제주목 제주읍성 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:shaman:명월 만신"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(당산나무 금줄 아래서 축지 운리의 이야기를 듣는다)"
+     },
+     {
+      "who": "npc:shaman:옥분 만신",
+      "text": "한양 경조로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:shaman:옥분 만신"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 축지 운리 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 홍씨",
+      "text": "축지 운리라… 다음 실마리는 묘향산 보현사에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "축지 운리… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 홍씨"
+    ]
+   },
+   {
+    "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(절 마당을 쓸던 동자승이 축지 운리 이야기를 꺼낸다)"
+     },
+     {
+      "who": "npc:monk:노승 도안",
+      "text": "옛 어른들 말로는 백두산 천지에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "백두산 천지로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 도안"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(경치를 즐기던 유람객이 축지 운리 이야기를 들려준다)"
+     },
+     {
+      "who": "npc:traveler:유람객 손씨",
+      "text": "제주목 제주읍성으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:traveler:유람객 손씨"
+    ]
+   },
+   {
+    "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 서씨",
+      "text": "신선이 남겼다는 축지 운리가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "축지 운리 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 서씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔선(仙) 6〕 선(仙)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "seon": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "seon": 125
+       }
+      },
+      "result": "제주목 제주읍성의 수호자: 과연 축지 운리의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_seon_shoes_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "축지 운리를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_seon_accessory_4": {
+  "status": "draft",
+  "title": "호로병 패 전승 서사",
+  "intro": {
+   "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 배씨",
+     "text": "호로병 패 이야기를 들으셨소? 신선이 남겼다는 물건이라, 강릉대도호부 → 원주 강원감영 → 충주목 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 배씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_04_CITY_GANGREUNGDAEDOHOBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 호로병 패의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 황씨",
+      "text": "호로병 패라… 다음 실마리는 원주 강원감영에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "호로병 패… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 황씨"
+    ]
+   },
+   {
+    "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 호로병 패의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 임씨",
+      "text": "충주목으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 임씨"
+    ]
+   },
+   {
+    "bg": "ND_05_CITY_CHUNGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "신선이 남겼다는 호로병 패가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "호로병 패 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 정씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔선(仙) 5〕 선(仙)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "seon": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "seon": 100
+       }
+      },
+      "result": "충주목의 수호자: 과연 호로병 패의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_eq_seon_accessory_4"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_05_CITY_CHUNGJUMOK",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "호로병 패를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_eq_seon_accessory_5": {
+  "status": "draft",
+  "title": "선도 복숭아 옥패 전승 서사",
+  "intro": {
+   "bg": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+   "lines": [
+    {
+     "who": "npc:shaman:연화 만신",
+     "text": "선도 복숭아 옥패 이야기를 들으셨소? 신선이 남겼다는 물건이라, 계룡산 신도안 → 한양 경조 → 묘향산 보현사 → 백두산 천지 → 제주목 제주읍성 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:shaman:연화 만신"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_06_SHRINE_GYERYONGSANSINDOAN",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(무녀가 방울을 흔들며 선도 복숭아 옥패의 행방을 점친다)"
+     },
+     {
+      "who": "npc:shaman:연화 만신",
+      "text": "옛 어른들 말로는 한양 경조에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "한양 경조로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:shaman:연화 만신"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 선도 복숭아 옥패의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "선도 복숭아 옥패라… 다음 실마리는 묘향산 보현사에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "선도 복숭아 옥패… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 정씨"
+    ]
+   },
+   {
+    "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(절 마당을 쓸던 동자승이 선도 복숭아 옥패 이야기를 꺼낸다)"
+     },
+     {
+      "who": "npc:monk:노승 월조",
+      "text": "선도 복숭아 옥패라… 다음 실마리는 백두산 천지에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "선도 복숭아 옥패… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 월조"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_BAEKDUSANCHEONJI",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(바위에 새겨진 옛 시에서 선도 복숭아 옥패의 단서를 읽는다)"
+     },
+     {
+      "who": "npc:traveler:유람객 장씨",
+      "text": "옛 어른들 말로는 제주목 제주읍성에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "제주목 제주읍성으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:traveler:유람객 장씨"
+    ]
+   },
+   {
+    "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 이씨",
+      "text": "신선이 남겼다는 선도 복숭아 옥패가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "선도 복숭아 옥패 전승 서사 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 이씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔선(仙) 6〕 선(仙)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "seon": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "seon": 125
+       }
+      },
+      "result": "제주목 제주읍성의 수호자: 과연 선도 복숭아 옥패의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_eq_seon_accessory_5"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "선도 복숭아 옥패를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_mt_warhorse": {
+  "status": "draft",
+  "title": "북관 군마 징발령",
+  "intro": {
+   "bg": "ND_15_CITY_HAMHEUNGBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 홍씨",
+     "text": "징발 군마 이야기를 들으셨소? 명장이 벼렸다는 물건이라, 함흥부 → 철원도호부 → 한양 경조 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 홍씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_CITY_HAMHEUNGBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 징발 군마의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 권씨",
+      "text": "옛 어른들 말로는 철원도호부에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "철원도호부로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 권씨"
+    ]
+   },
+   {
+    "bg": "ND_03_CITY_CHEOLWONDOHOBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 징발 군마의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 강씨",
+      "text": "한양 경조로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 강씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "npc:official:아전 홍씨",
+      "text": "명장이 벼렸다는 징발 군마가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "북관 군마 징발령 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 홍씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 5〕 사(史)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "sa": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 100
+       }
+      },
+      "result": "한양 경조의 수호자: 과연 징발 군마의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_mt_warhorse"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "징발 군마를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_mt_haetae": {
+  "status": "draft",
+  "title": "광화문 해태의 시비",
+  "intro": {
+   "bg": "ND_02_CITY_HANYANGGYEONGJO",
+   "lines": [
+    {
+     "who": "npc:official:아전 황씨",
+     "text": "해태 이야기를 들으셨소? 명장이 벼렸다는 물건이라, 한양 경조 → 수원화성 → 공주 충청감영 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 황씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 해태 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 홍씨",
+      "text": "해태라… 다음 실마리는 수원화성에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "해태… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 홍씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_SUWONHWASEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 해태의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 황씨",
+      "text": "공주 충청감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 황씨"
+    ]
+   },
+   {
+    "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "명장이 벼렸다는 해태가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "광화문 해태의 시비 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 류씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 5〕 사(史)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "sa": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 100
+       }
+      },
+      "result": "공주 충청감영의 수호자: 과연 해태의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_mt_haetae"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "해태를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_mt_cheonma": {
+  "status": "draft",
+  "title": "천마총 날개의 전설",
+  "intro": {
+   "bg": "ND_09_TOMB_GYEONGJUDAEREUNGWON",
+   "lines": [
+    {
+     "who": "npc:official:능참봉 장씨",
+     "text": "천마(天馬) 이야기를 들으셨소? 명장이 벼렸다는 물건이라, 경주 대릉원 → 한양 경조 → 평양부 → 무산참 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:능참봉 장씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_TOMB_GYEONGJUDAEREUNGWON",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(능참봉이 천마(天馬)에 얽힌 옛 제향 이야기를 들려준다)"
+     },
+     {
+      "who": "npc:official:능참봉 문씨",
+      "text": "천마(天馬)이라… 다음 실마리는 한양 경조에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "천마(天馬)… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:능참봉 문씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_HANYANGGYEONGJO",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 천마(天馬) 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 송씨",
+      "text": "평양부로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 송씨"
+    ]
+   },
+   {
+    "bg": "ND_13_CITY_PYEONGYANGBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 천마(天馬) 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 강씨",
+      "text": "무산참으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 강씨"
+    ]
+   },
+   {
+    "bg": "ND_16_STATION_MUSANCHAM",
+    "lines": [
+     {
+      "who": "npc:soldier:역졸 송씨",
+      "text": "명장이 벼렸다는 천마(天馬)이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "천마총 날개의 전설 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:soldier:역졸 송씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 6〕 사(史)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "sa": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 125
+       }
+      },
+      "result": "무산참의 수호자: 과연 천마(天馬)의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_mt_cheonma"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_STATION_MUSANCHAM",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "천마(天馬)을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_mt_white_tiger": {
+  "status": "draft",
+  "title": "산군의 계승자",
+  "intro": {
+   "bg": "ND_13_CITY_PYEONGYANGBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 최씨",
+     "text": "백두 백호 이야기를 들으셨소? 명장이 벼렸다는 물건이라, 평양부 → 함흥부 → 경성도호부 → 무산참 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 최씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_13_CITY_PYEONGYANGBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 백두 백호의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 손씨",
+      "text": "옛 어른들 말로는 함흥부에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "함흥부로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 손씨"
+    ]
+   },
+   {
+    "bg": "ND_15_CITY_HAMHEUNGBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 백두 백호의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 권씨",
+      "text": "백두 백호라… 다음 실마리는 경성도호부에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "백두 백호… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 권씨"
+    ]
+   },
+   {
+    "bg": "ND_16_CITY_GYEONGSEONGDOHOBU",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 백두 백호의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 송씨",
+      "text": "옛 어른들 말로는 무산참에 그 내력을 아는 이가 있다 했소."
+     },
+     {
+      "who": "hero",
+      "text": "무산참으로 서두르자."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 송씨"
+    ]
+   },
+   {
+    "bg": "ND_16_STATION_MUSANCHAM",
+    "lines": [
+     {
+      "who": "npc:soldier:역졸 장씨",
+      "text": "명장이 벼렸다는 백두 백호가 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "산군의 계승자 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:soldier:역졸 장씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 6〕 사(史)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "sa": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 125
+       }
+      },
+      "result": "무산참의 수호자: 과연 백두 백호의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_mt_white_tiger"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_STATION_MUSANCHAM",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "백두 백호를 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_mt_jeju_heonma": {
+  "status": "draft",
+  "title": "산마장 진상마 호송",
+  "intro": {
+   "bg": "ND_17_TOWN_JEONGUIHYEON",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 임씨",
+     "text": "제주 헌마(獻馬) 이야기를 들으셨소? 명장이 벼렸다는 물건이라, 정의현 → 제주목 제주읍성 → 해남 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:elder:촌로 임씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_17_TOWN_JEONGUIHYEON",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 제주 헌마(獻馬) 이야기를 듣는다)"
+     },
+     {
+      "who": "npc:elder:촌로 장씨",
+      "text": "제주목 제주읍성으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 장씨"
+    ]
+   },
+   {
+    "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 제주 헌마(獻馬)의 자취를 찾는다)"
+     },
+     {
+      "who": "npc:official:아전 오씨",
+      "text": "해남으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 오씨"
+    ]
+   },
+   {
+    "bg": "ND_08_TOWN_HAENAM",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 전씨",
+      "text": "명장이 벼렸다는 제주 헌마(獻馬)이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "산마장 진상마 호송 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 전씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 5〕 사(史)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "sa": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 100
+       }
+      },
+      "result": "해남의 수호자: 과연 제주 헌마(獻馬)의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_mt_jeju_heonma"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_TOWN_HAENAM",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "제주 헌마(獻馬)을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_mt_joun_ship": {
+  "status": "draft",
+  "title": "영산창 세곡 조운",
+  "intro": {
+   "bg": "ND_08_CITY_NAJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 박씨",
+     "text": "경강 조운선 이야기를 들으셨소? 명장이 벼렸다는 물건이라, 나주목 → 전주 전라감영 → 공주 충청감영 길을 거쳐야 닿는다고 하오."
+    }
+   ],
+   "cast": [
+    "hero",
+    "npc:official:아전 박씨"
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_08_CITY_NAJUMOK",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 경강 조운선 이야기를 캐묻는다)"
+     },
+     {
+      "who": "npc:official:아전 정씨",
+      "text": "경강 조운선이라… 다음 실마리는 전주 전라감영에 있다오."
+     },
+     {
+      "who": "hero",
+      "text": "경강 조운선… 한 걸음 가까워졌군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 정씨"
+    ]
+   },
+   {
+    "bg": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+    "lines": [
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 경강 조운선의 행방을 수소문한다)"
+     },
+     {
+      "who": "npc:official:아전 류씨",
+      "text": "공주 충청감영으로 가 보시오. 거기서부터는 길이 험하오."
+     },
+     {
+      "who": "hero",
+      "text": "이 단서를 잘 적어 두어야겠다."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 류씨"
+    ]
+   },
+   {
+    "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 최씨",
+      "text": "명장이 벼렸다는 경강 조운선이 여기 있소. 다만 주인을 가려서 따른다 하오."
+     },
+     {
+      "who": "hero",
+      "text": "영산창 세곡 조운 — 여기서 끝을 봐야겠군."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 최씨"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔사(史) 5〕 사(史)의 도리를 보여 자격을 증명한다",
+      "req": {
+       "knowledge": {
+        "sa": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "sa": 100
+       }
+      },
+      "result": "공주 충청감영의 수호자: 과연 경강 조운선의 주인이 될 만하오."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 수호자에게 예물을 바친다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_mt_joun_ship"
+      },
+      "result": "수호자: 정성이 갸륵하니 내어 드리리다."
+     },
+     {
+      "id": "plain",
+      "text": "정성껏 예를 갖춰 청한다",
+      "req": {},
+      "effects": {},
+      "result": "수호자: 먼 길을 온 발걸음을 믿어 보겠소."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "경강 조운선을 손에 넣었다. 무게만큼 책임도 무겁다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ }
+}

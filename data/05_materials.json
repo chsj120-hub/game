@@ -1,0 +1,216 @@
+{
+ "_schema": "05_기초생필품_제작 원자재 + 생활 소모품(use). weight=배낭 무게.",
+ "materials": [
+  {
+   "id": "mat_iron",
+   "name": "무쇠",
+   "tier": 1,
+   "price": 25,
+   "weight": 1.0
+  },
+  {
+   "id": "mat_charcoal",
+   "name": "참숯",
+   "tier": 1,
+   "price": 6,
+   "weight": 1.0
+  },
+  {
+   "id": "mat_cowhide",
+   "name": "소가죽",
+   "tier": 1,
+   "price": 30,
+   "weight": 1.0
+  },
+  {
+   "id": "mat_fish_glue",
+   "name": "어교(민어부레풀)",
+   "tier": 2,
+   "price": 40,
+   "weight": 0.5
+  },
+  {
+   "id": "mat_lacquer",
+   "name": "옻칠",
+   "tier": 2,
+   "price": 55,
+   "weight": 0.5
+  },
+  {
+   "id": "mat_mulberry",
+   "name": "닥나무 껍질",
+   "tier": 1,
+   "price": 4,
+   "weight": 1.0
+  },
+  {
+   "id": "mat_salt",
+   "name": "천일 소금",
+   "tier": 1,
+   "price": 5,
+   "weight": 1.0
+  },
+  {
+   "id": "mat_cotton",
+   "name": "무명",
+   "tier": 1,
+   "price": 10,
+   "weight": 1.0
+  },
+  {
+   "id": "mat_hemp",
+   "name": "삼베",
+   "tier": 1,
+   "price": 9,
+   "weight": 1.0
+  },
+  {
+   "id": "mat_bamboo",
+   "name": "대나무",
+   "tier": 1,
+   "price": 5,
+   "weight": 1.0
+  },
+  {
+   "id": "mat_ox_horn",
+   "name": "물소뿔",
+   "tier": 3,
+   "price": 150,
+   "weight": 0.5
+  },
+  {
+   "id": "mat_copper",
+   "name": "구리",
+   "tier": 2,
+   "price": 35,
+   "weight": 0.5
+  },
+  {
+   "id": "mat_tin",
+   "name": "주석",
+   "tier": 2,
+   "price": 40,
+   "weight": 0.5
+  },
+  {
+   "id": "mat_white_clay",
+   "name": "백토",
+   "tier": 2,
+   "price": 30,
+   "weight": 0.5
+  },
+  {
+   "id": "mat_celadon_clay",
+   "name": "청자토",
+   "tier": 3,
+   "price": 70,
+   "weight": 0.5
+  },
+  {
+   "id": "mat_mother_of_pearl",
+   "name": "자개",
+   "tier": 3,
+   "price": 80,
+   "weight": 0.5
+  },
+  {
+   "id": "mat_silk_thread",
+   "name": "명주실",
+   "tier": 2,
+   "price": 28,
+   "weight": 0.5
+  },
+  {
+   "id": "mat_wood",
+   "name": "느티나무 판재",
+   "tier": 1,
+   "price": 12,
+   "weight": 1.0
+  },
+  {
+   "id": "mat_meteor_iron",
+   "name": "운철(별쇠)",
+   "tier": 5,
+   "price": 1200,
+   "weight": 0.5
+  },
+  {
+   "id": "mat_sarira_crystal",
+   "name": "사리 수정",
+   "tier": 4,
+   "price": 600,
+   "weight": 0.2
+  },
+  {
+   "id": "mat_cinnabar",
+   "name": "경면주사",
+   "tier": 4,
+   "price": 500,
+   "weight": 0.2
+  },
+  {
+   "id": "item_torch",
+   "name": "관솔 횃불",
+   "tier": 1,
+   "price": 4,
+   "weight": 0.5,
+   "use": "night_torch",
+   "note": "밤 행군 M_time 0.75→0.90, 사용 시 1개/밤 소모"
+  },
+  {
+   "id": "item_tonghaengjeung",
+   "name": "관문 통행증",
+   "tier": 2,
+   "price": 300,
+   "weight": 0.0,
+   "use": "checkpoint_pass",
+   "note": "Rank 3 미만 군사관문 통과"
+  },
+  {
+   "id": "item_bait",
+   "name": "짐승 먹이 미끼",
+   "tier": 1,
+   "price": 8,
+   "weight": 0.3,
+   "use": "capture_bait",
+   "note": "길들이기(무) 포획률 +20%"
+  },
+  {
+   "id": "item_tent",
+   "name": "노숙 텐트(초막)",
+   "tier": 1,
+   "price": 25,
+   "weight": 3.0,
+   "use": "camp",
+   "note": "야영 피로 회복 +10"
+  },
+  {
+   "id": "item_chebak",
+   "name": "대문에 거는 체",
+   "tier": 1,
+   "price": 5,
+   "weight": 0.5,
+   "use": "gimmick",
+   "note": "야광귀 퇴치 설화 소품"
+  },
+  {
+   "id": "mat_jang",
+   "name": "장(간장·된장)",
+   "tier": 1,
+   "price": 6,
+   "weight": 1.0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "mat_songyeon",
+   "name": "송연(松煙)",
+   "tier": 1,
+   "price": 6,
+   "weight": 0.3,
+   "note": "소나무를 태워 받은 그을음. 먹의 재료",
+   "real_name": "송연(松煙)",
+   "desc": "관솔을 태운 그을음을 모은 것. 아교(어교)와 반죽해 먹을 만든다.",
+   "generated": "craft_trade"
+  }
+ ]
+}

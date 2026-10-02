@@ -1,0 +1,433 @@
+{
+ "_schema": "15_제작비전서 24종. 철칙: 비전서를 인벤토리에 등록해야 해당 제작 탭/레시피가 해금된다. type=food(6)|medicine(5)|tool(5)|martial(8). sold_at={facility, regions[]} (판매형) 또는 obtain={quest|drop} (무예 단조서).",
+ "books": [
+  {
+   "id": "bk_food_jumak",
+   "name": "주막 국밥 조리서",
+   "type": "food",
+   "price": 120,
+   "sold_at": {
+    "facility": "jumak",
+    "regions": [
+     "MAP_02",
+     "MAP_05",
+     "MAP_06",
+     "MAP_09",
+     "MAP_10"
+    ]
+   },
+   "unlocks": [
+    "fr_gukbap",
+    "fr_kongnamul",
+    "fr_miyeokguk"
+   ]
+  },
+  {
+   "id": "bk_food_campfire",
+   "name": "야영 모닥불 조리서",
+   "type": "food",
+   "price": 150,
+   "sold_at": {
+    "facility": "jumak",
+    "regions": [
+     "MAP_04",
+     "MAP_15",
+     "MAP_16"
+    ]
+   },
+   "unlocks": [
+    "fr_jumeokbap",
+    "fr_sujebi",
+    "fr_dotorimuk",
+    "fr_songgitteok",
+    "fr_sanjeok"
+   ]
+  },
+  {
+   "id": "bk_food_gaekju",
+   "name": "객주 상차림 조리서",
+   "type": "food",
+   "price": 400,
+   "sold_at": {
+    "facility": "gaekju",
+    "regions": [
+     "MAP_02",
+     "MAP_01",
+     "MAP_04"
+    ]
+   },
+   "unlocks": [
+    "fr_seolleongtang",
+    "fr_tteokguk"
+   ]
+  },
+  {
+   "id": "bk_food_bukgwan",
+   "name": "북관·관서 음식서",
+   "type": "food",
+   "price": 600,
+   "sold_at": {
+    "facility": "restaurant",
+    "regions": [
+     "MAP_13"
+    ]
+   },
+   "unlocks": [
+    "fr_bindaetteok",
+    "fr_pyeongyang_naengmyeon",
+    "fr_ungjang",
+    "fr_nokpo"
+   ]
+  },
+  {
+   "id": "bk_food_namdo",
+   "name": "남도 한상 조리서",
+   "type": "food",
+   "price": 700,
+   "sold_at": {
+    "facility": "restaurant",
+    "regions": [
+     "MAP_07",
+     "MAP_08"
+    ]
+   },
+   "unlocks": [
+    "fr_jeonju_bibimbap"
+   ]
+  },
+  {
+   "id": "bk_food_sura",
+   "name": "궁중 수라 조리서",
+   "type": "food",
+   "price": 2500,
+   "min_rank": 3,
+   "sold_at": {
+    "facility": "restaurant",
+    "regions": [
+     "MAP_02"
+    ]
+   },
+   "unlocks": [
+    "fr_galbijjim",
+    "fr_gujeolpan",
+    "fr_jeonbokcho",
+    "fr_eomandu",
+    "fr_tarakjuk",
+    "fr_yaksik",
+    "fr_gungjung_tteokbokki",
+    "fr_daehajjim",
+    "fr_sinseollo",
+    "fr_tangpyeongchae",
+    "fr_yakgwa",
+    "fr_yuja_hwachae"
+   ]
+  },
+  {
+   "id": "bk_med_dongui",
+   "name": "동의보감 초록",
+   "type": "medicine",
+   "price": 200,
+   "sold_at": {
+    "facility": "yakbang",
+    "regions": [
+     "*"
+    ]
+   },
+   "unlocks": [
+    "hr_ssanghwa",
+    "hr_haedok",
+    "hr_galgeun",
+    "hr_yujacha"
+   ]
+  },
+  {
+   "id": "bk_med_hyemin",
+   "name": "혜민서 방약합편",
+   "type": "medicine",
+   "price": 1500,
+   "min_rank": 2,
+   "sold_at": {
+    "facility": "hyeminseo",
+    "regions": [
+     "MAP_02",
+     "MAP_05",
+     "MAP_06",
+     "MAP_13"
+    ]
+   },
+   "unlocks": [
+    "hr_sipjeon"
+   ]
+  },
+  {
+   "id": "bk_med_daegu",
+   "name": "대구 약령시 환약서",
+   "type": "medicine",
+   "price": 1800,
+   "min_rank": 2,
+   "sold_at": {
+    "facility": "yakryeongsi",
+    "regions": [
+     "MAP_09",
+     "MAP_10"
+    ]
+   },
+   "unlocks": [
+    "hr_cheongsim",
+    "hr_gongjin",
+    "hr_uhwang",
+    "hr_jakseol"
+   ]
+  },
+  {
+   "id": "bk_med_jeonju",
+   "name": "전주 약령시 고제서",
+   "type": "medicine",
+   "price": 1200,
+   "min_rank": 2,
+   "sold_at": {
+    "facility": "yakryeongsi",
+    "regions": [
+     "MAP_07"
+    ]
+   },
+   "unlocks": [
+    "hr_geumchang",
+    "hr_gyeongok"
+   ]
+  },
+  {
+   "id": "bk_med_temple",
+   "name": "사찰 선단비록",
+   "type": "medicine",
+   "price": 3000,
+   "min_rank": 3,
+   "sold_at": {
+    "facility": "temple",
+    "regions": [
+     "MAP_09",
+     "MAP_10",
+     "MAP_14",
+     "MAP_16"
+    ]
+   },
+   "unlocks": [
+    "hr_sohap",
+    "hr_seondan"
+   ]
+  },
+  {
+   "id": "bk_tool_forge",
+   "name": "야장 도구서",
+   "type": "tool",
+   "price": 300,
+   "sold_at": {
+    "facility": "forge",
+    "regions": [
+     "*"
+    ]
+   },
+   "unlocks": [
+    "lg_musoe_sot"
+   ]
+  },
+  {
+   "id": "bk_tool_carpenter",
+   "name": "목수 지게서",
+   "type": "tool",
+   "price": 500,
+   "sold_at": {
+    "facility": "carpenter",
+    "regions": [
+     "*"
+    ]
+   },
+   "unlocks": [
+    "lg_jige"
+   ]
+  },
+  {
+   "id": "bk_tool_gongbang",
+   "name": "12공방 칠기서",
+   "type": "tool",
+   "price": 800,
+   "sold_at": {
+    "facility": "gongbang",
+    "regions": [
+     "*"
+    ]
+   },
+   "unlocks": [
+    "lg_chanhap"
+   ]
+  },
+  {
+   "id": "bk_tool_capture",
+   "name": "포획구 제작서",
+   "type": "tool",
+   "price": 900,
+   "sold_at": {
+    "facility": "forge",
+    "regions": [
+     "MAP_02",
+     "MAP_13",
+     "MAP_15"
+    ]
+   },
+   "unlocks": [
+    "@capture_tools"
+   ]
+  },
+  {
+   "id": "bk_tool_repair",
+   "name": "행장 수선서",
+   "type": "tool",
+   "price": 250,
+   "sold_at": {
+    "facility": "market5",
+    "regions": [
+     "*"
+    ]
+   },
+   "unlocks": [
+    "@repair_life_gear"
+   ]
+  },
+  {
+   "id": "bk_mar_hwando",
+   "name": "환도 단조서",
+   "type": "martial",
+   "obtain": {
+    "quest": "gwana_subjugation_repeat",
+    "drop": [
+     {
+      "enemy": "en_galjae_bandit",
+      "rate": 0.15
+     }
+    ]
+   },
+   "unlocks": [
+    "eq_w3_byeolungeom"
+   ]
+  },
+  {
+   "id": "bk_mar_armor",
+   "name": "경번갑 단조서",
+   "type": "martial",
+   "obtain": {
+    "quest": "gwana_subjugation_repeat",
+    "drop": [
+     {
+      "enemy": "en_cultist",
+      "rate": 0.12
+     }
+    ]
+   },
+   "unlocks": [
+    "eq_a3_gyeongbeon"
+   ]
+  },
+  {
+   "id": "bk_mar_bow",
+   "name": "각궁·화전 단조서",
+   "type": "martial",
+   "obtain": {
+    "quest": "gwana_subjugation_repeat",
+    "drop": [
+     {
+      "enemy": "en_tiger",
+      "rate": 0.1
+     }
+    ]
+   },
+   "unlocks": [
+    "eq_w3_hwaseon"
+   ]
+  },
+  {
+   "id": "bk_mar_boots",
+   "name": "목화 비각 단조서",
+   "type": "martial",
+   "obtain": {
+    "quest": "gwana_subjugation_repeat",
+    "drop": [
+     {
+      "enemy": "en_pirate",
+      "rate": 0.12
+     }
+    ]
+   },
+   "unlocks": [
+    "eq_s3_mokhwa"
+   ]
+  },
+  {
+   "id": "bk_mar_charm",
+   "name": "벽사 패물 단조서",
+   "type": "martial",
+   "obtain": {
+    "quest": "gwana_subjugation_repeat",
+    "drop": [
+     {
+      "enemy": "en_dokkaebi",
+      "rate": 0.12
+     }
+    ]
+   },
+   "unlocks": [
+    "eq_c3_byeoksa"
+   ]
+  },
+  {
+   "id": "bk_mar_spear",
+   "name": "당파창 단조서",
+   "type": "martial",
+   "obtain": {
+    "quest": "gwana_subjugation_repeat",
+    "drop": [
+     {
+      "enemy": "en_jirisan_sanshin",
+      "rate": 0.3
+     }
+    ]
+   },
+   "unlocks": [
+    "eq_w3_dangpa"
+   ]
+  },
+  {
+   "id": "bk_mar_shield",
+   "name": "등패 단조서",
+   "type": "martial",
+   "obtain": {
+    "quest": "gwana_subjugation_repeat",
+    "drop": [
+     {
+      "enemy": "en_bulgasari",
+      "rate": 0.3
+     }
+    ]
+   },
+   "unlocks": [
+    "eq_c3_deungpae"
+   ]
+  },
+  {
+   "id": "bk_mar_flail",
+   "name": "편곤 단조서",
+   "type": "martial",
+   "obtain": {
+    "quest": "gwana_subjugation_repeat",
+    "drop": [
+     {
+      "enemy": "en_imugi",
+      "rate": 0.3
+     }
+    ]
+   },
+   "unlocks": [
+    "eq_w3_pyeongon"
+   ]
+  }
+ ]
+}

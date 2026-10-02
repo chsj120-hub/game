@@ -1,0 +1,205 @@
+{
+ "_schema": "07_탈것 (장착 슬롯 mount). v_mount=이동 공식 V_mount(px/s, 기승 시 신발 보너스 대체). stamina=10리당 −3, 역참 마필 교체로 회복. terrain=ground|water(수계 구간 통행 허가, 보유만 해도 자동 승선)|air(지형 배율 1.0 고정·수계 통과). spd_bonus=CTB (1+보정) 가산. 1~3등급=역참 판매(price 공식), 4~5등급=전용 퀘스트(동선 큐).",
+ "mounts": [
+  {
+   "id": "mt_donkey",
+   "name": "당나귀",
+   "terrain": "ground",
+   "tier": 1,
+   "v_mount": 35,
+   "carry_capacity": 20,
+   "stamina": 100,
+   "spd_bonus": 0.02,
+   "min_rank": 1,
+   "skill": "sk_mt_donkey",
+   "acquire": {
+    "type": "shop",
+    "facility": "yeokcham",
+    "price": 150
+   }
+  },
+  {
+   "id": "mt_jeju_pony",
+   "name": "제주 조랑말",
+   "terrain": "ground",
+   "tier": 2,
+   "v_mount": 50,
+   "carry_capacity": 25,
+   "stamina": 100,
+   "spd_bonus": 0.04,
+   "min_rank": 2,
+   "skill": "sk_mt_pony",
+   "acquire": {
+    "type": "shop",
+    "facility": "yeokcham",
+    "price": 450
+   }
+  },
+  {
+   "id": "mt_hwangpo_boat",
+   "name": "황포돛배",
+   "terrain": "water",
+   "tier": 2,
+   "v_mount": 40,
+   "carry_capacity": 60,
+   "stamina": 100,
+   "spd_bonus": 0.04,
+   "min_rank": 2,
+   "skill": "sk_mt_boat",
+   "acquire": {
+    "type": "shop",
+    "facility": "yeokcham",
+    "price": 600
+   }
+  },
+  {
+   "id": "mt_junma",
+   "name": "준마",
+   "terrain": "ground",
+   "tier": 3,
+   "v_mount": 65,
+   "carry_capacity": 30,
+   "stamina": 100,
+   "spd_bonus": 0.06,
+   "min_rank": 3,
+   "skill": "sk_mt_junma",
+   "acquire": {
+    "type": "shop",
+    "facility": "yeokcham",
+    "price": 1350
+   }
+  },
+  {
+   "id": "mt_warhorse",
+   "name": "징발 군마",
+   "terrain": "ground",
+   "tier": 4,
+   "v_mount": 75,
+   "carry_capacity": 35,
+   "stamina": 100,
+   "spd_bonus": 0.08,
+   "min_rank": 4,
+   "skill": "sk_mt_warhorse",
+   "acquire": {
+    "type": "quest",
+    "quest_name": "북관 군마 징발령",
+    "route": [
+     "ND_15_CITY_HAMHEUNGBU",
+     "ND_03_CITY_CHEOLWONDOHOBU",
+     "ND_02_CITY_HANYANGGYEONGJO"
+    ]
+   }
+  },
+  {
+   "id": "mt_haetae",
+   "name": "해태",
+   "terrain": "ground",
+   "tier": 4,
+   "v_mount": 70,
+   "carry_capacity": 30,
+   "stamina": 100,
+   "spd_bonus": 0.08,
+   "min_rank": 4,
+   "skill": "sk_mt_haetae",
+   "acquire": {
+    "type": "quest",
+    "quest_name": "광화문 해태의 시비",
+    "route": [
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_02_CITY_SUWONHWASEONG",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG"
+    ]
+   }
+  },
+  {
+   "id": "mt_cheonma",
+   "name": "천마(天馬)",
+   "terrain": "air",
+   "tier": 5,
+   "v_mount": 90,
+   "carry_capacity": 30,
+   "stamina": 100,
+   "spd_bonus": 0.1,
+   "min_rank": 5,
+   "skill": "sk_mt_cheonma",
+   "acquire": {
+    "type": "quest",
+    "quest_name": "천마총 날개의 전설",
+    "route": [
+     "ND_09_TOMB_GYEONGJUDAEREUNGWON",
+     "ND_02_CITY_HANYANGGYEONGJO",
+     "ND_13_CITY_PYEONGYANGBU",
+     "ND_16_STATION_MUSANCHAM"
+    ]
+   }
+  },
+  {
+   "id": "mt_white_tiger",
+   "name": "백두 백호",
+   "terrain": "ground",
+   "tier": 5,
+   "v_mount": 85,
+   "carry_capacity": 25,
+   "stamina": 100,
+   "spd_bonus": 0.1,
+   "min_rank": 5,
+   "skill": "sk_mt_white_tiger",
+   "acquire": {
+    "type": "quest",
+    "quest_name": "산군의 계승자",
+    "route": [
+     "ND_13_CITY_PYEONGYANGBU",
+     "ND_15_CITY_HAMHEUNGBU",
+     "ND_16_CITY_GYEONGSEONGDOHOBU",
+     "ND_16_STATION_MUSANCHAM"
+    ]
+   }
+  },
+  {
+   "id": "mt_jeju_heonma",
+   "name": "제주 헌마(獻馬)",
+   "terrain": "ground",
+   "tier": 4,
+   "v_mount": 72,
+   "carry_capacity": 32,
+   "stamina": 110,
+   "spd_bonus": 0.07,
+   "min_rank": 4,
+   "skill": "sk_mt_heonma",
+   "acquire": {
+    "type": "quest",
+    "quest_name": "산마장 진상마 호송",
+    "route": [
+     "ND_17_TOWN_JEONGUIHYEON",
+     "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+     "ND_08_TOWN_HAENAM"
+    ]
+   },
+   "desc": "제주 산마장에서 골라 조정에 바치던 진상마. 작지만 지구력이 뛰어나다.",
+   "generated": "content2"
+  },
+  {
+   "id": "mt_joun_ship",
+   "name": "경강 조운선",
+   "terrain": "water",
+   "tier": 4,
+   "v_mount": 55,
+   "carry_capacity": 90,
+   "stamina": 100,
+   "spd_bonus": 0.05,
+   "min_rank": 4,
+   "skill": "sk_mt_joun",
+   "acquire": {
+    "type": "quest",
+    "quest_name": "영산창 세곡 조운",
+    "route": [
+     "ND_08_CITY_NAJUMOK",
+     "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+     "ND_06_CITY_GONGJUCHUNGCHEONGGAMYEONG"
+    ]
+   },
+   "desc": "삼남의 세곡을 경강(한강)까지 나르던 조운선. 짐을 많이 싣는다.",
+   "generated": "content2"
+  }
+ ]
+}

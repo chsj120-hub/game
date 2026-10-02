@@ -1,0 +1,7679 @@
+{
+ "quest:q_rcp_gangjin_celadon": {
+  "status": "draft",
+  "title": "비전 전수: 강진 상감청자",
+  "intro": {
+   "bg": "ND_10_CITY_JINJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 김씨",
+     "text": "강진 상감청자 비전서를 잃으셨다고요? 진주목 → 월출산 무위사 → 강진 사당리 청자 가마터 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_10_CITY_JINJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 전씨",
+      "text": "강진 상감청자 비법이라… 그 집안 장인은 월출산 무위사로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 강진 상감청자 비법 이야기를 캐묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 전씨"
+    ]
+   },
+   {
+    "bg": "ND_08_TEMPLE_WOLCHULSANMUWISA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 지공",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 강진 사당리 청자 가마터에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(노승에게 강진 상감청자 비법에 얽힌 인연을 여쭙는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 지공"
+    ]
+   },
+   {
+    "bg": "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
+    "lines": [
+     {
+      "who": "npc:merchant:강진 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:강진 늙은 장인",
+      "text": "강진 상감청자 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:강진 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 5〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 100
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_rcp_gangjin_celadon"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 청자토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_celadon_clay": 4,
+        "mat_charcoal": 6
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_celadon_clay": 4,
+        "mat_charcoal": 6
+       },
+       "knowledge_xp": {
+        "gong": 120
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【강진 상감청자 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_bunwon_porcelain": {
+  "status": "draft",
+  "title": "비전 전수: 분원 백자 달항아리",
+  "intro": {
+   "bg": "ND_05_TOWN_DANYANG",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 손씨",
+     "text": "분원 백자 달항아리 비전서를 잃으셨다고요? 단양 → 광주유수부 → 광주 분원 백자 가마터 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_05_TOWN_DANYANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 류씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 광주유수부에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(촌로의 사랑방에서 분원 백자 달항아리 비법의 옛일을 묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 류씨"
+    ]
+   },
+   {
+    "bg": "ND_02_CITY_GWANGJUYUSUBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 고씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 광주 분원 백자 가마터에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 분원 백자 달항아리 비법의 행방을 수소문한다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 고씨"
+    ]
+   },
+   {
+    "bg": "ND_02_RUIN_GWANGJUBUNWONBAEKJAGAMATEO",
+    "lines": [
+     {
+      "who": "npc:merchant:분원 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:분원 늙은 장인",
+      "text": "분원 백자 달항아리 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:분원 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:q_rcp_bunwon_porcelain"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 4,
+        "mat_charcoal": 5
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 4,
+        "mat_charcoal": 5
+       },
+       "knowledge_xp": {
+        "gong": 90
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_RUIN_GWANGJUBUNWONBAEKJAGAMATEO",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【분원 백자 달항아리 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_tongyeong_najeon": {
+  "status": "draft",
+  "title": "비전 전수: 통영 나전칠기함",
+  "intro": {
+   "bg": "ND_08_TOWN_CHEONGHAEJINWANDOBO",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 임씨",
+     "text": "통영 나전칠기함 비전서를 잃으셨다고요? 청해진 완도보 → 거제현 기성관 → 통영 12공방 옛터 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_08_TOWN_CHEONGHAEJINWANDOBO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 송씨",
+      "text": "통영 나전칠기함 비법이라… 그 집안 장인은 거제현 기성관으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 통영 나전칠기함 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 송씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TOWN_GEOJEHYEONGISEONGGWAN",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 송씨",
+      "text": "통영 나전칠기함 비법이라… 그 집안 장인은 통영 12공방 옛터로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 통영 나전칠기함 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 송씨"
+    ]
+   },
+   {
+    "bg": "ND_10_RUIN_TONGYEONG12GONGBANGYETTEO",
+    "lines": [
+     {
+      "who": "npc:merchant:통영 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:통영 늙은 장인",
+      "text": "통영 나전칠기함 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:통영 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:q_rcp_tongyeong_najeon"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 옻칠·자개를 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_lacquer": 3,
+        "mat_mother_of_pearl": 3
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_lacquer": 3,
+        "mat_mother_of_pearl": 3
+       },
+       "knowledge_xp": {
+        "gong": 90
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_10_RUIN_TONGYEONG12GONGBANGYETTEO",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【통영 나전칠기함 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_066": {
+  "status": "draft",
+  "title": "비전 전수: 명량 해저 인양 청자",
+  "intro": {
+   "bg": "ND_09_TOWN_SEONSANDOHOBUCHISOGUMI",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 황씨",
+     "text": "명량 해저 인양 청자 비전서를 잃으셨다고요? 선산도호부 치소(구미) → 정읍 → 해남 → 명량 울돌목 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_TOWN_SEONSANDOHOBUCHISOGUMI",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 안씨",
+      "text": "청자토·참숯을 제대로 고르는 눈이 먼저요. 정읍에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 명량 해저 인양 청자 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 안씨"
+    ]
+   },
+   {
+    "bg": "ND_07_TOWN_JEONGEUP",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 박씨",
+      "text": "명량 해저 인양 청자 비법이라… 그 집안 장인은 해남으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 명량 해저 인양 청자 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 박씨"
+    ]
+   },
+   {
+    "bg": "ND_08_TOWN_HAENAM",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 황씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 명량 울돌목에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(촌로의 사랑방에서 명량 해저 인양 청자 비법의 옛일을 묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 황씨"
+    ]
+   },
+   {
+    "bg": "ND_08_WRECK_MYEONGRYANGULDOLMOK",
+    "lines": [
+     {
+      "who": "npc:merchant:명량 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:명량 늙은 장인",
+      "text": "명량 해저 인양 청자 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:명량 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 6〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 125
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_rcp_her_066"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 청자토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       },
+       "knowledge_xp": {
+        "gong": 150
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_WRECK_MYEONGRYANGULDOLMOK",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【명량 해저 인양 청자 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_112": {
+  "status": "draft",
+  "title": "비전 전수: 삼척 해저 인양 청자",
+  "intro": {
+   "bg": "ND_09_TOWN_CHEONGSONG",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 홍씨",
+     "text": "삼척 해저 인양 청자 비전서를 잃으셨다고요? 청송 → 삼척 신흥사 → 삼척 안택선 침몰지 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_TOWN_CHEONGSONG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 이씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 삼척 신흥사에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 삼척 해저 인양 청자 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 이씨"
+    ]
+   },
+   {
+    "bg": "ND_04_TEMPLE_SAMCHEOKSINHEUNGSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 보각",
+      "text": "삼척 해저 인양 청자 비법이라… 그 집안 장인은 삼척 안택선 침몰지로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(절 마당을 쓸던 동자승이 삼척 해저 인양 청자 비법 이야기를 꺼낸다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 보각"
+    ]
+   },
+   {
+    "bg": "ND_04_WRECK_SAMCHEOKANTAEKSEONCHIMMOLJI",
+    "lines": [
+     {
+      "who": "npc:merchant:삼척 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:삼척 늙은 장인",
+      "text": "삼척 해저 인양 청자 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:삼척 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 5〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 100
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_rcp_her_112"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 청자토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       },
+       "knowledge_xp": {
+        "gong": 120
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_04_WRECK_SAMCHEOKANTAEKSEONCHIMMOLJI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【삼척 해저 인양 청자 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_115": {
+  "status": "draft",
+  "title": "비전 전수: 단양 복원 도자",
+  "intro": {
+   "bg": "ND_06_TOWN_ASAN",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 황씨",
+     "text": "단양 복원 도자 비전서를 잃으셨다고요? 아산 → 단양 고려청자 가마터 출토 명품완 → 단양 수벌 고려가마터 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_06_TOWN_ASAN",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 권씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 단양 고려청자 가마터 출토 명품완에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 단양 복원 도자 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 권씨"
+    ]
+   },
+   {
+    "bg": "ND_05_RUIN_DANYANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 오씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 단양 수벌 고려가마터에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(옛터에서 깨진 조각을 줍던 촌로가 단양 복원 도자 비법을 떠올린다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 오씨"
+    ]
+   },
+   {
+    "bg": "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO",
+    "lines": [
+     {
+      "who": "npc:merchant:단양 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:단양 늙은 장인",
+      "text": "단양 복원 도자 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:단양 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:q_rcp_her_115"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 90
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【단양 복원 도자 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_121": {
+  "status": "draft",
+  "title": "비전 전수: 태안 해저 인양 청자",
+  "intro": {
+   "bg": "ND_02_TOWN_NAMYANG",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 황씨",
+     "text": "태안 해저 인양 청자 비전서를 잃으셨다고요? 남양 → 태안 → 태안 마도 침몰선 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_TOWN_NAMYANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 정씨",
+      "text": "태안 해저 인양 청자 비법이라… 그 집안 장인은 태안으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(촌로의 사랑방에서 태안 해저 인양 청자 비법의 옛일을 묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 정씨"
+    ]
+   },
+   {
+    "bg": "ND_06_TOWN_TAEAN",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 문씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 태안 마도 침몰선에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 태안 해저 인양 청자 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 문씨"
+    ]
+   },
+   {
+    "bg": "ND_06_WRECK_TAEANMADOCHIMMOLSEON",
+    "lines": [
+     {
+      "who": "npc:merchant:태안 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:태안 늙은 장인",
+      "text": "태안 해저 인양 청자 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:태안 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 5〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 100
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_rcp_her_121"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 청자토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       },
+       "knowledge_xp": {
+        "gong": 120
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_06_WRECK_TAEANMADOCHIMMOLSEON",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【태안 해저 인양 청자 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_123": {
+  "status": "draft",
+  "title": "비전 전수: 부안 복원 도자",
+  "intro": {
+   "bg": "ND_05_CITY_CHEONGJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 송씨",
+     "text": "부안 복원 도자 비전서를 잃으셨다고요? 청주목 → 김제군 벽골제 치소 → 부안 유천리 청자 가마터 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_05_CITY_CHEONGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 서씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 김제군 벽골제 치소에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 부안 복원 도자 비법의 행방을 수소문한다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 서씨"
+    ]
+   },
+   {
+    "bg": "ND_07_TOWN_GIMJEGUNBYEOKGOLJECHISO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 박씨",
+      "text": "청자토·참숯을 제대로 고르는 눈이 먼저요. 부안 유천리 청자 가마터에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 부안 복원 도자 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 박씨"
+    ]
+   },
+   {
+    "bg": "ND_07_RUIN_BUANYUCHEONRICHEONGJAGAMATEO",
+    "lines": [
+     {
+      "who": "npc:merchant:부안 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:부안 늙은 장인",
+      "text": "부안 복원 도자 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:부안 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 5〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 100
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_rcp_her_123"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 청자토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       },
+       "knowledge_xp": {
+        "gong": 120
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_RUIN_BUANYUCHEONRICHEONGJAGAMATEO",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【부안 복원 도자 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_125": {
+  "status": "draft",
+  "title": "비전 전수: 신안 해저 인양 청자",
+  "intro": {
+   "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 최씨",
+     "text": "신안 해저 인양 청자 비전서를 잃으셨다고요? 원주 강원감영 → 합천 → 나주목 → 신안 해저 무역선 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 손씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 합천에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 신안 해저 인양 청자 비법의 행방을 수소문한다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 손씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TOWN_HAPCHEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 임씨",
+      "text": "청자토·참숯을 제대로 고르는 눈이 먼저요. 나주목에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 신안 해저 인양 청자 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 임씨"
+    ]
+   },
+   {
+    "bg": "ND_08_CITY_NAJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 오씨",
+      "text": "신안 해저 인양 청자 비법이라… 그 집안 장인은 신안 해저 무역선으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 신안 해저 인양 청자 비법의 행방을 수소문한다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 오씨"
+    ]
+   },
+   {
+    "bg": "ND_08_WRECK_SINANHAEJEOMUYEOKSEON",
+    "lines": [
+     {
+      "who": "npc:merchant:신안 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:신안 늙은 장인",
+      "text": "신안 해저 인양 청자 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:신안 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 6〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 6
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 125
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 350냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 350
+      },
+      "effects": {
+       "money": -350,
+       "knowledge_xp": {
+        "sang": 50
+       },
+       "flag": "paid:q_rcp_her_125"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 청자토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       },
+       "knowledge_xp": {
+        "gong": 150
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_WRECK_SINANHAEJEOMUYEOKSEON",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【신안 해저 인양 청자 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_138": {
+  "status": "draft",
+  "title": "비전 전수: 압록강 해저 인양 청자",
+  "intro": {
+   "bg": "ND_13_TOWN_JINNAMPO",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 강씨",
+     "text": "압록강 해저 인양 청자 비전서를 잃으셨다고요? 진남포 → 백마산사 → 압록강 하구 침몰선 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_13_TOWN_JINNAMPO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 신씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 백마산사에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 압록강 해저 인양 청자 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 신씨"
+    ]
+   },
+   {
+    "bg": "ND_14_TEMPLE_BAEKMASANSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 법운",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 압록강 하구 침몰선에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(절 마당을 쓸던 동자승이 압록강 해저 인양 청자 비법 이야기를 꺼낸다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 법운"
+    ]
+   },
+   {
+    "bg": "ND_14_WRECK_APROKGANGHAGUCHIMMOLSEON",
+    "lines": [
+     {
+      "who": "npc:merchant:압록강 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:압록강 늙은 장인",
+      "text": "압록강 해저 인양 청자 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:압록강 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:q_rcp_her_138"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 90
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_14_WRECK_APROKGANGHAGUCHIMMOLSEON",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【압록강 해저 인양 청자 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_142": {
+  "status": "draft",
+  "title": "비전 전수: 회령 복원 도자",
+  "intro": {
+   "bg": "ND_16_TOWN_JONGSEONG",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 김씨",
+     "text": "회령 복원 도자 비전서를 잃으셨다고요? 종성 → 회령 오지 가마터 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_16_TOWN_JONGSEONG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 손씨",
+      "text": "회령 복원 도자 비법이라… 그 집안 장인은 회령 오지 가마터로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(촌로의 사랑방에서 회령 복원 도자 비법의 옛일을 묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 손씨"
+    ]
+   },
+   {
+    "bg": "ND_16_RUIN_HOERYEONGOJIGAMATEO",
+    "lines": [
+     {
+      "who": "npc:merchant:회령 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:회령 늙은 장인",
+      "text": "회령 복원 도자 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:회령 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_142"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_RUIN_HOERYEONGOJIGAMATEO",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【회령 복원 도자 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n007": {
+  "status": "draft",
+  "title": "비전 전수: 제주 목관아지 출토 분청사기 재현품",
+  "intro": {
+   "bg": "ND_08_TOWN_DAMYANG",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 박씨",
+     "text": "제주 목관아지 출토 분청사기 재현품 비전서를 잃으셨다고요? 담양 → 관음사 → 제주목 제주읍성 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_08_TOWN_DAMYANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 박씨",
+      "text": "제주 목관아지 출토 분청사기 재현품 비법이라… 그 집안 장인은 관음사로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 제주 목관아지 출토 분청사기 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 박씨"
+    ]
+   },
+   {
+    "bg": "ND_17_TEMPLE_GWANEUMSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 지공",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 제주목 제주읍성에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(절 마당을 쓸던 동자승이 제주 목관아지 출토 분청사기 재현품 비법 이야기를 꺼낸다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 지공"
+    ]
+   },
+   {
+    "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+    "lines": [
+     {
+      "who": "npc:merchant:제주 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:제주 늙은 장인",
+      "text": "제주 목관아지 출토 분청사기 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:제주 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:q_rcp_her_n007"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 90
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【제주 목관아지 출토 분청사기 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n020": {
+  "status": "draft",
+  "title": "비전 전수: 차귀도 해역 침몰선 해저 청자 재현품",
+  "intro": {
+   "bg": "ND_08_TOWN_JINDO",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 전씨",
+     "text": "차귀도 해역 침몰선 해저 청자 재현품 비전서를 잃으셨다고요? 진도 → 대정현 → 차귀도 해역 침몰선 해저 청자 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_08_TOWN_JINDO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 홍씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 대정현에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 차귀도 해역 침몰선 해저 청자 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 홍씨"
+    ]
+   },
+   {
+    "bg": "ND_17_TOWN_DAEJEONGHYEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 임씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 차귀도 해역 침몰선 해저 청자에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 차귀도 해역 침몰선 해저 청자 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 임씨"
+    ]
+   },
+   {
+    "bg": "ND_17_WRECK_CHAGWIDOHAEYEOKCHIMMOLSEONHAEJEOCHEONGJA",
+    "lines": [
+     {
+      "who": "npc:merchant:차귀도 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:차귀도 늙은 장인",
+      "text": "차귀도 해역 침몰선 해저 청자 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:차귀도 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:q_rcp_her_n020"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 90
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_17_WRECK_CHAGWIDOHAEYEOKCHIMMOLSEONHAEJEOCHEONGJA",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【차귀도 해역 침몰선 해저 청자 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n024": {
+  "status": "draft",
+  "title": "비전 전수: 강진 청자 상감운학문 매병 재현품",
+  "intro": {
+   "bg": "ND_07_TOWN_JEONGEUP",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 윤씨",
+     "text": "강진 청자 상감운학문 매병 재현품 비전서를 잃으셨다고요? 정읍 → 강진현 치소 → 강진 청자 상감운학문 매병 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_TOWN_JEONGEUP",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 홍씨",
+      "text": "강진 청자 상감운학문 매병 재현품 비법이라… 그 집안 장인은 강진현 치소로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(촌로의 사랑방에서 강진 청자 상감운학문 매병 재현품 비법의 옛일을 묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 홍씨"
+    ]
+   },
+   {
+    "bg": "ND_08_TOWN_GANGJINHYEONCHISO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 홍씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 강진 청자 상감운학문 매병에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 강진 청자 상감운학문 매병 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 홍씨"
+    ]
+   },
+   {
+    "bg": "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG",
+    "lines": [
+     {
+      "who": "npc:merchant:강진 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:강진 늙은 장인",
+      "text": "강진 청자 상감운학문 매병 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:강진 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 5〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 100
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_rcp_her_n024"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 청자토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       },
+       "knowledge_xp": {
+        "gong": 120
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【강진 청자 상감운학문 매병 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n030": {
+  "status": "draft",
+  "title": "비전 전수: 진도 용장산성 행궁터 유물 재현품",
+  "intro": {
+   "bg": "ND_17_TOWN_DAEJEONGHYEON",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 오씨",
+     "text": "진도 용장산성 행궁터 유물 재현품 비전서를 잃으셨다고요? 대정현 → 진도 → 진도 용장산성 행궁지 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_17_TOWN_DAEJEONGHYEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 임씨",
+      "text": "진도 용장산성 행궁터 유물 재현품 비법이라… 그 집안 장인은 진도로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 진도 용장산성 행궁터 유물 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 임씨"
+    ]
+   },
+   {
+    "bg": "ND_08_TOWN_JINDO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 박씨",
+      "text": "진도 용장산성 행궁터 유물 재현품 비법이라… 그 집안 장인은 진도 용장산성 행궁지로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(촌로의 사랑방에서 진도 용장산성 행궁터 유물 재현품 비법의 옛일을 묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 박씨"
+    ]
+   },
+   {
+    "bg": "ND_08_FORT_JINDOYONGJANGSANSEONGHAENGGUNGJI",
+    "lines": [
+     {
+      "who": "npc:merchant:진도 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:진도 늙은 장인",
+      "text": "진도 용장산성 행궁터 유물 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:진도 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:q_rcp_her_n030"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 90
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_FORT_JINDOYONGJANGSANSEONGHAENGGUNGJI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【진도 용장산성 행궁터 유물 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n032": {
+  "status": "draft",
+  "title": "비전 전수: 강진 사당리 고려청자 요지 비색발 재현품",
+  "intro": {
+   "bg": "ND_07_TOWN_JEONGEUP",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 박씨",
+     "text": "강진 사당리 고려청자 요지 비색발 재현품 비전서를 잃으셨다고요? 정읍 → 장흥도호부 치소 → 강진 청자 상감운학문 매병 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_TOWN_JEONGEUP",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 손씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 장흥도호부 치소에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(촌로의 사랑방에서 강진 사당리 고려청자 요지 비색발 재현품 비법의 옛일을 묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 손씨"
+    ]
+   },
+   {
+    "bg": "ND_08_TOWN_JANGHEUNGDOHOBUCHISO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 강씨",
+      "text": "강진 사당리 고려청자 요지 비색발 재현품 비법이라… 그 집안 장인은 강진 청자 상감운학문 매병으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 강진 사당리 고려청자 요지 비색발 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 강씨"
+    ]
+   },
+   {
+    "bg": "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG",
+    "lines": [
+     {
+      "who": "npc:merchant:강진 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:강진 늙은 장인",
+      "text": "강진 사당리 고려청자 요지 비색발 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:강진 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:q_rcp_her_n032"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 90
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【강진 사당리 고려청자 요지 비색발 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n054": {
+  "status": "draft",
+  "title": "비전 전수: 광양 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_08_CITY_SUNCHEONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 문씨",
+     "text": "광양 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 순천도호부 → 광양현 치소 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_08_CITY_SUNCHEONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 임씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 광양현 치소에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 광양 고려청자 가마터 출토 명품완 재현품 비법의 자취를 찾는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 임씨"
+    ]
+   },
+   {
+    "bg": "ND_08_TOWN_GWANGYANGHYEONCHISO",
+    "lines": [
+     {
+      "who": "npc:merchant:광양 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:광양 늙은 장인",
+      "text": "광양 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:광양 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n054"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_TOWN_GWANGYANGHYEONCHISO",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【광양 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n061": {
+  "status": "draft",
+  "title": "비전 전수: 순천 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_08_CITY_SUNCHEONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 권씨",
+     "text": "순천 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 순천도호부 → 순천 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_08_CITY_SUNCHEONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 윤씨",
+      "text": "순천 도요지 백자 청화항아리 재현품 비법이라… 그 집안 장인은 순천 도요지 백자 청화항아리로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 순천 도요지 백자 청화항아리 재현품 비법의 자취를 찾는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 윤씨"
+    ]
+   },
+   {
+    "bg": "ND_08_SCENIC_SUNCHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:순천 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:순천 늙은 장인",
+      "text": "순천 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:순천 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n061"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_SCENIC_SUNCHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【순천 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n067": {
+  "status": "draft",
+  "title": "비전 전수: 동래 동삼동 패총 융기문토기 재현품",
+  "intro": {
+   "bg": "ND_07_CITY_NAMWONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 정씨",
+     "text": "동래 동삼동 패총 융기문토기 재현품 비전서를 잃으셨다고요? 남원도호부 → 김해 → 동래 동삼동 패총 융기문토기 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_CITY_NAMWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 한씨",
+      "text": "청자토·참숯을 제대로 고르는 눈이 먼저요. 김해에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 동래 동삼동 패총 융기문토기 재현품 비법 이야기를 캐묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 한씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TOWN_GIMHAE",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 윤씨",
+      "text": "동래 동삼동 패총 융기문토기 재현품 비법이라… 그 집안 장인은 동래 동삼동 패총 융기문토기로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 동래 동삼동 패총 융기문토기 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 윤씨"
+    ]
+   },
+   {
+    "bg": "ND_10_TOMB_DONGRAEDONGSAMDONGPAECHONGYUNGGIMUNTOGI",
+    "lines": [
+     {
+      "who": "npc:merchant:동래 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:동래 늙은 장인",
+      "text": "동래 동삼동 패총 융기문토기 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:동래 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 5〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 5
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 100
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 170냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 170
+      },
+      "effects": {
+       "money": -170,
+       "knowledge_xp": {
+        "sang": 40
+       },
+       "flag": "paid:q_rcp_her_n067"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 청자토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_celadon_clay": 3,
+        "mat_charcoal": 5
+       },
+       "knowledge_xp": {
+        "gong": 120
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_10_TOMB_DONGRAEDONGSAMDONGPAECHONGYUNGGIMUNTOGI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【동래 동삼동 패총 융기문토기 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n074": {
+  "status": "draft",
+  "title": "비전 전수: 동래 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_10_BEACON_DONGRAEHWANGRYEONGSANBONGSU",
+   "lines": [
+    {
+     "who": "npc:soldier:봉수군 강씨",
+     "text": "동래 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 동래 황령산 봉수 → 동래 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_10_BEACON_DONGRAEHWANGRYEONGSANBONGSU",
+    "lines": [
+     {
+      "who": "npc:soldier:봉수군 고씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 동래 고려청자 가마터 출토 명품완에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(봉수군이 봉화대에서 본 동래 고려청자 가마터 출토 명품완 재현품 비법 이야기를 전한다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:soldier:봉수군 고씨"
+    ]
+   },
+   {
+    "bg": "ND_10_SCENIC_DONGRAEGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:동래 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:동래 늙은 장인",
+      "text": "동래 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:동래 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n074"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_10_SCENIC_DONGRAEGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【동래 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n081": {
+  "status": "draft",
+  "title": "비전 전수: 나주 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_08_CITY_GWANGJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 최씨",
+     "text": "나주 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 광주목 → 나주 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_08_CITY_GWANGJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 배씨",
+      "text": "나주 도요지 백자 청화항아리 재현품 비법이라… 그 집안 장인은 나주 도요지 백자 청화항아리로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 나주 도요지 백자 청화항아리 재현품 비법 이야기를 캐묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 배씨"
+    ]
+   },
+   {
+    "bg": "ND_08_RUIN_NAJUDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:나주 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:나주 늙은 장인",
+      "text": "나주 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:나주 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n081"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_08_RUIN_NAJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【나주 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n094": {
+  "status": "draft",
+  "title": "비전 전수: 남원 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_07_TEMPLE_GEUMSANSA",
+   "lines": [
+    {
+     "who": "npc:monk:노승 도안",
+     "text": "남원 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 금산사 → 남원 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_TEMPLE_GEUMSANSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 선각",
+      "text": "남원 고려청자 가마터 출토 명품완 재현품 비법이라… 그 집안 장인은 남원 고려청자 가마터 출토 명품완으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(노승에게 남원 고려청자 가마터 출토 명품완 재현품 비법에 얽힌 인연을 여쭙는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 선각"
+    ]
+   },
+   {
+    "bg": "ND_07_SCENIC_NAMWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:남원 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:남원 늙은 장인",
+      "text": "남원 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:남원 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n094"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_SCENIC_NAMWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【남원 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n101": {
+  "status": "draft",
+  "title": "비전 전수: 경주 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_09_TOWN_YEONGILHYEONJANGGIJINPOHANG",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 임씨",
+     "text": "경주 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 영일현 장기진(포항) → 경주 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_TOWN_YEONGILHYEONJANGGIJINPOHANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 장씨",
+      "text": "경주 도요지 백자 청화항아리 재현품 비법이라… 그 집안 장인은 경주 도요지 백자 청화항아리로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 경주 도요지 백자 청화항아리 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 장씨"
+    ]
+   },
+   {
+    "bg": "ND_09_SCENIC_GYEONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:경주 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:경주 늙은 장인",
+      "text": "경주 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:경주 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n101"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_09_SCENIC_GYEONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【경주 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n115": {
+  "status": "draft",
+  "title": "비전 전수: 영일 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_09_TEMPLE_BULGUKSA",
+   "lines": [
+    {
+     "who": "npc:monk:노승 원명",
+     "text": "영일 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 불국사 → 영일 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_TEMPLE_BULGUKSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 무진",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 영일 고려청자 가마터 출토 명품완에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(법당 뒤 오래된 기록에서 영일 고려청자 가마터 출토 명품완 재현품 비법의 이름을 찾는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 무진"
+    ]
+   },
+   {
+    "bg": "ND_09_SCENIC_YEONGILGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:영일 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:영일 늙은 장인",
+      "text": "영일 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:영일 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n115"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_09_SCENIC_YEONGILGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【영일 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n122": {
+  "status": "draft",
+  "title": "비전 전수: 전주 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_07_TEMPLE_GEUMSANSA",
+   "lines": [
+    {
+     "who": "npc:monk:노승 선각",
+     "text": "전주 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 금산사 → 전주 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_07_TEMPLE_GEUMSANSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 무진",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 전주 도요지 백자 청화항아리에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(노승에게 전주 도요지 백자 청화항아리 재현품 비법에 얽힌 인연을 여쭙는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 무진"
+    ]
+   },
+   {
+    "bg": "ND_07_SCENIC_JEONJUDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:전주 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:전주 늙은 장인",
+      "text": "전주 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:전주 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n122"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_07_SCENIC_JEONJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【전주 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n135": {
+  "status": "draft",
+  "title": "비전 전수: 안동 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_09_TOWN_CHEONGSONG",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 문씨",
+     "text": "안동 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 청송 → 안동대도호부 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_TOWN_CHEONGSONG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 최씨",
+      "text": "안동 고려청자 가마터 출토 명품완 재현품 비법이라… 그 집안 장인은 안동대도호부로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 안동 고려청자 가마터 출토 명품완 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 최씨"
+    ]
+   },
+   {
+    "bg": "ND_09_CITY_ANDONGDAEDOHOBU",
+    "lines": [
+     {
+      "who": "npc:merchant:안동 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:안동 늙은 장인",
+      "text": "안동 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:안동 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n135"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【안동 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n142": {
+  "status": "draft",
+  "title": "비전 전수: 공주 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_06_TEMPLE_MAGOKSA",
+   "lines": [
+    {
+     "who": "npc:monk:노승 원명",
+     "text": "공주 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 마곡사 → 공주 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_06_TEMPLE_MAGOKSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 무진",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 공주 도요지 백자 청화항아리에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(법당 뒤 오래된 기록에서 공주 도요지 백자 청화항아리 재현품 비법의 이름을 찾는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 무진"
+    ]
+   },
+   {
+    "bg": "ND_06_SCENIC_GONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:공주 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:공주 늙은 장인",
+      "text": "공주 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:공주 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n142"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_06_SCENIC_GONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【공주 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n156": {
+  "status": "draft",
+  "title": "비전 전수: 영주 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_09_TOWN_YEONGJU",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 서씨",
+     "text": "영주 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 영주 → 영주 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_09_TOWN_YEONGJU",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 조씨",
+      "text": "영주 고려청자 가마터 출토 명품완 재현품 비법이라… 그 집안 장인은 영주 고려청자 가마터 출토 명품완으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 영주 고려청자 가마터 출토 명품완 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 조씨"
+    ]
+   },
+   {
+    "bg": "ND_09_SCENIC_YEONGJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:영주 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:영주 늙은 장인",
+      "text": "영주 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:영주 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n156"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_09_SCENIC_YEONGJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【영주 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n163": {
+  "status": "draft",
+  "title": "비전 전수: 청주 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_05_TOWN_OKCHEON",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 송씨",
+     "text": "청주 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 옥천 → 청주 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_05_TOWN_OKCHEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 조씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 청주 도요지 백자 청화항아리에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 청주 도요지 백자 청화항아리 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 조씨"
+    ]
+   },
+   {
+    "bg": "ND_05_SCENIC_CHEONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:청주 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:청주 늙은 장인",
+      "text": "청주 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:청주 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n163"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_05_SCENIC_CHEONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【청주 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n176": {
+  "status": "draft",
+  "title": "비전 전수: 단양 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_05_TOWN_JECHEON",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 박씨",
+     "text": "단양 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 제천 → 단양 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_05_TOWN_JECHEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 송씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 단양 고려청자 가마터 출토 명품완에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(촌로의 사랑방에서 단양 고려청자 가마터 출토 명품완 재현품 비법의 옛일을 묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 송씨"
+    ]
+   },
+   {
+    "bg": "ND_05_RUIN_DANYANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:단양 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:단양 늙은 장인",
+      "text": "단양 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:단양 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n176"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_05_RUIN_DANYANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【단양 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n183": {
+  "status": "draft",
+  "title": "비전 전수: 원주 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_04_TOWN_PYEONGCHANG",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 권씨",
+     "text": "원주 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 평창 → 원주 강원감영 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_04_TOWN_PYEONGCHANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 고씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 원주 강원감영에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 원주 도요지 백자 청화항아리 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 고씨"
+    ]
+   },
+   {
+    "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:merchant:원주 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:원주 늙은 장인",
+      "text": "원주 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:원주 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n183"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【원주 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n196": {
+  "status": "draft",
+  "title": "비전 전수: 여주 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_02_TOWN_ICHEON",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 장씨",
+     "text": "여주 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 이천 → 여주 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_TOWN_ICHEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 손씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 여주 고려청자 가마터 출토 명품완에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(촌로의 사랑방에서 여주 고려청자 가마터 출토 명품완 재현품 비법의 옛일을 묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 손씨"
+    ]
+   },
+   {
+    "bg": "ND_02_SCENIC_YEOJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:여주 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:여주 늙은 장인",
+      "text": "여주 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:여주 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n196"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_SCENIC_YEOJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【여주 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n203": {
+  "status": "draft",
+  "title": "비전 전수: 남양 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_02_CITY_SUWONHWASEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 장씨",
+     "text": "남양 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 수원화성 → 남양 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_02_CITY_SUWONHWASEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 윤씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 남양 도요지 백자 청화항아리에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 남양 도요지 백자 청화항아리 재현품 비법 이야기를 캐묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 윤씨"
+    ]
+   },
+   {
+    "bg": "ND_02_SCENIC_NAMYANGDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:남양 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:남양 늙은 장인",
+      "text": "남양 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:남양 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n203"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_02_SCENIC_NAMYANGDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【남양 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n216": {
+  "status": "draft",
+  "title": "비전 전수: 개성 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_01_TOWN_MUNSANPOGU",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 손씨",
+     "text": "개성 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 문산포구 → 개성 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_01_TOWN_MUNSANPOGU",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 권씨",
+      "text": "개성 고려청자 가마터 출토 명품완 재현품 비법이라… 그 집안 장인은 개성 고려청자 가마터 출토 명품완으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 개성 고려청자 가마터 출토 명품완 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 권씨"
+    ]
+   },
+   {
+    "bg": "ND_01_SCENIC_GAESEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:개성 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:개성 늙은 장인",
+      "text": "개성 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:개성 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n216"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_01_SCENIC_GAESEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【개성 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n223": {
+  "status": "draft",
+  "title": "비전 전수: 강화 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_01_TEMPLE_JEONDEUNGSA",
+   "lines": [
+    {
+     "who": "npc:monk:노승 원명",
+     "text": "강화 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 전등사 → 강화 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_01_TEMPLE_JEONDEUNGSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 도안",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 강화 도요지 백자 청화항아리에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(절 마당을 쓸던 동자승이 강화 도요지 백자 청화항아리 재현품 비법 이야기를 꺼낸다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 도안"
+    ]
+   },
+   {
+    "bg": "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:강화 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:강화 늙은 장인",
+      "text": "강화 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:강화 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n223"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【강화 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n232": {
+  "status": "draft",
+  "title": "비전 전수: 철원 궁예 태봉국 철원도성 금와 재현품",
+  "intro": {
+   "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "lines": [
+    {
+     "who": "npc:official:아전 임씨",
+     "text": "철원 궁예 태봉국 철원도성 금와 재현품 비전서를 잃으셨다고요? 원주 강원감영 → 철원도호부 치소 → 철원 궁예 태봉국 철원도성 금와 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+    "lines": [
+     {
+      "who": "npc:official:아전 최씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 철원도호부 치소에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 철원 궁예 태봉국 철원도성 금와 재현품 비법의 자취를 찾는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 최씨"
+    ]
+   },
+   {
+    "bg": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+    "lines": [
+     {
+      "who": "npc:official:아전 조씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 철원 궁예 태봉국 철원도성 금와에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 철원 궁예 태봉국 철원도성 금와 재현품 비법의 행방을 수소문한다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 조씨"
+    ]
+   },
+   {
+    "bg": "ND_03_SCENIC_CHEOLWONGUNGYETAEBONGGUKCHEOLWONDOSEONGGEUMWA",
+    "lines": [
+     {
+      "who": "npc:merchant:철원 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:철원 늙은 장인",
+      "text": "철원 궁예 태봉국 철원도성 금와 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:철원 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:q_rcp_her_n232"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 90
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_03_SCENIC_CHEOLWONGUNGYETAEBONGGUKCHEOLWONDOSEONGGEUMWA",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【철원 궁예 태봉국 철원도성 금와 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n237": {
+  "status": "draft",
+  "title": "비전 전수: 인제 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_03_TOWN_YANGGU",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 윤씨",
+     "text": "인제 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 양구 → 인제현 백담사 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_03_TOWN_YANGGU",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 박씨",
+      "text": "인제 고려청자 가마터 출토 명품완 재현품 비법이라… 그 집안 장인은 인제현 백담사로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 인제 고려청자 가마터 출토 명품완 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 박씨"
+    ]
+   },
+   {
+    "bg": "ND_03_TOWN_INJEHYEONBAEKDAMSA",
+    "lines": [
+     {
+      "who": "npc:merchant:인제 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:인제 늙은 장인",
+      "text": "인제 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:인제 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n237"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_03_TOWN_INJEHYEONBAEKDAMSA",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【인제 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n244": {
+  "status": "draft",
+  "title": "비전 전수: 철원 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_03_CITY_CHEOLWONDOHOBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 김씨",
+     "text": "철원 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 철원도호부 → 철원도호부 치소 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_03_CITY_CHEOLWONDOHOBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 고씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 철원도호부 치소에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(관아 아전에게 철원 도요지 백자 청화항아리 재현품 비법의 행방을 수소문한다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 고씨"
+    ]
+   },
+   {
+    "bg": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+    "lines": [
+     {
+      "who": "npc:merchant:철원 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:철원 늙은 장인",
+      "text": "철원 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:철원 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n244"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【철원 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n257": {
+  "status": "draft",
+  "title": "비전 전수: 평강 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+   "lines": [
+    {
+     "who": "npc:official:아전 신씨",
+     "text": "평강 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 철원도호부 치소 → 평강 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+    "lines": [
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 평강 고려청자 가마터 출토 명품완에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 평강 고려청자 가마터 출토 명품완 재현품 비법 이야기를 캐묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 안씨"
+    ]
+   },
+   {
+    "bg": "ND_03_SCENIC_PYEONGGANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:평강 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:평강 늙은 장인",
+      "text": "평강 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:평강 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n257"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_03_SCENIC_PYEONGGANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【평강 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n264": {
+  "status": "draft",
+  "title": "비전 전수: 통천 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_03_TOWN_TONGCHEON",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 배씨",
+     "text": "통천 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 통천 → 통천 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_03_TOWN_TONGCHEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 윤씨",
+      "text": "통천 도요지 백자 청화항아리 재현품 비법이라… 그 집안 장인은 통천 도요지 백자 청화항아리로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 통천 도요지 백자 청화항아리 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 윤씨"
+    ]
+   },
+   {
+    "bg": "ND_03_RUIN_TONGCHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:통천 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:통천 늙은 장인",
+      "text": "통천 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:통천 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n264"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_03_RUIN_TONGCHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【통천 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n277": {
+  "status": "draft",
+  "title": "비전 전수: 신천 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_12_TOWN_SINCHEONGUNGUWOLSANCHISO",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 정씨",
+     "text": "신천 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 신천군 구월산 치소 → 신천 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_12_TOWN_SINCHEONGUNGUWOLSANCHISO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 오씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 신천 고려청자 가마터 출토 명품완에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 신천 고려청자 가마터 출토 명품완 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 오씨"
+    ]
+   },
+   {
+    "bg": "ND_12_SCENIC_SINCHEONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:신천 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:신천 늙은 장인",
+      "text": "신천 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:신천 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n277"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_12_SCENIC_SINCHEONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【신천 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n284": {
+  "status": "draft",
+  "title": "비전 전수: 옹진 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_15_TOWN_GOWON",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 류씨",
+     "text": "옹진 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 고원 → 옹진 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_TOWN_GOWON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 최씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 옹진 도요지 백자 청화항아리에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 옹진 도요지 백자 청화항아리 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 최씨"
+    ]
+   },
+   {
+    "bg": "ND_15_SCENIC_ONGJINDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:옹진 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:옹진 늙은 장인",
+      "text": "옹진 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:옹진 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n284"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_15_SCENIC_ONGJINDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【옹진 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n292": {
+  "status": "draft",
+  "title": "비전 전수: 평양 안학궁터 고구려 수막새 재현품",
+  "intro": {
+   "bg": "ND_12_TOWN_ONGJIN",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 안씨",
+     "text": "평양 안학궁터 고구려 수막새 재현품 비전서를 잃으셨다고요? 옹진 → 을밀대 → 평양 을밀대 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_12_TOWN_ONGJIN",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 권씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 을밀대에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 평양 안학궁터 고구려 수막새 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 권씨"
+    ]
+   },
+   {
+    "bg": "ND_13_SCENIC_EULMILDAE",
+    "lines": [
+     {
+      "who": "npc:traveler:유람객 배씨",
+      "text": "평양 안학궁터 고구려 수막새 재현품 비법이라… 그 집안 장인은 평양 을밀대로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(경치를 즐기던 유람객이 평양 안학궁터 고구려 수막새 재현품 비법 이야기를 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:traveler:유람객 배씨"
+    ]
+   },
+   {
+    "bg": "ND_13_SCENIC_PYEONGYANGEULMILDAE",
+    "lines": [
+     {
+      "who": "npc:merchant:평양 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:평양 늙은 장인",
+      "text": "평양 안학궁터 고구려 수막새 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:평양 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:q_rcp_her_n292"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 90
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_13_SCENIC_PYEONGYANGEULMILDAE",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【평양 안학궁터 고구려 수막새 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n297": {
+  "status": "draft",
+  "title": "비전 전수: 안변 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_15_TOWN_ANBYEONDOHOBUCHISO",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 신씨",
+     "text": "안변 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 안변도호부 치소 → 안변 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_TOWN_ANBYEONDOHOBUCHISO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 장씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 안변 고려청자 가마터 출토 명품완에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 안변 고려청자 가마터 출토 명품완 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 장씨"
+    ]
+   },
+   {
+    "bg": "ND_15_SCENIC_ANBYEONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:안변 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:안변 늙은 장인",
+      "text": "안변 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:안변 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n297"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_15_SCENIC_ANBYEONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【안변 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n304": {
+  "status": "draft",
+  "title": "비전 전수: 덕원 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_15_TEMPLE_SEOKWANGSA",
+   "lines": [
+    {
+     "who": "npc:monk:노승 혜명",
+     "text": "덕원 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 석왕사 → 덕원 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_TEMPLE_SEOKWANGSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 월조",
+      "text": "덕원 도요지 백자 청화항아리 재현품 비법이라… 그 집안 장인은 덕원 도요지 백자 청화항아리로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(법당 뒤 오래된 기록에서 덕원 도요지 백자 청화항아리 재현품 비법의 이름을 찾는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 월조"
+    ]
+   },
+   {
+    "bg": "ND_15_SCENIC_DEOKWONDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:덕원 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:덕원 늙은 장인",
+      "text": "덕원 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:덕원 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n304"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_15_SCENIC_DEOKWONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【덕원 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n318": {
+  "status": "draft",
+  "title": "비전 전수: 함흥 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_15_BEACON_HAMHEUNGBONGSU",
+   "lines": [
+    {
+     "who": "npc:soldier:봉수군 이씨",
+     "text": "함흥 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 함흥 봉수 → 함흥 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_BEACON_HAMHEUNGBONGSU",
+    "lines": [
+     {
+      "who": "npc:soldier:봉수군 황씨",
+      "text": "함흥 고려청자 가마터 출토 명품완 재현품 비법이라… 그 집안 장인은 함흥 고려청자 가마터 출토 명품완으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(봉수군이 봉화대에서 본 함흥 고려청자 가마터 출토 명품완 재현품 비법 이야기를 전한다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:soldier:봉수군 황씨"
+    ]
+   },
+   {
+    "bg": "ND_15_SCENIC_HAMHEUNGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:함흥 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:함흥 늙은 장인",
+      "text": "함흥 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:함흥 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n318"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_15_SCENIC_HAMHEUNGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【함흥 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n325": {
+  "status": "draft",
+  "title": "비전 전수: 함흥 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_15_TOWN_MUNCHEON",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 장씨",
+     "text": "함흥 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 문천 → 함흥 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_TOWN_MUNCHEON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 류씨",
+      "text": "백토·참숯을 제대로 고르는 눈이 먼저요. 함흥 도요지 백자 청화항아리에 가 보시오."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 함흥 도요지 백자 청화항아리 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 류씨"
+    ]
+   },
+   {
+    "bg": "ND_15_SCENIC_HAMHEUNGDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:함흥 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:함흥 늙은 장인",
+      "text": "함흥 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:함흥 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n325"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_15_SCENIC_HAMHEUNGDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【함흥 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n338": {
+  "status": "draft",
+  "title": "비전 전수: 홍원 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_15_CITY_HAMHEUNGBU",
+   "lines": [
+    {
+     "who": "npc:official:아전 이씨",
+     "text": "홍원 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 함흥부 → 홍원 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_CITY_HAMHEUNGBU",
+    "lines": [
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 홍원 고려청자 가마터 출토 명품완에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(읍성 관문 기록을 뒤져 홍원 고려청자 가마터 출토 명품완 재현품 비법의 자취를 찾는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 안씨"
+    ]
+   },
+   {
+    "bg": "ND_15_SCENIC_HONGWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:홍원 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:홍원 늙은 장인",
+      "text": "홍원 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:홍원 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n338"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_15_SCENIC_HONGWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【홍원 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n345": {
+  "status": "draft",
+  "title": "비전 전수: 희천 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+   "lines": [
+    {
+     "who": "npc:monk:노승 혜명",
+     "text": "희천 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 묘향산 보현사 → 희천 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_13_TEMPLE_MYOHYANGSANBOHYEONSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 도안",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 희천 도요지 백자 청화항아리에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(법당 뒤 오래된 기록에서 희천 도요지 백자 청화항아리 재현품 비법의 이름을 찾는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 도안"
+    ]
+   },
+   {
+    "bg": "ND_13_SCENIC_HUICHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:희천 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:희천 늙은 장인",
+      "text": "희천 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:희천 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n345"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_13_SCENIC_HUICHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【희천 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n358": {
+  "status": "draft",
+  "title": "비전 전수: 북청 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_15_TOWN_HONGWONHYEONPOGU",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 안씨",
+     "text": "북청 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 홍원현 포구 → 북청 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_TOWN_HONGWONHYEONPOGU",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 조씨",
+      "text": "북청 고려청자 가마터 출토 명품완 재현품 비법이라… 그 집안 장인은 북청 고려청자 가마터 출토 명품완으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 북청 고려청자 가마터 출토 명품완 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 조씨"
+    ]
+   },
+   {
+    "bg": "ND_15_SCENIC_BUKCHEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:북청 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:북청 늙은 장인",
+      "text": "북청 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:북청 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n358"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_15_SCENIC_BUKCHEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【북청 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n365": {
+  "status": "draft",
+  "title": "비전 전수: 선천 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_14_TEMPLE_BAEKMASANSA",
+   "lines": [
+    {
+     "who": "npc:monk:노승 선각",
+     "text": "선천 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 백마산사 → 선천도호부 동림산성 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_14_TEMPLE_BAEKMASANSA",
+    "lines": [
+     {
+      "who": "npc:monk:노승 혜명",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 선천도호부 동림산성에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(절 마당을 쓸던 동자승이 선천 도요지 백자 청화항아리 재현품 비법 이야기를 꺼낸다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:monk:노승 혜명"
+    ]
+   },
+   {
+    "bg": "ND_14_TOWN_SEONCHEONDOHOBUDONGRIMSANSEONG",
+    "lines": [
+     {
+      "who": "npc:merchant:선천 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:선천 늙은 장인",
+      "text": "선천 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:선천 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n365"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_14_TOWN_SEONCHEONDOHOBUDONGRIMSANSEONG",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【선천 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n378": {
+  "status": "draft",
+  "title": "비전 전수: 길주 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_16_CITY_GILJUMOK",
+   "lines": [
+    {
+     "who": "npc:official:아전 고씨",
+     "text": "길주 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 길주목 → 길주 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_16_CITY_GILJUMOK",
+    "lines": [
+     {
+      "who": "npc:official:아전 안씨",
+      "text": "길주 고려청자 가마터 출토 명품완 재현품 비법이라… 그 집안 장인은 길주 고려청자 가마터 출토 명품완으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(장터 객주들 사이에서 길주 고려청자 가마터 출토 명품완 재현품 비법 이야기를 캐묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:official:아전 안씨"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_GILJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:길주 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:길주 늙은 장인",
+      "text": "길주 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:길주 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n378"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_GILJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【길주 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n385": {
+  "status": "draft",
+  "title": "비전 전수: 초산 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_14_TOWN_SAKJU",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 최씨",
+     "text": "초산 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 삭주 → 초산 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_14_TOWN_SAKJU",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 손씨",
+      "text": "초산 도요지 백자 청화항아리 재현품 비법이라… 그 집안 장인은 초산 도요지 백자 청화항아리로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 초산 도요지 백자 청화항아리 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 손씨"
+    ]
+   },
+   {
+    "bg": "ND_14_SCENIC_CHOSANDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:초산 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:초산 늙은 장인",
+      "text": "초산 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:초산 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n385"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_14_SCENIC_CHOSANDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【초산 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n395": {
+  "status": "draft",
+  "title": "비전 전수: 경성 온천 도요지 고려 흑유자기 재현품",
+  "intro": {
+   "bg": "ND_16_TOWN_MUSANJINSOEDOLGWANG",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 김씨",
+     "text": "경성 온천 도요지 고려 흑유자기 재현품 비전서를 잃으셨다고요? 무산진 쇠돌광 → 경성 온천 도요지 고려 흑유자기 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_16_TOWN_MUSANJINSOEDOLGWANG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 손씨",
+      "text": "경성 온천 도요지 고려 흑유자기 재현품 비법이라… 그 집안 장인은 경성 온천 도요지 고려 흑유자기로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 경성 온천 도요지 고려 흑유자기 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 손씨"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_GYEONGSEONGONCHEONDOYOJIGORYEOHEUKYUJAGI",
+    "lines": [
+     {
+      "who": "npc:merchant:경성 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:경성 늙은 장인",
+      "text": "경성 온천 도요지 고려 흑유자기 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:경성 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n395"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_GYEONGSEONGONCHEONDOYOJIGORYEOHEUKYUJAGI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【경성 온천 도요지 고려 흑유자기 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n399": {
+  "status": "draft",
+  "title": "비전 전수: 갑산 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_15_TOWN_GAPSANDOHOBUCHISO",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 임씨",
+     "text": "갑산 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 갑산도호부 치소 → 갑산 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_TOWN_GAPSANDOHOBUCHISO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 문씨",
+      "text": "갑산 고려청자 가마터 출토 명품완 재현품 비법이라… 그 집안 장인은 갑산 고려청자 가마터 출토 명품완으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(촌로의 사랑방에서 갑산 고려청자 가마터 출토 명품완 재현품 비법의 옛일을 묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 문씨"
+    ]
+   },
+   {
+    "bg": "ND_15_SCENIC_GAPSANGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:갑산 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:갑산 늙은 장인",
+      "text": "갑산 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:갑산 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n399"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_15_SCENIC_GAPSANGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【갑산 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n406": {
+  "status": "draft",
+  "title": "비전 전수: 삼수 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_16_TOWN_HYESANJINGWANBANGMANGRU",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 이씨",
+     "text": "삼수 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 혜산진 관방망루 → 삼수 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_16_TOWN_HYESANJINGWANBANGMANGRU",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 한씨",
+      "text": "삼수 도요지 백자 청화항아리 재현품 비법이라… 그 집안 장인은 삼수 도요지 백자 청화항아리로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 삼수 도요지 백자 청화항아리 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 한씨"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_SAMSUDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:삼수 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:삼수 늙은 장인",
+      "text": "삼수 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:삼수 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n406"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_SAMSUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【삼수 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n408": {
+  "status": "draft",
+  "title": "비전 전수: 무산 오진리 원시 주거지 빗살무늬토기 재현품",
+  "intro": {
+   "bg": "ND_15_TOWN_IWONHYEONMAUNRYEONGCHISO",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 오씨",
+     "text": "무산 오진리 원시 주거지 빗살무늬토기 재현품 비전서를 잃으셨다고요? 이원현 마운령 치소 → 부령 → 무산 오진리 원시 주거지 빗살무늬토기 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_15_TOWN_IWONHYEONMAUNRYEONGCHISO",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 최씨",
+      "text": "무산 오진리 원시 주거지 빗살무늬토기 재현품 비법이라… 그 집안 장인은 부령으로 옮겨 갔소."
+     },
+     {
+      "who": "hero",
+      "text": "(우물가 아낙들이 무산 오진리 원시 주거지 빗살무늬토기 재현품 비법에 얽힌 소문을 들려준다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 최씨"
+    ]
+   },
+   {
+    "bg": "ND_16_TOWN_BURYEONG",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 문씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 무산 오진리 원시 주거지 빗살무늬토기에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 무산 오진리 원시 주거지 빗살무늬토기 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 문씨"
+    ]
+   },
+   {
+    "bg": "ND_16_TOMB_MUSANOJINRIWONSIJUGEOJIBITSALMUNUITOGI",
+    "lines": [
+     {
+      "who": "npc:merchant:무산 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:무산 늙은 장인",
+      "text": "무산 오진리 원시 주거지 빗살무늬토기 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:무산 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 4〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 4
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 75
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 80냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 80
+      },
+      "effects": {
+       "money": -80,
+       "knowledge_xp": {
+        "sang": 30
+       },
+       "flag": "paid:q_rcp_her_n408"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 90
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_TOMB_MUSANOJINRIWONSIJUGEOJIBITSALMUNUITOGI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【무산 오진리 원시 주거지 빗살무늬토기 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n419": {
+  "status": "draft",
+  "title": "비전 전수: 부령 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_16_SEOWON_GYEONGSEONGSANSINGAKMAAECHILSEONGDO",
+   "lines": [
+    {
+     "who": "npc:scholar:유생 전씨",
+     "text": "부령 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 경성 산신각 마애칠성도 → 부령 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_16_SEOWON_GYEONGSEONGSANSINGAKMAAECHILSEONGDO",
+    "lines": [
+     {
+      "who": "npc:scholar:유생 한씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 부령 고려청자 가마터 출토 명품완에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(서원 장서각에서 부령 고려청자 가마터 출토 명품완 재현품 비법의 기록을 찾는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:scholar:유생 한씨"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_BURYEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:부령 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:부령 늙은 장인",
+      "text": "부령 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:부령 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n419"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_BURYEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【부령 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n426": {
+  "status": "draft",
+  "title": "비전 전수: 무산 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_16_SHRINE_CHEONGJINEORANGCHEONEORODOGU",
+   "lines": [
+    {
+     "who": "npc:shaman:연화 만신",
+     "text": "무산 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 청진 어랑천 어로 도구 → 무산 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_16_SHRINE_CHEONGJINEORANGCHEONEORODOGU",
+    "lines": [
+     {
+      "who": "npc:shaman:달래 무녀",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 무산 도요지 백자 청화항아리에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(무녀가 방울을 흔들며 무산 도요지 백자 청화항아리 재현품 비법의 행방을 점친다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:shaman:달래 무녀"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_MUSANDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:무산 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:무산 늙은 장인",
+      "text": "무산 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:무산 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n426"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_MUSANDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【무산 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n439": {
+  "status": "draft",
+  "title": "비전 전수: 경원 고려청자 가마터 출토 명품완 재현품",
+  "intro": {
+   "bg": "ND_16_TOWN_GYEONGWON",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 안씨",
+     "text": "경원 고려청자 가마터 출토 명품완 재현품 비전서를 잃으셨다고요? 경원 → 경원 고려청자 가마터 출토 명품완 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_16_TOWN_GYEONGWON",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 정씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 경원 고려청자 가마터 출토 명품완에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(마을 어귀 정자나무 아래서 경원 고려청자 가마터 출토 명품완 재현품 비법 이야기를 듣는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 정씨"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_GYEONGWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+    "lines": [
+     {
+      "who": "npc:merchant:경원 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:경원 늙은 장인",
+      "text": "경원 고려청자 가마터 출토 명품완 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:경원 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 3〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 3
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 50
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 40냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 40
+      },
+      "effects": {
+       "money": -40,
+       "knowledge_xp": {
+        "sang": 20
+       },
+       "flag": "paid:q_rcp_her_n439"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 60
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_GYEONGWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【경원 고려청자 가마터 출토 명품완 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ },
+ "quest:q_rcp_her_n446": {
+  "status": "draft",
+  "title": "비전 전수: 종성 도요지 백자 청화항아리 재현품",
+  "intro": {
+   "bg": "ND_16_TOWN_JONGSEONGDOHOBUSUJINGWAN",
+   "lines": [
+    {
+     "who": "npc:elder:촌로 손씨",
+     "text": "종성 도요지 백자 청화항아리 재현품 비전서를 잃으셨다고요? 종성도호부 수진관 → 종성 도요지 백자 청화항아리 — 그 길 끝에 옛 장인이 산다 합니다."
+    }
+   ]
+  },
+  "steps": [
+   {
+    "bg": "ND_16_TOWN_JONGSEONGDOHOBUSUJINGWAN",
+    "lines": [
+     {
+      "who": "npc:elder:촌로 송씨",
+      "text": "비전서가 팔려 나간 뒤로 제대로 만드는 이가 드물지. 종성 도요지 백자 청화항아리에 한 사람 남았소."
+     },
+     {
+      "who": "hero",
+      "text": "(촌로의 사랑방에서 종성 도요지 백자 청화항아리 재현품 비법의 옛일을 묻는다) 알겠소."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:elder:촌로 송씨"
+    ]
+   },
+   {
+    "bg": "ND_16_SCENIC_JONGSEONGDOYOJIBAEKJACHEONGHWAHANGARI",
+    "lines": [
+     {
+      "who": "npc:merchant:종성 늙은 장인",
+      "text": "비전서를 잃었다고? 허허, 글로 배운 것은 잃어도 손으로 배운 것은 남는 법이지."
+     },
+     {
+      "who": "npc:merchant:종성 늙은 장인",
+      "text": "종성 도요지 백자 청화항아리 재현품 — 불과 흙, 물때를 한 번에 맞춰야 하네. 어디 자네 솜씨를 보세."
+     }
+    ],
+    "cast": [
+     "hero",
+     "npc:merchant:종성 늙은 장인"
+    ],
+    "choices": [
+     {
+      "id": "know",
+      "text": "〔공(工) 2〕 공(工)의 요령으로 공정의 순서를 짚어 낸다",
+      "req": {
+       "knowledge": {
+        "gong": 2
+       }
+      },
+      "effects": {
+       "knowledge_xp": {
+        "gong": 25
+       }
+      },
+      "result": "장인: 순서를 아는구먼! 나머지는 금방이네."
+     },
+     {
+      "id": "pay",
+      "text": "〔엽전 20냥〕 장인의 공방 수리비를 대고 배운다",
+      "req": {
+       "money": 20
+      },
+      "effects": {
+       "money": -20,
+       "knowledge_xp": {
+        "sang": 10
+       },
+       "flag": "paid:q_rcp_her_n446"
+      },
+      "result": "장인: 공방이 되살아나니 나도 신이 나는군."
+     },
+     {
+      "id": "mats",
+      "text": "〔재료 지참〕 백토·참숯을 직접 가져와 함께 만들어 본다",
+      "req": {
+       "items": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       }
+      },
+      "effects": {
+       "take": {
+        "mat_white_clay": 3,
+        "mat_charcoal": 4
+       },
+       "knowledge_xp": {
+        "gong": 30
+       }
+      },
+      "result": "장인: 손이 기억하는 법이지. 이제 비법은 자네 것이네."
+     },
+     {
+      "id": "plain",
+      "text": "밤새 곁에서 허드렛일을 하며 배운다",
+      "req": {},
+      "effects": {},
+      "result": "장인: 땀 흘린 만큼 배운 게야."
+     }
+    ]
+   }
+  ],
+  "outro": {
+   "bg": "ND_16_SCENIC_JONGSEONGDOYOJIBAEKJACHEONGHWAHANGARI",
+   "lines": [
+    {
+     "who": "hero",
+     "text": "【종성 도요지 백자 청화항아리 재현품 비전】을 손으로 익혔다. 공방에서 다시 만들 수 있다."
+    }
+   ],
+   "cast": [
+    "hero"
+   ]
+  }
+ }
+}

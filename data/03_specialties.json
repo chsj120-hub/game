@@ -1,0 +1,3286 @@
+{
+ "_schema": "03_조선특산물. node=원산지 노드. kind=basic|premium(도시 발전도 dev_level 해금)|crafted(특산물 레시피북 전용). base_price=economy.price 공식. 5일장 매수 0.72×(원산지) → 매도 hop 거리별 0.60/0.95/1.15/1.35×. perishable=노드 이동당 신선도 −5%. trade_quests: 대금=base×qty×1.8, 명성=quest 공식(trade). | 등급 사슬: line=사슬 id, grade 0 기본/1 상품/2 진상품(해금 = 원산지 발전도 dev_level + 신분 Rank ≥ tier, 5일 물량 trade.stock_by_grade). real_name·desc = 도감 표시(실제 명칭·설명).",
+ "specialties": [
+  {
+   "id": "sp_jeonju_hanji",
+   "name": "전주 한지",
+   "region": "MAP_07",
+   "node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 0.5,
+   "line": "trade_jeonju_hanji",
+   "grade": 0,
+   "real_name": "전주 한지"
+  },
+  {
+   "id": "sp_hansan_mosi",
+   "name": "한산 모시",
+   "region": "MAP_06",
+   "node": "ND_06_TOWN_BUYEO",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.0,
+   "line": "trade_hansan_mosi",
+   "grade": 0,
+   "real_name": "한산 모시"
+  },
+  {
+   "id": "sp_andong_po",
+   "name": "안동포",
+   "region": "MAP_09",
+   "node": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.0,
+   "line": "trade_andong_po",
+   "grade": 0,
+   "real_name": "안동포"
+  },
+  {
+   "id": "sp_damyang_bamboo",
+   "name": "담양 죽물",
+   "region": "MAP_08",
+   "node": "ND_08_TOWN_DAMYANG",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.5,
+   "line": "trade_damyang_bamboo",
+   "grade": 0,
+   "real_name": "담양 죽물"
+  },
+  {
+   "id": "sp_yeonggwang_gulbi",
+   "name": "영광 굴비",
+   "region": "MAP_08",
+   "node": "ND_08_CITY_NAJUMOK",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.0,
+   "perishable": true,
+   "line": "trade_yeonggwang_gulbi",
+   "grade": 0,
+   "real_name": "영광 굴비"
+  },
+  {
+   "id": "sp_gaeseong_insam",
+   "name": "개성 인삼(開城人蔘)",
+   "region": "MAP_01",
+   "node": "ND_01_CITY_GAESEONGBU",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 0.5,
+   "perishable": true,
+   "line": "ginseng",
+   "grade": 0,
+   "real_name": "개성 인삼(開城人蔘)"
+  },
+  {
+   "id": "sp_gaeseong_hongsam",
+   "name": "개성 인삼 상품",
+   "region": "MAP_01",
+   "node": "ND_01_CITY_GAESEONGBU",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 0.5,
+   "real_name": "개성 홍삼(紅蔘)",
+   "grade": 1,
+   "line": "ginseng",
+   "desc": "수삼을 쪄서 말린 것. 사행 무역의 으뜸 품목으로 청에서 값이 높았다."
+  },
+  {
+   "id": "sp_jeju_gamgyul",
+   "name": "제주 진상 감귤",
+   "region": "MAP_17",
+   "node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 1.0,
+   "perishable": true,
+   "line": "trade_jeju_gamgyul",
+   "grade": 0,
+   "real_name": "제주 진상 감귤"
+  },
+  {
+   "id": "sp_hamgyeong_myeongtae",
+   "name": "북관 명태",
+   "region": "MAP_15",
+   "node": "ND_15_CITY_HAMHEUNGBU",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.0,
+   "line": "trade_hamgyeong_myeongtae",
+   "grade": 0,
+   "real_name": "북관 명태"
+  },
+  {
+   "id": "sp_ganghwa_hwamunseok",
+   "name": "강화 화문석",
+   "region": "MAP_01",
+   "node": "ND_01_CITY_GANGHWAYUSUBU",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 3.0,
+   "line": "trade_ganghwa_hwamunseok",
+   "grade": 0,
+   "real_name": "강화 화문석"
+  },
+  {
+   "id": "sp_anseong_yugi",
+   "name": "안성 유기",
+   "region": "MAP_02",
+   "node": "ND_02_TOWN_ANSEONG",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 2.0,
+   "line": "trade_anseong_yugi",
+   "grade": 0,
+   "real_name": "안성 유기"
+  },
+  {
+   "id": "sp_uljin_daege",
+   "name": "울진 대게",
+   "region": "MAP_04",
+   "node": "ND_04_TOWN_ULJIN",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.0,
+   "perishable": true,
+   "line": "trade_uljin_daege",
+   "grade": 0,
+   "real_name": "울진 대게"
+  },
+  {
+   "id": "sp_boeun_daechu",
+   "name": "보은 대추",
+   "region": "MAP_05",
+   "node": "ND_05_TOWN_BOEUN",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 0.5,
+   "line": "jujube",
+   "grade": 0,
+   "real_name": "보은 대추"
+  },
+  {
+   "id": "sp_gochang_bokbunja",
+   "name": "고창 복분자주",
+   "region": "MAP_07",
+   "node": "ND_07_TOWN_GOCHANG",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.5,
+   "line": "trade_gochang_bokbunja",
+   "grade": 0,
+   "real_name": "고창 복분자주"
+  },
+  {
+   "id": "sp_sangju_gotgam",
+   "name": "상주 곶감",
+   "region": "MAP_09",
+   "node": "ND_09_CITY_SANGJUMOK",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 0.5,
+   "line": "trade_sangju_gotgam",
+   "grade": 0,
+   "real_name": "상주 곶감"
+  },
+  {
+   "id": "sp_haeju_meok",
+   "name": "해주 먹",
+   "region": "MAP_12",
+   "node": "ND_12_CITY_HAEJUMOK",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 0.3,
+   "line": "trade_haeju_meok",
+   "grade": 0,
+   "real_name": "해주 먹"
+  },
+  {
+   "id": "sp_bongsan_bae",
+   "name": "봉산 참배",
+   "region": "MAP_11",
+   "node": "ND_11_CITY_BONGSANGUN",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.5,
+   "perishable": true,
+   "line": "trade_bongsan_bae",
+   "grade": 0,
+   "real_name": "봉산 참배"
+  },
+  {
+   "id": "sp_pyeongyang_chilgi",
+   "name": "평양 칠기",
+   "region": "MAP_13",
+   "node": "ND_13_CITY_PYEONGYANGBU",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 1.5,
+   "line": "trade_pyeongyang_chilgi",
+   "grade": 0,
+   "real_name": "평양 칠기"
+  },
+  {
+   "id": "sp_uiju_dambi",
+   "name": "의주 담비 가죽",
+   "region": "MAP_14",
+   "node": "ND_14_CITY_UIJUMOK",
+   "kind": "premium",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 3,
+   "weight": 0.5,
+   "line": "trade_uiju_dambi",
+   "grade": 0,
+   "real_name": "의주 담비 가죽"
+  },
+  {
+   "id": "sp_hoeryeong_oji",
+   "name": "회령 오지그릇",
+   "region": "MAP_16",
+   "node": "ND_16_TOWN_HOERYEONG",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 2.5,
+   "line": "trade_hoeryeong_oji",
+   "grade": 0,
+   "real_name": "회령 오지그릇"
+  },
+  {
+   "id": "sp_gangjin_celadon",
+   "name": "강진 상감청자",
+   "region": "MAP_08",
+   "node": "ND_08_RUIN_GANGJINSADANGRICHEONGJAGAMATEO",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "weight": 2.0
+  },
+  {
+   "id": "sp_bunwon_porcelain",
+   "name": "분원 백자 달항아리",
+   "region": "MAP_02",
+   "node": "ND_02_RUIN_GWANGJUBUNWONBAEKJAGAMATEO",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "weight": 3.0
+  },
+  {
+   "id": "sp_tongyeong_najeon",
+   "name": "통영 나전칠기함",
+   "region": "MAP_10",
+   "node": "ND_10_RUIN_TONGYEONG12GONGBANGYETTEO",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "weight": 1.5
+  },
+  {
+   "id": "sp_her_066",
+   "name": "명량 해저 인양 청자",
+   "region": "MAP_08",
+   "node": "ND_08_WRECK_MYEONGRYANGULDOLMOK",
+   "kind": "crafted",
+   "tier": 5,
+   "base_price": 4860,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_112",
+   "name": "삼척 해저 인양 청자",
+   "region": "MAP_04",
+   "node": "ND_04_WRECK_SAMCHEOKANTAEKSEONCHIMMOLJI",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_115",
+   "name": "단양 복원 도자",
+   "region": "MAP_05",
+   "node": "ND_05_RUIN_DANYANGSUBEOLGORYEOGAMATEO",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_121",
+   "name": "태안 해저 인양 청자",
+   "region": "MAP_06",
+   "node": "ND_06_WRECK_TAEANMADOCHIMMOLSEON",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_123",
+   "name": "부안 복원 도자",
+   "region": "MAP_07",
+   "node": "ND_07_RUIN_BUANYUCHEONRICHEONGJAGAMATEO",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_125",
+   "name": "신안 해저 인양 청자",
+   "region": "MAP_08",
+   "node": "ND_08_WRECK_SINANHAEJEOMUYEOKSEON",
+   "kind": "crafted",
+   "tier": 5,
+   "base_price": 4860,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_138",
+   "name": "압록강 해저 인양 청자",
+   "region": "MAP_14",
+   "node": "ND_14_WRECK_APROKGANGHAGUCHIMMOLSEON",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_142",
+   "name": "회령 복원 도자",
+   "region": "MAP_16",
+   "node": "ND_16_RUIN_HOERYEONGOJIGAMATEO",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage"
+  },
+  {
+   "id": "sp_her_n007",
+   "name": "제주 목관아지 출토 분청사기 재현품",
+   "region": "MAP_17",
+   "node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "제주 목관아지 출토 분청사기",
+   "desc": "조선 전기 관아 공납용 상감분청사기 대접"
+  },
+  {
+   "id": "sp_her_n020",
+   "name": "차귀도 해역 침몰선 해저 청자 재현품",
+   "region": "MAP_17",
+   "node": "ND_17_WRECK_CHAGWIDOHAEYEOKCHIMMOLSEONHAEJEOCHEONGJA",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "차귀도 해역 침몰선 해저 청자",
+   "desc": "송·원대 동아시아 해상 실크로드를 누비던 침몰선 인양 청자"
+  },
+  {
+   "id": "sp_her_n024",
+   "name": "강진 청자 상감운학문 매병 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "강진 청자 상감운학문 매병",
+   "desc": "전남 남해안 (해남/강진/완도/진도) 일대 유서 깊은 국가유산 명작"
+  },
+  {
+   "id": "sp_her_n030",
+   "name": "진도 용장산성 행궁터 유물 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_FORT_JINDOYONGJANGSANSEONGHAENGGUNGJI",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "진도 용장산성 행궁터 유물",
+   "desc": "전남 남해안 (해남/강진/완도/진도) 일대 유서 깊은 국가유산 명작"
+  },
+  {
+   "id": "sp_her_n032",
+   "name": "강진 사당리 고려청자 요지 비색발 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_RUIN_GANGJINCHEONGJASANGGAMUNHAKMUNMAEBYEONG",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "강진 사당리 고려청자 요지 비색발",
+   "desc": "전남 남해안 (해남/강진/완도/진도) 일대 유서 깊은 국가유산 명작"
+  },
+  {
+   "id": "sp_her_n054",
+   "name": "광양 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_TOWN_GWANGYANGHYEONCHISO",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "광양 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제20첩 순천/여수/광양의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n061",
+   "name": "순천 도요지 백자 청화항아리 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_SCENIC_SUNCHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "순천 도요지 백자 청화항아리",
+   "desc": "대동여지도 제20첩 순천/여수/광양의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n067",
+   "name": "동래 동삼동 패총 융기문토기 재현품",
+   "region": "MAP_10",
+   "node": "ND_10_TOMB_DONGRAEDONGSAMDONGPAECHONGYUNGGIMUNTOGI",
+   "kind": "crafted",
+   "tier": 4,
+   "base_price": 1620,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "동래 동삼동 패총 융기문토기",
+   "desc": "대동여지도 제19첩 나주/광주/부산 권역의 대표 역사 유적 및 공인 문화유산"
+  },
+  {
+   "id": "sp_her_n074",
+   "name": "동래 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_10",
+   "node": "ND_10_SCENIC_DONGRAEGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "동래 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제19첩 나주/광주/부산의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n081",
+   "name": "나주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_08",
+   "node": "ND_08_RUIN_NAJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "나주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제19첩 나주/광주/부산의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n094",
+   "name": "남원 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_07",
+   "node": "ND_07_SCENIC_NAMWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "남원 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제18첩 경주/대구/남원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n101",
+   "name": "경주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_09",
+   "node": "ND_09_SCENIC_GYEONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "경주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제18첩 경주/대구/남원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n115",
+   "name": "영일 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_09",
+   "node": "ND_09_SCENIC_YEONGILGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "영일 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제17첩 전주/익산/포항의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n122",
+   "name": "전주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_07",
+   "node": "ND_07_SCENIC_JEONJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "전주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제17첩 전주/익산/포항의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n135",
+   "name": "안동 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_09",
+   "node": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "안동 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제16첩 공주/부여/안동의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n142",
+   "name": "공주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_06",
+   "node": "ND_06_SCENIC_GONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "공주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제16첩 공주/부여/안동의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n156",
+   "name": "영주 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_09",
+   "node": "ND_09_SCENIC_YEONGJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "영주 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제15첩 대전/청주/영주/문경의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n163",
+   "name": "청주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_05",
+   "node": "ND_05_SCENIC_CHEONGJUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "청주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제15첩 대전/청주/영주/문경의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n176",
+   "name": "단양 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_05",
+   "node": "ND_05_RUIN_DANYANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "단양 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제14첩 충주/원주/단양/울진의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n183",
+   "name": "원주 도요지 백자 청화항아리 재현품",
+   "region": "MAP_04",
+   "node": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "원주 도요지 백자 청화항아리",
+   "desc": "대동여지도 제14첩 충주/원주/단양/울진의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n196",
+   "name": "여주 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_02",
+   "node": "ND_02_SCENIC_YEOJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "여주 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제13첩 수원/화성/여주/서산의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n203",
+   "name": "남양 도요지 백자 청화항아리 재현품",
+   "region": "MAP_02",
+   "node": "ND_02_SCENIC_NAMYANGDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "남양 도요지 백자 청화항아리",
+   "desc": "대동여지도 제13첩 수원/화성/여주/서산의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n216",
+   "name": "개성 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_01",
+   "node": "ND_01_SCENIC_GAESEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "개성 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제12첩 한양(서울)/강화/개성/강릉의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n223",
+   "name": "강화 도요지 백자 청화항아리 재현품",
+   "region": "MAP_01",
+   "node": "ND_01_SCENIC_GANGHWADOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "강화 도요지 백자 청화항아리",
+   "desc": "대동여지도 제12첩 한양(서울)/강화/개성/강릉의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n232",
+   "name": "철원 궁예 태봉국 철원도성 금와 재현품",
+   "region": "MAP_03",
+   "node": "ND_03_SCENIC_CHEOLWONGUNGYETAEBONGGUKCHEOLWONDOSEONGGEUMWA",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "철원 궁예 태봉국 철원도성 금와",
+   "desc": "대동여지도 제11첩 파주/철원/인제/양양 권역의 대표 역사 유적 및 공인 문화유산"
+  },
+  {
+   "id": "sp_her_n237",
+   "name": "인제 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_03",
+   "node": "ND_03_TOWN_INJEHYEONBAEKDAMSA",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "인제 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제11첩 파주/철원/인제/양양의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n244",
+   "name": "철원 도요지 백자 청화항아리 재현품",
+   "region": "MAP_03",
+   "node": "ND_03_CITY_CHEOLWONDOHOBUCHISO",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "철원 도요지 백자 청화항아리",
+   "desc": "대동여지도 제11첩 파주/철원/인제/양양의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n257",
+   "name": "평강 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_03",
+   "node": "ND_03_SCENIC_PYEONGGANGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "평강 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제10첩 개풍/연안/평강/김화/통천의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n264",
+   "name": "통천 도요지 백자 청화항아리 재현품",
+   "region": "MAP_03",
+   "node": "ND_03_RUIN_TONGCHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "통천 도요지 백자 청화항아리",
+   "desc": "대동여지도 제10첩 개풍/연안/평강/김화/통천의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n277",
+   "name": "신천 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_12",
+   "node": "ND_12_SCENIC_SINCHEONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "신천 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제9첩 해주/옹진/신천/재령의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n284",
+   "name": "옹진 도요지 백자 청화항아리 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_ONGJINDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "옹진 도요지 백자 청화항아리",
+   "desc": "대동여지도 제9첩 해주/옹진/신천/재령의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n292",
+   "name": "평양 안학궁터 고구려 수막새 재현품",
+   "region": "MAP_13",
+   "node": "ND_13_SCENIC_PYEONGYANGEULMILDAE",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "평양 안학궁터 고구려 수막새",
+   "desc": "대동여지도 제8첩 평양/원산/안변/강서 권역의 대표 역사 유적 및 공인 문화유산"
+  },
+  {
+   "id": "sp_her_n297",
+   "name": "안변 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_ANBYEONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "안변 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제8첩 평양/원산/안변/강서의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n304",
+   "name": "덕원 도요지 백자 청화항아리 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_DEOKWONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "덕원 도요지 백자 청화항아리",
+   "desc": "대동여지도 제8첩 평양/원산/안변/강서의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n318",
+   "name": "함흥 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_HAMHEUNGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "함흥 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제7첩 안주/순천/함흥/영흥의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n325",
+   "name": "함흥 도요지 백자 청화항아리 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_HAMHEUNGDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "함흥 도요지 백자 청화항아리",
+   "desc": "대동여지도 제7첩 안주/순천/함흥/영흥의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n338",
+   "name": "홍원 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_HONGWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "홍원 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제6첩 영변/희천/신흥/홍원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n345",
+   "name": "희천 도요지 백자 청화항아리 재현품",
+   "region": "MAP_13",
+   "node": "ND_13_SCENIC_HUICHEONDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "희천 도요지 백자 청화항아리",
+   "desc": "대동여지도 제6첩 영변/희천/신흥/홍원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n358",
+   "name": "북청 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_BUKCHEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "북청 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제5첩 의주/선천/북청/이원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n365",
+   "name": "선천 도요지 백자 청화항아리 재현품",
+   "region": "MAP_14",
+   "node": "ND_14_TOWN_SEONCHEONDOHOBUDONGRIMSANSEONG",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "선천 도요지 백자 청화항아리",
+   "desc": "대동여지도 제5첩 의주/선천/북청/이원의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n378",
+   "name": "길주 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_GILJUGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "길주 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제4첩 강계/초산/길주/단천의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n385",
+   "name": "초산 도요지 백자 청화항아리 재현품",
+   "region": "MAP_14",
+   "node": "ND_14_SCENIC_CHOSANDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "초산 도요지 백자 청화항아리",
+   "desc": "대동여지도 제4첩 강계/초산/길주/단천의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n395",
+   "name": "경성 온천 도요지 고려 흑유자기 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_GYEONGSEONGONCHEONDOYOJIGORYEOHEUKYUJAGI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "경성 온천 도요지 고려 흑유자기",
+   "desc": "대동여지도 제3첩 혜산/삼수/갑산/경성 권역의 대표 역사 유적 및 공인 문화유산"
+  },
+  {
+   "id": "sp_her_n399",
+   "name": "갑산 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_15",
+   "node": "ND_15_SCENIC_GAPSANGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "갑산 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제3첩 혜산/삼수/갑산/경성의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n406",
+   "name": "삼수 도요지 백자 청화항아리 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_SAMSUDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "삼수 도요지 백자 청화항아리",
+   "desc": "대동여지도 제3첩 혜산/삼수/갑산/경성의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n408",
+   "name": "무산 오진리 원시 주거지 빗살무늬토기 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_TOMB_MUSANOJINRIWONSIJUGEOJIBITSALMUNUITOGI",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "무산 오진리 원시 주거지 빗살무늬토기",
+   "desc": "대동여지도 제2첩 회령/무산/청진/나진 권역의 대표 역사 유적 및 공인 문화유산"
+  },
+  {
+   "id": "sp_her_n419",
+   "name": "부령 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_BURYEONGGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "부령 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제2첩 회령/무산/청진/나진의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n426",
+   "name": "무산 도요지 백자 청화항아리 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_MUSANDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "무산 도요지 백자 청화항아리",
+   "desc": "대동여지도 제2첩 회령/무산/청진/나진의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n439",
+   "name": "경원 고려청자 가마터 출토 명품완 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_GYEONGWONGORYEOCHEONGJAGAMATEOCHULTOMYEONGPUMWAN",
+   "kind": "crafted",
+   "tier": 2,
+   "base_price": 180,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "경원 고려청자 가마터 출토 명품완",
+   "desc": "대동여지도 제1첩 온성/종성/경원/경흥의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_her_n446",
+   "name": "종성 도요지 백자 청화항아리 재현품",
+   "region": "MAP_16",
+   "node": "ND_16_SCENIC_JONGSEONGDOYOJIBAEKJACHEONGHWAHANGARI",
+   "kind": "crafted",
+   "tier": 1,
+   "base_price": 60,
+   "dev_level": 0,
+   "generated": "heritage",
+   "real_name": "종성 도요지 백자 청화항아리",
+   "desc": "대동여지도 제1첩 온성/종성/경원/경흥의 공인 지정 문화유산"
+  },
+  {
+   "id": "sp_chuncheon_jat",
+   "name": "춘천 잣",
+   "region": "MAP_03",
+   "node": "ND_03_CITY_CHUNCHEONBU",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 0.5,
+   "real_name": "춘천 백자(柏子)",
+   "desc": "가평·춘천 잣나무 숲에서 거둔 잣. 약식·전복초·신선로의 고명으로 쓴다.",
+   "grade": 0,
+   "generated": "craft_trade",
+   "note": "구 '인제 황태'(sp_inje_hwangtae) 대체 — 황태 덕장은 1950년대 이후라 1861년 배경에 맞지 않음",
+   "line": "jat"
+  },
+  {
+   "id": "sp_pyeongyang_nokdu",
+   "name": "평양 녹두",
+   "region": "MAP_13",
+   "node": "ND_13_CITY_PYEONGYANGBU",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.0,
+   "real_name": "평양 녹두",
+   "desc": "평양 녹두지짐(빈대떡)의 재료. 녹말을 앉혀 어만두·청포묵에도 쓴다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_ongjin_daeha",
+   "name": "옹진 대하",
+   "region": "MAP_12",
+   "node": "ND_12_TOWN_ONGJIN",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.0,
+   "real_name": "옹진 대하(大蝦)",
+   "desc": "황해 옹진 앞바다에서 잡은 큰 새우. 궁중 대하찜의 재료.",
+   "grade": 0,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_uiju_jinmal",
+   "name": "의주 진말",
+   "region": "MAP_14",
+   "node": "ND_14_CITY_UIJUMOK",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.0,
+   "real_name": "의주 진말(眞末·밀가루)",
+   "desc": "의주 만상의 청 교역과 서북 밭에서 들어온 밀가루. 조선에서는 귀해 잔치 음식에 썼다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_gadeok_daegu",
+   "name": "가덕 대구",
+   "region": "MAP_10",
+   "node": "ND_10_TOWN_GIMHAE",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.0,
+   "real_name": "가덕 건대구(乾大口)",
+   "desc": "가덕도 앞바다 대구를 말린 것. 진상품으로 이름났고 어만두·신선로의 흰살 생선으로 쓴다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_jeju_malchong",
+   "name": "제주 말총",
+   "region": "MAP_17",
+   "node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 0.3,
+   "real_name": "제주 말총",
+   "desc": "제주 말의 갈기·꼬리털. 통영·한양 갓방으로 팔려 가 갓·탕건·망건의 재료가 되었다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_jeju_jeonbok",
+   "name": "제주 전복",
+   "region": "MAP_17",
+   "node": "ND_17_TOWN_DAEJEONGHYEON",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 0.5,
+   "real_name": "제주 추복(搥鰒)",
+   "desc": "잠녀가 딴 전복을 두드려 말린 진상 전복. 전복초의 재료.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_hanyang_tarak",
+   "name": "타락",
+   "region": "MAP_02",
+   "node": "ND_02_CITY_HANYANGGYEONGJO",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.0,
+   "real_name": "타락(駝酪·우유)",
+   "desc": "낙산 아래 유우소에서 짜던 우유. 궁중 타락죽의 재료로 한양에서만 구할 수 있다.",
+   "grade": 0,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_namhae_yuja",
+   "name": "남해 유자",
+   "region": "MAP_10",
+   "node": "ND_10_TOWN_NAMHAE",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 1.0,
+   "real_name": "남해 유자(柚子)",
+   "desc": "남해안 섬에서 나는 유자. 향이 짙어 청과 차로 담가 진상하였다.",
+   "grade": 0,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_hadong_jakseol",
+   "name": "하동 작설차",
+   "region": "MAP_10",
+   "node": "ND_10_CITY_JINJUMOK",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 0.3,
+   "real_name": "지리산 작설차(雀舌茶)",
+   "desc": "쌍계사 일대 야생 차나무의 어린 잎을 덖은 차. 참새 혀처럼 작은 잎이라 작설이라 불렀다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_yeonan_chamgireum",
+   "name": "연안 참기름",
+   "region": "MAP_12",
+   "node": "ND_12_CITY_YEONANDOHOBU",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 0,
+   "weight": 1.0,
+   "real_name": "연안 진유(眞油·참기름)",
+   "desc": "연안 평야의 참깨로 짠 기름. 비빔밥·나물·전에 두루 쓴다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_jeju_miyeok",
+   "name": "제주 미역",
+   "region": "MAP_17",
+   "node": "ND_17_TOWN_JOCHEON",
+   "kind": "basic",
+   "tier": 1,
+   "base_price": 20,
+   "dev_level": 0,
+   "weight": 0.5,
+   "real_name": "제주 곽(藿·미역)",
+   "desc": "잠녀가 물질로 딴 돌미역을 말린 것. 산모의 미역국에 쓰였다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_dongnae_waegwan",
+   "name": "동래 왜관 교역품",
+   "region": "MAP_10",
+   "node": "ND_10_CITY_DONGRAEHYEON",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 1.0,
+   "real_name": "왜관 무역품(후추·단목·명반)",
+   "desc": "초량 왜관 개시(開市)에서 들여온 후추·소목(단목)·명반. 동래 상인이 전국으로 넘겼다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_ganggye_sam",
+   "name": "강계 삼",
+   "region": "MAP_14",
+   "node": "ND_14_TOWN_GANGGYE",
+   "kind": "premium",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 0.5,
+   "real_name": "강삼(江蔘)",
+   "desc": "강계·폐사군 산골에서 캔 삼. 조선 후기 강계 삼은 개성 삼과 함께 으뜸으로 쳤다.",
+   "grade": 0,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_tongyeong_gat",
+   "name": "통영 갓",
+   "region": "MAP_10",
+   "node": "ND_10_FORT_TONGYEONGTONGJEYEONG",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "weight": 0.5,
+   "real_name": "통영 흑립(黑笠)",
+   "desc": "제주 말총과 대오리로 결은 통영 갓. 통제영 12공방의 갓방에서 만들어 양반 사회 전체로 팔렸다.",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_haeju_songyeonmuk",
+   "name": "해주 송연먹",
+   "region": "MAP_12",
+   "node": "ND_12_CITY_HAEJUMOK",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "weight": 0.3,
+   "real_name": "해주 송연묵(松煙墨)",
+   "desc": "송연을 어교와 반죽해 틀에 박고 오래 말린 먹. 해주 먹은 결이 곱고 향이 맑아 사대부와 사신 예물로 귀히 쓰였다.",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_hansan_mosi_jeoksam",
+   "name": "한산 모시 적삼",
+   "region": "MAP_06",
+   "node": "ND_06_TOWN_BUYEO",
+   "kind": "crafted",
+   "tier": 3,
+   "base_price": 540,
+   "dev_level": 0,
+   "weight": 0.5,
+   "real_name": "한산 세모시 적삼",
+   "desc": "한산 모시로 지은 여름 홑저고리. 풀을 먹여 다듬이질하면 잠자리 날개처럼 비친다.",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_jeonju_hanji_g1",
+   "name": "전주 한지 상품",
+   "region": "MAP_07",
+   "node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 1,
+   "weight": 0.5,
+   "real_name": "전주 장지(壯紙)",
+   "desc": "두껍고 질겨 관아 문서·족자·창호에 쓰던 상등 한지.",
+   "line": "trade_jeonju_hanji",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_jeonju_hanji_g2",
+   "name": "전주 한지 진상품",
+   "region": "MAP_07",
+   "node": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 0.5,
+   "real_name": "전주 선자지(扇子紙)",
+   "desc": "전주 선자청에서 진상 부채를 만들던 최상품 한지. 얇고 질기며 결이 곱다.",
+   "line": "trade_jeonju_hanji",
+   "grade": 2,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_hansan_mosi_g1",
+   "name": "한산 모시 상품",
+   "region": "MAP_06",
+   "node": "ND_06_TOWN_BUYEO",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 1.0,
+   "real_name": "한산 세모시(열두새)",
+   "desc": "열두새 이상으로 가늘게 짠 상품 모시.",
+   "line": "trade_hansan_mosi",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_hansan_mosi_g2",
+   "name": "한산 모시 진상품",
+   "region": "MAP_06",
+   "node": "ND_06_TOWN_BUYEO",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 2,
+   "weight": 1.0,
+   "real_name": "한산 보름새 모시",
+   "desc": "보름새(15새)로 짠 극상품. 잠자리 날개 같다 하여 진상되었다.",
+   "line": "trade_hansan_mosi",
+   "grade": 2,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_andong_po_g1",
+   "name": "안동포 상품",
+   "region": "MAP_09",
+   "node": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 1.0,
+   "real_name": "안동포 아홉새",
+   "desc": "아홉새로 곱게 짠 상품 삼베.",
+   "line": "trade_andong_po",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_andong_po_g2",
+   "name": "안동포 진상품",
+   "region": "MAP_09",
+   "node": "ND_09_CITY_ANDONGDAEDOHOBU",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 2,
+   "weight": 1.0,
+   "real_name": "안동 진상포(열두새)",
+   "desc": "열두새로 짠 최상품 안동포. 궁중 진상과 수의감으로 귀히 쓰였다.",
+   "line": "trade_andong_po",
+   "grade": 2,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_damyang_bamboo_g1",
+   "name": "담양 죽물 상품",
+   "region": "MAP_08",
+   "node": "ND_08_TOWN_DAMYANG",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 1,
+   "weight": 1.5,
+   "real_name": "담양 참빗",
+   "desc": "대오리를 가늘게 쪼개 만든 참빗. 담양·영암 참빗이 이름났다.",
+   "line": "trade_damyang_bamboo",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_damyang_bamboo_g2",
+   "name": "담양 죽물 진상품",
+   "region": "MAP_08",
+   "node": "ND_08_TOWN_DAMYANG",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 1.5,
+   "real_name": "담양 채상(彩箱)",
+   "desc": "물들인 대오리로 무늬를 엮은 상자. 혼수와 진상에 쓰였다.",
+   "line": "trade_damyang_bamboo",
+   "grade": 2,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_yeonggwang_gulbi_g1",
+   "name": "영광 굴비 상품",
+   "region": "MAP_08",
+   "node": "ND_08_CITY_NAJUMOK",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 1.0,
+   "real_name": "영광 오가재비 굴비",
+   "desc": "조기 스무 마리를 두 줄로 엮어 말린 상품 굴비.",
+   "line": "trade_yeonggwang_gulbi",
+   "grade": 1,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_yeonggwang_gulbi_g2",
+   "name": "영광 굴비 진상품",
+   "region": "MAP_08",
+   "node": "ND_08_CITY_NAJUMOK",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 2,
+   "weight": 1.0,
+   "real_name": "법성포 곡우 굴비",
+   "desc": "곡우 무렵 잡은 알배기 참조기로 말린 진상 굴비.",
+   "line": "trade_yeonggwang_gulbi",
+   "grade": 2,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_gaeseong_insam_g2",
+   "name": "개성 인삼 진상품",
+   "region": "MAP_01",
+   "node": "ND_01_CITY_GAESEONGBU",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 3,
+   "weight": 0.5,
+   "real_name": "개성 진상 홍삼",
+   "desc": "크고 곧은 뿌리만 골라 쪄 말린 진상·사행 예단용 상등 홍삼.",
+   "line": "ginseng",
+   "grade": 2,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_jeju_gamgyul_g1",
+   "name": "제주 감귤 상품",
+   "region": "MAP_17",
+   "node": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 3,
+   "weight": 1.0,
+   "real_name": "제주 금귤·유감 봉진",
+   "desc": "진상 귤 중 으뜸인 금귤·유감을 봉해 올린 것. 이것이 도착하면 성균관에서 황감제를 열었다.",
+   "line": "trade_jeju_gamgyul",
+   "grade": 1,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_hamgyeong_myeongtae_g1",
+   "name": "북관 명태 상품",
+   "region": "MAP_15",
+   "node": "ND_15_CITY_HAMHEUNGBU",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 1,
+   "weight": 1.0,
+   "real_name": "북관 북어(北魚)",
+   "desc": "명태를 덕에 걸어 말려 오래 두고 먹게 한 것. 북관에서 삼남까지 팔려 나갔다.",
+   "line": "trade_hamgyeong_myeongtae",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_hamgyeong_myeongtae_g2",
+   "name": "북관 명태 진상품",
+   "region": "MAP_15",
+   "node": "ND_15_CITY_HAMHEUNGBU",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 1.0,
+   "real_name": "북관 대태 북어",
+   "desc": "큰 명태만 골라 말린 상등 북어(등급명은 설명적 명칭).",
+   "line": "trade_hamgyeong_myeongtae",
+   "grade": 2,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_ganghwa_hwamunseok_g1",
+   "name": "강화 화문석 상품",
+   "region": "MAP_01",
+   "node": "ND_01_CITY_GANGHWAYUSUBU",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 2,
+   "weight": 3.0,
+   "real_name": "강화 용문석(龍紋席)",
+   "desc": "용무늬를 넣어 짠 최상등 왕골 돗자리. 진상품으로 올렸다.",
+   "line": "trade_ganghwa_hwamunseok",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_anseong_yugi_g1",
+   "name": "안성 유기 상품",
+   "region": "MAP_02",
+   "node": "ND_02_TOWN_ANSEONG",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 2.0,
+   "real_name": "안성 방짜 유기",
+   "desc": "구리와 주석을 녹여 메질로 두드려 만든 방짜. 잘 깨지지 않는다.",
+   "line": "trade_anseong_yugi",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_anseong_yugi_g2",
+   "name": "안성 유기 진상품",
+   "region": "MAP_02",
+   "node": "ND_02_TOWN_ANSEONG",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 2,
+   "weight": 2.0,
+   "real_name": "안성맞춤 유기",
+   "desc": "주문에 맞춰 만든 진상 유기. '안성맞춤'이라는 말이 여기서 나왔다.",
+   "line": "trade_anseong_yugi",
+   "grade": 2,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_chuncheon_jat_g1",
+   "name": "춘천 잣 상품",
+   "region": "MAP_03",
+   "node": "ND_03_CITY_CHUNCHEONBU",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 1,
+   "weight": 0.5,
+   "real_name": "춘천 실백(實柏)",
+   "desc": "껍질을 벗겨 낸 속 잣. 약식·전복초·신선로 고명에 쓴다.",
+   "line": "jat",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_chuncheon_jat_g2",
+   "name": "춘천 잣 진상품",
+   "region": "MAP_03",
+   "node": "ND_03_CITY_CHUNCHEONBU",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 0.5,
+   "real_name": "춘천 진상 실백",
+   "desc": "알이 굵고 기름진 것만 골라 올린 진상 실백잣.",
+   "line": "jat",
+   "grade": 2,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_uljin_daege_g1",
+   "name": "울진 대게 상품",
+   "region": "MAP_04",
+   "node": "ND_04_TOWN_ULJIN",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 1.0,
+   "real_name": "울진 살대게",
+   "desc": "살이 꽉 찬 겨울 대게(등급명은 설명적 명칭).",
+   "line": "trade_uljin_daege",
+   "grade": 1,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_uljin_daege_g2",
+   "name": "울진 대게 진상품",
+   "region": "MAP_04",
+   "node": "ND_04_TOWN_ULJIN",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 2,
+   "weight": 1.0,
+   "real_name": "평해 진상 대게",
+   "desc": "평해·울진에서 진상하던 큰 대게.",
+   "line": "trade_uljin_daege",
+   "grade": 2,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_boeun_daechu_g1",
+   "name": "보은 대추 상품",
+   "region": "MAP_05",
+   "node": "ND_05_TOWN_BOEUN",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 1,
+   "weight": 0.5,
+   "real_name": "보은 알대추",
+   "desc": "알이 굵고 단 보은 대추(설명적 명칭).",
+   "line": "jujube",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_boeun_daechu_g2",
+   "name": "보은 대추 진상품",
+   "region": "MAP_05",
+   "node": "ND_05_TOWN_BOEUN",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 0.5,
+   "real_name": "보은 진상 대추",
+   "desc": "보은 대추 중 진상하던 상등품. 약식·쌍화탕에 으뜸으로 쳤다.",
+   "line": "jujube",
+   "grade": 2,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_gochang_bokbunja_g1",
+   "name": "고창 복분자주 상품",
+   "region": "MAP_07",
+   "node": "ND_07_TOWN_GOCHANG",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 1.5,
+   "real_name": "고창 복분자 청주",
+   "desc": "맑게 걸러 낸 복분자술(설명적 명칭).",
+   "line": "trade_gochang_bokbunja",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_gochang_bokbunja_g2",
+   "name": "고창 복분자주 진상품",
+   "region": "MAP_07",
+   "node": "ND_07_TOWN_GOCHANG",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 2,
+   "weight": 1.5,
+   "real_name": "고창 복분자 진상주",
+   "desc": "오래 묵혀 향이 깊은 상등 복분자술(설명적 명칭).",
+   "line": "trade_gochang_bokbunja",
+   "grade": 2,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_sangju_gotgam_g1",
+   "name": "상주 곶감 상품",
+   "region": "MAP_09",
+   "node": "ND_09_CITY_SANGJUMOK",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 1,
+   "weight": 0.5,
+   "real_name": "상주 둥시 곶감",
+   "desc": "상주 토종 감 '둥시'로 말린 곶감.",
+   "line": "trade_sangju_gotgam",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_sangju_gotgam_g2",
+   "name": "상주 곶감 진상품",
+   "region": "MAP_09",
+   "node": "ND_09_CITY_SANGJUMOK",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 0.5,
+   "real_name": "상주 진상 건시(乾柿)",
+   "desc": "흰 분이 곱게 핀 진상 곶감.",
+   "line": "trade_sangju_gotgam",
+   "grade": 2,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_haeju_meok_g1",
+   "name": "해주 먹 상품",
+   "region": "MAP_12",
+   "node": "ND_12_CITY_HAEJUMOK",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 2,
+   "weight": 0.3,
+   "real_name": "해주 수양매월(首陽梅月) 먹",
+   "desc": "해주 먹 가운데 가장 이름난 명품. 사신 예물로도 쓰였다.",
+   "line": "trade_haeju_meok",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_bongsan_bae_g1",
+   "name": "봉산 참배 상품",
+   "region": "MAP_11",
+   "node": "ND_11_CITY_BONGSANGUN",
+   "kind": "basic",
+   "tier": 2,
+   "base_price": 60,
+   "dev_level": 1,
+   "weight": 1.5,
+   "real_name": "봉산 청실배",
+   "desc": "껍질이 푸르고 물이 많은 토종 배.",
+   "line": "trade_bongsan_bae",
+   "grade": 1,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_bongsan_bae_g2",
+   "name": "봉산 참배 진상품",
+   "region": "MAP_11",
+   "node": "ND_11_CITY_BONGSANGUN",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 2,
+   "weight": 1.5,
+   "real_name": "봉산 진상 참배",
+   "desc": "봉산 참배 중 크고 단 것만 골라 올린 진상품.",
+   "line": "trade_bongsan_bae",
+   "grade": 2,
+   "generated": "craft_trade",
+   "perishable": true
+  },
+  {
+   "id": "sp_pyeongyang_chilgi_g1",
+   "name": "평양 칠기 상품",
+   "region": "MAP_13",
+   "node": "ND_13_CITY_PYEONGYANGBU",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 3,
+   "weight": 1.5,
+   "real_name": "평양 주칠(朱漆) 소반",
+   "desc": "붉은 칠을 여러 번 올린 상등 소반(설명적 명칭).",
+   "line": "trade_pyeongyang_chilgi",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_uiju_dambi_g1",
+   "name": "의주 담비 가죽 상품",
+   "region": "MAP_14",
+   "node": "ND_14_CITY_UIJUMOK",
+   "kind": "basic",
+   "tier": 5,
+   "base_price": 1620,
+   "dev_level": 3,
+   "weight": 0.5,
+   "real_name": "의주 자초피(紫貂皮)",
+   "desc": "짙은 자줏빛 담비 가죽. 담비 가죽 중 최상등으로 친다.",
+   "line": "trade_uiju_dambi",
+   "grade": 1,
+   "generated": "craft_trade",
+   "stock": 5
+  },
+  {
+   "id": "sp_hoeryeong_oji_g1",
+   "name": "회령 오지그릇 상품",
+   "region": "MAP_16",
+   "node": "ND_16_TOWN_HOERYEONG",
+   "kind": "basic",
+   "tier": 3,
+   "base_price": 180,
+   "dev_level": 1,
+   "weight": 2.5,
+   "real_name": "회령 오지 항아리",
+   "desc": "잿물 유약을 두껍게 입힌 상품 오지(설명적 명칭).",
+   "line": "trade_hoeryeong_oji",
+   "grade": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "sp_hoeryeong_oji_g2",
+   "name": "회령 오지그릇 진상품",
+   "region": "MAP_16",
+   "node": "ND_16_TOWN_HOERYEONG",
+   "kind": "basic",
+   "tier": 4,
+   "base_price": 540,
+   "dev_level": 2,
+   "weight": 2.5,
+   "real_name": "회령 진상 오지",
+   "desc": "회령 가마에서 골라 올린 상등 오지그릇(설명적 명칭).",
+   "line": "trade_hoeryeong_oji",
+   "grade": 2,
+   "generated": "craft_trade"
+  }
+ ],
+ "specialty_recipes": [
+  {
+   "id": "spr_gangjin_celadon",
+   "name": "【강진 청자 비전서】",
+   "tier": 4,
+   "produces": "sp_gangjin_celadon",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 4
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 6
+    }
+   ]
+  },
+  {
+   "id": "spr_bunwon_porcelain",
+   "name": "【분원 백자 비전서】",
+   "tier": 3,
+   "produces": "sp_bunwon_porcelain",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 4
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    }
+   ]
+  },
+  {
+   "id": "spr_tongyeong_najeon",
+   "name": "【통영 나전칠기 비전서】",
+   "tier": 3,
+   "produces": "sp_tongyeong_najeon",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_lacquer",
+     "qty": 3
+    },
+    {
+     "id": "mat_mother_of_pearl",
+     "qty": 3
+    },
+    {
+     "id": "mat_wood",
+     "qty": 2
+    }
+   ]
+  },
+  {
+   "id": "spr_her_066",
+   "name": "【명량 복원 비전서】",
+   "tier": 5,
+   "produces": "sp_her_066",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_112",
+   "name": "【삼척 복원 비전서】",
+   "tier": 4,
+   "produces": "sp_her_112",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_115",
+   "name": "【단양 복원 비전서】",
+   "tier": 3,
+   "produces": "sp_her_115",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_121",
+   "name": "【태안 복원 비전서】",
+   "tier": 4,
+   "produces": "sp_her_121",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_123",
+   "name": "【부안 복원 비전서】",
+   "tier": 4,
+   "produces": "sp_her_123",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_125",
+   "name": "【신안 복원 비전서】",
+   "tier": 5,
+   "produces": "sp_her_125",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_138",
+   "name": "【압록강 복원 비전서】",
+   "tier": 3,
+   "produces": "sp_her_138",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_142",
+   "name": "【회령 복원 비전서】",
+   "tier": 2,
+   "produces": "sp_her_142",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n007",
+   "name": "【제주 목관아지 출토 분청사기 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n007",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n020",
+   "name": "【차귀도 해역 침몰선 해저 청자 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n020",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n024",
+   "name": "【강진 청자 상감운학문 매병 재현 비전서】",
+   "tier": 4,
+   "produces": "sp_her_n024",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n030",
+   "name": "【진도 용장산성 행궁터 유물 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n030",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n032",
+   "name": "【강진 사당리 고려청자 요지 비색발 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n032",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n054",
+   "name": "【광양 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n054",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n061",
+   "name": "【순천 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n061",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n067",
+   "name": "【동래 동삼동 패총 융기문토기 재현 비전서】",
+   "tier": 4,
+   "produces": "sp_her_n067",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_celadon_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 5
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n074",
+   "name": "【동래 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n074",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n081",
+   "name": "【나주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n081",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n094",
+   "name": "【남원 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n094",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n101",
+   "name": "【경주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n101",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n115",
+   "name": "【영일 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n115",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n122",
+   "name": "【전주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n122",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n135",
+   "name": "【안동 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n135",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n142",
+   "name": "【공주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n142",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n156",
+   "name": "【영주 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n156",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n163",
+   "name": "【청주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n163",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n176",
+   "name": "【단양 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n176",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n183",
+   "name": "【원주 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n183",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n196",
+   "name": "【여주 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n196",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n203",
+   "name": "【남양 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n203",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n216",
+   "name": "【개성 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n216",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n223",
+   "name": "【강화 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n223",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n232",
+   "name": "【철원 궁예 태봉국 철원도성 금와 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n232",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n237",
+   "name": "【인제 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n237",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n244",
+   "name": "【철원 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n244",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n257",
+   "name": "【평강 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n257",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n264",
+   "name": "【통천 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n264",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n277",
+   "name": "【신천 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n277",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n284",
+   "name": "【옹진 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n284",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n292",
+   "name": "【평양 안학궁터 고구려 수막새 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n292",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n297",
+   "name": "【안변 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n297",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n304",
+   "name": "【덕원 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n304",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n318",
+   "name": "【함흥 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n318",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n325",
+   "name": "【함흥 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n325",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n338",
+   "name": "【홍원 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n338",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n345",
+   "name": "【희천 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n345",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n358",
+   "name": "【북청 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n358",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n365",
+   "name": "【선천 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n365",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n378",
+   "name": "【길주 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n378",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n385",
+   "name": "【초산 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n385",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n395",
+   "name": "【경성 온천 도요지 고려 흑유자기 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n395",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n399",
+   "name": "【갑산 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n399",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n406",
+   "name": "【삼수 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n406",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n408",
+   "name": "【무산 오진리 원시 주거지 빗살무늬토기 재현 비전서】",
+   "tier": 3,
+   "produces": "sp_her_n408",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n419",
+   "name": "【부령 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n419",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n426",
+   "name": "【무산 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n426",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n439",
+   "name": "【경원 고려청자 가마터 출토 명품완 재현 비전서】",
+   "tier": 2,
+   "produces": "sp_her_n439",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_her_n446",
+   "name": "【종성 도요지 백자 청화항아리 재현 비전서】",
+   "tier": 1,
+   "produces": "sp_her_n446",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_white_clay",
+     "qty": 3
+    },
+    {
+     "id": "mat_charcoal",
+     "qty": 4
+    }
+   ],
+   "generated": "heritage"
+  },
+  {
+   "id": "spr_tongyeong_gat",
+   "name": "【통영 갓방 비전서】",
+   "tier": 3,
+   "produces": "sp_tongyeong_gat",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "sp_jeju_malchong",
+     "qty": 3
+    },
+    {
+     "id": "mat_bamboo",
+     "qty": 2
+    },
+    {
+     "id": "mat_lacquer",
+     "qty": 1
+    }
+   ],
+   "generated": "craft_trade"
+  },
+  {
+   "id": "spr_haeju_muk",
+   "name": "【해주 먹방 비전서】",
+   "tier": 3,
+   "produces": "sp_haeju_songyeonmuk",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "mat_songyeon",
+     "qty": 4
+    },
+    {
+     "id": "mat_fish_glue",
+     "qty": 2
+    }
+   ],
+   "generated": "craft_trade"
+  },
+  {
+   "id": "spr_hansan_jeoksam",
+   "name": "【한산 모시 침선 비전서】",
+   "tier": 3,
+   "produces": "sp_hansan_mosi_jeoksam",
+   "facility": "gongbang",
+   "materials": [
+    {
+     "id": "sp_hansan_mosi",
+     "qty": 3
+    },
+    {
+     "id": "mat_silk_thread",
+     "qty": 1
+    }
+   ],
+   "generated": "craft_trade"
+  }
+ ],
+ "trade_quests": [
+  {
+   "id": "tq_001",
+   "name": "한지 진상 운송",
+   "item": "sp_jeonju_hanji",
+   "qty": 20,
+   "from": "ND_07_CITY_JEONJUJEONRAGAMYEONG",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 1
+  },
+  {
+   "id": "tq_002",
+   "name": "북관 명태 남도 교역",
+   "item": "sp_hamgyeong_myeongtae",
+   "qty": 30,
+   "from": "ND_15_CITY_HAMHEUNGBU",
+   "to": "ND_04_CITY_WONJUGANGWONGAMYEONG",
+   "margin": 1.8,
+   "tier": 2
+  },
+  {
+   "id": "tq_003",
+   "name": "개성 인삼 의주 연행",
+   "item": "sp_gaeseong_insam",
+   "qty": 10,
+   "from": "ND_01_CITY_GAESEONGBU",
+   "to": "ND_14_CITY_UIJUMOK",
+   "margin": 1.8,
+   "tier": 3
+  },
+  {
+   "id": "tq_004",
+   "name": "제주 감귤 진상",
+   "item": "sp_jeju_gamgyul",
+   "qty": 10,
+   "from": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 3
+  },
+  {
+   "id": "tq_005",
+   "name": "담양 죽물 관서 행상",
+   "item": "sp_damyang_bamboo",
+   "qty": 15,
+   "from": "ND_08_TOWN_DAMYANG",
+   "to": "ND_13_CITY_PYEONGYANGBU",
+   "margin": 1.8,
+   "tier": 2
+  },
+  {
+   "id": "tq_006",
+   "name": "상주 곶감 북관 행상",
+   "item": "sp_sangju_gotgam",
+   "qty": 20,
+   "from": "ND_09_CITY_SANGJUMOK",
+   "to": "ND_15_CITY_HAMHEUNGBU",
+   "margin": 1.8,
+   "tier": 2
+  },
+  {
+   "id": "tq_007",
+   "name": "안성 유기 영남 납품",
+   "item": "sp_anseong_yugi",
+   "qty": 8,
+   "from": "ND_02_TOWN_ANSEONG",
+   "to": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "margin": 1.8,
+   "tier": 2
+  },
+  {
+   "id": "tq_008",
+   "name": "의주 담비 가죽 한양 진상",
+   "item": "sp_uiju_dambi",
+   "qty": 4,
+   "from": "ND_14_CITY_UIJUMOK",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 4
+  },
+  {
+   "id": "tq_ct_01",
+   "name": "말총 갓방 운송",
+   "item": "sp_jeju_malchong",
+   "qty": 20,
+   "from": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "to": "ND_10_FORT_TONGYEONGTONGJEYEONG",
+   "margin": 1.8,
+   "tier": 1,
+   "reward_item": "spr_tongyeong_gat",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_02",
+   "name": "옹진 대하 강화 뱃길",
+   "item": "sp_ongjin_daeha",
+   "qty": 15,
+   "from": "ND_12_TOWN_ONGJIN",
+   "to": "ND_01_CITY_GANGHWAYUSUBU",
+   "margin": 1.8,
+   "tier": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_03",
+   "name": "평양 녹두 한양 진상",
+   "item": "sp_pyeongyang_nokdu",
+   "qty": 20,
+   "from": "ND_13_CITY_PYEONGYANGBU",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_04",
+   "name": "의주 진말 평양 운송",
+   "item": "sp_uiju_jinmal",
+   "qty": 20,
+   "from": "ND_14_CITY_UIJUMOK",
+   "to": "ND_13_CITY_PYEONGYANGBU",
+   "margin": 1.8,
+   "tier": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_06",
+   "name": "해주 먹 한양 진상",
+   "item": "sp_haeju_meok",
+   "qty": 5,
+   "from": "ND_12_CITY_HAEJUMOK",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 3,
+   "reward_item": "spr_haeju_muk",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_07",
+   "name": "한산 모시 한양 진상",
+   "item": "sp_hansan_mosi",
+   "qty": 10,
+   "from": "ND_06_TOWN_BUYEO",
+   "to": "ND_02_CITY_HANYANGGYEONGJO",
+   "margin": 1.8,
+   "tier": 2,
+   "reward_item": "spr_hansan_jeoksam",
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_ct_05",
+   "name": "가덕 대구 감영 진상",
+   "item": "sp_gadeok_daegu",
+   "qty": 20,
+   "from": "ND_10_TOWN_GIMHAE",
+   "to": "ND_10_CITY_DAEGUGYEONGSANGGAMYEONG",
+   "margin": 1.8,
+   "tier": 1,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_cs_01",
+   "name": "[위탁] 옹진 대하 해주 배달",
+   "item": "sp_ongjin_daeha",
+   "qty": 20,
+   "from": "ND_12_TOWN_ONGJIN",
+   "to": "ND_12_CITY_HAEJUMOK",
+   "margin": 0.3,
+   "tier": 1,
+   "consign": true,
+   "repeat": true,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_cs_02",
+   "name": "[위탁] 평양 녹두 안주 배달",
+   "item": "sp_pyeongyang_nokdu",
+   "qty": 20,
+   "from": "ND_13_CITY_PYEONGYANGBU",
+   "to": "ND_13_CITY_ANJUMOK",
+   "margin": 0.3,
+   "tier": 1,
+   "consign": true,
+   "repeat": true,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_cs_03",
+   "name": "[위탁] 의주 진말 영변 배달",
+   "item": "sp_uiju_jinmal",
+   "qty": 20,
+   "from": "ND_14_CITY_UIJUMOK",
+   "to": "ND_14_CITY_YEONGBYEONDAEDOHOBU",
+   "margin": 0.3,
+   "tier": 1,
+   "consign": true,
+   "repeat": true,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_cs_04",
+   "name": "[위탁] 제주 말총 조천포 배달",
+   "item": "sp_jeju_malchong",
+   "qty": 20,
+   "from": "ND_17_CITY_JEJUMOKJEJUEUPSEONG",
+   "to": "ND_17_TOWN_JOCHEON",
+   "margin": 0.3,
+   "tier": 1,
+   "consign": true,
+   "repeat": true,
+   "generated": "craft_trade"
+  },
+  {
+   "id": "tq_cs_05",
+   "name": "[위탁] 가덕 대구 동래 배달",
+   "item": "sp_gadeok_daegu",
+   "qty": 20,
+   "from": "ND_10_TOWN_GIMHAE",
+   "to": "ND_10_CITY_DONGRAEHYEON",
+   "margin": 0.3,
+   "tier": 1,
+   "consign": true,
+   "repeat": true,
+   "generated": "craft_trade"
+  }
+ ]
+}

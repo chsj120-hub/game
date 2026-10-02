@@ -1,0 +1,3950 @@
+{
+ "_schema": "14_전체스킬. owner=hero|companion|enemy|common|passive|life_gear|capture|mount. target=enemy|enemies|ally|allies|self|field. ap_cost=AP 소모(게이지 재시작: 00.battle.restart_gauge_by_ap). element=원소(weapon=무기 원소), affinity=유불선 상성(weapon=시전자). effects: heal_pct, cleanse, stun_turns(+stun_kinds), status{id,turns,chance}(18 시트), buff/debuff{atk_pct,def_pct,res_all,speed_pct}, buff_turns, taunt_turns, party_heal_pct, gauge_push(대상 게이지 −), gauge_boost(아군 +), def_ignore, money_cost, passive{...,knowledge,damage_vs}, field_*=필드 효과.",
+ "skills": [
+  {
+   "id": "sk_basic_strike",
+   "name": "일반 공격",
+   "owner": "common",
+   "target": "enemy",
+   "ap_cost": 1,
+   "power": 1.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_eosa_strike",
+   "name": "일격",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 1,
+   "power": 1.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_eosa_double",
+   "name": "쌍수 베기",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.6,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_eosa_focus",
+   "name": "정신일도",
+   "owner": "hero",
+   "target": "self",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "buff": {
+     "atk_pct": 0.25
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_eosa_mapae",
+   "name": "암행어사 출두",
+   "owner": "hero",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.8,
+   "element": "holy",
+   "affinity": "yu",
+   "cooldown": 3,
+   "effects": {
+    "debuff": {
+     "atk_pct": -0.15
+    },
+    "buff_turns": 2,
+    "stun_turns": 1,
+    "stun_kinds": [
+     "human"
+    ]
+   }
+  },
+  {
+   "id": "sk_mer_strike",
+   "name": "주판 치기",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 1,
+   "power": 1.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_mer_coin",
+   "name": "엽전 꾸러미 던지기",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.5,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "money_cost": 10
+   }
+  },
+  {
+   "id": "sk_mer_bargain",
+   "name": "흥정의 달인",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.6,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "debuff": {
+     "def_pct": -0.3
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_mer_supply",
+   "name": "보따리 보급",
+   "owner": "hero",
+   "target": "ally",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "heal_pct": 0.3
+   }
+  },
+  {
+   "id": "sk_dosa_strike",
+   "name": "철선 타격",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 1,
+   "power": 1.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_dosa_fire",
+   "name": "화룡 부적",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.5,
+   "element": "fire",
+   "affinity": "seon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_dosa_ward",
+   "name": "벽사 결계",
+   "owner": "hero",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "res_all": 0.15,
+     "def_pct": 0.15
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_dosa_thunder",
+   "name": "오뢰정법",
+   "owner": "hero",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "holy",
+   "affinity": "seon",
+   "cooldown": 2
+  },
+  {
+   "id": "sk_act_tiger_banish",
+   "name": "인검 벽사참",
+   "owner": "hero",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 2.0,
+   "element": "holy",
+   "affinity": "seon",
+   "cooldown": 3,
+   "effects": {
+    "def_ignore": 0.25
+   }
+  },
+  {
+   "id": "sk_heojun_heal",
+   "name": "침구 요혈",
+   "owner": "companion",
+   "target": "ally",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 1,
+   "effects": {
+    "heal_pct": 0.35,
+    "cleanse": true
+   }
+  },
+  {
+   "id": "sk_heojun_group",
+   "name": "동의보감 처방",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "heal_pct": 0.2
+   }
+  },
+  {
+   "id": "sk_jyy_plan",
+   "name": "거중기 책략",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "def_pct": 0.15
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_yss_volley",
+   "name": "천자총통 일제사격",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 1.1,
+   "element": "fire",
+   "affinity": "yu",
+   "cooldown": 2
+  },
+  {
+   "id": "sk_samyeong_guard",
+   "name": "사명당 호법",
+   "owner": "companion",
+   "target": "self",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "taunt_turns": 2,
+    "buff": {
+     "def_pct": 0.3
+    },
+    "buff_turns": 2
+   }
+  },
+  {
+   "id": "sk_seosan_banner",
+   "name": "승병 호령",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "atk_pct": 0.12
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_juc_firetalisman",
+   "name": "화룡 부적",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.6,
+   "element": "fire",
+   "affinity": "seon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_juc_hex",
+   "name": "둔갑 천문",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "debuff": {
+     "def_pct": -0.2
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_nsg_fengshui",
+   "name": "풍수 명당",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "res_all": 0.15
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_chakho_shot",
+   "name": "착호 조총",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 1.9,
+   "element": "metal",
+   "affinity": "none",
+   "cooldown": 1
+  },
+  {
+   "id": "sk_bari_purify",
+   "name": "바리데기 진혼",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.3,
+   "element": "holy",
+   "affinity": "bul",
+   "cooldown": 2,
+   "effects": {
+    "party_heal_pct": 0.08
+   }
+  },
+  {
+   "id": "sk_bari_heal",
+   "name": "생명수",
+   "owner": "companion",
+   "target": "ally",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {
+    "heal_pct": 0.25
+   }
+  },
+  {
+   "id": "sk_bbs_supply",
+   "name": "등짐 보급",
+   "owner": "companion",
+   "target": "ally",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {
+    "heal_pct": 0.18
+   }
+  },
+  {
+   "id": "sk_khd_genre",
+   "name": "풍속화 씨름판",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "buff": {
+     "atk_pct": 0.1
+    },
+    "buff_turns": 3,
+    "gauge_boost": 150
+   }
+  },
+  {
+   "id": "sk_syb_danoh",
+   "name": "단오풍정",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "status": {
+     "id": "charm",
+     "turns": 1,
+     "chance": 0.35
+    }
+   }
+  },
+  {
+   "id": "sk_hjy_song",
+   "name": "청산리 벽계수",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "buff": {
+     "speed_pct": 0.15
+    },
+    "buff_turns": 2
+   }
+  },
+  {
+   "id": "sk_hgd_clone",
+   "name": "분신술",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.8,
+   "element": "none",
+   "affinity": "seon",
+   "cooldown": 2
+  },
+  {
+   "id": "sk_en_bandit_rush",
+   "name": "떼몰이",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.15,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_en_bite",
+   "name": "물어뜯기",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.25,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0,
+   "effects": {
+    "status": {
+     "id": "bleed",
+     "turns": 2,
+     "chance": 0.25
+    }
+   }
+  },
+  {
+   "id": "sk_en_bleed_slash",
+   "name": "난도질",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 0,
+   "effects": {
+    "status": {
+     "id": "bleed",
+     "turns": 3,
+     "chance": 0.6
+    }
+   }
+  },
+  {
+   "id": "sk_en_wail",
+   "name": "곡성",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.6,
+   "element": "yin",
+   "affinity": "bul",
+   "cooldown": 0,
+   "effects": {
+    "status": {
+     "id": "fear",
+     "turns": 2,
+     "chance": 0.3
+    }
+   }
+  },
+  {
+   "id": "sk_en_cult_curse",
+   "name": "사교 저주",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.8,
+   "element": "yin",
+   "affinity": "seon",
+   "cooldown": 0,
+   "effects": {
+    "status": {
+     "id": "curse",
+     "turns": 3,
+     "chance": 0.7
+    }
+   }
+  },
+  {
+   "id": "sk_en_fox_charm",
+   "name": "여우 홀림",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "seon",
+   "cooldown": 3,
+   "effects": {
+    "status": {
+     "id": "charm",
+     "turns": 2,
+     "chance": 0.8
+    }
+   }
+  },
+  {
+   "id": "sk_en_steal_shoes",
+   "name": "신발 훔치기",
+   "owner": "enemy",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.6,
+   "element": "none",
+   "affinity": "seon",
+   "cooldown": 3,
+   "effects": {
+    "gauge_push": 500,
+    "status": {
+     "id": "shoeless",
+     "turns": 3,
+     "chance": 1.0
+    }
+   }
+  },
+  {
+   "id": "sk_en_burn_breath",
+   "name": "화염 숨결",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.7,
+   "element": "fire",
+   "affinity": "seon",
+   "cooldown": 0,
+   "effects": {
+    "status": {
+     "id": "burn",
+     "turns": 2,
+     "chance": 0.5
+    }
+   }
+  },
+  {
+   "id": "sk_en_bulgasari_stomp",
+   "name": "철기 짓밟기",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.75,
+   "element": "metal",
+   "affinity": "seon",
+   "cooldown": 1
+  },
+  {
+   "id": "sk_en_bulgasari_devour",
+   "name": "쇠 삼키기",
+   "owner": "enemy",
+   "target": "self",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "def_pct": 0.3
+    },
+    "buff_turns": 3
+   }
+  },
+  {
+   "id": "sk_en_imugi_tidal",
+   "name": "해일",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.75,
+   "element": "water",
+   "affinity": "seon",
+   "cooldown": 1,
+   "effects": {
+    "status": {
+     "id": "frost",
+     "turns": 2,
+     "chance": 0.3
+    }
+   }
+  },
+  {
+   "id": "sk_en_sanshin_wrath",
+   "name": "산군 노호",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.75,
+   "element": "yin",
+   "affinity": "bul",
+   "cooldown": 1,
+   "effects": {
+    "status": {
+     "id": "fear",
+     "turns": 2,
+     "chance": 0.4
+    }
+   }
+  },
+  {
+   "id": "sk_en_arang_wail",
+   "name": "원한의 곡성",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.8,
+   "element": "yin",
+   "affinity": "bul",
+   "cooldown": 1,
+   "effects": {
+    "status": {
+     "id": "curse",
+     "turns": 2,
+     "chance": 0.5
+    }
+   }
+  },
+  {
+   "id": "sk_en_heukryong_eruption",
+   "name": "천지 분화",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.72,
+   "element": "fire",
+   "affinity": "seon",
+   "cooldown": 1,
+   "effects": {
+    "status": {
+     "id": "burn",
+     "turns": 2,
+     "chance": 0.35
+    }
+   }
+  },
+  {
+   "id": "sk_en_yeokcheon_chaos",
+   "name": "역천 혼돈",
+   "owner": "enemy",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.85,
+   "element": "yin",
+   "affinity": "seon",
+   "cooldown": 1,
+   "effects": {
+    "debuff": {
+     "def_pct": -0.15
+    },
+    "buff_turns": 2
+   }
+  },
+  {
+   "id": "sk_pas_gyeonggukjeon",
+   "name": "경국대의",
+   "owner": "passive",
+   "target": "self",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.05,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   }
+  },
+  {
+   "id": "sk_pas_muyedobo",
+   "name": "무예 24기",
+   "owner": "passive",
+   "target": "self",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "atk_pct": 0.08
+    }
+   }
+  },
+  {
+   "id": "sk_pas_hunmin",
+   "name": "바른 소리",
+   "owner": "passive",
+   "target": "self",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "res_all": 0.05,
+     "knowledge": {
+      "yu": 2
+     }
+    },
+    "field_reputation_gain": 0.1
+   }
+  },
+  {
+   "id": "sk_pas_evil_repel",
+   "name": "벽사(辟邪)",
+   "owner": "passive",
+   "target": "self",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "res_all": 0.05,
+     "damage_vs": {
+      "yokai": 0.15,
+      "ghost": 0.15
+     }
+    }
+   }
+  },
+  {
+   "id": "sk_lg_yundo",
+   "name": "방위 판독",
+   "owner": "life_gear",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_search_radius_li": 3
+   }
+  },
+  {
+   "id": "sk_lg_daedong",
+   "name": "십리 방안",
+   "owner": "life_gear",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_search_radius_li": 8,
+    "field_route_preview": true
+   }
+  },
+  {
+   "id": "sk_cap_yu",
+   "name": "오랏줄 결박(고용)",
+   "owner": "capture",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "capture_family": "yu"
+   }
+  },
+  {
+   "id": "sk_cap_bul",
+   "name": "염주 해원(빙의)",
+   "owner": "capture",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "capture_family": "bul"
+   }
+  },
+  {
+   "id": "sk_cap_seon",
+   "name": "부적 봉인",
+   "owner": "capture",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "capture_family": "seon"
+   }
+  },
+  {
+   "id": "sk_cap_mu",
+   "name": "덫 길들이기",
+   "owner": "capture",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "capture_family": "mu"
+   }
+  },
+  {
+   "id": "sk_mt_donkey",
+   "name": "짐 나르기",
+   "owner": "mount",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0
+  },
+  {
+   "id": "sk_mt_pony",
+   "name": "산길 질주",
+   "owner": "mount",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_terrain_mountain": 0.75
+   }
+  },
+  {
+   "id": "sk_mt_boat",
+   "name": "뱃길 교역",
+   "owner": "mount",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_trade_price": 0.03
+   }
+  },
+  {
+   "id": "sk_mt_junma",
+   "name": "천리 준족",
+   "owner": "mount",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_stamina_cost": -0.3
+   }
+  },
+  {
+   "id": "sk_mt_warhorse",
+   "name": "기마 돌격",
+   "owner": "mount",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 1.3,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3
+  },
+  {
+   "id": "sk_mt_haetae",
+   "name": "시비 판별",
+   "owner": "mount",
+   "target": "enemies",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "holy",
+   "affinity": "yu",
+   "cooldown": 4,
+   "effects": {
+    "debuff": {
+     "atk_pct": -0.1
+    },
+    "buff_turns": 2
+   }
+  },
+  {
+   "id": "sk_mt_cheonma",
+   "name": "비천",
+   "owner": "mount",
+   "target": "field",
+   "ap_cost": 0,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 0,
+   "effects": {
+    "field_fast_travel": true
+   }
+  },
+  {
+   "id": "sk_mt_white_tiger",
+   "name": "산군 포효",
+   "owner": "mount",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 4,
+   "effects": {
+    "stun_turns": 1
+   }
+  },
+  {
+   "id": "sk_cp_03",
+   "name": "목면 포용",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "heal_pct": 0.15,
+    "cleanse": true
+   },
+   "db15": "SKL_COMP_03_ACT"
+  },
+  {
+   "id": "sk_cp_04",
+   "name": "호질(虎叱)의 일갈",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "debuff": {
+     "atk_pct": -0.15
+    },
+    "buff_turns": 2,
+    "stun_turns": 1,
+    "status": {
+     "id": "fear",
+     "turns": 2,
+     "chance": 0.35
+    }
+   },
+   "db15": "SKL_COMP_04_ACT"
+  },
+  {
+   "id": "sk_cp_05",
+   "name": "심봤다! 회복",
+   "owner": "companion",
+   "target": "ally",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {
+    "heal_pct": 0.24
+   },
+   "db15": "SKL_COMP_05_ACT"
+  },
+  {
+   "id": "sk_cp_06",
+   "name": "조선경국진(朝鮮經國陣)",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "buff": {
+     "atk_pct": 0.1
+    },
+    "buff_turns": 3,
+    "gauge_boost": 150
+   },
+   "db15": "SKL_COMP_06_ACT"
+  },
+  {
+   "id": "sk_cp_07",
+   "name": "통공령 선포",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "buff": {
+     "atk_pct": 0.1
+    },
+    "buff_turns": 3
+   },
+   "db15": "SKL_COMP_07_ACT"
+  },
+  {
+   "id": "sk_cp_08",
+   "name": "추사필체(秋史筆體) 세한송백",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {},
+   "db15": "SKL_COMP_08_ACT"
+  },
+  {
+   "id": "sk_cp_09",
+   "name": "외교 담판 묵계",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1
+   },
+   "db15": "SKL_COMP_09_ACT"
+  },
+  {
+   "id": "sk_cp_10",
+   "name": "자격루 시보(時報) 탄환",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "fire",
+   "affinity": "yu",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1
+   },
+   "db15": "SKL_COMP_10_ACT"
+  },
+  {
+   "id": "sk_cp_11",
+   "name": "총통 일제사격",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "fire",
+   "affinity": "yu",
+   "cooldown": 2,
+   "effects": {
+    "def_ignore": 0.3
+   },
+   "db15": "SKL_COMP_11_ACT"
+  },
+  {
+   "id": "sk_cp_12",
+   "name": "지형지물 전술 전개",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "buff": {
+     "def_pct": 0.16
+    },
+    "buff_turns": 3
+   },
+   "db15": "SKL_COMP_12_ACT"
+  },
+  {
+   "id": "sk_cp_14",
+   "name": "백두산석 마도진(磨刀盡)",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 1.8,
+   "element": "metal",
+   "affinity": "yu",
+   "cooldown": 2,
+   "effects": {
+    "def_ignore": 0.3
+   },
+   "db15": "SKL_COMP_14_ACT"
+  },
+  {
+   "id": "sk_cp_15",
+   "name": "행주 농성 결사",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 1,
+   "effects": {},
+   "db15": "SKL_COMP_15_ACT"
+  },
+  {
+   "id": "sk_cp_17",
+   "name": "몽유도원(夢遊桃源) 경계",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "buff": {
+     "def_pct": 0.16
+    },
+    "buff_turns": 3
+   },
+   "db15": "SKL_COMP_17_ACT"
+  },
+  {
+   "id": "sk_cp_19",
+   "name": "초충화원(草蟲花園) 평온",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "heal_pct": 0.15
+   },
+   "db15": "SKL_COMP_19_ACT"
+  },
+  {
+   "id": "sk_cp_21",
+   "name": "사상 체질 처방",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 1,
+   "effects": {},
+   "db15": "SKL_COMP_21_ACT"
+  },
+  {
+   "id": "sk_cp_22",
+   "name": "진휼미 보급",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "heal_pct": 0.15
+   },
+   "db15": "SKL_COMP_22_ACT"
+  },
+  {
+   "id": "sk_cp_23",
+   "name": "순교자의 신념 방패",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "yin",
+   "affinity": "yu",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "def_pct": 0.16,
+     "res_all": 0.1
+    },
+    "buff_turns": 3
+   },
+   "db15": "SKL_COMP_23_ACT"
+  },
+  {
+   "id": "sk_cp_24",
+   "name": "살수대첩 수공(水功)",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "water",
+   "affinity": "seon",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1
+   },
+   "db15": "SKL_COMP_24_ACT"
+  },
+  {
+   "id": "sk_cp_25",
+   "name": "오검 비도술(飛刀術)",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "metal",
+   "affinity": "seon",
+   "cooldown": 2,
+   "effects": {},
+   "db15": "SKL_COMP_25_ACT"
+  },
+  {
+   "id": "sk_cp_26",
+   "name": "황산벌 오천결사대",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 1,
+   "effects": {},
+   "db15": "SKL_COMP_26_ACT"
+  },
+  {
+   "id": "sk_cp_27",
+   "name": "적색포 영혼 결박(즉사)",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 1.8,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {
+    "def_ignore": 0.3
+   },
+   "db15": "SKL_COMP_27_ACT"
+  },
+  {
+   "id": "sk_cp_28",
+   "name": "닻줄 던지기",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1
+   },
+   "db15": "SKL_COMP_28_ACT"
+  },
+  {
+   "id": "sk_cp_30",
+   "name": "일체유심조 무애박(無碍拍)",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "status": {
+     "id": "charm",
+     "turns": 2,
+     "chance": 0.35
+    }
+   },
+   "db15": "SKL_COMP_30_ACT"
+  },
+  {
+   "id": "sk_cp_31",
+   "name": "화엄일승법계진(法界陣)",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "holy",
+   "affinity": "bul",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "def_pct": 0.16,
+     "res_all": 0.1
+    },
+    "buff_turns": 3
+   },
+   "db15": "SKL_COMP_31_ACT"
+  },
+  {
+   "id": "sk_cp_33",
+   "name": "정혜쌍수(定慧雙修) 돈오",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1
+   },
+   "db15": "SKL_COMP_33_ACT"
+  },
+  {
+   "id": "sk_cp_37",
+   "name": "처용 벽사가무(處容舞)",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "holy",
+   "affinity": "seon",
+   "cooldown": 2,
+   "effects": {},
+   "db15": "SKL_COMP_37_ACT"
+  },
+  {
+   "id": "sk_cp_38",
+   "name": "무쇠망치 벼림타",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1,
+    "def_ignore": 0.3
+   },
+   "db15": "SKL_COMP_38_ACT"
+  },
+  {
+   "id": "sk_cp_39",
+   "name": "급소 해체참",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 1.8,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {
+    "status": {
+     "id": "bleed",
+     "turns": 2,
+     "chance": 0.35
+    }
+   },
+   "db15": "SKL_COMP_39_ACT"
+  },
+  {
+   "id": "sk_cp_40",
+   "name": "약초 즙 분사",
+   "owner": "companion",
+   "target": "ally",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {
+    "heal_pct": 0.2,
+    "cleanse": true,
+    "status": {
+     "id": "burn",
+     "turns": 2,
+     "chance": 0.35
+    }
+   },
+   "db15": "SKL_COMP_40_ACT"
+  },
+  {
+   "id": "sk_cp_41",
+   "name": "옹기 물벼락",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "holy",
+   "affinity": "none",
+   "cooldown": 2,
+   "effects": {},
+   "db15": "SKL_COMP_41_ACT"
+  },
+  {
+   "id": "sk_cp_43",
+   "name": "채찍 후려치기",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1
+   },
+   "db15": "SKL_COMP_43_ACT"
+  },
+  {
+   "id": "sk_cp_44",
+   "name": "조총 일발필살",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 1.8,
+   "element": "metal",
+   "affinity": "none",
+   "cooldown": 2,
+   "effects": {
+    "def_ignore": 0.3
+   },
+   "db15": "SKL_COMP_44_ACT"
+  },
+  {
+   "id": "sk_cp_45",
+   "name": "모래 뿌리기",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 1,
+   "effects": {},
+   "db15": "SKL_COMP_45_ACT"
+  },
+  {
+   "id": "sk_cp_46",
+   "name": "뜨거운 뚝배기 투척",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 1,
+   "effects": {
+    "debuff": {
+     "def_pct": -0.15
+    },
+    "buff_turns": 2,
+    "status": {
+     "id": "burn",
+     "turns": 2,
+     "chance": 0.35
+    }
+   },
+   "db15": "SKL_COMP_46_ACT"
+  },
+  {
+   "id": "sk_cp_47",
+   "name": "회초리 훈도",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "metal",
+   "affinity": "none",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1
+   },
+   "db15": "SKL_COMP_47_ACT"
+  },
+  {
+   "id": "sk_cp_48",
+   "name": "물길 노젓기 강타",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "water",
+   "affinity": "none",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1
+   },
+   "db15": "SKL_COMP_48_ACT"
+  },
+  {
+   "id": "sk_cp_49",
+   "name": "곡괭이 내리찍기",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "debuff": {
+     "def_pct": -0.15
+    },
+    "buff_turns": 2,
+    "def_ignore": 0.3
+   },
+   "db15": "SKL_COMP_49_ACT"
+  },
+  {
+   "id": "sk_cp_50",
+   "name": "옻물 붓기",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "wood",
+   "affinity": "none",
+   "cooldown": 3,
+   "effects": {
+    "status": {
+     "id": "poison",
+     "turns": 2,
+     "chance": 0.35
+    }
+   },
+   "db15": "SKL_COMP_50_ACT"
+  },
+  {
+   "id": "sk_cp_51",
+   "name": "닥나무 닥줄 휘감기",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1
+   },
+   "db15": "SKL_COMP_51_ACT"
+  },
+  {
+   "id": "sk_cp_52",
+   "name": "거석 내던지기",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1
+   },
+   "db15": "SKL_COMP_52_ACT"
+  },
+  {
+   "id": "sk_cp_53",
+   "name": "도술 삼매진화(三昧眞火)",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "fire",
+   "affinity": "seon",
+   "cooldown": 1,
+   "effects": {},
+   "db15": "SKL_COMP_53_ACT"
+  },
+  {
+   "id": "sk_cp_54",
+   "name": "효심의 연화 환생",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 5,
+   "effects": {
+    "heal_pct": 0.21,
+    "cleanse": true
+   },
+   "db15": "SKL_COMP_54_ACT"
+  },
+  {
+   "id": "sk_cp_55",
+   "name": "옥중 십장가(十杖歌)",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "buff": {
+     "def_pct": 0.16
+    },
+    "buff_turns": 3
+   },
+   "db15": "SKL_COMP_55_ACT"
+  },
+  {
+   "id": "sk_cp_56",
+   "name": "암행어사 출두야!",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "stun_turns": 1
+   },
+   "db15": "SKL_COMP_56_ACT"
+  },
+  {
+   "id": "sk_cp_57",
+   "name": "대박 터뜨리기",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 1,
+   "effects": {},
+   "db15": "SKL_COMP_57_ACT"
+  },
+  {
+   "id": "sk_cp_58",
+   "name": "궤짝 속 방심 기습",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 1.8,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {},
+   "db15": "SKL_COMP_58_ACT"
+  },
+  {
+   "id": "sk_cp_59",
+   "name": "백만 냥의 안목",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 1,
+   "effects": {},
+   "db15": "SKL_COMP_59_ACT"
+  },
+  {
+   "id": "sk_cp_60",
+   "name": "철퇴 일격 필살",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "holy",
+   "affinity": "seon",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "def_pct": 0.16,
+     "res_all": 0.1
+    },
+    "buff_turns": 3
+   },
+   "db15": "SKL_COMP_60_ACT"
+  },
+  {
+   "id": "sk_cp_61",
+   "name": "일월보검(日月寶劍) 천강베기",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 3,
+   "power": 1.8,
+   "element": "holy",
+   "affinity": "seon",
+   "cooldown": 2,
+   "effects": {},
+   "db15": "SKL_COMP_61_ACT"
+  },
+  {
+   "id": "sk_cp_62",
+   "name": "구운몽(九雲夢) 몽환술",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {
+    "status": {
+     "id": "charm",
+     "turns": 2,
+     "chance": 0.35
+    }
+   },
+   "db15": "SKL_COMP_62_ACT"
+  },
+  {
+   "id": "sk_cp_63",
+   "name": "선녀의 요지연(瑤池宴) 하례",
+   "owner": "companion",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 3,
+   "effects": {
+    "heal_pct": 0.15,
+    "buff": {
+     "speed_pct": 0.13
+    },
+    "buff_turns": 3
+   },
+   "db15": "SKL_COMP_63_ACT"
+  },
+  {
+   "id": "sk_cp_64",
+   "name": "원혼의 억울함 호소",
+   "owner": "companion",
+   "target": "enemy",
+   "ap_cost": 2,
+   "power": 1.4,
+   "element": "yin",
+   "affinity": "bul",
+   "cooldown": 1,
+   "effects": {
+    "debuff": {
+     "atk_pct": -0.15,
+     "def_pct": -0.15
+    },
+    "buff_turns": 2
+   },
+   "db15": "SKL_COMP_64_ACT"
+  },
+  {
+   "id": "sk_cp_65",
+   "name": "평국대원수(平國大元帥) 호령",
+   "owner": "companion",
+   "target": "enemies",
+   "ap_cost": 3,
+   "power": 0.9,
+   "element": "weapon",
+   "affinity": "weapon",
+   "cooldown": 2,
+   "effects": {
+    "def_ignore": 0.3
+   },
+   "db15": "SKL_COMP_65_ACT"
+  },
+  {
+   "id": "sk_pas_her_113",
+   "name": "강릉 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2,
+      "sa": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_124",
+   "name": "전주 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_132",
+   "name": "해주 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_144",
+   "name": "추사 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n001",
+   "name": "제주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n005",
+   "name": "대정현 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n012",
+   "name": "제주 판각 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n015",
+   "name": "용두암 용왕부적 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n027",
+   "name": "해남 일괄 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n028",
+   "name": "완도 목간 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n036",
+   "name": "강진 시첩 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n052",
+   "name": "순천 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n055",
+   "name": "순천 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n056",
+   "name": "여수 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n060",
+   "name": "광양 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n069",
+   "name": "담양 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n070",
+   "name": "광주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n072",
+   "name": "나주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n075",
+   "name": "나주 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n076",
+   "name": "광주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n080",
+   "name": "동래 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n092",
+   "name": "경주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n095",
+   "name": "경주 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n096",
+   "name": "대구 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n100",
+   "name": "남원 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n104",
+   "name": "전주 어진 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.05,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n113",
+   "name": "전주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n116",
+   "name": "전주 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n117",
+   "name": "익산 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n121",
+   "name": "영일 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n133",
+   "name": "공주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n136",
+   "name": "공주 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n137",
+   "name": "부여 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n141",
+   "name": "안동 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n148",
+   "name": "청주 인판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.05,
+     "knowledge": {
+      "bul": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n152",
+   "name": "옥천 유묵 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n154",
+   "name": "회덕 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n157",
+   "name": "문경 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n158",
+   "name": "회덕 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n162",
+   "name": "회덕 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n174",
+   "name": "충주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n177",
+   "name": "울진 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n178",
+   "name": "충주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n182",
+   "name": "충주 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n191",
+   "name": "당진 유품 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n194",
+   "name": "수원 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n197",
+   "name": "서산 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n198",
+   "name": "수원 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n202",
+   "name": "수원 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n208",
+   "name": "훈민정음 해례본(간송본) 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n209",
+   "name": "조선왕조실록 태백산사고본 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.05,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n213",
+   "name": "강릉 병풍 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n214",
+   "name": "한양 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n217",
+   "name": "강릉 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n218",
+   "name": "한양 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n222",
+   "name": "한양 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n234",
+   "name": "화천 마애부적 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n235",
+   "name": "파주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n238",
+   "name": "양양 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n239",
+   "name": "파주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n243",
+   "name": "파주 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n255",
+   "name": "개성 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n258",
+   "name": "김화 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n259",
+   "name": "통천 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n263",
+   "name": "김화 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n273",
+   "name": "재령 현판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n275",
+   "name": "해주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n278",
+   "name": "재령 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n279",
+   "name": "해주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n283",
+   "name": "해주 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n288",
+   "name": "강서대묘 벽화 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "seon": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n295",
+   "name": "평양 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n298",
+   "name": "강서 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n299",
+   "name": "평양 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n303",
+   "name": "평양 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n313",
+   "name": "숙천 시판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n316",
+   "name": "안주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n319",
+   "name": "영흥 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n320",
+   "name": "안주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n324",
+   "name": "안주 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n327",
+   "name": "영변 보관함 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.04,
+     "knowledge": {
+      "bul": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n336",
+   "name": "영변 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n339",
+   "name": "홍원 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n340",
+   "name": "영변 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n344",
+   "name": "영변 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n355",
+   "name": "의주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n356",
+   "name": "의주 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n359",
+   "name": "이원 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n360",
+   "name": "의주 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n364",
+   "name": "의주 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n368",
+   "name": "단천 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n376",
+   "name": "강계 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n379",
+   "name": "단천 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n380",
+   "name": "강계 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n384",
+   "name": "강계 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n389",
+   "name": "삼수 부적 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n394",
+   "name": "삼수 필사본 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n397",
+   "name": "갑산 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n400",
+   "name": "경성 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n401",
+   "name": "갑산 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n405",
+   "name": "갑산 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.02,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n417",
+   "name": "회령 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n420",
+   "name": "경흥 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n421",
+   "name": "회령 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n425",
+   "name": "회령 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n432",
+   "name": "종성 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.03,
+     "knowledge": {
+      "yu": 2
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n437",
+   "name": "온성 옥인 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n440",
+   "name": "온성 마애칠성도 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "seon": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n441",
+   "name": "온성 목판 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_pas_her_n445",
+   "name": "온성 고문서 학통",
+   "owner": "passive",
+   "target": "self",
+   "element": "none",
+   "power": 0.0,
+   "ap_cost": 0,
+   "cooldown": 0,
+   "effects": {
+    "passive": {
+     "def_pct": 0.01,
+     "knowledge": {
+      "yu": 1
+     }
+    }
+   },
+   "generated": "heritage"
+  },
+  {
+   "id": "sk_mt_heonma",
+   "name": "산마장 질주",
+   "owner": "mount",
+   "target": "self",
+   "ap_cost": 2,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 4,
+   "effects": {
+    "gauge_boost": 300
+   },
+   "generated": "content2"
+  },
+  {
+   "id": "sk_mt_joun",
+   "name": "세곡 방진",
+   "owner": "mount",
+   "target": "allies",
+   "ap_cost": 3,
+   "power": 0.0,
+   "element": "none",
+   "affinity": "none",
+   "cooldown": 4,
+   "effects": {
+    "buff": {
+     "def_pct": 0.1,
+     "turns": 2
+    }
+   },
+   "generated": "content2"
+  }
+ ]
+}

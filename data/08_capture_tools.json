@@ -1,0 +1,445 @@
+{
+ "_schema": "08_포획구. 유(포승·고용: 인간, 고용비 추가)·불(염주·빙의/해원: 원혼)·선(부적·봉인: 요괴)·무(덫·길들이기: 맹수, 먹이 보너스) × 5등급. 빈사(HP≤30%)에서만, 보스 불가. 계통 규칙은 00_overview.capture.methods.",
+ "tools": [
+  {
+   "id": "cap_yu_1",
+   "name": "삼끈 포승",
+   "family": "yu",
+   "kind": "포승",
+   "tier": 1,
+   "target_kind": "human",
+   "base_rate": 0.3,
+   "price": 30,
+   "skill": "sk_cap_yu",
+   "method": "고용",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_hemp",
+      "qty": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_yu_2",
+   "name": "홍사 포승",
+   "family": "yu",
+   "kind": "포승",
+   "tier": 2,
+   "target_kind": "human",
+   "base_rate": 0.4,
+   "price": 90,
+   "skill": "sk_cap_yu",
+   "method": "고용",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_cotton",
+      "qty": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_yu_3",
+   "name": "포도청 오랏줄",
+   "family": "yu",
+   "kind": "포승",
+   "tier": 3,
+   "target_kind": "human",
+   "base_rate": 0.5,
+   "price": 250,
+   "skill": "sk_cap_yu",
+   "method": "고용",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_silk_thread",
+      "qty": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_yu_4",
+   "name": "의금부 홍사오랏",
+   "family": "yu",
+   "kind": "포승",
+   "tier": 4,
+   "target_kind": "human",
+   "base_rate": 0.6,
+   "price": 700,
+   "skill": "sk_cap_yu",
+   "method": "고용",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_silk_thread",
+      "qty": 4
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_yu_5",
+   "name": "어명 금포승",
+   "family": "yu",
+   "kind": "포승",
+   "tier": 5,
+   "target_kind": "human",
+   "base_rate": 0.7,
+   "price": 1800,
+   "skill": "sk_cap_yu",
+   "method": "고용",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_silk_thread",
+      "qty": 5
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_bul_1",
+   "name": "율무 염주",
+   "family": "bul",
+   "kind": "염주",
+   "tier": 1,
+   "target_kind": "ghost",
+   "base_rate": 0.3,
+   "price": 30,
+   "skill": "sk_cap_bul",
+   "method": "빙의",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_wood",
+      "qty": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_bul_2",
+   "name": "보리수 염주",
+   "family": "bul",
+   "kind": "염주",
+   "tier": 2,
+   "target_kind": "ghost",
+   "base_rate": 0.4,
+   "price": 90,
+   "skill": "sk_cap_bul",
+   "method": "빙의",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_wood",
+      "qty": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_bul_3",
+   "name": "백팔 염주",
+   "family": "bul",
+   "kind": "염주",
+   "tier": 3,
+   "target_kind": "ghost",
+   "base_rate": 0.5,
+   "price": 250,
+   "skill": "sk_cap_bul",
+   "method": "빙의",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_wood",
+      "qty": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_bul_4",
+   "name": "사리 염주",
+   "family": "bul",
+   "kind": "염주",
+   "tier": 4,
+   "target_kind": "ghost",
+   "base_rate": 0.6,
+   "price": 700,
+   "skill": "sk_cap_bul",
+   "method": "빙의",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_sarira_crystal",
+      "qty": 4
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_bul_5",
+   "name": "불사리 금강염주",
+   "family": "bul",
+   "kind": "염주",
+   "tier": 5,
+   "target_kind": "ghost",
+   "base_rate": 0.7,
+   "price": 1800,
+   "skill": "sk_cap_bul",
+   "method": "빙의",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_sarira_crystal",
+      "qty": 5
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_seon_1",
+   "name": "황지 부적",
+   "family": "seon",
+   "kind": "부적",
+   "tier": 1,
+   "target_kind": "yokai",
+   "base_rate": 0.3,
+   "price": 30,
+   "skill": "sk_cap_seon",
+   "method": "봉인",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_mulberry",
+      "qty": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_seon_2",
+   "name": "주사 부적",
+   "family": "seon",
+   "kind": "부적",
+   "tier": 2,
+   "target_kind": "yokai",
+   "base_rate": 0.4,
+   "price": 90,
+   "skill": "sk_cap_seon",
+   "method": "봉인",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_mulberry",
+      "qty": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_seon_3",
+   "name": "칠성 부적",
+   "family": "seon",
+   "kind": "부적",
+   "tier": 3,
+   "target_kind": "yokai",
+   "base_rate": 0.5,
+   "price": 250,
+   "skill": "sk_cap_seon",
+   "method": "봉인",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_cinnabar",
+      "qty": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_seon_4",
+   "name": "태을 부적",
+   "family": "seon",
+   "kind": "부적",
+   "tier": 4,
+   "target_kind": "yokai",
+   "base_rate": 0.6,
+   "price": 700,
+   "skill": "sk_cap_seon",
+   "method": "봉인",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_cinnabar",
+      "qty": 4
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_seon_5",
+   "name": "옥추 신부",
+   "family": "seon",
+   "kind": "부적",
+   "tier": 5,
+   "target_kind": "yokai",
+   "base_rate": 0.7,
+   "price": 1800,
+   "skill": "sk_cap_seon",
+   "method": "봉인",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_cinnabar",
+      "qty": 5
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_mu_1",
+   "name": "올가미",
+   "family": "mu",
+   "kind": "덫",
+   "tier": 1,
+   "target_kind": "beast",
+   "base_rate": 0.3,
+   "price": 30,
+   "skill": "sk_cap_mu",
+   "method": "길들이기",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_hemp",
+      "qty": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_mu_2",
+   "name": "창애 덫",
+   "family": "mu",
+   "kind": "덫",
+   "tier": 2,
+   "target_kind": "beast",
+   "base_rate": 0.4,
+   "price": 90,
+   "skill": "sk_cap_mu",
+   "method": "길들이기",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 2
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_mu_3",
+   "name": "함정 덫",
+   "family": "mu",
+   "kind": "덫",
+   "tier": 3,
+   "target_kind": "beast",
+   "base_rate": 0.5,
+   "price": 250,
+   "skill": "sk_cap_mu",
+   "method": "길들이기",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 3
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_mu_4",
+   "name": "착호 틀덫",
+   "family": "mu",
+   "kind": "덫",
+   "tier": 4,
+   "target_kind": "beast",
+   "base_rate": 0.6,
+   "price": 700,
+   "skill": "sk_cap_mu",
+   "method": "길들이기",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_iron",
+      "qty": 4
+     }
+    ]
+   }
+  },
+  {
+   "id": "cap_mu_5",
+   "name": "신궁 그물",
+   "family": "mu",
+   "kind": "덫",
+   "tier": 5,
+   "target_kind": "beast",
+   "base_rate": 0.7,
+   "price": 1800,
+   "skill": "sk_cap_mu",
+   "method": "길들이기",
+   "weight": 0.3,
+   "craft": {
+    "book": "bk_tool_capture",
+    "materials": [
+     {
+      "id": "mat_meteor_iron",
+      "qty": 5
+     }
+    ]
+   }
+  }
+ ]
+}

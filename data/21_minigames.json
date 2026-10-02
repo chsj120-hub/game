@@ -1,0 +1,67 @@
+{
+ "_schema": "21_미니게임 카탈로그. impl=구현 클래스(archery|bagua|ssireum|rhythm|quiz|gauge|sliding|trace|rubbing|timing). category=완전판 6장 5대 분류(1 복원/퍼즐 2 타이밍/리듬 3 환경/자원 4 논리/문답 5 주술/봉인, 0 전투, 9 필드 부가). knowledge=제한시간 보정 지식(랭크당 +3%). used_by=노드 유형/이벤트 연결.",
+ "node_type_default": {"stupa": "mg_bell", "tomb": "mg_jesa_table", "wreck": "mg_salvage", "ruin": "mg_pottery_shard", "seowon": "mg_idiom", "shrine": "mg_talisman_stroke", "beacon": "mg_takbon", "kiln": "mg_pottery_shard"},
+ "minigames": [
+  {"id": "mg_hangul_jamo", "name": "훈민정음 자모 조합", "category": 1, "attr": "공·사", "impl": "quiz", "knowledge": "yu", "time": 40,
+   "params": {"need": 3, "bank": [
+    {"q": "ㅎ + ㅏ + ㄴ 을 모아 쓰면?", "options": ["한", "핫", "학", "함"], "answer": 0},
+    {"q": "ㄱ + ㅡ + ㄹ 을 모아 쓰면?", "options": ["글", "귤", "걸", "갈"], "answer": 0},
+    {"q": "ㅂ + ㅏ + ㄹ + ㄱ (겹받침) 을 모아 쓰면?", "options": ["밝", "밟", "발", "박"], "answer": 0},
+    {"q": "훈민정음 초성 기본자가 아닌 것은?", "options": ["ㄷ", "ㄱ", "ㄴ", "ㅁ"], "answer": 0}]}},
+  {"id": "mg_hanji_sliding", "name": "한지 수묵 슬라이딩 퍼즐", "category": 1, "attr": "공", "impl": "sliding", "knowledge": "gong", "time": 90, "params": {"size": 3, "image": "res://assets/minigames/sliding/sumuk_01.png"}},
+  {"id": "mg_history_timeline", "name": "역사 연표 배치", "category": 1, "attr": "사", "impl": "quiz", "knowledge": "sa", "time": 45,
+   "params": {"need": 3, "bank": [
+    {"q": "가장 먼저 일어난 일은?", "options": ["훈민정음 반포", "임진왜란", "병자호란", "대동여지도 간행"], "answer": 0},
+    {"q": "임진왜란과 병자호란 사이에 들어갈 사건은?", "options": ["정묘호란", "병인양요", "갑오개혁", "계유정난"], "answer": 0},
+    {"q": "대동여지도(1861) 바로 다음 해 일어난 사건은?", "options": ["임술 농민 항쟁", "홍경래의 난", "갑신정변", "을미사변"], "answer": 0},
+    {"q": "수원 화성을 쌓은 임금의 시대는?", "options": ["정조", "세종", "숙종", "영조"], "answer": 0}]}},
+  {"id": "mg_pottery_shard", "name": "도자기 파편 맞추기", "category": 1, "attr": "공", "impl": "sliding", "knowledge": "gong", "time": 75, "params": {"size": 3, "image": "res://assets/minigames/sliding/celadon_01.png"}},
+  {"id": "mg_pyeonjeon", "name": "편전 사복개궁", "category": 2, "attr": "공·선", "impl": "timing", "knowledge": "sa", "time": 20, "params": {"hits": 3, "attempts": 5, "zone": 0.12, "speed": 1.4}},
+  {"id": "mg_jeonggan", "name": "정간보 리듬 박자", "category": 2, "attr": "공", "impl": "rhythm", "knowledge": "gong", "time": 20, "params": {}},
+  {"id": "mg_tightrope", "name": "줄타기 균형잡기", "category": 2, "attr": "공", "impl": "gauge", "knowledge": "gong", "time": 20, "params": {"mode": "balance", "band": [40, 60], "drift": 22, "control": 60, "hold_ratio": 0.7}},
+  {"id": "mg_bell", "name": "범종 타종", "category": 2, "attr": "불", "impl": "timing", "knowledge": "bul", "time": 25, "params": {"hits": 3, "attempts": 4, "zone": 0.16, "speed": 0.9}},
+  {"id": "mg_janggyeong_vent", "name": "장경판전 통풍창 개폐(습도 60%)", "category": 3, "attr": "공·농", "impl": "gauge", "knowledge": "nong", "time": 25, "params": {"mode": "hold", "band": [55, 65], "drift": 12, "control": 35, "hold_ratio": 0.65, "label": "습도(%)"}},
+  {"id": "mg_abacus", "name": "조선 산학 주판 계산", "category": 3, "attr": "상", "impl": "quiz", "knowledge": "sang", "time": 45,
+   "params": {"need": 3, "note": "게임 내 단위: 1섬=15말(평석), 1말=10되, 1냥=10전=100푼", "bank": [
+    {"q": "1섬=15말, 1말=10되. 2섬 3말은 몇 되?", "options": ["330되", "230되", "300되", "350되"], "answer": 0},
+    {"q": "1냥=10전=100푼. 엽전 3냥 5전은 몇 푼?", "options": ["350푼", "305푼", "35푼", "3,500푼"], "answer": 0},
+    {"q": "쌀 1섬이 35냥인 고을에서 사서 80냥에 팔면 4섬의 차익은?", "options": ["180냥", "115냥", "140냥", "200냥"], "answer": 0},
+    {"q": "무명 12필을 3필씩 묶으면 몇 동?", "options": ["4동", "3동", "6동", "9동"], "answer": 0}]}},
+  {"id": "mg_herbal_fire", "name": "약방 탕약 불조절", "category": 3, "attr": "농", "impl": "gauge", "knowledge": "nong", "time": 25, "params": {"mode": "hold", "band": [70, 85], "drift": 15, "control": 40, "hold_ratio": 0.6, "label": "탕기 온도"}},
+  {"id": "mg_amhaeng_trial", "name": "암행어사 출두 심판", "category": 4, "attr": "사·유", "impl": "quiz", "knowledge": "yu", "time": 60,
+   "params": {"need": 3, "bank": [
+    {"q": "아전: \"세곡은 전부 한양으로 올려 보냈소.\" — 장부: 창고 잔량 300석", "options": ["위증이다", "사실이다"], "answer": 0},
+    {"q": "사또: \"환곡은 규정대로 1할 이자만 받았다.\" — 백성 문서: 5할을 거둠", "options": ["위증이다", "사실이다"], "answer": 0},
+    {"q": "좌수: \"나는 그날 향청에 있었소.\" — 향청 일지: 좌수 서명 있음", "options": ["사실이다", "위증이다"], "answer": 0},
+    {"q": "이방: \"군포는 장정에게만 거두었소.\" — 호적: 죽은 자·어린아이에게도 부과(백골징포·황구첨정)", "options": ["위증이다", "사실이다"], "answer": 0}]}},
+  {"id": "mg_idiom", "name": "사자성어 4자 조합", "category": 4, "attr": "유", "impl": "quiz", "knowledge": "yu", "time": 45,
+   "params": {"need": 3, "bank": [
+    {"q": "이익을 보면 먼저 의리를 생각하라", "options": ["견리사의", "견물생심", "감탄고토", "권선징악"], "answer": 0},
+    {"q": "옛것을 익혀 새것을 안다", "options": ["온고지신", "일취월장", "교학상장", "절차탁마"], "answer": 0},
+    {"q": "은혜를 잊지 않고 갚는다", "options": ["결초보은", "배은망덕", "각골난망", "은인자중"], "answer": 0},
+    {"q": "쇠귀에 경 읽기", "options": ["우이독경", "마이동풍", "오비이락", "우공이산"], "answer": 0}]}},
+  {"id": "mg_three_teachings", "name": "유불선 삼도 문답", "category": 4, "attr": "유·불·선", "impl": "quiz", "knowledge": "yu", "time": 45,
+   "params": {"need": 2, "bank": [
+    {"q": "측은지심(惻隱之心)은 무엇의 실마리인가?", "options": ["인(仁)", "의(義)", "예(禮)", "지(智)"], "answer": 0},
+    {"q": "사성제 중 괴로움의 원인을 밝힌 것은?", "options": ["집성제", "고성제", "멸성제", "도성제"], "answer": 0},
+    {"q": "노자가 '최고의 선은 ○과 같다'고 했다. ○은?", "options": ["물", "산", "불", "바람"], "answer": 0}]}},
+  {"id": "mg_dokkaebi_riddle", "name": "도깨비 수수께끼", "category": 4, "attr": "선", "impl": "quiz", "knowledge": "sa", "time": 40,
+   "params": {"need": 2, "bank": [
+    {"q": "깎으면 깎을수록 커지는 것은?", "options": ["구멍", "연필", "머리", "나무"], "answer": 0},
+    {"q": "내 것인데 남이 더 많이 쓰는 것은?", "options": ["이름", "갓", "신발", "엽전"], "answer": 0},
+    {"q": "늘 따라다니지만 붙잡을 수 없는 것은?", "options": ["그림자", "바람", "소리", "도깨비"], "answer": 0},
+    {"q": "먹을수록 늘어나는 것은?", "options": ["나이", "밥그릇", "배", "근심"], "answer": 0}]}},
+  {"id": "mg_talisman_stroke", "name": "부적 획순 일필휘지", "category": 5, "attr": "선", "impl": "trace", "knowledge": "seon", "time": 15,
+   "params": {"ordered": true, "no_cross": false, "radius": 34, "points": [[0.5, 0.15], [0.5, 0.45], [0.3, 0.45], [0.7, 0.45], [0.5, 0.45], [0.5, 0.85], [0.35, 0.7], [0.65, 0.7]]}},
+  {"id": "mg_chilseong", "name": "도깨비불 칠성진 잇기", "category": 5, "attr": "선", "impl": "trace", "knowledge": "seon", "time": 20,
+   "params": {"ordered": false, "no_cross": true, "radius": 34, "points": [[0.18, 0.3], [0.3, 0.42], [0.43, 0.38], [0.55, 0.47], [0.62, 0.7], [0.8, 0.66], [0.84, 0.44]]}},
+  {"id": "mg_takbon", "name": "대동여지도 목판 탁본 인출", "category": 9, "attr": "공·사", "impl": "rubbing", "knowledge": "gong", "time": 25, "params": {"coverage": 0.85, "brush": 42}},
+  {"id": "mg_forge", "name": "대장간 망치 단조", "category": 9, "attr": "공", "impl": "timing", "knowledge": "gong", "time": 20, "params": {"hits": 4, "attempts": 6, "zone": 0.14, "speed": 1.2, "quality_bonus": true}},
+  {"id": "mg_salvage", "name": "수중 인양", "category": 9, "attr": "농·공", "impl": "gauge", "knowledge": "sa", "time": 25, "params": {"mode": "hold", "band": [45, 60], "drift": 18, "control": 45, "hold_ratio": 0.6, "label": "밧줄 장력", "requires_water_mount": true}},
+  {"id": "mg_jesa_table", "name": "제향 진설도 배치", "category": 9, "attr": "유", "impl": "quiz", "knowledge": "yu", "time": 40,
+   "params": {"need": 2, "bank": [
+    {"q": "홍동백서(紅東白西) — 붉은 과일은 어느 쪽에?", "options": ["동쪽", "서쪽", "남쪽", "북쪽"], "answer": 0},
+    {"q": "조율이시(棗栗梨柿) 진설의 첫 번째 과일은?", "options": ["대추", "밤", "배", "감"], "answer": 0},
+    {"q": "좌포우혜 — 포(脯)는 어디에?", "options": ["왼쪽", "오른쪽", "가운데", "뒷줄"], "answer": 0}]}}
+ ]
+}
