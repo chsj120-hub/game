@@ -28,6 +28,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PROMPTS = ROOT / "assets" / "prompts"
 GUIDES = ROOT / "assets" / "maps" / "guides"
+LINEART = ROOT / "assets" / "maps" / "lineart"
 DRAFTS = ROOT / "assets" / "_drafts"
 CONFIG = Path(__file__).resolve().parent / "comfy_config.json"
 LOG = PROMPTS / "_generated_log.csv"
@@ -51,6 +52,10 @@ PRESETS = {
     "mini8":    {"low_memory": True, "steps": 22, "map_depth_strength": 0.0},   # 맥 미니 메모리 8GB: 작은 해상도·depth 끔
     "mini16":   {"low_memory": True, "steps": 25, "map_depth_strength": 0.5},   # 맥 미니 메모리 16GB 이상
     "standard": {"low_memory": False, "steps": 30, "map_depth_strength": 0.5},  # 메모리 32GB 이상(M1 Max·M2 Pro 등)
+    "gtx3060":  {"low_memory": False, "steps": 30, "map_depth_strength": 0.6,  # GTX 3060 12GB VRAM CUDA
+                 "sampler": "dpmpp_2m", "scheduler": "karras", "cfg": 7.0},
+    "rtx4060":  {"low_memory": False, "steps": 30, "map_depth_strength": 0.6,  # RTX 4060 8GB VRAM CUDA
+                 "sampler": "dpmpp_2m", "scheduler": "karras", "cfg": 7.0},
 }
 
 # kind → (생성 폭, 높이), (저메모리 폭, 높이), (최종 폭, 높이)  — 모두 최종 비율과 정확히 같음
@@ -282,7 +287,7 @@ def check(cfg):
         mem = max(mem, d.get("vram_total", 0) / 2**30)
         print(f"  장치: {d.get('name')} · 메모리 {d.get('vram_total', 0) / 2**30:.1f} GB")
     if mem:
-        rec = "mini8" if mem < 12 else "mini16" if mem < 28 else "standard"
+        rec = "mini8" if mem < 12 else ("gtx3060" if cfg.get("server","").startswith("http://127.0.0.1") and mem < 14 else "mini16" if mem < 28 else "standard")
         cur = next((k for k, v in PRESETS.items() if all(cfg.get(x) == y for x, y in v.items())), None)
         print(f"  추천 설정: {rec}" + ("  (적용됨)" if cur == rec else f"  → python3 tools/comfy_batch.py --preset {rec}"))
     ok = True
@@ -315,6 +320,7 @@ def main():
     ap.add_argument("--test", type=int, default=0, help="스타일 시험: 시드 N개씩 assets/_drafts/ 에 저장")
     ap.add_argument("--seed", type=int, help="이번 실행에만 쓸 시드")
     ap.add_argument("--overwrite", action="store_true", help="이미 있는 파일도 다시 생성")
+    ap.add_argument("--use-lineart", action="store_true", help="지도: guides/ 대신 lineart/ 선화를 ControlNet 입력으로 사용")
     ap.add_argument("--dry-run", action="store_true", help="생성하지 않고 할 일과 프롬프트만 출력")
     ap.add_argument("--check", action="store_true", help="연결·모델 파일 점검")
     ap.add_argument("--set", nargs="*", metavar="키=값", help="설정 저장 (예: --set cfg=6.5 seed=42 low_memory=true)")
@@ -397,15 +403,27 @@ def main():
             guide = None
             if r["kind"] == "region_map":
                 rid = r["id"].lower()
-                rel, hei = GUIDES / f"{rid}_relief.png", GUIDES / f"{rid}_height.png"
-                if not rel.exists():
-                    print(f"  ! {rel.name} 없음 → 밑그림 없이 생성(마스크와 어긋남). 먼저 python3 tools/gen_terrain.py")
+                # --use-lineart: 마스크→선화를 Canny 입력으로 (좌표 일치)
+                # 기본: gen_terrain 이 만든 음영 밑그림(relief/height)을 ControlNet 입력으로
+                if a.use_lineart:
+                    la = LINEART / f"{rid}_lineart.png"
+                    if not la.exists():
+                        print(f"  ! {la.name} 없음 → 먼저: python3 tools/mask_to_lineart.py --ids {r['id']}")
+                    else:
+                        if la not in uploaded:
+                            print(f"  선화 올리는 중: {la.name}")
+                            uploaded[la] = c.upload(la, f"daedong_{la.name}")
+                        guide = {"relief": uploaded[la]}  # height 없이 선화만 사용
                 else:
-                    for p in (rel, hei):
-                        if p.exists() and p not in uploaded:
-                            print(f"  밑그림 올리는 중: {p.name}")
-                            uploaded[p] = c.upload(p, f"daedong_{p.name}")
-                    guide = {"relief": uploaded[rel], "height": uploaded.get(hei)}
+                    rel, hei = GUIDES / f"{rid}_relief.png", GUIDES / f"{rid}_height.png"
+                    if not rel.exists():
+                        print(f"  ! {rel.name} 없음 → 밑그림 없이 생성(마스크와 어긋남). 먼저 python3 tools/gen_terrain.py")
+                    else:
+                        for p in (rel, hei):
+                            if p.exists() and p not in uploaded:
+                                print(f"  밑그림 올리는 중: {p.name}")
+                                uploaded[p] = c.upload(p, f"daedong_{p.name}")
+                        guide = {"relief": uploaded[rel], "height": uploaded.get(hei)}
             pos = clean_prompt(r["prompt"], cfg)
             neg = (r.get("negative", "") + ", " + EXTRA_NEG).strip(", ")
             t0 = time.time()

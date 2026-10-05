@@ -1,0 +1,33 @@
+Please generate 5 half-body portrait illustrations of Joseon Dynasty characters for a visual novel game. All portraits: 4:5 ratio, plain aged hanji paper background, half-length (waist up), three-quarter view, calm expression. No text, no frame.
+(Batch 2/2)
+
+1. [npc_shaman.png]  무녀
+   → half-length portrait of a Joseon shaman (무녀), friendly, speaking, Korean mudang shaman in red cheollik and blue kwaeja vest, jeollip hat, brass bells and fan
+   ✕ avoid: photorealistic, 3d render, anime, chibi, western fantasy, neon, glossy plastic, text, watermark, signature, modern cloth
+
+2. [npc_scholar.png]  유생
+   → half-length portrait of a Joseon scholar (유생), friendly, speaking, Joseon seonbi scholar in white or pale jade dopo overcoat with tie sash, black horsehair gat hat with wide brim, beoseon socks
+   ✕ avoid: photorealistic, 3d render, anime, chibi, western fantasy, neon, glossy plastic, text, watermark, signature, modern cloth
+
+3. [npc_fisher.png]  어부·뱃사람
+   → half-length portrait of a Joseon fisher (어부·뱃사람), friendly, speaking, Joseon boatman in rough cotton jeogori and knee-rolled baji, straw hat, bamboo pole
+   ✕ avoid: photorealistic, 3d render, anime, chibi, western fantasy, neon, glossy plastic, text, watermark, signature, modern cloth
+
+4. [npc_innkeeper.png]  주모
+   → half-length portrait of a Joseon innkeeper (주모), friendly, speaking, Joseon tavern keeper woman in short cotton jeogori, long chima skirt with apron, hair in a low jjok bun with a wooden binyeo pin
+   ✕ avoid: photorealistic, 3d render, anime, chibi, western fantasy, neon, glossy plastic, text, watermark, signature, modern cloth
+
+5. [npc_traveler.png]  유람객
+   → half-length portrait of a Joseon traveler (유람객), friendly, speaking, Joseon seonbi scholar in white or pale jade dopo overcoat with tie sash, black horsehair gat hat with wide brim, beoseon socks
+   ✕ avoid: photorealistic, 3d render, anime, chibi, western fantasy, neon, glossy plastic, text, watermark, signature, modern cloth
+
+
+
+For ALL images above:
+- Style: Joseon-era Korean ink-and-wash painting (sumukchaesaek) on aged hanji mulberry paper
+- Colors: muted mineral pigments — malachite green, azurite blue, ochre, cinnabar red, ink black
+- Technique: confident brush strokes with dry-brush texture, soft paper grain
+- Do NOT include any text, signatures, watermarks, or modern elements
+- Strictly traditional Joseon period (1392–1897), no anachronisms
+
+Save each image with the filename shown in brackets [ ] above.

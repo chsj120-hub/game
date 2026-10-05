@@ -1,0 +1,33 @@
+Please generate 5 background images for a visual novel game set in Joseon Dynasty Korea (1861). Each image should be in 16:9 landscape orientation. Keep the lower quarter of the image calm and uncluttered — it will be covered by a dialogue box. Do NOT include any people, characters, or text in these backgrounds.
+(Batch 2/3)
+
+1. [fort.png]  fort
+   → a Joseon mountain fortress wall and gate tower, Joseon 1861
+   ✕ avoid: photorealistic, 3d render, anime, chibi, western fantasy, neon, glossy plastic, text, watermark, signature, modern cloth
+
+2. [beacon.png]  beacon
+   → a stone beacon-fire mound on a ridge, Joseon 1861
+   ✕ avoid: photorealistic, 3d render, anime, chibi, western fantasy, neon, glossy plastic, text, watermark, signature, modern cloth
+
+3. [stupa.png]  stupa
+   → an old stone pagoda standing in a temple ruin, Joseon 1861
+   ✕ avoid: photorealistic, 3d render, anime, chibi, western fantasy, neon, glossy plastic, text, watermark, signature, modern cloth
+
+4. [tomb.png]  tomb
+   → a royal burial mound with stone guardian statues, Joseon 1861
+   ✕ avoid: photorealistic, 3d render, anime, chibi, western fantasy, neon, glossy plastic, text, watermark, signature, modern cloth
+
+5. [scenic.png]  scenic
+   → a famous Korean scenic landscape of cliffs and pines, Joseon 1861
+   ✕ avoid: photorealistic, 3d render, anime, chibi, western fantasy, neon, glossy plastic, text, watermark, signature, modern cloth
+
+
+
+For ALL images above:
+- Style: Joseon-era Korean ink-and-wash painting (sumukchaesaek) on aged hanji mulberry paper
+- Colors: muted mineral pigments — malachite green, azurite blue, ochre, cinnabar red, ink black
+- Technique: confident brush strokes with dry-brush texture, soft paper grain
+- Do NOT include any text, signatures, watermarks, or modern elements
+- Strictly traditional Joseon period (1392–1897), no anachronisms
+
+Save each image with the filename shown in brackets [ ] above.
